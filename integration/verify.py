@@ -1,6 +1,7 @@
 """Static integration checks. These do not substitute for Forge world/client tests."""
 import argparse
 import gzip
+import hashlib
 import io
 import json
 import math
@@ -24,13 +25,13 @@ class IntegrationTests(unittest.TestCase):
 
     def test_catalogue_alignment_and_surviving_ids(self):
         profiles=self.spec['profiles']
-        self.assertEqual([p['index'] for p in profiles],list(range(37,47)))
-        self.assertEqual(len(set(p['id'] for p in profiles)),10)
+        self.assertEqual([p['index'] for p in profiles],list(range(37,48)))
+        self.assertEqual(len(set(p['id'] for p in profiles)),11)
         path='data/shadowsovereign/mythic_sites.json'
         old=json.loads(self.base[path]);new=json.loads(self.jar[path])
         old=[dict(p,kind=p['kind']-1 if p['kind']>34 else p['kind']) for p in old if p['kind']!=34]
         self.assertEqual(new[:len(old)],old)
-        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,47)))
+        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,48)))
 
     def test_resources_were_packaged_without_loss(self):
         for path in self.resources.rglob('*'):
@@ -75,7 +76,7 @@ class IntegrationTests(unittest.TestCase):
         for b in self.spec['blocks']:
             if b['category'] in ('plant','aquatic','sapling','leaves','glass','decor'):
                 model=json.loads(self.jar[f"assets/shadowsovereign/models/block/{b['id']}.json"])
-                expected='minecraft:translucent' if b['category']=='glass' else 'minecraft:cutout_mipped' if b['category']=='leaves' else 'minecraft:cutout'
+                expected='minecraft:translucent' if b['category']=='glass' else 'minecraft:cutout_mipped' if b['category']=='leaves' else 'minecraft:'+b.get('render_layer','cutout')
                 self.assertEqual(model.get('render_type'),expected,b['id'])
 
     def test_block_model_and_texture_references(self):
@@ -146,7 +147,7 @@ class IntegrationTests(unittest.TestCase):
             self.assertIn(f'data/shadowsovereign/structures/{template}.nbt',self.jar)
             ss=json.loads(self.jar[root+'structure_set/'+id+'.json'])
             self.assertLess(ss['placement']['separation'],ss['placement']['spacing'])
-        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-10:]
+        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-11:]
         passable={'minecraft:air','minecraft:structure_void','minecraft:spore_blossom'}
         for site,profile in zip(sites,self.spec['profiles']):
             structure=site['structure'].removeprefix('expansion_')
@@ -181,7 +182,7 @@ class IntegrationTests(unittest.TestCase):
         for name,content in self.base.items():
             if name.startswith('dev/shadowsovereign/knighthaven/'):continue
             if name.endswith('.class') and name not in patched:self.assertEqual(self.jar[name],content,name)
-        self.assertIn(b'32-reforged',self.jar['dev/shadowsovereign/network/ShadowNetwork.class'])
+        self.assertTrue(b'33-royal-relics' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
 
     def test_knight_content_removed_and_other_temples_preserved(self):
         retired=('villager_knight','village_knight_lodge','knighthaven_villages')
@@ -196,7 +197,7 @@ class IntegrationTests(unittest.TestCase):
             if '/knighthaven_' in name and not any(s in name for s in retired):self.assertIn(name,self.jar)
 
     def test_all_eggs_have_unique_authored_art(self):
-        eggs=self.spec['eggs'];self.assertEqual(len(eggs),53)
+        eggs=self.spec['eggs'];self.assertEqual(len(eggs),54)
         actual={Path(n).stem for n in self.jar if n.startswith('assets/shadowsovereign/models/item/') and n.endswith('_spawn_egg.json')}
         self.assertEqual(set(eggs),actual)
         cells=[]
@@ -243,8 +244,8 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(nearest['biome'],'shadowsovereign:sunken_kingdom')
 
     def test_decorations_registered_and_placed(self):
-        self.assertEqual(len(self.spec['blocks']),60)
-        self.assertEqual(len(self.spec['decor_ids']),20)
+        self.assertEqual(len(self.spec['blocks']),100)
+        self.assertEqual(len(self.spec['decor_ids']),60)
         self.assertEqual({p['id'] for p in self.spec['decor_placements']},set(self.spec['decor_ids']))
         for placement in self.spec['decor_placements']:
             n=nbtlib.File.parse(io.BytesIO(gzip.decompress(self.jar[f"data/shadowsovereign/structures/expansion/{placement['structure']}.nbt"])))
@@ -259,7 +260,83 @@ class IntegrationTests(unittest.TestCase):
                 n=nbtlib.File.parse(io.BytesIO(gzip.decompress(content)))
                 self.assertTrue(unsupported.isdisjoint(str(s['Name']) for s in n['palette']),name)
 
+    def test_new_decor_models_use_native_anchor_states(self):
+        self.assertEqual({k:len(v) for k,v in self.spec['decor_packs'].items()},dict(mob1=20,hollow_reaper=20,soul_devourer=20))
+        self.assertEqual(len(set(self.spec['decor_ids'])),60)
+        for b in self.spec['blocks']:
+            if 'pack' not in b:continue
+            id=b['id'];d=json.loads(self.jar[f'assets/shadowsovereign/models/block/{id}.json'])
+            state=json.loads(self.jar[f'assets/shadowsovereign/blockstates/{id}.json'])
+            self.assertEqual(set(state['variants']),{f'facing={v}' for v in ['north','east','south','west']})
+            for e in d['elements']:
+                self.assertTrue(all(-16<=v<=32 and math.isfinite(v) for v in e['from']+e['to']))
+                self.assertIn(e.get('rotation',{}).get('angle',0),[-45,-22.5,0,22.5,45])
+                for face in e['faces'].values():self.assertTrue(all(0<=v<=16 for v in face['uv']))
+            for suffix in ['', '_e']:
+                raw=self.jar[f'assets/shadowsovereign/textures/block/{id}{suffix}.png']
+                self.assertEqual(struct.unpack('>II',raw[16:24]),(64,64))
+            self.assertTrue(0<=b['light']<=15)
+            loot=json.loads(self.jar[f'data/shadowsovereign/loot_tables/blocks/{id}.json'])
+            self.assertEqual(loot['pools'][0]['entries'],[{'type':'minecraft:item','name':'shadowsovereign:'+id}])
+
+    def test_new_decor_ruins_have_support_and_visual_clearance(self):
+        props={b['id']:b for b in self.spec['blocks'] if 'pack' in b}
+        for structure in ['hollow_reaper_reliquary','devourer_relic_sanctum']:
+            n=nbtlib.File.parse(io.BytesIO(gzip.decompress(self.jar[f'data/shadowsovereign/structures/expansion/{structure}.nbt'])))
+            blocks={tuple(map(int,b['pos'])):str(n['palette'][int(b['state'])]['Name']) for b in n['blocks']}
+            placements=[p for p in self.spec['decor_placements'] if p['structure']==structure]
+            self.assertEqual(len(placements),20)
+            for p in placements:
+                b=props[p['id']];x,y,z=p['position'];mount=b['mount']
+                support=(x,y+1,z) if mount=='ceiling' else (x,y,z+1) if mount=='wall' else (x,y-1,z)
+                self.assertNotEqual(blocks[support],'minecraft:air',p['id'])
+                lo,hi=b['visual_bounds']
+                # Exclude deliberate contact with supporting floor/ceiling/wall;
+                # negative subpixel base details are authored to meet the floor.
+                for X in range(math.floor(x+lo[0]/16+.00001),math.ceil(x+hi[0]/16-.00001)):
+                    for Y in range(max(y,math.floor(y+lo[1]/16+.00001)),math.ceil(y+hi[1]/16-.00001)):
+                        for Z in range(math.floor(z+lo[2]/16+.00001),math.ceil(z+hi[2]/16-.00001)):
+                            if (X,Y,Z)==(x,y,z):continue
+                            self.assertEqual(blocks.get((X,Y,Z)),'minecraft:air',(p['id'],(X,Y,Z)))
+            for X in range(10,15):
+                for Y in range(1,5):self.assertEqual(blocks[(X,Y,0)],'minecraft:air')
+
+    def test_king_effect_bones_are_hidden_during_locomotion(self):
+        path='assets/shadowsovereign/mythic/king_of_corny_memes.json'
+        d=json.loads(self.jar[path]);self.assertEqual(len(d['bones']),61)
+        self.assertEqual(sum(len(b['cubes']) for b in d['bones']),117)
+        self.assertEqual(hashlib.sha256(self.jar['assets/shadowsovereign/textures/entity/king_of_corny_memes_glow.png']).hexdigest(),'7f0d11be8e7576758e90916f9970058fea35529cac6dd29d145334bfbaecc651')
+        effects={i for i,b in enumerate(d['bones']) if b['name'].startswith('fx_')}
+        self.assertTrue(effects)
+        for clip in ['idle','walk','run']:
+            scales={t['bone']:t['keys'] for t in d['animations'][clip]['tracks'] if t['channel']=='scale'}
+            for bone in effects:
+                self.assertIn(bone,scales)
+                self.assertTrue(all(max(k[1:])<=.001 for k in scales[bone]),(clip,bone))
+        for p in self.spec['profiles']:
+            if p['id']=='king_of_corny_memes':self.assertEqual(len(p['moves']),5)
+
+    def test_king_palace_chests_and_spawn_registry(self):
+        n=nbtlib.File.parse(io.BytesIO(gzip.decompress(self.jar['data/shadowsovereign/structures/expansion/palace_of_eternal_cringe.nbt'])))
+        self.assertEqual(list(map(int,n['size'])),[55,38,55])
+        chests=[b['nbt'] for b in n['blocks'] if str(b.get('nbt',{}).get('id',''))=='minecraft:chest']
+        self.assertEqual(len(chests),5)
+        self.assertTrue(all(str(c['LootTable'])=='minecraft:chests/end_city_treasure' for c in chests))
+        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])
+        self.assertEqual(sites[-1],dict(kind=47,structure='expansion_palace_of_eternal_cringe',altar=[27,6,33],rootOffset=[0,0,0]))
+
+    def test_previous_release_content_preserved(self):
+        if ARGS.previous is None:self.skipTest('Previous candidate JAR not supplied')
+        with ZipFile(ARGS.previous) as z:
+            for name in z.namelist():
+                if name.endswith('/') or name.endswith('.class'):continue
+                self.assertIn(name,self.jar,name)
+                # Catalogues/locales/metadata are extended; old artwork,
+                # templates, worldgen data and item definitions stay identical.
+                if name.startswith(('assets/shadowsovereign/lang/','data/minecraft/tags/')) or name in ['META-INF/mods.toml','data/shadowsovereign/mythic_sites.json']:continue
+                self.assertEqual(z.read(name),self.jar[name],name)
+
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--resources',type=Path,required=True);p.add_argument('--jar',type=Path,required=True);p.add_argument('--base',type=Path,required=True)
+    p=argparse.ArgumentParser();p.add_argument('--resources',type=Path,required=True);p.add_argument('--jar',type=Path,required=True);p.add_argument('--base',type=Path,required=True);p.add_argument('--previous',type=Path)
     ARGS=p.parse_args();unittest.main(argv=['verify.py'],verbosity=2)

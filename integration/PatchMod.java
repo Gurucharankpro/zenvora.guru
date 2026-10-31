@@ -75,6 +75,11 @@ public class PatchMod implements Opcodes {
             }
             l.add(new FieldInsnNode(GETSTATIC,"net/minecraft/world/level/block/Blocks",vanilla,"L"+BLOCK+";"));
             call(l,INVOKESTATIC,PROPS,"m_60926_","(Lnet/minecraft/world/level/block/state/BlockBehaviour;)L"+PROPS+";");
+            if(cat.equals("decor")){
+                call(l,INVOKEVIRTUAL,PROPS,"m_60910_","()L"+PROPS+";");
+                call(l,INVOKEVIRTUAL,PROPS,"m_60955_","()L"+PROPS+";");
+                push(l,b.get("hardness").getAsFloat());call(l,INVOKEVIRTUAL,PROPS,"m_60978_","(F)L"+PROPS+";");
+            }
             int light=b.get("light").getAsInt();
             if(light>0){String lightMethod=name+"$light";var lm=new MethodNode(ACC_PRIVATE|ACC_STATIC|ACC_SYNTHETIC,lightMethod,"(Lnet/minecraft/world/level/block/state/BlockState;)I",null,null);
                 push(lm.instructions,light);lm.instructions.add(new InsnNode(IRETURN));c.methods.add(lm);
@@ -259,8 +264,8 @@ public class PatchMod implements Opcodes {
         // Exact protocol match prevents old clients joining a server whose
         // entity registry and bestiary have been extended.
         String network=ROOT+"network/ShadowNetwork.class";var c=new ClassNode();new ClassReader(entries.get(network)).accept(c,0);
-        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="32-reforged";
-        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="32-reforged";}
+        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="33-royal-relics";
+        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="33-royal-relics";}
         var w=new ClassWriter(0);c.accept(w);entries.put(network,w.toByteArray());
         for(var entry:new ArrayList<>(entries.entrySet()))if(entry.getKey().endsWith(".class")){
             String className=entry.getKey().replace(".class","");
@@ -275,7 +280,7 @@ public class PatchMod implements Opcodes {
         try(var paths=Files.walk(resources)){for(var path:paths.filter(Files::isRegularFile).toList()){
             String name=resources.relativize(path).toString().replace(File.separatorChar,'/');
             if(!name.equals("integration-spec.json"))entries.put(name,Files.readAllBytes(path));}}
-        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.3.0-reforged-preview\"");
+        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.4.0-royal-relics-preview\"");
         entries.put("META-INF/mods.toml",metadata.getBytes(java.nio.charset.StandardCharsets.UTF_8));
         Files.createDirectories(output.toAbsolutePath().getParent());
         try(var zip=new ZipOutputStream(Files.newOutputStream(output))){for(var entry:entries.entrySet()){var e=new ZipEntry(entry.getKey());e.setTime(0);zip.putNextEntry(e);zip.write(entry.getValue());zip.closeEntry();}}

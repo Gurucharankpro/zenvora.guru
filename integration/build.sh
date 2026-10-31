@@ -27,11 +27,15 @@ if ! python3 -c 'import nbtlib, numpy; assert nbtlib.__version__ == "2.0.4" and 
 fi
 resources=$(mktemp -d "$build_dir/resources.XXXXXX")
 python3 "$source_dir/prepare.py" --inputs "$input_dir" --base "$base_jar" --out "$resources"
+python3 "$source_dir/decor_packs.py" --inputs "$input_dir" --base "$base_jar" --out "$resources"
 python3 "$source_dir/polish_assets.py" --base "$base_jar" --out "$resources"
 python3 "$source_dir/compile_helper.py" "$build_dir" "$resources"
-jar="$build_dir/dist/soulbound-army-1.20.1-1.3.0-reforged-preview.jar"
+jar="$build_dir/dist/soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar"
 java --class-path "$build_dir/tools/*" "$source_dir/PatchMod.java" "$base_jar" "$resources" "$jar"
-java --class-path "$build_dir/tools/*" "$source_dir/RegistryTest.java" "$base_jar" "$jar" "$build_dir/tools/gson.jar"
-python3 "$source_dir/verify.py" --resources "$resources" --jar "$jar" --base "$base_jar"
+previous_jar="$build_dir/dist/soulbound-army-1.20.1-1.3.0-reforged-preview.jar"
+previous_args=()
+if [ -f "$previous_jar" ]; then previous_args=(--previous "$previous_jar"); fi
+java --class-path "$build_dir/tools/*" "$source_dir/RegistryTest.java" "$base_jar" "$jar" "$build_dir/tools/gson.jar" "${previous_args[@]}"
+python3 "$source_dir/verify.py" --resources "$resources" --jar "$jar" --base "$base_jar" "${previous_args[@]}"
 sha256sum "$jar"
 printf 'Resource output: %s\n' "$resources"

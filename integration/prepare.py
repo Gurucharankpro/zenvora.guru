@@ -1,4 +1,4 @@
-"""Convert the five supplied art packs to native Soulbound Army resources.
+"""Convert supplied creature/biome packs to native Soulbound Army resources.
 
 Usage: PYTHONPATH=<nbtlib installation> python prepare.py --inputs DIR --base BASE.jar --out DIR
 The original binary is never edited in place. See README.md for build/test limits.
@@ -159,12 +159,16 @@ def build(inputs, base_path, out):
                ('Legendary_Giant_Zombie_Refai','legendary_giant_zombie_refai','رفاعي الزومبي العملاق الأسطوري',1200,28,16,.24,2.4,4.4,False,
                 [('cleaver_attack',1.6,0,6,1.2),('sweep_attack',1.7,1,8,1),('ground_slam',1.9,1,10,1.25),('chain_rage',2,2,12,.8)]),
                ('Amin_El_Nemr','amin_el_nemr','أمين النمر',480,18,8,.30,.6,1.95,False,
-                [('punch_combo',1.3,0,3.8,1),('defensive_counter',1.1,5,0,0),('intimidation',1.5,3,8,.4)])]
+                [('punch_combo',1.3,0,3.8,1),('defensive_counter',1.1,5,0,0),('intimidation',1.5,3,8,.4)]),
+               ('King_Of_Corny_Memes','king_of_corny_memes','ملك الميمز البايخة',1100,24,12,.25,2.0,4.2,False,
+                [('bad_joke_attack',1.04,21,9,.65),('cheese_meteor',2.02,47,16,1.05),
+                 ('royal_facepalm',1.04,5,0,0),('cringe_beam',1.4,6,16,1),('ultimate_punchline',2.3,1,11,1.25)])]
         for index,(source,id,ar,hp,damage,armor,speed,width,height,flies,moves) in enumerate(packs,38):
             geo=json.loads(find(source+'.geo.json').read_text());anim=json.loads(find(source+'.animation.json').read_text())
             native=model(geo,anim);write(f'assets/{NS}/mythic/{id}.json',native)
             write(f'assets/{NS}/textures/entity/{id}.png',find(source+'_Texture.png').read_bytes())
-            glows=list(inputs.rglob(source+'_Glowmask.png'))
+            glows=list(inputs.rglob(source+'_Glowmask.png'))+list(inputs.rglob(source+'_Glow_Mask.png'))
+            assert len(glows)<=1,('Ambiguous glow mask',source)
             write(f'assets/{NS}/textures/entity/{id}_glow.png',glows[0].read_bytes() if glows else transparent_png())
             walk,run=('swim','swim_fast') if id=='pearl_drakeling' else ('walk','swim_fast') if id=='weeping_axolotl' else ('walk','fly' if flies else 'run')
             spec['profiles'].append(dict(id=id,index=index,health=hp,damage=damage,armor=armor,speed=speed,
@@ -300,12 +304,13 @@ def build(inputs, base_path, out):
                     ('cursed_bell_tower',[13,8,16],'ashen_monolith',-6),
                     ('drowned_glass_palace',[19,8,19],'sunken_kingdom',-6),
                     ('refai_cursed_stronghold',[24,10,33],'crimson_shadow',-9),
-                    ('amin_el_nemr_workshop',[18,5,32],'crimson_shadow',-4)]
+                    ('amin_el_nemr_workshop',[18,5,32],'crimson_shadow',-4),
+                    ('palace_of_eternal_cringe',[27,6,33],'shattered_sky',-5)]
         # Add all 20 decorations to safe, formerly empty positions in the new
         # dry structures. No chest, spawn pad or existing block is replaced.
         remaining=list(spec['decor_ids']);placements=[]
         for name,altar,biome,offset in encounters[5:]:
-            if name in ('drowned_glass_palace','amin_el_nemr_workshop'):continue
+            if name in ('drowned_glass_palace','amin_el_nemr_workshop','palace_of_eternal_cringe'):continue
             n=structures[name];size=list(map(int,n['size']));occupied={tuple(map(int,b['pos'])):b for b in n['blocks']}
             budget=7 if name!='refai_cursed_stronghold' else len(remaining)
             for pos,block in sorted(occupied.items()):
@@ -330,7 +335,8 @@ def build(inputs, base_path, out):
             sites.append({'kind':i,'structure':structure,'altar':altar,'rootOffset':[0,0,0]})
         habitat_names={e[0]:e for e in encounters}
         tree_names={'gloomcap_giant','voidshroom_giant','tidewood_tree','tidewood_tree_small'}
-        for i,(name,n) in enumerate(structures.items()):
+        salts=json.loads(Path(__file__).with_name('structure_salts.json').read_text())
+        for name,n in structures.items():
             if name in habitat_names: biome,offset=habitat_names[name][2:]
             elif name in tree_names: biome,offset=('eternal_abyss' if name in ('gloomcap_giant','voidshroom_giant') else 'sunken_kingdom'),-1
             else:biome,offset=('eternal_abyss' if name in ('abyssal_bridge_fortress','abyssal_crystal_cathedral','forgotten_mine') else 'sunken_kingdom'),-1
@@ -343,7 +349,9 @@ def build(inputs, base_path, out):
             pool['elements'][0]['element']['location']=f'{NS}:expansion/{name}'
             data('worldgen/template_pool/'+sid,pool)
             ss=old('worldgen/structure_set/shattered_gentlemans_manor');ss['structures'][0]['structure']=f'{NS}:{sid}'
-            ss['placement'].update(salt=872100+i,spacing=10 if name in tree_names else 32,separation=3 if name in tree_names else 12)
+            # Preserve previous worlds' placement seeds regardless of archive
+            # extraction/directory iteration order or how many packs are added.
+            ss['placement'].update(salt=salts[name],spacing=10 if name in tree_names else 32,separation=3 if name in tree_names else 12)
             data('worldgen/structure_set/'+sid,ss)
             placed.append(sid)
         data('mythic_sites',sites)

@@ -7,18 +7,22 @@ import argparse
 import hashlib
 import io
 from pathlib import Path
+import re
 import struct
 import subprocess
 from zipfile import ZipFile
 
 
-def package(jar, output):
+def package(jar, output, version):
+    if not re.fullmatch(r'\d+\.\d+\.\d+',version):raise ValueError('Invalid release version')
+    if '-'+version+'-' not in jar.name:raise ValueError('JAR/version mismatch')
     jar=jar.resolve();output=output.resolve();output.mkdir(parents=True,exist_ok=True)
-    archive=output/'Soulbound-Army-1.3.0.zip'
-    if archive.exists() or list(output.glob('Soulbound-Army-1.3.0.z[0-9]*')):
+    stem='Soulbound-Army-'+version
+    archive=output/(stem+'.zip')
+    if archive.exists() or list(output.glob(stem+'.z[0-9]*')):
         raise FileExistsError('Use an empty delivery directory; existing volumes are preserved.')
     subprocess.run(['zip','-6','-s','10m',str(archive),jar.name],cwd=jar.parent,check=True)
-    volumes=sorted(output.glob('Soulbound-Army-1.3.0.z[0-9]*'))+[archive]
+    volumes=sorted(output.glob(stem+'.z[0-9]*'))+[archive]
     sizes=[v.stat().st_size for v in volumes]
     merged=bytearray(b''.join(v.read_bytes() for v in volumes))
     eocd=merged.rfind(b'PK\x05\x06')
@@ -48,5 +52,5 @@ def package(jar, output):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('jar',type=Path);p.add_argument('output',type=Path)
-    args=p.parse_args();package(args.jar,args.output)
+    p=argparse.ArgumentParser();p.add_argument('jar',type=Path);p.add_argument('output',type=Path);p.add_argument('--version',default='1.4.0')
+    args=p.parse_args();package(args.jar,args.output,args.version)

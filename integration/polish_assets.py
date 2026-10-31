@@ -66,18 +66,21 @@ def main(base_path,out):
         for profile in spec['profiles']:profile['index']-=1
         eggs={Path(n).stem for n in base.namelist() if n.startswith('assets/shadowsovereign/models/item/') and n.endswith('_spawn_egg.json') and not removed_path(n)}
         eggs.update(p['id']+'_spawn_egg' for p in spec['profiles'])
-        atlas_eggs=sorted(eggs-{'amin_el_nemr_spawn_egg'})
-        assert len(atlas_eggs)==52 and len(eggs)==53
+        standalone={'amin_el_nemr_spawn_egg':'amin-egg.png','king_of_corny_memes_spawn_egg':'king-egg.png'}
+        atlas_eggs=sorted(eggs-set(standalone))
+        # The existing atlas order must never shift when another egg is added.
+        assert len(atlas_eggs)==52 and len(eggs)==54
         art=Path(__file__).parent/'art'
         write('assets/shadowsovereign/textures/item/legendary_egg_atlas.png',(art/'egg-atlas.png').read_bytes())
-        write('assets/shadowsovereign/textures/item/amin_el_nemr_spawn_egg.png',(art/'amin-egg.png').read_bytes())
         mapping={}
         for index,id in enumerate(atlas_eggs):
             row,col=divmod(index,8);uv=[col*2,row*2,(col+1)*2,(row+1)*2]
             write(f'assets/shadowsovereign/models/item/{id}.json',egg_model(uv))
             mapping[id]={'cell':index,'uv':uv,'texture':'legendary_egg_atlas'}
-        write('assets/shadowsovereign/models/item/amin_el_nemr_spawn_egg.json',{'parent':'minecraft:item/generated','textures':{'layer0':'shadowsovereign:item/amin_el_nemr_spawn_egg'}})
-        mapping['amin_el_nemr_spawn_egg']={'texture':'amin_el_nemr_spawn_egg'}
+        for id,filename in standalone.items():
+            write(f'assets/shadowsovereign/textures/item/{id}.png',(art/filename).read_bytes())
+            write(f'assets/shadowsovereign/models/item/{id}.json',{'parent':'minecraft:item/generated','textures':{'layer0':'shadowsovereign:item/'+id}})
+            mapping[id]={'texture':id}
     # Match ocean-floor density changes to a climate band where the new ocean
     # is actually the closest biome, avoiding lowering old humid inland biomes.
     path='data/shadowsovereign/worldgen/noise_settings/echo_expanses.json'
@@ -90,9 +93,9 @@ def main(base_path,out):
                                   'min_inclusive':-.4,'max_exclusive':.4,'when_in_range':choice,'when_out_of_range':baseline}
     write(path,noise)
     spec.update(removed_resources=deleted,removed_profile_index=34,original_profile_count=37,
-                eggs=mapping,profile_count=47,format_version='1.3.0')
+                eggs=mapping,profile_count=48,format_version='1.4.0')
     write('integration-spec.json',spec)
-    print('Prepared knight removal, compacted profile IDs and 53 unique egg designs.')
+    print('Prepared knight removal, compacted profile IDs and 54 unique egg designs.')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--base',type=Path,required=True);parser.add_argument('--out',type=Path,required=True)

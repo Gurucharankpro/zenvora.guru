@@ -1,100 +1,133 @@
-# Soulbound Army 1.3.0 reforged — verification report
+# Soulbound Army 1.4.0 royal relics — verification report
 
-Status: experimental candidate. Local checks passed. Minecraft/Forge startup
-and gameplay remain untested; zero bugs or full compatibility are not certified.
+Status: EXPERIMENTAL CANDIDATE. Local checks passed; there was no Minecraft/Forge
+startup or gameplay test. These results do not certify zero bugs.
 
-## Latest requested creatures
+## Requested additions
 
-- Amin El Nemr: integrated once with model, texture/glow, ten authored clips,
-  three native combat moves, egg/bestiary/army support and his Crimson Shadow
-  workshop in Echo Realms. Its nine chest block entities contain 42 stacks;
-  newer lowercase count tags were converted to 1.20.1 Count Byte tags.
-- Legendary Giant Zombie Refai: retained once with the model, ten clips, four
-  combat moves and Refai Cursed Stronghold. The latest upload is byte-identical
-  to the pack already integrated. This is distinct from the original Refai.
-- Full-width/height empty-cell spawn checks pass for all ten added habitats,
-  including Refai's 2.4 x 4.4-block body and Amin's 0.6 x 1.95-block body.
-  Those checks found the Pangolin's old corner anchor too narrow, so it was
-  moved to an open aisle. Actual collision shapes still require Minecraft.
+- King of Corny Memes: exact supplied 61-bone/117-cube model, 128x128 texture and
+  real glow mask, ten authored clips, five native combat moves, egg/bestiary/army
+  integration and Palace of Eternal Cringe in Shattered Sky. Guardian index 47,
+  dimensions 2.0 x 4.2 blocks, matching habitat spawn [27,6,33]. Its generated egg
+  art is separate; all older atlas assignments remain identical.
+- Palace: converted DataVersion 3955 -> 3465 for Minecraft 1.20.1; 55 x 38 x 55
+  blocks, five retained end_city_treasure chests. Template entities are cleared
+  by the existing importer, including three source paintings. The geometry,
+  passages, arena and throne remain. Moves reuse existing combat effects rather
+  than introducing an untested custom cheese-projectile entity or AI system.
+- Hollow Reaper decor: all 20 full models/textures/glow masks, explicit native
+  facing states, lighting, render layers, loot, items and Arabic/English labels.
+  Its new reliquary ruin generates in Eternal Abyss.
+- Soul Devourer decor: all 20 designs with the same native integration. Its new
+  relic sanctum generates in Gloomwood. Each ruin provides floor/ceiling/wall
+  support and checked visual clearance for its corresponding 20 props.
 
-## Continued changes from the previous request
+Both decor packs are static visual props, one native anchor block per item, with
+noncollision/nonocclusion properties and 1.5 hardness. The complete oversized
+models are legal Java models and retain their authored scale; no physical
+multiblock behavior, chairs, storage or additional Hollow Reaper mob is claimed.
+The source's 1.21 item files and half-state variants are not imported into these
+single-anchor blocks. Supplied emissive masks remain available; light emission
+works without a separate fullbright block overlay renderer.
 
-Villager Knight's gameplay registration, assets, voices, village lodges, atlas
-entry and localized text are removed. Only its known old missing registry IDs
-are ignored; raw army/journal migration removes retired records selectively.
-The other 37 original profiles remain identical, with stable entity names.
-Shared effects for other creatures are preserved as CrystalCombat. Existing
-world buildings are not destructively erased.
+## Compatibility fixes and preserved behavior
 
-The independent legendary encounter helper permits ordinary escape and later
-encounters/summons without a fixed mythic adventure party. Boss-site block-edit
-vetoes are removed while unrelated plot/shrine protection stays. Guardian UUIDs,
-health and matching-owner one-reward validation are preserved. Tick lookups skip
-profiles with no active UUID. Client/server protocol is 32-reforged.
+- Added the alternate _Glow_Mask.png naming convention; hash verification proves
+  King's real uploaded glow mask was included rather than an empty fallback.
+- Preserved FX-bone hiding scales across idle/walk/run, and all five attack clips.
+- Selected translucent layers for glass/mist props, cutout for other decorations.
+- Existing-resource comparison caught old structure placement salts depending on
+  directory iteration order. A checked-in mapping now pins all 20 old salts and
+  three new unique salts, preventing new packs from shifting previous placement.
+- All 47 previous release profiles retain their exact definitions and order.
+  Existing artwork, item definitions, templates and worldgen resources are
+  byte-identical to the 1.3.0 candidate; additive catalogues/locales/metadata and
+  tags are compared separately. Existing encounter-freedom behavior remains.
+- New King escape/reentry, concurrent Refai encounter, UUID reload and one-time
+  capture paths pass simulated-world assertions on the production helper.
+- Villager Knight remains removed with selective saved-record cleanup.
 
-All 53 spawn eggs have creature-specific generated art (52 unique atlas cells
-and Amin's separate transparent texture), without vanilla tinting. The importer
-copies the generated PNGs unchanged. Ocean density modification is now limited
-to a verified Sunken Kingdom climate band, preserving other humid inland terrain.
-Previous biomes/decor remain included: two added biomes, 60 blocks/items,
-20 placed decor props and 20 structure/tree sets.
+Totals: 48 profile entries (37 surviving original + 11 added), separate Soul
+Devourer, 54 unique egg designs, two added biomes, 100 added blocks/items (40 biome
+blocks + 60 decor props) and 23 structure/tree sets. All 60 decor designs have
+verified template placements. Both client/server need protocol 33-royal-relics.
 
-## Executed validation
+## Executed checks
 
-- End-to-end build from the exact supplied base and eleven unique source packs.
-- 17 resource/integration tests passed.
-- 30 encounter assertions on the production helper using explicit world/API
-  fixtures; 10 retirement/migration assertions using explicit API/NBT fixtures.
-- Actual profile initializer: 47 matching IDs/profiles, all 37 surviving original
-  profile definitions unchanged; actual animation reader loaded 29 new moves.
-- Nine generated/relocated expansion classes, 38 methods: bytecode stack/local
-  verification passed; all mod-owned class references resolve after removal.
-- 102 helper member references match the actual mod's public signatures.
-- Aquatic routing, exclusive-session routing and block-edit routing verified.
-- No Minecraft/Forge compile-time fixture classes were packaged in the JAR.
-- Standard split ZIP directory offsets, CRC and complete reassembled JAR SHA-256
-  verified. The delivered volumes were not modified by verification.
+- End-to-end build against the exact supplied original JAR and fourteen unique
+  source archives; all three latest archive CRC checks passed.
+- 22 Python resource/integration test groups passed, including source/data
+  references, palette compatibility, chest stacks, full-body habitat clearance,
+  decor support/clearance, new model bounds/rotations/UVs, FX hiding, retirement,
+  prior-release resource preservation and unchanged Sunken Kingdom climate rules.
+- 36 encounter assertions on the production helper using explicit world/API
+  fixtures, including six new King checks; 10 retirement/mapping assertions.
+- Actual profile initializer and animation reader: 48 matching IDs/profiles,
+  37 unchanged surviving original profiles, 47 unchanged previous-release
+  profiles and 34 added combat clips.
+- Nine generated/relocated classes, 38 methods: stack/local verification passed.
+- All mod-owned class references resolve; 102 helper references match actual
+  public mod signatures. Minecraft/Forge member linkage is not established.
+- 100 added block factories inspected; all 60 decor factories explicitly use
+  noncollision/nonocclusion/strength properties. Aquatic/edit/lifecycle routing
+  checks passed. No compile-time Minecraft/Forge fixtures entered the output.
+- Bash syntax and source whitespace checks passed.
+- Four standard split ZIP volumes verified: directory offsets, member CRC and
+  SHA-256 of the complete reassembled JAR. Delivered split volumes are unchanged.
 
-## Runtime limitation
+## Runtime limitation and remaining validation
 
-The official Forge installer download returns HTTP 403 under the environment's
-network policy; there is no installed Forge runtime. NOT RUN: client/server
-startup, Minecraft/Forge method linkage, registry/worldgen codecs, visual UVs,
-real combat/pathfinding, old-world migration or multiplayer. Compile fixtures
-are not the engine. The build targets Java 17 bytecode using -source/-target
-on JDK 21 because this trimmed JDK lacks ct.sym; Java 17 runtime linkage also
-remains to be checked. Use a disposable world or backup for candidate testing.
+The environment's enforced network policy still excludes the official Forge
+artifact hosts. Previous official installer requests returned HTTP 403, and no
+Forge runtime is installed. No blocked destination was bypassed.
+NOT RUN: Minecraft/Forge startup, engine API/registry/worldgen-codec loading,
+actual rendering, game collision shapes, combat/pathfinding, old-world migration,
+restart or multiplayer. Build helpers use explicit compile/test fixtures, not the
+engine. Bytecode targets Java 17 using -source/-target under the trimmed JDK 21;
+its missing ct.sym prevents --release 17 linkage checks.
 
-See integration/README.md for reproduction and the exact remaining game checks.
+Test this candidate in a disposable world or backup. Existing explored chunks do
+not regenerate; new buildings require new chunks. For live testing: start both
+client/server, inspect logs/resources and new natural structures; summon/capture
+King, flee, break/place blocks and start Refai; inspect each decor placement and
+inventory icon, including translucent layers; repeat after chunk unload and
+restart. See integration/README.md for reproduction and prior-content checks.
 
-## Input integrity
+## Latest uploaded input fingerprints
 
-Amin upload SHA-256:
-d783507d123a3650ab094675f6099e4042de25b144fa38c6226e5a4fc9c9f793
-Refai repeated upload SHA-256 (identical to existing pack):
-afdb067c9f9192878b33d2ba6eff1695026083dd47f8103739013c7a7f407fe2
+Mob_70_King_Of_Corny_Memes_Complete.zip
+SHA-256: 32d6c43242505df0ac102bce0dac0dc534bd97492629d3da8f357a79403b93b0
+
+Decor_Pack_02_Hollow_Reaper.zip
+SHA-256: f228ef2b7ea427e086e602322d9bfb4febddd94900393405245d9f10b7fe083a
+
+Decor_Pack_03_Soul_Devourer.zip
+SHA-256: fcbecc999b4090e349d77dd8095001787fbf738972f13400372e9a84509fc76a
 
 ## Artifact
 
-File: soulbound-army-1.20.1-1.3.0-reforged-preview.jar
-Bytes: 32375483
-SHA-256: 8c2bffeb9962443a4f10e8b1421950c47118378e2a5d4ea420da1c247920ffaf
+File: soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar
+Bytes: 34347232
+SHA-256: bcc06c8f2e9317cc480f86dafd8a0c6a78eebca6c26c3a64939fc04a7147ecae
 
 ## Captured build output
 
 ```text
-Prepared 10 profiles, 60 blocks, 20 structure sets
-Prepared knight removal, compacted profile IDs and 53 unique egg designs.
+Prepared 11 profiles, 60 blocks, 21 structure sets
+Imported 40 native decorative props with two supported, spaced themed ruins.
+Prepared knight removal, compacted profile IDs and 54 unique egg designs.
 warning: [options] system modules path not set in conjunction with -source 17
 1 warning
-PASS: 30 open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.
+PASS: 36 open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.
 PASS: 10 retirement/missing-mapping assertions against explicit API/NBT fixtures.
-Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.3.0-reforged-preview.jar (3249 entries); patched method stack verification passed.
+Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar (3506 entries); patched method stack verification passed.
 PASS: all 9 generated expansion classes / 38 methods passed bytecode stack/local checks (not game API linkage).
 PASS: every mod-owned class reference resolves after retirement/relocation.
 PASS: 102 helper references match public members of the actual patched mod (Minecraft/Forge members remain unverified).
 PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.
-PASS: 47 matching IDs/profiles; all 37 surviving original profiles unchanged; 29 added combat clips loaded by the real animation reader.
+PASS: 48 matching IDs/profiles; all 37 surviving original profiles unchanged; 34 added combat clips loaded by the real animation reader.
+PASS: 100 added block factories, including 60 explicitly noncolliding/nonoccluding decor props.
+PASS: all 47 profiles from the previous 1.3.0 candidate retain their exact definitions/order.
 test_all_eggs_have_unique_authored_art (__main__.IntegrationTests.test_all_eggs_have_unique_authored_art) ... ok
 test_amin_loot_survives_120_conversion (__main__.IntegrationTests.test_amin_loot_survives_120_conversion) ... ok
 test_block_model_and_texture_references (__main__.IntegrationTests.test_block_model_and_texture_references) ... ok
@@ -102,33 +135,38 @@ test_catalogue_alignment_and_surviving_ids (__main__.IntegrationTests.test_catal
 test_decorations_registered_and_placed (__main__.IntegrationTests.test_decorations_registered_and_placed) ... ok
 test_dimension_biomes_and_features_resolve (__main__.IntegrationTests.test_dimension_biomes_and_features_resolve) ... ok
 test_explicit_transparent_block_render_layers (__main__.IntegrationTests.test_explicit_transparent_block_render_layers) ... ok
+test_king_effect_bones_are_hidden_during_locomotion (__main__.IntegrationTests.test_king_effect_bones_are_hidden_during_locomotion) ... ok
+test_king_palace_chests_and_spawn_registry (__main__.IntegrationTests.test_king_palace_chests_and_spawn_registry) ... ok
 test_knight_content_removed_and_other_temples_preserved (__main__.IntegrationTests.test_knight_content_removed_and_other_temples_preserved) ... ok
 test_localization_and_registry_assets (__main__.IntegrationTests.test_localization_and_registry_assets) ... ok
 test_model_hierarchies_and_animation_tracks (__main__.IntegrationTests.test_model_hierarchies_and_animation_tracks) ... ok
+test_new_decor_models_use_native_anchor_states (__main__.IntegrationTests.test_new_decor_models_use_native_anchor_states) ... ok
+test_new_decor_ruins_have_support_and_visual_clearance (__main__.IntegrationTests.test_new_decor_ruins_have_support_and_visual_clearance) ... ok
 test_no_newer_or_invented_vanilla_block_ids (__main__.IntegrationTests.test_no_newer_or_invented_vanilla_block_ids) ... ok
 test_ocean_density_is_limited_to_sunken_climate (__main__.IntegrationTests.test_ocean_density_is_limited_to_sunken_climate) ... ok
 test_preserved_original_classes_and_protocol_change (__main__.IntegrationTests.test_preserved_original_classes_and_protocol_change) ... ok
+test_previous_release_content_preserved (__main__.IntegrationTests.test_previous_release_content_preserved) ... ok
 test_resources_were_packaged_without_loss (__main__.IntegrationTests.test_resources_were_packaged_without_loss) ... ok
 test_structure_worldgen_links_and_spawn_clearance (__main__.IntegrationTests.test_structure_worldgen_links_and_spawn_clearance) ... ok
 test_templates_palettes_loot_and_bounds (__main__.IntegrationTests.test_templates_palettes_loot_and_bounds) ... ok
 test_textures_and_glow_masks (__main__.IntegrationTests.test_textures_and_glow_masks) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 18.115s
+Ran 22 tests in 27.052s
 
 OK
-8c2bffeb9962443a4f10e8b1421950c47118378e2a5d4ea420da1c247920ffaf  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.3.0-reforged-preview.jar
-Resource output: /workspace/mod-integration/resources.Yf2I2s
+bcc06c8f2e9317cc480f86dafd8a0c6a78eebca6c26c3a64939fc04a7147ecae  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar
+Resource output: /workspace/mod-integration/resources.oYBIwJ
 ```
 
 ## Captured archive verification
 
 ```text
-  adding: soulbound-army-1.20.1-1.3.0-reforged-preview.jar (deflated 2%)
+  adding: soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar (deflated 3%)
 PASS: 4 standard split ZIP volumes, CRC and reassembled JAR SHA-256 verified.
-JAR SHA-256: 8c2bffeb9962443a4f10e8b1421950c47118378e2a5d4ea420da1c247920ffaf
-Soulbound-Army-1.3.0.z01: 10485760 bytes
-Soulbound-Army-1.3.0.z02: 10485760 bytes
-Soulbound-Army-1.3.0.z03: 10485760 bytes
-Soulbound-Army-1.3.0.zip: 138631 bytes
+JAR SHA-256: bcc06c8f2e9317cc480f86dafd8a0c6a78eebca6c26c3a64939fc04a7147ecae
+Soulbound-Army-1.4.0.z01: 10485760 bytes
+Soulbound-Army-1.4.0.z02: 10485760 bytes
+Soulbound-Army-1.4.0.z03: 10485760 bytes
+Soulbound-Army-1.4.0.zip: 1977966 bytes
 ```

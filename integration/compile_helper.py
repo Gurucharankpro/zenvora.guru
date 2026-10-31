@@ -1,7 +1,7 @@
 """Compile the runtime helper against explicit ABI fixtures; never package them.
 
 Fixtures allow deterministic JVM regression tests without claiming Forge startup.
-Only OpenMythics.class is copied to the output resource overlay.
+Only the three production helper classes are copied to the resource overlay.
 """
 import argparse,json,subprocess
 from pathlib import Path
@@ -99,7 +99,7 @@ SOURCES={
 'dev/shadowsovereign/mythic/MythicBeast':'''public class MythicBeast extends net.minecraft.world.entity.Mob {public int kind;public int kind(){return kind;}}''',
 'dev/shadowsovereign/mythic/SoulDevourer':'public class SoulDevourer extends net.minecraft.world.entity.Mob {}',
 'dev/shadowsovereign/mythic/MythicExpedition':'''public class MythicExpedition {
- public static final String[] IDS=new String[47];static {for(int i=0;i<IDS.length;i++)IDS[i]="kind_"+i;}
+ public static final String[] IDS=new String[48];static {for(int i=0;i<IDS.length;i++)IDS[i]="kind_"+i;}
  public static java.util.Map<java.util.UUID,java.util.Map<Integer,MythicBeast>> bodies=new java.util.HashMap<>();public static int spawned;
  public static net.minecraft.nbt.CompoundTag state(net.minecraft.server.level.ServerPlayer p,int kind){var n=dev.shadowsovereign.adventure.AdventureService.journal(p).mythic.gloom;String key=IDS[kind];if(!n.values.containsKey(key))n.values.put(key,new net.minecraft.nbt.CompoundTag());return n.m_128469_(key);}
  public static MythicBeast body(net.minecraft.server.level.ServerPlayer p,int kind){return bodies.getOrDefault(p.id,java.util.Map.of()).get(kind);}

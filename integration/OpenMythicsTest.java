@@ -68,6 +68,17 @@ public class OpenMythicsTest {
         check(!OpenMythics.editableGloom(p,pos),"foreign player plot remains protected");p.foreign=false;p.inside=false;
         check(!OpenMythics.editableGloom(p,pos),"edit exception does not apply outside realm");
         check(OpenMythics.cancel(p)&&!boss.removed&&j.session==other,"cancel does not delete bodies or unrelated adventure");
+        var royal=player();habitat(royal,47);habitat(royal,45);
+        check(OpenMythics.start(royal,47),"new final-index king starts in his habitat");
+        var king=MythicExpedition.body(royal,47);king.hp=63;
+        royal.x=100;royal.f_19797_=10;OpenMythics.tick(royal);
+        check(king.target==null&&king.hp==63&&!king.removed&&AdventureService.journal(royal).session==null,"escape preserves king without exclusive lock");
+        check(OpenMythics.start(royal,45),"Refai starts while escaped king stays alive");
+        royal.x=0;royal.f_19797_=20;OpenMythics.tick(royal);
+        check(king.target==royal,"king resumes ordinary targeting on return");
+        var kingReload=new EntityJoinLevelEvent(king);OpenMythics.join(kingReload);
+        check(!kingReload.canceled,"king reload validates per-creature UUID");
+        check(OpenMythics.defeated(king,royal.id)&&!OpenMythics.defeated(king,royal.id),"king grants capture only once");
         System.out.println("PASS: "+checks+" open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.");
     }
 }
