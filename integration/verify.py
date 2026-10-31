@@ -25,13 +25,13 @@ class IntegrationTests(unittest.TestCase):
 
     def test_catalogue_alignment_and_surviving_ids(self):
         profiles=self.spec['profiles']
-        self.assertEqual([p['index'] for p in profiles],list(range(37,48)))
-        self.assertEqual(len(set(p['id'] for p in profiles)),11)
+        self.assertEqual([p['index'] for p in profiles],list(range(37,49)))
+        self.assertEqual(len(set(p['id'] for p in profiles)),12)
         path='data/shadowsovereign/mythic_sites.json'
         old=json.loads(self.base[path]);new=json.loads(self.jar[path])
         old=[dict(p,kind=p['kind']-1 if p['kind']>34 else p['kind']) for p in old if p['kind']!=34]
         self.assertEqual(new[:len(old)],old)
-        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,48)))
+        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,49)))
 
     def test_resources_were_packaged_without_loss(self):
         for path in self.resources.rglob('*'):
@@ -147,7 +147,7 @@ class IntegrationTests(unittest.TestCase):
             self.assertIn(f'data/shadowsovereign/structures/{template}.nbt',self.jar)
             ss=json.loads(self.jar[root+'structure_set/'+id+'.json'])
             self.assertLess(ss['placement']['separation'],ss['placement']['spacing'])
-        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-11:]
+        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-12:]
         passable={'minecraft:air','minecraft:structure_void','minecraft:spore_blossom'}
         for site,profile in zip(sites,self.spec['profiles']):
             structure=site['structure'].removeprefix('expansion_')
@@ -182,7 +182,7 @@ class IntegrationTests(unittest.TestCase):
         for name,content in self.base.items():
             if name.startswith('dev/shadowsovereign/knighthaven/'):continue
             if name.endswith('.class') and name not in patched:self.assertEqual(self.jar[name],content,name)
-        self.assertTrue(b'33-royal-relics' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
+        self.assertTrue(b'34-living-realms' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
 
     def test_knight_content_removed_and_other_temples_preserved(self):
         retired=('villager_knight','village_knight_lodge','knighthaven_villages')
@@ -197,7 +197,7 @@ class IntegrationTests(unittest.TestCase):
             if '/knighthaven_' in name and not any(s in name for s in retired):self.assertIn(name,self.jar)
 
     def test_all_eggs_have_unique_authored_art(self):
-        eggs=self.spec['eggs'];self.assertEqual(len(eggs),54)
+        eggs=self.spec['eggs'];self.assertEqual(len(eggs),55)
         actual={Path(n).stem for n in self.jar if n.startswith('assets/shadowsovereign/models/item/') and n.endswith('_spawn_egg.json')}
         self.assertEqual(set(eggs),actual)
         cells=[]
@@ -323,7 +323,7 @@ class IntegrationTests(unittest.TestCase):
         self.assertEqual(len(chests),5)
         self.assertTrue(all(str(c['LootTable'])=='minecraft:chests/end_city_treasure' for c in chests))
         sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])
-        self.assertEqual(sites[-1],dict(kind=47,structure='expansion_palace_of_eternal_cringe',altar=[27,6,33],rootOffset=[0,0,0]))
+        self.assertEqual(next(s for s in sites if s['kind']==47),dict(kind=47,structure='expansion_palace_of_eternal_cringe',altar=[27,6,33],rootOffset=[0,0,0]))
 
     def test_previous_release_content_preserved(self):
         if ARGS.previous is None:self.skipTest('Previous candidate JAR not supplied')
@@ -335,6 +335,24 @@ class IntegrationTests(unittest.TestCase):
                 # templates, worldgen data and item definitions stay identical.
                 if name.startswith(('assets/shadowsovereign/lang/','data/minecraft/tags/')) or name in ['META-INF/mods.toml','data/shadowsovereign/mythic_sites.json']:continue
                 self.assertEqual(z.read(name),self.jar[name],name)
+
+    def test_regional_waystations_and_tutorial_rewards(self):
+        regions=self.spec['regional_settlements']
+        self.assertEqual(len(regions),10)
+        ids=[id for r in regions for id in r['decor']]
+        self.assertEqual(len(ids),60);self.assertEqual(set(ids),set(self.spec['decor_ids']))
+        self.assertEqual(len(set(ids)),60)
+        quests=self.spec['journey_quests'];self.assertEqual(len(quests),15)
+        for id in quests:
+            d=json.loads(self.jar[f'data/shadowsovereign/advancements/journey/{id}.json'])
+            self.assertTrue(d['criteria']);self.assertGreater(d['rewards']['experience'],0)
+            function=d['rewards']['function'].split(':')[1]
+            commands=self.jar[f'data/shadowsovereign/functions/{function}.mcfunction'].decode()
+            self.assertNotIn('advancement revoke',commands)
+            self.assertNotIn('schedule',commands)
+            self.assertIn('give @s minecraft:bread',commands)
+        allbiomes=json.loads(self.jar['data/shadowsovereign/advancements/journey/cartographer.json'])
+        self.assertEqual(len(allbiomes['criteria']),10)
 
 
 if __name__=='__main__':

@@ -264,8 +264,8 @@ public class PatchMod implements Opcodes {
         // Exact protocol match prevents old clients joining a server whose
         // entity registry and bestiary have been extended.
         String network=ROOT+"network/ShadowNetwork.class";var c=new ClassNode();new ClassReader(entries.get(network)).accept(c,0);
-        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="33-royal-relics";
-        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="33-royal-relics";}
+        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="34-living-realms";
+        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="34-living-realms";}
         var w=new ClassWriter(0);c.accept(w);entries.put(network,w.toByteArray());
         for(var entry:new ArrayList<>(entries.entrySet()))if(entry.getKey().endsWith(".class")){
             String className=entry.getKey().replace(".class","");
@@ -280,7 +280,7 @@ public class PatchMod implements Opcodes {
         try(var paths=Files.walk(resources)){for(var path:paths.filter(Files::isRegularFile).toList()){
             String name=resources.relativize(path).toString().replace(File.separatorChar,'/');
             if(!name.equals("integration-spec.json"))entries.put(name,Files.readAllBytes(path));}}
-        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.4.0-royal-relics-preview\"");
+        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.5.0-living-realms-preview\"");
         entries.put("META-INF/mods.toml",metadata.getBytes(java.nio.charset.StandardCharsets.UTF_8));
         Files.createDirectories(output.toAbsolutePath().getParent());
         try(var zip=new ZipOutputStream(Files.newOutputStream(output))){for(var entry:entries.entrySet()){var e=new ZipEntry(entry.getKey());e.setTime(0);zip.putNextEntry(e);zip.write(entry.getValue());zip.closeEntry();}}

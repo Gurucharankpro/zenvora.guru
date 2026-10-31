@@ -79,6 +79,8 @@ public class OpenMythicsTest {
         var kingReload=new EntityJoinLevelEvent(king);OpenMythics.join(kingReload);
         check(!kingReload.canceled,"king reload validates per-creature UUID");
         check(OpenMythics.defeated(king,royal.id)&&!OpenMythics.defeated(king,royal.id),"king grants capture only once");
+        habitat(royal,48);check(OpenMythics.start(royal,48),"acrobat starts independently");
+        check(OpenMythics.defeated(MythicExpedition.body(royal,48),royal.id),"acrobat grants native capture");
         System.out.println("PASS: "+checks+" open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.");
     }
 }

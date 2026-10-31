@@ -1,4 +1,4 @@
-43e46d2eac1f8bf9bfd798a63181b04a88bea22cde27b2b869c686f3fdde5d85  Soulbound-Army-1.4.0.z01
-dd4e94fb5b6eebf42fc9c802ab0f57489fdebcf3b5020aa9bcb62d16bc4aa7eb  Soulbound-Army-1.4.0.z02
-b2a47e24f4a7e676150479be9e06fd6c50f2b94f26d518c166b5c4bcd984ff36  Soulbound-Army-1.4.0.z03
-5d38ea316636e292dd7acf398f6bd579002f5e2549b11969d0d490cafdeeee90  Soulbound-Army-1.4.0.zip
+00563a14b0af4b283cb4cfebaa2ded27045fc0eadd81bb3de84e4f6981bcb1d0  Soulbound-Army-1.5.0.z01
+c8e32dc672dae83cf29ad135f71b228316cf76e9260291de2034321e7ee417c4  Soulbound-Army-1.5.0.z02
+660cbd514b14dcdf62df5d4c2b22f160a9cab98f36afccd5db5927ef997cb63f  Soulbound-Army-1.5.0.z03
+7dc452c3c7911f85e9049a4712404c5ef6aaba8f39544d52fd1d03b897ce1c68  Soulbound-Army-1.5.0.zip

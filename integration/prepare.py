@@ -162,12 +162,14 @@ def build(inputs, base_path, out):
                 [('punch_combo',1.3,0,3.8,1),('defensive_counter',1.1,5,0,0),('intimidation',1.5,3,8,.4)]),
                ('King_Of_Corny_Memes','king_of_corny_memes','ملك الميمز البايخة',1100,24,12,.25,2.0,4.2,False,
                 [('bad_joke_attack',1.04,21,9,.65),('cheese_meteor',2.02,47,16,1.05),
-                 ('royal_facepalm',1.04,5,0,0),('cringe_beam',1.4,6,16,1),('ultimate_punchline',2.3,1,11,1.25)])]
+                 ('royal_facepalm',1.04,5,0,0),('cringe_beam',1.4,6,16,1),('ultimate_punchline',2.3,1,11,1.25)]),
+               ('The_69_Pose','the_69_pose','بهلوان الكسوف',750,21,10,.31,1.2,2.8,False,
+                [('69_pose',3.4,5,0,0),('gravity_kick',.75,0,5,1),('inverted_strike',1.2,1,6,1),('number_orbit',.8,47,14,.9),('ultimate_inversion',2.2,1,10,1.2)])]
         for index,(source,id,ar,hp,damage,armor,speed,width,height,flies,moves) in enumerate(packs,38):
             geo=json.loads(find(source+'.geo.json').read_text());anim=json.loads(find(source+'.animation.json').read_text())
             native=model(geo,anim);write(f'assets/{NS}/mythic/{id}.json',native)
             write(f'assets/{NS}/textures/entity/{id}.png',find(source+'_Texture.png').read_bytes())
-            glows=list(inputs.rglob(source+'_Glowmask.png'))+list(inputs.rglob(source+'_Glow_Mask.png'))
+            glows=list(inputs.rglob(source+'_Glowmask.png'))+list(inputs.rglob(source+'_Glow_Mask.png'))+list(inputs.rglob(source+'_Texture_glowmask.png'))
             assert len(glows)<=1,('Ambiguous glow mask',source)
             write(f'assets/{NS}/textures/entity/{id}_glow.png',glows[0].read_bytes() if glows else transparent_png())
             walk,run=('swim','swim_fast') if id=='pearl_drakeling' else ('walk','swim_fast') if id=='weeping_axolotl' else ('walk','fly' if flies else 'run')
@@ -305,12 +307,13 @@ def build(inputs, base_path, out):
                     ('drowned_glass_palace',[19,8,19],'sunken_kingdom',-6),
                     ('refai_cursed_stronghold',[24,10,33],'crimson_shadow',-9),
                     ('amin_el_nemr_workshop',[18,5,32],'crimson_shadow',-4),
-                    ('palace_of_eternal_cringe',[27,6,33],'shattered_sky',-5)]
+                    ('palace_of_eternal_cringe',[27,6,33],'shattered_sky',-5),
+                    ('inverted_circus',[22,6,22],'moonveil_hollow',-5)]
         # Add all 20 decorations to safe, formerly empty positions in the new
         # dry structures. No chest, spawn pad or existing block is replaced.
         remaining=list(spec['decor_ids']);placements=[]
         for name,altar,biome,offset in encounters[5:]:
-            if name in ('drowned_glass_palace','amin_el_nemr_workshop','palace_of_eternal_cringe'):continue
+            if name in ('drowned_glass_palace','amin_el_nemr_workshop','palace_of_eternal_cringe','inverted_circus'):continue
             n=structures[name];size=list(map(int,n['size']));occupied={tuple(map(int,b['pos'])):b for b in n['blocks']}
             budget=7 if name!='refai_cursed_stronghold' else len(remaining)
             for pos,block in sorted(occupied.items()):

@@ -15,3 +15,6 @@ in each local build's resource output. Runtime models embed each assigned UV.
 - king-egg.png: separate 1254 x 1254 RGBA golden royal egg, magenta bow tie,
   grinning sun/cheese emblem and purple cape motifs, generated from the supplied
   King appearance. Its addition does not alter any existing atlas UV assignment.
+
+- acrobat-egg.png: separate generated transparent violet/gold eclipse egg with
+  masked circus and inverted-infinity motifs. Copied unchanged from imagegen.

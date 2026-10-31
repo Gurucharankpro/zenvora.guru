@@ -74,7 +74,7 @@ public class RegistryTest {
             String name="dev.shadowsovereign.mythic.MythicProfiles";
             var oldClass=Class.forName(name,true,before);var newClass=Class.forName(name,true,after);
             var oldList=(List<?>)oldClass.getField("ALL").get(null);var newList=(List<?>)newClass.getField("ALL").get(null);
-            if(oldList.size()!=38 || newList.size()!=48)throw new AssertionError("Profile count");
+            if(oldList.size()!=38 || newList.size()!=49)throw new AssertionError("Profile count");
             for(int i=0;i<38;i++){
                 if(i==34)continue;
                 if(!oldList.get(i).toString().equals(newList.get(i<34?i:i-1).toString()))throw new AssertionError("Changed surviving profile "+i);
@@ -84,7 +84,7 @@ public class RegistryTest {
             // the catalogue can execute in an isolated JVM without game stubs.
             c.methods.removeIf(m->!m.name.equals("<clinit>"));c.fields.removeIf(f->!f.name.equals("IDS"));
             var w=new ClassWriter(0);c.accept(w);Class<?> idsClass=new Isolated().define(w.toByteArray());String[] ids=(String[])idsClass.getField("IDS").get(null);
-            if(ids.length!=48)throw new AssertionError("ID count");
+            if(ids.length!=49)throw new AssertionError("ID count");
             var aquatic=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry(helper.name+".class"))).accept(aquatic,0);
             aquatic.methods.removeIf(m->!m.name.equals("isAquatic"));aquatic.fields.clear();
             var aw=new ClassWriter(0);aquatic.accept(aw);Class<?> aquaticType=((Isolated)idsClass.getClassLoader()).define(aw.toByteArray());
@@ -103,7 +103,7 @@ public class RegistryTest {
             if(!foreign||!shrine||!gloom)throw new AssertionError("Edit protection routing changed unexpectedly");
             System.out.println("PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.");
             int moves=0;
-            for(int i=0;i<48;i++){
+            for(int i=0;i<49;i++){
                 Object profile=newList.get(i);Class<?> type=profile.getClass();String id=(String)type.getMethod("id").invoke(profile);
                 if(!id.equals(ids[i]))throw new AssertionError("ID/profile mismatch at "+i);
                 if(i<37)continue;
@@ -114,10 +114,10 @@ public class RegistryTest {
                     if(!exists || duration<=0)throw new AssertionError("Missing authored animation "+id+"/"+clip);moves++;
                 }
             }
-            if(moves!=34)throw new AssertionError("Expected 34 authored added combat moves, got "+moves);
+            if(moves!=39)throw new AssertionError("Expected 39 authored added combat moves, got "+moves);
             if(newList.stream().anyMatch(p->p.toString().contains("villager_knight")))throw new AssertionError("Retired profile survived");
             if(!ids[45].equals("legendary_giant_zombie_refai")||!ids[46].equals("amin_el_nemr")||!ids[47].equals("king_of_corny_memes"))throw new AssertionError("Latest creatures misplaced/duplicated");
-            System.out.println("PASS: 48 matching IDs/profiles; all 37 surviving original profiles unchanged; "+moves+" added combat clips loaded by the real animation reader.");
+            System.out.println("PASS: 49 matching IDs/profiles; all 37 surviving original profiles unchanged; "+moves+" added combat clips loaded by the real animation reader.");
             var content=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry("dev/shadowsovereign/gloom/GloomContent.class"))).accept(content,0);
             int factories=0;
             for(var method:content.methods)if(method.name.matches("expansion\\$block\\d+")){
@@ -132,9 +132,9 @@ public class RegistryTest {
             if(args.length==5 && args[3].equals("--previous"))try(var previous=loader(Path.of(args[4]),gson)){
                 var previousClass=Class.forName(name,true,previous);
                 var previousProfiles=(List<?>)previousClass.getField("ALL").get(null);
-                if(previousProfiles.size()!=47)throw new AssertionError("Unexpected previous release size");
-                for(int i=0;i<47;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
-                System.out.println("PASS: all 47 profiles from the previous 1.3.0 candidate retain their exact definitions/order.");
+                if(previousProfiles.size()!=48)throw new AssertionError("Unexpected previous release size");
+                for(int i=0;i<48;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
+                System.out.println("PASS: all 48 profiles from the previous 1.4.0 candidate retain their exact definitions/order.");
             }
         }
     }
