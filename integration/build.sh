@@ -29,11 +29,12 @@ resources=$(mktemp -d "$build_dir/resources.XXXXXX")
 python3 "$source_dir/prepare.py" --inputs "$input_dir" --base "$base_jar" --out "$resources"
 python3 "$source_dir/decor_packs.py" --inputs "$input_dir" --base "$base_jar" --out "$resources"
 python3 "$source_dir/living_realms.py" --resources "$resources"
+python3 "$source_dir/learning_quests.py" --resources "$resources"
 python3 "$source_dir/polish_assets.py" --base "$base_jar" --out "$resources"
 python3 "$source_dir/compile_helper.py" "$build_dir" "$resources"
-jar="$build_dir/dist/soulbound-army-1.20.1-1.5.0-living-realms-preview.jar"
+jar="$build_dir/dist/soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar"
 java --class-path "$build_dir/tools/*" "$source_dir/PatchMod.java" "$base_jar" "$resources" "$jar"
-previous_jar="$build_dir/dist/soulbound-army-1.20.1-1.4.0-royal-relics-preview.jar"
+previous_jar="$build_dir/dist/soulbound-army-1.20.1-1.5.0-living-realms-preview.jar"
 previous_args=()
 if [ -f "$previous_jar" ]; then previous_args=(--previous "$previous_jar"); fi
 java --class-path "$build_dir/tools/*" "$source_dir/RegistryTest.java" "$base_jar" "$jar" "$build_dir/tools/gson.jar" "${previous_args[@]}"

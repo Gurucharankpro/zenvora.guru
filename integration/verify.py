@@ -182,7 +182,7 @@ class IntegrationTests(unittest.TestCase):
         for name,content in self.base.items():
             if name.startswith('dev/shadowsovereign/knighthaven/'):continue
             if name.endswith('.class') and name not in patched:self.assertEqual(self.jar[name],content,name)
-        self.assertTrue(b'34-living-realms' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
+        self.assertTrue(b'35-learning-paths' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
 
     def test_knight_content_removed_and_other_temples_preserved(self):
         retired=('villager_knight','village_knight_lodge','knighthaven_villages')
@@ -353,6 +353,23 @@ class IntegrationTests(unittest.TestCase):
             self.assertIn('give @s minecraft:bread',commands)
         allbiomes=json.loads(self.jar['data/shadowsovereign/advancements/journey/cartographer.json'])
         self.assertEqual(len(allbiomes['criteria']),10)
+
+    def test_exactly_500_additive_learning_tasks(self):
+        ids=self.spec['learning_quests'];self.assertEqual(len(ids),500);self.assertEqual(len(set(ids)),500)
+        languages={loc:json.loads(self.jar[f'assets/shadowsovereign/lang/{loc}.json']) for loc in ['en_us','ar_sa']}
+        for id in ids:
+            d=json.loads(self.jar[f'data/shadowsovereign/advancements/learning/{id}.json'])
+            self.assertTrue(d['criteria']);self.assertGreater(d['rewards']['experience'],0)
+            self.assertNotIn('function',d['rewards'])
+            for loot in d['rewards'].get('loot',[]):
+                self.assertIn('data/shadowsovereign/loot_tables/'+loot.split(':')[1]+'.json',self.jar)
+            if 'parent' in d:
+                path=d['parent'].split(':')[1]
+                self.assertIn('data/shadowsovereign/advancements/'+path+'.json',self.jar)
+            for loc in ['en_us','ar_sa']:
+                lang=languages[loc]
+                self.assertIn(d['display']['title']['translate'],lang)
+                self.assertIn(d['display']['description']['translate'],lang)
 
 
 if __name__=='__main__':

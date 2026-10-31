@@ -132,9 +132,9 @@ public class RegistryTest {
             if(args.length==5 && args[3].equals("--previous"))try(var previous=loader(Path.of(args[4]),gson)){
                 var previousClass=Class.forName(name,true,previous);
                 var previousProfiles=(List<?>)previousClass.getField("ALL").get(null);
-                if(previousProfiles.size()!=48)throw new AssertionError("Unexpected previous release size");
-                for(int i=0;i<48;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
-                System.out.println("PASS: all 48 profiles from the previous 1.4.0 candidate retain their exact definitions/order.");
+                if(previousProfiles.size()!=49)throw new AssertionError("Unexpected previous release size");
+                for(int i=0;i<49;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
+                System.out.println("PASS: all 49 profiles from the previous 1.5.0 candidate retain their exact definitions/order.");
             }
         }
     }

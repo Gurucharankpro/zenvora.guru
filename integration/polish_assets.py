@@ -93,7 +93,7 @@ def main(base_path,out):
                                   'min_inclusive':-.4,'max_exclusive':.4,'when_in_range':choice,'when_out_of_range':baseline}
     write(path,noise)
     spec.update(removed_resources=deleted,removed_profile_index=34,original_profile_count=37,
-                eggs=mapping,profile_count=49,format_version='1.5.0')
+                eggs=mapping,profile_count=49,format_version='1.6.0')
     write('integration-spec.json',spec)
     print('Prepared knight removal, compacted profile IDs and 55 unique egg designs.')
 

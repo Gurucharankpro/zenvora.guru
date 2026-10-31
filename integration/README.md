@@ -1,4 +1,4 @@
-# Soulbound Army 1.5.0 — living realms preview
+# Soulbound Army 1.6.0 — learning paths preview
 
 Experimental Minecraft 1.20.1 / Forge 47.3+ binary integration. The original
 Forge development project was not supplied. Build/test fixtures are not the
@@ -35,7 +35,7 @@ Template entities are cleared; chest loot is retained and NBT targets 3465.
 
 Legacy legendary encounter freedom, selective Villager Knight removal, aquatic
 routing and pinned old worldgen placement salts remain. Client/server both need
-the new JAR, protocol 34-living-realms. Both player and server must replace the
+the new JAR, protocol 35-learning-paths. Both player and server must replace the
 old mod; do not install two versions simultaneously.
 
 Build with JDK 21 tooling, Python 3.12+, curl, the original JAR and fifteen
@@ -59,3 +59,22 @@ server startup, worldgen/advancement codec acceptance, actual structure terrain
 placement/lighting, rendering, collisions, combat, old-world migration and restart.
 Use a disposable world or backup for candidate testing. Passing local tests does
 not certify a bug-free game or completion of a full visual/gameplay overhaul.
+
+## 500 additional learning goals
+
+learning_quests.py adds exactly 500 new native advancements under a separate
+learning namespace: 300 block discovery/building/reserve lessons, 60 regional
+decoration tasks, 40 biome preparation goals and 100 recipe/equipment lessons.
+Each has an English/Arabic explanation and one-time XP. Ten stage milestones
+also use the supply-chest loot table. Rare decor reserves require two items;
+other building reserves require eight. Toast/chat announcements are suppressed
+to avoid a flood of messages. Multiple tabs organize the lessons.
+
+The old story planner catalogue has 60 entries; an alleged old total of 500 was
+not established across all game systems. Existing goals and advancements are
+preserved; no claim of an exact old/new combined 1000 is made. New lessons use
+the vanilla advancement screen, not new entries in QuestPlannerScreen. Parent
+links organize display; they do not prevent early completion. Inventory goals
+need an inventory change, and recipe goals unlock via the vanilla recipe book.
+This is practical block/decor/preparation teaching, not 500 new scripted story
+scenarios or a rewrite of every combat/army tutorial.
