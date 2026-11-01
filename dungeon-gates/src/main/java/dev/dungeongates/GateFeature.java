@@ -150,13 +150,14 @@ public final class GateFeature extends Feature<NoneFeatureConfiguration> {
   }
 
   public static boolean terrain(WorldGenLevel l, BlockPos p) {
-    if (p.getY() < l.getMinBuildHeight() + 8 || p.getY() + 8 >= l.getMaxBuildHeight()) return false;
+    if (p.getY() < l.getMinBuildHeight() + 8 || p.getY() + 10 >= l.getMaxBuildHeight())
+      return false;
     for (int x = -1; x <= 1; x++)
       for (int z = -1; z <= 1; z++) if (!footing(l, p.offset(x, 0, z))) return false;
     // Include the authored rune geometry and label, not only the contact panel.
     for (int x = -2; x <= 2; x++)
       for (int z = -2; z <= 2; z++)
-        for (int y = 0; y < 8; y++) if (!harmlessAir(l, p.offset(x, y, z))) return false;
+        for (int y = 0; y < 10; y++) if (!harmlessAir(l, p.offset(x, y, z))) return false;
     return true;
   }
 }

@@ -80,6 +80,6 @@ public final class GateAnchor extends BlockEntity {
   }
 
   public AABB getRenderBoundingBox() {
-    return new AABB(worldPosition.offset(-4, 0, -4), worldPosition.offset(5, 8, 5));
+    return new AABB(worldPosition.offset(-4, 0, -4), worldPosition.offset(5, 11, 5));
   }
 }

@@ -6,9 +6,9 @@
         "identifier": "geometry.frostgrave_prowler",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounding_box_width": 3.8,
-        "visible_bounding_box_height": 3.66,
-        "visible_bounding_box_offset": [
+        "visible_bounds_width": 3.8,
+        "visible_bounds_height": 3.66,
+        "visible_bounds_offset": [
           0,
           0.83,
           0

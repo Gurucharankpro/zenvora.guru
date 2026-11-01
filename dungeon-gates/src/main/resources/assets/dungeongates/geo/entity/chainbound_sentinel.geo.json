@@ -6,9 +6,9 @@
         "identifier": "geometry.chainbound_sentinel",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounding_box_width": 4.69,
-        "visible_bounding_box_height": 4.33,
-        "visible_bounding_box_offset": [
+        "visible_bounds_width": 4.69,
+        "visible_bounds_height": 4.33,
+        "visible_bounds_offset": [
           0,
           1.17,
           0

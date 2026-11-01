@@ -29,8 +29,18 @@ for p in (R/'input/emerald/Portal/assets/soulbound/textures/entity/portal').glob
  shutil.copyfile(p,portal/('emerald_'+p.name))
 for p in (R/'input/frozen/Portal').rglob('*.png'):
  if 'preview' not in p.name.lower() and 'MOCKUP' not in p.name:shutil.copyfile(p,portal/('frozen_'+p.name))
-# Geo glow masks use GeckoLib's documented _glowing suffix.
+# Exact GeckoLib4.4.9 binary APPENDIX is _glowmask; keep both source conventions.
 for p in (A/'textures/entity').glob('*_glowmask.png'):shutil.copyfile(p,p.with_name(p.name.replace('_glowmask','_glowing')))
+for p in (A/'textures/entity').glob('*_glowing.png'):
+ q=p.with_name(p.name.replace('_glowing','_glowmask'))
+ if not q.exists():shutil.copyfile(p,q)
+for p in (A/'geo/entity').glob('*.geo.json'):
+ d=json.loads(p.read_text())
+ for geometry in d.get('minecraft:geometry',[]):
+  desc=geometry['description']
+  for key in list(desc):
+   if key.startswith('visible_bounding_box_'):desc[key.replace('visible_bounding_box_','visible_bounds_')]=desc.pop(key)
+ dump(p,d)
 # GeckoLib expected normalized resource paths for Emerald.
 for id in ['mossbound_skulker','crystal_sentinel','emerald_root_warden']:
  for folder,ext in [('geo','.geo.json'),('animations','.animation.json')]:

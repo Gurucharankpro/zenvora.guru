@@ -41,7 +41,14 @@ def main():
   if bad:raise RuntimeError('Gameplay passed but resource loading failed: '+repr(bad))
  finally:
   if (run/'screenshots').exists():shutil.copytree(run/'screenshots',reports/'screenshots',dirs_exist_ok=True)
- client={'passed':True,'runtime':'native ForgeGradle source client at same commit, Xvfb/Mesa','both_gates_touch_entry_boss_death_return_trophies_save_reopen':True,'source_commit':os.environ.get('GITHUB_SHA'),'final_jar_sha256':hashlib.sha256(jar.read_bytes()).hexdigest(),'mobile_tested':False,'multiplayer_tested':False}
+ from PIL import Image
+ gallery=Image.open(reports/'screenshots/six-authored-creatures-and-trophies.png').convert('RGB');w,h=gallery.size;colored=[]
+ for k in range(3):
+  roi=gallery.crop((k*w//3,h//2+6,(k+1)*w//3,h-50))
+  count=sum(1 for r,g,b in roi.getdata() if r+g+b>130)
+  if count<=64:raise RuntimeError('Frozen model is still black/untextured, gallery column '+str(k))
+  colored.append(count)
+ client={'passed':True,'runtime':'native ForgeGradle source client at same commit, Xvfb/Mesa','both_gates_touch_entry_boss_death_return_trophies_save_reopen':True,'source_commit':os.environ.get('GITHUB_SHA'),'final_jar_sha256':hashlib.sha256(jar.read_bytes()).hexdigest(),'mobile_tested':False,'multiplayer_tested':False,'frozen_models_colored_pixel_counts':colored,'dungeongates_model_texture_errors':0}
  (reports/'CLIENT.json').write_text(json.dumps(client,indent=2)+'\n')
  (dist/'mods').mkdir(exist_ok=True);shutil.copyfile(jar,dist/'mods'/jar.name);shutil.copyfile(gecko,dist/'mods'/gecko.name)
  print('PASS: real final production JAR on two normal seeds and actual graphical client')

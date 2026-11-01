@@ -64,11 +64,11 @@ public final class GateRenderer implements BlockEntityRenderer<GateAnchor> {
     if (mc.player == null
         || mc.player.distanceToSqr(
                 a.getBlockPos().getX() + .5, a.getBlockPos().getY(), a.getBlockPos().getZ() + .5)
-            > 40 * 40) return;
+            > 32 * 32) return;
     pose.pushPose();
-    pose.translate(.5, kind == GateKind.EMERALD ? 7.2 : 6.4, .5);
+    pose.translate(.5, kind == GateKind.EMERALD ? 8.5 : 7.8, .5);
     pose.mulPose(mc.getEntityRenderDispatcher().cameraOrientation());
-    pose.scale(-.025f, -.025f, .025f);
+    pose.scale(-.045f, -.045f, .045f);
     Component[] text = {
       Component.translatable("dg.level", 1),
       Component.translatable("dg.gate", kind.number),

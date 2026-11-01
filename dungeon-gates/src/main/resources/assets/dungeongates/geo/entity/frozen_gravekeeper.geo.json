@@ -6,9 +6,9 @@
         "identifier": "geometry.frozen_gravekeeper",
         "texture_width": 128,
         "texture_height": 128,
-        "visible_bounding_box_width": 7.46,
-        "visible_bounding_box_height": 6.21,
-        "visible_bounding_box_offset": [
+        "visible_bounds_width": 7.46,
+        "visible_bounds_height": 6.21,
+        "visible_bounds_offset": [
           0,
           2.11,
           0

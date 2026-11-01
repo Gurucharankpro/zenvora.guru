@@ -27,6 +27,7 @@ for id in ids:
  geo=json.loads((A/f'geo/entity/{id}.geo.json').read_text())['minecraft:geometry'][0];anim=json.loads((A/f'animations/entity/{id}.animation.json').read_text());bones={b['name'] for b in geo['bones']};c=anim['animations'];clips[id]=len(c)
  for name,a in c.items():check(set(a.get('bones',{}))<=bones,f'{id} unknown animated bones {name}')
  check((A/f'textures/entity/{id}.png').exists() and (A/f'textures/entity/{id}_glowing.png').exists(),f'{id} glow routing')
+ check((A/f'textures/entity/{id}_glowmask.png').read_bytes()==(A/f'textures/entity/{id}_glowing.png').read_bytes(),f'{id} actual Gecko4.4.9 _glowmask binding')
 checks.append('six actual authored geometry/animation bone sets and glow routes')
 # Verify actual final NBT walkable graph, not only declared source coordinates.
 for id in ['emerald_sanctuary','frozen_crypt']:
