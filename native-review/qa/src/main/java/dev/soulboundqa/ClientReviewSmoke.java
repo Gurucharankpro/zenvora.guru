@@ -51,11 +51,26 @@ public final class ClientReviewSmoke {
    case 5->{shot(m,"earned-latest-legend");MythicNetwork.request(MythicNetwork.Action.SUMMON,kind+1);next(6);}
    case 6->{job(m,p->{var r=GuideService.army(p).shadows.get(soul);var body=ShadowService.active(p.server,r);check(body!=null&&body.isAlive(),"Real book network action summons earned latest companion");body.setNoAi(true);body.moveTo(p.position().add(0,0,5));p.setYRot(0);X1Hooks.emit(body,14);});m.setScreen(null);next(7);}
    case 7->{shot(m,"world-companion-and-fx");m.setScreen(new Gallery());next(8);}
-   case 8->{shot(m,"latest-native-models");m.setScreen(null);job(m,p->{p.server.saveEverything(false,true,true);check(GuideService.army(p).shadows.get(soul).type.equals("shadowsovereign:"+MythicExpedition.IDS[kind]),"Correct saved companion identity");});next(9);}
+   case 8->{shot(m,"latest-native-models");m.setScreen(null);job(m,p->{p.server.saveEverything(false,true,true);check(GuideService.army(p).shadows.get(soul).type.equals("shadowsovereign:"+MythicExpedition.IDS[kind]),"Correct saved companion identity");});m.setScreen(new IconGallery());next(80);}
+   case 80->{shot(m,"unique-eggs-and-journey-badges");m.setScreen(null);next(9);}
    case 9->{m.level.disconnect();m.clearLevel();m.setScreen(new TitleScreen());next(20);}
    case 20->{if(m.getSingleplayerServer()!=null||m.getOverlay()!=null)return;m.createWorldOpenFlows().loadLevel(new TitleScreen(),save);next(21);}
    case 21->{if(m.player==null||m.getSingleplayerServer()==null)return;m.setScreen(null);job(m,p->{var r=GuideService.army(p).shadows.get(soul);check(r!=null&&r.type.equals("shadowsovereign:"+MythicExpedition.IDS[kind])&&MythicExpedition.state(p,kind).getInt("Status")==2,"Actual save/close/reopen retains earned soul and collection");long types=GuideService.army(p).shadows.values().stream().filter(v->v.type.equals("shadowsovereign:"+MythicExpedition.IDS[kind])).count();check(types==1,"No duplicate after true reload");});next(22);}
    case 22->{org.slf4j.LoggerFactory.getLogger("Soulbound181QA").info("181 NATIVE CLIENT PASS:actual H menu, real latest guardian kill/one-time capture, earned3D book, real summon packet, world companion/effects, three latest legends and Prism Jerboa, actual save-close-reopen retaining soul without duplication");m.level.disconnect();m.clearLevel();m.stop();next(99);}
+  }
+ }
+ static final class IconGallery extends Screen {
+  IconGallery(){super(Component.literal("Updated icons"));}
+  @Override public boolean isPauseScreen(){return false;}
+  @Override public void render(GuiGraphics g,int mx,int my,float partial){
+   g.fill(0,0,width,height,0xFF0D1020);g.drawCenteredString(font,"Unique eggs and journey badges",width/2,12,0xFFE7D5AF);
+   for(int i=0;i<20;i++){
+    String id=i<4?new String[]{"dr_salmawy_spawn_egg","raven_seamstress_spawn_egg","clockwork_widow_spawn_egg","prism_jerboa_spawn_egg"}[i]:"x1_visual";
+    Item item=net.minecraftforge.registries.ForgeRegistries.ITEMS.getValue(new net.minecraft.resources.ResourceLocation("shadowsovereign",id));check(item!=null,"Registered icon item "+id);ItemStack stack=new ItemStack(item);
+    if(i>=4)stack.getOrCreateTag().putInt("CustomModelData",10000+i-4);
+    g.pose().pushPose();g.pose().translate(width/2-200+(i%10)*40,45+(i/10)*65,0);g.pose().scale(2,2,2);g.renderItem(stack,0,0);g.pose().popPose();
+   }
+   super.render(g,mx,my,partial);
   }
  }
  static final class Gallery extends Screen {

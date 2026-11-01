@@ -44,6 +44,25 @@ def main():
   shared=json.loads(read(f'data/{NS}/worldgen/structure_set/reviewed_mythic_habitats.json'));oldshared=json.loads(before.read(f'data/{NS}/worldgen/structure_set/reviewed_mythic_habitats.json'));assert shared['placement']==oldshared['placement'] and shared['structures'][:-7]==oldshared['structures']
   for state in spec['biome_blocks']:
    id=state['id'];assert f'assets/{NS}/models/item/{id}.json' in allfiles
+  def recipe_signature(d):
+   if d.get('type')!='minecraft:crafting_shaped':return None
+   rows=d['pattern'];width=max(map(len,rows));rows=[r.ljust(width) for r in rows]
+   while rows and not rows[0].strip():rows=rows[1:]
+   while rows and not rows[-1].strip():rows=rows[:-1]
+   if not rows:return None
+   low=min(i for r in rows for i,c in enumerate(r) if c!=' ');high=max(i for r in rows for i,c in enumerate(r) if c!=' ')
+   grid=tuple(tuple(json.dumps(d['key'][c],sort_keys=True) if c!=' ' else '' for c in r[low:high+1]) for r in rows)
+   return min(grid,tuple(tuple(reversed(r)) for r in grid))
+  seen={}
+  for path in before.namelist():
+   if '/recipes/' in path and path.endswith('.json') and '/advancements/' not in path:
+    signature=recipe_signature(json.loads(before.read(path)))
+    if signature:seen[signature]=path
+  for path,data in resources.items():
+   if '/recipes/polish/' in path and '/advancements/' not in path:
+    signature=recipe_signature(json.loads(data))
+    if signature:
+     assert signature not in seen,('Uncraftable ambiguous recipe',path,seen.get(signature));seen[signature]=path
  # Metadata includes the actual supported placements, available to the native QA mod.
  write(f'assets/{NS}/content/polish.json',spec)
  report={'groups':9,'new_legendary':3,'new_decor':20,'new_biome_blocks':20,'habitat_placements':20,'new_biome_structures':4,'new_tree_templates':4,'preview_models':len(json.loads((ROOT/'visual-report.json').read_text())['preview_bounds']),'graphical_client_tested':False}
