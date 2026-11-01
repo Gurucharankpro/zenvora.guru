@@ -31,7 +31,7 @@ public final class GateAnchor extends BlockEntity {
         worldPosition.getY() + .5,
         cz - halfZ,
         cx + halfX,
-        worldPosition.getY() + 5,
+        worldPosition.getY() + (kind() == GateKind.FROZEN ? 5.3125 : 5),
         cz + halfZ);
   }
 

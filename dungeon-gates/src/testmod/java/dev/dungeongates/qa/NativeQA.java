@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.Mod;
 public final class NativeQA {
   private MinecraftServer server;
   private int index, wait;
+  private boolean initialized;
   private final int[] counts = new int[2];
   private final JsonArray generated = new JsonArray();
   private String failure;
@@ -35,13 +36,6 @@ public final class NativeQA {
     if (!Boolean.getBoolean("dungeongates.qa")) return;
     server = e.getServer();
     start = System.currentTimeMillis();
-    try {
-      checks();
-      DGConfig.SPACING.set(4);
-      DGConfig.FREQUENCY.set(1.0);
-    } catch (Throwable t) {
-      fail(t);
-    }
   }
 
   void check(boolean b, String why) {
@@ -131,6 +125,17 @@ public final class NativeQA {
   @SubscribeEvent
   public void tick(TickEvent.ServerTickEvent e) {
     if (server == null || e.phase != TickEvent.Phase.END) return;
+    if (!initialized) {
+      initialized = true;
+      try {
+        DGConfig.SPACING.set(4);
+        DGConfig.FREQUENCY.set(1.0);
+        checks();
+      } catch (Throwable t) {
+        fail(t);
+      }
+      return;
+    }
     if (failure != null) {
       finish();
       return;
@@ -147,19 +152,35 @@ public final class NativeQA {
         finish();
         return;
       }
-      int cx = 2 + (index % 6) * 4, cz = 2 + (index / 6) * 4;
+      int cx = 514 + (index % 6) * 12, cz = 514 + (index / 6) * 12;
       var l = server.overworld();
       var chunk = l.getChunk(cx, cz);
       var report = new JsonObject();
       report.addProperty("chunk_x", cx);
       report.addProperty("chunk_z", cz);
       String found = "none";
-      for (var be : chunk.getBlockEntities().values())
-        if (be instanceof GateAnchor g && !g.exit) {
+      for (var position : chunk.getBlockEntitiesPos())
+        if (chunk.getBlockEntity(position) instanceof GateAnchor g && !g.exit) {
           counts[g.kind().ordinal()]++;
           found = g.kind().id;
           check(g.getBlockState().getBlock() instanceof GateBlock, "real natural anchor");
         }
+      var surface =
+          l.getHeightmapPos(
+              net.minecraft.world.level.levelgen.Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+              new BlockPos(cx * 16 + 8, 0, cz * 16 + 8));
+      report.addProperty("surface_y", surface.getY());
+      report.addProperty(
+          "biome",
+          l.getBiome(surface).unwrapKey().map(v -> v.location().toString()).orElse("unknown"));
+      var feature =
+          l.registryAccess()
+              .registryOrThrow(net.minecraft.core.registries.Registries.PLACED_FEATURE)
+              .get(new net.minecraft.resources.ResourceLocation("dungeongates", "floating_gates"));
+      report.addProperty(
+          "biome_has_gate_feature",
+          feature != null
+              && l.getBiome(surface).value().getGenerationSettings().hasFeature(feature));
       report.addProperty("gate", found);
       generated.add(report);
       index++;
@@ -204,6 +225,8 @@ public final class NativeQA {
       o.addProperty("emerald_occurrences", counts[0]);
       o.addProperty("frozen_occurrences", counts[1]);
       o.add("actual_generated_candidates", generated);
+      o.add("feature_diagnostics", new Gson().toJsonTree(GateFeature.qaCounts()));
+      o.add("recent_rejections", new Gson().toJsonTree(GateFeature.qaRecent()));
       o.addProperty("elapsed_ms", System.currentTimeMillis() - start);
       Files.writeString(
           Path.of("DGATES-NATIVE-RESULT.json"),

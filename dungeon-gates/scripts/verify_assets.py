@@ -13,7 +13,9 @@ for p in R.glob('src/main/resources/**/*.json'):json.loads(p.read_text())
 for p in (A/'models').rglob('*.json'):
  d=json.loads(p.read_text())
  for k,v in d.get('textures',{}).items():
-  if v.startswith('dungeongates:'):check((A/'textures'/(v.split(':')[1]+'.png')).exists(),f'{p}: missing {v}')
+  if v.startswith('dungeongates:'):
+   image=A/'textures'/(v.split(':')[1]+'.png');check(image.exists(),f'{p}: missing {v}');im=Image.open(image)
+   check(im.width==im.height or Path(str(image)+'.mcmeta').exists(),f'{p}: rectangular atlas sprite requires explicit frame dimensions')
  parent=d.get('parent','')
  if parent.startswith('dungeongates:'):check((A/'models'/(parent.split(':')[1]+'.json')).exists(),f'{p}: missing parent {parent}')
  for e in d.get('elements',[]):

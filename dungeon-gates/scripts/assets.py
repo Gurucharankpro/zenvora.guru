@@ -51,7 +51,7 @@ for id in ['emerald_trial_gate','frozen_grave_gate']:
  dump(A/'blockstates'/f'{id}.json',{'variants':{'':{'model':'minecraft:block/air'}}})
  tex='dungeongates:item/frozen_grave_gate' if id.startswith('frozen') else 'dungeongates:item/emerald_gate_icon'
  if id.startswith('emerald'):
-  im=Image.open(portal/'emerald_portal_surface_anim.png');im.crop((0,0,96,144)).save(A/'textures/item/emerald_gate_icon.png')
+  im=Image.open(portal/'emerald_portal_surface_anim.png');im.crop((0,0,96,144)).save(A/'textures/item/emerald_gate_icon.png');dump(A/'textures/item/emerald_gate_icon.png.mcmeta',{'animation':{'width':96,'height':144,'frametime':1,'frames':[0]}})
  dump(A/'models/item'/f'{id}.json',{'parent':'minecraft:item/generated','textures':{'layer0':tex}})
 # All six supplied mobs have distinct eggs and the actual provided textures remain unchanged.
 ids=['mossbound_skulker','crystal_sentinel','emerald_root_warden','frostgrave_prowler','chainbound_sentinel','frozen_gravekeeper']

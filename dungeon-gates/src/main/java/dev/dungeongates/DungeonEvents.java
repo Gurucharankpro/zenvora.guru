@@ -163,8 +163,9 @@ public final class DungeonEvents {
                                               + z;
                                   var ch = l.getChunkSource().getChunkNow(cx, cz);
                                   if (ch == null) continue;
-                                  for (var be : ch.getBlockEntities().values())
-                                    if (be instanceof GateAnchor g && !g.exit) {
+                                  for (var position : ch.getBlockEntitiesPos())
+                                    if (ch.getBlockEntity(position) instanceof GateAnchor g
+                                        && !g.exit) {
                                       if (g.kind() == GateKind.EMERALD) a++;
                                       else b++;
                                     }

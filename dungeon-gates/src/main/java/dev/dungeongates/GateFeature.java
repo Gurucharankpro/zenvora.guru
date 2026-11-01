@@ -8,6 +8,30 @@ import net.minecraft.world.level.levelgen.feature.*;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
 public final class GateFeature extends Feature<NoneFeatureConfiguration> {
+  private static final boolean QA = Boolean.getBoolean("dungeongates.qa");
+  private static final java.util.concurrent.ConcurrentHashMap<
+          String, java.util.concurrent.atomic.LongAdder>
+      COUNTS = new java.util.concurrent.ConcurrentHashMap<>();
+  private static final java.util.List<String> RECENT =
+      java.util.Collections.synchronizedList(new java.util.ArrayList<>());
+
+  private static void note(String name) {
+    if (QA)
+      COUNTS.computeIfAbsent(name, k -> new java.util.concurrent.atomic.LongAdder()).increment();
+  }
+
+  public static java.util.Map<String, Long> qaCounts() {
+    var out = new java.util.TreeMap<String, Long>();
+    COUNTS.forEach((k, v) -> out.put(k, v.sum()));
+    return out;
+  }
+
+  public static java.util.List<String> qaRecent() {
+    synchronized (RECENT) {
+      return java.util.List.copyOf(RECENT);
+    }
+  }
+
   public GateFeature() {
     super(NoneFeatureConfiguration.CODEC);
   }
@@ -35,24 +59,38 @@ public final class GateFeature extends Feature<NoneFeatureConfiguration> {
 
   public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> c) {
     var l = c.level();
+    note("feature_calls");
     if (!l.getLevel().dimension().equals(Level.OVERWORLD)) return false;
     int cx = c.origin().getX() >> 4, cz = c.origin().getZ() >> 4;
     if (!candidate(l.getSeed(), cx, cz)) return false;
+    note("eligible_cells");
     var kind = selected(l.getSeed(), cx, cz);
     BlockPos p = new BlockPos(cx * 16 + 8, 0, cz * 16 + 8);
     int y = l.getHeight(Heightmap.Types.WORLD_SURFACE_WG, p.getX(), p.getZ());
     p = new BlockPos(p.getX(), y, p.getZ());
-    if (!terrain(l, p)) return false;
+    if (!terrain(l, p)) {
+      note("terrain_rejected");
+      if (QA)
+        synchronized (RECENT) {
+          if (RECENT.size() >= 24) RECENT.remove(0);
+          RECENT.add(p + " below=" + l.getBlockState(p.below()) + " feet=" + l.getBlockState(p));
+        }
+      return false;
+    }
+    note("terrain_accepted");
     var block = kind == GateKind.EMERALD ? DGRegistry.EMERALD_GATE : DGRegistry.FROZEN_GATE;
-    return l.setBlock(
-        p,
-        block
-            .get()
-            .defaultBlockState()
-            .setValue(
-                GateBlock.FACING,
-                Direction.from2DDataValue((int) (mix(l.getSeed() ^ cx ^ cz) & 3))),
-        2);
+    boolean placed =
+        l.setBlock(
+            p,
+            block
+                .get()
+                .defaultBlockState()
+                .setValue(
+                    GateBlock.FACING,
+                    Direction.from2DDataValue((int) (mix(l.getSeed() ^ cx ^ cz) & 3))),
+            2);
+    note(placed ? "placed" : "set_block_rejected");
+    return placed;
   }
 
   public static boolean terrain(WorldGenLevel l, BlockPos p) {
@@ -71,6 +109,10 @@ public final class GateFeature extends Feature<NoneFeatureConfiguration> {
             || floor.is(Blocks.SOUL_CAMPFIRE)) return false;
         for (int y = 0; y < 8; y++) if (!l.getBlockState(q.above(y)).isAir()) return false;
       }
+    // The energy is 3 blocks wide; authored floating runes extend beyond it.
+    for (int x = -2; x <= 2; x++)
+      for (int z = -2; z <= 2; z++)
+        for (int y = 0; y < 8; y++) if (!l.getBlockState(p.offset(x, y, z)).isAir()) return false;
     return true;
   }
 }
