@@ -221,6 +221,7 @@ public final class DungeonMob extends Monster implements GeoEntity {
     if (level().isClientSide) return;
     bar.setProgress(Math.max(0, getHealth() / getMaxHealth()));
     if (!isAlive()) return;
+    setAggressive(getTarget() != null);
     if (instance != null) {
       var i = DungeonState.get(((ServerLevel) level()).getServer()).instances.get(instance);
       if (i == null
@@ -320,9 +321,7 @@ public final class DungeonMob extends Monster implements GeoEntity {
     else {
       int m = entityData.get(MOVE);
       if (m >= 0 && m < MOVES[kind].length) clip = MOVES[kind][m].clip;
-      else
-        clip =
-            state.isMoving() ? (kind < 3 ? "move" : getTarget() != null ? "run" : "walk") : "idle";
+      else clip = state.isMoving() ? (kind < 3 ? "move" : isAggressive() ? "run" : "walk") : "idle";
     }
     var anim = RawAnimation.begin();
     if (clip.equals("idle") || clip.equals("move") || clip.equals("walk") || clip.equals("run"))

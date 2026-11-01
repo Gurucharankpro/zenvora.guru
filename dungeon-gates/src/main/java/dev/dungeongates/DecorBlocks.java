@@ -39,6 +39,15 @@ public final class DecorBlocks {
       registerDefaultState(stateDefinition.any().setValue(FACING, Direction.UP));
     }
 
+    @Override
+    public VoxelShape getShape(BlockState s, BlockGetter l, BlockPos p, CollisionContext c) {
+      return switch (s.getValue(FACING).getAxis()) {
+        case X -> box(0, 3, 3, 16, 13, 13);
+        case Z -> box(3, 3, 0, 13, 13, 16);
+        case Y -> super.getShape(s, l, p, c);
+      };
+    }
+
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> b) {
       b.add(FACING);
     }

@@ -10,6 +10,8 @@ minecraft {
   configureEach {
    workingDirectory project.file('run')
    property 'forge.logging.console.level', 'info'
+   property 'mixin.env.remapRefMap', 'true'
+   property 'mixin.env.refMapRemappingFile', "${project.projectDir}/build/createSrgToMcp/output.srg"
    mods { dungeongates { source sourceSets.main } }
   }
   client { }
