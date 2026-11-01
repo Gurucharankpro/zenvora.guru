@@ -116,7 +116,8 @@ def creatures(jar,langs,spec,shared):
   for loc,d in langs.items():
    label=p['ar'] if loc=='ar_sa' else p['en'];d[f'entity.{NS}.{p["id"]}']=label;d[f'item.{NS}.{p["id"]}_spawn_egg']=('بيضة استدعاء ' if loc=='ar_sa' else 'Spawn Egg: ')+label
    d[f'grimoire.{NS}.lore.{p["id"]}']=('اهزم الحارس في موطنه لتضم روحه لجيشك. الهروب ينهي المواجهة ويعيد صحته كاملة.' if loc=='ar_sa' else 'Defeat this guardian in its habitat to earn its soul. Retreat ends the encounter and restores its full health.')
-   d[f'grimoire.{NS}.abilities.{p["id"]}']=('قدرات: ' if loc=='ar_sa' else 'Abilities: ')+', '.join(m[0].replace('_',' ') for m in p['moves'])
+   abilities={'punch_attack':'لكمة قاضية','counter_attack':'هجوم مضاد','command':'أمر السيطرة','intimidation':'ترهيب','silver_needle_attack':'الإبرة الفضية','raven_swarm':'سرب الغربان','thread_binding':'خيوط التقييد','feather_storm':'عاصفة الريش','black_curtain':'الستار الأسود','clock_blade_combo':'ضربات نصل الساعة','gear_storm':'عاصفة التروس','time_lock':'قيد الزمن','six_arm_assault':'هجوم الأذرع الست','broken_hourglass':'الساعة الرملية المكسورة'}
+   d[f'grimoire.{NS}.abilities.{p["id"]}']=('قدرات: ' if loc=='ar_sa' else 'Abilities: ')+', '.join(abilities[m[0]] if loc=='ar_sa' else m[0].replace('_',' ').title() for m in p['moves'])
  write(f'data/{NS}/mythic_sites.json',sites)
 def decorations(jar,langs,spec):
  root=ROOT/'inputs/Decor_Pack_08_Eclipse_Syndicate_Java/Decor_Pack_08_Eclipse_Syndicate_Java'

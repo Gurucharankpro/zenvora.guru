@@ -23,6 +23,8 @@ def main():
   atlas=f'assets/minecraft/atlases/blocks.json';assert atlas not in resources
   icons=json.loads(read(f'assets/{NS}/models/item/x1_visual.json'));oldicons=json.loads(before.read(f'assets/{NS}/models/item/x1_visual.json'));assert icons['overrides'][:len(oldicons['overrides'])]==oldicons['overrides']
   for path in resources:
+   if path.startswith(f'assets/{NS}/mythic/') and path in before.namelist():
+    original=json.loads(before.read(path));updated=json.loads(read(path));original.pop('previewBounds',None);updated.pop('previewBounds',None);assert original==updated,('World model/animation changed while framing preview',path)
    if '/advancements/' in path and path in before.namelist():
     old=json.loads(before.read(path));new=json.loads(read(path));old['display']['icon']=new['display']['icon'];assert old==new,('Criteria/reward regression',path)
    if path.endswith('.nbt') and path in before.namelist():
