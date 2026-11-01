@@ -60,6 +60,8 @@ def compatibility_states(n):
  # Vanilla ignores this stray authoring property; stripping it makes the
  # affected templates valid without changing their actual grindstone state.
  for state in n['palette']:
+  corrected={'minecraft:deepslate_tiles_slab':'minecraft:deepslate_tile_slab','minecraft:deepslate_bricks_slab':'minecraft:deepslate_brick_slab'}
+  if str(state['Name']) in corrected:state['Name']=nbtlib.String(corrected[str(state['Name'])])
   if str(state['Name'])=='minecraft:grindstone' and 'Properties' in state:state['Properties'].pop('powered',None)
  return n
 def add_structure(jar,shared,name,path,n,biome,floor):
