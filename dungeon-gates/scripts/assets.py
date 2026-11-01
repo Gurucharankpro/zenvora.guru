@@ -37,7 +37,7 @@ for id in ['mossbound_skulker','crystal_sentinel','emerald_root_warden']:
   p=A/folder/(id+ext);q=A/folder/'entity'/(id+ext);q.parent.mkdir(exist_ok=True);shutil.copyfile(p,q)
 # Preserve exact arbitrary-angle faces via registered Forge geometry loader (no rounding).
 for p in [A/'models/block/frozen_crystal_cluster.json',A/'models/item/frozen_kings_crown.json']:
- d=json.loads(p.read_text());d['loader']='dungeongates:authored_mesh';dump(p,d)
+ d=json.loads(p.read_text());d['loader']='dungeongates:authored_mesh';d['authored_elements']=d.pop('elements');dump(p,d)
 # Fix authored rectangular strips with explicit width/height for atlas-based consumers.
 for p in (A/'textures').rglob('*.png.mcmeta'):
  d=json.loads(p.read_text());im=Image.open(str(p)[:-7]);w,h=im.size

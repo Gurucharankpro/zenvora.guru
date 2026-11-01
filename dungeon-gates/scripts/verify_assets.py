@@ -18,7 +18,7 @@ for p in (A/'models').rglob('*.json'):
    check(im.width==im.height or Path(str(image)+'.mcmeta').exists(),f'{p}: rectangular atlas sprite requires explicit frame dimensions')
  parent=d.get('parent','')
  if parent.startswith('dungeongates:'):check((A/'models'/(parent.split(':')[1]+'.json')).exists(),f'{p}: missing parent {parent}')
- for e in d.get('elements',[]):
+ for e in d.get('authored_elements',d.get('elements',[])):
   check(all(-16<=x<=32 for a in ['from','to'] for x in e[a]),f'illegal model coordinates {p}')
   if 'rotation' in e and d.get('loader')!='dungeongates:authored_mesh':check(e['rotation']['angle'] in [-45,-22.5,0,22.5,45],f'illegal vanilla rotation {p}')
 checks.append('resource model/texture refs and actual vanilla coordinate/angle limits')

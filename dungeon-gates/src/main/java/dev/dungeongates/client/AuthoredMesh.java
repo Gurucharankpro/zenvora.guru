@@ -38,7 +38,7 @@ public final class AuthoredMesh implements IUnbakedGeometry<AuthoredMesh> {
       ItemOverrides overrides,
       ResourceLocation location) {
     var quads = new ArrayList<BakedQuad>();
-    for (var v : json.getAsJsonArray("elements")) {
+    for (var v : json.getAsJsonArray("authored_elements")) {
       var e = v.getAsJsonObject();
       float[] from = vec(e.getAsJsonArray("from")), to = vec(e.getAsJsonArray("to"));
       for (var f : e.getAsJsonObject("faces").entrySet()) {

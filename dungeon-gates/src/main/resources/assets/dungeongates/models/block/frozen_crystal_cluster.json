@@ -8,7 +8,8 @@
     16,
     16
   ],
-  "elements": [
+  "loader": "dungeongates:authored_mesh",
+  "authored_elements": [
     {
       "from": [
         5.5,
@@ -2129,6 +2130,5 @@
         "angle": 28
       }
     }
-  ],
-  "loader": "dungeongates:authored_mesh"
+  ]
 }

@@ -37,6 +37,8 @@ def main():
    try:p.wait(timeout=480)
    except subprocess.TimeoutExpired:os.killpg(p.pid,signal.SIGTERM);raise RuntimeError('Actual graphical test timed out')
   if p.returncode or 'DGATES_CLIENT_PASS:' not in log.read_text(errors='replace'):raise RuntimeError('Actual graphical client failed; see CLIENT.log')
+  bad=[line for line in log.read_text(errors='replace').splitlines() if ('dungeongates' in line and any(s in line for s in ['Failed to load model','Unable to load model','Unable to load texture','Missing textures','Exception loading model'])) or 'Invalid rotation' in line]
+  if bad:raise RuntimeError('Gameplay passed but resource loading failed: '+repr(bad))
  finally:
   if (run/'screenshots').exists():shutil.copytree(run/'screenshots',reports/'screenshots',dirs_exist_ok=True)
  client={'passed':True,'runtime':'native ForgeGradle source client at same commit, Xvfb/Mesa','both_gates_touch_entry_boss_death_return_trophies_save_reopen':True,'source_commit':os.environ.get('GITHUB_SHA'),'final_jar_sha256':hashlib.sha256(jar.read_bytes()).hexdigest(),'mobile_tested':False,'multiplayer_tested':False}
