@@ -43,6 +43,12 @@ public final class CrateBlock extends BaseEntityBlock {
       player.displayClientMessage(Component.translatable("dg.reward_locked"), true);
       return InteractionResult.CONSUME;
     }
+    if (l instanceof net.minecraft.server.level.ServerLevel sl
+        && sl.dimension().equals(DungeonState.DIM)) {
+      var instance = DungeonState.at(sl, p);
+      if (instance == null || !instance.owner.equals(player.getUUID()))
+        return InteractionResult.CONSUME;
+    }
     if (l.getBlockEntity(p) instanceof TreasureCrate c) player.openMenu(c);
     return InteractionResult.CONSUME;
   }

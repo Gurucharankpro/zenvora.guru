@@ -178,7 +178,10 @@ public final class DungeonMob extends Monster implements GeoEntity {
 
   public void startSeenByPlayer(ServerPlayer p) {
     super.startSeenByPlayer(p);
-    if (kind % 3 == 2) bar.addPlayer(p);
+    if (kind % 3 == 2) {
+      var i = instance == null ? null : DungeonState.get(p.server).instances.get(instance);
+      if (instance == null || i != null && i.owner.equals(p.getUUID())) bar.addPlayer(p);
+    }
   }
 
   public void stopSeenByPlayer(ServerPlayer p) {

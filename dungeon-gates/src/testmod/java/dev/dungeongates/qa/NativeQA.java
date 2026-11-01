@@ -119,7 +119,9 @@ public final class NativeQA {
     check(
         reloaded.instances.size() == 2 && reloaded.nextSlot >= 2, "persistent instance roundtrip");
     System.out.println(
-        "DGATES_NATIVE_PALETTES=" + palette + ";entities=6;templates=2;assembly=2;completion=2");
+        "DGATES_NATIVE_PALETTES="
+            + palette
+            + ";entities=6;templates=2;assembly=2;completion=pending");
   }
 
   @SubscribeEvent
@@ -143,7 +145,7 @@ public final class NativeQA {
     if (++wait < 10) return;
     wait = 0;
     try {
-      if (index >= 36) {
+      if (index >= 100 || index >= 36 && counts[0] > 0 && counts[1] > 0) {
         finishAssembly();
         check(
             counts[0] > 0 && counts[1] > 0,
@@ -152,7 +154,7 @@ public final class NativeQA {
         finish();
         return;
       }
-      int cx = 514 + (index % 6) * 12, cz = 514 + (index / 6) * 12;
+      int cx = 514 + (index % 10) * 12, cz = 514 + (index / 10) * 12;
       var l = server.overworld();
       var chunk = l.getChunk(cx, cz);
       var report = new JsonObject();
