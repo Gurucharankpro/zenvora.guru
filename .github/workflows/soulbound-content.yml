@@ -1,0 +1,58 @@
+name: Build Soulbound reviewed content
+on:
+  push:
+    branches: [soulbound-content-reviewed-1.8.1]
+    paths:
+      - '.github/workflows/soulbound-content.yml'
+      - 'content-update/source/**'
+      - 'content-update/inputs/**'
+      - 'content-update/art/**'
+      - 'content-update/base/**'
+      - 'native-review/qa/**'
+      - 'integration/OwnLinkageTest.java'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: soulbound-reviewed-content-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python resource dependencies
+        run: python -m pip install nbtlib==2.0.4 numpy==2.2.6 Pillow==11.3.0
+      - name: Build and verify against real Forge APIs
+        id: native
+        run: |
+          mkdir -p content-update/reports
+          bash content-update/source/run_ci.sh 2>&1 | tee content-update/reports/CI-BUILD.log
+      - name: Write truthful build handoff
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.native.outcome }}
+        run: python content-update/source/publish_ci.py
+      - name: Publish verified binary or failure report
+        if: always()
+        run: |
+          git config user.name 'Soulbound build'
+          git config user.email 'soulbound-build@users.noreply.github.com'
+          git add -A -- content-update/reports review README.md
+          if [ -d downloads/current ]; then git add -A -- downloads/current; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Record content build ${{ steps.native.outcome }} for ${{ github.sha }}"
+            git pull --rebase origin "$GITHUB_REF_NAME"
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi

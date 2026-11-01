@@ -1,0 +1,47 @@
+[
+  {
+    "archive": "Mob_57_Morsi_Complete.zip",
+    "sha256": "b70cdfca26de3e301bf6cc2ebaa5433e1c9acf1f2201322cc3f1320fa6253e45",
+    "path": "/workspace/soulbound-current/content-update/inputs/Mob_57_Morsi_Complete"
+  },
+  {
+    "archive": "Mob_37_Cursed_Bell_Ringer_Complete.zip",
+    "sha256": "50993665573cb021572a4e6603efbfbc6986daa79645c97fa5e34cd8c68b7558",
+    "path": "/workspace/soulbound-current/content-update/inputs/Mob_37_Cursed_Bell_Ringer_Complete"
+  },
+  {
+    "archive": "Mob_68_Porcelain_Duchess_Complete.zip",
+    "sha256": "ce4132d5383cdc068790ff5bf2e2a560c6f3874453ef3c790b20b9b03d88bcd0",
+    "path": "/workspace/soulbound-current/content-update/inputs/Mob_68_Porcelain_Duchess_Complete"
+  },
+  {
+    "archive": "Decor_Pack_06_Tormented_Animals_Java.zip",
+    "sha256": "aac7705acbc66ce18a9fb8e8b163123af784224d5b42a19f20f38c02cf501885",
+    "path": "/workspace/soulbound-current/content-update/inputs/Decor_Pack_06_Tormented_Animals_Java"
+  },
+  {
+    "archive": "Decor_Pack_04_Shadow_Clan_Legacy.zip",
+    "sha256": "3131f1006cb96fb05661e1cbde29a62eed2c9566e7a0b1c0da9aa29917ab6fac",
+    "path": "/workspace/soulbound-current/content-update/inputs/Decor_Pack_04_Shadow_Clan_Legacy"
+  },
+  {
+    "archive": "X2_The_Living_Dimension_Forge_1.20.1.zip",
+    "sha256": "f31144770f3c76b272820fe352cf2c00cf031f332d7c76dba19cf4c203c381c0",
+    "path": "/workspace/soulbound-current/content-update/inputs/X2_The_Living_Dimension_Forge_1.20.1"
+  },
+  {
+    "archive": "Mob_61_Yuta_Okkotsu_Complete.zip",
+    "sha256": "cf0b37c624cca9f245968d7c6e3143d3de14d0e85ce32963f8865a6be43cb5b7",
+    "path": "/workspace/soulbound-current/content-update/inputs/Mob_61_Yuta_Okkotsu_Complete"
+  },
+  {
+    "archive": "X4_Shadow_Army_Autopilot_Forge_1.20.1.zip",
+    "sha256": "899bdea6bbd798424796b89eda0845134f73e18d051d4d3e2c81648eef333185",
+    "path": "/workspace/soulbound-current/content-update/inputs/X4_Shadow_Army_Autopilot_Forge_1.20.1"
+  },
+  {
+    "archive": "Decor_Pack_07_Al_Ostoura_Java.zip",
+    "sha256": "87af88ac9307ebfcb3c76196b2557745785a8bff8f83cf26a06f902d81e8bcfe",
+    "path": "/workspace/soulbound-current/content-update/inputs/Decor_Pack_07_Al_Ostoura_Java"
+  }
+]

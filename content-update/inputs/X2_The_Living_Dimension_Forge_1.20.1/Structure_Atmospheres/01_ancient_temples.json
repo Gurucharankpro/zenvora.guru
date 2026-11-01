@@ -1,0 +1,75 @@
+{
+  "profileVersion": 1,
+  "structureNumber": 1,
+  "structureKey": "ancient_temples",
+  "displayName": "Ancient Temples",
+  "mood": "ceremonial magical",
+  "doNotCreateStructures": true,
+  "implementationWarning": "Applies ONLY to structures that already exist in the mod. Verify the structure's real registry name/bounding box. No new structures are created by this pack.",
+  "structureRegistryName": null,
+  "structureRegistryNameNote": "Fill in after verifying existing structures in worldgen data.",
+  "triggerVolume": "structure bounding box + 8 block margin; use StructureManager / StructureStart bounding boxes on client via chunk structure references or block-entity markers",
+  "effectsUsed": [
+    {
+      "id": "x2_ancient_amber_dust",
+      "particleRegistryName": "x2_living:ancient_amber_dust",
+      "spawnsPerSecondAtHigh": 6.0,
+      "anchor": "interior volume, 1-7 b above floor",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_singing_crystal_resonance",
+      "particleRegistryName": "x2_living:singing_crystal_resonance",
+      "spawnsPerSecondAtHigh": 0.2,
+      "anchor": "altars, pillars, glass/crystal decoration blocks (use blocks present; do not add new ones)",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_lunar_fairy_dust",
+      "particleRegistryName": "x2_living:lunar_fairy_dust",
+      "spawnsPerSecondAtHigh": 3.0,
+      "anchor": "around entrances and pillars, 0.5-3 b above floor",
+      "reusesBiomeAsset": true
+    }
+  ],
+  "blendWithBiome": {
+    "mode": "additive",
+    "maxAddedFractionOfBiomeCap": 0.35,
+    "note": "Structure effects add to, never replace, biome effects. Total still obeys the biome preset's maxParticlesAlive."
+  },
+  "softFog": {
+    "colorHex": "#3d2d12",
+    "extraDensity0to1": 0.06,
+    "implementation": "Optional; needs fog event hook; omit if not wanted."
+  },
+  "ambientLighting": {
+    "suggestedTintHex": "#ffd27a",
+    "tintStrength0to1": 0.08,
+    "fullscreenOverlay": false
+  },
+  "qualityPresets": {
+    "low": {
+      "maxParticlesAlive": 24,
+      "spawnRadiusBlocks": 12,
+      "intensityMultiplier": 0.35
+    },
+    "medium": {
+      "maxParticlesAlive": 45,
+      "spawnRadiusBlocks": 20,
+      "intensityMultiplier": 0.7
+    },
+    "high": {
+      "maxParticlesAlive": 70,
+      "spawnRadiusBlocks": 28,
+      "intensityMultiplier": 1.0
+    }
+  },
+  "reductionRules": {
+    "hostileMobsWithin16Blocks_gt3": 0.6,
+    "hostileMobsWithin16Blocks_gt6": 0.35,
+    "playerInCombat": 0.5,
+    "bossFightActive": 0.25
+  },
+  "designNotes": "Slow, sacred, golden pulses. Resonance rings are rare, like a ritual heartbeat.",
+  "estimatedSteadyStateAliveHigh": 37.7
+}

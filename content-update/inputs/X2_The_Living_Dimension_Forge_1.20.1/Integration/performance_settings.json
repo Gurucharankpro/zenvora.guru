@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "forgeVersion": "1.20.1",
+  "presets": {
+    "low": {
+      "mul": 0.35,
+      "maxParticles": 30,
+      "largeQuadCap": 2,
+      "spawnRadius": 12,
+      "cullDistance": 24,
+      "secondaryEffectMul": 0.4,
+      "frameSkip": 2,
+      "fog": "minimal"
+    },
+    "medium": {
+      "mul": 0.7,
+      "maxParticles": 70,
+      "largeQuadCap": 5,
+      "spawnRadius": 20,
+      "cullDistance": 40,
+      "secondaryEffectMul": 0.8,
+      "frameSkip": 1,
+      "fog": "reduced"
+    },
+    "high": {
+      "mul": 1.0,
+      "maxParticles": 120,
+      "largeQuadCap": 8,
+      "spawnRadius": 28,
+      "cullDistance": 56,
+      "secondaryEffectMul": 1.0,
+      "frameSkip": 1,
+      "fog": "full"
+    }
+  },
+  "globalCaps": {
+    "maxX2ParticlesAliveAnywhere": 150,
+    "maxLargeQuadParticlesAlive": 8,
+    "maxSpawnsPerTickPerPlayer": 4,
+    "maxTextureSizePx": 128
+  },
+  "distanceRendering": {
+    "cullBeyondBlocks": {
+      "low": 24,
+      "medium": 40,
+      "high": 56
+    },
+    "fadeOutLastBlocks": 6,
+    "smallParticleMinDistanceBlocks": 3,
+    "largeParticleMinDistanceBlocks": 8,
+    "recommendation": "Skip spawning in chunks not rendered; clamp spawn radius to min(presetRadius, renderDistance*16*0.5)."
+  },
+  "mobDensityReduction": {
+    "basis": "count of hostile/Mob entities within 16 blocks of the player",
+    "tiers": [
+      {
+        "mobsGreaterThan": 3,
+        "multiplier": 0.6
+      },
+      {
+        "mobsGreaterThan": 6,
+        "multiplier": 0.35
+      },
+      {
+        "mobsGreaterThan": 10,
+        "multiplier": 0.2
+      }
+    ],
+    "bossFightMultiplier": 0.25,
+    "recomputeEverySeconds": 1.0,
+    "smoothing": "lerp 20% per second to avoid popping"
+  },
+  "combatVisibility": {
+    "playerRecentlyHurtOrAttackingForTicks": 100,
+    "combatMultiplier": 0.5,
+    "fadeParticlesWithin": 2.5,
+    "maxAlphaWithin8Blocks": 0.5,
+    "disableLargeQuadsInCombat": [
+      "x2_silver_mirror_mist",
+      "x2_thundercloud_energy",
+      "x2_emerald_spore_clouds",
+      "x2_golden_glass_sandstorm",
+      "x2_singing_crystal_resonance",
+      "x2_fossil_resonance_echo",
+      "x2_abyss_crystal_pulse"
+    ],
+    "rule": "Environmental effects must never obstruct visibility during combat. No effect may cover the crosshair area of an enemy; never place particles between camera and target within 6 blocks."
+  },
+  "noFullscreenOverlays": true,
+  "noMandatoryShaders": true,
+  "implementationSketch": "No Java provided. A developer applies: finalRate = baseRate * presetMul * dayNightMul * weatherMul * mobMul * combatMul; stop spawning when aliveCount >= preset.maxParticlesAlive."
+}

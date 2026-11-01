@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone_bricks"
+    },
+    "C": {
+      "item": "minecraft:red_wool"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:ostoura_giant_zombie_refai_monument",
+    "count": 1
+  }
+}

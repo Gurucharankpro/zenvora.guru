@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/carpet",
-  "textures": {
-    "wool": "shadowsovereign:block/bound_glowing_moss"
-  }
-}

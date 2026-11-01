@@ -1,0 +1,69 @@
+{
+  "effectNumber": 8,
+  "id": "x2_abyss_crystal_pulse",
+  "displayName": "Abyss Crystal Pulse",
+  "biomeNumber": 4,
+  "biomeKey": "eternal_abyss",
+  "biomeName": "The Eternal Abyss",
+  "description": "Short turquoise hexagonal energy pulse around giant cave crystals.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_abyss_crystal_pulse_sheet.png",
+    "sheetSizePx": [
+      512,
+      64
+    ],
+    "frameFiles": [
+      "x2_abyss_crystal_pulse_00.png",
+      "x2_abyss_crystal_pulse_01.png",
+      "x2_abyss_crystal_pulse_02.png",
+      "x2_abyss_crystal_pulse_03.png",
+      "x2_abyss_crystal_pulse_04.png",
+      "x2_abyss_crystal_pulse_05.png",
+      "x2_abyss_crystal_pulse_06.png",
+      "x2_abyss_crystal_pulse_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 2,
+    "msPerFrame": 100,
+    "cycleDurationTicks": 16,
+    "cycleDurationMs": 800,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:abyss_crystal_pulse",
+    "recommendedQuadSizeBlocks": 2.0,
+    "lifetimeTicks": {
+      "min": 16,
+      "max": 16
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.0,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "One-shot expanding pulse; spawn at crystal block positions at random 3-8 s intervals."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

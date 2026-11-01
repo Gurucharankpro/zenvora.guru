@@ -1,0 +1,69 @@
+{
+  "effectNumber": 1,
+  "id": "x2_crimson_ashfall",
+  "displayName": "Crimson Ashfall",
+  "biomeNumber": 1,
+  "biomeKey": "crimson_shadow_forest",
+  "biomeName": "Crimson Shadow Forest",
+  "description": "Dark-red magical embers drifting gently between trees.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_crimson_ashfall_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_crimson_ashfall_00.png",
+      "x2_crimson_ashfall_01.png",
+      "x2_crimson_ashfall_02.png",
+      "x2_crimson_ashfall_03.png",
+      "x2_crimson_ashfall_04.png",
+      "x2_crimson_ashfall_05.png",
+      "x2_crimson_ashfall_06.png",
+      "x2_crimson_ashfall_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 24,
+    "cycleDurationMs": 1200,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:crimson_ashfall",
+    "recommendedQuadSizeBlocks": 0.09,
+    "lifetimeTicks": {
+      "min": 60,
+      "max": 100
+    },
+    "gravity": 0.004,
+    "horizontalDriftBlocksPerTick": 0.01,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Drifts slowly down with random horizontal sway; flicker comes from the sprite loop."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

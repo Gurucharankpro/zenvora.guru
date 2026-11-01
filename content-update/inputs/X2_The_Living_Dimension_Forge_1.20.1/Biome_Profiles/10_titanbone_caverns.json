@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 10,
+  "biomeKey": "titanbone_caverns",
+  "displayName": "The Titanbone Caverns",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_ancient_amber_dust",
+      "particleRegistryName": "x2_living:ancient_amber_dust",
+      "number": 19,
+      "displayName": "Ancient Amber Dust"
+    },
+    {
+      "id": "x2_fossil_resonance_echo",
+      "particleRegistryName": "x2_living:fossil_resonance_echo",
+      "number": 20,
+      "displayName": "Fossil Resonance Echo"
+    }
+  ],
+  "daytimeParticleIntensity": 0.7,
+  "nighttimeParticleIntensity": 0.7,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_ancient_amber_dust": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 8,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_fossil_resonance_echo": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 0.22,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#2b1f12",
+    "colorDayRGB01": [
+      0.169,
+      0.122,
+      0.071
+    ],
+    "colorNightHex": "#150f08",
+    "colorNightRGB01": [
+      0.082,
+      0.059,
+      0.031
+    ],
+    "startFractionOfRenderDistance": 0.2,
+    "endFractionOfRenderDistance": 0.8,
+    "densityLabel": "medium-heavy",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_ancient_amber_dust": {
+      "horizontalDriftBlocksPerTick": 0.004,
+      "gravityBlocksPerTick2": -0.0003,
+      "note": "Extremely slow; twinkle from loop."
+    },
+    "x2_fossil_resonance_echo": {
+      "horizontalDriftBlocksPerTick": 0.0,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "One-shot; spawn at fossil block positions on random timer."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_ancient_amber_dust": {
+      "min": 60,
+      "max": 120
+    },
+    "x2_fossil_resonance_echo": {
+      "min": 20,
+      "max": 20
+    }
+  },
+  "recommendedSpawn": {
+    "x2_ancient_amber_dust": {
+      "heightBlocksRelative": [
+        0.5,
+        14
+      ],
+      "location": "large cavern air volume, floor-relative, radius around player",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_fossil_resonance_echo": {
+      "heightBlocksRelative": [
+        0,
+        6
+      ],
+      "location": "at fossil blocks/formations within 20 b; random 4-10 s interval per formation",
+      "minDistanceFromCameraBlocks": 8
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline (underground)",
+    "rain": "no change",
+    "thunder": "no change"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 12,
+    "suggestedTintHex": "#ffc060",
+    "tintStrength0to1": 0.12,
+    "note": "Warm amber torch-like tint.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_ancient_amber_dust": {
+          "spawnsPerSecond": 2.8,
+          "estimatedAlive": 8.8
+        },
+        "x2_fossil_resonance_echo": {
+          "spawnsPerSecond": 0.031,
+          "estimatedAlive": 0.0
+        }
+      },
+      "estimatedSteadyStateAlive": 8.8,
+      "estimatedLargeQuadAlive": 0.0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_ancient_amber_dust": {
+          "spawnsPerSecond": 5.6,
+          "estimatedAlive": 17.6
+        },
+        "x2_fossil_resonance_echo": {
+          "spawnsPerSecond": 0.123,
+          "estimatedAlive": 0.1
+        }
+      },
+      "estimatedSteadyStateAlive": 17.7,
+      "estimatedLargeQuadAlive": 0.1
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_ancient_amber_dust": {
+          "spawnsPerSecond": 8.0,
+          "estimatedAlive": 25.2
+        },
+        "x2_fossil_resonance_echo": {
+          "spawnsPerSecond": 0.22,
+          "estimatedAlive": 0.2
+        }
+      },
+      "estimatedSteadyStateAlive": 25.4,
+      "estimatedLargeQuadAlive": 0.2
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "minecraft:black_dye"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:clan_madaras_war_fan_monument",
+    "count": 1
+  }
+}

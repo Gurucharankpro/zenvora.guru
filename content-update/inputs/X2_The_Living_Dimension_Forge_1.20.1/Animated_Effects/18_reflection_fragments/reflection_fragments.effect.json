@@ -1,0 +1,69 @@
+{
+  "effectNumber": 18,
+  "id": "x2_reflection_fragments",
+  "displayName": "Reflection Fragments",
+  "biomeNumber": 9,
+  "biomeKey": "mirrorfall_marsh",
+  "biomeName": "The Mirrorfall Marsh",
+  "description": "Small shimmering mirror shards that briefly appear and fade.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_reflection_fragments_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_reflection_fragments_00.png",
+      "x2_reflection_fragments_01.png",
+      "x2_reflection_fragments_02.png",
+      "x2_reflection_fragments_03.png",
+      "x2_reflection_fragments_04.png",
+      "x2_reflection_fragments_05.png",
+      "x2_reflection_fragments_06.png",
+      "x2_reflection_fragments_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 2,
+    "msPerFrame": 100,
+    "cycleDurationTicks": 16,
+    "cycleDurationMs": 800,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:reflection_fragments",
+    "recommendedQuadSizeBlocks": 0.26,
+    "lifetimeTicks": {
+      "min": 16,
+      "max": 16
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.0,
+    "fullbright": true,
+    "maxAlpha": 1.0,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "One-shot appear->peak->fade over 16 ticks."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

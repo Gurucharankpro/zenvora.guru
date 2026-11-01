@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "shadowsovereign:block/sunken_tide_crystal_block"
-  },
-  "render_type": "minecraft:translucent"
-}

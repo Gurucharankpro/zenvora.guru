@@ -1,0 +1,75 @@
+{
+  "profileVersion": 1,
+  "structureNumber": 2,
+  "structureKey": "royal_castles",
+  "displayName": "Royal Castles",
+  "mood": "prestigious dark-fantasy",
+  "doNotCreateStructures": true,
+  "implementationWarning": "Applies ONLY to structures that already exist in the mod. Verify the structure's real registry name/bounding box. No new structures are created by this pack.",
+  "structureRegistryName": null,
+  "structureRegistryNameNote": "Fill in after verifying existing structures in worldgen data.",
+  "triggerVolume": "structure bounding box + 8 block margin; use StructureManager / StructureStart bounding boxes on client via chunk structure references or block-entity markers",
+  "effectsUsed": [
+    {
+      "id": "x2_crimson_ashfall",
+      "particleRegistryName": "x2_living:crimson_ashfall",
+      "spawnsPerSecondAtHigh": 5.0,
+      "anchor": "great halls and courtyards, 1-8 b above floor",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_raven_spirit_wisps",
+      "particleRegistryName": "x2_living:raven_spirit_wisps",
+      "spawnsPerSecondAtHigh": 0.08,
+      "anchor": "battlements/tower tops, 3-9 b above roofs; rare",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_reflection_fragments",
+      "particleRegistryName": "x2_living:reflection_fragments",
+      "spawnsPerSecondAtHigh": 0.8,
+      "anchor": "throne/hall center at head height 1-3 b, away from the player's path",
+      "reusesBiomeAsset": true
+    }
+  ],
+  "blendWithBiome": {
+    "mode": "additive",
+    "maxAddedFractionOfBiomeCap": 0.35,
+    "note": "Structure effects add to, never replace, biome effects. Total still obeys the biome preset's maxParticlesAlive."
+  },
+  "softFog": {
+    "colorHex": "#2a0d18",
+    "extraDensity0to1": 0.06,
+    "implementation": "Optional; needs fog event hook; omit if not wanted."
+  },
+  "ambientLighting": {
+    "suggestedTintHex": "#ff8a9a",
+    "tintStrength0to1": 0.08,
+    "fullscreenOverlay": false
+  },
+  "qualityPresets": {
+    "low": {
+      "maxParticlesAlive": 22,
+      "spawnRadiusBlocks": 12,
+      "intensityMultiplier": 0.35
+    },
+    "medium": {
+      "maxParticlesAlive": 40,
+      "spawnRadiusBlocks": 20,
+      "intensityMultiplier": 0.7
+    },
+    "high": {
+      "maxParticlesAlive": 64,
+      "spawnRadiusBlocks": 28,
+      "intensityMultiplier": 1.0
+    }
+  },
+  "reductionRules": {
+    "hostileMobsWithin16Blocks_gt3": 0.6,
+    "hostileMobsWithin16Blocks_gt6": 0.35,
+    "playerInCombat": 0.5,
+    "bossFightActive": 0.25
+  },
+  "designNotes": "Regal and ominous; ravens are rare dramatic accents.",
+  "estimatedSteadyStateAliveHigh": 20.8
+}

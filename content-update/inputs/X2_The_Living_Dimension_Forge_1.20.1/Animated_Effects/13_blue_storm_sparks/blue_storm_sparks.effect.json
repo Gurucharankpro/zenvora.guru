@@ -1,0 +1,65 @@
+{
+  "effectNumber": 13,
+  "id": "x2_blue_storm_sparks",
+  "displayName": "Blue Storm Sparks",
+  "biomeNumber": 7,
+  "biomeKey": "thunderfall_highlands",
+  "biomeName": "The Thunderfall Highlands",
+  "description": "Brief electric-blue sparks near charged crystals and peaks.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 6,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_blue_storm_sparks_sheet.png",
+    "sheetSizePx": [
+      192,
+      32
+    ],
+    "frameFiles": [
+      "x2_blue_storm_sparks_00.png",
+      "x2_blue_storm_sparks_01.png",
+      "x2_blue_storm_sparks_02.png",
+      "x2_blue_storm_sparks_03.png",
+      "x2_blue_storm_sparks_04.png",
+      "x2_blue_storm_sparks_05.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "ticksPerFrame": 1,
+    "msPerFrame": 50,
+    "cycleDurationTicks": 6,
+    "cycleDurationMs": 300,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:blue_storm_sparks",
+    "recommendedQuadSizeBlocks": 0.65,
+    "lifetimeTicks": {
+      "min": 6,
+      "max": 6
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.0,
+    "fullbright": true,
+    "maxAlpha": 1.0,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Six-tick flash (0.3 s). Random frequency; never more than 3 alive near the player."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

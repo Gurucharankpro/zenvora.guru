@@ -1,0 +1,69 @@
+{
+  "effectNumber": 15,
+  "id": "x2_floating_dreamseeds",
+  "displayName": "Floating Dreamseeds",
+  "biomeNumber": 8,
+  "biomeKey": "dreamroot_canopy",
+  "biomeName": "The Dreamroot Canopy",
+  "description": "Pink and turquoise glowing dreamseeds descending between giant trees.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_floating_dreamseeds_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_floating_dreamseeds_00.png",
+      "x2_floating_dreamseeds_01.png",
+      "x2_floating_dreamseeds_02.png",
+      "x2_floating_dreamseeds_03.png",
+      "x2_floating_dreamseeds_04.png",
+      "x2_floating_dreamseeds_05.png",
+      "x2_floating_dreamseeds_06.png",
+      "x2_floating_dreamseeds_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 4,
+    "msPerFrame": 200,
+    "cycleDurationTicks": 32,
+    "cycleDurationMs": 1600,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:floating_dreamseeds",
+    "recommendedQuadSizeBlocks": 0.32,
+    "lifetimeTicks": {
+      "min": 80,
+      "max": 140
+    },
+    "gravity": 0.01,
+    "horizontalDriftBlocksPerTick": 0.008,
+    "fullbright": true,
+    "maxAlpha": 0.95,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Sink slowly with sway; tuft sway is baked into the loop."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

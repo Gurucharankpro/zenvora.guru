@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "side": "shadowsovereign:block/abyss_gloomcap_stem_side",
-    "end": "shadowsovereign:block/abyss_gloomcap_stem_top"
-  }
-}

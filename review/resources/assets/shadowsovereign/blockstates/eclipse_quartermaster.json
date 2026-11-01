@@ -1,1 +1,0 @@
-{"variants": {"facing=north": {"model": "shadowsovereign:block/eclipse_quartermaster", "y": 0}, "facing=east": {"model": "shadowsovereign:block/eclipse_quartermaster", "y": 90}, "facing=south": {"model": "shadowsovereign:block/eclipse_quartermaster", "y": 180}, "facing=west": {"model": "shadowsovereign:block/eclipse_quartermaster", "y": 270}}}

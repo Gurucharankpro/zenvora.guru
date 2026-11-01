@@ -1,0 +1,69 @@
+{
+  "effectNumber": 19,
+  "id": "x2_ancient_amber_dust",
+  "displayName": "Ancient Amber Dust",
+  "biomeNumber": 10,
+  "biomeKey": "titanbone_caverns",
+  "biomeName": "The Titanbone Caverns",
+  "description": "Floating golden mineral particles in huge underground chambers.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_ancient_amber_dust_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_ancient_amber_dust_00.png",
+      "x2_ancient_amber_dust_01.png",
+      "x2_ancient_amber_dust_02.png",
+      "x2_ancient_amber_dust_03.png",
+      "x2_ancient_amber_dust_04.png",
+      "x2_ancient_amber_dust_05.png",
+      "x2_ancient_amber_dust_06.png",
+      "x2_ancient_amber_dust_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 4,
+    "msPerFrame": 200,
+    "cycleDurationTicks": 32,
+    "cycleDurationMs": 1600,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:ancient_amber_dust",
+    "recommendedQuadSizeBlocks": 0.08,
+    "lifetimeTicks": {
+      "min": 60,
+      "max": 120
+    },
+    "gravity": -0.0003,
+    "horizontalDriftBlocksPerTick": 0.004,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Extremely slow; twinkle from loop."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

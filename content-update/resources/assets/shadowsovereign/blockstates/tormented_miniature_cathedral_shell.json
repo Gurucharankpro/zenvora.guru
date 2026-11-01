@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/tormented_miniature_cathedral_shell",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/tormented_miniature_cathedral_shell",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/tormented_miniature_cathedral_shell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/tormented_miniature_cathedral_shell",
+      "y": 270
+    }
+  }
+}

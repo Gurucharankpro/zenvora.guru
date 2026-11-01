@@ -1,0 +1,354 @@
+[
+ {
+  "block_state": "minecraft:air",
+  "count": 7981
+ },
+ {
+  "block_state": "minecraft:deepslate_bricks",
+  "count": 5506
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_bricks",
+  "count": 1640
+ },
+ {
+  "block_state": "minecraft:cracked_deepslate_bricks",
+  "count": 1534
+ },
+ {
+  "block_state": "minecraft:deepslate_tiles",
+  "count": 1083
+ },
+ {
+  "block_state": "minecraft:polished_deepslate",
+  "count": 572
+ },
+ {
+  "block_state": "minecraft:cracked_polished_blackstone_bricks",
+  "count": 464
+ },
+ {
+  "block_state": "minecraft:blue_stained_glass",
+  "count": 200
+ },
+ {
+  "block_state": "minecraft:waxed_weathered_copper",
+  "count": 168
+ },
+ {
+  "block_state": "minecraft:light_blue_stained_glass",
+  "count": 158
+ },
+ {
+  "block_state": "minecraft:waxed_exposed_copper",
+  "count": 110
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_slab[type=top,waterlogged=false]",
+  "count": 100
+ },
+ {
+  "block_state": "minecraft:sea_lantern",
+  "count": 90
+ },
+ {
+  "block_state": "minecraft:chiseled_polished_blackstone",
+  "count": 74
+ },
+ {
+  "block_state": "minecraft:cyan_stained_glass",
+  "count": 66
+ },
+ {
+  "block_state": "minecraft:chain[axis=y,waterlogged=false]",
+  "count": 59
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_wall",
+  "count": 56
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]",
+  "count": 55
+ },
+ {
+  "block_state": "minecraft:chain[axis=y]",
+  "count": 52
+ },
+ {
+  "block_state": "minecraft:soul_soil",
+  "count": 48
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "count": 45
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]",
+  "count": 44
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "count": 43
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "count": 42
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "count": 41
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]",
+  "count": 40
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]",
+  "count": 40
+ },
+ {
+  "block_state": "minecraft:purple_stained_glass",
+  "count": 36
+ },
+ {
+  "block_state": "minecraft:iron_bars",
+  "count": 36
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_copper",
+  "count": 35
+ },
+ {
+  "block_state": "minecraft:deepslate_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "count": 32
+ },
+ {
+  "block_state": "minecraft:deepslate_brick_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]",
+  "count": 32
+ },
+ {
+  "block_state": "minecraft:waxed_exposed_cut_copper",
+  "count": 28
+ },
+ {
+  "block_state": "minecraft:soul_lantern[hanging=true,waterlogged=false]",
+  "count": 27
+ },
+ {
+  "block_state": "minecraft:black_concrete",
+  "count": 24
+ },
+ {
+  "block_state": "minecraft:soul_lantern[hanging=false,waterlogged=false]",
+  "count": 21
+ },
+ {
+  "block_state": "minecraft:gilded_blackstone",
+  "count": 19
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_slab[type=bottom,waterlogged=false]",
+  "count": 15
+ },
+ {
+  "block_state": "minecraft:waxed_weathered_cut_copper_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "count": 15
+ },
+ {
+  "block_state": "minecraft:waxed_weathered_cut_copper_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "count": 15
+ },
+ {
+  "block_state": "minecraft:waxed_weathered_cut_copper_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]",
+  "count": 15
+ },
+ {
+  "block_state": "minecraft:waxed_weathered_cut_copper_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]",
+  "count": 15
+ },
+ {
+  "block_state": "minecraft:chiseled_deepslate",
+  "count": 12
+ },
+ {
+  "block_state": "minecraft:waxed_chiseled_copper",
+  "count": 8
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=north,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 8
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=south,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 8
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=north,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 8
+ },
+ {
+  "block_state": "minecraft:deepslate_tile_stairs[facing=south,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 8
+ },
+ {
+  "block_state": "minecraft:gold_block",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=north,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=south,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=north,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=south,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:dark_oak_log[axis=x]",
+  "count": 7
+ },
+ {
+  "block_state": "minecraft:cobweb",
+  "count": 6
+ },
+ {
+  "block_state": "minecraft:black_wall_banner[facing=east]",
+  "count": 6
+ },
+ {
+  "block_state": "minecraft:deepslate_brick_slab[type=bottom,waterlogged=false]",
+  "count": 6
+ },
+ {
+  "block_state": "minecraft:black_wall_banner[facing=south]",
+  "count": 5
+ },
+ {
+  "block_state": "minecraft:soul_lantern[hanging=false]",
+  "count": 4
+ },
+ {
+  "block_state": "minecraft:chest[facing=south,type=single,waterlogged=false]",
+  "count": 4
+ },
+ {
+  "block_state": "minecraft:bell[attachment=ceiling,facing=north,powered=false]",
+  "count": 4
+ },
+ {
+  "block_state": "minecraft:piston[extended=false,facing=up]",
+  "count": 4
+ },
+ {
+  "block_state": "minecraft:observer[facing=north,powered=false]",
+  "count": 4
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=east,half=top,shape=straight,waterlogged=false]",
+  "count": 3
+ },
+ {
+  "block_state": "minecraft:black_wall_banner[facing=north]",
+  "count": 3
+ },
+ {
+  "block_state": "minecraft:copper_block",
+  "count": 2
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=north,half=top,shape=straight,waterlogged=false]",
+  "count": 2
+ },
+ {
+  "block_state": "minecraft:soul_wall_torch[facing=north]",
+  "count": 2
+ },
+ {
+  "block_state": "minecraft:chest[facing=north,type=single,waterlogged=false]",
+  "count": 2
+ },
+ {
+  "block_state": "minecraft:black_wall_banner[facing=west]",
+  "count": 2
+ },
+ {
+  "block_state": "minecraft:chest[facing=west,type=single,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:lever[face=floor,facing=north,powered=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:grindstone[face=floor,facing=north]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=south,half=top,shape=straight,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:anvil[facing=east]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:soul_wall_torch[facing=west]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:soul_wall_torch[facing=south]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:soul_wall_torch[facing=east]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=south,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=north,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=south,half=bottom,shape=outer_right,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:waxed_oxidized_cut_copper_stairs[facing=north,half=bottom,shape=outer_left,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:lightning_rod[facing=up,powered=false,waterlogged=false]",
+  "count": 1
+ },
+ {
+  "block_state": "minecraft:polished_blackstone_brick_stairs[facing=west,half=top,shape=straight,waterlogged=false]",
+  "count": 1
+ }
+]

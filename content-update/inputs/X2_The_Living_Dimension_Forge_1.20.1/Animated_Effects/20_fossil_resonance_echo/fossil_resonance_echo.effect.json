@@ -1,0 +1,73 @@
+{
+  "effectNumber": 20,
+  "id": "x2_fossil_resonance_echo",
+  "displayName": "Fossil Resonance Echo",
+  "biomeNumber": 10,
+  "biomeKey": "titanbone_caverns",
+  "biomeName": "The Titanbone Caverns",
+  "description": "Glowing cyan rings and amber crystal sparks around ancient fossil formations.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 10,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_fossil_resonance_echo_sheet.png",
+    "sheetSizePx": [
+      640,
+      64
+    ],
+    "frameFiles": [
+      "x2_fossil_resonance_echo_00.png",
+      "x2_fossil_resonance_echo_01.png",
+      "x2_fossil_resonance_echo_02.png",
+      "x2_fossil_resonance_echo_03.png",
+      "x2_fossil_resonance_echo_04.png",
+      "x2_fossil_resonance_echo_05.png",
+      "x2_fossil_resonance_echo_06.png",
+      "x2_fossil_resonance_echo_07.png",
+      "x2_fossil_resonance_echo_08.png",
+      "x2_fossil_resonance_echo_09.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ticksPerFrame": 2,
+    "msPerFrame": 100,
+    "cycleDurationTicks": 20,
+    "cycleDurationMs": 1000,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:fossil_resonance_echo",
+    "recommendedQuadSizeBlocks": 2.4,
+    "lifetimeTicks": {
+      "min": 20,
+      "max": 20
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.0,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "One-shot; spawn at fossil block positions on random timer."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

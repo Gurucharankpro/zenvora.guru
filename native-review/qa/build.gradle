@@ -1,0 +1,20 @@
+plugins { id 'net.minecraftforge.gradle' version '6.0.54' }
+group='dev.soulboundqa'
+version='1.0'
+java.toolchain.languageVersion=JavaLanguageVersion.of(17)
+minecraft {
+ copyIdeResources=true
+ mappings channel:'official',version:'1.20.1'
+ runs {
+  configureEach { workingDirectory project.file('run'); property 'forge.logging.console.level','info'; mods { soulboundqa { source sourceSets.main } } }
+  client { workingDirectory project.file('run-client'); args '--username','SoulboundQA'; if(project.hasProperty('smoke')) property 'soulboundqa.smoke','true'; if(project.hasProperty('qaSave')) property 'soulboundqa.resume',project.property('qaSave') }
+  server { args '--nogui' }
+  gameTestServer { property 'forge.enabledGameTestNamespaces',project.findProperty('qaNamespace') ?: 'soulboundqa' }
+ }
+}
+repositories { maven { url=uri('localrepo') }; maven { url='https://maven.minecraftforge.net/' }; mavenCentral() }
+dependencies { minecraft 'net.minecraftforge:forge:1.20.1-47.3.22'; implementation fg.deobf("local.soulbound:army:${project.findProperty('qaArtifact') ?: '1.8.1-reviewed2'}") }
+
+sourceSets { repair { java.srcDir 'src/repair/java'; compileClasspath += sourceSets.main.compileClasspath } }
+tasks.register('repairJar', Jar) { from sourceSets.repair.output; archiveClassifier='repair' }
+reobf { repairJar {} }

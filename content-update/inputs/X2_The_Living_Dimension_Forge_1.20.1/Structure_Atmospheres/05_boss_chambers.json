@@ -1,0 +1,115 @@
+{
+  "profileVersion": 1,
+  "structureNumber": 5,
+  "structureKey": "boss_chambers",
+  "displayName": "Boss Chambers",
+  "mood": "powerful cinematic",
+  "doNotCreateStructures": true,
+  "implementationWarning": "Applies ONLY to structures that already exist in the mod. Verify the structure's real registry name/bounding box. No new structures are created by this pack.",
+  "structureRegistryName": null,
+  "structureRegistryNameNote": "Fill in after verifying existing structures in worldgen data.",
+  "triggerVolume": "structure bounding box + 8 block margin; use StructureManager / StructureStart bounding boxes on client via chunk structure references or block-entity markers",
+  "effectsUsed": [
+    {
+      "id": "x2_abyss_crystal_pulse",
+      "particleRegistryName": "x2_living:abyss_crystal_pulse",
+      "spawnsPerSecondAtHigh": 0.5,
+      "anchor": "around chamber pillars/crystal decorations; random 2-5 s",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_blue_storm_sparks",
+      "particleRegistryName": "x2_living:blue_storm_sparks",
+      "spawnsPerSecondAtHigh": 1.5,
+      "anchor": "ceiling and arena rim, 4-12 b above floor, never in the arena center during fight",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_thundercloud_energy",
+      "particleRegistryName": "x2_living:thundercloud_energy",
+      "spawnsPerSecondAtHigh": 0.2,
+      "anchor": "under ceiling, 10-25 b above floor, large arenas only",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_raven_spirit_wisps",
+      "particleRegistryName": "x2_living:raven_spirit_wisps",
+      "spawnsPerSecondAtHigh": 0.1,
+      "anchor": "arena rim only; rare",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_singing_crystal_resonance",
+      "particleRegistryName": "x2_living:singing_crystal_resonance",
+      "spawnsPerSecondAtHigh": 0.3,
+      "anchor": "ritual circle floor markings (use existing blocks)",
+      "reusesBiomeAsset": true
+    }
+  ],
+  "blendWithBiome": {
+    "mode": "additive",
+    "maxAddedFractionOfBiomeCap": 0.35,
+    "note": "Structure effects add to, never replace, biome effects. Total still obeys the biome preset's maxParticlesAlive."
+  },
+  "softFog": {
+    "colorHex": "#101830",
+    "extraDensity0to1": 0.1,
+    "implementation": "Optional; needs fog event hook; omit if not wanted."
+  },
+  "ambientLighting": {
+    "suggestedTintHex": "#8fc8ff",
+    "tintStrength0to1": 0.08,
+    "fullscreenOverlay": false
+  },
+  "qualityPresets": {
+    "low": {
+      "maxParticlesAlive": 20,
+      "spawnRadiusBlocks": 12,
+      "intensityMultiplier": 0.35
+    },
+    "medium": {
+      "maxParticlesAlive": 40,
+      "spawnRadiusBlocks": 20,
+      "intensityMultiplier": 0.7
+    },
+    "high": {
+      "maxParticlesAlive": 64,
+      "spawnRadiusBlocks": 28,
+      "intensityMultiplier": 1.0
+    }
+  },
+  "reductionRules": {
+    "hostileMobsWithin16Blocks_gt3": 0.6,
+    "hostileMobsWithin16Blocks_gt6": 0.35,
+    "playerInCombat": 0.5,
+    "bossFightActive": 0.25
+  },
+  "designNotes": "Phased: intro/cinematic can reach 120% briefly, fight forces strong reduction, defeat plays a calm finale.",
+  "estimatedSteadyStateAliveHigh": 1.9,
+  "phases": {
+    "idle": {
+      "intensity": 1.0,
+      "note": "Atmospheric before the encounter."
+    },
+    "intro_cinematic": {
+      "intensity": 1.2,
+      "durationSeconds": 6,
+      "note": "Brief build-up only; still obeys max caps."
+    },
+    "fight": {
+      "intensity": 0.25,
+      "disableEffects": [
+        "x2_thundercloud_energy",
+        "x2_silver_mirror_mist",
+        "x2_emerald_spore_clouds",
+        "x2_golden_glass_sandstorm"
+      ],
+      "note": "Combat visibility is paramount; keep only small, low-alpha sparks near the arena rim."
+    },
+    "defeated": {
+      "intensity": 0.8,
+      "durationSeconds": 20,
+      "note": "Calm finale; resonance and amber sparks can linger."
+    }
+  }
+}

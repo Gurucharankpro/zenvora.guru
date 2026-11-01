@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:expansion_abandoned_jujutsu_academy",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:content/abandoned_jujutsu_academy",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,808 @@
+{
+  "pack": "Decor Pack 07 - Al Ostoura Legacy",
+  "edition": "Minecraft Java Edition",
+  "namespace_placeholder": "soul_bound_dimension",
+  "count": 20,
+  "assets": [
+    {
+      "number": 1,
+      "slug": "refai_legendary_chair",
+      "title": "Refai's Legendary Chair",
+      "mob": 51,
+      "character": "Refai El Desouky",
+      "model_id": "soul_bound_dimension:block/decor/refai_legendary_chair",
+      "item_model_id": "soul_bound_dimension:item/refai_legendary_chair",
+      "bbmodel": "Models/refai_legendary_chair.bbmodel",
+      "texture": "Textures/refai_legendary_chair.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/refai_legendary_chair.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/refai_legendary_chair.json",
+      "preview": "Previews/01_refai_legendary_chair.png",
+      "texture_size_px": 64,
+      "element_count": 33,
+      "bounds_from": [
+        0.2,
+        0,
+        1.5
+      ],
+      "bounds_to": [
+        15.8,
+        16,
+        14.5
+      ],
+      "dimensions_xyz_units": [
+        15.6,
+        16,
+        13.0
+      ],
+      "dimensions_xyz_blocks": [
+        0.97,
+        1.0,
+        0.81
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Dark carved-wood Egyptian armchair, black leather cushions, lion-shaped gold armrests, crimson embroidery, gold trim.",
+      "notes": ""
+    },
+    {
+      "number": 2,
+      "slug": "refai_memorial_statue",
+      "title": "Refai's Memorial Statue",
+      "mob": 51,
+      "character": "Refai El Desouky",
+      "model_id": "soul_bound_dimension:block/decor/refai_memorial_statue",
+      "item_model_id": "soul_bound_dimension:item/refai_memorial_statue",
+      "bbmodel": "Models/refai_memorial_statue.bbmodel",
+      "texture": "Textures/refai_memorial_statue.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/refai_memorial_statue.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/refai_memorial_statue.json",
+      "preview": "Previews/02_refai_memorial_statue.png",
+      "texture_size_px": 64,
+      "element_count": 28,
+      "bounds_from": [
+        1,
+        0,
+        1
+      ],
+      "bounds_to": [
+        15,
+        28,
+        15
+      ],
+      "dimensions_xyz_units": [
+        14,
+        28,
+        14
+      ],
+      "dimensions_xyz_blocks": [
+        0.88,
+        1.75,
+        0.88
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Bronze-and-charcoal statue of Refai (bald, thick black beard, sunglasses, dark coat, arms crossed) on a blackstone pedestal.",
+      "notes": ""
+    },
+    {
+      "number": 3,
+      "slug": "nasser_executive_desk",
+      "title": "Nasser's Executive Desk",
+      "mob": 52,
+      "character": "Nasser El Desouky",
+      "model_id": "soul_bound_dimension:block/decor/nasser_executive_desk",
+      "item_model_id": "soul_bound_dimension:item/nasser_executive_desk",
+      "bbmodel": "Models/nasser_executive_desk.bbmodel",
+      "texture": "Textures/nasser_executive_desk.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/nasser_executive_desk.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/nasser_executive_desk.json",
+      "preview": "Previews/03_nasser_executive_desk.png",
+      "texture_size_px": 64,
+      "element_count": 40,
+      "bounds_from": [
+        0.3,
+        0,
+        1.2
+      ],
+      "bounds_to": [
+        15.7,
+        16.8,
+        16
+      ],
+      "dimensions_xyz_units": [
+        15.4,
+        16.8,
+        14.8
+      ],
+      "dimensions_xyz_blocks": [
+        0.96,
+        1.05,
+        0.93
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Dark walnut executive desk with drawers, stacked documents, miniature lamp, golden nameplate (ناصر الدسوقي) and an integrated black leather chair.",
+      "notes": ""
+    },
+    {
+      "number": 4,
+      "slug": "twin_brothers_portrait",
+      "title": "The Twin Brothers Portrait",
+      "mob": 52,
+      "character": "Nasser El Desouky (with Refai)",
+      "model_id": "soul_bound_dimension:block/decor/twin_brothers_portrait",
+      "item_model_id": "soul_bound_dimension:item/twin_brothers_portrait",
+      "bbmodel": "Models/twin_brothers_portrait.bbmodel",
+      "texture": "Textures/twin_brothers_portrait.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/twin_brothers_portrait.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/twin_brothers_portrait.json",
+      "preview": "Previews/04_twin_brothers_portrait.png",
+      "texture_size_px": 128,
+      "element_count": 23,
+      "bounds_from": [
+        -0.2,
+        -0.2,
+        12.4
+      ],
+      "bounds_to": [
+        16.2,
+        19.8,
+        16
+      ],
+      "dimensions_xyz_units": [
+        16.4,
+        20.0,
+        3.6
+      ],
+      "dimensions_xyz_blocks": [
+        1.02,
+        1.25,
+        0.23
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Wall-mounted ornate golden frame holding a 96x96 pixel-art portrait of Refai (sunglasses, black beard) and Nasser (grey hair, red tie) in dark clothes.",
+      "notes": "Back plane sits on the south face (z=16) so the portrait faces NORTH at default rotation."
+    },
+    {
+      "number": 5,
+      "slug": "salmawy_archive_cabinet",
+      "title": "Salmawy's Secret Archive Cabinet",
+      "mob": 53,
+      "character": "Dr. Salmawy",
+      "model_id": "soul_bound_dimension:block/decor/salmawy_archive_cabinet",
+      "item_model_id": "soul_bound_dimension:item/salmawy_archive_cabinet",
+      "bbmodel": "Models/salmawy_archive_cabinet.bbmodel",
+      "texture": "Textures/salmawy_archive_cabinet.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/salmawy_archive_cabinet.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/salmawy_archive_cabinet.json",
+      "preview": "Previews/05_salmawy_archive_cabinet.png",
+      "texture_size_px": 64,
+      "element_count": 28,
+      "bounds_from": [
+        0.8,
+        0,
+        0.8
+      ],
+      "bounds_to": [
+        15.2,
+        16,
+        14
+      ],
+      "dimensions_xyz_units": [
+        14.4,
+        16,
+        13.2
+      ],
+      "dimensions_xyz_blocks": [
+        0.9,
+        1.0,
+        0.82
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Antique wooden archive cabinet with book shelves, sealed envelopes, mysterious folders, silver handles and a hidden compartment drawer.",
+      "notes": ""
+    },
+    {
+      "number": 6,
+      "slug": "black_marble_conference_table",
+      "title": "The Black Marble Conference Table",
+      "mob": 53,
+      "character": "Dr. Salmawy",
+      "model_id": "soul_bound_dimension:block/decor/black_marble_conference_table",
+      "item_model_id": "soul_bound_dimension:item/black_marble_conference_table",
+      "bbmodel": "Models/black_marble_conference_table.bbmodel",
+      "texture": "Textures/black_marble_conference_table.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/black_marble_conference_table.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/black_marble_conference_table.json",
+      "preview": "Previews/06_black_marble_conference_table.png",
+      "texture_size_px": 64,
+      "element_count": 23,
+      "bounds_from": [
+        0,
+        0,
+        2.3
+      ],
+      "bounds_to": [
+        16,
+        16,
+        13.7
+      ],
+      "dimensions_xyz_units": [
+        16,
+        16,
+        11.4
+      ],
+      "dimensions_xyz_blocks": [
+        1.0,
+        1.0,
+        0.71
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Rectangular polished black-marble table with ornate gold legs, scattered documents and a central crimson crystal ornament.",
+      "notes": ""
+    },
+    {
+      "number": 7,
+      "slug": "traditional_egyptian_majlis",
+      "title": "Traditional Egyptian Majlis",
+      "mob": 54,
+      "character": "Mokhtar El Desouky",
+      "model_id": "soul_bound_dimension:block/decor/traditional_egyptian_majlis",
+      "item_model_id": "soul_bound_dimension:item/traditional_egyptian_majlis",
+      "bbmodel": "Models/traditional_egyptian_majlis.bbmodel",
+      "texture": "Textures/traditional_egyptian_majlis.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/traditional_egyptian_majlis.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/traditional_egyptian_majlis.json",
+      "preview": "Previews/07_traditional_egyptian_majlis.png",
+      "texture_size_px": 64,
+      "element_count": 27,
+      "bounds_from": [
+        0,
+        0,
+        0
+      ],
+      "bounds_to": [
+        16,
+        15.4,
+        16
+      ],
+      "dimensions_xyz_units": [
+        16,
+        15.4,
+        16
+      ],
+      "dimensions_xyz_blocks": [
+        1.0,
+        0.96,
+        1.0
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": true,
+      "description": "Seating-area decoration: carved wooden bench, patterned cushions and bolsters, ornamental kilim carpet and a low carved side table.",
+      "notes": ""
+    },
+    {
+      "number": 8,
+      "slug": "antique_cairo_grandfather_clock",
+      "title": "Antique Cairo Grandfather Clock",
+      "mob": 54,
+      "character": "Mokhtar El Desouky",
+      "model_id": "soul_bound_dimension:block/decor/antique_cairo_grandfather_clock",
+      "item_model_id": "soul_bound_dimension:item/antique_cairo_grandfather_clock",
+      "bbmodel": "Models/antique_cairo_grandfather_clock.bbmodel",
+      "texture": "Textures/antique_cairo_grandfather_clock.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/antique_cairo_grandfather_clock.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/antique_cairo_grandfather_clock.json",
+      "preview": "Previews/08_antique_cairo_grandfather_clock.png",
+      "texture_size_px": 64,
+      "element_count": 28,
+      "bounds_from": [
+        3,
+        0,
+        3
+      ],
+      "bounds_to": [
+        13,
+        31,
+        13
+      ],
+      "dimensions_xyz_units": [
+        10,
+        31,
+        10
+      ],
+      "dimensions_xyz_blocks": [
+        0.62,
+        1.94,
+        0.62
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": true,
+      "description": "Tall vintage walnut clock with brass hands, Arabic-numeral face, glass trunk panel, geometric Egyptian carvings and swinging-pendulum geometry (static).",
+      "notes": ""
+    },
+    {
+      "number": 9,
+      "slug": "el_nemr_golden_lion_throne",
+      "title": "El Nemr's Golden Lion Throne",
+      "mob": 55,
+      "character": "Essam El Nemr",
+      "model_id": "soul_bound_dimension:block/decor/el_nemr_golden_lion_throne",
+      "item_model_id": "soul_bound_dimension:item/el_nemr_golden_lion_throne",
+      "bbmodel": "Models/el_nemr_golden_lion_throne.bbmodel",
+      "texture": "Textures/el_nemr_golden_lion_throne.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/el_nemr_golden_lion_throne.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/el_nemr_golden_lion_throne.json",
+      "preview": "Previews/09_el_nemr_golden_lion_throne.png",
+      "texture_size_px": 64,
+      "element_count": 29,
+      "bounds_from": [
+        0,
+        0,
+        0.8
+      ],
+      "bounds_to": [
+        16,
+        25,
+        15.2
+      ],
+      "dimensions_xyz_units": [
+        16,
+        25,
+        14.4
+      ],
+      "dimensions_xyz_blocks": [
+        1.0,
+        1.56,
+        0.9
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Imposing gold-and-burgundy throne: carved wood panels, lion-head armrests, velvet seat and backrest with a large golden lion crest.",
+      "notes": ""
+    },
+    {
+      "number": 10,
+      "slug": "el_nemr_family_emblem",
+      "title": "The El Nemr Family Emblem",
+      "mob": 55,
+      "character": "Essam El Nemr",
+      "model_id": "soul_bound_dimension:block/decor/el_nemr_family_emblem",
+      "item_model_id": "soul_bound_dimension:item/el_nemr_family_emblem",
+      "bbmodel": "Models/el_nemr_family_emblem.bbmodel",
+      "texture": "Textures/el_nemr_family_emblem.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/el_nemr_family_emblem.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/el_nemr_family_emblem.json",
+      "preview": "Previews/10_el_nemr_family_emblem.png",
+      "texture_size_px": 64,
+      "element_count": 29,
+      "bounds_from": [
+        -0.6,
+        0.2,
+        13.5
+      ],
+      "bounds_to": [
+        16.6,
+        18,
+        16
+      ],
+      "dimensions_xyz_units": [
+        17.2,
+        17.8,
+        2.5
+      ],
+      "dimensions_xyz_blocks": [
+        1.07,
+        1.11,
+        0.16
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Wall-mounted black-marble shield with an original golden tiger-head emblem, engraved silver ornaments and a small gold crest.",
+      "notes": ""
+    },
+    {
+      "number": 11,
+      "slug": "workshop_tool_cabinet",
+      "title": "Egyptian Workshop Tool Cabinet",
+      "mob": 56,
+      "character": "Amin El Nemr",
+      "model_id": "soul_bound_dimension:block/decor/workshop_tool_cabinet",
+      "item_model_id": "soul_bound_dimension:item/workshop_tool_cabinet",
+      "bbmodel": "Models/workshop_tool_cabinet.bbmodel",
+      "texture": "Textures/workshop_tool_cabinet.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/workshop_tool_cabinet.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/workshop_tool_cabinet.json",
+      "preview": "Previews/11_workshop_tool_cabinet.png",
+      "texture_size_px": 64,
+      "element_count": 33,
+      "bounds_from": [
+        0.8,
+        0,
+        1.7
+      ],
+      "bounds_to": [
+        15.2,
+        16.2,
+        13.2
+      ],
+      "dimensions_xyz_units": [
+        14.4,
+        16.2,
+        11.5
+      ],
+      "dimensions_xyz_blocks": [
+        0.9,
+        1.01,
+        0.72
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Weathered steel workshop cabinet with riveted drawers, brass handles, a pegboard with hammer, wrench, saw and decorative gears, and tools lying on top.",
+      "notes": ""
+    },
+    {
+      "number": 12,
+      "slug": "vintage_workshop_machinery",
+      "title": "Vintage Workshop Machinery",
+      "mob": 56,
+      "character": "Amin El Nemr",
+      "model_id": "soul_bound_dimension:block/decor/vintage_workshop_machinery",
+      "item_model_id": "soul_bound_dimension:item/vintage_workshop_machinery",
+      "bbmodel": "Models/vintage_workshop_machinery.bbmodel",
+      "texture": "Textures/vintage_workshop_machinery.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/vintage_workshop_machinery.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/vintage_workshop_machinery.json",
+      "preview": "Previews/12_vintage_workshop_machinery.png",
+      "texture_size_px": 64,
+      "element_count": 34,
+      "bounds_from": [
+        -0.6,
+        0,
+        1.4
+      ],
+      "bounds_to": [
+        16.2,
+        20,
+        14.6
+      ],
+      "dimensions_xyz_units": [
+        16.8,
+        20,
+        13.2
+      ],
+      "dimensions_xyz_blocks": [
+        1.05,
+        1.25,
+        0.82
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Static compact industrial machine on a reinforced steel workbench: bronze flywheel gear, belt, copper pipes, brass pressure gauge, vice and toolbox.",
+      "notes": ""
+    },
+    {
+      "number": 13,
+      "slug": "mobile_phone_display_counter",
+      "title": "Egyptian Mobile Phone Display Counter",
+      "mob": 57,
+      "character": "Morsi",
+      "model_id": "soul_bound_dimension:block/decor/mobile_phone_display_counter",
+      "item_model_id": "soul_bound_dimension:item/mobile_phone_display_counter",
+      "bbmodel": "Models/mobile_phone_display_counter.bbmodel",
+      "texture": "Textures/mobile_phone_display_counter.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/mobile_phone_display_counter.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/mobile_phone_display_counter.json",
+      "preview": "Previews/13_mobile_phone_display_counter.png",
+      "texture_size_px": 64,
+      "element_count": 39,
+      "bounds_from": [
+        -0.2,
+        0,
+        1.6
+      ],
+      "bounds_to": [
+        16.2,
+        13.6,
+        14.2
+      ],
+      "dimensions_xyz_units": [
+        16.4,
+        13.6,
+        12.6
+      ],
+      "dimensions_xyz_blocks": [
+        1.02,
+        0.85,
+        0.79
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": true,
+      "description": "Shop counter with glass-like display case, miniature smartphones on stands, colorful display risers, charging cables and a polished wooden base.",
+      "notes": ""
+    },
+    {
+      "number": 14,
+      "slug": "morsi_mobile_shop_sign",
+      "title": "Morsi's Mobile Shop Sign",
+      "mob": 57,
+      "character": "Morsi",
+      "model_id": "soul_bound_dimension:block/decor/morsi_mobile_shop_sign",
+      "item_model_id": "soul_bound_dimension:item/morsi_mobile_shop_sign",
+      "bbmodel": "Models/morsi_mobile_shop_sign.bbmodel",
+      "texture": "Textures/morsi_mobile_shop_sign.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/morsi_mobile_shop_sign.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/morsi_mobile_shop_sign.json",
+      "preview": "Previews/14_morsi_mobile_shop_sign.png",
+      "texture_size_px": 64,
+      "element_count": 18,
+      "bounds_from": [
+        -0.2,
+        3,
+        13.2
+      ],
+      "bounds_to": [
+        16.2,
+        16,
+        16.2
+      ],
+      "dimensions_xyz_units": [
+        16.4,
+        13,
+        3.0
+      ],
+      "dimensions_xyz_blocks": [
+        1.02,
+        0.81,
+        0.19
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Wall/hanging illuminated-looking storefront sign with dark-blue frame and phone icons. Texture text (exact): \"مرسي للمحمول\" (Morsi lil-Mahmoul, \"Morsi Mobile\").",
+      "notes": "Arabic text is baked into sign_ar region (0,0)-(64,24) of the texture, rendered with proper letter joining and RTL order."
+    },
+    {
+      "number": 15,
+      "slug": "hanan_traditional_vanity",
+      "title": "Hanan's Traditional Vanity",
+      "mob": 58,
+      "character": "Hanan",
+      "model_id": "soul_bound_dimension:block/decor/hanan_traditional_vanity",
+      "item_model_id": "soul_bound_dimension:item/hanan_traditional_vanity",
+      "bbmodel": "Models/hanan_traditional_vanity.bbmodel",
+      "texture": "Textures/hanan_traditional_vanity.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/hanan_traditional_vanity.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/hanan_traditional_vanity.json",
+      "preview": "Previews/15_hanan_traditional_vanity.png",
+      "texture_size_px": 64,
+      "element_count": 50,
+      "bounds_from": [
+        0.4,
+        0,
+        0.2
+      ],
+      "bounds_to": [
+        15.6,
+        20.6,
+        13.6
+      ],
+      "dimensions_xyz_units": [
+        15.2,
+        20.6,
+        13.4
+      ],
+      "dimensions_xyz_blocks": [
+        0.95,
+        1.29,
+        0.84
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": true,
+      "description": "Elegant carved wooden dressing table with an oval mirror, golden jewelry boxes, perfume bottles, floral drawers and a small cushioned stool.",
+      "notes": ""
+    },
+    {
+      "number": 16,
+      "slug": "egyptian_family_tea_set",
+      "title": "Egyptian Family Tea Set",
+      "mob": 58,
+      "character": "Hanan",
+      "model_id": "soul_bound_dimension:block/decor/egyptian_family_tea_set",
+      "item_model_id": "soul_bound_dimension:item/egyptian_family_tea_set",
+      "bbmodel": "Models/egyptian_family_tea_set.bbmodel",
+      "texture": "Textures/egyptian_family_tea_set.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/egyptian_family_tea_set.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/egyptian_family_tea_set.json",
+      "preview": "Previews/16_egyptian_family_tea_set.png",
+      "texture_size_px": 64,
+      "element_count": 34,
+      "bounds_from": [
+        0.6,
+        0,
+        1.6
+      ],
+      "bounds_to": [
+        15.4,
+        10,
+        14.4
+      ],
+      "dimensions_xyz_units": [
+        14.8,
+        10,
+        12.8
+      ],
+      "dimensions_xyz_blocks": [
+        0.93,
+        0.62,
+        0.8
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": true,
+      "description": "Low carved wooden serving table with embroidered cloth, silver tray, brass teapot, sugar bowl and transparent-looking amber tea glasses, plus floor cushions.",
+      "notes": ""
+    },
+    {
+      "number": 17,
+      "slug": "old_cairo_police_office_desk",
+      "title": "Old Cairo Police Office Desk",
+      "mob": 59,
+      "character": "Kamal Mourad",
+      "model_id": "soul_bound_dimension:block/decor/old_cairo_police_office_desk",
+      "item_model_id": "soul_bound_dimension:item/old_cairo_police_office_desk",
+      "bbmodel": "Models/old_cairo_police_office_desk.bbmodel",
+      "texture": "Textures/old_cairo_police_office_desk.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/old_cairo_police_office_desk.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/old_cairo_police_office_desk.json",
+      "preview": "Previews/17_old_cairo_police_office_desk.png",
+      "texture_size_px": 64,
+      "element_count": 50,
+      "bounds_from": [
+        0.3,
+        0,
+        1.2
+      ],
+      "bounds_to": [
+        15.7,
+        16.4,
+        16
+      ],
+      "dimensions_xyz_units": [
+        15.4,
+        16.4,
+        14.8
+      ],
+      "dimensions_xyz_blocks": [
+        0.96,
+        1.02,
+        0.93
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Vintage administrative desk in dark wood: green felt blotter, document folders, rotary telephone, brass lamp, stationery, name plaque (كمال مراد) and an old wooden office chair.",
+      "notes": ""
+    },
+    {
+      "number": 18,
+      "slug": "police_station_wall_clock",
+      "title": "Egyptian Police Station Wall Clock",
+      "mob": 59,
+      "character": "Kamal Mourad",
+      "model_id": "soul_bound_dimension:block/decor/police_station_wall_clock",
+      "item_model_id": "soul_bound_dimension:item/police_station_wall_clock",
+      "bbmodel": "Models/police_station_wall_clock.bbmodel",
+      "texture": "Textures/police_station_wall_clock.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/police_station_wall_clock.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/police_station_wall_clock.json",
+      "preview": "Previews/18_police_station_wall_clock.png",
+      "texture_size_px": 64,
+      "element_count": 29,
+      "bounds_from": [
+        0,
+        0,
+        12.6
+      ],
+      "bounds_to": [
+        16,
+        16.6,
+        16
+      ],
+      "dimensions_xyz_units": [
+        16,
+        16.6,
+        3.4
+      ],
+      "dimensions_xyz_blocks": [
+        1.0,
+        1.04,
+        0.21
+      ],
+      "oversized_over_1_block": false,
+      "uses_translucent_pixels": false,
+      "description": "Weathered-brass framed wall clock with Arabic-Indic numerals (١ … ١٢), dark wood backing and geometric border studs.",
+      "notes": ""
+    },
+    {
+      "number": 19,
+      "slug": "giant_zombie_refai_monument",
+      "title": "Giant Zombie Refai Monument",
+      "mob": 60,
+      "character": "Legendary Giant Zombie Refai",
+      "model_id": "soul_bound_dimension:block/decor/giant_zombie_refai_monument",
+      "item_model_id": "soul_bound_dimension:item/giant_zombie_refai_monument",
+      "bbmodel": "Models/giant_zombie_refai_monument.bbmodel",
+      "texture": "Textures/giant_zombie_refai_monument.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/giant_zombie_refai_monument.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/giant_zombie_refai_monument.json",
+      "preview": "Previews/19_giant_zombie_refai_monument.png",
+      "texture_size_px": 128,
+      "element_count": 53,
+      "bounds_from": [
+        0,
+        0,
+        0
+      ],
+      "bounds_to": [
+        16,
+        31.4,
+        16
+      ],
+      "dimensions_xyz_units": [
+        16,
+        31.4,
+        16
+      ],
+      "dimensions_xyz_blocks": [
+        1.0,
+        1.96,
+        1.0
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Spectacular 2-block-tall monument of the undead giant Refai: shaved head, thick beard, cracked sunglasses with glowing red eyes, torn black coat, heavy chains and a huge runed cleaver, on an obsidian pedestal with red crystals. No gore.",
+      "notes": "Oversized: model spans y=0..32 (two blocks tall). Place on the lower block and let the upper half render, or implement as two stacked blocks / a block with oversized render shape."
+    },
+    {
+      "number": 20,
+      "slug": "throne_of_the_undead_legend",
+      "title": "Throne of the Undead Legend",
+      "mob": 60,
+      "character": "Legendary Giant Zombie Refai",
+      "model_id": "soul_bound_dimension:block/decor/throne_of_the_undead_legend",
+      "item_model_id": "soul_bound_dimension:item/throne_of_the_undead_legend",
+      "bbmodel": "Models/throne_of_the_undead_legend.bbmodel",
+      "texture": "Textures/throne_of_the_undead_legend.png",
+      "texture_resource_path": "assets/soul_bound_dimension/textures/block/decor/throne_of_the_undead_legend.png",
+      "java_model": "Java_Model_Exports/assets/soul_bound_dimension/models/block/decor/throne_of_the_undead_legend.json",
+      "preview": "Previews/20_throne_of_the_undead_legend.png",
+      "texture_size_px": 128,
+      "element_count": 52,
+      "bounds_from": [
+        -0.2,
+        0,
+        0
+      ],
+      "bounds_to": [
+        16.2,
+        31.4,
+        16
+      ],
+      "dimensions_xyz_units": [
+        16.4,
+        31.4,
+        16
+      ],
+      "dimensions_xyz_blocks": [
+        1.02,
+        1.96,
+        1.0
+      ],
+      "oversized_over_1_block": true,
+      "uses_translucent_pixels": false,
+      "description": "Enormous obsidian-and-crimson throne: glowing red crystals, monumental black pillars, ornamental chains, a fractured floating crown and an original undead emblem (glasses + glowing eyes in a crimson ring).",
+      "notes": "Oversized: model spans y=0..32 (two blocks tall)."
+    }
+  ]
+}

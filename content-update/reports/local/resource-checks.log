@@ -1,0 +1,13 @@
+test_all_60_decor_models_recipes_and_real_placements (__main__.ContentResources.test_all_60_decor_models_recipes_and_real_placements) ... ok
+test_new_templates_1201_and_actual_guardian_clearance (__main__.ContentResources.test_new_templates_1201_and_actual_guardian_clearance) ... ok
+test_old_template_solids_and_loot_not_erased (__main__.ContentResources.test_old_template_solids_and_loot_not_erased) ... ok
+test_original_bones_cubes_and_all_authored_clips_retained (__main__.ContentResources.test_original_bones_cubes_and_all_authored_clips_retained) ... ok
+test_reviewed_baseline_and_critical_fixes_are_preserved (__main__.ContentResources.test_reviewed_baseline_and_critical_fixes_are_preserved) ... ok
+test_shared_habitats_append_without_altering_old_sites (__main__.ContentResources.test_shared_habitats_append_without_altering_old_sites) ... ok
+test_x2_sprites_and_only_existing_biome_bindings (__main__.ContentResources.test_x2_sprites_and_only_existing_biome_bindings) ... ok
+test_yuta_two_texture_regions_preserve_original_pixels (__main__.ContentResources.test_yuta_two_texture_regions_preserve_original_pixels) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 59.403s
+
+OK

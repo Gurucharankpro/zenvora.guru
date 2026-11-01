@@ -1,0 +1,146 @@
+# Validation Report
+
+Generated automatically by the build scripts. Checked: every PNG frame (mode, size, transparency, distinctness, motion), sprite strips vs frames, manifests, particle definitions, JSON parsing, profile fields, OGG decoding, ZIP integrity and entries.
+
+- PASS - exactly 20 effects in master manifest
+- PASS - 20 unique effect ids
+- PASS - biome 01 has exactly 2 effects
+- PASS - biome 02 has exactly 2 effects
+- PASS - biome 03 has exactly 2 effects
+- PASS - biome 04 has exactly 2 effects
+- PASS - biome 05 has exactly 2 effects
+- PASS - biome 06 has exactly 2 effects
+- PASS - biome 07 has exactly 2 effects
+- PASS - biome 08 has exactly 2 effects
+- PASS - biome 09 has exactly 2 effects
+- PASS - biome 10 has exactly 2 effects
+- PASS - x2_crimson_ashfall: 8 frames all visually distinct
+- PASS - x2_crimson_ashfall: consecutive-frame min diff 5.77 (smooth but visible motion)
+- PASS - x2_crimson_ashfall: RGBA, corners transparent, 89% transparent, no empty frame
+- PASS - x2_crimson_ashfall: sheet == frames, frameOrder/timing consistent
+- PASS - x2_crimson_ashfall: particle definition lists 8 textures
+- PASS - x2_crimson_ashfall: GIF + contact-sheet preview exist
+- PASS - x2_raven_spirit_wisps: 12 frames all visually distinct
+- PASS - x2_raven_spirit_wisps: consecutive-frame min diff 1.08 (smooth but visible motion)
+- PASS - x2_raven_spirit_wisps: RGBA, corners transparent, 81% transparent, no empty frame
+- PASS - x2_raven_spirit_wisps: sheet == frames, frameOrder/timing consistent
+- PASS - x2_raven_spirit_wisps: particle definition lists 12 textures
+- PASS - x2_raven_spirit_wisps: GIF + contact-sheet preview exist
+- PASS - x2_lunar_fairy_dust: 8 frames all visually distinct
+- PASS - x2_lunar_fairy_dust: consecutive-frame min diff 1.54 (smooth but visible motion)
+- PASS - x2_lunar_fairy_dust: RGBA, corners transparent, 90% transparent, no empty frame
+- PASS - x2_lunar_fairy_dust: sheet == frames, frameOrder/timing consistent
+- PASS - x2_lunar_fairy_dust: particle definition lists 8 textures
+- PASS - x2_lunar_fairy_dust: GIF + contact-sheet preview exist
+- PASS - x2_moonflower_glow: 8 frames all visually distinct
+- PASS - x2_moonflower_glow: consecutive-frame min diff 2.59 (smooth but visible motion)
+- PASS - x2_moonflower_glow: RGBA, corners transparent, 79% transparent, no empty frame
+- PASS - x2_moonflower_glow: sheet == frames, frameOrder/timing consistent
+- PASS - x2_moonflower_glow: particle definition lists 8 textures
+- PASS - x2_moonflower_glow: GIF + contact-sheet preview exist
+- PASS - x2_celestial_stardust: 8 frames all visually distinct
+- PASS - x2_celestial_stardust: consecutive-frame min diff 0.79 (smooth but visible motion)
+- PASS - x2_celestial_stardust: RGBA, corners transparent, 81% transparent, no empty frame
+- PASS - x2_celestial_stardust: sheet == frames, frameOrder/timing consistent
+- PASS - x2_celestial_stardust: particle definition lists 8 textures
+- PASS - x2_celestial_stardust: GIF + contact-sheet preview exist
+- PASS - x2_floating_crystal_fragments: 12 frames all visually distinct
+- PASS - x2_floating_crystal_fragments: consecutive-frame min diff 7.77 (smooth but visible motion)
+- PASS - x2_floating_crystal_fragments: RGBA, corners transparent, 79% transparent, no empty frame
+- PASS - x2_floating_crystal_fragments: sheet == frames, frameOrder/timing consistent
+- PASS - x2_floating_crystal_fragments: particle definition lists 12 textures
+- PASS - x2_floating_crystal_fragments: GIF + contact-sheet preview exist
+- PASS - x2_emerald_spore_clouds: 8 frames all visually distinct
+- PASS - x2_emerald_spore_clouds: consecutive-frame min diff 10.89 (smooth but visible motion)
+- PASS - x2_emerald_spore_clouds: RGBA, corners transparent, 78% transparent, no empty frame
+- PASS - x2_emerald_spore_clouds: sheet == frames, frameOrder/timing consistent
+- PASS - x2_emerald_spore_clouds: particle definition lists 8 textures
+- PASS - x2_emerald_spore_clouds: GIF + contact-sheet preview exist
+- PASS - x2_abyss_crystal_pulse: 8 frames all visually distinct
+- PASS - x2_abyss_crystal_pulse: consecutive-frame min diff 4.37 (smooth but visible motion)
+- PASS - x2_abyss_crystal_pulse: RGBA, corners transparent, 92% transparent, no empty frame
+- PASS - x2_abyss_crystal_pulse: sheet == frames, frameOrder/timing consistent
+- PASS - x2_abyss_crystal_pulse: particle definition lists 8 textures
+- PASS - x2_abyss_crystal_pulse: GIF + contact-sheet preview exist
+- PASS - x2_enchanted_pearl_bubbles: 8 frames all visually distinct
+- PASS - x2_enchanted_pearl_bubbles: consecutive-frame min diff 4.88 (smooth but visible motion)
+- PASS - x2_enchanted_pearl_bubbles: RGBA, corners transparent, 64% transparent, no empty frame
+- PASS - x2_enchanted_pearl_bubbles: sheet == frames, frameOrder/timing consistent
+- PASS - x2_enchanted_pearl_bubbles: particle definition lists 8 textures
+- PASS - x2_enchanted_pearl_bubbles: GIF + contact-sheet preview exist
+- PASS - x2_ancient_ocean_lights: 10 frames all visually distinct
+- PASS - x2_ancient_ocean_lights: consecutive-frame min diff 4.69 (smooth but visible motion)
+- PASS - x2_ancient_ocean_lights: RGBA, corners transparent, 94% transparent, no empty frame
+- PASS - x2_ancient_ocean_lights: sheet == frames, frameOrder/timing consistent
+- PASS - x2_ancient_ocean_lights: particle definition lists 10 textures
+- PASS - x2_ancient_ocean_lights: GIF + contact-sheet preview exist
+- PASS - x2_golden_glass_sandstorm: 12 frames all visually distinct
+- PASS - x2_golden_glass_sandstorm: consecutive-frame min diff 22.38 (smooth but visible motion)
+- PASS - x2_golden_glass_sandstorm: RGBA, corners transparent, 84% transparent, no empty frame
+- PASS - x2_golden_glass_sandstorm: sheet == frames, frameOrder/timing consistent
+- PASS - x2_golden_glass_sandstorm: particle definition lists 12 textures
+- PASS - x2_golden_glass_sandstorm: GIF + contact-sheet preview exist
+- PASS - x2_singing_crystal_resonance: 10 frames all visually distinct
+- PASS - x2_singing_crystal_resonance: consecutive-frame min diff 10.47 (smooth but visible motion)
+- PASS - x2_singing_crystal_resonance: RGBA, corners transparent, 93% transparent, no empty frame
+- PASS - x2_singing_crystal_resonance: sheet == frames, frameOrder/timing consistent
+- PASS - x2_singing_crystal_resonance: particle definition lists 10 textures
+- PASS - x2_singing_crystal_resonance: GIF + contact-sheet preview exist
+- PASS - x2_blue_storm_sparks: 6 frames all visually distinct
+- PASS - x2_blue_storm_sparks: consecutive-frame min diff 14.53 (smooth but visible motion)
+- PASS - x2_blue_storm_sparks: RGBA, corners transparent, 96% transparent, no empty frame
+- PASS - x2_blue_storm_sparks: sheet == frames, frameOrder/timing consistent
+- PASS - x2_blue_storm_sparks: particle definition lists 6 textures
+- PASS - x2_blue_storm_sparks: GIF + contact-sheet preview exist
+- PASS - x2_thundercloud_energy: 10 frames all visually distinct
+- PASS - x2_thundercloud_energy: consecutive-frame min diff 2.96 (smooth but visible motion)
+- PASS - x2_thundercloud_energy: RGBA, corners transparent, 79% transparent, no empty frame
+- PASS - x2_thundercloud_energy: sheet == frames, frameOrder/timing consistent
+- PASS - x2_thundercloud_energy: particle definition lists 10 textures
+- PASS - x2_thundercloud_energy: GIF + contact-sheet preview exist
+- PASS - x2_floating_dreamseeds: 8 frames all visually distinct
+- PASS - x2_floating_dreamseeds: consecutive-frame min diff 8.29 (smooth but visible motion)
+- PASS - x2_floating_dreamseeds: RGBA, corners transparent, 82% transparent, no empty frame
+- PASS - x2_floating_dreamseeds: sheet == frames, frameOrder/timing consistent
+- PASS - x2_floating_dreamseeds: particle definition lists 8 textures
+- PASS - x2_floating_dreamseeds: GIF + contact-sheet preview exist
+- PASS - x2_dream_petal_rain: 12 frames all visually distinct
+- PASS - x2_dream_petal_rain: consecutive-frame min diff 17.88 (smooth but visible motion)
+- PASS - x2_dream_petal_rain: RGBA, corners transparent, 89% transparent, no empty frame
+- PASS - x2_dream_petal_rain: sheet == frames, frameOrder/timing consistent
+- PASS - x2_dream_petal_rain: particle definition lists 12 textures
+- PASS - x2_dream_petal_rain: GIF + contact-sheet preview exist
+- PASS - x2_silver_mirror_mist: 8 frames all visually distinct
+- PASS - x2_silver_mirror_mist: consecutive-frame min diff 12.82 (smooth but visible motion)
+- PASS - x2_silver_mirror_mist: RGBA, corners transparent, 80% transparent, no empty frame
+- PASS - x2_silver_mirror_mist: sheet == frames, frameOrder/timing consistent
+- PASS - x2_silver_mirror_mist: particle definition lists 8 textures
+- PASS - x2_silver_mirror_mist: GIF + contact-sheet preview exist
+- PASS - x2_reflection_fragments: 8 frames all visually distinct
+- PASS - x2_reflection_fragments: consecutive-frame min diff 1.71 (smooth but visible motion)
+- PASS - x2_reflection_fragments: RGBA, corners transparent, 86% transparent, no empty frame
+- PASS - x2_reflection_fragments: sheet == frames, frameOrder/timing consistent
+- PASS - x2_reflection_fragments: particle definition lists 8 textures
+- PASS - x2_reflection_fragments: GIF + contact-sheet preview exist
+- PASS - x2_ancient_amber_dust: 8 frames all visually distinct
+- PASS - x2_ancient_amber_dust: consecutive-frame min diff 1.99 (smooth but visible motion)
+- PASS - x2_ancient_amber_dust: RGBA, corners transparent, 94% transparent, no empty frame
+- PASS - x2_ancient_amber_dust: sheet == frames, frameOrder/timing consistent
+- PASS - x2_ancient_amber_dust: particle definition lists 8 textures
+- PASS - x2_ancient_amber_dust: GIF + contact-sheet preview exist
+- PASS - x2_fossil_resonance_echo: 10 frames all visually distinct
+- PASS - x2_fossil_resonance_echo: consecutive-frame min diff 14.37 (smooth but visible motion)
+- PASS - x2_fossil_resonance_echo: RGBA, corners transparent, 92% transparent, no empty frame
+- PASS - x2_fossil_resonance_echo: sheet == frames, frameOrder/timing consistent
+- PASS - x2_fossil_resonance_echo: particle definition lists 10 textures
+- PASS - x2_fossil_resonance_echo: GIF + contact-sheet preview exist
+- PASS - 182 PNG frames on disk == manifests
+- PASS - all JSON files parse
+- PASS - 10 biome profiles with all required fields + Low/Medium/High
+- PASS - 5 structure profiles
+- PASS - 10 OGG Vorbis loops decode (16 s each)
+- PASS - ZIP pass 1: integrity, folders, 182 PNGs decode as RGBA, 20 effect folders, 10 OGG, 10 biome + 5 structure profiles, 20 GIFs, no empty files (356 entries)
+
+Result: ALL CHECKS PASSED (138 checks)
+
+Not verifiable here: behavior inside Minecraft/Forge (no game client or Java compilation was available). The in-game particle registration, fog, weather and sound registration are unimplemented by design.

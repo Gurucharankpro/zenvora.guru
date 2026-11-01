@@ -1,0 +1,69 @@
+{
+  "effectNumber": 9,
+  "id": "x2_enchanted_pearl_bubbles",
+  "displayName": "Enchanted Pearl Bubbles",
+  "biomeNumber": 5,
+  "biomeKey": "sunken_kingdom",
+  "biomeName": "The Sunken Kingdom",
+  "description": "Turquoise bubbles with miniature pearl highlights.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_enchanted_pearl_bubbles_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_enchanted_pearl_bubbles_00.png",
+      "x2_enchanted_pearl_bubbles_01.png",
+      "x2_enchanted_pearl_bubbles_02.png",
+      "x2_enchanted_pearl_bubbles_03.png",
+      "x2_enchanted_pearl_bubbles_04.png",
+      "x2_enchanted_pearl_bubbles_05.png",
+      "x2_enchanted_pearl_bubbles_06.png",
+      "x2_enchanted_pearl_bubbles_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 24,
+    "cycleDurationMs": 1200,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:enchanted_pearl_bubbles",
+    "recommendedQuadSizeBlocks": 0.3,
+    "lifetimeTicks": {
+      "min": 60,
+      "max": 100
+    },
+    "gravity": -0.02,
+    "horizontalDriftBlocksPerTick": 0.004,
+    "fullbright": false,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Buoyant: rises ~0.02 b/tick; remove when leaving water. Wobble from sprite loop."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

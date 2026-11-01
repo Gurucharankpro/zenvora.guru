@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "shadowsovereign:block/sunken_tidewood_leaves"
-  },
-  "render_type": "minecraft:cutout_mipped"
-}

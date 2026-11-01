@@ -1,0 +1,1426 @@
+[
+  {
+    "effectNumber": 1,
+    "id": "x2_crimson_ashfall",
+    "displayName": "Crimson Ashfall",
+    "biomeNumber": 1,
+    "biomeKey": "crimson_shadow_forest",
+    "biomeName": "Crimson Shadow Forest",
+    "description": "Dark-red magical embers drifting gently between trees.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_crimson_ashfall_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_crimson_ashfall_00.png",
+        "x2_crimson_ashfall_01.png",
+        "x2_crimson_ashfall_02.png",
+        "x2_crimson_ashfall_03.png",
+        "x2_crimson_ashfall_04.png",
+        "x2_crimson_ashfall_05.png",
+        "x2_crimson_ashfall_06.png",
+        "x2_crimson_ashfall_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 24,
+      "cycleDurationMs": 1200,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:crimson_ashfall",
+      "recommendedQuadSizeBlocks": 0.09,
+      "lifetimeTicks": {
+        "min": 60,
+        "max": 100
+      },
+      "gravity": 0.004,
+      "horizontalDriftBlocksPerTick": 0.01,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Drifts slowly down with random horizontal sway; flicker comes from the sprite loop."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 2,
+    "id": "x2_raven_spirit_wisps",
+    "displayName": "Raven Spirit Wisps",
+    "biomeNumber": 1,
+    "biomeKey": "crimson_shadow_forest",
+    "biomeName": "Crimson Shadow Forest",
+    "description": "Spectral raven forms from crimson motes, flaps, then dissolves into particles.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 12,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_raven_spirit_wisps_sheet.png",
+      "sheetSizePx": [
+        384,
+        32
+      ],
+      "frameFiles": [
+        "x2_raven_spirit_wisps_00.png",
+        "x2_raven_spirit_wisps_01.png",
+        "x2_raven_spirit_wisps_02.png",
+        "x2_raven_spirit_wisps_03.png",
+        "x2_raven_spirit_wisps_04.png",
+        "x2_raven_spirit_wisps_05.png",
+        "x2_raven_spirit_wisps_06.png",
+        "x2_raven_spirit_wisps_07.png",
+        "x2_raven_spirit_wisps_08.png",
+        "x2_raven_spirit_wisps_09.png",
+        "x2_raven_spirit_wisps_10.png",
+        "x2_raven_spirit_wisps_11.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 36,
+      "cycleDurationMs": 1800,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:raven_spirit_wisps",
+      "recommendedQuadSizeBlocks": 0.55,
+      "lifetimeTicks": {
+        "min": 36,
+        "max": 36
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.04,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "One-shot. Frames 0-2 materialize, 3-8 flap, 9-11 dissolve. Glides forward 0.04 b/tick. Optionally spawn 3-5 crimson_ashfall at death for a seamless dissolve."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": true,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 3,
+    "id": "x2_lunar_fairy_dust",
+    "displayName": "Lunar Fairy Dust",
+    "biomeNumber": 2,
+    "biomeKey": "moonveil_hollow",
+    "biomeName": "Moonveil Hollow",
+    "description": "Silver and lavender motes floating above the forest floor.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_lunar_fairy_dust_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_lunar_fairy_dust_00.png",
+        "x2_lunar_fairy_dust_01.png",
+        "x2_lunar_fairy_dust_02.png",
+        "x2_lunar_fairy_dust_03.png",
+        "x2_lunar_fairy_dust_04.png",
+        "x2_lunar_fairy_dust_05.png",
+        "x2_lunar_fairy_dust_06.png",
+        "x2_lunar_fairy_dust_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 24,
+      "cycleDurationMs": 1200,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:lunar_fairy_dust",
+      "recommendedQuadSizeBlocks": 0.1,
+      "lifetimeTicks": {
+        "min": 50,
+        "max": 90
+      },
+      "gravity": -0.0006,
+      "horizontalDriftBlocksPerTick": 0.006,
+      "fullbright": true,
+      "maxAlpha": 0.85,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Hover and bob; twinkle from sprite loop."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 4,
+    "id": "x2_moonflower_glow",
+    "displayName": "Moonflower Glow",
+    "biomeNumber": 2,
+    "biomeKey": "moonveil_hollow",
+    "biomeName": "Moonveil Hollow",
+    "description": "Soft blue flower lights pulsing near vegetation at night.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_moonflower_glow_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_moonflower_glow_00.png",
+        "x2_moonflower_glow_01.png",
+        "x2_moonflower_glow_02.png",
+        "x2_moonflower_glow_03.png",
+        "x2_moonflower_glow_04.png",
+        "x2_moonflower_glow_05.png",
+        "x2_moonflower_glow_06.png",
+        "x2_moonflower_glow_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 4,
+      "msPerFrame": 200,
+      "cycleDurationTicks": 32,
+      "cycleDurationMs": 1600,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:moonflower_glow",
+      "recommendedQuadSizeBlocks": 0.32,
+      "lifetimeTicks": {
+        "min": 32,
+        "max": 64
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Stationary. Spawn on or just above flowers/leaf/grass blocks; night-weighted."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 5,
+    "id": "x2_celestial_stardust",
+    "displayName": "Celestial Stardust",
+    "biomeNumber": 3,
+    "biomeKey": "shattered_sky",
+    "biomeName": "The Shattered Sky",
+    "description": "Glowing sapphire stardust drifting between floating islands.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_celestial_stardust_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_celestial_stardust_00.png",
+        "x2_celestial_stardust_01.png",
+        "x2_celestial_stardust_02.png",
+        "x2_celestial_stardust_03.png",
+        "x2_celestial_stardust_04.png",
+        "x2_celestial_stardust_05.png",
+        "x2_celestial_stardust_06.png",
+        "x2_celestial_stardust_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 24,
+      "cycleDurationMs": 1200,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:celestial_stardust",
+      "recommendedQuadSizeBlocks": 0.13,
+      "lifetimeTicks": {
+        "min": 60,
+        "max": 110
+      },
+      "gravity": -0.001,
+      "horizontalDriftBlocksPerTick": 0.012,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Slow wandering drift in all directions; faint trail is part of sprite."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 6,
+    "id": "x2_floating_crystal_fragments",
+    "displayName": "Floating Crystal Fragments",
+    "biomeNumber": 3,
+    "biomeKey": "shattered_sky",
+    "biomeName": "The Shattered Sky",
+    "description": "Small rotating crystal fragments suspended in magical air currents.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 12,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_floating_crystal_fragments_sheet.png",
+      "sheetSizePx": [
+        384,
+        32
+      ],
+      "frameFiles": [
+        "x2_floating_crystal_fragments_00.png",
+        "x2_floating_crystal_fragments_01.png",
+        "x2_floating_crystal_fragments_02.png",
+        "x2_floating_crystal_fragments_03.png",
+        "x2_floating_crystal_fragments_04.png",
+        "x2_floating_crystal_fragments_05.png",
+        "x2_floating_crystal_fragments_06.png",
+        "x2_floating_crystal_fragments_07.png",
+        "x2_floating_crystal_fragments_08.png",
+        "x2_floating_crystal_fragments_09.png",
+        "x2_floating_crystal_fragments_10.png",
+        "x2_floating_crystal_fragments_11.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 36,
+      "cycleDurationMs": 1800,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:floating_crystal_fragments",
+      "recommendedQuadSizeBlocks": 0.22,
+      "lifetimeTicks": {
+        "min": 80,
+        "max": 140
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.008,
+      "fullbright": true,
+      "maxAlpha": 0.95,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Rotation is baked into the 12-frame cycle; add gentle sinusoidal bob in code or keep stationary."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 7,
+    "id": "x2_emerald_spore_clouds",
+    "displayName": "Emerald Spore Clouds",
+    "biomeNumber": 4,
+    "biomeKey": "eternal_abyss",
+    "biomeName": "The Eternal Abyss",
+    "description": "Slow-moving luminous emerald fungal spore clouds.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_emerald_spore_clouds_sheet.png",
+      "sheetSizePx": [
+        512,
+        64
+      ],
+      "frameFiles": [
+        "x2_emerald_spore_clouds_00.png",
+        "x2_emerald_spore_clouds_01.png",
+        "x2_emerald_spore_clouds_02.png",
+        "x2_emerald_spore_clouds_03.png",
+        "x2_emerald_spore_clouds_04.png",
+        "x2_emerald_spore_clouds_05.png",
+        "x2_emerald_spore_clouds_06.png",
+        "x2_emerald_spore_clouds_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 5,
+      "msPerFrame": 250,
+      "cycleDurationTicks": 40,
+      "cycleDurationMs": 2000,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:emerald_spore_clouds",
+      "recommendedQuadSizeBlocks": 1.3,
+      "lifetimeTicks": {
+        "min": 100,
+        "max": 160
+      },
+      "gravity": -0.0005,
+      "horizontalDriftBlocksPerTick": 0.006,
+      "fullbright": true,
+      "maxAlpha": 0.8,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Large soft quad; keep counts very low. Fade alpha in/out over first/last 15 ticks."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 8,
+    "id": "x2_abyss_crystal_pulse",
+    "displayName": "Abyss Crystal Pulse",
+    "biomeNumber": 4,
+    "biomeKey": "eternal_abyss",
+    "biomeName": "The Eternal Abyss",
+    "description": "Short turquoise hexagonal energy pulse around giant cave crystals.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_abyss_crystal_pulse_sheet.png",
+      "sheetSizePx": [
+        512,
+        64
+      ],
+      "frameFiles": [
+        "x2_abyss_crystal_pulse_00.png",
+        "x2_abyss_crystal_pulse_01.png",
+        "x2_abyss_crystal_pulse_02.png",
+        "x2_abyss_crystal_pulse_03.png",
+        "x2_abyss_crystal_pulse_04.png",
+        "x2_abyss_crystal_pulse_05.png",
+        "x2_abyss_crystal_pulse_06.png",
+        "x2_abyss_crystal_pulse_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 2,
+      "msPerFrame": 100,
+      "cycleDurationTicks": 16,
+      "cycleDurationMs": 800,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:abyss_crystal_pulse",
+      "recommendedQuadSizeBlocks": 2.0,
+      "lifetimeTicks": {
+        "min": 16,
+        "max": 16
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "One-shot expanding pulse; spawn at crystal block positions at random 3-8 s intervals."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 9,
+    "id": "x2_enchanted_pearl_bubbles",
+    "displayName": "Enchanted Pearl Bubbles",
+    "biomeNumber": 5,
+    "biomeKey": "sunken_kingdom",
+    "biomeName": "The Sunken Kingdom",
+    "description": "Turquoise bubbles with miniature pearl highlights.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_enchanted_pearl_bubbles_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_enchanted_pearl_bubbles_00.png",
+        "x2_enchanted_pearl_bubbles_01.png",
+        "x2_enchanted_pearl_bubbles_02.png",
+        "x2_enchanted_pearl_bubbles_03.png",
+        "x2_enchanted_pearl_bubbles_04.png",
+        "x2_enchanted_pearl_bubbles_05.png",
+        "x2_enchanted_pearl_bubbles_06.png",
+        "x2_enchanted_pearl_bubbles_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 24,
+      "cycleDurationMs": 1200,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:enchanted_pearl_bubbles",
+      "recommendedQuadSizeBlocks": 0.3,
+      "lifetimeTicks": {
+        "min": 60,
+        "max": 100
+      },
+      "gravity": -0.02,
+      "horizontalDriftBlocksPerTick": 0.004,
+      "fullbright": false,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Buoyant: rises ~0.02 b/tick; remove when leaving water. Wobble from sprite loop."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 10,
+    "id": "x2_ancient_ocean_lights",
+    "displayName": "Ancient Ocean Lights",
+    "biomeNumber": 5,
+    "biomeKey": "sunken_kingdom",
+    "biomeName": "The Sunken Kingdom",
+    "description": "Drifting blue underwater lights with delicate aquatic trails.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 10,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_ancient_ocean_lights_sheet.png",
+      "sheetSizePx": [
+        640,
+        64
+      ],
+      "frameFiles": [
+        "x2_ancient_ocean_lights_00.png",
+        "x2_ancient_ocean_lights_01.png",
+        "x2_ancient_ocean_lights_02.png",
+        "x2_ancient_ocean_lights_03.png",
+        "x2_ancient_ocean_lights_04.png",
+        "x2_ancient_ocean_lights_05.png",
+        "x2_ancient_ocean_lights_06.png",
+        "x2_ancient_ocean_lights_07.png",
+        "x2_ancient_ocean_lights_08.png",
+        "x2_ancient_ocean_lights_09.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ticksPerFrame": 4,
+      "msPerFrame": 200,
+      "cycleDurationTicks": 40,
+      "cycleDurationMs": 2000,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:ancient_ocean_lights",
+      "recommendedQuadSizeBlocks": 1.0,
+      "lifetimeTicks": {
+        "min": 80,
+        "max": 120
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.01,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Sinuous trail is baked into sprite (trail points to the left); rotate quad or orient to motion if desired."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 11,
+    "id": "x2_golden_glass_sandstorm",
+    "displayName": "Golden Glass Sandstorm",
+    "biomeNumber": 6,
+    "biomeKey": "singing_glass_desert",
+    "biomeName": "The Singing Glass Desert",
+    "description": "Ribbons of golden crystalline sand carried by desert wind.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 12,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_golden_glass_sandstorm_sheet.png",
+      "sheetSizePx": [
+        768,
+        64
+      ],
+      "frameFiles": [
+        "x2_golden_glass_sandstorm_00.png",
+        "x2_golden_glass_sandstorm_01.png",
+        "x2_golden_glass_sandstorm_02.png",
+        "x2_golden_glass_sandstorm_03.png",
+        "x2_golden_glass_sandstorm_04.png",
+        "x2_golden_glass_sandstorm_05.png",
+        "x2_golden_glass_sandstorm_06.png",
+        "x2_golden_glass_sandstorm_07.png",
+        "x2_golden_glass_sandstorm_08.png",
+        "x2_golden_glass_sandstorm_09.png",
+        "x2_golden_glass_sandstorm_10.png",
+        "x2_golden_glass_sandstorm_11.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 36,
+      "cycleDurationMs": 1800,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:golden_glass_sandstorm",
+      "recommendedQuadSizeBlocks": 3.6,
+      "lifetimeTicks": {
+        "min": 36,
+        "max": 36
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.12,
+      "fullbright": true,
+      "maxAlpha": 0.85,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Moves with wind direction at ~0.12 b/tick; keep ribbons near ground level (0.5-4 b). Strong reduction in combat."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": true,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 12,
+    "id": "x2_singing_crystal_resonance",
+    "displayName": "Singing Crystal Resonance",
+    "biomeNumber": 6,
+    "biomeKey": "singing_glass_desert",
+    "biomeName": "The Singing Glass Desert",
+    "description": "Animated amber rings and crystal sparks around glass formations.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 10,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_singing_crystal_resonance_sheet.png",
+      "sheetSizePx": [
+        640,
+        64
+      ],
+      "frameFiles": [
+        "x2_singing_crystal_resonance_00.png",
+        "x2_singing_crystal_resonance_01.png",
+        "x2_singing_crystal_resonance_02.png",
+        "x2_singing_crystal_resonance_03.png",
+        "x2_singing_crystal_resonance_04.png",
+        "x2_singing_crystal_resonance_05.png",
+        "x2_singing_crystal_resonance_06.png",
+        "x2_singing_crystal_resonance_07.png",
+        "x2_singing_crystal_resonance_08.png",
+        "x2_singing_crystal_resonance_09.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ticksPerFrame": 2,
+      "msPerFrame": 100,
+      "cycleDurationTicks": 20,
+      "cycleDurationMs": 1000,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:singing_crystal_resonance",
+      "recommendedQuadSizeBlocks": 2.2,
+      "lifetimeTicks": {
+        "min": 20,
+        "max": 20
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "One-shot; spawn at glass block positions on a random timer."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 13,
+    "id": "x2_blue_storm_sparks",
+    "displayName": "Blue Storm Sparks",
+    "biomeNumber": 7,
+    "biomeKey": "thunderfall_highlands",
+    "biomeName": "The Thunderfall Highlands",
+    "description": "Brief electric-blue sparks near charged crystals and peaks.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 6,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_blue_storm_sparks_sheet.png",
+      "sheetSizePx": [
+        192,
+        32
+      ],
+      "frameFiles": [
+        "x2_blue_storm_sparks_00.png",
+        "x2_blue_storm_sparks_01.png",
+        "x2_blue_storm_sparks_02.png",
+        "x2_blue_storm_sparks_03.png",
+        "x2_blue_storm_sparks_04.png",
+        "x2_blue_storm_sparks_05.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "ticksPerFrame": 1,
+      "msPerFrame": 50,
+      "cycleDurationTicks": 6,
+      "cycleDurationMs": 300,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:blue_storm_sparks",
+      "recommendedQuadSizeBlocks": 0.65,
+      "lifetimeTicks": {
+        "min": 6,
+        "max": 6
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 1.0,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Six-tick flash (0.3 s). Random frequency; never more than 3 alive near the player."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 14,
+    "id": "x2_thundercloud_energy",
+    "displayName": "Thundercloud Energy",
+    "biomeNumber": 7,
+    "biomeKey": "thunderfall_highlands",
+    "biomeName": "The Thunderfall Highlands",
+    "description": "Stylized cloud-like energy wisps with occasional cyan illumination.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 10,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_thundercloud_energy_sheet.png",
+      "sheetSizePx": [
+        640,
+        64
+      ],
+      "frameFiles": [
+        "x2_thundercloud_energy_00.png",
+        "x2_thundercloud_energy_01.png",
+        "x2_thundercloud_energy_02.png",
+        "x2_thundercloud_energy_03.png",
+        "x2_thundercloud_energy_04.png",
+        "x2_thundercloud_energy_05.png",
+        "x2_thundercloud_energy_06.png",
+        "x2_thundercloud_energy_07.png",
+        "x2_thundercloud_energy_08.png",
+        "x2_thundercloud_energy_09.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 30,
+      "cycleDurationMs": 1500,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:thundercloud_energy",
+      "recommendedQuadSizeBlocks": 3.2,
+      "lifetimeTicks": {
+        "min": 40,
+        "max": 70
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.02,
+      "fullbright": false,
+      "maxAlpha": 0.8,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Spawn high (20-45 b above ground) and keep away from the camera; amplify flash rate in thunder."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": true,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 15,
+    "id": "x2_floating_dreamseeds",
+    "displayName": "Floating Dreamseeds",
+    "biomeNumber": 8,
+    "biomeKey": "dreamroot_canopy",
+    "biomeName": "The Dreamroot Canopy",
+    "description": "Pink and turquoise glowing dreamseeds descending between giant trees.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_floating_dreamseeds_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_floating_dreamseeds_00.png",
+        "x2_floating_dreamseeds_01.png",
+        "x2_floating_dreamseeds_02.png",
+        "x2_floating_dreamseeds_03.png",
+        "x2_floating_dreamseeds_04.png",
+        "x2_floating_dreamseeds_05.png",
+        "x2_floating_dreamseeds_06.png",
+        "x2_floating_dreamseeds_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 4,
+      "msPerFrame": 200,
+      "cycleDurationTicks": 32,
+      "cycleDurationMs": 1600,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:floating_dreamseeds",
+      "recommendedQuadSizeBlocks": 0.32,
+      "lifetimeTicks": {
+        "min": 80,
+        "max": 140
+      },
+      "gravity": 0.01,
+      "horizontalDriftBlocksPerTick": 0.008,
+      "fullbright": true,
+      "maxAlpha": 0.95,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Sink slowly with sway; tuft sway is baked into the loop."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 16,
+    "id": "x2_dream_petal_rain",
+    "displayName": "Dream Petal Rain",
+    "biomeNumber": 8,
+    "biomeKey": "dreamroot_canopy",
+    "biomeName": "The Dreamroot Canopy",
+    "description": "Translucent flower petals gently drifting through the canopy.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 12,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_dream_petal_rain_sheet.png",
+      "sheetSizePx": [
+        384,
+        32
+      ],
+      "frameFiles": [
+        "x2_dream_petal_rain_00.png",
+        "x2_dream_petal_rain_01.png",
+        "x2_dream_petal_rain_02.png",
+        "x2_dream_petal_rain_03.png",
+        "x2_dream_petal_rain_04.png",
+        "x2_dream_petal_rain_05.png",
+        "x2_dream_petal_rain_06.png",
+        "x2_dream_petal_rain_07.png",
+        "x2_dream_petal_rain_08.png",
+        "x2_dream_petal_rain_09.png",
+        "x2_dream_petal_rain_10.png",
+        "x2_dream_petal_rain_11.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ticksPerFrame": 3,
+      "msPerFrame": 150,
+      "cycleDurationTicks": 36,
+      "cycleDurationMs": 1800,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:dream_petal_rain",
+      "recommendedQuadSizeBlocks": 0.24,
+      "lifetimeTicks": {
+        "min": 100,
+        "max": 160
+      },
+      "gravity": 0.014,
+      "horizontalDriftBlocksPerTick": 0.014,
+      "fullbright": false,
+      "maxAlpha": 0.85,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Tumble is baked into the 12-frame loop; add sinusoidal horizontal sway in code."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 17,
+    "id": "x2_silver_mirror_mist",
+    "displayName": "Silver Mirror Mist",
+    "biomeNumber": 9,
+    "biomeKey": "mirrorfall_marsh",
+    "biomeName": "The Mirrorfall Marsh",
+    "description": "Elegant silver-blue mist wisps above shallow swamp water.",
+    "texture": {
+      "frameSizePx": 128,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_silver_mirror_mist_sheet.png",
+      "sheetSizePx": [
+        1024,
+        128
+      ],
+      "frameFiles": [
+        "x2_silver_mirror_mist_00.png",
+        "x2_silver_mirror_mist_01.png",
+        "x2_silver_mirror_mist_02.png",
+        "x2_silver_mirror_mist_03.png",
+        "x2_silver_mirror_mist_04.png",
+        "x2_silver_mirror_mist_05.png",
+        "x2_silver_mirror_mist_06.png",
+        "x2_silver_mirror_mist_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 6,
+      "msPerFrame": 300,
+      "cycleDurationTicks": 48,
+      "cycleDurationMs": 2400,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:silver_mirror_mist",
+      "recommendedQuadSizeBlocks": 4.2,
+      "lifetimeTicks": {
+        "min": 80,
+        "max": 140
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.004,
+      "fullbright": false,
+      "maxAlpha": 0.7,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Largest sprite (128 px). Spawn 0.2-1.5 b above water surface only; alpha ramp in/out; very low counts."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": true,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 18,
+    "id": "x2_reflection_fragments",
+    "displayName": "Reflection Fragments",
+    "biomeNumber": 9,
+    "biomeKey": "mirrorfall_marsh",
+    "biomeName": "The Mirrorfall Marsh",
+    "description": "Small shimmering mirror shards that briefly appear and fade.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_reflection_fragments_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_reflection_fragments_00.png",
+        "x2_reflection_fragments_01.png",
+        "x2_reflection_fragments_02.png",
+        "x2_reflection_fragments_03.png",
+        "x2_reflection_fragments_04.png",
+        "x2_reflection_fragments_05.png",
+        "x2_reflection_fragments_06.png",
+        "x2_reflection_fragments_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 2,
+      "msPerFrame": 100,
+      "cycleDurationTicks": 16,
+      "cycleDurationMs": 800,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:reflection_fragments",
+      "recommendedQuadSizeBlocks": 0.26,
+      "lifetimeTicks": {
+        "min": 16,
+        "max": 16
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 1.0,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "One-shot appear->peak->fade over 16 ticks."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 19,
+    "id": "x2_ancient_amber_dust",
+    "displayName": "Ancient Amber Dust",
+    "biomeNumber": 10,
+    "biomeKey": "titanbone_caverns",
+    "biomeName": "The Titanbone Caverns",
+    "description": "Floating golden mineral particles in huge underground chambers.",
+    "texture": {
+      "frameSizePx": 32,
+      "frameCount": 8,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_ancient_amber_dust_sheet.png",
+      "sheetSizePx": [
+        256,
+        32
+      ],
+      "frameFiles": [
+        "x2_ancient_amber_dust_00.png",
+        "x2_ancient_amber_dust_01.png",
+        "x2_ancient_amber_dust_02.png",
+        "x2_ancient_amber_dust_03.png",
+        "x2_ancient_amber_dust_04.png",
+        "x2_ancient_amber_dust_05.png",
+        "x2_ancient_amber_dust_06.png",
+        "x2_ancient_amber_dust_07.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "ticksPerFrame": 4,
+      "msPerFrame": 200,
+      "cycleDurationTicks": 32,
+      "cycleDurationMs": 1600,
+      "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+    },
+    "particle": {
+      "registryName": "x2_living:ancient_amber_dust",
+      "recommendedQuadSizeBlocks": 0.08,
+      "lifetimeTicks": {
+        "min": 60,
+        "max": 120
+      },
+      "gravity": -0.0003,
+      "horizontalDriftBlocksPerTick": 0.004,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "Extremely slow; twinkle from loop."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  },
+  {
+    "effectNumber": 20,
+    "id": "x2_fossil_resonance_echo",
+    "displayName": "Fossil Resonance Echo",
+    "biomeNumber": 10,
+    "biomeKey": "titanbone_caverns",
+    "biomeName": "The Titanbone Caverns",
+    "description": "Glowing cyan rings and amber crystal sparks around ancient fossil formations.",
+    "texture": {
+      "frameSizePx": 64,
+      "frameCount": 10,
+      "layout": "horizontal-strip",
+      "sheetFile": "x2_fossil_resonance_echo_sheet.png",
+      "sheetSizePx": [
+        640,
+        64
+      ],
+      "frameFiles": [
+        "x2_fossil_resonance_echo_00.png",
+        "x2_fossil_resonance_echo_01.png",
+        "x2_fossil_resonance_echo_02.png",
+        "x2_fossil_resonance_echo_03.png",
+        "x2_fossil_resonance_echo_04.png",
+        "x2_fossil_resonance_echo_05.png",
+        "x2_fossil_resonance_echo_06.png",
+        "x2_fossil_resonance_echo_07.png",
+        "x2_fossil_resonance_echo_08.png",
+        "x2_fossil_resonance_echo_09.png"
+      ],
+      "format": "PNG RGBA 8-bit, transparent background"
+    },
+    "animation": {
+      "frameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ticksPerFrame": 2,
+      "msPerFrame": 100,
+      "cycleDurationTicks": 20,
+      "cycleDurationMs": 1000,
+      "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+    },
+    "particle": {
+      "registryName": "x2_living:fossil_resonance_echo",
+      "recommendedQuadSizeBlocks": 2.4,
+      "lifetimeTicks": {
+        "min": 20,
+        "max": 20
+      },
+      "gravity": 0.0,
+      "horizontalDriftBlocksPerTick": 0.0,
+      "fullbright": true,
+      "maxAlpha": 0.9,
+      "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+      "notes": "One-shot; spawn at fossil block positions on random timer."
+    },
+    "integrationRequirements": {
+      "customForgeParticleRegistration": true,
+      "customSpawnLogic": true,
+      "secondarySpawn": false,
+      "weatherRenderingHook": false,
+      "fogRenderingHook": false,
+      "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+    }
+  }
+]

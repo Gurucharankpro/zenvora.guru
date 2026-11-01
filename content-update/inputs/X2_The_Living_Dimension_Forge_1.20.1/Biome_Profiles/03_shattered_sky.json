@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 3,
+  "biomeKey": "shattered_sky",
+  "displayName": "The Shattered Sky",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_celestial_stardust",
+      "particleRegistryName": "x2_living:celestial_stardust",
+      "number": 5,
+      "displayName": "Celestial Stardust"
+    },
+    {
+      "id": "x2_floating_crystal_fragments",
+      "particleRegistryName": "x2_living:floating_crystal_fragments",
+      "number": 6,
+      "displayName": "Floating Crystal Fragments"
+    }
+  ],
+  "daytimeParticleIntensity": 0.85,
+  "nighttimeParticleIntensity": 1.0,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_celestial_stardust": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 9,
+      "dayMultiplier": 0.8,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_floating_crystal_fragments": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 1.6,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#86b0ff",
+    "colorDayRGB01": [
+      0.525,
+      0.69,
+      1.0
+    ],
+    "colorNightHex": "#1a2760",
+    "colorNightRGB01": [
+      0.102,
+      0.153,
+      0.376
+    ],
+    "startFractionOfRenderDistance": 0.55,
+    "endFractionOfRenderDistance": 1.0,
+    "densityLabel": "light",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_celestial_stardust": {
+      "horizontalDriftBlocksPerTick": 0.012,
+      "gravityBlocksPerTick2": -0.001,
+      "note": "Slow wandering drift in all directions; faint trail is part of sprite."
+    },
+    "x2_floating_crystal_fragments": {
+      "horizontalDriftBlocksPerTick": 0.008,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "Rotation is baked into the 12-frame cycle; add gentle sinusoidal bob in code or keep stationary."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_celestial_stardust": {
+      "min": 60,
+      "max": 110
+    },
+    "x2_floating_crystal_fragments": {
+      "min": 80,
+      "max": 140
+    }
+  },
+  "recommendedSpawn": {
+    "x2_celestial_stardust": {
+      "heightBlocksRelative": [
+        -12,
+        18
+      ],
+      "location": "air volume around player (relative to player Y), strongest near island edges",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_floating_crystal_fragments": {
+      "heightBlocksRelative": [
+        -8,
+        14
+      ],
+      "location": "open air above/below islands, 6-24 b from player",
+      "minDistanceFromCameraBlocks": 3
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "stardust x0.8, crystals x1.0",
+    "thunder": "stardust x1.2, add cyan flash highlight"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 15,
+    "suggestedTintHex": "#9fc4ff",
+    "tintStrength0to1": 0.1,
+    "note": "Bright airy sky tint; keep fog thin for long view distances.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_celestial_stardust": {
+          "spawnsPerSecond": 3.15,
+          "estimatedAlive": 13.4
+        },
+        "x2_floating_crystal_fragments": {
+          "spawnsPerSecond": 0.224,
+          "estimatedAlive": 1.2
+        }
+      },
+      "estimatedSteadyStateAlive": 14.6,
+      "estimatedLargeQuadAlive": 0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_celestial_stardust": {
+          "spawnsPerSecond": 6.3,
+          "estimatedAlive": 26.8
+        },
+        "x2_floating_crystal_fragments": {
+          "spawnsPerSecond": 0.896,
+          "estimatedAlive": 4.9
+        }
+      },
+      "estimatedSteadyStateAlive": 31.7,
+      "estimatedLargeQuadAlive": 0
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_celestial_stardust": {
+          "spawnsPerSecond": 9.0,
+          "estimatedAlive": 38.2
+        },
+        "x2_floating_crystal_fragments": {
+          "spawnsPerSecond": 1.6,
+          "estimatedAlive": 8.8
+        }
+      },
+      "estimatedSteadyStateAlive": 47.0,
+      "estimatedLargeQuadAlive": 0
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

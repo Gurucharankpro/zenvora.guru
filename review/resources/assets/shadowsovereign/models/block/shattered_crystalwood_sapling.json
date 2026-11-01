@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "shadowsovereign:block/shattered_crystalwood_sapling"
-  }
-}

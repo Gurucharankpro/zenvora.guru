@@ -1,0 +1,73 @@
+{
+  "effectNumber": 14,
+  "id": "x2_thundercloud_energy",
+  "displayName": "Thundercloud Energy",
+  "biomeNumber": 7,
+  "biomeKey": "thunderfall_highlands",
+  "biomeName": "The Thunderfall Highlands",
+  "description": "Stylized cloud-like energy wisps with occasional cyan illumination.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 10,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_thundercloud_energy_sheet.png",
+    "sheetSizePx": [
+      640,
+      64
+    ],
+    "frameFiles": [
+      "x2_thundercloud_energy_00.png",
+      "x2_thundercloud_energy_01.png",
+      "x2_thundercloud_energy_02.png",
+      "x2_thundercloud_energy_03.png",
+      "x2_thundercloud_energy_04.png",
+      "x2_thundercloud_energy_05.png",
+      "x2_thundercloud_energy_06.png",
+      "x2_thundercloud_energy_07.png",
+      "x2_thundercloud_energy_08.png",
+      "x2_thundercloud_energy_09.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 30,
+    "cycleDurationMs": 1500,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:thundercloud_energy",
+    "recommendedQuadSizeBlocks": 3.2,
+    "lifetimeTicks": {
+      "min": 40,
+      "max": 70
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.02,
+    "fullbright": false,
+    "maxAlpha": 0.8,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Spawn high (20-45 b above ground) and keep away from the camera; amplify flash rate in thunder."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": true,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

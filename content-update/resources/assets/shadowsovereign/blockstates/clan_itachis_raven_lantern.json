@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/clan_itachis_raven_lantern",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/clan_itachis_raven_lantern",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/clan_itachis_raven_lantern",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/clan_itachis_raven_lantern",
+      "y": 270
+    }
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "shadowsovereign:item/the_69_pose_spawn_egg"
-  }
-}

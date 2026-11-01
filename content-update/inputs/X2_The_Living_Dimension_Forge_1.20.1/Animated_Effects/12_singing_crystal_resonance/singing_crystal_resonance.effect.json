@@ -1,0 +1,73 @@
+{
+  "effectNumber": 12,
+  "id": "x2_singing_crystal_resonance",
+  "displayName": "Singing Crystal Resonance",
+  "biomeNumber": 6,
+  "biomeKey": "singing_glass_desert",
+  "biomeName": "The Singing Glass Desert",
+  "description": "Animated amber rings and crystal sparks around glass formations.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 10,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_singing_crystal_resonance_sheet.png",
+    "sheetSizePx": [
+      640,
+      64
+    ],
+    "frameFiles": [
+      "x2_singing_crystal_resonance_00.png",
+      "x2_singing_crystal_resonance_01.png",
+      "x2_singing_crystal_resonance_02.png",
+      "x2_singing_crystal_resonance_03.png",
+      "x2_singing_crystal_resonance_04.png",
+      "x2_singing_crystal_resonance_05.png",
+      "x2_singing_crystal_resonance_06.png",
+      "x2_singing_crystal_resonance_07.png",
+      "x2_singing_crystal_resonance_08.png",
+      "x2_singing_crystal_resonance_09.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ticksPerFrame": 2,
+    "msPerFrame": 100,
+    "cycleDurationTicks": 20,
+    "cycleDurationMs": 1000,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:singing_crystal_resonance",
+    "recommendedQuadSizeBlocks": 2.2,
+    "lifetimeTicks": {
+      "min": 20,
+      "max": 20
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.0,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "One-shot; spawn at glass block positions on a random timer."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "effectNumber": 7,
+  "id": "x2_emerald_spore_clouds",
+  "displayName": "Emerald Spore Clouds",
+  "biomeNumber": 4,
+  "biomeKey": "eternal_abyss",
+  "biomeName": "The Eternal Abyss",
+  "description": "Slow-moving luminous emerald fungal spore clouds.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_emerald_spore_clouds_sheet.png",
+    "sheetSizePx": [
+      512,
+      64
+    ],
+    "frameFiles": [
+      "x2_emerald_spore_clouds_00.png",
+      "x2_emerald_spore_clouds_01.png",
+      "x2_emerald_spore_clouds_02.png",
+      "x2_emerald_spore_clouds_03.png",
+      "x2_emerald_spore_clouds_04.png",
+      "x2_emerald_spore_clouds_05.png",
+      "x2_emerald_spore_clouds_06.png",
+      "x2_emerald_spore_clouds_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 5,
+    "msPerFrame": 250,
+    "cycleDurationTicks": 40,
+    "cycleDurationMs": 2000,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:emerald_spore_clouds",
+    "recommendedQuadSizeBlocks": 1.3,
+    "lifetimeTicks": {
+      "min": 100,
+      "max": 160
+    },
+    "gravity": -0.0005,
+    "horizontalDriftBlocksPerTick": 0.006,
+    "fullbright": true,
+    "maxAlpha": 0.8,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Large soft quad; keep counts very low. Fade alpha in/out over first/last 15 ticks."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

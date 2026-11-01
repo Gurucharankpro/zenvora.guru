@@ -1,0 +1,69 @@
+{
+  "effectNumber": 5,
+  "id": "x2_celestial_stardust",
+  "displayName": "Celestial Stardust",
+  "biomeNumber": 3,
+  "biomeKey": "shattered_sky",
+  "biomeName": "The Shattered Sky",
+  "description": "Glowing sapphire stardust drifting between floating islands.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_celestial_stardust_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_celestial_stardust_00.png",
+      "x2_celestial_stardust_01.png",
+      "x2_celestial_stardust_02.png",
+      "x2_celestial_stardust_03.png",
+      "x2_celestial_stardust_04.png",
+      "x2_celestial_stardust_05.png",
+      "x2_celestial_stardust_06.png",
+      "x2_celestial_stardust_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 24,
+    "cycleDurationMs": 1200,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:celestial_stardust",
+    "recommendedQuadSizeBlocks": 0.13,
+    "lifetimeTicks": {
+      "min": 60,
+      "max": 110
+    },
+    "gravity": -0.001,
+    "horizontalDriftBlocksPerTick": 0.012,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Slow wandering drift in all directions; faint trail is part of sprite."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

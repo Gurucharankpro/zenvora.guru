@@ -1,4 +1,26 @@
-# Soulbound Army 1.8.1 — loading crash fix
+# Current basis: user-supplied 1.8.1-reviewed
+
+Canonical SHA-256:
+2b9f00f36e7d1228fe31838daf6c147b5f5c719211d3f8467fedac88eba4da26.
+Do not replay the old 1.2.0 binary build onto this newer JAR. build.sh and the
+fixture production compiler are retired and fail explicitly. Real production
+sources are under native-review/qa/src/repair/java, compiled by ForgeGradle.
+The reviewed OpenMythics/X1Hooks source is retained in both source locations;
+the reviewed bytecode remains the baseline and is not silently overwritten.
+
+learning_quests.py now emits 1.20.1 ContextAwarePredicate arrays for placed_block
+and preserves biome predicates. Focused reproduction equals all 500 reviewed
+advancements including IDs and rewards. x1_assets.py merges explicit frame
+sources into the blocks atlas, preserves unrelated sources, and keeps all 444
+original PNGs. These regression checks are resource comparisons, not engine tests.
+
+Work in progress: Morsi, Porcelain Duchess, Yuta, 60 decor props, X2 and X4.
+Its sources/checks are in /workspace/soulbound-current/content-update. Production
+compilation is currently blocked by dependency-network policy; no final new JAR
+has been produced. See native-review/README.md. The remainder below describes
+historical releases and does not override this canonical input or build status.
+
+## Historical 1.8.1 loading crash fix
 
 Fixes the user-reported NoSuchMethodError during GloomContent initialization.
 The injected x1_visual registration now calls the existing private static

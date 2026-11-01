@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:clan_explosive_clay_art_display",
+    "count": 1
+  }
+}

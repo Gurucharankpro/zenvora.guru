@@ -1,0 +1,772 @@
+[
+  {
+    "kind": -1,
+    "structure": "mythic_devourer_sanctum",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 0,
+    "structure": "mythic_wyngcat_roost",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 1,
+    "structure": "mythic_basilisk_citadel",
+    "altar": [
+      32,
+      11,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 2,
+    "structure": "mythic_bloom_garden",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 3,
+    "structure": "forgotten_stalker_shrine",
+    "altar": [
+      8,
+      5,
+      5
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 4,
+    "structure": "covenant_weeping_puppeteer",
+    "altar": [
+      10,
+      1,
+      10
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 5,
+    "structure": "covenant_forgotten_astronomer",
+    "altar": [
+      10,
+      1,
+      10
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 6,
+    "structure": "covenant_crownless_sovereign",
+    "altar": [
+      10,
+      1,
+      10
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 7,
+    "structure": "covenant_eclipse_stag",
+    "altar": [
+      10,
+      1,
+      10
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 8,
+    "structure": "monolith_sanctum",
+    "altar": [
+      40,
+      4,
+      48
+    ],
+    "rootOffset": [
+      27,
+      0,
+      33
+    ]
+  },
+  {
+    "kind": 11,
+    "structure": "monolith_spire",
+    "altar": [
+      16,
+      65,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 9,
+    "structure": "monolith_phoenix_nest",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 10,
+    "structure": "monolith_pain_court",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 12,
+    "structure": "monolith_juggernaut_quarry",
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 13,
+    "structure": "legends_paper_shrine",
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 14,
+    "structure": "legends_jester_theatre",
+    "altar": [
+      24,
+      2,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 15,
+    "structure": "legends_emperor_palace",
+    "altar": [
+      32,
+      4,
+      42
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 16,
+    "structure": "legends_madara_bastion",
+    "altar": [
+      32,
+      1,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 17,
+    "structure": "legends_sasori_workshop",
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 18,
+    "structure": "chronicles_penitent_cloister",
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 19,
+    "structure": "chronicles_oracle_pavilion",
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 20,
+    "structure": "chronicles_buried_belfry",
+    "altar": [
+      24,
+      4,
+      40
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 21,
+    "structure": "chronicles_lunar_monastery",
+    "altar": [
+      28,
+      1,
+      28
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 22,
+    "structure": "chronicles_crow_retreat",
+    "altar": [
+      28,
+      1,
+      28
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 23,
+    "structure": "crimson_akatsuki_shadow_hideout",
+    "altar": [
+      17,
+      6,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 24,
+    "structure": "crimson_crimson_moon_shrine",
+    "altar": [
+      11,
+      9,
+      11
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 25,
+    "structure": "mastery_cursed_farmhouse",
+    "altar": [
+      17,
+      5,
+      20
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 26,
+    "structure": "mastery_plague_hospital",
+    "altar": [
+      18,
+      10,
+      17
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 27,
+    "structure": "sentinel_execution_fortress",
+    "altar": [
+      21,
+      9,
+      25
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 30,
+    "structure": "shattered_gentlemans_manor",
+    "altar": [
+      24,
+      2,
+      22
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 31,
+    "structure": "shattered_sanctuary_of_lost_tears",
+    "altar": [
+      15,
+      8,
+      15
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 32,
+    "structure": "shattered_forgotten_golden_pagoda",
+    "altar": [
+      4,
+      11,
+      34
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 29,
+    "structure": "shattered_crystal_nest_sanctuary",
+    "altar": [
+      11,
+      7,
+      11
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 28,
+    "structure": "shattered_void_thread_court",
+    "altar": [
+      13,
+      2,
+      13
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 33,
+    "structure": "knighthaven_haunted_toy_workshop",
+    "altar": [
+      17,
+      1,
+      20
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 34,
+    "structure": "knighthaven_palace_of_frozen_memories",
+    "altar": [
+      33,
+      13,
+      11
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 35,
+    "structure": "knighthaven_forgotten_dream_carnival",
+    "altar": [
+      6,
+      6,
+      7
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 36,
+    "structure": "knighthaven_refai_compound",
+    "altar": [
+      24,
+      8,
+      28
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 37,
+    "structure": "expansion_old_desouky_family_house",
+    "altar": [
+      10,
+      6,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 38,
+    "structure": "expansion_abandoned_star_library",
+    "altar": [
+      13,
+      21,
+      13
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 39,
+    "structure": "expansion_el_nemr_mansion",
+    "altar": [
+      21,
+      7,
+      29
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 40,
+    "structure": "expansion_mushroom_sovereign_sanctuary",
+    "altar": [
+      12,
+      3,
+      20
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 41,
+    "structure": "expansion_pearl_sanctuary",
+    "altar": [
+      11,
+      4,
+      20
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 42,
+    "structure": "expansion_shattered_porcelain_temple",
+    "altar": [
+      20,
+      1,
+      30
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 43,
+    "structure": "expansion_cursed_bell_tower",
+    "altar": [
+      13,
+      8,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 44,
+    "structure": "expansion_drowned_glass_palace",
+    "altar": [
+      19,
+      8,
+      19
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 45,
+    "structure": "expansion_refai_cursed_stronghold",
+    "altar": [
+      24,
+      10,
+      33
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 46,
+    "structure": "expansion_amin_el_nemr_workshop",
+    "altar": [
+      18,
+      5,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 47,
+    "structure": "expansion_palace_of_eternal_cringe",
+    "altar": [
+      27,
+      6,
+      33
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 48,
+    "structure": "expansion_inverted_circus",
+    "altar": [
+      22,
+      6,
+      22
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 49,
+    "structure": "expansion_hanan_cairo_house",
+    "altar": [
+      17,
+      1,
+      19
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 50,
+    "structure": "expansion_temple_of_thousand_mirrors",
+    "altar": [
+      23,
+      7,
+      10
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 51,
+    "structure": "expansion_morsi_mobile_shop",
+    "altar": [
+      15,
+      5,
+      14
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 52,
+    "structure": "expansion_palace_of_silent_duchess",
+    "altar": [
+      24,
+      9,
+      17
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "kind": 53,
+    "structure": "expansion_abandoned_jujutsu_academy",
+    "altar": [
+      22,
+      9,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ]
+  }
+]

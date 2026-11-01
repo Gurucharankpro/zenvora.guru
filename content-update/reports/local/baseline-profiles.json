@@ -1,0 +1,2078 @@
+[
+  {
+    "id": "umbral_wyngcat",
+    "health": 160.0,
+    "damage": 8.0,
+    "armor": 2.0,
+    "speed": 0.3,
+    "width": 1.2,
+    "height": 1.4,
+    "scale": 1.25,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": true,
+    "moves": [
+      {
+        "clip": "claw_attack_left",
+        "impact": 0.45,
+        "effect": 0,
+        "range": 3.0,
+        "power": 1.0
+      },
+      {
+        "clip": "wing_slash",
+        "impact": 0.6,
+        "effect": 1,
+        "range": 3.0,
+        "power": 0.8
+      },
+      {
+        "clip": "magical_hiss",
+        "impact": 0.7,
+        "effect": 3,
+        "range": 14.0,
+        "power": 0.75
+      }
+    ]
+  },
+  {
+    "id": "crimson_basilisk",
+    "health": 500.0,
+    "damage": 16.0,
+    "armor": 10.0,
+    "speed": 0.23,
+    "width": 2.4,
+    "height": 2.6,
+    "scale": 0.8,
+    "walk": "walk_normal",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "bite_attack",
+        "impact": 0.5,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "tail_sweep",
+        "impact": 0.6,
+        "effect": 1,
+        "range": 5.0,
+        "power": 0.8
+      },
+      {
+        "clip": "petrifying_gaze_release",
+        "impact": 0.6,
+        "effect": 3,
+        "range": 14.0,
+        "power": 0.75
+      }
+    ]
+  },
+  {
+    "id": "eclipse_bloom",
+    "health": 360.0,
+    "damage": 10.0,
+    "armor": 4.0,
+    "speed": 0.2,
+    "width": 2.2,
+    "height": 3.6,
+    "scale": 0.65,
+    "walk": "walk_normal",
+    "run": "walk_fast",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "vine_whip_left",
+        "impact": 0.45,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "root_slam",
+        "impact": 0.7,
+        "effect": 1,
+        "range": 5.0,
+        "power": 0.8
+      },
+      {
+        "clip": "magical_eye_beam",
+        "impact": 0.7,
+        "effect": 6,
+        "range": 14.0,
+        "power": 0.75
+      }
+    ]
+  },
+  {
+    "id": "ruin_stalker",
+    "health": 240.0,
+    "damage": 12.0,
+    "armor": 6.0,
+    "speed": 0.32,
+    "width": 1.0,
+    "height": 1.6,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "bite_attack",
+        "impact": 0.42,
+        "effect": 0,
+        "range": 3.2,
+        "power": 1.0
+      },
+      {
+        "clip": "claw_attack",
+        "impact": 0.38,
+        "effect": 1,
+        "range": 3.2,
+        "power": 0.8
+      },
+      {
+        "clip": "tail_attack",
+        "impact": 0.55,
+        "effect": 1,
+        "range": 4.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "weeping_puppeteer",
+    "health": 300.0,
+    "damage": 12.0,
+    "armor": 4.0,
+    "speed": 0.24,
+    "width": 0.8,
+    "height": 3.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "puppet_strike",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "crimson_threads",
+        "impact": 1.0,
+        "effect": 3,
+        "range": 8.0,
+        "power": 0.7
+      },
+      {
+        "clip": "puppet_control",
+        "impact": 1.4,
+        "effect": 2,
+        "range": 12.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "forgotten_astronomer",
+    "health": 340.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.24,
+    "width": 0.75,
+    "height": 2.4,
+    "scale": 0.9,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "celestial_strike",
+        "impact": 0.5,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "gravitational_command",
+        "impact": 1.0,
+        "effect": 2,
+        "range": 8.0,
+        "power": 0.7
+      },
+      {
+        "clip": "eclipse_charge",
+        "impact": 1.4,
+        "effect": 6,
+        "range": 12.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "crownless_sovereign",
+    "health": 650.0,
+    "damage": 20.0,
+    "armor": 12.0,
+    "speed": 0.23,
+    "width": 0.95,
+    "height": 3.2,
+    "scale": 0.95,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "sovereign_strike",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "royal_decree",
+        "impact": 1.0,
+        "effect": 1,
+        "range": 6.0,
+        "power": 0.7
+      },
+      {
+        "clip": "throne_manifest",
+        "impact": 1.4,
+        "effect": 7,
+        "range": 10.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "eclipse_stag",
+    "health": 280.0,
+    "damage": 13.0,
+    "armor": 6.0,
+    "speed": 0.32,
+    "width": 1.6,
+    "height": 3.0,
+    "scale": 0.75,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "antler_attack",
+        "impact": 0.4,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "antler_attack",
+        "impact": 0.4,
+        "effect": 1,
+        "range": 5.0,
+        "power": 0.7
+      },
+      {
+        "clip": "celestial_charge",
+        "impact": 1.0,
+        "effect": 8,
+        "range": 10.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "reliquary_crawler",
+    "health": 720.0,
+    "damage": 16.0,
+    "armor": 14.0,
+    "speed": 0.17,
+    "width": 1.8,
+    "height": 4.8,
+    "scale": 0.65,
+    "walk": "crawl",
+    "run": "fast_crawl",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "head_strike",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "shell_guard",
+        "impact": 0.25,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "cathedral_charge",
+        "impact": 1.3,
+        "effect": 6,
+        "range": 10.0,
+        "power": 1.1
+      }
+    ]
+  },
+  {
+    "id": "infernal_phoenix",
+    "health": 320.0,
+    "damage": 16.0,
+    "armor": 4.0,
+    "speed": 0.3,
+    "width": 1.2,
+    "height": 2.2,
+    "scale": 0.9,
+    "walk": "walk",
+    "run": "walk",
+    "flies": true,
+    "rideable": true,
+    "moves": [
+      {
+        "clip": "claw_attack",
+        "impact": 0.35,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "flame_attack",
+        "impact": 0.8,
+        "effect": 4,
+        "range": 12.0,
+        "power": 1.1
+      }
+    ]
+  },
+  {
+    "id": "pain",
+    "health": 480.0,
+    "damage": 20.0,
+    "armor": 6.0,
+    "speed": 0.29,
+    "width": 0.75,
+    "height": 2.8,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "rod_attack",
+        "impact": 0.5,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "shinra_tensei",
+        "impact": 0.9,
+        "effect": 1,
+        "range": 7.0,
+        "power": 1.0
+      },
+      {
+        "clip": "bansho_tenin",
+        "impact": 0.7,
+        "effect": 2,
+        "range": 12.0,
+        "power": 0.7
+      },
+      {
+        "clip": "chibaku_tensei",
+        "impact": 1.2,
+        "effect": 9,
+        "range": 8.0,
+        "power": 1.2
+      }
+    ]
+  },
+  {
+    "id": "grieving_seraph",
+    "health": 400.0,
+    "damage": 16.0,
+    "armor": 6.0,
+    "speed": 0.28,
+    "width": 0.8,
+    "height": 2.8,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": true,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "spear_attack",
+        "impact": 0.45,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "celestial_charge",
+        "impact": 0.9,
+        "effect": 6,
+        "range": 10.0,
+        "power": 1.1
+      }
+    ]
+  },
+  {
+    "id": "ashen_juggernaut",
+    "health": 800.0,
+    "damage": 20.0,
+    "armor": 16.0,
+    "speed": 0.22,
+    "width": 1.5,
+    "height": 3.6,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "hammer_slam",
+        "impact": 0.8,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.2
+      },
+      {
+        "clip": "sweeping_attack",
+        "impact": 0.65,
+        "effect": 1,
+        "range": 5.0,
+        "power": 0.9
+      },
+      {
+        "clip": "defensive_stance",
+        "impact": 0.2,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "paper_kunoichi",
+    "health": 360.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.29,
+    "width": 0.75,
+    "height": 2.5,
+    "scale": 0.9,
+    "walk": "walk",
+    "run": "run",
+    "flies": true,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "paper_shuriken_attack",
+        "impact": 0.65,
+        "effect": 10,
+        "range": 14.0,
+        "power": 0.9
+      },
+      {
+        "clip": "paper_spear_attack",
+        "impact": 1.4,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.1
+      },
+      {
+        "clip": "paper_storm_attack",
+        "impact": 2.65,
+        "effect": 11,
+        "range": 7.0,
+        "power": 1.1
+      },
+      {
+        "clip": "paper_shield",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "hollow_jester",
+    "health": 400.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.3,
+    "width": 0.75,
+    "height": 2.6,
+    "scale": 0.95,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "card_throw",
+        "impact": 0.65,
+        "effect": 10,
+        "range": 14.0,
+        "power": 1.0
+      },
+      {
+        "clip": "mask_switch",
+        "impact": 0.85,
+        "effect": 12,
+        "range": 7.0,
+        "power": 0.5
+      },
+      {
+        "clip": "card_shuffle",
+        "impact": 1.2,
+        "effect": 13,
+        "range": 14.0,
+        "power": 0.8
+      },
+      {
+        "clip": "jester_bow",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "chained_emperor",
+    "health": 720.0,
+    "damage": 20.0,
+    "armor": 12.0,
+    "speed": 0.22,
+    "width": 1.0,
+    "height": 3.5,
+    "scale": 0.9,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "scepter_strike",
+        "impact": 0.8,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "chain_attack",
+        "impact": 1.1,
+        "effect": 2,
+        "range": 9.0,
+        "power": 0.8
+      },
+      {
+        "clip": "royal_command",
+        "impact": 1.6,
+        "effect": 15,
+        "range": 8.0,
+        "power": 0.8
+      },
+      {
+        "clip": "throne_guard",
+        "impact": 0.6,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "madara_uchiha",
+    "health": 640.0,
+    "damage": 22.0,
+    "armor": 10.0,
+    "speed": 0.28,
+    "width": 0.85,
+    "height": 2.6,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "gunbai_attack",
+        "impact": 0.9,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "fire_release",
+        "impact": 2.5,
+        "effect": 4,
+        "range": 14.0,
+        "power": 1.15
+      },
+      {
+        "clip": "susanoo_activate",
+        "impact": 1.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "susanoo_strike",
+        "impact": 1.5,
+        "effect": 16,
+        "range": 8.0,
+        "power": 1.5
+      }
+    ]
+  },
+  {
+    "id": "sasori",
+    "health": 480.0,
+    "damage": 18.0,
+    "armor": 8.0,
+    "speed": 0.27,
+    "width": 0.85,
+    "height": 2.5,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "blade_attack",
+        "impact": 1.1,
+        "effect": 0,
+        "range": 4.2,
+        "power": 1.0
+      },
+      {
+        "clip": "tail_attack",
+        "impact": 1.1,
+        "effect": 17,
+        "range": 6.0,
+        "power": 0.9
+      },
+      {
+        "clip": "puppet_attack",
+        "impact": 1.6,
+        "effect": 18,
+        "range": 10.0,
+        "power": 1.0
+      },
+      {
+        "clip": "puppet_control",
+        "impact": 1.5,
+        "effect": 2,
+        "range": 10.0,
+        "power": 0.5
+      },
+      {
+        "clip": "puppet_defense",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "fallen_penitent",
+    "health": 400.0,
+    "damage": 16.0,
+    "armor": 4.0,
+    "speed": 0.26,
+    "width": 0.75,
+    "height": 2.5,
+    "scale": 1.0,
+    "walk": "walk_slow",
+    "run": "run_unstable",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "stabbing_attack",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "knife_slash_left",
+        "impact": 0.45,
+        "effect": 1,
+        "range": 4.5,
+        "power": 0.8
+      },
+      {
+        "clip": "desperate_lunge",
+        "impact": 0.65,
+        "effect": 19,
+        "range": 6.0,
+        "power": 1.15
+      },
+      {
+        "clip": "grab_attack",
+        "impact": 0.6,
+        "effect": 2,
+        "range": 5.0,
+        "power": 0.65
+      }
+    ]
+  },
+  {
+    "id": "rainbound_oracle",
+    "health": 420.0,
+    "damage": 15.0,
+    "armor": 6.0,
+    "speed": 0.25,
+    "width": 0.8,
+    "height": 2.7,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "umbrella_strike",
+        "impact": 0.65,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "rainfall_charge",
+        "impact": 1.65,
+        "effect": 20,
+        "range": 10.0,
+        "power": 0.85
+      },
+      {
+        "clip": "rain_barrier",
+        "impact": 0.7,
+        "effect": 25,
+        "range": 6.0,
+        "power": 0.0
+      },
+      {
+        "clip": "umbrella_open",
+        "impact": 0.65,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "dread_bellkeeper",
+    "health": 800.0,
+    "damage": 20.0,
+    "armor": 14.0,
+    "speed": 0.2,
+    "width": 3.2,
+    "height": 3.2,
+    "scale": 0.8,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "leg_attack",
+        "impact": 0.65,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "heavy_stomp",
+        "impact": 0.9,
+        "effect": 1,
+        "range": 6.0,
+        "power": 1.05
+      },
+      {
+        "clip": "bell_shockwave",
+        "impact": 1.1,
+        "effect": 21,
+        "range": 10.0,
+        "power": 1.0
+      },
+      {
+        "clip": "chain_attack",
+        "impact": 1.1,
+        "effect": 2,
+        "range": 10.0,
+        "power": 0.75
+      },
+      {
+        "clip": "defensive_stance",
+        "impact": 0.6,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "blood_moon_monk",
+    "health": 520.0,
+    "damage": 18.0,
+    "armor": 8.0,
+    "speed": 0.26,
+    "width": 0.75,
+    "height": 2.7,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "staff_strike",
+        "impact": 0.6,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "staff_spin",
+        "impact": 1.3,
+        "effect": 1,
+        "range": 6.0,
+        "power": 0.85
+      },
+      {
+        "clip": "lunar_charge",
+        "impact": 1.85,
+        "effect": 22,
+        "range": 11.0,
+        "power": 1.1
+      },
+      {
+        "clip": "moon_barrier",
+        "impact": 0.8,
+        "effect": 25,
+        "range": 6.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "itachi_uchiha",
+    "health": 560.0,
+    "damage": 20.0,
+    "armor": 6.0,
+    "speed": 0.3,
+    "width": 0.7,
+    "height": 2.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "kunai_attack",
+        "impact": 0.65,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "genjutsu_cast",
+        "impact": 1.8,
+        "effect": 23,
+        "range": 10.0,
+        "power": 0.65
+      },
+      {
+        "clip": "fireball_jutsu",
+        "impact": 2.2,
+        "effect": 4,
+        "range": 13.0,
+        "power": 1.1
+      },
+      {
+        "clip": "crow_illusion",
+        "impact": 1.8,
+        "effect": 24,
+        "range": 8.0,
+        "power": 0.6
+      }
+    ]
+  },
+  {
+    "id": "deidara",
+    "health": 520.0,
+    "damage": 18.0,
+    "armor": 6.0,
+    "speed": 0.29,
+    "width": 0.7,
+    "height": 2.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "clay_bird_attack",
+        "impact": 1.8,
+        "effect": 31,
+        "range": 16.0,
+        "power": 0.95
+      },
+      {
+        "clip": "clay_spider_attack",
+        "impact": 1.8,
+        "effect": 32,
+        "range": 12.0,
+        "power": 0.8
+      },
+      {
+        "clip": "clay_dragon_attack",
+        "impact": 2.0,
+        "effect": 33,
+        "range": 18.0,
+        "power": 1.3
+      },
+      {
+        "clip": "explosive_clay_attack",
+        "impact": 2.7,
+        "effect": 34,
+        "range": 12.0,
+        "power": 1.6
+      },
+      {
+        "clip": "clay_creation",
+        "impact": 2.5,
+        "effect": 30,
+        "range": 12.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "veiled_whorl",
+    "health": 480.0,
+    "damage": 19.0,
+    "armor": 6.0,
+    "speed": 0.32,
+    "width": 0.7,
+    "height": 2.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "blade_attack",
+        "impact": 0.46,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "phase_shift",
+        "impact": 0.4,
+        "effect": 35,
+        "range": 10.0,
+        "power": 0.0
+      },
+      {
+        "clip": "vortex_teleport",
+        "impact": 1.3,
+        "effect": 36,
+        "range": 14.0,
+        "power": 0.0
+      },
+      {
+        "clip": "fireball_attack",
+        "impact": 1.2,
+        "effect": 37,
+        "range": 15.0,
+        "power": 1.1
+      },
+      {
+        "clip": "chain_attack",
+        "impact": 0.8,
+        "effect": 38,
+        "range": 8.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "mad_farmer",
+    "health": 420.0,
+    "damage": 15.0,
+    "armor": 5.0,
+    "speed": 0.28,
+    "width": 0.8,
+    "height": 2.5,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "sickle_attack",
+        "impact": 0.85,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "harvest_sweep",
+        "impact": 0.9,
+        "effect": 39,
+        "range": 5.0,
+        "power": 0.8
+      },
+      {
+        "clip": "ground_slam",
+        "impact": 1.15,
+        "effect": 40,
+        "range": 6.0,
+        "power": 1.1
+      },
+      {
+        "clip": "crop_magic",
+        "impact": 1.3,
+        "effect": 41,
+        "range": 10.0,
+        "power": 0.65
+      },
+      {
+        "clip": "scarecrow_pose",
+        "impact": 1.1,
+        "effect": 42,
+        "range": 8.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "plague_doctor",
+    "health": 460.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.26,
+    "width": 0.8,
+    "height": 2.4,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "staff_attack",
+        "impact": 0.8,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "plague_orb_attack",
+        "impact": 1.1,
+        "effect": 43,
+        "range": 15.0,
+        "power": 1.0
+      },
+      {
+        "clip": "toxic_cloud_attack",
+        "impact": 1.2,
+        "effect": 44,
+        "range": 6.0,
+        "power": 0.6
+      },
+      {
+        "clip": "potion_throw",
+        "impact": 0.9,
+        "effect": 45,
+        "range": 12.0,
+        "power": 0.6
+      },
+      {
+        "clip": "dark_healing",
+        "impact": 1.3,
+        "effect": 46,
+        "range": 8.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "cursed_executioner",
+    "health": 780.0,
+    "damage": 24.0,
+    "armor": 14.0,
+    "speed": 0.24,
+    "width": 1.5,
+    "height": 3.9,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "axe_attack",
+        "impact": 0.9,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "sweeping_attack",
+        "impact": 1.1,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.9
+      },
+      {
+        "clip": "ground_slam",
+        "impact": 1.3,
+        "effect": 1,
+        "range": 8.0,
+        "power": 1.25
+      },
+      {
+        "clip": "charging_attack",
+        "impact": 2.16,
+        "effect": 8,
+        "range": 9.0,
+        "power": 1.15
+      },
+      {
+        "clip": "intimidation",
+        "impact": 1.4,
+        "effect": 3,
+        "range": 7.0,
+        "power": 0.55
+      }
+    ]
+  },
+  {
+    "id": "void_weaver",
+    "health": 520.0,
+    "damage": 18.0,
+    "armor": 6.0,
+    "speed": 0.29,
+    "width": 0.8,
+    "height": 2.4,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "crescent_attack",
+        "impact": 0.72,
+        "effect": 0,
+        "range": 4.5,
+        "power": 1.0
+      },
+      {
+        "clip": "blade_orbit",
+        "impact": 1.05,
+        "effect": 1,
+        "range": 6.0,
+        "power": 0.85
+      },
+      {
+        "clip": "thread_control",
+        "impact": 1.4,
+        "effect": 2,
+        "range": 10.0,
+        "power": 0.65
+      },
+      {
+        "clip": "void_guard",
+        "impact": 0.65,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "azure_skyling",
+    "health": 220.0,
+    "damage": 10.0,
+    "armor": 2.0,
+    "speed": 0.3,
+    "width": 0.8,
+    "height": 1.0,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": true,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "crystal_attack",
+        "impact": 0.72,
+        "effect": 47,
+        "range": 12.0,
+        "power": 1.0
+      }
+    ]
+  },
+  {
+    "id": "gentleman_overlord",
+    "health": 600.0,
+    "damage": 20.0,
+    "armor": 8.0,
+    "speed": 0.25,
+    "width": 0.8,
+    "height": 2.1,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "cane_strike",
+        "impact": 0.95,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "finger_snap_attack",
+        "impact": 1.15,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.85
+      },
+      {
+        "clip": "invisible_force",
+        "impact": 1.25,
+        "effect": 2,
+        "range": 9.0,
+        "power": 0.7
+      },
+      {
+        "clip": "royal_decree",
+        "impact": 1.55,
+        "effect": 3,
+        "range": 8.0,
+        "power": 0.8
+      },
+      {
+        "clip": "polite_bow_counter",
+        "impact": 1.3,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "forsaken_fawn",
+    "health": 280.0,
+    "damage": 12.0,
+    "armor": 4.0,
+    "speed": 0.31,
+    "width": 0.8,
+    "height": 1.6,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "antler_attack",
+        "impact": 0.65,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.0
+      },
+      {
+        "clip": "moonbeam_attack",
+        "impact": 1.95,
+        "effect": 47,
+        "range": 14.0,
+        "power": 1.1
+      },
+      {
+        "clip": "crystal_defense",
+        "impact": 0.85,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "lonely_red_panda",
+    "health": 300.0,
+    "damage": 12.0,
+    "armor": 4.0,
+    "speed": 0.28,
+    "width": 0.85,
+    "height": 1.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "leaf_storm_attack",
+        "impact": 1.2,
+        "effect": 48,
+        "range": 6.0,
+        "power": 1.0
+      },
+      {
+        "clip": "lantern_shield",
+        "impact": 1.1,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "cursed_puppet_maker",
+    "health": 600.0,
+    "damage": 18.0,
+    "armor": 6.0,
+    "speed": 0.26,
+    "width": 1.0,
+    "height": 2.7,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "puppet_attack",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "string_attack",
+        "impact": 0.65,
+        "effect": 2,
+        "range": 10.0,
+        "power": 0.7
+      },
+      {
+        "clip": "mechanical_claw_attack",
+        "impact": 0.48,
+        "effect": 0,
+        "range": 4.0,
+        "power": 1.1
+      },
+      {
+        "clip": "puppet_spin",
+        "impact": 0.8,
+        "effect": 1,
+        "range": 6.0,
+        "power": 0.85
+      },
+      {
+        "clip": "puppet_shield",
+        "impact": 0.6,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "frostbound_snow_leopard",
+    "health": 340.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.32,
+    "width": 0.9,
+    "height": 1.3,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "frost_pounce",
+        "impact": 1.58,
+        "effect": 49,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "snowflake_shield",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "the_last_lullaby",
+    "health": 380.0,
+    "damage": 13.0,
+    "armor": 5.0,
+    "speed": 0.24,
+    "width": 1.2,
+    "height": 1.9,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "celestial_trumpet",
+        "impact": 1.65,
+        "effect": 50,
+        "range": 10.0,
+        "power": 0.9
+      },
+      {
+        "clip": "lullaby_shield",
+        "impact": 1.0,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "refai_el_desouky",
+    "health": 550.0,
+    "damage": 22.0,
+    "armor": 8.0,
+    "speed": 0.3,
+    "width": 0.8,
+    "height": 2.1,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "punch_combo",
+        "impact": 1.15,
+        "effect": 0,
+        "range": 3.6,
+        "power": 1.0
+      },
+      {
+        "clip": "power_stomp",
+        "impact": 1.1,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.9
+      },
+      {
+        "clip": "intimidation",
+        "impact": 1.0,
+        "effect": 3,
+        "range": 8.0,
+        "power": 0.4
+      },
+      {
+        "clip": "command_gang",
+        "impact": 1.6,
+        "effect": 51,
+        "range": 10.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "mokhtar_el_desouky",
+    "health": 500.0,
+    "damage": 18.0,
+    "armor": 8.0,
+    "speed": 0.28,
+    "width": 0.8,
+    "height": 2.1,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "punch_attack",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 3.6,
+        "power": 1.0
+      },
+      {
+        "clip": "defensive_counter",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "command",
+        "impact": 1.2,
+        "effect": 51,
+        "range": 10.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "broken_star_owlet",
+    "health": 300.0,
+    "damage": 14.0,
+    "armor": 4.0,
+    "speed": 0.3,
+    "width": 1.2,
+    "height": 1.5,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "fly",
+    "flies": true,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "starfall_attack",
+        "impact": 1.8,
+        "effect": 47,
+        "range": 14.0,
+        "power": 1.0
+      },
+      {
+        "clip": "celestial_shield",
+        "impact": 1.2,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "essam_el_nemr",
+    "health": 600.0,
+    "damage": 22.0,
+    "armor": 10.0,
+    "speed": 0.3,
+    "width": 0.8,
+    "height": 2.1,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "punch_combo",
+        "impact": 1.15,
+        "effect": 0,
+        "range": 3.6,
+        "power": 1.0
+      },
+      {
+        "clip": "counter_attack",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "power_stomp",
+        "impact": 1.1,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.9
+      },
+      {
+        "clip": "intimidation",
+        "impact": 1.0,
+        "effect": 3,
+        "range": 8.0,
+        "power": 0.4
+      }
+    ]
+  },
+  {
+    "id": "lumen_cub",
+    "health": 240.0,
+    "damage": 10.0,
+    "armor": 4.0,
+    "speed": 0.3,
+    "width": 0.85,
+    "height": 1.1,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "playful_jump",
+        "impact": 0.5,
+        "effect": 0,
+        "range": 3.2,
+        "power": 1.0
+      },
+      {
+        "clip": "crystal_glow",
+        "impact": 1.2,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "pearl_drakeling",
+    "health": 280.0,
+    "damage": 12.0,
+    "armor": 4.0,
+    "speed": 0.28,
+    "width": 0.85,
+    "height": 1.2,
+    "scale": 1.0,
+    "walk": "swim",
+    "run": "swim_fast",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "bubble_play",
+        "impact": 1.3,
+        "effect": 47,
+        "range": 12.0,
+        "power": 1.0
+      },
+      {
+        "clip": "pearl_glow",
+        "impact": 1.3,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "shattered_pangolin",
+    "health": 360.0,
+    "damage": 14.0,
+    "armor": 10.0,
+    "speed": 0.28,
+    "width": 1.2,
+    "height": 1.2,
+    "scale": 0.7,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "crystal_burst",
+        "impact": 2.4,
+        "effect": 47,
+        "range": 14.0,
+        "power": 1.0
+      },
+      {
+        "clip": "curl_up",
+        "impact": 0.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "roll",
+        "impact": 0.4,
+        "effect": 8,
+        "range": 8.0,
+        "power": 1.1
+      }
+    ]
+  },
+  {
+    "id": "cursed_bell_ringer",
+    "health": 900.0,
+    "damage": 24.0,
+    "armor": 14.0,
+    "speed": 0.22,
+    "width": 2.2,
+    "height": 4.0,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "bell_slam",
+        "impact": 1.5,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.2
+      },
+      {
+        "clip": "sonic_wave_attack",
+        "impact": 1.7,
+        "effect": 21,
+        "range": 10.0,
+        "power": 1.0
+      },
+      {
+        "clip": "chain_sweep",
+        "impact": 1.5,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.9
+      },
+      {
+        "clip": "resonance_burst",
+        "impact": 2.0,
+        "effect": 1,
+        "range": 9.0,
+        "power": 1.1
+      }
+    ]
+  },
+  {
+    "id": "weeping_axolotl",
+    "health": 220.0,
+    "damage": 12.0,
+    "armor": 4.0,
+    "speed": 0.28,
+    "width": 0.9,
+    "height": 0.7,
+    "scale": 0.5,
+    "walk": "walk",
+    "run": "swim_fast",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "heart_wave_attack",
+        "impact": 1.4,
+        "effect": 47,
+        "range": 12.0,
+        "power": 1.0
+      },
+      {
+        "clip": "bubble_shield",
+        "impact": 1.2,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "legendary_giant_zombie_refai",
+    "health": 1200.0,
+    "damage": 28.0,
+    "armor": 16.0,
+    "speed": 0.24,
+    "width": 2.4,
+    "height": 4.4,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "cleaver_attack",
+        "impact": 1.6,
+        "effect": 0,
+        "range": 6.0,
+        "power": 1.2
+      },
+      {
+        "clip": "sweep_attack",
+        "impact": 1.7,
+        "effect": 1,
+        "range": 8.0,
+        "power": 1.0
+      },
+      {
+        "clip": "ground_slam",
+        "impact": 1.9,
+        "effect": 1,
+        "range": 10.0,
+        "power": 1.25
+      },
+      {
+        "clip": "chain_rage",
+        "impact": 2.0,
+        "effect": 2,
+        "range": 12.0,
+        "power": 0.8
+      }
+    ]
+  },
+  {
+    "id": "amin_el_nemr",
+    "health": 480.0,
+    "damage": 18.0,
+    "armor": 8.0,
+    "speed": 0.3,
+    "width": 0.6,
+    "height": 1.95,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "punch_combo",
+        "impact": 1.3,
+        "effect": 0,
+        "range": 3.8,
+        "power": 1.0
+      },
+      {
+        "clip": "defensive_counter",
+        "impact": 1.1,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "intimidation",
+        "impact": 1.5,
+        "effect": 3,
+        "range": 8.0,
+        "power": 0.4
+      }
+    ]
+  },
+  {
+    "id": "king_of_corny_memes",
+    "health": 1100.0,
+    "damage": 24.0,
+    "armor": 12.0,
+    "speed": 0.25,
+    "width": 2.0,
+    "height": 4.2,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "bad_joke_attack",
+        "impact": 1.04,
+        "effect": 21,
+        "range": 9.0,
+        "power": 0.65
+      },
+      {
+        "clip": "cheese_meteor",
+        "impact": 2.02,
+        "effect": 47,
+        "range": 16.0,
+        "power": 1.05
+      },
+      {
+        "clip": "royal_facepalm",
+        "impact": 1.04,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "cringe_beam",
+        "impact": 1.4,
+        "effect": 6,
+        "range": 16.0,
+        "power": 1.0
+      },
+      {
+        "clip": "ultimate_punchline",
+        "impact": 2.3,
+        "effect": 1,
+        "range": 11.0,
+        "power": 1.25
+      }
+    ]
+  },
+  {
+    "id": "the_69_pose",
+    "health": 750.0,
+    "damage": 21.0,
+    "armor": 10.0,
+    "speed": 0.31,
+    "width": 1.2,
+    "height": 2.8,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "69_pose",
+        "impact": 3.4,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "gravity_kick",
+        "impact": 0.75,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.0
+      },
+      {
+        "clip": "inverted_strike",
+        "impact": 1.2,
+        "effect": 1,
+        "range": 6.0,
+        "power": 1.0
+      },
+      {
+        "clip": "number_orbit",
+        "impact": 0.8,
+        "effect": 47,
+        "range": 14.0,
+        "power": 0.9
+      },
+      {
+        "clip": "ultimate_inversion",
+        "impact": 2.2,
+        "effect": 1,
+        "range": 10.0,
+        "power": 1.2
+      }
+    ]
+  },
+  {
+    "id": "hanan",
+    "health": 400.0,
+    "damage": 15.0,
+    "armor": 6.0,
+    "speed": 0.3,
+    "width": 0.65,
+    "height": 1.9,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "defensive_push",
+        "impact": 0.65,
+        "effect": 1,
+        "range": 5.0,
+        "power": 0.7
+      },
+      {
+        "clip": "dodge",
+        "impact": 0.3,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "protective_stance",
+        "impact": 0.7,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      }
+    ]
+  },
+  {
+    "id": "glass_ronin",
+    "health": 900.0,
+    "damage": 25.0,
+    "armor": 12.0,
+    "speed": 0.31,
+    "width": 1.2,
+    "height": 3.0,
+    "scale": 1.0,
+    "walk": "walk",
+    "run": "run",
+    "flies": false,
+    "rideable": false,
+    "moves": [
+      {
+        "clip": "crystal_katana_combo",
+        "impact": 0.55,
+        "effect": 0,
+        "range": 5.0,
+        "power": 1.1
+      },
+      {
+        "clip": "mirror_slash",
+        "impact": 1.0,
+        "effect": 1,
+        "range": 7.0,
+        "power": 0.9
+      },
+      {
+        "clip": "reflection_clone",
+        "impact": 1.8,
+        "effect": 5,
+        "range": 0.0,
+        "power": 0.0
+      },
+      {
+        "clip": "shattered_blade",
+        "impact": 1.3,
+        "effect": 47,
+        "range": 16.0,
+        "power": 1.0
+      },
+      {
+        "clip": "thousand_mirrors",
+        "impact": 1.9,
+        "effect": 6,
+        "range": 14.0,
+        "power": 1.2
+      }
+    ]
+  }
+]

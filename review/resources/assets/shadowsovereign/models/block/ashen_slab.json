@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "shadowsovereign:block/ashen_planks",
-    "top": "shadowsovereign:block/ashen_planks",
-    "side": "shadowsovereign:block/ashen_planks"
-  }
-}

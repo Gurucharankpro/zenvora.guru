@@ -1,0 +1,12 @@
+# Academy key coordinates (structure-relative X,Y,Z; Y=8 is ground surface)
+- Gatehouse: X15-29, Z0-5 (passage X20-24)
+- Arena centre / Yuta spawn marker: (22, 8, 16); stand Yuta at (22, 9, 16) with yaw 0 to face north toward the gate. Player approach: (22, 9, 3) to (22, 9, 9)
+- Rika emergence: behind Yuta, i.e. +Z of him (about (22, 9, 19) for a south-facing Yuta)
+- Sword-training platform: X15-29, Z26-30, top Y=10
+- West training hall: X3-10, Z9-30; Archive hall (surface): X34-41, Z9-30; Main hall: X7-37, Z32-42
+- Covered corridors: X11-12 and X32-33, Z9-31
+- Secret door: bookshelves at (22, 9-10, 42) behind the altar; stair runs east along Z=43 down to Y=2 at X29
+- Cursed-energy chamber: centre (34, 2, 38), radius about 7
+- Tunnel to archive: X33-35, Z22-31, Y2-5
+- Underground archive: X31-42, Z9-21; secret vault door: bookshelves at (37-38, 2-3, 9)
+- Treasure vault: X33-41, Z2-7; chests at (33,2,2) (34,2,2) (40,2,2) (41,2,2)

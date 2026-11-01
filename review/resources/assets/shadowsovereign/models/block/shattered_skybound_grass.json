@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "shadowsovereign:block/shattered_skybound_grass_top",
-    "side": "shadowsovereign:block/shattered_skybound_grass_side",
-    "bottom": "shadowsovereign:block/shattered_floating_island_soil"
-  }
-}

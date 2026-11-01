@@ -4,12 +4,27 @@ No globally synchronized animated sprite is used: each instance starts at frame 
 import argparse,json,copy
 from pathlib import Path
 NS='shadowsovereign'
+
+def merge_frame_atlas(out, resources):
+ """ItemDisplay models use the blocks atlas, not arbitrary texture folders.
+
+ Keep existing sources, including sources owned by unrelated future additions.
+ Explicit single sources also remain inspectable in resource-pack overrides.
+ """
+ p=out/'assets/minecraft/atlases/blocks.json'
+ atlas=json.loads(p.read_text()) if p.exists() else {'sources':[]}
+ sources=atlas.setdefault('sources',[])
+ known={s.get('resource') for s in sources if s.get('type')=='minecraft:single'}
+ for resource in sorted(set(resources)):
+  if resource not in known:sources.append({'type':'minecraft:single','resource':resource});known.add(resource)
+ p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(atlas,indent=2)+'\n')
+
 def build(inputs,out):
  root=inputs/'X1_Shadow_Awakening';spec=json.loads((out/'integration-spec.json').read_text())
  def write(path,data):
   p=out/path;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data if isinstance(data,bytes) else (json.dumps(data,ensure_ascii=False,indent=2)+'\n').encode())
  def fn(path,lines):write(f'data/{NS}/functions/x1/{path}.mcfunction',('\n'.join(lines)+'\n').encode())
- overrides=[];layers=[];effects=[];number=1;dispatch=[]
+ overrides=[];layers=[];effects=[];number=1;dispatch=[];atlas_frames=[]
  presets=json.loads((root/'Integration/performance_presets.json').read_text())['effects']
  for file in sorted((root/'Effects').glob('*/effect.json')):
   effect=json.loads(file.read_text());id=effect['id'];used=[];layer_commands={}
@@ -25,6 +40,7 @@ def build(inputs,out):
    for i,frame in enumerate(frames):
     texture=f'x1/{key}_{i:03d}';modelpath=f'item/x1/frame_{number:04d}'
     write(f'assets/{NS}/textures/{texture}.png',frame.read_bytes())
+    atlas_frames.append(NS+':'+texture)
     element={'from':[0,7.99,0],'to':[16,8.01,16],'faces':{'up':{'texture':'#v','uv':[0,0,16,16]},'down':{'texture':'#v','uv':[0,0,16,16]}}} if ground else {'from':[0,0,7.99],'to':[16,16,8.01],'faces':{'north':{'texture':'#v','uv':[0,0,16,16]},'south':{'texture':'#v','uv':[16,0,0,16]}}}
     element['shade']=False
     write(f'assets/{NS}/models/{modelpath}.json',{'gui_light':'front','textures':{'v':NS+':'+texture,'particle':NS+':'+texture},'elements':[element]})
@@ -53,6 +69,7 @@ def build(inputs,out):
   sound={'01':'shadow_extraction','02':'shadow_summon','03':'shadow_summon','05':'shadow_rank_promotion','12':'shadow_magic_impact'}.get(id)
   if sound:event.append(f'playsound {NS}:x1.{sound} master @a[distance=..40] ~ ~ ~ 0.45 1')
   fn('event/'+id,event);effects.append(id)
+ merge_frame_atlas(out,atlas_frames)
  write(f'assets/{NS}/models/item/x1_visual.json',{'parent':NS+':'+overrides[0]['model'].split(':')[1],'overrides':overrides})
  fn('init',['execute unless data storage shadowsovereign:x1 initialized run scoreboard objectives add sbx1_age dummy','execute unless data storage shadowsovereign:x1 initialized run scoreboard objectives add sbx1_count dummy','data modify storage shadowsovereign:x1 initialized set value 1b'])
  fn('tick_world',['execute as @e[type=minecraft:item_display,tag=sb_x1_fx] run scoreboard players add @s sbx1_age 1','execute as @e[type=minecraft:item_display,tag=sb_x1_fx] run function shadowsovereign:x1/dispatch'])

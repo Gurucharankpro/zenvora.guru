@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column_horizontal",
-  "textures": {
-    "end": "shadowsovereign:block/moonveil_silverroot_log_top",
-    "side": "shadowsovereign:block/moonveil_silverroot_log"
-  }
-}

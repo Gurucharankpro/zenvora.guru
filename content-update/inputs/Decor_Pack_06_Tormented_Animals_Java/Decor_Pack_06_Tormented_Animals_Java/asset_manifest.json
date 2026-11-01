@@ -1,0 +1,837 @@
+{
+ "pack": "Decor Pack 06 - The Tormented Animals",
+ "namespace": "soulbound_decor",
+ "edition": "Minecraft Java Edition",
+ "count": 20,
+ "assets": [
+  {
+   "index": 1,
+   "mob": 41,
+   "mob_name": "The Forsaken Fawn",
+   "title": "Crystal Fawn Memorial",
+   "key": "crystal_fawn_memorial",
+   "bbmodel": "blockbench/crystal_fawn_memorial.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/crystal_fawn_memorial.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/crystal_fawn_memorial.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/crystal_fawn_memorial.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/crystal_fawn_memorial.png",
+   "texture_size": [
+    128,
+    128
+   ],
+   "texture_reference": "soulbound_decor:block/crystal_fawn_memorial",
+   "preview": "previews/crystal_fawn_memorial.png",
+   "elements": 61,
+   "bbox_px_from": [
+    2.85,
+    0.0,
+    1.2
+   ],
+   "bbox_px_to": [
+    13.15,
+    15.9,
+    13.15
+   ],
+   "size_px": [
+    10.3,
+    15.9,
+    11.95
+   ],
+   "materials": 9,
+   "bright_painted_materials": [
+    "glow_blue"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor/pedestal statue; front (face) toward north (-Z)."
+  },
+  {
+   "index": 2,
+   "mob": 41,
+   "mob_name": "The Forsaken Fawn",
+   "title": "Fountain of Lost Tears",
+   "key": "fountain_of_lost_tears",
+   "bbmodel": "blockbench/fountain_of_lost_tears.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/fountain_of_lost_tears.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/fountain_of_lost_tears.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/fountain_of_lost_tears.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/fountain_of_lost_tears.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/fountain_of_lost_tears",
+   "preview": "previews/fountain_of_lost_tears.png",
+   "elements": 76,
+   "bbox_px_from": [
+    0.4,
+    0.0,
+    0.4
+   ],
+   "bbox_px_to": [
+    15.6,
+    14.0,
+    15.6
+   ],
+   "size_px": [
+    15.2,
+    14.0,
+    15.2
+   ],
+   "materials": 8,
+   "bright_painted_materials": [
+    "glow_blue"
+   ],
+   "translucent_materials": [
+    "water_blue"
+   ],
+   "placement": "Floor fountain, full-block footprint, symmetrical."
+  },
+  {
+   "index": 3,
+   "mob": 42,
+   "mob_name": "The Weeping Tortoise",
+   "title": "Miniature Cathedral Shell",
+   "key": "miniature_cathedral_shell",
+   "bbmodel": "blockbench/miniature_cathedral_shell.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/miniature_cathedral_shell.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/miniature_cathedral_shell.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/miniature_cathedral_shell.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/miniature_cathedral_shell.png",
+   "texture_size": [
+    128,
+    128
+   ],
+   "texture_reference": "soulbound_decor:block/miniature_cathedral_shell",
+   "preview": "previews/miniature_cathedral_shell.png",
+   "elements": 67,
+   "bbox_px_from": [
+    2.2,
+    0.0,
+    0.3
+   ],
+   "bbox_px_to": [
+    13.8,
+    14.6,
+    15.4
+   ],
+   "size_px": [
+    11.6,
+    14.6,
+    15.1
+   ],
+   "materials": 12,
+   "bright_painted_materials": [
+    "glow_blue",
+    "glow_cyan"
+   ],
+   "translucent_materials": [
+    "glass_cyan"
+   ],
+   "placement": "Floor decoration; tortoise head faces north (-Z)."
+  },
+  {
+   "index": 4,
+   "mob": 42,
+   "mob_name": "The Weeping Tortoise",
+   "title": "Bell of Forgotten Souls",
+   "key": "bell_of_forgotten_souls",
+   "bbmodel": "blockbench/bell_of_forgotten_souls.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/bell_of_forgotten_souls.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/bell_of_forgotten_souls.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/bell_of_forgotten_souls.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/bell_of_forgotten_souls.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/bell_of_forgotten_souls",
+   "preview": "previews/bell_of_forgotten_souls.png",
+   "elements": 80,
+   "bbox_px_from": [
+    0.99,
+    0.0,
+    5.5
+   ],
+   "bbox_px_to": [
+    15.01,
+    14.8,
+    10.5
+   ],
+   "size_px": [
+    14.02,
+    14.8,
+    5.0
+   ],
+   "materials": 9,
+   "bright_painted_materials": [
+    "glow_blue",
+    "glow_cyan"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor arch; bell swings along X, arch faces north/south."
+  },
+  {
+   "index": 5,
+   "mob": 43,
+   "mob_name": "The Forgotten Moonmoth",
+   "title": "Celestial Moonmoth Sculpture",
+   "key": "celestial_moonmoth_sculpture",
+   "bbmodel": "blockbench/celestial_moonmoth_sculpture.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/celestial_moonmoth_sculpture.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/celestial_moonmoth_sculpture.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/celestial_moonmoth_sculpture.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/celestial_moonmoth_sculpture.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/celestial_moonmoth_sculpture",
+   "preview": "previews/celestial_moonmoth_sculpture.png",
+   "elements": 74,
+   "bbox_px_from": [
+    1.0,
+    0.0,
+    2.6
+   ],
+   "bbox_px_to": [
+    15.0,
+    15.6,
+    13.0
+   ],
+   "size_px": [
+    14.0,
+    15.6,
+    10.4
+   ],
+   "materials": 9,
+   "bright_painted_materials": [
+    "glow_violet"
+   ],
+   "translucent_materials": [],
+   "placement": "Pedestal statue; wings spread in the X/Y plane, front faces north."
+  },
+  {
+   "index": 6,
+   "mob": 43,
+   "mob_name": "The Forgotten Moonmoth",
+   "title": "Moonlit Butterfly Chandelier",
+   "key": "moonlit_butterfly_chandelier",
+   "bbmodel": "blockbench/moonlit_butterfly_chandelier.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/moonlit_butterfly_chandelier.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/moonlit_butterfly_chandelier.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/moonlit_butterfly_chandelier.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/moonlit_butterfly_chandelier.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/moonlit_butterfly_chandelier",
+   "preview": "previews/moonlit_butterfly_chandelier.png",
+   "elements": 79,
+   "bbox_px_from": [
+    2.0,
+    0.4,
+    6.3
+   ],
+   "bbox_px_to": [
+    13.65,
+    16.0,
+    9.7
+   ],
+   "size_px": [
+    11.65,
+    15.6,
+    3.4
+   ],
+   "materials": 8,
+   "bright_painted_materials": [
+    "glow_gold",
+    "glow_cyan",
+    "glow_violet"
+   ],
+   "translucent_materials": [],
+   "placement": "Ceiling-hung (attach top chain to block above); crescent in X/Y plane."
+  },
+  {
+   "index": 7,
+   "mob": 44,
+   "mob_name": "The Forsaken River Otter",
+   "title": "Otter's Pearl Fountain",
+   "key": "otters_pearl_fountain",
+   "bbmodel": "blockbench/otters_pearl_fountain.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/otters_pearl_fountain.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/otters_pearl_fountain.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/otters_pearl_fountain.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/otters_pearl_fountain.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/otters_pearl_fountain",
+   "preview": "previews/otters_pearl_fountain.png",
+   "elements": 70,
+   "bbox_px_from": [
+    0.4,
+    0.0,
+    0.4
+   ],
+   "bbox_px_to": [
+    15.6,
+    15.5,
+    15.6
+   ],
+   "size_px": [
+    15.2,
+    15.5,
+    15.2
+   ],
+   "materials": 11,
+   "bright_painted_materials": [
+    "pearl_gold",
+    "glow_cyan"
+   ],
+   "translucent_materials": [
+    "water"
+   ],
+   "placement": "Floor fountain; otter faces north (-Z)."
+  },
+  {
+   "index": 8,
+   "mob": 44,
+   "mob_name": "The Forsaken River Otter",
+   "title": "Forgotten Watermill Miniature",
+   "key": "forgotten_watermill_miniature",
+   "bbmodel": "blockbench/forgotten_watermill_miniature.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/forgotten_watermill_miniature.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/forgotten_watermill_miniature.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/forgotten_watermill_miniature.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/forgotten_watermill_miniature.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/forgotten_watermill_miniature",
+   "preview": "previews/forgotten_watermill_miniature.png",
+   "elements": 72,
+   "bbox_px_from": [
+    0.5,
+    0.0,
+    0.5
+   ],
+   "bbox_px_to": [
+    15.5,
+    11.2,
+    15.5
+   ],
+   "size_px": [
+    15.0,
+    11.2,
+    15.0
+   ],
+   "materials": 12,
+   "bright_painted_materials": [
+    "glow_cyan",
+    "glow_blue"
+   ],
+   "translucent_materials": [
+    "water"
+   ],
+   "placement": "Tabletop/floor miniature; stream runs along Z, wheel on east side."
+  },
+  {
+   "index": 9,
+   "mob": 45,
+   "mob_name": "The Broken Star Owlet",
+   "title": "Celestial Owl Observatory Statue",
+   "key": "celestial_owl_observatory_statue",
+   "bbmodel": "blockbench/celestial_owl_observatory_statue.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/celestial_owl_observatory_statue.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/celestial_owl_observatory_statue.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/celestial_owl_observatory_statue.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/celestial_owl_observatory_statue.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/celestial_owl_observatory_statue",
+   "preview": "previews/celestial_owl_observatory_statue.png",
+   "elements": 53,
+   "bbox_px_from": [
+    0.4,
+    0.0,
+    3.0
+   ],
+   "bbox_px_to": [
+    15.6,
+    15.6,
+    13.0
+   ],
+   "size_px": [
+    15.2,
+    15.6,
+    10.0
+   ],
+   "materials": 7,
+   "bright_painted_materials": [
+    "glow_gold"
+   ],
+   "translucent_materials": [],
+   "placement": "Pedestal statue; owl faces north (-Z), halo behind."
+  },
+  {
+   "index": 10,
+   "mob": 45,
+   "mob_name": "The Broken Star Owlet",
+   "title": "Astronomer's Star Globe",
+   "key": "astronomers_star_globe",
+   "bbmodel": "blockbench/astronomers_star_globe.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/astronomers_star_globe.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/astronomers_star_globe.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/astronomers_star_globe.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/astronomers_star_globe.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/astronomers_star_globe",
+   "preview": "previews/astronomers_star_globe.png",
+   "elements": 118,
+   "bbox_px_from": [
+    1.15,
+    0.0,
+    1.15
+   ],
+   "bbox_px_to": [
+    14.85,
+    15.95,
+    14.85
+   ],
+   "size_px": [
+    13.7,
+    15.95,
+    13.7
+   ],
+   "materials": 11,
+   "bright_painted_materials": [
+    "glow_white",
+    "glow_gold",
+    "glow_cyan"
+   ],
+   "translucent_materials": [],
+   "placement": "Pedestal globe, symmetrical."
+  },
+  {
+   "index": 11,
+   "mob": 46,
+   "mob_name": "The Shattered Pangolin",
+   "title": "Porcelain Pangolin Figurine",
+   "key": "porcelain_pangolin_figurine",
+   "bbmodel": "blockbench/porcelain_pangolin_figurine.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/porcelain_pangolin_figurine.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/porcelain_pangolin_figurine.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/porcelain_pangolin_figurine.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/porcelain_pangolin_figurine.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/porcelain_pangolin_figurine",
+   "preview": "previews/porcelain_pangolin_figurine.png",
+   "elements": 95,
+   "bbox_px_from": [
+    1.8,
+    0.0,
+    1.8
+   ],
+   "bbox_px_to": [
+    14.35,
+    12.2,
+    14.2
+   ],
+   "size_px": [
+    12.55,
+    12.2,
+    12.4
+   ],
+   "materials": 5,
+   "bright_painted_materials": [
+    "glow_cyan"
+   ],
+   "translucent_materials": [],
+   "placement": "Tabletop figurine; head faces north (-Z)."
+  },
+  {
+   "index": 12,
+   "mob": 46,
+   "mob_name": "The Shattered Pangolin",
+   "title": "Sapphire Ceramic Bell Tower",
+   "key": "sapphire_ceramic_bell_tower",
+   "bbmodel": "blockbench/sapphire_ceramic_bell_tower.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/sapphire_ceramic_bell_tower.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/sapphire_ceramic_bell_tower.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/sapphire_ceramic_bell_tower.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/sapphire_ceramic_bell_tower.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/sapphire_ceramic_bell_tower",
+   "preview": "previews/sapphire_ceramic_bell_tower.png",
+   "elements": 65,
+   "bbox_px_from": [
+    1.6,
+    0.0,
+    1.6
+   ],
+   "bbox_px_to": [
+    14.4,
+    16.0,
+    14.4
+   ],
+   "size_px": [
+    12.8,
+    16.0,
+    12.8
+   ],
+   "materials": 8,
+   "bright_painted_materials": [
+    "glow_cyan"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor tower, symmetrical, full block height."
+  },
+  {
+   "index": 13,
+   "mob": 47,
+   "mob_name": "The Lonely Red Panda",
+   "title": "Sleeping Red Panda Statue",
+   "key": "sleeping_red_panda_statue",
+   "bbmodel": "blockbench/sleeping_red_panda_statue.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/sleeping_red_panda_statue.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/sleeping_red_panda_statue.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/sleeping_red_panda_statue.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/sleeping_red_panda_statue.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/sleeping_red_panda_statue",
+   "preview": "previews/sleeping_red_panda_statue.png",
+   "elements": 40,
+   "bbox_px_from": [
+    1.2,
+    0.0,
+    1.2
+   ],
+   "bbox_px_to": [
+    14.8,
+    5.8,
+    14.8
+   ],
+   "size_px": [
+    13.6,
+    5.8,
+    13.6
+   ],
+   "materials": 10,
+   "bright_painted_materials": [
+    "glow_red"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor/tabletop statue; head faces north (-Z)."
+  },
+  {
+   "index": 14,
+   "mob": 47,
+   "mob_name": "The Lonely Red Panda",
+   "title": "Golden Bamboo Lantern Shrine",
+   "key": "golden_bamboo_lantern_shrine",
+   "bbmodel": "blockbench/golden_bamboo_lantern_shrine.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/golden_bamboo_lantern_shrine.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/golden_bamboo_lantern_shrine.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/golden_bamboo_lantern_shrine.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/golden_bamboo_lantern_shrine.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/golden_bamboo_lantern_shrine",
+   "preview": "previews/golden_bamboo_lantern_shrine.png",
+   "elements": 72,
+   "bbox_px_from": [
+    0.0,
+    0.0,
+    1.5
+   ],
+   "bbox_px_to": [
+    15.5,
+    13.4,
+    14.5
+   ],
+   "size_px": [
+    15.5,
+    13.4,
+    13.0
+   ],
+   "materials": 10,
+   "bright_painted_materials": [
+    "glow_red",
+    "glow_gold"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor shrine; open front faces north/south."
+  },
+  {
+   "index": 15,
+   "mob": 48,
+   "mob_name": "The Weeping Axolotl",
+   "title": "Crystal Axolotl Aquarium",
+   "key": "crystal_axolotl_aquarium",
+   "bbmodel": "blockbench/crystal_axolotl_aquarium.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/crystal_axolotl_aquarium.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/crystal_axolotl_aquarium.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/crystal_axolotl_aquarium.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/crystal_axolotl_aquarium.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/crystal_axolotl_aquarium",
+   "preview": "previews/crystal_axolotl_aquarium.png",
+   "elements": 56,
+   "bbox_px_from": [
+    0.5,
+    0.0,
+    0.5
+   ],
+   "bbox_px_to": [
+    15.5,
+    11.8,
+    15.5
+   ],
+   "size_px": [
+    15.0,
+    11.8,
+    15.0
+   ],
+   "materials": 14,
+   "bright_painted_materials": [
+    "glow_cyan",
+    "pearl"
+   ],
+   "translucent_materials": [
+    "glass_water",
+    "glass_clear"
+   ],
+   "placement": "Floor tank; contains translucent glass/water faces; axolotl faces north."
+  },
+  {
+   "index": 16,
+   "mob": 48,
+   "mob_name": "The Weeping Axolotl",
+   "title": "Broken Heart Pearl Monument",
+   "key": "broken_heart_pearl_monument",
+   "bbmodel": "blockbench/broken_heart_pearl_monument.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/broken_heart_pearl_monument.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/broken_heart_pearl_monument.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/broken_heart_pearl_monument.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/broken_heart_pearl_monument.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/broken_heart_pearl_monument",
+   "preview": "previews/broken_heart_pearl_monument.png",
+   "elements": 54,
+   "bbox_px_from": [
+    2.5,
+    0.0,
+    4.55
+   ],
+   "bbox_px_to": [
+    13.5,
+    16.0,
+    11.0
+   ],
+   "size_px": [
+    11.0,
+    16.0,
+    6.45
+   ],
+   "materials": 9,
+   "bright_painted_materials": [
+    "glow_pink",
+    "pearl"
+   ],
+   "translucent_materials": [
+    "glass_clear"
+   ],
+   "placement": "Floor monument; frame faces north/south."
+  },
+  {
+   "index": 17,
+   "mob": 49,
+   "mob_name": "The Frostbound Snow Leopard",
+   "title": "Sleeping Snow Leopard Sculpture",
+   "key": "sleeping_snow_leopard_sculpture",
+   "bbmodel": "blockbench/sleeping_snow_leopard_sculpture.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/sleeping_snow_leopard_sculpture.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/sleeping_snow_leopard_sculpture.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/sleeping_snow_leopard_sculpture.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/sleeping_snow_leopard_sculpture.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/sleeping_snow_leopard_sculpture",
+   "preview": "previews/sleeping_snow_leopard_sculpture.png",
+   "elements": 57,
+   "bbox_px_from": [
+    1.5,
+    0.0,
+    0.8
+   ],
+   "bbox_px_to": [
+    14.5,
+    7.0,
+    15.1
+   ],
+   "size_px": [
+    13.0,
+    7.0,
+    14.3
+   ],
+   "materials": 8,
+   "bright_painted_materials": [
+    "ice_eye",
+    "glow_white"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor statue; head faces north (-Z)."
+  },
+  {
+   "index": 18,
+   "mob": 49,
+   "mob_name": "The Frostbound Snow Leopard",
+   "title": "Frozen Royal Crystal Throne",
+   "key": "frozen_royal_crystal_throne",
+   "bbmodel": "blockbench/frozen_royal_crystal_throne.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/frozen_royal_crystal_throne.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/frozen_royal_crystal_throne.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/frozen_royal_crystal_throne.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/frozen_royal_crystal_throne.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/frozen_royal_crystal_throne",
+   "preview": "previews/frozen_royal_crystal_throne.png",
+   "elements": 48,
+   "bbox_px_from": [
+    2.0,
+    0.0,
+    2.0
+   ],
+   "bbox_px_to": [
+    14.0,
+    16.0,
+    14.0
+   ],
+   "size_px": [
+    12.0,
+    16.0,
+    12.0
+   ],
+   "materials": 9,
+   "bright_painted_materials": [
+    "glow_blue",
+    "glow_white"
+   ],
+   "translucent_materials": [
+    "glass_ice"
+   ],
+   "placement": "Floor throne; seat faces north (-Z)."
+  },
+  {
+   "index": 19,
+   "mob": 50,
+   "mob_name": "The Last Lullaby",
+   "title": "Golden Elephant Music Box",
+   "key": "golden_elephant_music_box",
+   "bbmodel": "blockbench/golden_elephant_music_box.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/golden_elephant_music_box.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/golden_elephant_music_box.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/golden_elephant_music_box.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/golden_elephant_music_box.png",
+   "texture_size": [
+    32,
+    32
+   ],
+   "texture_reference": "soulbound_decor:block/golden_elephant_music_box",
+   "preview": "previews/golden_elephant_music_box.png",
+   "elements": 60,
+   "bbox_px_from": [
+    0.4,
+    0.0,
+    0.4
+   ],
+   "bbox_px_to": [
+    16.0,
+    11.2,
+    15.6
+   ],
+   "size_px": [
+    15.6,
+    11.2,
+    15.2
+   ],
+   "materials": 10,
+   "bright_painted_materials": [
+    "glow_gold"
+   ],
+   "translucent_materials": [],
+   "placement": "Tabletop music box; elephant faces north, crank on east."
+  },
+  {
+   "index": 20,
+   "mob": 50,
+   "mob_name": "The Last Lullaby",
+   "title": "Forgotten Dream Carousel",
+   "key": "forgotten_dream_carousel",
+   "bbmodel": "blockbench/forgotten_dream_carousel.bbmodel",
+   "block_model": "resourcepack/assets/soulbound_decor/models/block/forgotten_dream_carousel.json",
+   "item_model": "resourcepack/assets/soulbound_decor/models/item/forgotten_dream_carousel.json",
+   "item_definition_1_21_4_plus": "resourcepack/assets/soulbound_decor/items/forgotten_dream_carousel.json",
+   "texture": "resourcepack/assets/soulbound_decor/textures/block/forgotten_dream_carousel.png",
+   "texture_size": [
+    128,
+    128
+   ],
+   "texture_reference": "soulbound_decor:block/forgotten_dream_carousel",
+   "preview": "previews/forgotten_dream_carousel.png",
+   "elements": 173,
+   "bbox_px_from": [
+    0.1,
+    0.0,
+    0.1
+   ],
+   "bbox_px_to": [
+    15.9,
+    16.0,
+    15.9
+   ],
+   "size_px": [
+    15.8,
+    16.0,
+    15.8
+   ],
+   "materials": 15,
+   "bright_painted_materials": [
+    "glow_gold",
+    "glow_pink"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor miniature, rotationally symmetric."
+  }
+ ]
+}

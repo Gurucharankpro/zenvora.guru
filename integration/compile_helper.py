@@ -1,7 +1,8 @@
 """Compile the runtime helper against explicit ABI fixtures; never package them.
 
 Fixtures allow deterministic JVM regression tests without claiming Forge startup.
-Only production encounter/migration/X1 helpers and creative classification enter the overlay.
+RETIRED release path: these historical definitions are reading references only.
+The CLI refuses to generate a gameplay overlay. Use native-review/qa instead.
 """
 import argparse,json,subprocess
 from pathlib import Path
@@ -148,23 +149,4 @@ SOURCES.update({
 })
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('build',type=Path);p.add_argument('resources',type=Path);args=p.parse_args()
-    root=args.build/'abi-fixtures';classes=args.build/'helper-classes';classes.mkdir(exist_ok=True)
-    files=[]
-    for name,body in SOURCES.items():
-        target=root/(name+'.java');target.parent.mkdir(parents=True,exist_ok=True)
-        target.write_text('package '+name.rsplit('/',1)[0].replace('/','.')+';\n'+body+'\n');files.append(str(target))
-    creative=root/'dev/shadowsovereign/expansion/CreativeGroups.java';creative.parent.mkdir(parents=True,exist_ok=True)
-    creative.write_bytes((args.resources/'creative-groups-source.txt').read_bytes());(args.resources/'creative-groups-source.txt').unlink();files.append(str(creative))
-    source=Path(__file__).parent
-    helper_sources=['OpenMythics','RemovedContent','MigrationHooks','X1Hooks','OpenMythicsTest','MigrationTest','X1HooksTest']
-    subprocess.run(['java','-m','jdk.compiler/com.sun.tools.javac.Main','-source','17','-target','17','-d',str(classes),*files,*[str(source/(name+'.java')) for name in helper_sources]],check=True)
-    subprocess.run(['java','-ea','-cp',str(classes),'OpenMythicsTest'],check=True)
-    subprocess.run(['java','-ea','-cp',str(classes),'MigrationTest'],check=True)
-    subprocess.run(['java','-ea','-cp',str(classes),'X1HooksTest'],check=True)
-    for name in helper_sources[:4]:
-        destination=args.resources/f'dev/shadowsovereign/expansion/{name}.class';destination.parent.mkdir(parents=True,exist_ok=True)
-        destination.write_bytes((classes/f'dev/shadowsovereign/expansion/{name}.class').read_bytes())
-
-    destination=args.resources/'dev/shadowsovereign/expansion/CreativeGroups.class'
-    destination.write_bytes((classes/'dev/shadowsovereign/expansion/CreativeGroups.class').read_bytes())
+    raise SystemExit('Historical ABI fixtures cannot compile production classes. Use native-review/qa with real Forge/Minecraft dependencies; no fixture overlay was produced.')

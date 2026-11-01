@@ -1,0 +1,78 @@
+# X4 Shadow Army Autopilot - proposed SERVER config (example only; the integrator creates the real spec)
+[general]
+	enabled = true
+	respectExplicitCommands = true     # must stay true; documented for clarity
+	postLoadGraceTicks = 100           # range 0-1200
+
+[smartFollow]
+	enabled = true
+	followClearance = 2.5              # blocks, 1.0-8.0
+	followResume = 6.0                 # blocks, 2.0-32.0 (never below the existing follow range)
+	sizeSpacingFactor = 1.2            # 1.0-3.0
+	maxSlotOffset = 3.0                # blocks, 0.5-8.0
+	passageExitBlocks = 3              # 1-10
+
+[antiStuck]
+	enabled = true
+	stuckWindowTicks = 60              # 20-400
+	stuckMinProgress = 0.5             # blocks, 0.1-3.0
+	stuckConfirmChecks = 2             # 1-6
+	separatedDistance = 32.0           # blocks, 16-256
+	repathAttempts = 2                 # 0-6
+	repathCooldownTicks = 40           # 10-400
+	regroupSearchRadius = 6            # 2-16
+	regroupTimeoutTicks = 100          # 20-600
+	allowEmergencyTeleport = false     # off by default: server owners opt in
+	teleportAfterTicks = 200           # 60-2400
+	teleportCooldownTicks = 600        # 100-12000
+	maxSafeFall = 3                    # 0-6
+	failedRetryTicks = 600             # 100-12000
+
+[buildingMode]
+	enabled = true
+	buildRadius = 3.5                  # 1.5-8.0
+	buildReach = 6.0                   # 3.0-8.0
+	buildTargetMargin = 2.0            # 0.0-5.0
+	buildEdgeMargin = 1.0              # 0.0-4.0
+	buildAutoOffTicks = 0              # 0 = never, else 200-72000
+
+[combatAssist]
+	enabled = true
+	assistRange = 16.0                 # 4-48
+	dropRange = 24.0                   # 8-64 (>= assistRange)
+	ownerTargetMemoryTicks = 100       # 20-600
+	minTargetHoldTicks = 40            # 0-400
+	switchDistanceAdvantage = 3.0      # 0-16
+	maxAttackersPerTarget = 6          # 1-16
+	supportDistance = 4.0              # 2-10
+	losConeDegrees = 20                # 0-45 (0 disables)
+	losConeLength = 12.0               # 4-24
+	protectHealthFraction = 0.4        # 0.0-1.0
+	protectWindowTicks = 60            # 0-400
+	protectCount = 4                   # 0-16
+
+[performance]
+	enabled = true
+	combatInterval = 2                 # ticks, 1-20
+	followInterval = 5                 # 2-40
+	idleInterval = 20                  # 5-100
+	farInterval = 40                   # 10-200
+	maxSmartUpdatesPerTick = 24        # 1-512
+	maxPathRequestsPerTick = 4         # 1-64
+	maxPathRequestsPerOwnerPerTick = 2 # 1-16
+	maxStarveTicks = 200               # 40-1200
+	safePosCacheTicks = 20             # 0-200
+	perfModeIntervalMultiplier = 2.0   # 1.0-8.0
+	forcePerformanceMode = false
+	debugLogIntervalSeconds = 0        # 0 = off, else 5-300
+
+[status]
+	enabled = true
+	statusSyncTicks = 20               # 5-100
+	notifyCooldownTicks = 100          # 20-1200
+	regroupCooldownTicks = 40          # 10-400
+	regroupIgnoresHold = false
+
+[multiplayer]
+	requestMinIntervalTicks = 5        # 1-40
+	teamShareAutopilot = false

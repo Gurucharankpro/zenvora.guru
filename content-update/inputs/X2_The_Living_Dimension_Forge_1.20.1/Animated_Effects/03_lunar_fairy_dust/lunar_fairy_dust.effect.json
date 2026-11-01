@@ -1,0 +1,69 @@
+{
+  "effectNumber": 3,
+  "id": "x2_lunar_fairy_dust",
+  "displayName": "Lunar Fairy Dust",
+  "biomeNumber": 2,
+  "biomeKey": "moonveil_hollow",
+  "biomeName": "Moonveil Hollow",
+  "description": "Silver and lavender motes floating above the forest floor.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_lunar_fairy_dust_sheet.png",
+    "sheetSizePx": [
+      256,
+      32
+    ],
+    "frameFiles": [
+      "x2_lunar_fairy_dust_00.png",
+      "x2_lunar_fairy_dust_01.png",
+      "x2_lunar_fairy_dust_02.png",
+      "x2_lunar_fairy_dust_03.png",
+      "x2_lunar_fairy_dust_04.png",
+      "x2_lunar_fairy_dust_05.png",
+      "x2_lunar_fairy_dust_06.png",
+      "x2_lunar_fairy_dust_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 24,
+    "cycleDurationMs": 1200,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:lunar_fairy_dust",
+    "recommendedQuadSizeBlocks": 0.1,
+    "lifetimeTicks": {
+      "min": 50,
+      "max": 90
+    },
+    "gravity": -0.0006,
+    "horizontalDriftBlocksPerTick": 0.006,
+    "fullbright": true,
+    "maxAlpha": 0.85,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Hover and bob; twinkle from sprite loop."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

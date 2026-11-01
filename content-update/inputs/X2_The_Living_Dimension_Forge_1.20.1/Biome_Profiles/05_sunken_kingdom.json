@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 5,
+  "biomeKey": "sunken_kingdom",
+  "displayName": "The Sunken Kingdom",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_enchanted_pearl_bubbles",
+      "particleRegistryName": "x2_living:enchanted_pearl_bubbles",
+      "number": 9,
+      "displayName": "Enchanted Pearl Bubbles"
+    },
+    {
+      "id": "x2_ancient_ocean_lights",
+      "particleRegistryName": "x2_living:ancient_ocean_lights",
+      "number": 10,
+      "displayName": "Ancient Ocean Lights"
+    }
+  ],
+  "daytimeParticleIntensity": 0.8,
+  "nighttimeParticleIntensity": 0.8,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_enchanted_pearl_bubbles": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 5,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_ancient_ocean_lights": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 1.6,
+      "dayMultiplier": 0.8,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#0f5a8a",
+    "colorDayRGB01": [
+      0.059,
+      0.353,
+      0.541
+    ],
+    "colorNightHex": "#06223a",
+    "colorNightRGB01": [
+      0.024,
+      0.133,
+      0.227
+    ],
+    "startFractionOfRenderDistance": 0.05,
+    "endFractionOfRenderDistance": 0.55,
+    "densityLabel": "underwater-heavy",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_enchanted_pearl_bubbles": {
+      "horizontalDriftBlocksPerTick": 0.004,
+      "gravityBlocksPerTick2": -0.02,
+      "note": "Buoyant: rises ~0.02 b/tick; remove when leaving water. Wobble from sprite loop."
+    },
+    "x2_ancient_ocean_lights": {
+      "horizontalDriftBlocksPerTick": 0.01,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "Sinuous trail is baked into sprite (trail points to the left); rotate quad or orient to motion if desired."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_enchanted_pearl_bubbles": {
+      "min": 60,
+      "max": 100
+    },
+    "x2_ancient_ocean_lights": {
+      "min": 80,
+      "max": 120
+    }
+  },
+  "recommendedSpawn": {
+    "x2_enchanted_pearl_bubbles": {
+      "heightBlocksRelative": [
+        -3,
+        3
+      ],
+      "location": "ONLY inside water blocks, relative to player Y; rise with buoyancy",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_ancient_ocean_lights": {
+      "heightBlocksRelative": [
+        -6,
+        4
+      ],
+      "location": "ONLY inside water blocks, 6-20 b from player",
+      "minDistanceFromCameraBlocks": 8
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "surface only: no change underwater",
+    "thunder": "ocean lights x1.3 near surface"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 14,
+    "suggestedTintHex": "#4fb4ff",
+    "tintStrength0to1": 0.14,
+    "note": "Use water fog color / water_fog_color biome field where possible.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_enchanted_pearl_bubbles": {
+          "spawnsPerSecond": 1.75,
+          "estimatedAlive": 5.6
+        },
+        "x2_ancient_ocean_lights": {
+          "spawnsPerSecond": 0.224,
+          "estimatedAlive": 0.9
+        }
+      },
+      "estimatedSteadyStateAlive": 6.5,
+      "estimatedLargeQuadAlive": 0.9
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_enchanted_pearl_bubbles": {
+          "spawnsPerSecond": 3.5,
+          "estimatedAlive": 11.2
+        },
+        "x2_ancient_ocean_lights": {
+          "spawnsPerSecond": 0.896,
+          "estimatedAlive": 3.6
+        }
+      },
+      "estimatedSteadyStateAlive": 14.8,
+      "estimatedLargeQuadAlive": 3.6
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_enchanted_pearl_bubbles": {
+          "spawnsPerSecond": 5.0,
+          "estimatedAlive": 16.0
+        },
+        "x2_ancient_ocean_lights": {
+          "spawnsPerSecond": 1.6,
+          "estimatedAlive": 6.4
+        }
+      },
+      "estimatedSteadyStateAlive": 22.4,
+      "estimatedLargeQuadAlive": 6.4
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

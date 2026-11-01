@@ -1,0 +1,77 @@
+{
+  "effectNumber": 11,
+  "id": "x2_golden_glass_sandstorm",
+  "displayName": "Golden Glass Sandstorm",
+  "biomeNumber": 6,
+  "biomeKey": "singing_glass_desert",
+  "biomeName": "The Singing Glass Desert",
+  "description": "Ribbons of golden crystalline sand carried by desert wind.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 12,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_golden_glass_sandstorm_sheet.png",
+    "sheetSizePx": [
+      768,
+      64
+    ],
+    "frameFiles": [
+      "x2_golden_glass_sandstorm_00.png",
+      "x2_golden_glass_sandstorm_01.png",
+      "x2_golden_glass_sandstorm_02.png",
+      "x2_golden_glass_sandstorm_03.png",
+      "x2_golden_glass_sandstorm_04.png",
+      "x2_golden_glass_sandstorm_05.png",
+      "x2_golden_glass_sandstorm_06.png",
+      "x2_golden_glass_sandstorm_07.png",
+      "x2_golden_glass_sandstorm_08.png",
+      "x2_golden_glass_sandstorm_09.png",
+      "x2_golden_glass_sandstorm_10.png",
+      "x2_golden_glass_sandstorm_11.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 36,
+    "cycleDurationMs": 1800,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:golden_glass_sandstorm",
+    "recommendedQuadSizeBlocks": 3.6,
+    "lifetimeTicks": {
+      "min": 36,
+      "max": 36
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.12,
+    "fullbright": true,
+    "maxAlpha": 0.85,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Moves with wind direction at ~0.12 b/tick; keep ribbons near ground level (0.5-4 b). Strong reduction in combat."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": true,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

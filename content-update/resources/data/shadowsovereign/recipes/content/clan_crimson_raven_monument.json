@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:clan_crimson_raven_monument",
+    "count": 1
+  }
+}

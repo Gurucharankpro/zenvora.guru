@@ -1,0 +1,82 @@
+{
+  "profileVersion": 1,
+  "structureNumber": 4,
+  "structureKey": "forgotten_villages",
+  "displayName": "Forgotten Villages",
+  "mood": "quiet abandoned magical",
+  "doNotCreateStructures": true,
+  "implementationWarning": "Applies ONLY to structures that already exist in the mod. Verify the structure's real registry name/bounding box. No new structures are created by this pack.",
+  "structureRegistryName": null,
+  "structureRegistryNameNote": "Fill in after verifying existing structures in worldgen data.",
+  "triggerVolume": "structure bounding box + 8 block margin; use StructureManager / StructureStart bounding boxes on client via chunk structure references or block-entity markers",
+  "effectsUsed": [
+    {
+      "id": "x2_lunar_fairy_dust",
+      "particleRegistryName": "x2_living:lunar_fairy_dust",
+      "spawnsPerSecondAtHigh": 2.0,
+      "anchor": "streets and house interiors near the ground",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_dream_petal_rain",
+      "particleRegistryName": "x2_living:dream_petal_rain",
+      "spawnsPerSecondAtHigh": 1.5,
+      "anchor": "beneath trees/roof edges, 3-10 b above ground",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_moonflower_glow",
+      "particleRegistryName": "x2_living:moonflower_glow",
+      "spawnsPerSecondAtHigh": 0.5,
+      "anchor": "on garden/flower/leaf blocks, night-weighted",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_silver_mirror_mist",
+      "particleRegistryName": "x2_living:silver_mirror_mist",
+      "spawnsPerSecondAtHigh": 0.15,
+      "anchor": "low over wells/water or damp ground, max 2 alive",
+      "reusesBiomeAsset": true
+    }
+  ],
+  "blendWithBiome": {
+    "mode": "additive",
+    "maxAddedFractionOfBiomeCap": 0.35,
+    "note": "Structure effects add to, never replace, biome effects. Total still obeys the biome preset's maxParticlesAlive."
+  },
+  "softFog": {
+    "colorHex": "#6a5a78",
+    "extraDensity0to1": 0.05,
+    "implementation": "Optional; needs fog event hook; omit if not wanted."
+  },
+  "ambientLighting": {
+    "suggestedTintHex": "#d8c8ff",
+    "tintStrength0to1": 0.08,
+    "fullscreenOverlay": false
+  },
+  "qualityPresets": {
+    "low": {
+      "maxParticlesAlive": 18,
+      "spawnRadiusBlocks": 12,
+      "intensityMultiplier": 0.35
+    },
+    "medium": {
+      "maxParticlesAlive": 34,
+      "spawnRadiusBlocks": 20,
+      "intensityMultiplier": 0.7
+    },
+    "high": {
+      "maxParticlesAlive": 52,
+      "spawnRadiusBlocks": 28,
+      "intensityMultiplier": 1.0
+    }
+  },
+  "reductionRules": {
+    "hostileMobsWithin16Blocks_gt3": 0.6,
+    "hostileMobsWithin16Blocks_gt6": 0.35,
+    "playerInCombat": 0.5,
+    "bossFightActive": 0.25
+  },
+  "designNotes": "Gentle, nostalgic; keep movement slow.",
+  "estimatedSteadyStateAliveHigh": 18.8
+}

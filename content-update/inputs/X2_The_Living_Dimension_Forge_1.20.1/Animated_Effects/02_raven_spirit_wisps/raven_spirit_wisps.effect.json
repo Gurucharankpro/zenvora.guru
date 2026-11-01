@@ -1,0 +1,77 @@
+{
+  "effectNumber": 2,
+  "id": "x2_raven_spirit_wisps",
+  "displayName": "Raven Spirit Wisps",
+  "biomeNumber": 1,
+  "biomeKey": "crimson_shadow_forest",
+  "biomeName": "Crimson Shadow Forest",
+  "description": "Spectral raven forms from crimson motes, flaps, then dissolves into particles.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 12,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_raven_spirit_wisps_sheet.png",
+    "sheetSizePx": [
+      384,
+      32
+    ],
+    "frameFiles": [
+      "x2_raven_spirit_wisps_00.png",
+      "x2_raven_spirit_wisps_01.png",
+      "x2_raven_spirit_wisps_02.png",
+      "x2_raven_spirit_wisps_03.png",
+      "x2_raven_spirit_wisps_04.png",
+      "x2_raven_spirit_wisps_05.png",
+      "x2_raven_spirit_wisps_06.png",
+      "x2_raven_spirit_wisps_07.png",
+      "x2_raven_spirit_wisps_08.png",
+      "x2_raven_spirit_wisps_09.png",
+      "x2_raven_spirit_wisps_10.png",
+      "x2_raven_spirit_wisps_11.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 36,
+    "cycleDurationMs": 1800,
+    "playbackMode": "age-mapped one-shot (sprite chosen by age/lifetime, like SpriteSet#get(age, lifetime))"
+  },
+  "particle": {
+    "registryName": "x2_living:raven_spirit_wisps",
+    "recommendedQuadSizeBlocks": 0.55,
+    "lifetimeTicks": {
+      "min": 36,
+      "max": 36
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.04,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "One-shot. Frames 0-2 materialize, 3-8 flap, 9-11 dissolve. Glides forward 0.04 b/tick. Optionally spawn 3-5 crimson_ashfall at death for a seamless dissolve."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": true,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

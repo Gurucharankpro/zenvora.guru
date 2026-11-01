@@ -1,0 +1,73 @@
+{
+  "effectNumber": 10,
+  "id": "x2_ancient_ocean_lights",
+  "displayName": "Ancient Ocean Lights",
+  "biomeNumber": 5,
+  "biomeKey": "sunken_kingdom",
+  "biomeName": "The Sunken Kingdom",
+  "description": "Drifting blue underwater lights with delicate aquatic trails.",
+  "texture": {
+    "frameSizePx": 64,
+    "frameCount": 10,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_ancient_ocean_lights_sheet.png",
+    "sheetSizePx": [
+      640,
+      64
+    ],
+    "frameFiles": [
+      "x2_ancient_ocean_lights_00.png",
+      "x2_ancient_ocean_lights_01.png",
+      "x2_ancient_ocean_lights_02.png",
+      "x2_ancient_ocean_lights_03.png",
+      "x2_ancient_ocean_lights_04.png",
+      "x2_ancient_ocean_lights_05.png",
+      "x2_ancient_ocean_lights_06.png",
+      "x2_ancient_ocean_lights_07.png",
+      "x2_ancient_ocean_lights_08.png",
+      "x2_ancient_ocean_lights_09.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "ticksPerFrame": 4,
+    "msPerFrame": 200,
+    "cycleDurationTicks": 40,
+    "cycleDurationMs": 2000,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:ancient_ocean_lights",
+    "recommendedQuadSizeBlocks": 1.0,
+    "lifetimeTicks": {
+      "min": 80,
+      "max": 120
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.01,
+    "fullbright": true,
+    "maxAlpha": 0.9,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Sinuous trail is baked into sprite (trail points to the left); rotate quad or orient to motion if desired."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

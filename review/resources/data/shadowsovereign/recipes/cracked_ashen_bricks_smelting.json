@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "shadowsovereign:ashen_bricks"
-  },
-  "result": "shadowsovereign:cracked_ashen_bricks",
-  "experience": 0.35,
-  "cookingtime": 200
-}

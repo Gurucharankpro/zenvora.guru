@@ -1,0 +1,242 @@
+[
+  {
+    "biome": 1,
+    "preset": "low",
+    "estimatedAlive": 13.5,
+    "cap": 30,
+    "largeAlive": 0,
+    "largeCap": 2
+  },
+  {
+    "biome": 1,
+    "preset": "medium",
+    "estimatedAlive": 27.0,
+    "cap": 70,
+    "largeAlive": 0,
+    "largeCap": 5
+  },
+  {
+    "biome": 1,
+    "preset": "high",
+    "estimatedAlive": 38.6,
+    "cap": 120,
+    "largeAlive": 0,
+    "largeCap": 8
+  },
+  {
+    "biome": 2,
+    "preset": "low",
+    "estimatedAlive": 13.9,
+    "cap": 30,
+    "largeAlive": 0,
+    "largeCap": 2
+  },
+  {
+    "biome": 2,
+    "preset": "medium",
+    "estimatedAlive": 28.6,
+    "cap": 70,
+    "largeAlive": 0,
+    "largeCap": 5
+  },
+  {
+    "biome": 2,
+    "preset": "high",
+    "estimatedAlive": 41.4,
+    "cap": 120,
+    "largeAlive": 0,
+    "largeCap": 8
+  },
+  {
+    "biome": 3,
+    "preset": "low",
+    "estimatedAlive": 14.6,
+    "cap": 30,
+    "largeAlive": 0,
+    "largeCap": 2
+  },
+  {
+    "biome": 3,
+    "preset": "medium",
+    "estimatedAlive": 31.7,
+    "cap": 70,
+    "largeAlive": 0,
+    "largeCap": 5
+  },
+  {
+    "biome": 3,
+    "preset": "high",
+    "estimatedAlive": 47.0,
+    "cap": 120,
+    "largeAlive": 0,
+    "largeCap": 8
+  },
+  {
+    "biome": 4,
+    "preset": "low",
+    "estimatedAlive": 1.8,
+    "cap": 30,
+    "largeAlive": 1.8,
+    "largeCap": 2
+  },
+  {
+    "biome": 4,
+    "preset": "medium",
+    "estimatedAlive": 3.6,
+    "cap": 70,
+    "largeAlive": 3.6,
+    "largeCap": 5
+  },
+  {
+    "biome": 4,
+    "preset": "high",
+    "estimatedAlive": 5.1,
+    "cap": 120,
+    "largeAlive": 5.1,
+    "largeCap": 8
+  },
+  {
+    "biome": 5,
+    "preset": "low",
+    "estimatedAlive": 6.5,
+    "cap": 30,
+    "largeAlive": 0.9,
+    "largeCap": 2
+  },
+  {
+    "biome": 5,
+    "preset": "medium",
+    "estimatedAlive": 14.8,
+    "cap": 70,
+    "largeAlive": 3.6,
+    "largeCap": 5
+  },
+  {
+    "biome": 5,
+    "preset": "high",
+    "estimatedAlive": 22.4,
+    "cap": 120,
+    "largeAlive": 6.4,
+    "largeCap": 8
+  },
+  {
+    "biome": 6,
+    "preset": "low",
+    "estimatedAlive": 0.3,
+    "cap": 30,
+    "largeAlive": 0.3,
+    "largeCap": 2
+  },
+  {
+    "biome": 6,
+    "preset": "medium",
+    "estimatedAlive": 0.6,
+    "cap": 70,
+    "largeAlive": 0.6,
+    "largeCap": 5
+  },
+  {
+    "biome": 6,
+    "preset": "high",
+    "estimatedAlive": 0.9,
+    "cap": 120,
+    "largeAlive": 0.9,
+    "largeCap": 8
+  },
+  {
+    "biome": 7,
+    "preset": "low",
+    "estimatedAlive": 0.2,
+    "cap": 30,
+    "largeAlive": 0.1,
+    "largeCap": 2
+  },
+  {
+    "biome": 7,
+    "preset": "medium",
+    "estimatedAlive": 0.6,
+    "cap": 70,
+    "largeAlive": 0.5,
+    "largeCap": 5
+  },
+  {
+    "biome": 7,
+    "preset": "high",
+    "estimatedAlive": 1.0,
+    "cap": 120,
+    "largeAlive": 0.8,
+    "largeCap": 8
+  },
+  {
+    "biome": 8,
+    "preset": "low",
+    "estimatedAlive": 14.6,
+    "cap": 30,
+    "largeAlive": 0,
+    "largeCap": 2
+  },
+  {
+    "biome": 8,
+    "preset": "medium",
+    "estimatedAlive": 41.0,
+    "cap": 70,
+    "largeAlive": 0,
+    "largeCap": 5
+  },
+  {
+    "biome": 8,
+    "preset": "high",
+    "estimatedAlive": 67.0,
+    "cap": 120,
+    "largeAlive": 0,
+    "largeCap": 8
+  },
+  {
+    "biome": 9,
+    "preset": "low",
+    "estimatedAlive": 1.1,
+    "cap": 30,
+    "largeAlive": 1.0,
+    "largeCap": 2
+  },
+  {
+    "biome": 9,
+    "preset": "medium",
+    "estimatedAlive": 2.6,
+    "cap": 70,
+    "largeAlive": 1.9,
+    "largeCap": 5
+  },
+  {
+    "biome": 9,
+    "preset": "high",
+    "estimatedAlive": 4.0,
+    "cap": 120,
+    "largeAlive": 2.7,
+    "largeCap": 8
+  },
+  {
+    "biome": 10,
+    "preset": "low",
+    "estimatedAlive": 8.8,
+    "cap": 30,
+    "largeAlive": 0.0,
+    "largeCap": 2
+  },
+  {
+    "biome": 10,
+    "preset": "medium",
+    "estimatedAlive": 17.7,
+    "cap": 70,
+    "largeAlive": 0.1,
+    "largeCap": 5
+  },
+  {
+    "biome": 10,
+    "preset": "high",
+    "estimatedAlive": 25.4,
+    "cap": 120,
+    "largeAlive": 0.2,
+    "largeCap": 8
+  }
+]

@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 8,
+  "biomeKey": "dreamroot_canopy",
+  "displayName": "The Dreamroot Canopy",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_floating_dreamseeds",
+      "particleRegistryName": "x2_living:floating_dreamseeds",
+      "number": 15,
+      "displayName": "Floating Dreamseeds"
+    },
+    {
+      "id": "x2_dream_petal_rain",
+      "particleRegistryName": "x2_living:dream_petal_rain",
+      "number": 16,
+      "displayName": "Dream Petal Rain"
+    }
+  ],
+  "daytimeParticleIntensity": 0.75,
+  "nighttimeParticleIntensity": 1.0,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_floating_dreamseeds": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 4.5,
+      "dayMultiplier": 0.7,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_dream_petal_rain": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 6.5,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 0.7,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#f3b8e8",
+    "colorDayRGB01": [
+      0.953,
+      0.722,
+      0.91
+    ],
+    "colorNightHex": "#2a1740",
+    "colorNightRGB01": [
+      0.165,
+      0.09,
+      0.251
+    ],
+    "startFractionOfRenderDistance": 0.4,
+    "endFractionOfRenderDistance": 0.95,
+    "densityLabel": "light-medium",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_floating_dreamseeds": {
+      "horizontalDriftBlocksPerTick": 0.008,
+      "gravityBlocksPerTick2": 0.01,
+      "note": "Sink slowly with sway; tuft sway is baked into the loop."
+    },
+    "x2_dream_petal_rain": {
+      "horizontalDriftBlocksPerTick": 0.014,
+      "gravityBlocksPerTick2": 0.014,
+      "note": "Tumble is baked into the 12-frame loop; add sinusoidal horizontal sway in code."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_floating_dreamseeds": {
+      "min": 80,
+      "max": 140
+    },
+    "x2_dream_petal_rain": {
+      "min": 100,
+      "max": 160
+    }
+  },
+  "recommendedSpawn": {
+    "x2_floating_dreamseeds": {
+      "heightBlocksRelative": [
+        4,
+        22
+      ],
+      "location": "canopy height, falling to the ground; radius around player, under/between giant trees",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_dream_petal_rain": {
+      "heightBlocksRelative": [
+        3,
+        18
+      ],
+      "location": "beneath leaf blocks (spawn under foliage) within 24 b",
+      "minDistanceFromCameraBlocks": 3
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "petals x1.5 (fall faster +25%), seeds x0.6",
+    "thunder": "petals x1.8, seeds x0.4"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 13,
+    "suggestedTintHex": "#ffb8f0",
+    "tintStrength0to1": 0.1,
+    "note": "Soft rose/turquoise tint; keep daytime fog pale.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_floating_dreamseeds": {
+          "spawnsPerSecond": 1.575,
+          "estimatedAlive": 8.7
+        },
+        "x2_dream_petal_rain": {
+          "spawnsPerSecond": 0.91,
+          "estimatedAlive": 5.9
+        }
+      },
+      "estimatedSteadyStateAlive": 14.6,
+      "estimatedLargeQuadAlive": 0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_floating_dreamseeds": {
+          "spawnsPerSecond": 3.15,
+          "estimatedAlive": 17.3
+        },
+        "x2_dream_petal_rain": {
+          "spawnsPerSecond": 3.64,
+          "estimatedAlive": 23.7
+        }
+      },
+      "estimatedSteadyStateAlive": 41.0,
+      "estimatedLargeQuadAlive": 0
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_floating_dreamseeds": {
+          "spawnsPerSecond": 4.5,
+          "estimatedAlive": 24.8
+        },
+        "x2_dream_petal_rain": {
+          "spawnsPerSecond": 6.5,
+          "estimatedAlive": 42.2
+        }
+      },
+      "estimatedSteadyStateAlive": 67.0,
+      "estimatedLargeQuadAlive": 0
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

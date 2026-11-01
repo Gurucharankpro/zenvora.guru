@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "shadowsovereign:block/abyss_hanging_soul_roots"
-  },
-  "render_type": "minecraft:cutout"
-}

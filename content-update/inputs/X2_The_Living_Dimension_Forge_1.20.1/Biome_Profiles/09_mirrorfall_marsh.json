@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 9,
+  "biomeKey": "mirrorfall_marsh",
+  "displayName": "The Mirrorfall Marsh",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_silver_mirror_mist",
+      "particleRegistryName": "x2_living:silver_mirror_mist",
+      "number": 17,
+      "displayName": "Silver Mirror Mist"
+    },
+    {
+      "id": "x2_reflection_fragments",
+      "particleRegistryName": "x2_living:reflection_fragments",
+      "number": 18,
+      "displayName": "Reflection Fragments"
+    }
+  ],
+  "daytimeParticleIntensity": 0.6,
+  "nighttimeParticleIntensity": 0.9,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_silver_mirror_mist": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 0.55,
+      "dayMultiplier": 0.8,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_reflection_fragments": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 1.8,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 0.8,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#aebfd1",
+    "colorDayRGB01": [
+      0.682,
+      0.749,
+      0.82
+    ],
+    "colorNightHex": "#1b2433",
+    "colorNightRGB01": [
+      0.106,
+      0.141,
+      0.2
+    ],
+    "startFractionOfRenderDistance": 0.2,
+    "endFractionOfRenderDistance": 0.75,
+    "densityLabel": "heavy (misty)",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_silver_mirror_mist": {
+      "horizontalDriftBlocksPerTick": 0.004,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "Largest sprite (128 px). Spawn 0.2-1.5 b above water surface only; alpha ramp in/out; very low counts."
+    },
+    "x2_reflection_fragments": {
+      "horizontalDriftBlocksPerTick": 0.0,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "One-shot appear->peak->fade over 16 ticks."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_silver_mirror_mist": {
+      "min": 80,
+      "max": 140
+    },
+    "x2_reflection_fragments": {
+      "min": 16,
+      "max": 16
+    }
+  },
+  "recommendedSpawn": {
+    "x2_silver_mirror_mist": {
+      "heightBlocksRelative": [
+        0.2,
+        1.5
+      ],
+      "location": "only above shallow water surface blocks, 6-22 b from player, never inside 4 b",
+      "minDistanceFromCameraBlocks": 8
+    },
+    "x2_reflection_fragments": {
+      "heightBlocksRelative": [
+        0.3,
+        3.0
+      ],
+      "location": "near/above shallow water and reflective surfaces within 18 b",
+      "minDistanceFromCameraBlocks": 3
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "mist x1.4 (cap 6 alive), reflections x0.5",
+    "thunder": "mist x1.0, reflections x1.2 (flash sparkles)"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 11,
+    "suggestedTintHex": "#cfe2ff",
+    "tintStrength0to1": 0.1,
+    "note": "Silver-blue diffusion; ensure mist alpha <= 0.62.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_silver_mirror_mist": {
+          "spawnsPerSecond": 0.193,
+          "estimatedAlive": 1.0
+        },
+        "x2_reflection_fragments": {
+          "spawnsPerSecond": 0.252,
+          "estimatedAlive": 0.2
+        }
+      },
+      "estimatedSteadyStateAlive": 1.1,
+      "estimatedLargeQuadAlive": 1.0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_silver_mirror_mist": {
+          "spawnsPerSecond": 0.385,
+          "estimatedAlive": 1.9
+        },
+        "x2_reflection_fragments": {
+          "spawnsPerSecond": 1.008,
+          "estimatedAlive": 0.7
+        }
+      },
+      "estimatedSteadyStateAlive": 2.6,
+      "estimatedLargeQuadAlive": 1.9
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_silver_mirror_mist": {
+          "spawnsPerSecond": 0.55,
+          "estimatedAlive": 2.7
+        },
+        "x2_reflection_fragments": {
+          "spawnsPerSecond": 1.8,
+          "estimatedAlive": 1.3
+        }
+      },
+      "estimatedSteadyStateAlive": 4.0,
+      "estimatedLargeQuadAlive": 2.7
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

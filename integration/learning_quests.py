@@ -5,6 +5,14 @@ NS='shadowsovereign'
 VANILLA='crafting_table furnace chest barrel torch lantern campfire ladder oak_planks stick oak_slab oak_stairs oak_fence oak_fence_gate oak_door oak_trapdoor stone_pickaxe stone_axe stone_shovel stone_sword iron_pickaxe iron_axe iron_shovel iron_sword iron_helmet iron_chestplate iron_leggings iron_boots shield bucket shears flint_and_steel compass clock map fishing_rod bow crossbow arrow bread white_bed oak_boat glass_pane stone_bricks polished_andesite polished_diorite polished_granite bookshelf paper book'.split()
 assert len(VANILLA)==50
 
+def placement_criterion(block, biome=None):
+ """1.20.1 PlacedBlockTrigger uses ContextAwarePredicate (a condition array)."""
+ location={'dimension':NS+':echo_realms'}
+ if biome is not None:location['biome']=NS+':'+biome
+ return {'trigger':'minecraft:placed_block','conditions':{'location':[
+  {'condition':'minecraft:block_state_property','block':block},
+  {'condition':'minecraft:location_check','predicate':location}]}}
+
 def build(out):
  spec=json.loads((out/'integration-spec.json').read_text())
  langs={loc:json.loads((out/f'assets/{NS}/lang/{loc}.json').read_text()) for loc in ['en_us','ar_sa']}
@@ -44,14 +52,14 @@ def build(out):
   # Ten modest tabs avoid a single giant horizontal advancement tree.
   previous=None if i%10==0 else f"stock_{spec['blocks'][i-1]['id']}"
   lesson('find_'+id,'Discover '+en,'تعرّف على '+ar,'Obtain one. '+help,'احصل على واحدة. '+arhelp,{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':[item]}]}},item,5,previous)
-  lesson('place_'+id,'Build with '+en,'ابنِ باستخدام '+ar,'Place this block in Echo Realms. '+help,'ضع هذه الكتلة في بُعد الأرواح. '+arhelp,{'trigger':'minecraft:placed_block','conditions':{'block':item,'location':{'dimension':NS+':echo_realms'}}},item,10,'find_'+id)
+  lesson('place_'+id,'Build with '+en,'ابنِ باستخدام '+ar,'Place this block in Echo Realms. '+help,'ضع هذه الكتلة في بُعد الأرواح. '+arhelp,placement_criterion(item),item,10,'find_'+id)
   lesson('stock_'+id,'Prepare a reserve: '+en,'جهّز مخزونًا: '+ar,f'Keep {reserve} at once for repairs and marking both ends of a route. '+help,f'احتفظ بـ{reserve} معًا للإصلاح وتمييز طرفي الطريق. '+arhelp,{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':[item],'count':{'min':reserve}}]}},item,15,'place_'+id)
  # 60 contextual decoration tasks, each with a named target biome.
  for i,id in enumerate(spec['decor_ids']):
   b=next(b for b in spec['blocks'] if b['id']==id);biome=biomes[i%10];item=NS+':'+id
   en=langs['en_us'].get('block.'+NS+'.'+id,id);ar=langs['ar_sa'].get('block.'+NS+'.'+id,en)
   label=langs['ar_sa'].get('biome.'+NS+'.'+biome,biome)
-  lesson('landmark_'+id,'Mark '+biome.replace('_',' ')+': '+en,'علّم طريقك في '+label+': '+ar,'Place this relic in the named biome as a recognizable landmark. Leave space around it; it does not lock guardian fights.','ضع الزخرفة في هذا البايوم كعلامة طريق. اترك مساحة حولها؛ الزينة لا تحبس اللاعب في قتال الحراس.',{'trigger':'minecraft:placed_block','conditions':{'block':item,'location':{'dimension':NS+':echo_realms','biome':NS+':'+biome}}},item,15,'find_'+id)
+  lesson('landmark_'+id,'Mark '+biome.replace('_',' ')+': '+en,'علّم طريقك في '+label+': '+ar,'Place this relic in the named biome as a recognizable landmark. Leave space around it; it does not lock guardian fights.','ضع الزخرفة في هذا البايوم كعلامة طريق. اترك مساحة حولها؛ الزينة لا تحبس اللاعب في قتال الحراس.',placement_criterion(item,biome),item,15,'find_'+id)
  # 40 region-specific readiness goals teach supplies before combat, not forced wins.
  for biome in biomes:
   label=langs['ar_sa'].get('biome.'+NS+'.'+biome,biome)

@@ -1,0 +1,77 @@
+{
+  "effectNumber": 16,
+  "id": "x2_dream_petal_rain",
+  "displayName": "Dream Petal Rain",
+  "biomeNumber": 8,
+  "biomeKey": "dreamroot_canopy",
+  "biomeName": "The Dreamroot Canopy",
+  "description": "Translucent flower petals gently drifting through the canopy.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 12,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_dream_petal_rain_sheet.png",
+    "sheetSizePx": [
+      384,
+      32
+    ],
+    "frameFiles": [
+      "x2_dream_petal_rain_00.png",
+      "x2_dream_petal_rain_01.png",
+      "x2_dream_petal_rain_02.png",
+      "x2_dream_petal_rain_03.png",
+      "x2_dream_petal_rain_04.png",
+      "x2_dream_petal_rain_05.png",
+      "x2_dream_petal_rain_06.png",
+      "x2_dream_petal_rain_07.png",
+      "x2_dream_petal_rain_08.png",
+      "x2_dream_petal_rain_09.png",
+      "x2_dream_petal_rain_10.png",
+      "x2_dream_petal_rain_11.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 36,
+    "cycleDurationMs": 1800,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:dream_petal_rain",
+    "recommendedQuadSizeBlocks": 0.24,
+    "lifetimeTicks": {
+      "min": 100,
+      "max": 160
+    },
+    "gravity": 0.014,
+    "horizontalDriftBlocksPerTick": 0.014,
+    "fullbright": false,
+    "maxAlpha": 0.85,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Tumble is baked into the 12-frame loop; add sinusoidal horizontal sway in code."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

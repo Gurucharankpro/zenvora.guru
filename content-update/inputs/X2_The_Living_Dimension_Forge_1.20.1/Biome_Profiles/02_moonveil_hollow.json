@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 2,
+  "biomeKey": "moonveil_hollow",
+  "displayName": "Moonveil Hollow",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_lunar_fairy_dust",
+      "particleRegistryName": "x2_living:lunar_fairy_dust",
+      "number": 3,
+      "displayName": "Lunar Fairy Dust"
+    },
+    {
+      "id": "x2_moonflower_glow",
+      "particleRegistryName": "x2_living:moonflower_glow",
+      "number": 4,
+      "displayName": "Moonflower Glow"
+    }
+  ],
+  "daytimeParticleIntensity": 0.3,
+  "nighttimeParticleIntensity": 1.0,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_lunar_fairy_dust": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 11,
+      "dayMultiplier": 0.5,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_moonflower_glow": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 1.2,
+      "dayMultiplier": 0.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#2f3768",
+    "colorDayRGB01": [
+      0.184,
+      0.216,
+      0.408
+    ],
+    "colorNightHex": "#0b0f2e",
+    "colorNightRGB01": [
+      0.043,
+      0.059,
+      0.18
+    ],
+    "startFractionOfRenderDistance": 0.35,
+    "endFractionOfRenderDistance": 0.9,
+    "densityLabel": "medium",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_lunar_fairy_dust": {
+      "horizontalDriftBlocksPerTick": 0.006,
+      "gravityBlocksPerTick2": -0.0006,
+      "note": "Hover and bob; twinkle from sprite loop."
+    },
+    "x2_moonflower_glow": {
+      "horizontalDriftBlocksPerTick": 0.0,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "Stationary. Spawn on or just above flowers/leaf/grass blocks; night-weighted."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_lunar_fairy_dust": {
+      "min": 50,
+      "max": 90
+    },
+    "x2_moonflower_glow": {
+      "min": 32,
+      "max": 64
+    }
+  },
+  "recommendedSpawn": {
+    "x2_lunar_fairy_dust": {
+      "heightBlocksRelative": [
+        0.3,
+        3.0
+      ],
+      "location": "just above forest floor and low foliage",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_moonflower_glow": {
+      "heightBlocksRelative": [
+        0.2,
+        1.6
+      ],
+      "location": "on/above flower, grass, leaf and fern blocks within radius; night-weighted",
+      "minDistanceFromCameraBlocks": 3
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "fairy dust x0.7, moonflower x1.3 (dew glow)",
+    "thunder": "fairy dust x0.4, moonflower x0.8"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 12,
+    "suggestedTintHex": "#a8b8ff",
+    "tintStrength0to1": 0.14,
+    "note": "Cool moonlight tint; applies most at night.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_lunar_fairy_dust": {
+          "spawnsPerSecond": 3.85,
+          "estimatedAlive": 13.5
+        },
+        "x2_moonflower_glow": {
+          "spawnsPerSecond": 0.168,
+          "estimatedAlive": 0.4
+        }
+      },
+      "estimatedSteadyStateAlive": 13.9,
+      "estimatedLargeQuadAlive": 0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_lunar_fairy_dust": {
+          "spawnsPerSecond": 7.7,
+          "estimatedAlive": 26.9
+        },
+        "x2_moonflower_glow": {
+          "spawnsPerSecond": 0.672,
+          "estimatedAlive": 1.6
+        }
+      },
+      "estimatedSteadyStateAlive": 28.6,
+      "estimatedLargeQuadAlive": 0
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_lunar_fairy_dust": {
+          "spawnsPerSecond": 11.0,
+          "estimatedAlive": 38.5
+        },
+        "x2_moonflower_glow": {
+          "spawnsPerSecond": 1.2,
+          "estimatedAlive": 2.9
+        }
+      },
+      "estimatedSteadyStateAlive": 41.4,
+      "estimatedLargeQuadAlive": 0
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

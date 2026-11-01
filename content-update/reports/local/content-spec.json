@@ -1,0 +1,3549 @@
+{
+  "base_sha256": "2b9f00f36e7d1228fe31838daf6c147b5f5c719211d3f8467fedac88eba4da26",
+  "profiles": [
+    {
+      "index": 51,
+      "id": "morsi",
+      "health": 420,
+      "damage": 16,
+      "armor": 6,
+      "speed": 0.3,
+      "width": 0.65,
+      "height": 1.95,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "punch_attack",
+          0.65,
+          0,
+          3.6,
+          1
+        ],
+        [
+          "defensive_counter",
+          0.85,
+          5,
+          0,
+          0
+        ],
+        [
+          "argument",
+          1.3,
+          3,
+          7,
+          0.35
+        ]
+      ]
+    },
+    {
+      "index": 52,
+      "id": "porcelain_duchess",
+      "health": 1000,
+      "damage": 24,
+      "armor": 12,
+      "speed": 0.25,
+      "width": 1.4,
+      "height": 3.6,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "porcelain_fan_attack",
+          0.7,
+          0,
+          5,
+          1
+        ],
+        [
+          "mirror_shard_storm",
+          1.35,
+          47,
+          16,
+          0.9
+        ],
+        [
+          "crimson_ribbon_attack",
+          1.5,
+          2,
+          9,
+          0.85
+        ],
+        [
+          "royal_waltz",
+          1.85,
+          1,
+          7,
+          1
+        ],
+        [
+          "shattered_coronation",
+          2.1,
+          6,
+          16,
+          1.15
+        ]
+      ]
+    },
+    {
+      "index": 53,
+      "id": "yuta_okkotsu",
+      "health": 850,
+      "damage": 23,
+      "armor": 10,
+      "speed": 0.31,
+      "width": 0.65,
+      "height": 1.95,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "katana_combo",
+          0.65,
+          0,
+          4.6,
+          1.05
+        ],
+        [
+          "cursed_slash",
+          0.95,
+          47,
+          14,
+          1
+        ],
+        [
+          "rika_manifestation",
+          1.2,
+          3,
+          9,
+          0.5
+        ],
+        [
+          "rika_strike",
+          1.1,
+          1,
+          7,
+          1.1
+        ],
+        [
+          "reverse_cursed_energy",
+          1.45,
+          46,
+          8,
+          0
+        ]
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "clan_throne_of_the_crownless_king",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.985346991432005,
+          0,
+          0
+        ],
+        [
+          21.985346991432003,
+          32.07251970880252,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_crimson_raven_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -7.412667745614376,
+          0,
+          1.6
+        ],
+        [
+          23.412667745614375,
+          21.619164850721752,
+          17.558651171807675
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_six_armed_shadow_idol",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8.430653451683726,
+          0,
+          2
+        ],
+        [
+          24.430653451683728,
+          30.25481618158139,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 28,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_blood_moon_shrine",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5,
+          0,
+          -0.14587011926902704
+        ],
+        [
+          21,
+          23.5,
+          16.145870119269027
+        ]
+      ],
+      "mount": "floor",
+      "kind": 21,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_sharingan_eye_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8,
+          0,
+          3
+        ],
+        [
+          24,
+          31,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_itachis_raven_lantern",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          15.5,
+          32,
+          15.5
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_rinnegan_pillar",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.4145706961199149,
+          0,
+          -0.4
+        ],
+        [
+          16.414570696119917,
+          32,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 10,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_six_paths_ceremonial_altar",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.14587011926902704,
+          0,
+          -0.14587011926902704
+        ],
+        [
+          16.145870119269027,
+          15.2,
+          16.145870119269027
+        ]
+      ],
+      "mount": "floor",
+      "kind": 10,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_origami_angel_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -7.122727414430871,
+          0,
+          2.7
+        ],
+        [
+          23.12272741443087,
+          22.9095454429505,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 13,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_thousand_paper_flower_wall",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.3941125496954283,
+          -0.3941125496954283,
+          10.5
+        ],
+        [
+          16.39411254969543,
+          16.39411254969543,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 13,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_kamui_spiral_portal_frame",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.32694224173904,
+          0,
+          5.4
+        ],
+        [
+          21.32694224173904,
+          28.32694224173904,
+          10.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_orange_spiral_mask_relic",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.9289321881345249,
+          0,
+          2
+        ],
+        [
+          15.071067811865476,
+          22.571067811865476,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_madaras_war_fan_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5,
+          0,
+          11
+        ],
+        [
+          21,
+          29,
+          16.5
+        ]
+      ],
+      "mount": "wall",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_susanoo_guardian_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.2252113120447445,
+          0,
+          1
+        ],
+        [
+          21.225211312044742,
+          31,
+          15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_clay_dragon_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.5502841200629183,
+          0,
+          0.6
+        ],
+        [
+          16.55028412006292,
+          24.730442497387664,
+          31
+        ]
+      ],
+      "mount": "floor",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_explosive_clay_art_display",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          16,
+          18,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_crimson_puppet_display",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 17,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_scorpion_tail_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.6,
+          0,
+          -0.29685844399033756
+        ],
+        [
+          13.4,
+          32,
+          13.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 17,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_akatsuki_crimson_cloud_banner",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -2.5,
+          0.5,
+          6.8
+        ],
+        [
+          18.5,
+          32,
+          9.2
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_shadow_council_table",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8.755,
+          0,
+          -8.9
+        ],
+        [
+          24.755,
+          21.3,
+          24.325
+        ]
+      ],
+      "mount": "floor",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_crystal_fawn_memorial",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.85,
+          0.0,
+          1.2
+        ],
+        [
+          13.15,
+          15.957106781186548,
+          13.15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 31,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_fountain_of_lost_tears",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.38447360876115677,
+          0.0,
+          -0.38447360876115677
+        ],
+        [
+          16.384473608761155,
+          14.057714679092992,
+          16.384473608761155
+        ]
+      ],
+      "mount": "floor",
+      "kind": 31,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_miniature_cathedral_shell",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.2,
+          0.0,
+          0.3
+        ],
+        [
+          13.8,
+          14.6,
+          15.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_bell_of_forgotten_souls",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.99,
+          0.0,
+          5.5
+        ],
+        [
+          15.01,
+          14.8,
+          10.657191560558699
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_celestial_moonmoth_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.0,
+          0.0,
+          2.6
+        ],
+        [
+          15.0,
+          15.6,
+          13.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 2,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_moonlit_butterfly_chandelier",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.676482422783954,
+          0.4,
+          6.3
+        ],
+        [
+          14.013172798364531,
+          16.0,
+          9.7
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 2,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_otters_pearl_fountain",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0.0,
+          0.4
+        ],
+        [
+          15.6,
+          15.5,
+          15.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 41,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_forgotten_watermill_miniature",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3088692381135185,
+          0.0,
+          0.5
+        ],
+        [
+          16.03604815860014,
+          11.2,
+          15.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 41,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_celestial_owl_observatory_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.3263455967290595,
+          0.0,
+          3.0
+        ],
+        [
+          16.32634559672906,
+          15.6,
+          13.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 38,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_astronomers_star_globe",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.0365767307483889,
+          0.0,
+          1.0365767307483889
+        ],
+        [
+          14.96342326925161,
+          16.045766958625883,
+          14.96342326925161
+        ]
+      ],
+      "mount": "floor",
+      "kind": 38,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_porcelain_pangolin_figurine",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.8,
+          0.0,
+          1.8
+        ],
+        [
+          14.35,
+          12.2,
+          14.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sapphire_ceramic_bell_tower",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.6,
+          0.0,
+          1.6
+        ],
+        [
+          14.4,
+          16.0,
+          14.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sleeping_red_panda_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.2,
+          0.0,
+          1.2
+        ],
+        [
+          14.8,
+          6.006982028664593,
+          14.8
+        ]
+      ],
+      "mount": "floor",
+      "kind": 32,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_golden_bamboo_lantern_shrine",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.0,
+          0.0,
+          1.5
+        ],
+        [
+          15.5,
+          13.4,
+          14.742462120245873
+        ]
+      ],
+      "mount": "floor",
+      "kind": 34,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_crystal_axolotl_aquarium",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.5,
+          0.0,
+          0.5
+        ],
+        [
+          15.5,
+          11.8,
+          15.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 44,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_broken_heart_pearl_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.5,
+          0.0,
+          4.55
+        ],
+        [
+          13.5,
+          16.0,
+          11.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 44,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sleeping_snow_leopard_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.3859082321716132,
+          0.0,
+          0.8
+        ],
+        [
+          14.559934369194051,
+          7.0,
+          15.159934369194055
+        ]
+      ],
+      "mount": "floor",
+      "kind": 35,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_frozen_royal_crystal_throne",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.0,
+          0.0,
+          2.0
+        ],
+        [
+          14.021745436475687,
+          16.16568542494924,
+          14.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 35,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_golden_elephant_music_box",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0.0,
+          0.4
+        ],
+        [
+          16.0,
+          11.2,
+          15.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 32,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_forgotten_dream_carousel",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.1,
+          0.0,
+          0.1
+        ],
+        [
+          15.9,
+          16.0,
+          15.9
+        ]
+      ],
+      "mount": "floor",
+      "kind": 34,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_refai_legendary_chair",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.2,
+          0,
+          1.5
+        ],
+        [
+          15.8,
+          16,
+          14.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_refai_memorial_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          15,
+          28,
+          15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_nasser_executive_desk",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3,
+          0,
+          1.2
+        ],
+        [
+          15.7,
+          16.8,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_twin_brothers_portrait",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          -0.2,
+          12.4
+        ],
+        [
+          16.2,
+          19.8,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_salmawy_archive_cabinet",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.8,
+          0,
+          0.8
+        ],
+        [
+          15.2,
+          16,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_black_marble_conference_table",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          2.3
+        ],
+        [
+          16,
+          16,
+          13.7
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_traditional_egyptian_majlis",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          15.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_antique_cairo_grandfather_clock",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          13,
+          31,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_el_nemr_golden_lion_throne",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0.8
+        ],
+        [
+          16,
+          25,
+          15.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 39,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_el_nemr_family_emblem",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.6,
+          0.2,
+          13.5
+        ],
+        [
+          16.6,
+          18,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 39,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_workshop_tool_cabinet",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.8,
+          0,
+          1.7
+        ],
+        [
+          15.2,
+          16.2,
+          13.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 46,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_vintage_workshop_machinery",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.6,
+          0,
+          1.4
+        ],
+        [
+          16.2,
+          20,
+          14.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 46,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_mobile_phone_display_counter",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          0,
+          1.6
+        ],
+        [
+          16.2,
+          13.6,
+          14.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 51,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_morsi_mobile_shop_sign",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          3,
+          13.2
+        ],
+        [
+          16.2,
+          16,
+          16.2
+        ]
+      ],
+      "mount": "wall",
+      "kind": 51,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_hanan_traditional_vanity",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0,
+          0.2
+        ],
+        [
+          15.6,
+          20.6,
+          13.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 49,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_egyptian_family_tea_set",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.6,
+          0,
+          1.6
+        ],
+        [
+          15.4,
+          10,
+          14.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 49,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_old_cairo_police_office_desk",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3,
+          0,
+          1.2
+        ],
+        [
+          15.7,
+          16.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_police_station_wall_clock",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          12.6
+        ],
+        [
+          16,
+          16.6,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_giant_zombie_refai_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          31.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 45,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_throne_of_the_undead_legend",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          0,
+          0
+        ],
+        [
+          16.2,
+          31.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 45,
+      "pack": "ostoura",
+      "source_scale": 1
+    }
+  ],
+  "templates": {
+    "51": {
+      "path": "data/shadowsovereign/structures/content/morsi_mobile_shop.nbt",
+      "altar": [
+        15,
+        5,
+        14
+      ],
+      "source_dimensions": [
+        31,
+        19,
+        29
+      ]
+    },
+    "52": {
+      "path": "data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt",
+      "altar": [
+        24,
+        9,
+        17
+      ],
+      "source_dimensions": [
+        49,
+        33,
+        49
+      ]
+    },
+    "53": {
+      "path": "data/shadowsovereign/structures/content/abandoned_jujutsu_academy.nbt",
+      "altar": [
+        22,
+        9,
+        16
+      ],
+      "source_dimensions": [
+        45,
+        27,
+        45
+      ]
+    }
+  },
+  "decor_placements": [
+    {
+      "id": "clan_throne_of_the_crownless_king",
+      "position": [
+        7,
+        1,
+        18
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          6,
+          1,
+          18
+        ],
+        [
+          6,
+          2,
+          18
+        ],
+        [
+          6,
+          3,
+          18
+        ],
+        [
+          7,
+          1,
+          18
+        ],
+        [
+          7,
+          2,
+          18
+        ],
+        [
+          7,
+          3,
+          18
+        ],
+        [
+          8,
+          1,
+          18
+        ],
+        [
+          8,
+          2,
+          18
+        ],
+        [
+          8,
+          3,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/covenant_crownless_sovereign.nbt",
+      "kind": 6
+    },
+    {
+      "id": "clan_crimson_raven_monument",
+      "position": [
+        5,
+        1,
+        52
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          52
+        ],
+        [
+          4,
+          1,
+          53
+        ],
+        [
+          4,
+          2,
+          52
+        ],
+        [
+          4,
+          2,
+          53
+        ],
+        [
+          5,
+          1,
+          52
+        ],
+        [
+          5,
+          1,
+          53
+        ],
+        [
+          5,
+          2,
+          52
+        ],
+        [
+          5,
+          2,
+          53
+        ],
+        [
+          6,
+          1,
+          52
+        ],
+        [
+          6,
+          1,
+          53
+        ],
+        [
+          6,
+          2,
+          52
+        ],
+        [
+          6,
+          2,
+          53
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_crow_retreat.nbt",
+      "kind": 22
+    },
+    {
+      "id": "clan_sharingan_eye_monument",
+      "position": [
+        5,
+        1,
+        4
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          5,
+          1,
+          4
+        ],
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          6,
+          1,
+          4
+        ],
+        [
+          6,
+          2,
+          4
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_crow_retreat.nbt",
+      "kind": 22
+    },
+    {
+      "id": "clan_itachis_raven_lantern",
+      "position": [
+        28,
+        5,
+        50
+      ],
+      "mount": "ceiling",
+      "reserved_cells": [
+        [
+          28,
+          5,
+          50
+        ],
+        [
+          28,
+          6,
+          50
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_crow_retreat.nbt",
+      "kind": 22
+    },
+    {
+      "id": "clan_kamui_spiral_portal_frame",
+      "position": [
+        7,
+        1,
+        50
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          6,
+          1,
+          50
+        ],
+        [
+          6,
+          2,
+          50
+        ],
+        [
+          7,
+          1,
+          50
+        ],
+        [
+          7,
+          2,
+          50
+        ],
+        [
+          8,
+          1,
+          50
+        ],
+        [
+          8,
+          2,
+          50
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_crow_retreat.nbt",
+      "kind": 22
+    },
+    {
+      "id": "clan_orange_spiral_mask_relic",
+      "position": [
+        4,
+        1,
+        5
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          5
+        ],
+        [
+          4,
+          2,
+          5
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_crow_retreat.nbt",
+      "kind": 22
+    },
+    {
+      "id": "clan_six_armed_shadow_idol",
+      "position": [
+        5,
+        2,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          2,
+          7
+        ],
+        [
+          4,
+          3,
+          7
+        ],
+        [
+          5,
+          2,
+          7
+        ],
+        [
+          5,
+          3,
+          7
+        ],
+        [
+          6,
+          2,
+          7
+        ],
+        [
+          6,
+          3,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/shattered_void_thread_court.nbt",
+      "kind": 28
+    },
+    {
+      "id": "clan_blood_moon_shrine",
+      "position": [
+        4,
+        1,
+        27
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          1,
+          26
+        ],
+        [
+          3,
+          1,
+          27
+        ],
+        [
+          3,
+          1,
+          28
+        ],
+        [
+          3,
+          2,
+          26
+        ],
+        [
+          3,
+          2,
+          27
+        ],
+        [
+          3,
+          2,
+          28
+        ],
+        [
+          4,
+          1,
+          26
+        ],
+        [
+          4,
+          1,
+          27
+        ],
+        [
+          4,
+          1,
+          28
+        ],
+        [
+          4,
+          2,
+          26
+        ],
+        [
+          4,
+          2,
+          27
+        ],
+        [
+          4,
+          2,
+          28
+        ],
+        [
+          5,
+          1,
+          26
+        ],
+        [
+          5,
+          1,
+          27
+        ],
+        [
+          5,
+          1,
+          28
+        ],
+        [
+          5,
+          2,
+          26
+        ],
+        [
+          5,
+          2,
+          27
+        ],
+        [
+          5,
+          2,
+          28
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/chronicles_lunar_monastery.nbt",
+      "kind": 21
+    },
+    {
+      "id": "clan_rinnegan_pillar",
+      "position": [
+        1,
+        1,
+        16
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          1,
+          15
+        ],
+        [
+          0,
+          1,
+          16
+        ],
+        [
+          0,
+          2,
+          15
+        ],
+        [
+          0,
+          2,
+          16
+        ],
+        [
+          1,
+          1,
+          15
+        ],
+        [
+          1,
+          1,
+          16
+        ],
+        [
+          1,
+          2,
+          15
+        ],
+        [
+          1,
+          2,
+          16
+        ],
+        [
+          2,
+          1,
+          15
+        ],
+        [
+          2,
+          1,
+          16
+        ],
+        [
+          2,
+          2,
+          15
+        ],
+        [
+          2,
+          2,
+          16
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/monolith_pain_court.nbt",
+      "kind": 10
+    },
+    {
+      "id": "clan_six_paths_ceremonial_altar",
+      "position": [
+        2,
+        1,
+        11
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          1,
+          10
+        ],
+        [
+          1,
+          1,
+          11
+        ],
+        [
+          1,
+          1,
+          12
+        ],
+        [
+          2,
+          1,
+          10
+        ],
+        [
+          2,
+          1,
+          11
+        ],
+        [
+          2,
+          1,
+          12
+        ],
+        [
+          3,
+          1,
+          10
+        ],
+        [
+          3,
+          1,
+          11
+        ],
+        [
+          3,
+          1,
+          12
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/monolith_pain_court.nbt",
+      "kind": 10
+    },
+    {
+      "id": "clan_origami_angel_sculpture",
+      "position": [
+        1,
+        1,
+        0
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_paper_shrine.nbt",
+      "kind": 13
+    },
+    {
+      "id": "clan_thousand_paper_flower_wall",
+      "position": [
+        17,
+        2,
+        34
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          16,
+          1,
+          34
+        ],
+        [
+          16,
+          2,
+          34
+        ],
+        [
+          16,
+          3,
+          34
+        ],
+        [
+          17,
+          1,
+          34
+        ],
+        [
+          17,
+          2,
+          34
+        ],
+        [
+          17,
+          3,
+          34
+        ],
+        [
+          18,
+          1,
+          34
+        ],
+        [
+          18,
+          2,
+          34
+        ],
+        [
+          18,
+          3,
+          34
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_paper_shrine.nbt",
+      "kind": 13
+    },
+    {
+      "id": "clan_madaras_war_fan_monument",
+      "position": [
+        5,
+        1,
+        4
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          4
+        ],
+        [
+          4,
+          2,
+          4
+        ],
+        [
+          5,
+          1,
+          4
+        ],
+        [
+          5,
+          2,
+          4
+        ],
+        [
+          6,
+          1,
+          4
+        ],
+        [
+          6,
+          2,
+          4
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_madara_bastion.nbt",
+      "kind": 16
+    },
+    {
+      "id": "clan_susanoo_guardian_statue",
+      "position": [
+        5,
+        1,
+        60
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          60
+        ],
+        [
+          4,
+          2,
+          60
+        ],
+        [
+          5,
+          1,
+          60
+        ],
+        [
+          5,
+          2,
+          60
+        ],
+        [
+          6,
+          1,
+          60
+        ],
+        [
+          6,
+          2,
+          60
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_madara_bastion.nbt",
+      "kind": 16
+    },
+    {
+      "id": "clan_shadow_council_table",
+      "position": [
+        3,
+        1,
+        6
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          1,
+          5
+        ],
+        [
+          2,
+          1,
+          6
+        ],
+        [
+          2,
+          1,
+          7
+        ],
+        [
+          2,
+          2,
+          5
+        ],
+        [
+          2,
+          2,
+          6
+        ],
+        [
+          2,
+          2,
+          7
+        ],
+        [
+          3,
+          1,
+          5
+        ],
+        [
+          3,
+          1,
+          6
+        ],
+        [
+          3,
+          1,
+          7
+        ],
+        [
+          3,
+          2,
+          5
+        ],
+        [
+          3,
+          2,
+          6
+        ],
+        [
+          3,
+          2,
+          7
+        ],
+        [
+          4,
+          1,
+          5
+        ],
+        [
+          4,
+          1,
+          6
+        ],
+        [
+          4,
+          1,
+          7
+        ],
+        [
+          4,
+          2,
+          5
+        ],
+        [
+          4,
+          2,
+          6
+        ],
+        [
+          4,
+          2,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_madara_bastion.nbt",
+      "kind": 16
+    },
+    {
+      "id": "clan_clay_dragon_sculpture",
+      "position": [
+        25,
+        6,
+        20
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          24,
+          6,
+          20
+        ],
+        [
+          24,
+          6,
+          21
+        ],
+        [
+          24,
+          7,
+          20
+        ],
+        [
+          24,
+          7,
+          21
+        ],
+        [
+          25,
+          6,
+          20
+        ],
+        [
+          25,
+          6,
+          21
+        ],
+        [
+          25,
+          7,
+          20
+        ],
+        [
+          25,
+          7,
+          21
+        ],
+        [
+          26,
+          6,
+          20
+        ],
+        [
+          26,
+          6,
+          21
+        ],
+        [
+          26,
+          7,
+          20
+        ],
+        [
+          26,
+          7,
+          21
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/crimson_akatsuki_shadow_hideout.nbt",
+      "kind": 23
+    },
+    {
+      "id": "clan_explosive_clay_art_display",
+      "position": [
+        10,
+        6,
+        14
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          10,
+          6,
+          14
+        ],
+        [
+          10,
+          7,
+          14
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/crimson_akatsuki_shadow_hideout.nbt",
+      "kind": 23
+    },
+    {
+      "id": "clan_akatsuki_crimson_cloud_banner",
+      "position": [
+        17,
+        6,
+        33
+      ],
+      "mount": "ceiling",
+      "reserved_cells": [
+        [
+          16,
+          6,
+          33
+        ],
+        [
+          16,
+          7,
+          33
+        ],
+        [
+          17,
+          6,
+          33
+        ],
+        [
+          17,
+          7,
+          33
+        ],
+        [
+          18,
+          6,
+          33
+        ],
+        [
+          18,
+          7,
+          33
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/crimson_akatsuki_shadow_hideout.nbt",
+      "kind": 23
+    },
+    {
+      "id": "clan_crimson_puppet_display",
+      "position": [
+        6,
+        1,
+        38
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          6,
+          1,
+          38
+        ],
+        [
+          6,
+          2,
+          38
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_sasori_workshop.nbt",
+      "kind": 17
+    },
+    {
+      "id": "clan_scorpion_tail_monument",
+      "position": [
+        6,
+        1,
+        40
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          6,
+          1,
+          39
+        ],
+        [
+          6,
+          1,
+          40
+        ],
+        [
+          6,
+          2,
+          39
+        ],
+        [
+          6,
+          2,
+          40
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/legends_sasori_workshop.nbt",
+      "kind": 17
+    },
+    {
+      "id": "tormented_crystal_fawn_memorial",
+      "position": [
+        0,
+        8,
+        20
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          8,
+          20
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/shattered_sanctuary_of_lost_tears.nbt",
+      "kind": 31
+    },
+    {
+      "id": "tormented_fountain_of_lost_tears",
+      "position": [
+        3,
+        8,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          8,
+          6
+        ],
+        [
+          2,
+          8,
+          7
+        ],
+        [
+          2,
+          8,
+          8
+        ],
+        [
+          3,
+          8,
+          6
+        ],
+        [
+          3,
+          8,
+          7
+        ],
+        [
+          3,
+          8,
+          8
+        ],
+        [
+          4,
+          8,
+          6
+        ],
+        [
+          4,
+          8,
+          7
+        ],
+        [
+          4,
+          8,
+          8
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/shattered_sanctuary_of_lost_tears.nbt",
+      "kind": 31
+    },
+    {
+      "id": "tormented_miniature_cathedral_shell",
+      "position": [
+        2,
+        1,
+        29
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          1,
+          29
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/shattered_porcelain_temple.nbt",
+      "kind": 42
+    },
+    {
+      "id": "tormented_bell_of_forgotten_souls",
+      "position": [
+        2,
+        1,
+        33
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          1,
+          33
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/shattered_porcelain_temple.nbt",
+      "kind": 42
+    },
+    {
+      "id": "tormented_porcelain_pangolin_figurine",
+      "position": [
+        3,
+        1,
+        29
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          1,
+          29
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/shattered_porcelain_temple.nbt",
+      "kind": 42
+    },
+    {
+      "id": "tormented_sapphire_ceramic_bell_tower",
+      "position": [
+        3,
+        1,
+        33
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          1,
+          33
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/shattered_porcelain_temple.nbt",
+      "kind": 42
+    },
+    {
+      "id": "tormented_celestial_moonmoth_sculpture",
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/mythic_bloom_garden.nbt",
+      "kind": 2
+    },
+    {
+      "id": "tormented_moonlit_butterfly_chandelier",
+      "position": [
+        3,
+        1,
+        16
+      ],
+      "mount": "ceiling",
+      "reserved_cells": [
+        [
+          3,
+          1,
+          16
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/mythic_bloom_garden.nbt",
+      "kind": 2
+    },
+    {
+      "id": "tormented_otters_pearl_fountain",
+      "position": [
+        2,
+        4,
+        10
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          4,
+          10
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/pearl_sanctuary.nbt",
+      "kind": 41
+    },
+    {
+      "id": "tormented_forgotten_watermill_miniature",
+      "position": [
+        3,
+        4,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          4,
+          7
+        ],
+        [
+          4,
+          4,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/pearl_sanctuary.nbt",
+      "kind": 41
+    },
+    {
+      "id": "tormented_celestial_owl_observatory_statue",
+      "position": [
+        5,
+        21,
+        11
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          21,
+          11
+        ],
+        [
+          5,
+          21,
+          11
+        ],
+        [
+          6,
+          21,
+          11
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/abandoned_star_library.nbt",
+      "kind": 38
+    },
+    {
+      "id": "tormented_astronomers_star_globe",
+      "position": [
+        4,
+        21,
+        13
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          21,
+          13
+        ],
+        [
+          4,
+          22,
+          13
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/abandoned_star_library.nbt",
+      "kind": 38
+    },
+    {
+      "id": "tormented_sleeping_red_panda_statue",
+      "position": [
+        1,
+        11,
+        18
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          11,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/shattered_forgotten_golden_pagoda.nbt",
+      "kind": 32
+    },
+    {
+      "id": "tormented_golden_elephant_music_box",
+      "position": [
+        3,
+        11,
+        6
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          11,
+          6
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/shattered_forgotten_golden_pagoda.nbt",
+      "kind": 32
+    },
+    {
+      "id": "tormented_golden_bamboo_lantern_shrine",
+      "position": [
+        7,
+        13,
+        34
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          7,
+          13,
+          34
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_palace_of_frozen_memories.nbt",
+      "kind": 34
+    },
+    {
+      "id": "tormented_forgotten_dream_carousel",
+      "position": [
+        8,
+        13,
+        33
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          8,
+          13,
+          33
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_palace_of_frozen_memories.nbt",
+      "kind": 34
+    },
+    {
+      "id": "tormented_crystal_axolotl_aquarium",
+      "position": [
+        12,
+        8,
+        28
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          12,
+          8,
+          28
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/drowned_glass_palace.nbt",
+      "kind": 44
+    },
+    {
+      "id": "tormented_broken_heart_pearl_monument",
+      "position": [
+        23,
+        8,
+        8
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          23,
+          8,
+          8
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/drowned_glass_palace.nbt",
+      "kind": 44
+    },
+    {
+      "id": "tormented_sleeping_snow_leopard_sculpture",
+      "position": [
+        1,
+        6,
+        16
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          6,
+          16
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_forgotten_dream_carnival.nbt",
+      "kind": 35
+    },
+    {
+      "id": "tormented_frozen_royal_crystal_throne",
+      "position": [
+        1,
+        6,
+        25
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          6,
+          25
+        ],
+        [
+          1,
+          7,
+          25
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_forgotten_dream_carnival.nbt",
+      "kind": 35
+    },
+    {
+      "id": "ostoura_refai_legendary_chair",
+      "position": [
+        10,
+        8,
+        38
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          10,
+          8,
+          38
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_refai_memorial_statue",
+      "position": [
+        10,
+        8,
+        39
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          10,
+          8,
+          39
+        ],
+        [
+          10,
+          9,
+          39
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_nasser_executive_desk",
+      "position": [
+        10,
+        8,
+        40
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          10,
+          8,
+          40
+        ],
+        [
+          10,
+          9,
+          40
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_twin_brothers_portrait",
+      "position": [
+        11,
+        8,
+        37
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          10,
+          7,
+          37
+        ],
+        [
+          10,
+          8,
+          37
+        ],
+        [
+          10,
+          9,
+          37
+        ],
+        [
+          11,
+          7,
+          37
+        ],
+        [
+          11,
+          8,
+          37
+        ],
+        [
+          11,
+          9,
+          37
+        ],
+        [
+          12,
+          7,
+          37
+        ],
+        [
+          12,
+          8,
+          37
+        ],
+        [
+          12,
+          9,
+          37
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_old_cairo_police_office_desk",
+      "position": [
+        11,
+        8,
+        25
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          11,
+          8,
+          25
+        ],
+        [
+          11,
+          9,
+          25
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_police_station_wall_clock",
+      "position": [
+        12,
+        8,
+        24
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          12,
+          8,
+          24
+        ],
+        [
+          12,
+          9,
+          24
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/knighthaven_refai_compound.nbt",
+      "kind": 36
+    },
+    {
+      "id": "ostoura_salmawy_archive_cabinet",
+      "position": [
+        3,
+        6,
+        14
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          6,
+          14
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/old_desouky_family_house.nbt",
+      "kind": 37
+    },
+    {
+      "id": "ostoura_black_marble_conference_table",
+      "position": [
+        14,
+        6,
+        3
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          14,
+          6,
+          3
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/old_desouky_family_house.nbt",
+      "kind": 37
+    },
+    {
+      "id": "ostoura_traditional_egyptian_majlis",
+      "position": [
+        24,
+        6,
+        21
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          24,
+          6,
+          21
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/old_desouky_family_house.nbt",
+      "kind": 37
+    },
+    {
+      "id": "ostoura_antique_cairo_grandfather_clock",
+      "position": [
+        26,
+        6,
+        33
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          26,
+          6,
+          33
+        ],
+        [
+          26,
+          7,
+          33
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/old_desouky_family_house.nbt",
+      "kind": 37
+    },
+    {
+      "id": "ostoura_el_nemr_golden_lion_throne",
+      "position": [
+        3,
+        7,
+        23
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          7,
+          23
+        ],
+        [
+          3,
+          8,
+          23
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/el_nemr_mansion.nbt",
+      "kind": 39
+    },
+    {
+      "id": "ostoura_el_nemr_family_emblem",
+      "position": [
+        4,
+        7,
+        21
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          3,
+          7,
+          21
+        ],
+        [
+          3,
+          8,
+          21
+        ],
+        [
+          4,
+          7,
+          21
+        ],
+        [
+          4,
+          8,
+          21
+        ],
+        [
+          5,
+          7,
+          21
+        ],
+        [
+          5,
+          8,
+          21
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/el_nemr_mansion.nbt",
+      "kind": 39
+    },
+    {
+      "id": "ostoura_workshop_tool_cabinet",
+      "position": [
+        0,
+        5,
+        8
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          5,
+          8
+        ],
+        [
+          0,
+          6,
+          8
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/amin_el_nemr_workshop.nbt",
+      "kind": 46
+    },
+    {
+      "id": "ostoura_vintage_workshop_machinery",
+      "position": [
+        1,
+        5,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          0,
+          6,
+          7
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          1,
+          6,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ],
+        [
+          2,
+          6,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/amin_el_nemr_workshop.nbt",
+      "kind": 46
+    },
+    {
+      "id": "ostoura_mobile_phone_display_counter",
+      "position": [
+        1,
+        5,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          5,
+          7
+        ],
+        [
+          1,
+          5,
+          7
+        ],
+        [
+          2,
+          5,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/morsi_mobile_shop.nbt",
+      "kind": 51
+    },
+    {
+      "id": "ostoura_morsi_mobile_shop_sign",
+      "position": [
+        1,
+        5,
+        27
+      ],
+      "mount": "wall",
+      "reserved_cells": [
+        [
+          0,
+          5,
+          27
+        ],
+        [
+          1,
+          5,
+          27
+        ],
+        [
+          2,
+          5,
+          27
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/morsi_mobile_shop.nbt",
+      "kind": 51
+    },
+    {
+      "id": "ostoura_hanan_traditional_vanity",
+      "position": [
+        1,
+        1,
+        1
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/hanan_cairo_house.nbt",
+      "kind": 49
+    },
+    {
+      "id": "ostoura_egyptian_family_tea_set",
+      "position": [
+        1,
+        1,
+        2
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          1,
+          2
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/hanan_cairo_house.nbt",
+      "kind": 49
+    },
+    {
+      "id": "ostoura_giant_zombie_refai_monument",
+      "position": [
+        2,
+        10,
+        3
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          10,
+          3
+        ],
+        [
+          2,
+          11,
+          3
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/refai_cursed_stronghold.nbt",
+      "kind": 45
+    },
+    {
+      "id": "ostoura_throne_of_the_undead_legend",
+      "position": [
+        4,
+        10,
+        2
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          10,
+          2
+        ],
+        [
+          3,
+          11,
+          2
+        ],
+        [
+          4,
+          10,
+          2
+        ],
+        [
+          4,
+          11,
+          2
+        ],
+        [
+          5,
+          10,
+          2
+        ],
+        [
+          5,
+          11,
+          2
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/refai_cursed_stronghold.nbt",
+      "kind": 45
+    }
+  ],
+  "x2": {
+    "registered_effect_ids": [
+      "x2_crimson_ashfall",
+      "x2_raven_spirit_wisps",
+      "x2_lunar_fairy_dust",
+      "x2_moonflower_glow",
+      "x2_celestial_stardust",
+      "x2_floating_crystal_fragments",
+      "x2_emerald_spore_clouds",
+      "x2_abyss_crystal_pulse",
+      "x2_enchanted_pearl_bubbles",
+      "x2_ancient_ocean_lights",
+      "x2_golden_glass_sandstorm",
+      "x2_singing_crystal_resonance",
+      "x2_blue_storm_sparks",
+      "x2_thundercloud_energy",
+      "x2_floating_dreamseeds",
+      "x2_dream_petal_rain",
+      "x2_silver_mirror_mist",
+      "x2_reflection_fragments",
+      "x2_ancient_amber_dust",
+      "x2_fossil_resonance_echo"
+    ],
+    "biomes": {
+      "crimson_shadow_forest": "crimson_shadow",
+      "moonveil_hollow": "moonveil_hollow",
+      "shattered_sky": "shattered_sky",
+      "eternal_abyss": "eternal_abyss",
+      "sunken_kingdom": "sunken_kingdom"
+    },
+    "unbound_biomes": [
+      "singing_glass_desert",
+      "thunderfall_highlands",
+      "dreamroot_canopy",
+      "mirrorfall_marsh",
+      "titanbone_caverns"
+    ],
+    "sound_ids": [
+      "x2_ambient_01_crimson_shadow_forest",
+      "x2_ambient_02_moonveil_hollow",
+      "x2_ambient_03_shattered_sky",
+      "x2_ambient_04_eternal_abyss",
+      "x2_ambient_05_sunken_kingdom",
+      "x2_ambient_06_singing_glass_desert",
+      "x2_ambient_07_thunderfall_highlands",
+      "x2_ambient_08_dreamroot_canopy",
+      "x2_ambient_09_mirrorfall_marsh",
+      "x2_ambient_10_titanbone_caverns"
+    ]
+  }
+}

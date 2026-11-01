@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stone_bricks"
+    },
+    "C": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:ostoura_antique_cairo_grandfather_clock",
+    "count": 1
+  }
+}

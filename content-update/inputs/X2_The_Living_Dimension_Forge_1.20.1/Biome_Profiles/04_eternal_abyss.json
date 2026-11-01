@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 4,
+  "biomeKey": "eternal_abyss",
+  "displayName": "The Eternal Abyss",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_emerald_spore_clouds",
+      "particleRegistryName": "x2_living:emerald_spore_clouds",
+      "number": 7,
+      "displayName": "Emerald Spore Clouds"
+    },
+    {
+      "id": "x2_abyss_crystal_pulse",
+      "particleRegistryName": "x2_living:abyss_crystal_pulse",
+      "number": 8,
+      "displayName": "Abyss Crystal Pulse"
+    }
+  ],
+  "daytimeParticleIntensity": 0.7,
+  "nighttimeParticleIntensity": 0.7,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_emerald_spore_clouds": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 1.1,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_abyss_crystal_pulse": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 0.22,
+      "dayMultiplier": 1.0,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#07241f",
+    "colorDayRGB01": [
+      0.027,
+      0.141,
+      0.122
+    ],
+    "colorNightHex": "#04120f",
+    "colorNightRGB01": [
+      0.016,
+      0.071,
+      0.059
+    ],
+    "startFractionOfRenderDistance": 0.15,
+    "endFractionOfRenderDistance": 0.65,
+    "densityLabel": "heavy",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_emerald_spore_clouds": {
+      "horizontalDriftBlocksPerTick": 0.006,
+      "gravityBlocksPerTick2": -0.0005,
+      "note": "Large soft quad; keep counts very low. Fade alpha in/out over first/last 15 ticks."
+    },
+    "x2_abyss_crystal_pulse": {
+      "horizontalDriftBlocksPerTick": 0.0,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "One-shot expanding pulse; spawn at crystal block positions at random 3-8 s intervals."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_emerald_spore_clouds": {
+      "min": 100,
+      "max": 160
+    },
+    "x2_abyss_crystal_pulse": {
+      "min": 16,
+      "max": 16
+    }
+  },
+  "recommendedSpawn": {
+    "x2_emerald_spore_clouds": {
+      "heightBlocksRelative": [
+        0.5,
+        6
+      ],
+      "location": "cave air volume, floor-relative, radius around player",
+      "minDistanceFromCameraBlocks": 8
+    },
+    "x2_abyss_crystal_pulse": {
+      "heightBlocksRelative": [
+        0,
+        12
+      ],
+      "location": "adjacent to giant crystal blocks within 16 b; random 3-8 s interval per crystal cluster",
+      "minDistanceFromCameraBlocks": 8
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline (underground, weather has no effect)",
+    "rain": "no change",
+    "thunder": "no change"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 13,
+    "suggestedTintHex": "#3dffc0",
+    "tintStrength0to1": 0.15,
+    "note": "Emerald bioluminescent tint; cave fog should stay >= 0.15 of render distance.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_emerald_spore_clouds": {
+          "spawnsPerSecond": 0.385,
+          "estimatedAlive": 1.8
+        },
+        "x2_abyss_crystal_pulse": {
+          "spawnsPerSecond": 0.031,
+          "estimatedAlive": 0.0
+        }
+      },
+      "estimatedSteadyStateAlive": 1.8,
+      "estimatedLargeQuadAlive": 1.8
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_emerald_spore_clouds": {
+          "spawnsPerSecond": 0.77,
+          "estimatedAlive": 3.5
+        },
+        "x2_abyss_crystal_pulse": {
+          "spawnsPerSecond": 0.123,
+          "estimatedAlive": 0.1
+        }
+      },
+      "estimatedSteadyStateAlive": 3.6,
+      "estimatedLargeQuadAlive": 3.6
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_emerald_spore_clouds": {
+          "spawnsPerSecond": 1.1,
+          "estimatedAlive": 5.0
+        },
+        "x2_abyss_crystal_pulse": {
+          "spawnsPerSecond": 0.22,
+          "estimatedAlive": 0.1
+        }
+      },
+      "estimatedSteadyStateAlive": 5.1,
+      "estimatedLargeQuadAlive": 5.1
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

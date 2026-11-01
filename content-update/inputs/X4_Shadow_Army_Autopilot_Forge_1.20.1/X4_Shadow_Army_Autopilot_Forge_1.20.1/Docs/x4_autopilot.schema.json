@@ -1,0 +1,456 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "X4 Shadow Army Autopilot server config (proposed)",
+  "type": "object",
+  "properties": {
+    "general": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "respectExplicitCommands": {
+          "type": "boolean",
+          "default": true,
+          "description": "must stay true; documented for clarity"
+        },
+        "postLoadGraceTicks": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 0,
+          "maximum": 1200,
+          "description": "range 0-1200"
+        }
+      },
+      "additionalProperties": false
+    },
+    "smartFollow": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "followClearance": {
+          "type": "number",
+          "default": 2.5,
+          "minimum": 1.0,
+          "maximum": 8.0,
+          "description": "blocks, 1.0-8.0"
+        },
+        "followResume": {
+          "type": "number",
+          "default": 6.0,
+          "minimum": 2.0,
+          "maximum": 32.0,
+          "description": "blocks, 2.0-32.0 (never below the existing follow range)"
+        },
+        "sizeSpacingFactor": {
+          "type": "number",
+          "default": 1.2,
+          "minimum": 1.0,
+          "maximum": 3.0,
+          "description": "1.0-3.0"
+        },
+        "maxSlotOffset": {
+          "type": "number",
+          "default": 3.0,
+          "minimum": 0.5,
+          "maximum": 8.0,
+          "description": "blocks, 0.5-8.0"
+        },
+        "passageExitBlocks": {
+          "type": "integer",
+          "default": 3,
+          "minimum": 1,
+          "maximum": 10,
+          "description": "1-10"
+        }
+      },
+      "additionalProperties": false
+    },
+    "antiStuck": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "stuckWindowTicks": {
+          "type": "integer",
+          "default": 60,
+          "minimum": 20,
+          "maximum": 400,
+          "description": "20-400"
+        },
+        "stuckMinProgress": {
+          "type": "number",
+          "default": 0.5,
+          "minimum": 0.1,
+          "maximum": 3.0,
+          "description": "blocks, 0.1-3.0"
+        },
+        "stuckConfirmChecks": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 1,
+          "maximum": 6,
+          "description": "1-6"
+        },
+        "separatedDistance": {
+          "type": "number",
+          "default": 32.0,
+          "minimum": 16,
+          "maximum": 256,
+          "description": "blocks, 16-256"
+        },
+        "repathAttempts": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 0,
+          "maximum": 6,
+          "description": "0-6"
+        },
+        "repathCooldownTicks": {
+          "type": "integer",
+          "default": 40,
+          "minimum": 10,
+          "maximum": 400,
+          "description": "10-400"
+        },
+        "regroupSearchRadius": {
+          "type": "integer",
+          "default": 6,
+          "minimum": 2,
+          "maximum": 16,
+          "description": "2-16"
+        },
+        "regroupTimeoutTicks": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 20,
+          "maximum": 600,
+          "description": "20-600"
+        },
+        "allowEmergencyTeleport": {
+          "type": "boolean",
+          "default": false,
+          "description": "off by default: server owners opt in"
+        },
+        "teleportAfterTicks": {
+          "type": "integer",
+          "default": 200,
+          "minimum": 60,
+          "maximum": 2400,
+          "description": "60-2400"
+        },
+        "teleportCooldownTicks": {
+          "type": "integer",
+          "default": 600,
+          "minimum": 100,
+          "maximum": 12000,
+          "description": "100-12000"
+        },
+        "maxSafeFall": {
+          "type": "integer",
+          "default": 3,
+          "minimum": 0,
+          "maximum": 6,
+          "description": "0-6"
+        },
+        "failedRetryTicks": {
+          "type": "integer",
+          "default": 600,
+          "minimum": 100,
+          "maximum": 12000,
+          "description": "100-12000"
+        }
+      },
+      "additionalProperties": false
+    },
+    "buildingMode": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "buildRadius": {
+          "type": "number",
+          "default": 3.5,
+          "minimum": 1.5,
+          "maximum": 8.0,
+          "description": "1.5-8.0"
+        },
+        "buildReach": {
+          "type": "number",
+          "default": 6.0,
+          "minimum": 3.0,
+          "maximum": 8.0,
+          "description": "3.0-8.0"
+        },
+        "buildTargetMargin": {
+          "type": "number",
+          "default": 2.0,
+          "minimum": 0.0,
+          "maximum": 5.0,
+          "description": "0.0-5.0"
+        },
+        "buildEdgeMargin": {
+          "type": "number",
+          "default": 1.0,
+          "minimum": 0.0,
+          "maximum": 4.0,
+          "description": "0.0-4.0"
+        },
+        "buildAutoOffTicks": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 200,
+          "maximum": 72000,
+          "description": "0 = never, else 200-72000"
+        }
+      },
+      "additionalProperties": false
+    },
+    "combatAssist": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "assistRange": {
+          "type": "number",
+          "default": 16.0,
+          "minimum": 4,
+          "maximum": 48,
+          "description": "4-48"
+        },
+        "dropRange": {
+          "type": "number",
+          "default": 24.0,
+          "minimum": 8,
+          "maximum": 64,
+          "description": "8-64 (>= assistRange)"
+        },
+        "ownerTargetMemoryTicks": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 20,
+          "maximum": 600,
+          "description": "20-600"
+        },
+        "minTargetHoldTicks": {
+          "type": "integer",
+          "default": 40,
+          "minimum": 0,
+          "maximum": 400,
+          "description": "0-400"
+        },
+        "switchDistanceAdvantage": {
+          "type": "number",
+          "default": 3.0,
+          "minimum": 0,
+          "maximum": 16,
+          "description": "0-16"
+        },
+        "maxAttackersPerTarget": {
+          "type": "integer",
+          "default": 6,
+          "minimum": 1,
+          "maximum": 16,
+          "description": "1-16"
+        },
+        "supportDistance": {
+          "type": "number",
+          "default": 4.0,
+          "minimum": 2,
+          "maximum": 10,
+          "description": "2-10"
+        },
+        "losConeDegrees": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 0,
+          "maximum": 45,
+          "description": "0-45 (0 disables)"
+        },
+        "losConeLength": {
+          "type": "number",
+          "default": 12.0,
+          "minimum": 4,
+          "maximum": 24,
+          "description": "4-24"
+        },
+        "protectHealthFraction": {
+          "type": "number",
+          "default": 0.4,
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "0.0-1.0"
+        },
+        "protectWindowTicks": {
+          "type": "integer",
+          "default": 60,
+          "minimum": 0,
+          "maximum": 400,
+          "description": "0-400"
+        },
+        "protectCount": {
+          "type": "integer",
+          "default": 4,
+          "minimum": 0,
+          "maximum": 16,
+          "description": "0-16"
+        }
+      },
+      "additionalProperties": false
+    },
+    "performance": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "combatInterval": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 1,
+          "maximum": 20,
+          "description": "ticks, 1-20"
+        },
+        "followInterval": {
+          "type": "integer",
+          "default": 5,
+          "minimum": 2,
+          "maximum": 40,
+          "description": "2-40"
+        },
+        "idleInterval": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 5,
+          "maximum": 100,
+          "description": "5-100"
+        },
+        "farInterval": {
+          "type": "integer",
+          "default": 40,
+          "minimum": 10,
+          "maximum": 200,
+          "description": "10-200"
+        },
+        "maxSmartUpdatesPerTick": {
+          "type": "integer",
+          "default": 24,
+          "minimum": 1,
+          "maximum": 512,
+          "description": "1-512"
+        },
+        "maxPathRequestsPerTick": {
+          "type": "integer",
+          "default": 4,
+          "minimum": 1,
+          "maximum": 64,
+          "description": "1-64"
+        },
+        "maxPathRequestsPerOwnerPerTick": {
+          "type": "integer",
+          "default": 2,
+          "minimum": 1,
+          "maximum": 16,
+          "description": "1-16"
+        },
+        "maxStarveTicks": {
+          "type": "integer",
+          "default": 200,
+          "minimum": 40,
+          "maximum": 1200,
+          "description": "40-1200"
+        },
+        "safePosCacheTicks": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 0,
+          "maximum": 200,
+          "description": "0-200"
+        },
+        "perfModeIntervalMultiplier": {
+          "type": "number",
+          "default": 2.0,
+          "minimum": 1.0,
+          "maximum": 8.0,
+          "description": "1.0-8.0"
+        },
+        "forcePerformanceMode": {
+          "type": "boolean",
+          "default": false
+        },
+        "debugLogIntervalSeconds": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 5,
+          "maximum": 300,
+          "description": "0 = off, else 5-300"
+        }
+      },
+      "additionalProperties": false
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "statusSyncTicks": {
+          "type": "integer",
+          "default": 20,
+          "minimum": 5,
+          "maximum": 100,
+          "description": "5-100"
+        },
+        "notifyCooldownTicks": {
+          "type": "integer",
+          "default": 100,
+          "minimum": 20,
+          "maximum": 1200,
+          "description": "20-1200"
+        },
+        "regroupCooldownTicks": {
+          "type": "integer",
+          "default": 40,
+          "minimum": 10,
+          "maximum": 400,
+          "description": "10-400"
+        },
+        "regroupIgnoresHold": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "multiplayer": {
+      "type": "object",
+      "properties": {
+        "requestMinIntervalTicks": {
+          "type": "integer",
+          "default": 5,
+          "minimum": 1,
+          "maximum": 40,
+          "description": "1-40"
+        },
+        "teamShareAutopilot": {
+          "type": "boolean",
+          "default": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

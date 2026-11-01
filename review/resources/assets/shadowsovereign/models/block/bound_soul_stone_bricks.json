@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "shadowsovereign:block/bound_soul_stone_bricks"
-  }
-}

@@ -1,0 +1,69 @@
+{
+  "effectNumber": 17,
+  "id": "x2_silver_mirror_mist",
+  "displayName": "Silver Mirror Mist",
+  "biomeNumber": 9,
+  "biomeKey": "mirrorfall_marsh",
+  "biomeName": "The Mirrorfall Marsh",
+  "description": "Elegant silver-blue mist wisps above shallow swamp water.",
+  "texture": {
+    "frameSizePx": 128,
+    "frameCount": 8,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_silver_mirror_mist_sheet.png",
+    "sheetSizePx": [
+      1024,
+      128
+    ],
+    "frameFiles": [
+      "x2_silver_mirror_mist_00.png",
+      "x2_silver_mirror_mist_01.png",
+      "x2_silver_mirror_mist_02.png",
+      "x2_silver_mirror_mist_03.png",
+      "x2_silver_mirror_mist_04.png",
+      "x2_silver_mirror_mist_05.png",
+      "x2_silver_mirror_mist_06.png",
+      "x2_silver_mirror_mist_07.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "ticksPerFrame": 6,
+    "msPerFrame": 300,
+    "cycleDurationTicks": 48,
+    "cycleDurationMs": 2400,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:silver_mirror_mist",
+    "recommendedQuadSizeBlocks": 4.2,
+    "lifetimeTicks": {
+      "min": 80,
+      "max": 140
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.004,
+    "fullbright": false,
+    "maxAlpha": 0.7,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Largest sprite (128 px). Spawn 0.2-1.5 b above water surface only; alpha ramp in/out; very low counts."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": true,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

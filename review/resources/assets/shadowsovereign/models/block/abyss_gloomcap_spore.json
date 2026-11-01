@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "shadowsovereign:block/abyss_gloomcap_spore"
-  },
-  "render_type": "minecraft:cutout"
-}

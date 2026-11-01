@@ -1,0 +1,77 @@
+{
+  "effectNumber": 6,
+  "id": "x2_floating_crystal_fragments",
+  "displayName": "Floating Crystal Fragments",
+  "biomeNumber": 3,
+  "biomeKey": "shattered_sky",
+  "biomeName": "The Shattered Sky",
+  "description": "Small rotating crystal fragments suspended in magical air currents.",
+  "texture": {
+    "frameSizePx": 32,
+    "frameCount": 12,
+    "layout": "horizontal-strip",
+    "sheetFile": "x2_floating_crystal_fragments_sheet.png",
+    "sheetSizePx": [
+      384,
+      32
+    ],
+    "frameFiles": [
+      "x2_floating_crystal_fragments_00.png",
+      "x2_floating_crystal_fragments_01.png",
+      "x2_floating_crystal_fragments_02.png",
+      "x2_floating_crystal_fragments_03.png",
+      "x2_floating_crystal_fragments_04.png",
+      "x2_floating_crystal_fragments_05.png",
+      "x2_floating_crystal_fragments_06.png",
+      "x2_floating_crystal_fragments_07.png",
+      "x2_floating_crystal_fragments_08.png",
+      "x2_floating_crystal_fragments_09.png",
+      "x2_floating_crystal_fragments_10.png",
+      "x2_floating_crystal_fragments_11.png"
+    ],
+    "format": "PNG RGBA 8-bit, transparent background"
+  },
+  "animation": {
+    "frameOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "ticksPerFrame": 3,
+    "msPerFrame": 150,
+    "cycleDurationTicks": 36,
+    "cycleDurationMs": 1800,
+    "playbackMode": "loop-cycle (sprite = (age / ticksPerFrame) % frameCount)"
+  },
+  "particle": {
+    "registryName": "x2_living:floating_crystal_fragments",
+    "recommendedQuadSizeBlocks": 0.22,
+    "lifetimeTicks": {
+      "min": 80,
+      "max": 140
+    },
+    "gravity": 0.0,
+    "horizontalDriftBlocksPerTick": 0.008,
+    "fullbright": true,
+    "maxAlpha": 0.95,
+    "translucentSheet": "PARTICLE_SHEET_TRANSLUCENT",
+    "notes": "Rotation is baked into the 12-frame cycle; add gentle sinusoidal bob in code or keep stationary."
+  },
+  "integrationRequirements": {
+    "customForgeParticleRegistration": true,
+    "customSpawnLogic": true,
+    "secondarySpawn": false,
+    "weatherRenderingHook": false,
+    "fogRenderingHook": false,
+    "note": "JSON alone does not create a working particle. A SimpleParticleType must be registered in Java (see Integration/INTEGRATION_GUIDE.md)."
+  }
+}

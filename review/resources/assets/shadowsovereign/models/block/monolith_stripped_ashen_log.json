@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "shadowsovereign:block/monolith_stripped_ashen_log",
-    "side": "shadowsovereign:block/monolith_stripped_ashen_log"
-  }
-}

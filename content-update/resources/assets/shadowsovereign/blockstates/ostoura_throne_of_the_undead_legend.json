@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/ostoura_throne_of_the_undead_legend",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/ostoura_throne_of_the_undead_legend",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/ostoura_throne_of_the_undead_legend",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/ostoura_throne_of_the_undead_legend",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "profileVersion": 1,
+  "structureNumber": 3,
+  "structureKey": "underground_dungeons",
+  "displayName": "Underground Dungeons",
+  "mood": "mysterious cave ambience",
+  "doNotCreateStructures": true,
+  "implementationWarning": "Applies ONLY to structures that already exist in the mod. Verify the structure's real registry name/bounding box. No new structures are created by this pack.",
+  "structureRegistryName": null,
+  "structureRegistryNameNote": "Fill in after verifying existing structures in worldgen data.",
+  "triggerVolume": "structure bounding box + 8 block margin; use StructureManager / StructureStart bounding boxes on client via chunk structure references or block-entity markers",
+  "effectsUsed": [
+    {
+      "id": "x2_ancient_amber_dust",
+      "particleRegistryName": "x2_living:ancient_amber_dust",
+      "spawnsPerSecondAtHigh": 3.0,
+      "anchor": "corridor/cell air volumes, 0.5-3 b above floor",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_fossil_resonance_echo",
+      "particleRegistryName": "x2_living:fossil_resonance_echo",
+      "spawnsPerSecondAtHigh": 0.1,
+      "anchor": "wall alcoves, bone/fossil decoration, floor-level",
+      "reusesBiomeAsset": true
+    },
+    {
+      "id": "x2_emerald_spore_clouds",
+      "particleRegistryName": "x2_living:emerald_spore_clouds",
+      "spawnsPerSecondAtHigh": 0.15,
+      "anchor": "room corners and low ceilings; keep max 2 alive",
+      "reusesBiomeAsset": true
+    }
+  ],
+  "blendWithBiome": {
+    "mode": "additive",
+    "maxAddedFractionOfBiomeCap": 0.35,
+    "note": "Structure effects add to, never replace, biome effects. Total still obeys the biome preset's maxParticlesAlive."
+  },
+  "softFog": {
+    "colorHex": "#10181a",
+    "extraDensity0to1": 0.1,
+    "implementation": "Optional; needs fog event hook; omit if not wanted."
+  },
+  "ambientLighting": {
+    "suggestedTintHex": "#8fe0c0",
+    "tintStrength0to1": 0.08,
+    "fullscreenOverlay": false
+  },
+  "qualityPresets": {
+    "low": {
+      "maxParticlesAlive": 16,
+      "spawnRadiusBlocks": 12,
+      "intensityMultiplier": 0.35
+    },
+    "medium": {
+      "maxParticlesAlive": 32,
+      "spawnRadiusBlocks": 20,
+      "intensityMultiplier": 0.7
+    },
+    "high": {
+      "maxParticlesAlive": 50,
+      "spawnRadiusBlocks": 28,
+      "intensityMultiplier": 1.0
+    }
+  },
+  "reductionRules": {
+    "hostileMobsWithin16Blocks_gt3": 0.6,
+    "hostileMobsWithin16Blocks_gt6": 0.35,
+    "playerInCombat": 0.5,
+    "bossFightActive": 0.25
+  },
+  "designNotes": "Sparse and quiet; mostly dust and an occasional echo.",
+  "estimatedSteadyStateAliveHigh": 14.6
+}

@@ -1,0 +1,134 @@
+{
+  "x1.shadow_summon": {
+    "sounds": [
+      {
+        "name": "shadowsovereign:x1/shadow_summon",
+        "stream": false
+      }
+    ]
+  },
+  "x1.shadow_magic_impact": {
+    "sounds": [
+      {
+        "name": "shadowsovereign:x1/shadow_magic_impact",
+        "stream": false
+      }
+    ]
+  },
+  "x1.shadow_rank_promotion": {
+    "sounds": [
+      {
+        "name": "shadowsovereign:x1/shadow_rank_promotion",
+        "stream": false
+      }
+    ]
+  },
+  "x1.shadow_extraction": {
+    "sounds": [
+      {
+        "name": "shadowsovereign:x1/shadow_extraction",
+        "stream": false
+      }
+    ]
+  },
+  "x2_ambient_01_crimson_shadow_forest": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_01_crimson_shadow_forest",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.crimson_shadow_forest"
+  },
+  "x2_ambient_02_moonveil_hollow": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_02_moonveil_hollow",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.moonveil_hollow"
+  },
+  "x2_ambient_03_shattered_sky": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_03_shattered_sky",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.shattered_sky"
+  },
+  "x2_ambient_04_eternal_abyss": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_04_eternal_abyss",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.eternal_abyss"
+  },
+  "x2_ambient_05_sunken_kingdom": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_05_sunken_kingdom",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.sunken_kingdom"
+  },
+  "x2_ambient_06_singing_glass_desert": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_06_singing_glass_desert",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.singing_glass_desert"
+  },
+  "x2_ambient_07_thunderfall_highlands": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_07_thunderfall_highlands",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.thunderfall_highlands"
+  },
+  "x2_ambient_08_dreamroot_canopy": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_08_dreamroot_canopy",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.dreamroot_canopy"
+  },
+  "x2_ambient_09_mirrorfall_marsh": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_09_mirrorfall_marsh",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.mirrorfall_marsh"
+  },
+  "x2_ambient_10_titanbone_caverns": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "x2_living:ambient/x2_ambient_10_titanbone_caverns",
+        "stream": true
+      }
+    ],
+    "subtitle": "x2_living.ambient.titanbone_caverns"
+  }
+}

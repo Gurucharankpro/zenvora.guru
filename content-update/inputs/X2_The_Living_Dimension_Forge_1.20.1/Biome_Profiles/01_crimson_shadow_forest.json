@@ -1,0 +1,185 @@
+{
+  "profileVersion": 1,
+  "biomeNumber": 1,
+  "biomeKey": "crimson_shadow_forest",
+  "displayName": "Crimson Shadow Forest",
+  "verificationRequired": true,
+  "implementationWarning": "This is an integration SPECIFICATION. It does not run by itself. The developer MUST verify this biome actually exists and is implemented in the Soul Bound Dimension mod (find its real registry name) before wiring these effects. Do not add or create the biome from this file.",
+  "biomeRegistryName": null,
+  "biomeRegistryNameNote": "Unknown to the asset author. Fill in after verifying in the mod's worldgen data (data/<modid>/worldgen/biome/*.json).",
+  "effects": [
+    {
+      "id": "x2_crimson_ashfall",
+      "particleRegistryName": "x2_living:crimson_ashfall",
+      "number": 1,
+      "displayName": "Crimson Ashfall"
+    },
+    {
+      "id": "x2_raven_spirit_wisps",
+      "particleRegistryName": "x2_living:raven_spirit_wisps",
+      "number": 2,
+      "displayName": "Raven Spirit Wisps"
+    }
+  ],
+  "daytimeParticleIntensity": 0.5,
+  "nighttimeParticleIntensity": 0.8,
+  "intensityNote": "0..1 multiplier applied to all spawn rates. Blend smoothly using sky angle; day = skyLight-adjusted sun, night = moon phase. Underground biomes ignore day/night.",
+  "effectFrequency": {
+    "x2_crimson_ashfall": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 12,
+      "dayMultiplier": 0.7,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    },
+    "x2_raven_spirit_wisps": {
+      "spawnAttemptsPerSecondAtFullIntensityHigh": 0.12,
+      "dayMultiplier": 0.4,
+      "nightMultiplier": 1.0,
+      "meaning": "Average spawns/second inside the active player area at preset High and intensity 1.0, before weather/mob modifiers. Use random jitter (+/-30%)."
+    }
+  },
+  "fog": {
+    "colorDayHex": "#3a0d14",
+    "colorDayRGB01": [
+      0.227,
+      0.051,
+      0.078
+    ],
+    "colorNightHex": "#14040a",
+    "colorNightRGB01": [
+      0.078,
+      0.016,
+      0.039
+    ],
+    "startFractionOfRenderDistance": 0.3,
+    "endFractionOfRenderDistance": 0.85,
+    "densityLabel": "medium-heavy",
+    "implementation": "Requires Java: Forge ViewportEvent.ComputeFogColor + ViewportEvent.RenderFog, or biome JSON effects.fog_color / water_fog_color where the biome file allows. No fullscreen overlay textures are used."
+  },
+  "particleMovementSpeed": {
+    "x2_crimson_ashfall": {
+      "horizontalDriftBlocksPerTick": 0.01,
+      "gravityBlocksPerTick2": 0.004,
+      "note": "Drifts slowly down with random horizontal sway; flicker comes from the sprite loop."
+    },
+    "x2_raven_spirit_wisps": {
+      "horizontalDriftBlocksPerTick": 0.04,
+      "gravityBlocksPerTick2": 0.0,
+      "note": "One-shot. Frames 0-2 materialize, 3-8 flap, 9-11 dissolve. Glides forward 0.04 b/tick. Optionally spawn 3-5 crimson_ashfall at death for a seamless dissolve."
+    }
+  },
+  "particleLifetimeTicks": {
+    "x2_crimson_ashfall": {
+      "min": 60,
+      "max": 100
+    },
+    "x2_raven_spirit_wisps": {
+      "min": 36,
+      "max": 36
+    }
+  },
+  "recommendedSpawn": {
+    "x2_crimson_ashfall": {
+      "heightBlocksRelative": [
+        0.5,
+        9
+      ],
+      "location": "air between tree trunks; ground-relative; radius around player",
+      "minDistanceFromCameraBlocks": 3
+    },
+    "x2_raven_spirit_wisps": {
+      "heightBlocksRelative": [
+        3,
+        9
+      ],
+      "location": "near logs/leaf canopy edge, 8-24 b from player, never closer than 5 b",
+      "minDistanceFromCameraBlocks": 3
+    }
+  },
+  "weatherVariations": {
+    "clear": "baseline",
+    "rain": "ashfall x0.6 (damp embers), fog +10% density",
+    "thunder": "ravens x2.0 for 20 s after each lightning flash, ashfall x1.2"
+  },
+  "ambientLighting": {
+    "particleBlockLightLevel0to15": 11,
+    "suggestedTintHex": "#ff7a7a",
+    "tintStrength0to1": 0.12,
+    "note": "Warm red rim light; do not raise world light level.",
+    "emissiveParticles": "Particles flagged fullbright in the effect manifest return LightTexture.FULL_BRIGHT (15728880) from getLightColor; others use world light."
+  },
+  "qualityPresets": {
+    "low": {
+      "intensityMultiplier": 0.35,
+      "maxParticlesAlive": 30,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 2,
+      "spawnRadiusBlocks": 12,
+      "cullDistanceBlocks": 24,
+      "spriteFrameSkip": 2,
+      "secondaryEffectMultiplier": 0.4,
+      "fogMode": "minimal",
+      "perEffect": {
+        "x2_crimson_ashfall": {
+          "spawnsPerSecond": 4.2,
+          "estimatedAlive": 13.4
+        },
+        "x2_raven_spirit_wisps": {
+          "spawnsPerSecond": 0.017,
+          "estimatedAlive": 0.0
+        }
+      },
+      "estimatedSteadyStateAlive": 13.5,
+      "estimatedLargeQuadAlive": 0
+    },
+    "medium": {
+      "intensityMultiplier": 0.7,
+      "maxParticlesAlive": 70,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 5,
+      "spawnRadiusBlocks": 20,
+      "cullDistanceBlocks": 40,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 0.8,
+      "fogMode": "reduced",
+      "perEffect": {
+        "x2_crimson_ashfall": {
+          "spawnsPerSecond": 8.4,
+          "estimatedAlive": 26.9
+        },
+        "x2_raven_spirit_wisps": {
+          "spawnsPerSecond": 0.067,
+          "estimatedAlive": 0.1
+        }
+      },
+      "estimatedSteadyStateAlive": 27.0,
+      "estimatedLargeQuadAlive": 0
+    },
+    "high": {
+      "intensityMultiplier": 1.0,
+      "maxParticlesAlive": 120,
+      "maxLargeQuadParticlesAlive(quad>=1 block)": 8,
+      "spawnRadiusBlocks": 28,
+      "cullDistanceBlocks": 56,
+      "spriteFrameSkip": 1,
+      "secondaryEffectMultiplier": 1.0,
+      "fogMode": "full",
+      "perEffect": {
+        "x2_crimson_ashfall": {
+          "spawnsPerSecond": 12.0,
+          "estimatedAlive": 38.4
+        },
+        "x2_raven_spirit_wisps": {
+          "spawnsPerSecond": 0.12,
+          "estimatedAlive": 0.2
+        }
+      },
+      "estimatedSteadyStateAlive": 38.6,
+      "estimatedLargeQuadAlive": 0
+    }
+  },
+  "combatSafety": {
+    "particlesWithinBlocksOfCameraFade": 2.5,
+    "maxAlphaWithinCombatRadius": 0.5,
+    "mobCountReduction": "see Integration/performance_settings.json",
+    "neverFullscreen": true
+  }
+}

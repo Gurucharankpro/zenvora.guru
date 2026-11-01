@@ -1,0 +1,9 @@
+test_500_generated_lessons_equal_reviewed_engine_fixed_resources (__main__.GeneratorRepairs.test_500_generated_lessons_equal_reviewed_engine_fixed_resources) ... ok
+test_x1_generator_explicitly_atlases_all_444_frames_and_keeps_foreign_sources (__main__.GeneratorRepairs.test_x1_generator_explicitly_atlases_all_444_frames_and_keeps_foreign_sources) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.217s
+
+OK
+Added exactly 500 additive, localized, one-time learning advancement quests (300 block, 60 landmark, 40 readiness, 100 crafting).
+Prepared X1: 15 effect families, 31 layers, 444 independently clocked frame models.
