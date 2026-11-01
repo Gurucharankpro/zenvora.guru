@@ -1,6 +1,6 @@
 # مراجعة التحديث الجديد وSinging Glass Desert
 
-الحالة: failure. بصمة JAR النهائي: `NOT BUILT`.
+الحالة: success. بصمة JAR النهائي: `bce014dd991d1307ba72ddf2b1568ee2b916677802025855dd0a9252257162f8`.
 ابدأ من review/README.md ثم polish-update/reports/CI-RESULT.json والسجلات.
 استخدم downloads/current فقط عند نجاح البناء؛ ملفات base مدخلات تاريخية.
 المشروع إصلاحات وإضافات محدودة فوق آخر JAR كامل، وليس السورس الأصلي الكامل.

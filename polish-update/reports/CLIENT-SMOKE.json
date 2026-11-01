@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "graphical_client_tested": true,
+  "final_input_sha256": "bce014dd991d1307ba72ddf2b1568ee2b916677802025855dd0a9252257162f8",
+  "runtime": "ForgeGradle remaps final production JAR to official dev mappings; Xvfb/Mesa software rendering",
+  "actual_menu_book_summon_save_reopen": true,
+  "latest_three_legends_and_jerboa_rendered": true,
+  "screenshots": [
+    "earned-latest-legend.png",
+    "world-companion-and-fx.png",
+    "latest-native-models.png",
+    "unique-eggs-and-journey-badges.png",
+    "h-army.png"
+  ],
+  "mobile": false,
+  "multiplayer": false
+}

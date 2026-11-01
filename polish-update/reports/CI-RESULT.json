@@ -1,9 +1,9 @@
 {
-  "status": "failure",
-  "source_commit": "9590203b23451c18c224dd9cb7a0650ad7e32df8",
-  "run_id": "41315742036",
-  "production_built": false,
-  "graphical_client_tested": false,
+  "status": "success",
+  "source_commit": "d7e32141e97fb1b56b9ff323a71185bc744ea005",
+  "run_id": "41317256309",
+  "production_built": true,
+  "graphical_client_tested": true,
   "multiplayer_tested": false,
   "production_smoke": {
     "status": "passed",
@@ -16,29 +16,48 @@
     "production_server_started": true,
     "isolated_save_flushed": true,
     "biome_located": [
-      5504,
-      6144
+      4864,
+      -2368
     ],
     "biome_chunks_requested": 4,
     "multiplayer": false,
     "saved_full_chunks": [
       [
-        344,
-        384
+        304,
+        -148
       ],
       [
-        344,
-        385
+        304,
+        -147
       ],
       [
-        345,
-        384
+        305,
+        -148
       ],
       [
-        345,
-        385
+        305,
+        -147
       ]
     ],
     "actual_desert_biome_and_surface_blocks": true
-  }
+  },
+  "client_smoke": {
+    "status": "passed",
+    "graphical_client_tested": true,
+    "final_input_sha256": "bce014dd991d1307ba72ddf2b1568ee2b916677802025855dd0a9252257162f8",
+    "runtime": "ForgeGradle remaps final production JAR to official dev mappings; Xvfb/Mesa software rendering",
+    "actual_menu_book_summon_save_reopen": true,
+    "latest_three_legends_and_jerboa_rendered": true,
+    "screenshots": [
+      "earned-latest-legend.png",
+      "world-companion-and-fx.png",
+      "latest-native-models.png",
+      "unique-eggs-and-journey-badges.png",
+      "h-army.png"
+    ],
+    "mobile": false,
+    "multiplayer": false
+  },
+  "jar_sha256": "bce014dd991d1307ba72ddf2b1568ee2b916677802025855dd0a9252257162f8",
+  "jar_bytes": 50840620
 }

@@ -2,4 +2,4 @@
 
 [Downloads and actual test evidence / التحميل والفحوص](review/README.md).
 
-Build status: **failure**.
+Build status: **success**.
