@@ -21,6 +21,7 @@ public final class DungeonMob extends Monster implements GeoEntity {
  public String id(){return DGRegistry.MOB_IDS[kind];}
  protected void defineSynchedData(){super.defineSynchedData();entityData.define(MOVE,-1);}
  protected void registerGoals(){goalSelector.addGoal(0,new FloatGoal(this));goalSelector.addGoal(1,new Combat(this));goalSelector.addGoal(5,new WaterAvoidingRandomStrollGoal(this,.8));goalSelector.addGoal(6,new LookAtPlayerGoal(this,Player.class,10));targetSelector.addGoal(1,new HurtByTargetGoal(this));targetSelector.addGoal(2,new NearestAttackableTargetGoal<>(this,Player.class,10,true,false,p->instance==null||DungeonState.get(((ServerLevel)level()).getServer()).instances.get(instance)!=null&&DungeonState.get(((ServerLevel)level()).getServer()).instances.get(instance).owner.equals(p.getUUID())));}
+ public void onAddedToWorld(){super.onAddedToWorld();if(!level().isClientSide&&(kind==3||kind==4)&&!getPersistentData().getBoolean("DungeonSpawnPlayed")){getPersistentData().putBoolean("DungeonSpawnPlayed",true);start(5);}}
  public void initializeStats(){double[] hp={24,36,150,28,40,180};double[] damage={4,5,8,5,6,9};getAttribute(Attributes.MAX_HEALTH).setBaseValue(hp[kind]*DGConfig.HEALTH.get());getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(damage[kind]*DGConfig.DAMAGE.get());setHealth(getMaxHealth());}
  public SpawnGroupData finalizeSpawn(ServerLevelAccessor l,net.minecraft.world.DifficultyInstance d,MobSpawnType reason,SpawnGroupData data,CompoundTag nbt){var r=super.finalizeSpawn(l,d,reason,data,nbt);initializeStats();return r;}
  public void addAdditionalSaveData(CompoundTag t){super.addAdditionalSaveData(t);if(instance!=null)t.putUUID("DungeonInstance",instance);t.putBoolean("DungeonPhase",phase);}
@@ -29,7 +30,7 @@ public final class DungeonMob extends Monster implements GeoEntity {
  public void startSeenByPlayer(ServerPlayer p){super.startSeenByPlayer(p);if(kind%3==2)bar.addPlayer(p);}
  public void stopSeenByPlayer(ServerPlayer p){super.stopSeenByPlayer(p);bar.removePlayer(p);}
  public void remove(RemovalReason r){bar.removeAllPlayers();super.remove(r);}
- public boolean hurt(DamageSource source,float damage){if(move>=0){var m=MOVES[kind][move];if(m.effect==3)damage*=.25f;if(m.clip.equals("phase_transition"))return false;}boolean hit=super.hurt(source,damage);if(hit&&kind==4&&move<0&&cooldown>10){start(4);cooldown=40;}return hit;}
+ public boolean hurt(DamageSource source,float damage){if(move>=0){var m=MOVES[kind][move];if(m.clip.contains("guard")||m.clip.contains("shield"))damage*=.25f;if(m.clip.equals("phase_transition")&&age<(kind==5?50:60))return false;}boolean hit=super.hurt(source,damage);if(hit&&kind==4&&move<0&&cooldown>10){start(4);cooldown=40;}return hit;}
  private void start(int m){move=m;age=0;victim=getTarget();entityData.set(MOVE,m);getNavigation().stop();}
  public void aiStep(){super.aiStep();if(level().isClientSide)return;bar.setProgress(Math.max(0,getHealth()/getMaxHealth()));if(!isAlive())return;
   if(instance!=null){var i=DungeonState.get(((ServerLevel)level()).getServer()).instances.get(instance);if(i==null||i.retired){discard();return;}if(!i.contains(blockPosition())){var o=i.origin().offset(kind%3==2?(kind==2?48:46):10,3,kind%3==2?(kind==2?12:15):50);moveTo(o.getX()+.5,o.getY(),o.getZ()+.5,getYRot(),0);}}
@@ -42,7 +43,7 @@ public final class DungeonMob extends Monster implements GeoEntity {
    if(p.hurt(damageSources().mobAttack(this),(float)getAttributeValue(Attributes.ATTACK_DAMAGE)*m.power)){p.knockback(.35,getX()-p.getX(),getZ()-p.getZ());if(kind>=3)p.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN,60,0));}}
  }
  protected void tickDeath(){deathTime++;if(deathTime>=(kind==2?80:kind==5?70:kind%3==1?44:28)&&!level().isClientSide){bar.removeAllPlayers();remove(RemovalReason.KILLED);}}
- private <T extends software.bernie.geckolib.core.animatable.GeoAnimatable> software.bernie.geckolib.core.object.PlayState animate(AnimationState<T> state){String clip;if(isDeadOrDying())clip="death";else{int m=entityData.get(MOVE);if(m>=0&&m<MOVES[kind].length)clip=MOVES[kind][m].clip;else clip=state.isMoving()?(kind<3?"move":getTarget()!=null?"run":"walk"):"idle";}
+ private <T extends software.bernie.geckolib.core.animatable.GeoAnimatable> software.bernie.geckolib.core.object.PlayState animate(software.bernie.geckolib.core.animation.AnimationState<T> state){String clip;if(isDeadOrDying())clip="death";else{int m=entityData.get(MOVE);if(m>=0&&m<MOVES[kind].length)clip=MOVES[kind][m].clip;else clip=state.isMoving()?(kind<3?"move":getTarget()!=null?"run":"walk"):"idle";}
   var anim=RawAnimation.begin();if(clip.equals("idle")||clip.equals("move")||clip.equals("walk")||clip.equals("run"))anim.thenLoop("animation."+id()+"."+clip);else anim.thenPlay("animation."+id()+"."+clip);return state.setAndContinue(anim);}
  public void registerControllers(AnimatableManager.ControllerRegistrar c){c.add(new AnimationController<>(this,"state",2,this::animate));}
  public AnimatableInstanceCache getAnimatableInstanceCache(){return cache;}

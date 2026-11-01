@@ -34,6 +34,7 @@ jobs:
           {
             python -m pip install nbtlib==2.0.4 numpy==2.2.6 Pillow==11.3.0
             python dungeon-gates/scripts/assets.py
+            python dungeon-gates/scripts/verify_assets.py
             cd dungeon-gates
             gradle --no-daemon --console=plain build qaJar reobfQaJar
             cd ..

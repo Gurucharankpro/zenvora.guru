@@ -38,7 +38,7 @@ public final class DGRegistry {
  public static final RegistryObject<BlockEntityType<TreasureCrate>> CRATE_BE=BES.register("treasure_crate",()->BlockEntityType.Builder.of(TreasureCrate::new,DECOR.get("ancient_emerald_chest").get(),DECOR.get("winter_royal_chest").get()).build(null));
  public static final RegistryObject<Feature<NoneFeatureConfiguration>> GATE_FEATURE=FEATURES.register("floating_gates",GateFeature::new);
  public static final RegistryObject<CreativeModeTab> TAB=TABS.register("gates",()->CreativeModeTab.builder().title(Component.translatable("itemGroup.dungeongates")).icon(()->new ItemStack(EMERALD_GATE.get())).displayItems((p,o)->ITEMS.getEntries().forEach(x->o.accept(x.get()))).build());
- static RegistryObject<Block> gate(GateKind k){var r=BLOCKS.register(k.id+"_gate",()->new GateBlock(k));ITEMS.register(k.id+"_gate",()->new BlockItem(r.get(),new Item.Properties().stacksTo(16)));return r;}
+ static RegistryObject<Block> gate(GateKind k){RegistryObject<Block> r=BLOCKS.register(k.id+"_gate",()->new GateBlock(k));ITEMS.register(k.id+"_gate",()->new BlockItem(r.get(),new Item.Properties().stacksTo(16)));return r;}
  static Block makeDecor(String n){var p=BlockBehaviour.Properties.of().strength(2.5f,6).sound(n.contains("crystal")?SoundType.AMETHYST:SoundType.STONE);
   if(n.contains("glowing")||n.contains("lantern"))p.lightLevel(s->13);if(n.contains("flower"))return new DecorBlocks.Flower(p.noCollission().noOcclusion());
   if(n.contains("vines"))return new VineBlock(p.noCollission().noOcclusion());
