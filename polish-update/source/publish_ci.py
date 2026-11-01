@@ -17,6 +17,11 @@ if client.exists():
   result['client_smoke']=evidence;result['graphical_client_tested']=evidence.get('graphical_client_tested',False)
 if ok:
  jar=repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar';result.update(jar_sha256=hashlib.sha256(jar.read_bytes()).hexdigest(),jar_bytes=jar.stat().st_size)
+ proof=result.get('production_smoke',{})
+ if proof.get('status')!='passed' or proof.get('final_input_sha256')!=result['jar_sha256']:
+  status='failure';ok=False;result.update(status=status,production_built=False)
+ if result.get('graphical_client_tested') and result.get('client_smoke',{}).get('final_input_sha256')!=result.get('jar_sha256'):
+  status='failure';ok=False;result.update(status=status,production_built=False,graphical_client_tested=False)
 (report/'CI-RESULT.json').write_text(json.dumps(result,indent=2)+'\n');sha=result.get('jar_sha256','NOT BUILT')
 review=repo/'review';review.mkdir(exist_ok=True)
 text=f'''# Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert

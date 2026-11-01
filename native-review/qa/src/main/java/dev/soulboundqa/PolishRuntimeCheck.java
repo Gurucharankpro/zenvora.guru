@@ -64,7 +64,7 @@ public final class PolishRuntimeCheck {
   List<ResourceLocation> visits=new ArrayList<>();
   for(var a:manager.getAllAdvancements())if(a.getId().getNamespace().equals("shadowsovereign")&&a.getId().getPath().startsWith("journey/visit_"))visits.add(a.getId());
   if(visits.size()!=11)throw new AssertionError("Expected eleven visit advancements");
-  var wrong=net.minecraftforge.common.util.FakePlayerFactory.get(server.overworld(),new com.mojang.authlib.GameProfile(UUID.randomUUID(),"WrongPredicateQA"));wrong.setPos(0,65,0);
+  var wrong=probePlayer(server.overworld(),"WrongPredicateQA");wrong.setPos(0,65,0);
   net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(wrong);
   List<ResourceLocation> restricted=new ArrayList<>(visits);restricted.add(new ResourceLocation("shadowsovereign:journey/welcome"));restricted.add(new ResourceLocation("shadowsovereign:journey/cartographer"));
   for(var id:restricted)if(wrong.getAdvancements().getOrStartProgress(manager.getAdvancement(id)).isDone())throw new AssertionError("Location reward granted in wrong dimension: "+id);
@@ -84,7 +84,7 @@ public final class PolishRuntimeCheck {
    }
   }
   if(at==null)throw new AssertionError("Test setup: no actual surface desert block near noise-biome search result "+noisePoint);
-  var right=net.minecraftforge.common.util.FakePlayerFactory.get(realm,new com.mojang.authlib.GameProfile(UUID.randomUUID(),"RealmPredicateQA"));right.setPos(at.getX()+.5,at.getY(),at.getZ()+.5);
+  var right=probePlayer(realm,"RealmPredicateQA");right.setPos(at.getX()+.5,at.getY(),at.getZ()+.5);
   right.getAdvancements().reload(manager);
   net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(right);
   if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(desertId)).isDone())throw new AssertionError("Correct biome did not grant its visit advancement: dimension="+right.level().dimension()+", position="+right.blockPosition()+", biome="+right.level().getBiome(right.blockPosition()).unwrapKey()+", loaded="+right.serverLevel().isLoaded(right.blockPosition()));
@@ -94,5 +94,14 @@ public final class PolishRuntimeCheck {
   int xp=right.totalExperience;net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(right);
   if(right.totalExperience!=xp)throw new AssertionError("Repeated location trigger duplicated XP rewards");
   JsonObject result=new JsonObject();result.addProperty("wrong_dimension_rejected",true);result.addProperty("wrong_biomes_rejected",10);result.addProperty("correct_desert_and_dimension_awarded",true);result.addProperty("repeat_reward_unchanged",true);return result;
+ }
+ static net.minecraft.server.level.ServerPlayer probePlayer(net.minecraft.server.level.ServerLevel level,String name){
+  // Forge explicitly suppresses advancement grants to FakePlayer. Use a real
+  // ServerPlayer with an in-process Netty channel for this engine logic check.
+  var p=new net.minecraft.server.level.ServerPlayer(level.getServer(),level,new com.mojang.authlib.GameProfile(UUID.randomUUID(),name));
+  var connection=new net.minecraft.network.Connection(net.minecraft.network.protocol.PacketFlow.SERVERBOUND);
+  new io.netty.channel.embedded.EmbeddedChannel(connection);
+  p.connection=new net.minecraft.server.network.ServerGamePacketListenerImpl(level.getServer(),connection,p);
+  return p;
  }
 }

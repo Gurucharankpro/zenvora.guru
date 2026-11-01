@@ -34,7 +34,7 @@ for attempt in range(3):
   env=dict(os.environ,GIT_INDEX_FILE=str(Path(tmp)/'index'))
   def git(*args,**kwargs):return subprocess.run(['git',*args],cwd=repo,env=env,check=True,capture_output=True,**kwargs).stdout
   git('read-tree',parent)
-  old=git('ls-tree','-r','--name-only',parent,'downloads/current').decode().splitlines()
+  old=git('ls-tree','-r','--name-only',parent,'downloads/current','polish-update/reports').decode().splitlines()
   for path in old:git('update-index','--force-remove',path)
   hashes=git('hash-object','-w','--stdin-paths',input=('\n'.join(str(p) for p in files)+'\n').encode()).decode().splitlines()
   if len(hashes)!=len(files):raise RuntimeError('Generated publication manifest mismatch')
