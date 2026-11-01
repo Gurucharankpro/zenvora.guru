@@ -1,4 +1,31 @@
-# Soulbound Army 1.8.0 — Shadow Awakening preview
+# Soulbound Army 1.8.1 — loading crash fix
+
+Fixes the user-reported NoSuchMethodError during GloomContent initialization.
+The injected x1_visual registration now calls the existing private static
+food(String,int,float) factory, not the nonexistent item(String,int,float).
+With hunger zero this helper registers a plain item. All 1.8.0 content and X1
+hooks are retained; the protocol remains 37-shadow-awakening. Install the fixed
+JAR on both sides. JAR version: 1.8.1-shadow-awakening-fix.
+
+OwnLinkageTest.java now checks mod-owned calls and method handles, including
+private initializer calls. It rejects the old 1.8.0 artifact with the exact
+reported missing signature and passes 20,193 references in 1.8.1. Minecraft/Forge
+inheritance and runtime behavior remain outside this test's scope. The existing
+28 resource test groups and 74 behavioral fixture assertions also pass.
+
+package_ai_uploads.py produces three independent ZIPs with ordered raw JAR
+chunks, integration sources and current decompiled Java references. It enforces
+<20,000,000 bytes per upload and <50,000,000 total, including an expanded-total
+check. rebuild_ai_mod.py verifies chunk hashes and the reconstructed JAR hash/CRC.
+The decompiled reference is not an original buildable Forge source project.
+package_delivery.py separately makes standard split-ZIP volumes for ZArchiver.
+Upload only the three AI ZIPs when using the AI's 50 MB total allowance.
+
+Forge startup has not been run: the environment policy excludes official Forge
+artifact hosts. These checks confirm the reported missing-call fix, not a full
+gameplay or zero-bug guarantee. See downloads/TEST-REPORT.md for evidence.
+
+## 1.8.0 content retained by 1.8.1
 
 This update extends the exact published 1.7.0 source state (commit
 965d1a0be2e5abee2def701b2789015395a2577a). All 51 previous profiles, 57 eggs,

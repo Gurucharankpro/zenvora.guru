@@ -311,7 +311,7 @@ public class PatchMod implements Opcodes {
             entries.put(owner+".class",code);
         }
         for(String key:List.of("tick","summon","recall","command","disappearance","extraction","bond","teleport","attack","guardian"))if(hookCounts.getOrDefault(key,0)!=(key.equals("guardian")?2:1))throw new IllegalStateException("Unexpected X1 hook count: "+key+" "+hookCounts);
-        var gc=new ClassNode();new ClassReader(entries.get(GLOOM+".class")).accept(gc,0);var initFx=new InsnList();push(initFx,"x1_visual");push(initFx,0);push(initFx,0.0f);call(initFx,INVOKESTATIC,GLOOM,"item","(Ljava/lang/String;IF)Lnet/minecraftforge/registries/RegistryObject;");initFx.add(new InsnNode(POP));
+        var gc=new ClassNode();new ClassReader(entries.get(GLOOM+".class")).accept(gc,0);if(gc.methods.stream().noneMatch(m->m.name.equals("food")&&m.desc.equals("(Ljava/lang/String;IF)Lnet/minecraftforge/registries/RegistryObject;")&&(m.access&ACC_STATIC)!=0))throw new IllegalStateException("Missing verified GloomContent food factory");var initFx=new InsnList();push(initFx,"x1_visual");push(initFx,0);push(initFx,0.0f);call(initFx,INVOKESTATIC,GLOOM,"food","(Ljava/lang/String;IF)Lnet/minecraftforge/registries/RegistryObject;");initFx.add(new InsnNode(POP));
         for(var ins:clinit(gc).instructions.toArray())if(ins.getOpcode()==RETURN)clinit(gc).instructions.insertBefore(ins,initFx);
         var gcw=new ClassWriter(ClassWriter.COMPUTE_MAXS);gc.accept(gcw);entries.put(GLOOM+".class",gcw.toByteArray());
         var soundJson=JsonParser.parseString(new String(entries.get("assets/shadowsovereign/sounds.json"),java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
@@ -343,7 +343,7 @@ public class PatchMod implements Opcodes {
         for(var snd:newSounds.entrySet())soundJson.add(snd.getKey(),snd.getValue());
         byte[] soundBytes=new GsonBuilder().setPrettyPrinting().create().toJson(soundJson).getBytes(java.nio.charset.StandardCharsets.UTF_8);
         entries.put("assets/shadowsovereign/sounds.json",soundBytes);Files.write(resources.resolve("assets/shadowsovereign/sounds.json"),soundBytes);
-        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.8.0-shadow-awakening-preview\"");
+        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.8.1-shadow-awakening-fix\"");
         entries.put("META-INF/mods.toml",metadata.getBytes(java.nio.charset.StandardCharsets.UTF_8));
         Files.createDirectories(output.toAbsolutePath().getParent());
         try(var zip=new ZipOutputStream(Files.newOutputStream(output))){for(var entry:entries.entrySet()){var e=new ZipEntry(entry.getKey());e.setTime(0);zip.putNextEntry(e);zip.write(entry.getValue());zip.closeEntry();}}

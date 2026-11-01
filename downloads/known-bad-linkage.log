@@ -1,0 +1,2 @@
+Exception in thread "main" java.lang.AssertionError: dev/shadowsovereign/gloom/GloomContent.<clinit> calls missing dev/shadowsovereign/gloom/GloomContent.item(Ljava/lang/String;IF)Lnet/minecraftforge/registries/RegistryObject;
+	at OwnLinkageTest.main(OwnLinkageTest.java:34)

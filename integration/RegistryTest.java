@@ -154,7 +154,7 @@ public class RegistryTest {
                 var previousProfiles=(List<?>)previousClass.getField("ALL").get(null);
                 if(previousProfiles.size()!=51)throw new AssertionError("Unexpected previous release size");
                 for(int i=0;i<51;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
-                System.out.println("PASS: all 51 profiles from the previous 1.7.0 candidate retain their exact definitions/order.");
+                System.out.println("PASS: all 51 profiles from the previous 1.8.0 candidate retain their exact definitions/order.");
             }
         }
     }

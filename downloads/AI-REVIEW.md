@@ -1,48 +1,48 @@
-# Independent reviewer handoff — X1 on 1.7.0
+# Reviewer handoff — Soulbound Army 1.8.1
 
-Read TEST-REPORT.md and X1_INPUT.json first. This is an ASM binary integration,
-not the original complete Forge development project. No live game pass is claimed.
+Read TEST-REPORT.md first. The artifact is an ASM integration into the user's
+original Forge mod, not an original full development project. No live game pass
+is claimed. Use only the three AI-Mod-1.8.1-part-*.zip files for the <20 MB each,
+<50 MB total upload allowance. Standard Python 3/ZIP tools are enough.
 
-1. Reassemble all split volumes and compare the resulting JAR hash. Use a clean
-   Forge 1.20.1 / 47.3+ client AND server, Java17; install one mod version only.
-2. Audit integration/x1_assets.py, X1Hooks.java, X1HooksTest.java and X1 additions
-   in PatchMod.java. Commands are static cosmetic functions executed with server
-   command source; inspect trust boundaries, permissions, SNBT and their effect
-   only on tagged ItemDisplay entities. Check exact MinecraftServer/Commands
-   SRG member linkage against the real runtime. Fixtures cannot establish this.
-3. Check gameplay callbacks: summon only on success (including native boolean
-   returns separated by labels); extraction only on accepted record; recall
-   before removal; bond old/new rank; accepted orders; actual catch-up teleport;
-   validated strike guard/trail; positive uncanceled post-armor impact at victim;
-   natural guardian fresh/resume branches; valid shadow death. Compare gameplay
-   outcomes against a COPY of 1.7.0, not an earlier release.
-4. Test ordinary, EPIC, LEGENDARY, CRAZY/CHOSEN and mythic summons; denied summons
-   must have no false spawn VFX. Test recall, capture, rank change/no change,
-   follow/stay commands, teleport, melee/projectile hits, canceled/zero damage,
-   shield, guardian spawn/resume and disappearance. Check 4 sound clips by ear.
-5. Validate ItemDisplay models, vertical/ground anchoring, transparency, timing,
-   alpha endings and separate instance frame-zero starts. Verify only one weapon
-   variant appears, and all effects end. Auras are explicitly finite bursts.
-6. Inspect 24-display cap per dimension; scoreboard objectives sbx1_age/sbx1_count
-   and storage shadowsovereign:x1. Kill must target only tagged ItemDisplays;
-   clocks should not reset old instances. Test custom dimensions, chunk unload,
-   reload/restart, player logout, multiple players and command failures. Profile
-   command traffic, entity packets, GPU atlas memory and low-end client behavior.
-7. The internal x1_visual item must be hidden from all four creative tabs. Check
-   old station/decor classification including Monolith enchanting table, all old
-   creatures, 500 learning quests, structures, sounds and army persistence.
-8. UI badges/widgets, directional rally wave, dome/ring meshes, persistent loops
-   and performance-preset UI are NOT integrated. Do not mark them as working.
-   Sprite barriers are cosmetic and do not add a new defense power.
+1. Extract rebuild_ai_mod.py from any archive next to all three ZIPs and run
+   python rebuild_ai_mod.py. For attachments in different folders, pass their
+   three complete paths as arguments. The script validates each chunk hash,
+   ordering, total length, full SHA-256 and inner JAR CRC. Individual chunks are
+   not installable. Expected JAR SHA256:
+   beeedcd097ebbfc8dc212f34b52d6fd3f6d09504aacced44bfd249aa7a16cf3d.
+2. Part 01 contains integration patch/test source; part 03 contains Java
+   decompiled from this exact JAR by CFR 0.152. This reference has inferred
+   names, missing Forge dependencies and decompilation limitations; it cannot
+   replace the original buildable source. SoulPlay.tick is not fully structured.
+   Inspect the JAR bytecode for decisive signature/control-flow questions.
+3. Review PatchMod.java's GloomContent factory call and OwnLinkageTest.java.
+   Re-run the test against 1.8.0 to see the exact user's missing item(String,int,
+   float) overload fail; 1.8.1 must invoke the existing private static food
+   factory. Its hunger-zero branch creates a plain Item, hidden from all tabs.
+   The previous helper checks missed this native initializer's private call.
+4. Boot a clean Forge 1.20.1 / 47.3+ client and dedicated server with Java17,
+   installing ONLY the fixed mod version on both. Capture latest.log and any
+   crash report. Startup remains untested here; do not infer engine compatibility
+   from the fixtures. Inspect actual Minecraft/Forge SRG member linkage too.
+5. Exercise extraction, ordinary/EPIC/legendary/mythic summon, denied summon,
+   recall, promotion/no promotion, orders, teleport, positive/canceled damage,
+   guard and disappearance. Effects must trigger only on accepted actions, start
+   at frame zero individually and expire. Inspect static cosmetic commands and
+   function codecs, ItemDisplay anchoring/transparency and the four OGG clips.
+6. Test escape from legendary encounters, block breaking and summoning other
+   owned/legendary mobs; earlier open-encounter behavior remains. Test several
+   players, all dimensions, logout, restart, chunk unload/reload and saves. Ensure
+   cleanup only kills tagged cosmetic ItemDisplays, never normal actors. Check
+   finite clocks and the 24-display cap; profile command/entity/GPU costs.
+7. Verify all 51 profiles, 120 decor designs, four creative groups, 57 eggs,
+   structures and 500 learning quests remain. UI badges/widgets, persistent
+   auras and unsupported meshes are not integrated; do not mark them working.
 
-Manual visual inspection on a disposable world (operator permission):
+Manual visual demo (operator, disposable world):
 execute as @p at @s run function shadowsovereign:x1/event/02
-The native server tick initializes objectives automatically. Do not mistake a
-manual function demo for proof that native gameplay hooks work.
-
-Reproduce with all previous extracted input packs, plus extract the uploaded X1
-archive into INPUTS/X1_Shadow_Awakening preserving internal paths. Run:
-bash integration/build.sh ORIGINAL.jar INPUTS BUILD_DIR
-Put the published 1.7.0 JAR in BUILD_DIR/dist for preservation comparisons.
-Dependencies/base hash are pinned. Compiled API fixtures are never shipped.
-Record runtime logs, exact versions, effect IDs and reproduction steps for issues.
+This demo is not evidence that gameplay hooks work. Record exact versions,
+logs and reproduction steps. Rebuild instructions are in integration/README.md;
+the pinned original JAR and extracted input packs are required and not included
+as duplicate upload artifacts. Include the prior 1.8.0 JAR in BUILD_DIR/dist for
+preservation comparisons. Fixtures are never packaged in the gameplay JAR.

@@ -1,0 +1,17 @@
+Soulbound Army 1.8.1 - AI upload bundle
+
+Upload ONLY the three AI-Mod-1.8.1-part-*.zip files together. Each is an ordinary
+independent ZIP, not a spanned archive. All three are needed for the full mod.
+Part 01 includes the integration patch/test sources. Part 03 includes Java
+decompiled from THIS fixed JAR by CFR 0.152 for reading. Decompiled references
+are not an original, complete, compilable Forge source project.
+
+To reconstruct, extract rebuild_ai_mod.py from any part next to all three ZIPs:
+python rebuild_ai_mod.py
+Or pass the three ZIP paths explicitly, optionally with --output /path/mod.jar.
+Python 3 standard library only. Chunk hashes, full JAR SHA-256 and ZIP CRC are
+verified. The binary .bin chunks are not individual installable mods.
+
+No local Forge startup pass is claimed. Read TEST-REPORT.md before assessing
+compatibility. A reviewer needs ZIP/Python tools for binary reconstruction;
+an AI that only reads plain text can inspect the included Java source instead.
