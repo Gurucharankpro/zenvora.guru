@@ -2,8 +2,14 @@
   "passed": true,
   "runtime": "native ForgeGradle source client at same commit, Xvfb/Mesa",
   "both_gates_touch_entry_boss_death_return_trophies_save_reopen": true,
-  "source_commit": "b758943a3175a9b828dc5ee475bfedf6bdf8bada",
-  "final_jar_sha256": "a46f050b6b1cfb29facb390360a6c796270dd921db208a8a01b34605f2c957dd",
+  "source_commit": "da4f9c6af052130a0b484c44e11af8772da274e4",
+  "final_jar_sha256": "2f6018facbb2e50d7bf3b08bcbd3209dc865a185dd43f54a436551df3c6e87b5",
   "mobile_tested": false,
-  "multiplayer_tested": false
+  "multiplayer_tested": false,
+  "frozen_models_colored_pixel_counts": [
+    1845,
+    3258,
+    3027
+  ],
+  "dungeongates_model_texture_errors": 0
 }
