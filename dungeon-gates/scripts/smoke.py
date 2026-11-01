@@ -5,7 +5,10 @@ R=Path(__file__).resolve().parents[1];reports=R/'reports';reports.mkdir(exist_ok
 def main():
  dist=R/'dist';dist.mkdir(exist_ok=True)
  jar=R/'build/libs/dungeon-gates-1.20.1-0.1.0.jar';qa=R/'build/libs/dungeon-gates-1.20.1-0.1.0-qa.jar'
- gecko=next((Path.home()/'.gradle/caches/modules-2/files-2.1/software.bernie.geckolib/geckolib-forge-1.20.1/4.4.9').rglob('*.jar'))
+ abi=subprocess.check_output(['javap','-p','-c','-classpath',str(qa),'dev.dungeongates.qa.NativeQA'],text=True)
+ for name in ['getMaxHealth','getAttributeValue','getType','save','blockPosition']:
+  if 'DungeonMob.'+name+':' in abi:raise RuntimeError('QA inherited game method was not reobfuscated: '+name)
+ gecko=next((Path.home()/'.gradle/caches/modules-2/files-2.1/software.bernie.geckolib/geckolib-forge-1.20.1/4.4.9').rglob('geckolib-forge-1.20.1-4.4.9.jar'))
  server=R/'build/isolated-server';server.mkdir(parents=True,exist_ok=True)
  installer=server/'installer.jar'
  subprocess.run(['curl','-fLsS','https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-installer.jar','-o',str(installer)],check=True)

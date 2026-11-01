@@ -58,6 +58,7 @@ public final class GateRenderer implements BlockEntityRenderer<GateAnchor> {
     } else
       ellipse(
           pose, buffers, "frozen_portal_surface_strip.png", (int) (time / 2 % 8), 8, 0, 3, 4.8125f);
+    if (kind == GateKind.EMERALD) runes(pose, buffers, time);
     pose.popPose();
     var mc = Minecraft.getInstance();
     if (mc.player == null
@@ -65,7 +66,7 @@ public final class GateRenderer implements BlockEntityRenderer<GateAnchor> {
                 a.getBlockPos().getX() + .5, a.getBlockPos().getY(), a.getBlockPos().getZ() + .5)
             > 40 * 40) return;
     pose.pushPose();
-    pose.translate(.5, 6.4, .5);
+    pose.translate(.5, kind == GateKind.EMERALD ? 7.2 : 6.4, .5);
     pose.mulPose(mc.getEntityRenderDispatcher().cameraOrientation());
     pose.scale(-.025f, -.025f, .025f);
     Component[] text = {
@@ -89,6 +90,50 @@ public final class GateRenderer implements BlockEntityRenderer<GateAnchor> {
           LightTexture.FULL_BRIGHT);
     }
     pose.popPose();
+  }
+
+  static void runes(PoseStack pose, MultiBufferSource buffers, long time) {
+    var consumer =
+        buffers.getBuffer(
+            RenderType.entityTranslucent(
+                new ResourceLocation(
+                    "dungeongates", "textures/gate/emerald_portal_runes_anim.png")));
+    float[][] origins = {
+      {26, 40},
+      {17.213f, 71.113f},
+      {-4, 84},
+      {-25.213f, 71.113f},
+      {-34, 40},
+      {-25.213f, 8.887f},
+      {-4, -4},
+      {17.213f, 8.887f}
+    };
+    int frame = (int) (time / 4 % 4);
+    for (int n = 0; n < 8; n++) {
+      float x = origins[n][0] / 16, y = .5f + origins[n][1] / 16;
+      float lo = (float) n / 8,
+          hi = (float) (n + 1) / 8,
+          top = (float) frame / 4,
+          bottom = (float) (frame + 1) / 4;
+      float[][] quad = {
+        {x, y, .015f, lo, bottom},
+        {x + .5f, y, .015f, hi, bottom},
+        {x + .5f, y + .5f, .015f, hi, top},
+        {x, y + .5f, .015f, lo, top}
+      };
+      for (int side = 0; side < 2; side++)
+        for (int i = 0; i < 4; i++) {
+          var v = quad[side == 0 ? i : 3 - i];
+          consumer
+              .vertex(pose.last().pose(), v[0], v[1], v[2])
+              .color(255, 255, 255, 255)
+              .uv(v[3], v[4])
+              .overlayCoords(OverlayTexture.NO_OVERLAY)
+              .uv2(LightTexture.FULL_BRIGHT)
+              .normal(pose.last().normal(), 0, 0, side == 0 ? 1 : -1)
+              .endVertex();
+        }
+    }
   }
 
   static void ellipse(

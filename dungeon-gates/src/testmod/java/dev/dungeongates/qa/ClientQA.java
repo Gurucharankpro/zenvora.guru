@@ -148,6 +148,7 @@ public final class ClientQA {
         next(3);
       }
       case 3 -> {
+        if (!m.level.dimension().equals(DungeonState.DIM) && ticks - last < 1200) return;
         check(m.level.dimension().equals(DungeonState.DIM), "touch enters Emerald dimension");
         shot(m, "emerald-sanctuary-arrival");
         job(
@@ -173,6 +174,7 @@ public final class ClientQA {
         next(4);
       }
       case 4 -> {
+        if (!m.level.dimension().equals(Level.OVERWORLD) && ticks - last < 1200) return;
         check(m.level.dimension().equals(Level.OVERWORLD), "unlocked Emerald contact return");
         job(
             m,
@@ -191,6 +193,7 @@ public final class ClientQA {
         next(5);
       }
       case 5 -> {
+        if (!m.level.dimension().equals(DungeonState.DIM) && ticks - last < 1200) return;
         check(m.level.dimension().equals(DungeonState.DIM), "touch enters Frozen dimension");
         shot(m, "frozen-crypt-arrival");
         job(
@@ -215,6 +218,7 @@ public final class ClientQA {
         next(6);
       }
       case 6 -> {
+        if (!m.level.dimension().equals(Level.OVERWORLD) && ticks - last < 1200) return;
         check(m.level.dimension().equals(Level.OVERWORLD), "Frozen contact return");
         job(
             m,

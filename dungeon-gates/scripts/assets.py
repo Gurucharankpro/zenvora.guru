@@ -103,7 +103,7 @@ for x,z in [(8,50),(18,54),(12,28),(28,25),(39,36),(53,32),(40,18),(54,10),(10,1
  put(x,3,z,'dungeongates:frozen_crystal_cluster',{'facing':'up'});put(x,2,z,'dungeongates:glowing_blue_ice_crystal')
 for x,z in [(8,47),(18,58),(13,25),(30,33),(37,28),(56,42),(36,6),(57,23)]:put(x,3,z,'dungeongates:ghostfrost_flower')
 for x,z in [(7,46),(18,46),(8,24),(31,24),(36,28),(57,28),(36,6),(57,6)]:put(x,3,z,'dungeongates:frozen_memorial_statue',{'facing':'south'})
-for x,z in [(6,50),(8,29),(36,32),(36,15)]:put(x,6,z,'dungeongates:winterveil_vines',{'up':'true','north':'false','east':'false','south':'false','west':'false'})
+for x,y,z in [(4,11,50),(7,13,29),(35,14,32),(35,20,15)]:put(x,y,z,'dungeongates:winterveil_vines',{'up':'true','north':'false','east':'false','south':'false','west':'true'})
 chest=(9,3,8);put(*chest,'dungeongates:winter_royal_chest',{'facing':'east'})
 blocks=[]
 for p,s in cells.items():

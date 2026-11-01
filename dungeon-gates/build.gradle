@@ -1,4 +1,4 @@
-plugins { id 'eclipse'; id 'maven-publish'; id 'net.minecraftforge.gradle' version '[6.0,6.2)' }
+plugins { id 'eclipse'; id 'maven-publish'; id 'net.minecraftforge.gradle' version '6.0.54' }
 version = '0.1.0'
 group = 'dev.dungeongates'
 base { archivesName = 'dungeon-gates-1.20.1' }
@@ -31,5 +31,5 @@ sourceSets { testmod { java.setSrcDirs(['src/testmod/java']); resources.setSrcDi
 configurations { testmodImplementation.extendsFrom implementation; testmodRuntimeOnly.extendsFrom runtimeOnly }
 minecraft.runs.configureEach { mods { dungeongatesqa { source sourceSets.testmod } } }
 tasks.register('qaJar', Jar) { archiveClassifier='qa'; from sourceSets.testmod.output }
-reobf { qaJar {} }
+reobf { qaJar { libraries.from(sourceSets.main.output) } }
 if (project.hasProperty('clientQA')) { minecraft.runs.client { property 'dungeongates.clientqa','true'; jvmArgs '-Xmx2500m'; workingDirectory project.file('run-client') } }

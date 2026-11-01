@@ -26,7 +26,7 @@ public final class DungeonEvents {
     if (projectile.level().isClientSide
         || !tag.contains("DungeonDamage")
         || !(e.getRayTraceResult() instanceof EntityHitResult hit)) return;
-    if (hit.getEntity() instanceof net.minecraft.world.entity.LivingEntity l) {
+    if (hit.getEntity() instanceof net.minecraft.world.entity.player.Player l) {
       l.hurt(
           projectile.damageSources().thrown(projectile, projectile.getOwner()),
           tag.getFloat("DungeonDamage"));
@@ -152,12 +152,15 @@ public final class DungeonEvents {
                                 for (int z = -8; z <= 8; z++) {
                                   int
                                       cx =
-                                          (c.getSource().getPosition().x > 0
-                                                      ? (int) c.getSource().getPosition().x
-                                                      : 0)
-                                                  / 16
+                                          (net.minecraft.util.Mth.floor(
+                                                      c.getSource().getPosition().x)
+                                                  >> 4)
                                               + x,
-                                      cz = (int) c.getSource().getPosition().z / 16 + z;
+                                      cz =
+                                          (net.minecraft.util.Mth.floor(
+                                                      c.getSource().getPosition().z)
+                                                  >> 4)
+                                              + z;
                                   var ch = l.getChunkSource().getChunkNow(cx, cz);
                                   if (ch == null) continue;
                                   for (var be : ch.getBlockEntities().values())
