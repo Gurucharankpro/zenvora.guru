@@ -1,8 +1,44 @@
 {
   "status": "failure",
-  "source_commit": "1ceec3243e9a69c192e74907fc966132765af692",
-  "run_id": "41315304003",
+  "source_commit": "9590203b23451c18c224dd9cb7a0650ad7e32df8",
+  "run_id": "41315742036",
   "production_built": false,
   "graphical_client_tested": false,
-  "multiplayer_tested": false
+  "multiplayer_tested": false,
+  "production_smoke": {
+    "status": "passed",
+    "registered_blocks_items": 40,
+    "native_template_decodes": 17,
+    "native_palette_states": 792,
+    "entity_attributes_save_reload": 4,
+    "biome_registry": true,
+    "graphical_client": false,
+    "production_server_started": true,
+    "isolated_save_flushed": true,
+    "biome_located": [
+      5504,
+      6144
+    ],
+    "biome_chunks_requested": 4,
+    "multiplayer": false,
+    "saved_full_chunks": [
+      [
+        344,
+        384
+      ],
+      [
+        344,
+        385
+      ],
+      [
+        345,
+        384
+      ],
+      [
+        345,
+        385
+      ]
+    ],
+    "actual_desert_biome_and_surface_blocks": true
+  }
 }
