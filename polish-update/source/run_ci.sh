@@ -4,6 +4,15 @@ task_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)
 repo=$(cd -- "$task_dir/.." && pwd)
 export SOULBOUND_BASE_JAR="$task_dir/base/soulbound-army-1.20.1-1.8.1-repaired-content.jar"
 cd "$task_dir"
+python3 - <<'PY'
+from pathlib import Path
+import shutil
+root=Path('reports');root.mkdir(exist_ok=True)
+for name in ['PRODUCTION-SMOKE.json','PRODUCTION-SERVER.log','CLIENT-SMOKE.json','CLIENT-SMOKE.log','screenshots']:
+ p=root/name
+ if p.is_dir():shutil.rmtree(p)
+ elif p.exists():p.unlink()
+PY
 printf '%s  %s\n' f88cac49bae0d10961a277ab2277738892cb5ba4aaaae596fc5b0c17d64edb04 "$SOULBOUND_BASE_JAR" | sha256sum --check
 python3 source/prepare_content.py
 python3 source/place_decor.py

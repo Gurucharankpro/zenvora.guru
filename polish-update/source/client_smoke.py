@@ -28,5 +28,6 @@ def main():
  if not screenshots.is_dir() or len(list(screenshots.glob('*.png')))<4:raise RuntimeError('Missing actual rendered screenshots')
  shutil.copytree(screenshots,reports/'screenshots',dirs_exist_ok=True)
  result={'status':'passed','graphical_client_tested':True,'final_input_sha256':hashlib.sha256(jar.read_bytes()).hexdigest(),'runtime':'ForgeGradle remaps final production JAR to official dev mappings; Xvfb/Mesa software rendering','actual_menu_book_summon_save_reopen':True,'latest_three_legends_and_jerboa_rendered':True,'screenshots':[p.name for p in screenshots.glob('*.png')],'mobile':False,'multiplayer':False}
+ result['source_commit']=os.environ.get('GITHUB_SHA')
  (reports/'CLIENT-SMOKE.json').write_text(json.dumps(result,indent=2)+'\n');print('PASS: actual native graphical client',result)
 if __name__=='__main__':main()

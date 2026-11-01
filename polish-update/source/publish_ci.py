@@ -7,10 +7,14 @@ if ok and not ((repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar
  status='failure';ok=False
 result={'status':status,'source_commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],'production_built':ok,'graphical_client_tested':False,'multiplayer_tested':False}
 smoke=report/'PRODUCTION-SMOKE.json'
-if smoke.exists():result['production_smoke']=json.loads(smoke.read_text())
+if smoke.exists():
+ evidence=json.loads(smoke.read_text())
+ if evidence.get('source_commit')==result['source_commit']:result['production_smoke']=evidence
 client=report/'CLIENT-SMOKE.json'
 if client.exists():
- result['client_smoke']=json.loads(client.read_text());result['graphical_client_tested']=result['client_smoke'].get('graphical_client_tested',False)
+ evidence=json.loads(client.read_text())
+ if evidence.get('source_commit')==result['source_commit']:
+  result['client_smoke']=evidence;result['graphical_client_tested']=evidence.get('graphical_client_tested',False)
 if ok:
  jar=repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar';result.update(jar_sha256=hashlib.sha256(jar.read_bytes()).hexdigest(),jar_bytes=jar.stat().st_size)
 (report/'CI-RESULT.json').write_text(json.dumps(result,indent=2)+'\n');sha=result.get('jar_sha256','NOT BUILT')

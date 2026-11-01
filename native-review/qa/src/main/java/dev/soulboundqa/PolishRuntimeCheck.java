@@ -72,10 +72,22 @@ public final class PolishRuntimeCheck {
   var biomeKey=net.minecraft.resources.ResourceKey.create(Registries.BIOME,new ResourceLocation("shadowsovereign:singing_glass_desert"));
   var found=realm.findClosestBiome3d(b->b.is(biomeKey),net.minecraft.core.BlockPos.ZERO,6400,32,64);
   if(found==null)throw new AssertionError("No desert biome found for positive predicate test");
-  var at=found.getFirst();realm.getChunk(at.getX()>>4,at.getZ()>>4);
+  var noisePoint=found.getFirst();net.minecraft.core.BlockPos at=null;
+  // /locate samples noise biomes; the final fuzzy biome zoom can select a
+  // neighbouring biome at the returned block. Verify a real surface position.
+  for(int ring=0;ring<=1&&at==null;ring++)for(int dx=-ring;dx<=ring&&at==null;dx++)for(int dz=-ring;dz<=ring&&at==null;dz++){
+   if(ring>0&&Math.max(Math.abs(dx),Math.abs(dz))!=ring)continue;
+   int cx=(noisePoint.getX()>>4)+dx,cz=(noisePoint.getZ()>>4)+dz;realm.getChunk(cx,cz);
+   for(int x=cx*16;x<cx*16+16&&at==null;x++)for(int z=cz*16;z<cz*16+16&&at==null;z++){
+    var candidate=realm.getHeightmapPos(net.minecraft.world.level.levelgen.Heightmap.Types.WORLD_SURFACE,new net.minecraft.core.BlockPos(x,80,z));
+    if(realm.getBiome(candidate).is(biomeKey))at=candidate;
+   }
+  }
+  if(at==null)throw new AssertionError("Test setup: no actual surface desert block near noise-biome search result "+noisePoint);
   var right=net.minecraftforge.common.util.FakePlayerFactory.get(realm,new com.mojang.authlib.GameProfile(UUID.randomUUID(),"RealmPredicateQA"));right.setPos(at.getX()+.5,at.getY(),at.getZ()+.5);
+  right.getAdvancements().reload(manager);
   net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(right);
-  if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(desertId)).isDone())throw new AssertionError("Correct biome did not grant its visit advancement");
+  if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(desertId)).isDone())throw new AssertionError("Correct biome did not grant its visit advancement: dimension="+right.level().dimension()+", position="+right.blockPosition()+", biome="+right.level().getBiome(right.blockPosition()).unwrapKey()+", loaded="+right.serverLevel().isLoaded(right.blockPosition()));
   for(var id:visits)if(!id.equals(desertId)&&right.getAdvancements().getOrStartProgress(manager.getAdvancement(id)).isDone())throw new AssertionError("Visit granted for the wrong biome: "+id);
   if(right.getAdvancements().getOrStartProgress(manager.getAdvancement(new ResourceLocation("shadowsovereign:journey/cartographer"))).isDone())throw new AssertionError("Cartographer awarded without its ten biomes");
   if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(new ResourceLocation("shadowsovereign:journey/welcome"))).isDone())throw new AssertionError("Correct dimension did not grant welcome");

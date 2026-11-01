@@ -1,7 +1,7 @@
 """Launch the final obfuscated distribution in an isolated official Forge server.
 Also include a separate QA mod for real registry/template/entity checks.
 """
-import gzip,io,json,os,re,shutil,subprocess,sys,time,zlib
+import gzip,hashlib,io,json,os,re,shutil,subprocess,sys,time,zlib
 import nbtlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];repo=ROOT.parent
@@ -61,6 +61,7 @@ def main():
    if not biome or not surface:raise AssertionError('Saved chunks lack actual desert biome/surface blocks')
    result=json.loads((server/'POLISH-RUNTIME.json').read_text());result.update(production_server_started=True,isolated_save_flushed=True,biome_located=[x,z],biome_chunks_requested=4,graphical_client=False,multiplayer=False)
    result.update(saved_full_chunks=generated,actual_desert_biome_and_surface_blocks=True)
+   result.update(source_commit=os.environ.get('GITHUB_SHA'),final_input_sha256=hashlib.sha256((server/'mods/soulbound.jar').read_bytes()).hexdigest())
    (ROOT/'reports').mkdir(exist_ok=True);(ROOT/'reports/PRODUCTION-SMOKE.json').write_text(json.dumps(result,indent=2)+'\n')
    shutil.copyfile(logfile,ROOT/'reports/PRODUCTION-SERVER.log');print('PASS: real Forge final-JAR startup, native checks, biome locate/generation and save/stop',result)
   finally:
