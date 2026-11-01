@@ -47,7 +47,7 @@ public final class GateAnchor extends BlockEntity {
           particle, p.getX() + .5, p.getY() + 2.5, p.getZ() + .5, 2, .8, 1.7, .25, .01);
     }
     for (var player : sl.getEntitiesOfClass(ServerPlayer.class, gate.surface()))
-      if (!player.isSpectator()) DungeonState.touch(player, gate);
+      if (player.isAlive() && !player.isSpectator()) DungeonState.touch(player, gate);
   }
 
   public void configureExit(UUID id) {
