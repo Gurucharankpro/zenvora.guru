@@ -1,0 +1,26 @@
+diff --git a/content-update/source/PatchReviewed.java b/content-update/source/PatchReviewed.java
+index a79669b..3286a3e 100644
+--- a/content-update/source/PatchReviewed.java
++++ b/content-update/source/PatchReviewed.java
+@@ -13,7 +13,7 @@ import java.util.zip.*;
+ public class PatchReviewed implements Opcodes {
+  static final String ROOT="dev/shadowsovereign/",P=ROOT+"mythic/MythicProfiles",C=ROOT+"content/",G=ROOT+"gloom/GloomContent";
+  static final String B="net/minecraft/world/level/block/Block",PROPS="net/minecraft/world/level/block/state/BlockBehaviour$Properties";
+- static final Handle META=new Handle(H_INVOKESTATIC,"java/lang/invoke/LambdaMetafactory","metafactory","(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",false);
++ static final Handle META=new Handle(H_INVOKESTATIC,"java/lang/invoke/LambdaMetafactory","metafactory","(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",false);
+  static Map<String,byte[]> entries=new TreeMap<>();static Set<String> changedClasses=new TreeSet<>();
+  static ClassNode node(String name){byte[] bytes=entries.get(name+".class");if(bytes==null)throw new IllegalArgumentException("Missing actual class "+name);ClassNode c=new ClassNode();new ClassReader(bytes).accept(c,0);return c;}
+  static void put(ClassNode c)throws Exception{
+diff --git a/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentConfig.java b/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentConfig.java
+index 46effe5..3361e2c 100644
+--- a/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentConfig.java
++++ b/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentConfig.java
+@@ -62,7 +62,7 @@ public final class ContentConfig {
+   X4.put("performance.safePosCacheTicks",b.defineInRange("performance.safePosCacheTicks",20,0,200));
+   X4.put("performance.perfModeIntervalMultiplier",b.defineInRange("performance.perfModeIntervalMultiplier",2.0,1.0,8.0));
+   X4.put("performance.forcePerformanceMode",b.define("performance.forcePerformanceMode",false));
+-  X4.put("performance.debugLogIntervalSeconds",b.defineInRange("performance.debugLogIntervalSeconds",0,5,300));
++  X4.put("performance.debugLogIntervalSeconds",b.defineInRange("performance.debugLogIntervalSeconds",0,0,300));
+   X4.put("status.enabled",b.define("status.enabled",true));
+   X4.put("status.statusSyncTicks",b.defineInRange("status.statusSyncTicks",20,5,100));
+   X4.put("status.notifyCooldownTicks",b.defineInRange("status.notifyCooldownTicks",100,20,1200));

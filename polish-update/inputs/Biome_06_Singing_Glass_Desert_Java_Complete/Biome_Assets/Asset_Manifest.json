@@ -1,0 +1,422 @@
+{
+  "namespace_placeholder": "soulbound",
+  "count": 20,
+  "assets": [
+    {
+      "id": 1,
+      "name": "Violet Dune Sand",
+      "registry_name": "soulbound:violet_dune_sand",
+      "type": "cube",
+      "properties": {
+        "hard": 0.5,
+        "tool": "shovel",
+        "light": 0,
+        "layer": "solid",
+        "note": "falling block recommended (sand-like)"
+      },
+      "files": [
+        "textures/block/violet_dune_sand.png",
+        "models/block/violet_dune_sand.json",
+        "models/item/violet_dune_sand.json",
+        "blockstates/violet_dune_sand.json",
+        "items/violet_dune_sand.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 2,
+      "name": "Golden Glass Sand",
+      "registry_name": "soulbound:golden_glass_sand",
+      "type": "cube",
+      "properties": {
+        "hard": 0.5,
+        "tool": "shovel",
+        "light": 0,
+        "layer": "solid",
+        "note": "falling block recommended; smelts to glass"
+      },
+      "files": [
+        "textures/block/golden_glass_sand.png",
+        "models/block/golden_glass_sand.json",
+        "models/item/golden_glass_sand.json",
+        "blockstates/golden_glass_sand.json",
+        "items/golden_glass_sand.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 3,
+      "name": "Ancient Desert Sandstone",
+      "registry_name": "soulbound:ancient_desert_sandstone",
+      "type": "cube",
+      "properties": {
+        "hard": 0.8,
+        "tool": "pickaxe",
+        "light": 0,
+        "layer": "solid"
+      },
+      "files": [
+        "textures/block/ancient_desert_sandstone.png",
+        "models/block/ancient_desert_sandstone.json",
+        "models/item/ancient_desert_sandstone.json",
+        "blockstates/ancient_desert_sandstone.json",
+        "items/ancient_desert_sandstone.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 4,
+      "name": "Cracked Desert Sandstone",
+      "registry_name": "soulbound:cracked_desert_sandstone",
+      "type": "cube",
+      "properties": {
+        "hard": 0.8,
+        "tool": "pickaxe",
+        "light": 0,
+        "layer": "solid"
+      },
+      "files": [
+        "textures/block/cracked_desert_sandstone.png",
+        "models/block/cracked_desert_sandstone.json",
+        "models/item/cracked_desert_sandstone.json",
+        "blockstates/cracked_desert_sandstone.json",
+        "items/cracked_desert_sandstone.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 5,
+      "name": "Polished Mirage Stone",
+      "registry_name": "soulbound:polished_mirage_stone",
+      "type": "cube",
+      "properties": {
+        "hard": 1.5,
+        "tool": "pickaxe",
+        "light": 0,
+        "layer": "solid"
+      },
+      "files": [
+        "textures/block/polished_mirage_stone.png",
+        "models/block/polished_mirage_stone.json",
+        "models/item/polished_mirage_stone.json",
+        "blockstates/polished_mirage_stone.json",
+        "items/polished_mirage_stone.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 6,
+      "name": "Singing Crystal Ore",
+      "registry_name": "soulbound:singing_crystal_ore",
+      "type": "cube",
+      "properties": {
+        "hard": 3.0,
+        "tool": "pickaxe(iron)",
+        "light": 6,
+        "layer": "solid",
+        "note": "drops singing crystal shards (dev choice)"
+      },
+      "files": [
+        "textures/block/singing_crystal_ore.png",
+        "models/block/singing_crystal_ore.json",
+        "models/item/singing_crystal_ore.json",
+        "blockstates/singing_crystal_ore.json",
+        "items/singing_crystal_ore.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 7,
+      "name": "Singing Crystal Block",
+      "registry_name": "soulbound:singing_crystal_block",
+      "type": "cube",
+      "properties": {
+        "hard": 1.5,
+        "tool": "pickaxe",
+        "light": 15,
+        "layer": "solid"
+      },
+      "files": [
+        "textures/block/singing_crystal_block.png",
+        "models/block/singing_crystal_block.json",
+        "models/item/singing_crystal_block.json",
+        "blockstates/singing_crystal_block.json",
+        "items/singing_crystal_block.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 8,
+      "name": "Glasswood Log",
+      "registry_name": "soulbound:glasswood_log",
+      "type": "log",
+      "properties": {
+        "hard": 2.0,
+        "tool": "axe",
+        "light": 4,
+        "layer": "solid",
+        "note": "axis block"
+      },
+      "files": [
+        "textures/block/glasswood_log.png",
+        "models/block/glasswood_log.json",
+        "models/item/glasswood_log.json",
+        "blockstates/glasswood_log.json",
+        "items/glasswood_log.json",
+        "textures/block/glasswood_log_top.png"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 9,
+      "name": "Glasswood Leaves",
+      "registry_name": "soulbound:glasswood_leaves",
+      "type": "leaves",
+      "properties": {
+        "hard": 0.2,
+        "tool": "hoe/shears",
+        "light": 7,
+        "layer": "cutout_mipped",
+        "note": "decay like leaves"
+      },
+      "files": [
+        "textures/block/glasswood_leaves.png",
+        "models/block/glasswood_leaves.json",
+        "models/item/glasswood_leaves.json",
+        "blockstates/glasswood_leaves.json",
+        "items/glasswood_leaves.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 10,
+      "name": "Glasswood Sapling",
+      "registry_name": "soulbound:glasswood_sapling",
+      "type": "cross",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 0,
+        "layer": "cutout",
+        "note": "grows Glasswood tree (Tree_Designs)"
+      },
+      "files": [
+        "textures/block/glasswood_sapling.png",
+        "models/block/glasswood_sapling.json",
+        "models/item/glasswood_sapling.json",
+        "blockstates/glasswood_sapling.json",
+        "items/glasswood_sapling.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 11,
+      "name": "Mirage Palm Log",
+      "registry_name": "soulbound:mirage_palm_log",
+      "type": "log",
+      "properties": {
+        "hard": 2.0,
+        "tool": "axe",
+        "light": 0,
+        "layer": "solid",
+        "note": "axis block"
+      },
+      "files": [
+        "textures/block/mirage_palm_log.png",
+        "models/block/mirage_palm_log.json",
+        "models/item/mirage_palm_log.json",
+        "blockstates/mirage_palm_log.json",
+        "items/mirage_palm_log.json",
+        "textures/block/mirage_palm_log_top.png"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 12,
+      "name": "Mirage Palm Leaves",
+      "registry_name": "soulbound:mirage_palm_leaves",
+      "type": "leaves",
+      "properties": {
+        "hard": 0.2,
+        "tool": "hoe/shears",
+        "light": 0,
+        "layer": "cutout_mipped"
+      },
+      "files": [
+        "textures/block/mirage_palm_leaves.png",
+        "models/block/mirage_palm_leaves.json",
+        "models/item/mirage_palm_leaves.json",
+        "blockstates/mirage_palm_leaves.json",
+        "items/mirage_palm_leaves.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 13,
+      "name": "Mirage Palm Sapling",
+      "registry_name": "soulbound:mirage_palm_sapling",
+      "type": "cross",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 0,
+        "layer": "cutout",
+        "note": "grows Mirage Palm (Tree_Designs)"
+      },
+      "files": [
+        "textures/block/mirage_palm_sapling.png",
+        "models/block/mirage_palm_sapling.json",
+        "models/item/mirage_palm_sapling.json",
+        "blockstates/mirage_palm_sapling.json",
+        "items/mirage_palm_sapling.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 14,
+      "name": "Whispering Desert Grass",
+      "registry_name": "soulbound:whispering_desert_grass",
+      "type": "cross",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 0,
+        "layer": "cutout",
+        "note": "replaceable plant; on violet/golden sand"
+      },
+      "files": [
+        "textures/block/whispering_desert_grass.png",
+        "models/block/whispering_desert_grass.json",
+        "models/item/whispering_desert_grass.json",
+        "blockstates/whispering_desert_grass.json",
+        "items/whispering_desert_grass.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 15,
+      "name": "Crystal Cactus",
+      "registry_name": "soulbound:crystal_cactus",
+      "type": "complex",
+      "properties": {
+        "hard": 0.4,
+        "tool": "any",
+        "light": 3,
+        "layer": "cutout",
+        "note": "contact damage optional; custom 3D model"
+      },
+      "files": [
+        "textures/block/crystal_cactus.png",
+        "models/block/crystal_cactus.json",
+        "models/item/crystal_cactus.json",
+        "blockstates/crystal_cactus.json",
+        "items/crystal_cactus.json"
+      ],
+      "blockbench_project": "Blockbench_Projects/crystal_cactus.bbmodel"
+    },
+    {
+      "id": 16,
+      "name": "Mirage Lotus",
+      "registry_name": "soulbound:mirage_lotus",
+      "type": "complex",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 10,
+        "layer": "cutout",
+        "note": "place on oasis water edge/sand; custom 3D model"
+      },
+      "files": [
+        "textures/block/mirage_lotus.png",
+        "models/block/mirage_lotus.json",
+        "models/item/mirage_lotus.json",
+        "blockstates/mirage_lotus.json",
+        "items/mirage_lotus.json"
+      ],
+      "blockbench_project": "Blockbench_Projects/mirage_lotus.bbmodel"
+    },
+    {
+      "id": 17,
+      "name": "Golden Dune Fern",
+      "registry_name": "soulbound:golden_dune_fern",
+      "type": "cross",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 0,
+        "layer": "cutout"
+      },
+      "files": [
+        "textures/block/golden_dune_fern.png",
+        "models/block/golden_dune_fern.json",
+        "models/item/golden_dune_fern.json",
+        "blockstates/golden_dune_fern.json",
+        "items/golden_dune_fern.json"
+      ],
+      "blockbench_project": null
+    },
+    {
+      "id": 18,
+      "name": "Glass Thorn Bush",
+      "registry_name": "soulbound:glass_thorn_bush",
+      "type": "complex",
+      "properties": {
+        "hard": 0.3,
+        "tool": "any",
+        "light": 0,
+        "layer": "translucent",
+        "note": "thorn contact damage optional; model uses semi-transparent texture"
+      },
+      "files": [
+        "textures/block/glass_thorn_bush.png",
+        "models/block/glass_thorn_bush.json",
+        "models/item/glass_thorn_bush.json",
+        "blockstates/glass_thorn_bush.json",
+        "items/glass_thorn_bush.json"
+      ],
+      "blockbench_project": "Blockbench_Projects/glass_thorn_bush.bbmodel"
+    },
+    {
+      "id": 19,
+      "name": "Singing Crystal Cluster",
+      "registry_name": "soulbound:singing_crystal_cluster",
+      "type": "complex",
+      "properties": {
+        "hard": 1.0,
+        "tool": "pickaxe",
+        "light": 9,
+        "layer": "cutout",
+        "note": "needs support below"
+      },
+      "files": [
+        "textures/block/singing_crystal_cluster.png",
+        "models/block/singing_crystal_cluster.json",
+        "models/item/singing_crystal_cluster.json",
+        "blockstates/singing_crystal_cluster.json",
+        "items/singing_crystal_cluster.json"
+      ],
+      "blockbench_project": "Blockbench_Projects/singing_crystal_cluster.bbmodel"
+    },
+    {
+      "id": 20,
+      "name": "Moon Sand Mushroom",
+      "registry_name": "soulbound:moon_sand_mushroom",
+      "type": "complex",
+      "properties": {
+        "hard": 0,
+        "tool": "any",
+        "light": 6,
+        "layer": "cutout",
+        "note": "place on sand"
+      },
+      "files": [
+        "textures/block/moon_sand_mushroom.png",
+        "models/block/moon_sand_mushroom.json",
+        "models/item/moon_sand_mushroom.json",
+        "blockstates/moon_sand_mushroom.json",
+        "items/moon_sand_mushroom.json"
+      ],
+      "blockbench_project": "Blockbench_Projects/moon_sand_mushroom.bbmodel"
+    }
+  ]
+}

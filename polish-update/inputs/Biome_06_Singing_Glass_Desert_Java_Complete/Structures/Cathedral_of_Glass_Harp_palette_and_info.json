@@ -1,0 +1,36 @@
+{
+  "size_xyz": [
+    39,
+    32,
+    39
+  ],
+  "surface_layer_y": 8,
+  "block_count": 36210,
+  "creature_encounter_area": "x=19, y=9, z=24..27 (open floor in front of ceremonial chamber, between the two harps)",
+  "palette_counts": {
+    "minecraft:air": 16131,
+    "minecraft:sandstone": 11066,
+    "minecraft:cut_sandstone": 5251,
+    "minecraft:smooth_sandstone": 1965,
+    "minecraft:yellow_stained_glass": 780,
+    "minecraft:chiseled_sandstone": 269,
+    "minecraft:end_rod": 127,
+    "minecraft:orange_terracotta": 113,
+    "minecraft:purpur_block": 97,
+    "minecraft:gold_block": 94,
+    "minecraft:orange_stained_glass": 80,
+    "minecraft:chain": 55,
+    "minecraft:purpur_pillar": 52,
+    "minecraft:sandstone_wall": 50,
+    "minecraft:amethyst_cluster": 29,
+    "minecraft:glowstone": 21,
+    "minecraft:smooth_sandstone_stairs": 16,
+    "minecraft:sandstone_stairs": 6,
+    "minecraft:chest": 5,
+    "minecraft:amethyst_block": 3
+  },
+  "placement": {
+    "origin": "min corner (x=0,y=0,z=0 of the NBT)",
+    "origin_y_rule": "origin_y = terrain_surface_y - 8"
+  }
+}

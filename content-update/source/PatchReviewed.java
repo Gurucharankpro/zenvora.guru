@@ -13,7 +13,7 @@ import java.util.zip.*;
 public class PatchReviewed implements Opcodes {
  static final String ROOT="dev/shadowsovereign/",P=ROOT+"mythic/MythicProfiles",C=ROOT+"content/",G=ROOT+"gloom/GloomContent";
  static final String B="net/minecraft/world/level/block/Block",PROPS="net/minecraft/world/level/block/state/BlockBehaviour$Properties";
- static final Handle META=new Handle(H_INVOKESTATIC,"java/lang/invoke/LambdaMetafactory","metafactory","(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",false);
+ static final Handle META=new Handle(H_INVOKESTATIC,"java/lang/invoke/LambdaMetafactory","metafactory","(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite;",false);
  static Map<String,byte[]> entries=new TreeMap<>();static Set<String> changedClasses=new TreeSet<>();
  static ClassNode node(String name){byte[] bytes=entries.get(name+".class");if(bytes==null)throw new IllegalArgumentException("Missing actual class "+name);ClassNode c=new ClassNode();new ClassReader(bytes).accept(c,0);return c;}
  static void put(ClassNode c)throws Exception{

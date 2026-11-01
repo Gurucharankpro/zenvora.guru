@@ -1,0 +1,53 @@
+name: Build and boot Soulbound polish
+on:
+  push:
+    branches: [soulbound-polish-reviewed-1.8.1]
+    paths:
+      - '.github/workflows/soulbound-polish.yml'
+      - 'polish-update/source/**'
+      - 'polish-update/inputs/**'
+      - 'polish-update/art/**'
+      - 'polish-update/base/**'
+      - 'native-review/qa/**'
+      - 'integration/OwnLinkageTest.java'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: soulbound-reviewed-content-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+          cache-read-only: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python resource dependencies
+        run: python -m pip install nbtlib==2.0.4 numpy==2.2.6 Pillow==11.3.0
+      - name: Build and verify against real Forge APIs
+        id: native
+        run: |
+          mkdir -p polish-update/reports
+          bash polish-update/source/run_ci.sh 2>&1 | tee polish-update/reports/CI-BUILD.log
+      - name: Write truthful build handoff
+        if: always()
+        env:
+          BUILD_OUTCOME: ${{ steps.native.outcome }}
+        run: python polish-update/source/publish_ci.py
+      - name: Publish verified binary or failure report
+        if: always()
+        run: |
+          git config user.name 'Soulbound build'
+          git config user.email 'soulbound-build@users.noreply.github.com'
+          python polish-update/source/publish_git.py

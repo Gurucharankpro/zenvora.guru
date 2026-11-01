@@ -1,0 +1,22 @@
+{
+  "block.soulbound.violet_dune_sand": "Violet Dune Sand",
+  "block.soulbound.golden_glass_sand": "Golden Glass Sand",
+  "block.soulbound.ancient_desert_sandstone": "Ancient Desert Sandstone",
+  "block.soulbound.cracked_desert_sandstone": "Cracked Desert Sandstone",
+  "block.soulbound.polished_mirage_stone": "Polished Mirage Stone",
+  "block.soulbound.singing_crystal_ore": "Singing Crystal Ore",
+  "block.soulbound.singing_crystal_block": "Singing Crystal Block",
+  "block.soulbound.glasswood_log": "Glasswood Log",
+  "block.soulbound.glasswood_leaves": "Glasswood Leaves",
+  "block.soulbound.glasswood_sapling": "Glasswood Sapling",
+  "block.soulbound.mirage_palm_log": "Mirage Palm Log",
+  "block.soulbound.mirage_palm_leaves": "Mirage Palm Leaves",
+  "block.soulbound.mirage_palm_sapling": "Mirage Palm Sapling",
+  "block.soulbound.whispering_desert_grass": "Whispering Desert Grass",
+  "block.soulbound.crystal_cactus": "Crystal Cactus",
+  "block.soulbound.mirage_lotus": "Mirage Lotus",
+  "block.soulbound.golden_dune_fern": "Golden Dune Fern",
+  "block.soulbound.glass_thorn_bush": "Glass Thorn Bush",
+  "block.soulbound.singing_crystal_cluster": "Singing Crystal Cluster",
+  "block.soulbound.moon_sand_mushroom": "Moon Sand Mushroom"
+}

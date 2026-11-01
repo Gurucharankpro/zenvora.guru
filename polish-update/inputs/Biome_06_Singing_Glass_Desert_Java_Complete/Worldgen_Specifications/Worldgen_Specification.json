@@ -1,0 +1,153 @@
+{
+  "biome_id_suggestion": "soulbound:singing_glass_desert",
+  "climate": {
+    "temperature": 1.6,
+    "downfall": 0.0,
+    "has_precipitation": false,
+    "note": "values are suggestions; match existing Soul Bound biome ranges"
+  },
+  "effects": {
+    "sky_color": "#d9783a",
+    "fog_color": "#b46cc4",
+    "water_color": "#3fd6c8",
+    "water_fog_color": "#1b7f86",
+    "grass_color": "#b9a2d6",
+    "foliage_color": "#d8b64a",
+    "ambient_particle_suggestion": "falling dust (lavender/gold) at low probability",
+    "sandstorm_atmosphere": "raise fog density / reduce fog far-plane in biome; purely visual; dev decides mechanics"
+  },
+  "surface": {
+    "top": "violet_dune_sand (65%)",
+    "patches": "golden_glass_sand (noise >0.35, 25%)",
+    "sub_surface_depth_blocks": "3-5 sand then ancient_desert_sandstone 4-8",
+    "deep": "ancient_desert_sandstone -> cracked_desert_sandstone (30% below y_surface-12) -> host dimension stone",
+    "accents": "polished_mirage_stone exposed on dune wind-cut faces (3%)"
+  },
+  "ores_and_minerals": {
+    "singing_crystal_ore": {
+      "veins_per_chunk": 8,
+      "vein_size": "4-8",
+      "y_rel_to_surface": "-8 to -50",
+      "note": "in sandstone/host stone"
+    }
+  },
+  "trees": {
+    "glasswood": {
+      "per_chunk_attempts": "0.35 (clustered; noise-gated in petrified groves)",
+      "min_spacing": 6,
+      "on": "sands/sandstone",
+      "designs": [
+        "Glasswood_Tree_Large 40%",
+        "Glasswood_Tree_Small 60%"
+      ],
+      "sapling_growth": "on sand/sandstone"
+    },
+    "mirage_palm": {
+      "oasis_ring_density": "6-12 per oasis within 9 blocks of water",
+      "wild": "0.12/chunk elsewhere",
+      "designs": [
+        "Mirage_Palm_Tall 50%",
+        "Mirage_Palm_Short 50%"
+      ],
+      "min_spacing": 4
+    }
+  },
+  "vegetation_per_chunk_attempts": {
+    "whispering_desert_grass": 18,
+    "golden_dune_fern": 4,
+    "crystal_cactus": 2.5,
+    "glass_thorn_bush": 1.5,
+    "moon_sand_mushroom": "2 (only in shade of crystals/arches, light<=7)",
+    "mirage_lotus": "oasis shore + water-adjacent only (4-10 per oasis)",
+    "singing_crystal_cluster": "3 on crystal formation bases + 1/chunk free-standing"
+  },
+  "crystal_formations": {
+    "giant_amber_crystals": {
+      "frequency": "1 per ~2 chunks (rarity 1/2)",
+      "height": "10-26",
+      "shape": "leaning hexagonal prisms, 3-7 shards; amber glass + singing_crystal_block core"
+    },
+    "glass_spires": {
+      "frequency": "1 per ~3 chunks",
+      "height": "14-32",
+      "radius": "1-3 tapering"
+    },
+    "giant_arches": {
+      "frequency": "1 per ~6 chunks",
+      "span": "14-24",
+      "height": "10-18",
+      "note": "ground-anchored both ends on stable dune/sandstone"
+    },
+    "instrument_crystals": {
+      "frequency": "1 per ~8 chunks",
+      "description": "harp/organ-pipe arrays; same placement rules as spires"
+    },
+    "ruins_and_buried_remnants": {
+      "frequency": "1 per 2 chunks small ruins (sandstone walls/columns, partly buried)"
+    }
+  },
+  "dunes": {
+    "terrain_shaping": "large-scale ridged noise: wavelength 48-96 blocks, amplitude 6-14; secondary ripple 8-16 blocks / amplitude 1-2",
+    "slope_limit": "<=35 deg for structure placement"
+  },
+  "oases": {
+    "count": "1 per ~120x120 area",
+    "radius": "5-9 water pond (depth 2-3), 3-block sandstone/grass rim, palms + lotus + ferns",
+    "rule": "place in dune troughs, never on slopes >20 deg"
+  },
+  "structures": {
+    "Cathedral_of_Glass_Harp": {
+      "rarity": "very rare",
+      "spacing": 36,
+      "separation": 16,
+      "terrain_adaptation": "beard_box (flat platform)",
+      "min_distance_from_other_structures": 12,
+      "footprint_check": "slope <=3 over 39x39"
+    },
+    "Buried_Mirage_Observatory": {
+      "rarity": "rare",
+      "spacing": 28,
+      "separation": 12,
+      "terrain_adaptation": "bury (surface layer y=15 at terrain)",
+      "footprint_check": "dune areas, slope <=6"
+    },
+    "Lost_Caravanserai": {
+      "rarity": "uncommon",
+      "spacing": 22,
+      "separation": 9,
+      "terrain_adaptation": "beard_box",
+      "footprint_check": "near oasis or flat dune basin; slope <=2 over 43x43"
+    },
+    "Thunderglass_Labyrinth": {
+      "rarity": "very rare (rarest)",
+      "spacing": 44,
+      "separation": 20,
+      "terrain_adaptation": "beard_box",
+      "footprint_check": "slope <=3 over 49x49"
+    }
+  },
+  "creature_spawns": {
+    "prism_jerboa": {
+      "weight": 6,
+      "group": "1-3",
+      "category": "creature",
+      "surface": "violet_dune_sand, golden_glass_sand, sandstone",
+      "light": "any",
+      "avoid": "within 6 blocks of lava/fluids except oasis shore, inside structure interiors except marked encounter areas"
+    },
+    "structure_spawns": "Caravanserai rest area (guaranteed 1-2), Labyrinth sanctuary, Observatory hall, Cathedral hall (see structure notes)"
+  },
+  "clearance": {
+    "trees": "trunk base needs 3x3 clear + sky access",
+    "structures": "no overlap with oasis water; keep 8 blocks from giant crystals",
+    "formations": "anchor on solid ground, min 6 spacing"
+  },
+  "performance": [
+    "Cap crystal formations to <= 3 per chunk and avoid generating across >2 chunk borders.",
+    "Use feature placement noise (single sample per chunk) rather than per-block rejection loops.",
+    "Leaves/lights: glow sources (crystals, lotus, mushrooms) are numerous - cap light-emitting decoration at ~40 per chunk.",
+    "Labyrinth/Cathedral NBTs are 33-36k blocks; use rare spacing and place only at structure-start stage.",
+    "Glass blocks cause client overdraw: avoid stacking > 6 glass layers in giant formations."
+  ],
+  "disclaimer": "Specification only. No world generation is implemented in this pack."
+}

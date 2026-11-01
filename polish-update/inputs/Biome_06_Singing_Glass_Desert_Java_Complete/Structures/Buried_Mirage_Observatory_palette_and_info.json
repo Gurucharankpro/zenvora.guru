@@ -1,0 +1,48 @@
+{
+  "size_xyz": [
+    31,
+    28,
+    31
+  ],
+  "surface_layer_y": 15,
+  "block_count": 19760,
+  "creature_encounter_area": "x=15, y=16, z=15 (star-map hall center)",
+  "palette_counts": {
+    "minecraft:air": 5550,
+    "minecraft:purple_terracotta": 4888,
+    "minecraft:cut_sandstone": 3554,
+    "minecraft:yellow_terracotta": 1452,
+    "minecraft:sandstone": 1215,
+    "minecraft:bookshelf": 564,
+    "minecraft:smooth_sandstone": 558,
+    "minecraft:dark_oak_planks": 439,
+    "minecraft:chiseled_sandstone": 417,
+    "minecraft:yellow_stained_glass": 228,
+    "minecraft:black_concrete": 226,
+    "minecraft:chiseled_bookshelf": 148,
+    "minecraft:gold_block": 109,
+    "minecraft:blue_concrete": 106,
+    "minecraft:tinted_glass": 95,
+    "minecraft:glowstone": 39,
+    "minecraft:sandstone_wall": 39,
+    "minecraft:polished_blackstone": 28,
+    "minecraft:spruce_planks": 20,
+    "minecraft:light_gray_stained_glass": 15,
+    "minecraft:smooth_sandstone_stairs": 13,
+    "minecraft:ladder": 12,
+    "minecraft:end_rod": 10,
+    "minecraft:lantern": 9,
+    "minecraft:candle": 6,
+    "minecraft:amethyst_cluster": 5,
+    "minecraft:chest": 4,
+    "minecraft:dark_oak_slab": 4,
+    "minecraft:lectern": 4,
+    "minecraft:enchanting_table": 1,
+    "minecraft:amethyst_block": 1,
+    "minecraft:cartography_table": 1
+  },
+  "placement": {
+    "origin": "min corner (x=0,y=0,z=0 of the NBT)",
+    "origin_y_rule": "origin_y = terrain_surface_y - 15"
+  }
+}

@@ -43,5 +43,6 @@ public final class ContentBootstrap {
   ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER,ContentConfig.SERVER,"shadowsovereign-autopilot-server.toml");
   ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT,ContentConfig.CLIENT,"shadowsovereign-living-client.toml");
   ContentNetwork.register();
+  PolishContent.register(bus);
  }
 }

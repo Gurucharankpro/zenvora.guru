@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "soulbound:block/mirage_palm_log_top",
+    "side": "soulbound:block/mirage_palm_log"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "soulbound:violet_dune_sand": "minecraft:purple_terracotta (structures use it for dune fill)",
+  "soulbound:golden_glass_sand": "minecraft:yellow_terracotta",
+  "soulbound:ancient_desert_sandstone": "minecraft:sandstone / minecraft:cut_sandstone",
+  "soulbound:cracked_desert_sandstone": "minecraft:cut_sandstone (or cracked variants)",
+  "soulbound:polished_mirage_stone": "minecraft:purpur_block / minecraft:purpur_pillar",
+  "soulbound:singing_crystal_ore": "minecraft:deepslate_gold_ore (not used in structures)",
+  "soulbound:singing_crystal_block": "minecraft:glowstone",
+  "soulbound:glasswood_log": "minecraft:basalt (trees themselves use the custom ids)",
+  "soulbound:singing_crystal_cluster": "minecraft:amethyst_cluster",
+  "(glass)": "minecraft:yellow_stained_glass / orange_stained_glass = golden/amber glass; black_stained_glass / purple_stained_glass = thunderglass; tinted_glass = telescope tube"
+}

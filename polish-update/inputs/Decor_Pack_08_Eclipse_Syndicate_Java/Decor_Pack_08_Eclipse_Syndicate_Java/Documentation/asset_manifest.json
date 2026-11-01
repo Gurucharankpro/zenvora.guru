@@ -1,0 +1,760 @@
+{
+ "pack": "Decor Pack 08 - The Eclipse Syndicate",
+ "namespace": "soulbound_decor",
+ "platform": "Minecraft Java Edition",
+ "decorations": [
+  {
+   "index": 1,
+   "id": "soul_contract_desk",
+   "resource_id": "soulbound_decor:block/soul_contract_desk",
+   "title": "The Soul Contract Desk",
+   "mob": 61,
+   "mob_name": "The Pale Broker",
+   "bbmodel": "Models/soul_contract_desk.bbmodel",
+   "texture": "Textures/soul_contract_desk.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/soul_contract_desk.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/soul_contract_desk.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/soul_contract_desk.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/soul_contract_desk.json",
+   "elements": 87,
+   "size_px": [
+    32.0,
+    38,
+    16.0
+   ],
+   "size_blocks_wxhxd": [
+    2.0,
+    2.38,
+    1.0
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.8289,
+   "emissive_materials": [
+    "wisp",
+    "runes"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor decoration, 2x1 footprint (32x16 px), floating pages/coins reach 2.1 blocks tall. Front faces north."
+  },
+  {
+   "index": 2,
+   "id": "four_handed_contract_monument",
+   "resource_id": "soulbound_decor:block/four_handed_contract_monument",
+   "title": "The Four-Handed Contract Monument",
+   "mob": 61,
+   "mob_name": "The Pale Broker",
+   "bbmodel": "Models/four_handed_contract_monument.bbmodel",
+   "texture": "Textures/four_handed_contract_monument.png",
+   "texture_size": [
+    128,
+    128
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/four_handed_contract_monument.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/four_handed_contract_monument.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/four_handed_contract_monument.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/four_handed_contract_monument.json",
+   "elements": 78,
+   "size_px": [
+    43.1,
+    49.4,
+    30.0
+   ],
+   "size_blocks_wxhxd": [
+    2.69,
+    3.09,
+    1.88
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6376,
+   "emissive_materials": [
+    "spectral"
+   ],
+   "translucent_materials": [],
+   "placement": "Large centrepiece, 2x2 footprint, ~3.1 blocks tall. Exceeds one block - multiblock or custom BER. Front faces north."
+  },
+  {
+   "index": 3,
+   "id": "widows_mechanical_clock",
+   "resource_id": "soulbound_decor:block/widows_mechanical_clock",
+   "title": "The Widow's Mechanical Clock",
+   "mob": 62,
+   "mob_name": "The Clockwork Widow",
+   "bbmodel": "Models/widows_mechanical_clock.bbmodel",
+   "texture": "Textures/widows_mechanical_clock.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/widows_mechanical_clock.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/widows_mechanical_clock.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/widows_mechanical_clock.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/widows_mechanical_clock.json",
+   "elements": 87,
+   "size_px": [
+    50.1,
+    50.1,
+    13.9
+   ],
+   "size_blocks_wxhxd": [
+    3.13,
+    3.13,
+    0.87
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6287,
+   "emissive_materials": [
+    "crystal"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor decoration, 1x1 body with 2-block-wide arm span, ~2.9 blocks tall. Exceeds 1x1 block bounds - multiblock/custom BER. Faces north."
+  },
+  {
+   "index": 4,
+   "id": "broken_hourglass_throne",
+   "resource_id": "soulbound_decor:block/broken_hourglass_throne",
+   "title": "The Broken Hourglass Throne",
+   "mob": 62,
+   "mob_name": "The Clockwork Widow",
+   "bbmodel": "Models/broken_hourglass_throne.bbmodel",
+   "texture": "Textures/broken_hourglass_throne.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/broken_hourglass_throne.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/broken_hourglass_throne.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/broken_hourglass_throne.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/broken_hourglass_throne.json",
+   "elements": 87,
+   "size_px": [
+    37.0,
+    57.4,
+    22.0
+   ],
+   "size_blocks_wxhxd": [
+    2.31,
+    3.58,
+    1.38
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.5492,
+   "emissive_materials": [],
+   "translucent_materials": [
+    "glass"
+   ],
+   "placement": "Floor decoration, 2x2 footprint, ~2.6 blocks tall; rotates with facing (default faces north). Needs custom collision."
+  },
+  {
+   "index": 5,
+   "id": "hollow_knight_monument",
+   "resource_id": "soulbound_decor:block/hollow_knight_monument",
+   "title": "The Hollow Knight Monument",
+   "mob": 63,
+   "mob_name": "The Hollow Bastion",
+   "bbmodel": "Models/hollow_knight_monument.bbmodel",
+   "texture": "Textures/hollow_knight_monument.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/hollow_knight_monument.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/hollow_knight_monument.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/hollow_knight_monument.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/hollow_knight_monument.json",
+   "elements": 73,
+   "size_px": [
+    34.7,
+    50.8,
+    24.0
+   ],
+   "size_blocks_wxhxd": [
+    2.17,
+    3.18,
+    1.5
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6196,
+   "emissive_materials": [
+    "soul"
+   ],
+   "translucent_materials": [],
+   "placement": "Large statue, 2x2 footprint, ~3.4 blocks tall. Multiblock or custom BER. Front faces north."
+  },
+  {
+   "index": 6,
+   "id": "bastion_shield_display",
+   "resource_id": "soulbound_decor:block/bastion_shield_display",
+   "title": "The Bastion Shield Display",
+   "mob": 63,
+   "mob_name": "The Hollow Bastion",
+   "bbmodel": "Models/bastion_shield_display.bbmodel",
+   "texture": "Textures/bastion_shield_display.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/bastion_shield_display.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/bastion_shield_display.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/bastion_shield_display.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/bastion_shield_display.json",
+   "elements": 59,
+   "size_px": [
+    25.0,
+    43.6,
+    24.0
+   ],
+   "size_blocks_wxhxd": [
+    1.56,
+    2.73,
+    1.5
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.7225,
+   "emissive_materials": [
+    "crystal"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor display, 2x1 footprint, ~2.8 blocks tall; against a wall or freestanding. Faces north."
+  },
+  {
+   "index": 7,
+   "id": "raven_queens_sewing_table",
+   "resource_id": "soulbound_decor:block/raven_queens_sewing_table",
+   "title": "The Raven Queen's Sewing Table",
+   "mob": 64,
+   "mob_name": "The Raven Seamstress",
+   "bbmodel": "Models/raven_queens_sewing_table.bbmodel",
+   "texture": "Textures/raven_queens_sewing_table.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/raven_queens_sewing_table.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/raven_queens_sewing_table.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/raven_queens_sewing_table.json",
+   "custom_fullscale_model": null,
+   "elements": 83,
+   "size_px": [
+    32.4,
+    27,
+    15.8
+   ],
+   "size_blocks_wxhxd": [
+    2.02,
+    1.69,
+    0.99
+   ],
+   "vanilla_fit": true,
+   "vanilla_export_scale": 1.0,
+   "emissive_materials": [
+    "glowthread",
+    "cyanglow"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor decoration, 2x1 footprint, ~2 blocks tall. Faces north."
+  },
+  {
+   "index": 8,
+   "id": "thousand_ravens_chandelier",
+   "resource_id": "soulbound_decor:block/thousand_ravens_chandelier",
+   "title": "The Thousand Ravens Chandelier",
+   "mob": 64,
+   "mob_name": "The Raven Seamstress",
+   "bbmodel": "Models/thousand_ravens_chandelier.bbmodel",
+   "texture": "Textures/thousand_ravens_chandelier.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/thousand_ravens_chandelier.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/thousand_ravens_chandelier.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/thousand_ravens_chandelier.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/thousand_ravens_chandelier.json",
+   "elements": 259,
+   "size_px": [
+    52.0,
+    47,
+    28.6
+   ],
+   "size_blocks_wxhxd": [
+    3.25,
+    2.94,
+    1.79
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6848,
+   "emissive_materials": [
+    "crystal",
+    "flame",
+    "cyanglow"
+   ],
+   "translucent_materials": [],
+   "placement": "Ceiling-hung chandelier, ~3.4 blocks wide x 2.9 tall; attach point at top centre (y=44px). Needs custom hang rendering / multiblock. Faces north."
+  },
+  {
+   "index": 9,
+   "id": "crystal_samurai_statue",
+   "resource_id": "soulbound_decor:block/crystal_samurai_statue",
+   "title": "The Crystal Samurai Statue",
+   "mob": 65,
+   "mob_name": "The Glass Ronin",
+   "bbmodel": "Models/crystal_samurai_statue.bbmodel",
+   "texture": "Textures/crystal_samurai_statue.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/crystal_samurai_statue.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/crystal_samurai_statue.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/crystal_samurai_statue.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/crystal_samurai_statue.json",
+   "elements": 67,
+   "size_px": [
+    28.6,
+    56.2,
+    26.0
+   ],
+   "size_blocks_wxhxd": [
+    1.79,
+    3.51,
+    1.62
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.5604,
+   "emissive_materials": [
+    "blade",
+    "cyanglow"
+   ],
+   "translucent_materials": [
+    "amber",
+    "blade"
+   ],
+   "placement": "Large statue, 2x2 footprint, ~3.4 blocks tall. Needs translucent render layer for amber crystal. Multiblock or custom BER. Faces north."
+  },
+  {
+   "index": 10,
+   "id": "mirror_blade_shrine",
+   "resource_id": "soulbound_decor:block/mirror_blade_shrine",
+   "title": "The Mirror Blade Shrine",
+   "mob": 65,
+   "mob_name": "The Glass Ronin",
+   "bbmodel": "Models/mirror_blade_shrine.bbmodel",
+   "texture": "Textures/mirror_blade_shrine.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/mirror_blade_shrine.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/mirror_blade_shrine.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/mirror_blade_shrine.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/mirror_blade_shrine.json",
+   "elements": 87,
+   "size_px": [
+    47.7,
+    47.2,
+    17.1
+   ],
+   "size_blocks_wxhxd": [
+    2.98,
+    2.95,
+    1.07
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6674,
+   "emissive_materials": [
+    "blade"
+   ],
+   "translucent_materials": [
+    "blade",
+    "mirror"
+   ],
+   "placement": "Floor altar, 2x1 footprint, ~2.7 blocks tall; wide shrine frame. Faces north."
+  },
+  {
+   "index": 11,
+   "id": "giant_fungal_experiment",
+   "resource_id": "soulbound_decor:block/giant_fungal_experiment",
+   "title": "The Giant Fungal Experiment",
+   "mob": 66,
+   "mob_name": "The Spore Alchemist",
+   "bbmodel": "Models/giant_fungal_experiment.bbmodel",
+   "texture": "Textures/giant_fungal_experiment.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/giant_fungal_experiment.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/giant_fungal_experiment.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/giant_fungal_experiment.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/giant_fungal_experiment.json",
+   "elements": 122,
+   "size_px": [
+    30.3,
+    48,
+    28.0
+   ],
+   "size_blocks_wxhxd": [
+    1.89,
+    3.0,
+    1.75
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6562,
+   "emissive_materials": [
+    "cap",
+    "spot",
+    "crystal",
+    "goo"
+   ],
+   "translucent_materials": [
+    "glass"
+   ],
+   "placement": "Floor decoration, 2x2 footprint, ~3.0 blocks tall (multiblock/custom BER). Glowing parts should use emissive/full-bright where supported. Faces north."
+  },
+  {
+   "index": 12,
+   "id": "alchemists_botanical_cabinet",
+   "resource_id": "soulbound_decor:block/alchemists_botanical_cabinet",
+   "title": "The Alchemist's Botanical Cabinet",
+   "mob": 66,
+   "mob_name": "The Spore Alchemist",
+   "bbmodel": "Models/alchemists_botanical_cabinet.bbmodel",
+   "texture": "Textures/alchemists_botanical_cabinet.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/alchemists_botanical_cabinet.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/alchemists_botanical_cabinet.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/alchemists_botanical_cabinet.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/alchemists_botanical_cabinet.json",
+   "elements": 81,
+   "size_px": [
+    22.0,
+    44.2,
+    12.6
+   ],
+   "size_blocks_wxhxd": [
+    1.38,
+    2.77,
+    0.79
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.712,
+   "emissive_materials": [
+    "cap",
+    "crystal",
+    "goo"
+   ],
+   "translucent_materials": [
+    "glass"
+   ],
+   "placement": "Floor furniture, 1x1 footprint (slightly wide), ~2.1 blocks tall; fits 1x2 block volume. Faces north."
+  },
+  {
+   "index": 13,
+   "id": "legendary_67_monument",
+   "resource_id": "soulbound_decor:block/legendary_67_monument",
+   "title": "The Legendary 67 Monument",
+   "mob": 67,
+   "mob_name": "The 67 Boss",
+   "bbmodel": "Models/legendary_67_monument.bbmodel",
+   "texture": "Textures/legendary_67_monument.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/legendary_67_monument.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/legendary_67_monument.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/legendary_67_monument.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/legendary_67_monument.json",
+   "elements": 142,
+   "size_px": [
+    55.2,
+    41.8,
+    20.0
+   ],
+   "size_blocks_wxhxd": [
+    3.45,
+    2.61,
+    1.25
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.7531,
+   "emissive_materials": [
+    "digit",
+    "crystal",
+    "hand",
+    "ringglow"
+   ],
+   "translucent_materials": [],
+   "placement": "Large centrepiece, 3x1 footprint, ~3.6 blocks tall (multiblock/custom BER). Digits face north."
+  },
+  {
+   "index": 14,
+   "id": "six_seven_royal_throne",
+   "resource_id": "soulbound_decor:block/six_seven_royal_throne",
+   "title": "The Six-Seven Royal Throne",
+   "mob": 67,
+   "mob_name": "The 67 Boss",
+   "bbmodel": "Models/six_seven_royal_throne.bbmodel",
+   "texture": "Textures/six_seven_royal_throne.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/six_seven_royal_throne.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/six_seven_royal_throne.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/six_seven_royal_throne.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/six_seven_royal_throne.json",
+   "elements": 96,
+   "size_px": [
+    38.4,
+    66.4,
+    26.4
+   ],
+   "size_blocks_wxhxd": [
+    2.4,
+    4.15,
+    1.65
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.4744,
+   "emissive_materials": [
+    "gem",
+    "digit"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor throne, 2x2 footprint, ~3.0 blocks tall; rotates with facing (default north). Custom collision required."
+  },
+  {
+   "index": 15,
+   "id": "porcelain_duchess_statue",
+   "resource_id": "soulbound_decor:block/porcelain_duchess_statue",
+   "title": "The Porcelain Duchess Statue",
+   "mob": 68,
+   "mob_name": "The Porcelain Duchess",
+   "bbmodel": "Models/porcelain_duchess_statue.bbmodel",
+   "texture": "Textures/porcelain_duchess_statue.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/porcelain_duchess_statue.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/porcelain_duchess_statue.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/porcelain_duchess_statue.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/porcelain_duchess_statue.json",
+   "elements": 56,
+   "size_px": [
+    28.8,
+    48.0,
+    28.0
+   ],
+   "size_blocks_wxhxd": [
+    1.8,
+    3.0,
+    1.75
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6562,
+   "emissive_materials": [
+    "cyanglow"
+   ],
+   "translucent_materials": [
+    "mirror"
+   ],
+   "placement": "Large statue, 2x2 footprint, ~3.3 blocks tall (multiblock/custom BER). Faces north."
+  },
+  {
+   "index": 16,
+   "id": "royal_mirror_vanity",
+   "resource_id": "soulbound_decor:block/royal_mirror_vanity",
+   "title": "The Royal Mirror Vanity",
+   "mob": 68,
+   "mob_name": "The Porcelain Duchess",
+   "bbmodel": "Models/royal_mirror_vanity.bbmodel",
+   "texture": "Textures/royal_mirror_vanity.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/royal_mirror_vanity.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/royal_mirror_vanity.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/royal_mirror_vanity.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/royal_mirror_vanity.json",
+   "elements": 73,
+   "size_px": [
+    32.7,
+    57.2,
+    15.5
+   ],
+   "size_blocks_wxhxd": [
+    2.04,
+    3.58,
+    0.97
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.5507,
+   "emissive_materials": [
+    "ruby"
+   ],
+   "translucent_materials": [
+    "mirror"
+   ],
+   "placement": "Floor furniture, 2x1 footprint, ~3 blocks tall; back against a wall. Faces north."
+  },
+  {
+   "index": 17,
+   "id": "inverted_69_sculpture",
+   "resource_id": "soulbound_decor:block/inverted_69_sculpture",
+   "title": "The Inverted 69 Sculpture",
+   "mob": 69,
+   "mob_name": "The 69 Pose",
+   "bbmodel": "Models/inverted_69_sculpture.bbmodel",
+   "texture": "Textures/inverted_69_sculpture.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/inverted_69_sculpture.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/inverted_69_sculpture.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/inverted_69_sculpture.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/inverted_69_sculpture.json",
+   "elements": 57,
+   "size_px": [
+    45.0,
+    50.6,
+    16.0
+   ],
+   "size_blocks_wxhxd": [
+    2.81,
+    3.16,
+    1.0
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6225,
+   "emissive_materials": [
+    "glow",
+    "cyanglow"
+   ],
+   "translucent_materials": [],
+   "placement": "Statue, 1x1 footprint, ~3.1 blocks tall (multiblock/custom BER). Faces north."
+  },
+  {
+   "index": 18,
+   "id": "gravity_illusion_monument",
+   "resource_id": "soulbound_decor:block/gravity_illusion_monument",
+   "title": "The Gravity Illusion Monument",
+   "mob": 69,
+   "mob_name": "The 69 Pose",
+   "bbmodel": "Models/gravity_illusion_monument.bbmodel",
+   "texture": "Textures/gravity_illusion_monument.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/gravity_illusion_monument.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/gravity_illusion_monument.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/gravity_illusion_monument.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/gravity_illusion_monument.json",
+   "elements": 81,
+   "size_px": [
+    29.4,
+    46.8,
+    26.0
+   ],
+   "size_blocks_wxhxd": [
+    1.84,
+    2.92,
+    1.62
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.6731,
+   "emissive_materials": [
+    "sphere",
+    "sphere2",
+    "glow"
+   ],
+   "translucent_materials": [],
+   "placement": "Large abstract centrepiece, 2x2 footprint, ~3.1 blocks tall (multiblock/custom BER). Symmetric; any facing."
+  },
+  {
+   "index": 19,
+   "id": "ultimate_cringe_throne",
+   "resource_id": "soulbound_decor:block/ultimate_cringe_throne",
+   "title": "The Ultimate Cringe Throne",
+   "mob": 70,
+   "mob_name": "The King of Corny Memes",
+   "bbmodel": "Models/ultimate_cringe_throne.bbmodel",
+   "texture": "Textures/ultimate_cringe_throne.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/ultimate_cringe_throne.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/ultimate_cringe_throne.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/ultimate_cringe_throne.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/ultimate_cringe_throne.json",
+   "elements": 64,
+   "size_px": [
+    43.0,
+    76.2,
+    28.0
+   ],
+   "size_blocks_wxhxd": [
+    2.69,
+    4.76,
+    1.75
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.4134,
+   "emissive_materials": [
+    "cheese",
+    "sun"
+   ],
+   "translucent_materials": [],
+   "placement": "Floor throne, 2x2 footprint, ~3.3 blocks tall; rotates with facing (default north). Custom collision required."
+  },
+  {
+   "index": 20,
+   "id": "king_of_corny_memes_statue",
+   "resource_id": "soulbound_decor:block/king_of_corny_memes_statue",
+   "title": "The King of Corny Memes Statue",
+   "mob": 70,
+   "mob_name": "The King of Corny Memes",
+   "bbmodel": "Models/king_of_corny_memes_statue.bbmodel",
+   "texture": "Textures/king_of_corny_memes_statue.png",
+   "texture_size": [
+    64,
+    64
+   ],
+   "texture_path": "assets/soulbound_decor/textures/block/king_of_corny_memes_statue.png",
+   "java_block_model": "Java_Model_Exports/assets/soulbound_decor/models/block/king_of_corny_memes_statue.json",
+   "java_item_model": "Java_Model_Exports/assets/soulbound_decor/models/item/king_of_corny_memes_statue.json",
+   "custom_fullscale_model": "assets/soulbound_decor/models/custom_fullscale/king_of_corny_memes_statue.json",
+   "elements": 72,
+   "size_px": [
+    36.0,
+    60.6,
+    28.0
+   ],
+   "size_blocks_wxhxd": [
+    2.25,
+    3.79,
+    1.75
+   ],
+   "vanilla_fit": false,
+   "vanilla_export_scale": 0.5198,
+   "emissive_materials": [
+    "cheese",
+    "sun"
+   ],
+   "translucent_materials": [],
+   "placement": "Large boss statue, 2x2 footprint, ~3.9 blocks tall (multiblock/custom BER). Faces north."
+  }
+ ]
+}

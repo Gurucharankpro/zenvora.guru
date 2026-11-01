@@ -1,0 +1,38 @@
+{
+  "size_xyz": [
+    49,
+    25,
+    49
+  ],
+  "surface_layer_y": 6,
+  "block_count": 32528,
+  "creature_encounter_area": "x=24, y=7, z=24, radius 8 (central circular sanctuary around the fractured monument)",
+  "palette_counts": {
+    "minecraft:blackstone": 13365,
+    "minecraft:air": 5229,
+    "minecraft:polished_blackstone_bricks": 4749,
+    "minecraft:black_stained_glass": 3852,
+    "minecraft:gilded_blackstone": 1786,
+    "minecraft:orange_stained_glass": 701,
+    "minecraft:polished_blackstone": 494,
+    "minecraft:purple_terracotta": 464,
+    "minecraft:yellow_stained_glass": 437,
+    "minecraft:obsidian": 319,
+    "minecraft:purple_stained_glass": 276,
+    "minecraft:amethyst_block": 274,
+    "minecraft:gold_block": 271,
+    "minecraft:crying_obsidian": 128,
+    "minecraft:glowstone": 88,
+    "minecraft:orange_terracotta": 27,
+    "minecraft:amethyst_cluster": 22,
+    "minecraft:polished_blackstone_slab": 20,
+    "minecraft:cracked_polished_blackstone_bricks": 12,
+    "minecraft:chest": 7,
+    "minecraft:blackstone_stairs": 5,
+    "minecraft:chiseled_polished_blackstone": 2
+  },
+  "placement": {
+    "origin": "min corner (x=0,y=0,z=0 of the NBT)",
+    "origin_y_rule": "origin_y = terrain_surface_y - 6"
+  }
+}

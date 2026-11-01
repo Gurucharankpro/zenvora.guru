@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+[[mods]]
+modId="soulboundqa"
+version="1.0"
+displayName="Soulbound isolated review checks"
+[[dependencies.soulboundqa]]
+modId="shadowsovereign"
+mandatory=true
+versionRange="[1.8.1-reviewed,)"
+ordering="AFTER"
+side="BOTH"

@@ -62,7 +62,7 @@ public final class ContentConfig {
   X4.put("performance.safePosCacheTicks",b.defineInRange("performance.safePosCacheTicks",20,0,200));
   X4.put("performance.perfModeIntervalMultiplier",b.defineInRange("performance.perfModeIntervalMultiplier",2.0,1.0,8.0));
   X4.put("performance.forcePerformanceMode",b.define("performance.forcePerformanceMode",false));
-  X4.put("performance.debugLogIntervalSeconds",b.defineInRange("performance.debugLogIntervalSeconds",0,5,300));
+  X4.put("performance.debugLogIntervalSeconds",b.defineInRange("performance.debugLogIntervalSeconds",0,0,300));
   X4.put("status.enabled",b.define("status.enabled",true));
   X4.put("status.statusSyncTicks",b.defineInRange("status.statusSyncTicks",20,5,100));
   X4.put("status.notifyCooldownTicks",b.defineInRange("status.notifyCooldownTicks",100,20,1200));

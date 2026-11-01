@@ -1,0 +1,198 @@
+{
+ "name": "Theater of Black Curtains",
+ "size_xyz": [
+  45,
+  43,
+  32
+ ],
+ "data_version": 3465,
+ "minecraft_version": "1.20.1",
+ "front_of_building": "z=0 (entrance faces -Z / north)",
+ "boss_spawn": {
+  "structure_relative": [
+   22,
+   12,
+   25
+  ],
+  "note": "centre of stage emblem inlay; floor surface y=11, mob stands at y=12. World pos = structure origin corner + this offset (add 0.5 on x/z to centre)."
+ },
+ "boss_arena_bounds": [
+  12,
+  12,
+  22,
+  32,
+  31,
+  29
+ ],
+ "secret_vault_door": {
+  "bookshelf_pair": [
+   37,
+   2,
+   19,
+   37,
+   3,
+   20
+  ],
+  "iron_door": [
+   38,
+   2,
+   19
+  ]
+ },
+ "rooms_bounds_min_max_xyz": {
+  "grand_entrance_porch_with_raven_statues": [
+   0,
+   8,
+   0,
+   44,
+   22,
+   2
+  ],
+  "foyer_and_grand_staircases": [
+   2,
+   9,
+   5,
+   42,
+   28,
+   9
+  ],
+  "auditorium_orchestra_level1": [
+   2,
+   9,
+   11,
+   42,
+   31,
+   20
+  ],
+  "balcony_level2_(floor y16)": [
+   5,
+   16,
+   11,
+   39,
+   22,
+   17
+  ],
+  "balcony_level3_(floor y23)": [
+   5,
+   23,
+   11,
+   39,
+   30,
+   14
+  ],
+  "side_box_balconies": [
+   2,
+   16,
+   11,
+   4,
+   26,
+   19
+  ],
+  "giant_chandelier": [
+   18,
+   21,
+   11,
+   26,
+   31,
+   19
+  ],
+  "gold_trim_coffered_ceiling_y32": [
+   2,
+   32,
+   11,
+   42,
+   32,
+   20
+  ],
+  "main_stage_and_boss_arena": [
+   8,
+   11,
+   22,
+   36,
+   35,
+   29
+  ],
+  "proscenium_and_front_curtains": [
+   10,
+   12,
+   19,
+   34,
+   32,
+   21
+  ],
+  "raven_sculpture_with_eclipse_emblem": [
+   6,
+   23,
+   15,
+   38,
+   35,
+   29
+  ],
+  "hidden_passage_behind_back_curtain": [
+   10,
+   12,
+   29,
+   34,
+   15,
+   29
+  ],
+  "dressing_rooms_west_wing": [
+   2,
+   12,
+   22,
+   8,
+   17,
+   29
+  ],
+  "secret_costume_workshop_east_wing": [
+   36,
+   12,
+   22,
+   42,
+   17,
+   29
+  ],
+  "spiral_stair_shaft_to_rigging": [
+   37,
+   12,
+   24,
+   40,
+   38,
+   27
+  ],
+  "upper_mechanical_rigging_chamber": [
+   2,
+   37,
+   22,
+   42,
+   41,
+   29
+  ],
+  "underground_sewing_sanctuary": [
+   8,
+   2,
+   10,
+   36,
+   7,
+   26
+  ],
+  "tunnel_to_sanctuary": [
+   11,
+   2,
+   28,
+   23,
+   15,
+   29
+  ],
+  "secret_treasure_vault": [
+   39,
+   2,
+   14,
+   42,
+   6,
+   24
+  ]
+ },
+ "block_count": 55926,
+ "palette_entries": 82
+}
