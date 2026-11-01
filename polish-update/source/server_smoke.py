@@ -13,7 +13,7 @@ def main():
  shutil.copyfile(ROOT/'dist/soulbound-army-1.20.1-1.8.1-polished.jar',server/'mods/soulbound.jar')
  shutil.copyfile(repo/'native-review/qa/build/libs/soulbound-181-qa-1.0.jar',server/'mods/soulboundqa.jar')
  (server/'eula.txt').write_text('eula=true\n')
- (server/'server.properties').write_text('online-mode=false\nserver-ip=127.0.0.1\nserver-port=25579\nlevel-name=polish-isolated-test\nlevel-type=minecraft:flat\nview-distance=2\nsimulation-distance=2\nspawn-protection=0\nmax-tick-time=180000\n')
+ (server/'server.properties').write_text('online-mode=false\nserver-ip=127.0.0.1\nserver-port=25579\nlevel-name=polish-isolated-test\nlevel-type=minecraft:flat\ngenerator-settings={"layers":[{"block":"minecraft:bedrock","height":1},{"block":"minecraft:dirt","height":2},{"block":"minecraft:grass_block","height":1}],"biome":"minecraft:plains","features":false,"lakes":false,"structure_overrides":[]}\nview-distance=2\nsimulation-distance=2\nspawn-protection=0\nmax-tick-time=180000\n')
  (server/'user_jvm_args.txt').write_text('-Xms1G\n-Xmx3G\n-Dsoulboundqa.polish=true\n')
  logfile=server/'console.log'
  with logfile.open('w') as out:

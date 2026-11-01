@@ -191,7 +191,13 @@ def main():
   creatures(jar,langs,spec,shared);decorations(jar,langs,spec);biome(jar,langs,spec,shared)
   write(f'data/{NS}/worldgen/structure_set/reviewed_mythic_habitats.json',shared)
   for loc,d in langs.items():write(f'assets/{NS}/lang/{loc}.json',d)
-  write(f'assets/{NS}/textures/item/polish_eggs.png',(ROOT/'art/eggs.png').read_bytes())
+  # Standard game-asset sizing: square cells and mipmap-compatible dimensions.
+  # The generated originals remain in art/ for review.
+  raw=Image.open(ROOT/'art/eggs.png').convert('RGBA');atlas=Image.new('RGBA',(1024,256))
+  for i in range(4):
+   cell=raw.crop((round(i*raw.width/4),0,round((i+1)*raw.width/4),raw.height));cell.thumbnail((240,240),Image.Resampling.NEAREST)
+   atlas.paste(cell,(i*256+(256-cell.width)//2,(256-cell.height)//2))
+  buf=io.BytesIO();atlas.save(buf,format='PNG');write(f'assets/{NS}/textures/item/polish_eggs.png',buf.getvalue())
  write(f'assets/{NS}/content/polish.json',spec)
  (ROOT/'content-spec.json').write_text(json.dumps(spec,ensure_ascii=False,indent=2)+'\n')
  print('Prepared 3 legendary creatures, 20 Eclipse decorations, biome with 20 assets, 4 buildings, 4 trees and Prism Jerboa')

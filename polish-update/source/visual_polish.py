@@ -54,7 +54,8 @@ def main():
   item=json.loads(jar.read(f'assets/{NS}/models/item/x1_visual.json'));old=copy.deepcopy(item['overrides'])
   for i,name in enumerate(names):
    cell=atlas.crop((round((i%4)*w/4),round((i//4)*h/4),round((i%4+1)*w/4),round((i//4+1)*h/4)))
-   # Lossless atlas extraction; original generated art is retained separately.
+   # Power-of-two sprite dimensions keep the shared atlas mipmaps available.
+   cell=cell.resize((256,256),Image.Resampling.NEAREST)
    b=io.BytesIO();cell.save(b,format='PNG');write(f'assets/{NS}/textures/item/badges/{name}.png',b.getvalue())
    write(f'assets/{NS}/models/item/badges/{name}.json',{'parent':'minecraft:item/generated','textures':{'layer0':NS+':item/badges/'+name}})
    value=10000+i;item['overrides'].append({'predicate':{'custom_model_data':value},'model':NS+':item/badges/'+name})
