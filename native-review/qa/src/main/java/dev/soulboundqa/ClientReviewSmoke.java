@@ -26,15 +26,18 @@ import net.minecraft.world.level.levelgen.presets.WorldPresets;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-@net.minecraftforge.fml.common.Mod.EventBusSubscriber(modid="soulboundqa",value=net.minecraftforge.api.distmarker.Dist.CLIENT)
 public final class ClientReviewSmoke {
+ static boolean noted;static int diagnostic;
  static int ticks,stage,last,wait,retries;static boolean ready;static String save;static CompletableFuture<?> work;static UUID soul;static int kind;
  static void check(boolean ok,String why){if(!ok)throw new IllegalStateException("181 NATIVE CLIENT FAILED:"+why);}
  static void pressH(Minecraft m){try{var method=net.minecraftforge.fml.util.ObfuscationReflectionHelper.findMethod(net.minecraft.client.KeyboardHandler.class,"m_90893_",long.class,int.class,int.class,int.class,int.class);method.invoke(m.keyboardHandler,m.getWindow().getWindow(),72,0,1,0);method.invoke(m.keyboardHandler,m.getWindow().getWindow(),72,0,0,0);}catch(Exception e){throw new RuntimeException(e);}}
  static void next(int n){stage=n;last=ticks;wait=0;}
  static void job(Minecraft m,java.util.function.Consumer<ServerPlayer> f){work=m.getSingleplayerServer().submit(()->f.accept(m.getSingleplayerServer().getPlayerList().getPlayer(m.player.getUUID())));}
  static void shot(Minecraft m,String name){try(var png=Screenshot.takeScreenshot(m.getMainRenderTarget())){var dir=java.nio.file.Path.of(System.getProperty("soulboundqa.screenshots","screenshots"));java.nio.file.Files.createDirectories(dir);png.writeToFile(dir.resolve(name+".png"));}catch(Exception e){throw new RuntimeException(e);}}
- @SubscribeEvent public static void tick(net.minecraftforge.event.TickEvent.ClientTickEvent e){if(!Boolean.getBoolean("soulboundqa.smoke")||e.phase!=net.minecraftforge.event.TickEvent.Phase.END)return;var m=Minecraft.getInstance();ticks++;
+ @SubscribeEvent public static void tick(net.minecraftforge.event.TickEvent.ClientTickEvent e){if(e.phase!=net.minecraftforge.event.TickEvent.Phase.END)return;
+  if(!noted){noted=true;org.slf4j.LoggerFactory.getLogger("SoulboundQA").info("QA client tick handler registered; smoke={}",System.getProperty("soulboundqa.smoke"));}
+  if(!Boolean.getBoolean("soulboundqa.smoke"))return;var m=Minecraft.getInstance();ticks++;
+  if(ticks-diagnostic>=200){diagnostic=ticks;String screen=m.screen==null?"none":m.screen.getClass().getName()+":"+m.screen.getTitle().getString();org.slf4j.LoggerFactory.getLogger("SoulboundQA").info("QA progress stage={}, ticks={}, screen={}, player={}",stage,ticks,screen,m.player!=null);if(m.screen!=null)for(var child:m.screen.children())if(child instanceof net.minecraft.client.gui.components.Button b)org.slf4j.LoggerFactory.getLogger("SoulboundQA").info("QA screen button: {}",b.getMessage().getString());if(ticks-last>300)shot(m,"stalled-stage-"+stage);}
   if(work!=null){if(!work.isDone())return;work.join();work=null;}
   if(m.player==null&&m.screen!=null){for(var child:m.screen.children())if(child instanceof net.minecraft.client.gui.components.Button button&&(button.getMessage().getString().equals("Proceed")||button.getMessage().getString().equals("Continue"))){button.onPress();return;}}
   if(ticks>20000)throw new IllegalStateException("181 CLIENT timeout stage"+stage);

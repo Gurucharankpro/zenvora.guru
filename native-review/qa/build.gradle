@@ -19,4 +19,4 @@ sourceSets { repair { java.srcDir 'src/repair/java'; compileClasspath += sourceS
 tasks.register('repairJar', Jar) { from sourceSets.repair.output; archiveClassifier='repair' }
 reobf { repairJar {} }
 
-if(project.hasProperty('polishClient')) { minecraft.runs.client.jvmArgs '-Xmx2500m' }
+if(project.hasProperty('polishClient')) { minecraft.runs.client.jvmArgs '-Xmx2500m'; minecraft.runs.client.property 'soulboundqa.smoke','true' }

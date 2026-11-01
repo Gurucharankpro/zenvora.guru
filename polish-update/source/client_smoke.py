@@ -12,12 +12,16 @@ def main():
  jar=ROOT/'dist/soulbound-army-1.20.1-1.8.1-polished.jar';shutil.copyfile(jar,local/'army-1.8.1-polished-check.jar')
  (local/'army-1.8.1-polished-check.pom').write_text('<project><modelVersion>4.0.0</modelVersion><groupId>local.soulbound</groupId><artifactId>army</artifactId><version>1.8.1-polished-check</version></project>\n')
  env=dict(os.environ,LIBGL_ALWAYS_SOFTWARE='true',ALSOFT_DRIVERS='null');log=reports/'CLIENT-SMOKE.log'
+ clientdir=native/'run-client';clientdir.mkdir(exist_ok=True)
+ (clientdir/'options.txt').write_text('onboardAccessibility:false\ntutorialStep:none\npauseOnLostFocus:false\nnarrator:0\n')
  command=['xvfb-run','-a','-s','-screen 0 1280x800x24','gradle','--no-daemon','--console=plain','--max-workers=2','-Dorg.gradle.jvmargs=-Xmx1500m','-PqaArtifact=1.8.1-polished-check','-Psmoke','-PpolishClient','runClient']
  with log.open('w') as out:
   p=subprocess.Popen(command,cwd=native,env=env,stdout=out,stderr=subprocess.STDOUT,start_new_session=True)
-  try:p.wait(timeout=720)
+  try:p.wait(timeout=420)
   except subprocess.TimeoutExpired:
-   os.killpg(p.pid,signal.SIGTERM);p.wait(timeout=20);raise TimeoutError('Graphical test timed out; see CLIENT-SMOKE.log')
+   screenshots=native/'run-client/screenshots'
+   if screenshots.exists():shutil.copytree(screenshots,reports/'screenshots',dirs_exist_ok=True)
+   os.killpg(p.pid,signal.SIGTERM);p.wait(timeout=20);raise TimeoutError('Graphical test timed out; see CLIENT-SMOKE.log and actual stalled-screen screenshots')
  text=log.read_text(errors='replace')
  if p.returncode!=0 or '181 NATIVE CLIENT PASS:' not in text:raise RuntimeError('Native graphical client check did not pass; see CLIENT-SMOKE.log')
  screenshots=native/'run-client/screenshots'
