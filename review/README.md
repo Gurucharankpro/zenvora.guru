@@ -71,3 +71,20 @@ Download every matching .z01/.z02/.../.zip into one folder, then extract the LAS
 .zip with ZArchiver. CRC and extracted JAR SHA are verified against this build.
 Replace the previous JAR with this same file on client/server. Do not install the
 input under polish-update/base as the new mod. QA mod is never part of delivery.
+
+## Use and placement
+
+The four existing creative tabs remain: decor, eggs, workbenches and other items.
+The new 20 Eclipse props are in decor with unique recipes and recipe-book unlocks.
+The three legendary eggs and Prism Jerboa egg are in eggs; environmental blocks,
+plants and saplings are in the general items category. Use the existing encounter,
+book/army and compass flows for legendary sites and earned souls.
+
+In a separate test world with commands, find the new biome with:
+`/execute in shadowsovereign:echo_realms run locate biome shadowsovereign:singing_glass_desert`
+New natural generation appears in new chunks. Existing player buildings are not moved.
+
+[Independent download/CRC verification](../polish-update/reports/INDEPENDENT-VERIFICATION.json)
+checks the complete GitHub JAR and every split volume, including extraction byte
+identity. [Current manifest](../CURRENT-BASELINE.json) is the future-agent starting
+point; [TEST-REPORT](../downloads/TEST-REPORT.md) records actual test scope and limits.
