@@ -100,6 +100,11 @@ def creatures(jar,langs,spec,shared):
   root=ROOT/'inputs'/p['source'];native=native_creature(root,p['stem'],p['id']);egg(jar,p['id'],i)
   assert all(m[0] in native['animations'] for m in p['moves'])
   n=normalize(nbtlib.load(find(root,p['template'])));name='expansion_'+p['site'];path=f'data/{NS}/structures/polish/{p["site"]}.nbt'
+  if p['id'] in ['raven_seamstress','clockwork_widow']:
+   for b in n['blocks']:
+    if str(b.get('nbt',{}).get('LootTable',''))=='minecraft:chests/abandoned_mineshaft':
+     table='minecraft:chests/end_city_treasure' if p['id']=='clockwork_widow' else 'minecraft:chests/ancient_city' if int(b['pos'][1])<6 else 'minecraft:chests/stronghold_library'
+     b['nbt']['LootTable']=nbtlib.String(table)
   if p['id']=='dr_salmawy':
    bypos={tuple(map(int,b['pos'])):b for b in n['blocks']}
    air=next(i for i,s in enumerate(n['palette']) if str(s['Name'])=='minecraft:air')
@@ -176,12 +181,15 @@ def biome(jar,langs,spec,shared):
  for name,floor in [('Cathedral_of_Glass_Harp',9),('Buried_Mirage_Observatory',16),('Lost_Caravanserai',5),('Thunderglass_Labyrinth',7)]:
   n=normalize(nbtlib.load(root/'Structures'/f'{name}.nbt'))
   for s in n['palette']:
+   if str(s['Name'])=='minecraft:amethyst_cluster' and str(s.get('Properties',{}).get('facing','up'))!='up':continue
    if str(s['Name']) in subst:s['Name']=nbtlib.String(NS+':'+subst[str(s['Name'])]);s.pop('Properties',None)
   id='glass_desert_'+name.lower();path=f'data/{NS}/structures/polish/{name.lower()}.nbt';add_structure(jar,shared,id,path,n,'singing_glass_desert',floor)
   spec['biome_structures'].append({'id':id,'path':path,'floor':floor,'size':list(map(int,n['size']))})
  native_creature(root/'Creature','Prism_Jerboa','prism_jerboa');egg(jar,'prism_jerboa',3)
  for loc,d in langs.items():
   d[f'entity.{NS}.prism_jerboa']='يربوع المنشور' if loc=='ar_sa' else 'Prism Jerboa';d[f'item.{NS}.prism_jerboa_spawn_egg']='بيضة يربوع المنشور' if loc=='ar_sa' else 'Prism Jerboa Spawn Egg';d[f'biome.{NS}.singing_glass_desert']='صحراء الزجاج المغني' if loc=='ar_sa' else 'Singing Glass Desert'
+  d[f'quest.{NS}.visit_singing_glass_desert.title']='صحراء الزجاج المغني' if loc=='ar_sa' else 'Singing Glass Desert'
+  d[f'quest.{NS}.visit_singing_glass_desert.description']='اكتشف كثبان البلور ومخلوقاتها في الدايمنشن.' if loc=='ar_sa' else 'Explore the crystal dunes and discover their wildlife.'
  dim=json.loads(jar.read(f'data/{NS}/dimension/echo_realms.json'));params=copy.deepcopy(dim['generator']['biome_source']['biomes'][0]['parameters']);params.update(temperature=.85,humidity=-.55);dim['generator']['biome_source']['biomes'].append({'biome':NS+':singing_glass_desert','parameters':params});write(f'data/{NS}/dimension/echo_realms.json',dim)
  noise=json.loads(jar.read(f'data/{NS}/worldgen/noise_settings/echo_expanses.json'))
  rule={'type':'minecraft:condition','if_true':{'type':'minecraft:biome','biome_is':[NS+':singing_glass_desert']},'then_run':{'type':'minecraft:sequence','sequence':[

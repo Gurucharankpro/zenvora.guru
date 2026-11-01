@@ -32,6 +32,9 @@ public final class DesertEcologyFeature extends Feature<NoneFeatureConfiguration
      BlockPos p=center.offset(x,-1,z);
      w.setBlock(p.below(2),PolishContent.block("ancient_desert_sandstone").defaultBlockState(),2);
      if(dist<(radius-1)*(radius-1)){
+      // Remove only natural terrain/our vegetation above the new waterline;
+      // slight height differences must not leave sand covering the pond.
+      for(int dy=0;dy<=2;dy++){BlockPos air=center.offset(x,dy,z);var old=w.getBlockState(air);if(DesertPlant.ground(old)||old.getBlock() instanceof DesertPlant||old.canBeReplaced())w.setBlock(air,net.minecraft.world.level.block.Blocks.AIR.defaultBlockState(),2);}
       w.setBlock(p.below(),net.minecraft.world.level.block.Blocks.WATER.defaultBlockState(),2);w.setBlock(p,net.minecraft.world.level.block.Blocks.WATER.defaultBlockState(),2);
      }else{
       w.setBlock(p,PolishContent.block("violet_dune_sand").defaultBlockState(),2);

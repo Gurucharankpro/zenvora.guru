@@ -65,7 +65,7 @@ def main():
    path=f'data/{NS}/advancements/journey/{name}.json'
    if name=='visit_singing_glass_desert':
     a=copy.deepcopy(json.loads(jar.read(f'data/{NS}/advancements/journey/visit_crimson_shadow.json')))
-    a['display']['title']={'text':'Singing Glass Desert / صحراء الزجاج المغني'};a['display']['description']={'text':'Discover the glass dunes and their crystal wildlife. / اكتشف كثبان الزجاج ومخلوقاتها البلورية.'};a['criteria']['visit']['conditions']['location']['biome']=NS+':singing_glass_desert';a['rewards']={'experience':75}
+    a['display']['title']={'translate':f'quest.{NS}.visit_singing_glass_desert.title'};a['display']['description']={'translate':f'quest.{NS}.visit_singing_glass_desert.description'};a['criteria']['visit']['conditions']['location']['biome']=NS+':singing_glass_desert';a['rewards']={'experience':75}
    else:a=json.loads(jar.read(path));assert a['display']['icon']['item']=='minecraft:compass'
    a['display']['icon']={'item':NS+':x1_visual','nbt':'{CustomModelData:'+str(value)+'}'};write(path,a);report['journey_icons'].append(path)
   assert item['overrides'][:len(old)]==old;write(f'assets/{NS}/models/item/x1_visual.json',item)

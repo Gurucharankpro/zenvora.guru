@@ -48,7 +48,7 @@ public final class PolishContent {
     if(id.endsWith("_sapling"))return new SaplingBlock(new AbstractTreeGrower(){@Override protected ResourceKey<ConfiguredFeature<?,?>> getConfiguredFeature(RandomSource r,boolean flowers){return ResourceKey.create(Registries.CONFIGURED_FEATURE,new ResourceLocation(NS,id.startsWith("glasswood")?"glasswood_tree":"mirage_palm_tree"));}},p.noCollission().noOcclusion()){
      @Override protected boolean mayPlaceOn(net.minecraft.world.level.block.state.BlockState s,net.minecraft.world.level.BlockGetter l,net.minecraft.core.BlockPos pos){return DesertPlant.ground(s)||super.mayPlaceOn(s,l,pos);}
     };
-    if(type.equals("cross")||type.equals("complex"))return new DesertPlant(p.noCollission().noOcclusion());
+    if(type.equals("cross")||type.equals("complex"))return new DesertPlant(p.noCollission().noOcclusion(),id.equals("singing_crystal_cluster"));
     if(id.endsWith("_sand"))return new SandBlock(id.startsWith("violet")?0x9870b7:0xd9b44a,p);
     return new Block(p);
    });
