@@ -1,0 +1,29 @@
+{
+  "active_gates": 2,
+  "future_gates_not_installed": [
+    "P1-3",
+    "P1-4",
+    "P1-5",
+    "P2-1"
+  ],
+  "supplied_creatures": [
+    "mossbound_skulker",
+    "crystal_sentinel",
+    "emerald_root_warden",
+    "frostgrave_prowler",
+    "chainbound_sentinel",
+    "frozen_gravekeeper"
+  ],
+  "supplied_blocks": 24,
+  "emerald_dungeon": "supplied NBT, marker/namespace/chest adaptations",
+  "frozen_dungeon": "new connected crypt authored from actual supplied blocks; ZIP had no NBT",
+  "fixed": [
+    "both legacy namespaces",
+    "rectangular animated strip dimensions",
+    "frozen arbitrary-angle mesh loader",
+    "frameless surface replaces supplied solid arch",
+    "dynamic CATEGORY labels replace baked difficulty",
+    "boss entrance crystal clearance",
+    "functional inventories replace static chest models"
+  ]
+}

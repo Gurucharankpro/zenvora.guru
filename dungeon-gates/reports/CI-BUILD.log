@@ -1,0 +1,97 @@
+Collecting nbtlib==2.0.4
+  Downloading nbtlib-2.0.4-py3-none-any.whl.metadata (11 kB)
+Collecting numpy==2.2.6
+  Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+Collecting Pillow==11.3.0
+  Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Downloading nbtlib-2.0.4-py3-none-any.whl (28 kB)
+Downloading numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 149.2 MB/s  0:00:00
+Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 80.0 MB/s  0:00:00
+Installing collected packages: Pillow, numpy, nbtlib
+
+Successfully installed Pillow-11.3.0 nbtlib-2.0.4 numpy-2.2.6
+Imported all supplied runtime assets; two 64x28x64 playable dungeons
+
+Welcome to Gradle 8.8!
+
+Here are the highlights of this release:
+ - Running Gradle on Java 22
+ - Configurable Gradle daemon JVM
+ - Improved IDE performance for large projects
+
+For more details see https://docs.gradle.org/8.8/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Task :compileJava
+Setting up MCP environment
+Initializing steps
+Executing steps
+ > Running 'downloadManifest'
+ > Running 'downloadJson'
+ > Running 'downloadClient'
+ > Running 'downloadServer'
+ > Running 'extractServer'
+ > Running 'downloadClientMappings'
+ > Running 'mergeMappings'
+ > Running 'stripClient'
+ > Running 'stripServer'
+ > Running 'merge'
+ > Running 'listLibraries'
+ > Running 'rename'
+Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
+[17:27:55] [main/INFO]: Writing debug log file accesstransform.log
+[17:27:55] [main/INFO]: Access Transformer processor running version 8.2.14
+[17:27:55] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/_atJar_4/parent_at.cfg]
+[17:27:55] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar
+[17:27:55] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+[17:27:55] [main/INFO]: Transformer file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/_atJar_4/parent_at.cfg
+[17:27:55] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, overwriting
+[17:27:57] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+Creating SRG -> MCP TSRG
+/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/src/main/java/dev/dungeongates/DungeonMob.java:45: error: reference to AnimationState is ambiguous
+ private <T extends software.bernie.geckolib.core.animatable.GeoAnimatable> software.bernie.geckolib.core.object.PlayState animate(AnimationState<T> state){String clip;if(isDeadOrDying())clip="death";else{int m=entityData.get(MOVE);if(m>=0&&m<MOVES[kind].length)clip=MOVES[kind][m].clip;else clip=state.isMoving()?(kind<3?"move":getTarget()!=null?"run":"walk"):"idle";}
+                                                                                                                                   ^
+  both class software.bernie.geckolib.core.animation.AnimationState in software.bernie.geckolib.core.animation and class net.minecraft.world.entity.AnimationState in net.minecraft.world.entity match
+/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/src/main/java/dev/dungeongates/DungeonGates.java:11: warning: [removal] get() in FMLJavaModLoadingContext has been deprecated and marked for removal
+ public DungeonGates(){var bus=FMLJavaModLoadingContext.get().getModEventBus();DGRegistry.register(bus);ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON,DGConfig.SPEC);bus.addListener(this::attributes);MinecraftForge.EVENT_BUS.register(new DungeonEvents());}
+                                                       ^
+/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/src/main/java/dev/dungeongates/DungeonGates.java:11: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+ public DungeonGates(){var bus=FMLJavaModLoadingContext.get().getModEventBus();DGRegistry.register(bus);ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON,DGConfig.SPEC);bus.addListener(this::attributes);MinecraftForge.EVENT_BUS.register(new DungeonEvents());}
+                                                                                                                         ^
+/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/src/main/java/dev/dungeongates/client/AuthoredMesh.java:17: error: reference to Math is ambiguous
+ static void rotate(Vector3f v,JsonObject r,boolean point){var o=vec(r.getAsJsonArray("origin"));if(point)v.sub(o[0],o[1],o[2]);float a=(float)Math.toRadians(r.get("angle").getAsDouble());switch(r.get("axis").getAsString()){case "x"->v.rotateX(a);case "y"->v.rotateY(a);case "z"->v.rotateZ(a);}if(point)v.add(o[0],o[1],o[2]);}
+                                                                                                                                               ^
+  both class org.joml.Math in org.joml and class java.lang.Math in java.lang match
+/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/src/main/java/dev/dungeongates/DGRegistry.java:41: error: incompatible types: RegistryObject<GateBlock> cannot be converted to RegistryObject<Block>
+ static RegistryObject<Block> gate(GateKind k){var r=BLOCKS.register(k.id+"_gate",()->new GateBlock(k));ITEMS.register(k.id+"_gate",()->new BlockItem(r.get(),new Item.Properties().stacksTo(16)));return r;}
+                                                                                                                                                                                                          ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 errors
+2 warnings
+
+> Task :compileJava FAILED
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/build-1793553969265.json
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 59s
+1 actionable task: 1 executed
