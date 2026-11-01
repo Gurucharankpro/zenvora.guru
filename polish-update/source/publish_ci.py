@@ -8,6 +8,9 @@ if ok and not ((repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar
 result={'status':status,'source_commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],'production_built':ok,'graphical_client_tested':False,'multiplayer_tested':False}
 smoke=report/'PRODUCTION-SMOKE.json'
 if smoke.exists():result['production_smoke']=json.loads(smoke.read_text())
+client=report/'CLIENT-SMOKE.json'
+if client.exists():
+ result['client_smoke']=json.loads(client.read_text());result['graphical_client_tested']=result['client_smoke'].get('graphical_client_tested',False)
 if ok:
  jar=repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar';result.update(jar_sha256=hashlib.sha256(jar.read_bytes()).hexdigest(),jar_bytes=jar.stat().st_size)
 (report/'CI-RESULT.json').write_text(json.dumps(result,indent=2)+'\n');sha=result.get('jar_sha256','NOT BUILT')
@@ -61,8 +64,10 @@ include Java 17 bootstrap resolution and exact unchanged-entry comparison.
 On successful builds, an official isolated Forge server loads the final JAR with
 a separate QA mod, checks real block properties/template decodes/entity attributes
 and save/reload, locates the new biome, requests generation, flushes and stops.
-No graphical client, mobile rendering, long combat session or multiplayer test
-is claimed. Visual quality, performance, structure entrances/rotation across
+Graphical client status is recorded separately in CLIENT-SMOKE.json, with actual
+Xvfb/Mesa screenshots when it passes. This client uses a ForgeGradle-remapped copy
+of the final JAR; the dedicated-server test uses the unmodified production JAR.
+No mobile rendering, long combat session or multiplayer test is claimed. Visual quality, performance, structure entrances/rotation across
 terrain and complete encounter/recruit/retreat gameplay need in-game review.
 Worldgen frequency/terrain figures in the uploaded pack are guidance; the native
 implementation uses conservative bounded generation, not a literal new noise

@@ -39,6 +39,7 @@ public final class PolishContent {
    JsonObject d=e.getAsJsonObject();String id=d.get("id").getAsString(),type=d.get("type").getAsString();
    var b=BLOCKS.register(id,()->{
     var p=BlockBehaviour.Properties.copy(type.equals("log")?Blocks.OAK_LOG:type.equals("leaves")?Blocks.OAK_LEAVES:Blocks.SANDSTONE).strength(d.get("hard").getAsFloat()).lightLevel(s->d.get("light").getAsInt());
+    if(d.get("tool").getAsString().startsWith("pickaxe"))p.requiresCorrectToolForDrops();
     if(type.equals("log"))return new RotatedPillarBlock(p);
     if(type.equals("leaves"))return new LeavesBlock(p.noOcclusion());
     if(id.endsWith("_sapling"))return new SaplingBlock(new AbstractTreeGrower(){@Override protected ResourceKey<ConfiguredFeature<?,?>> getConfiguredFeature(RandomSource r,boolean flowers){return ResourceKey.create(Registries.CONFIGURED_FEATURE,new ResourceLocation(NS,id.startsWith("glasswood")?"glasswood_tree":"mirage_palm_tree"));}},p.noCollission().noOcclusion()){

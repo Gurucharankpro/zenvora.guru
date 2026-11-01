@@ -21,17 +21,17 @@ public class CatalogueTest {
  }
  public static void main(String[] args)throws Exception{
   Path base=Path.of(args[0]),spec=Path.of(args[1]),resources=Path.of(args[2]);
-  try(ZipFile z=new ZipFile(base.toFile())){for(var e:Collections.list(z.entries()))if(!e.isDirectory())PatchReviewed.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
+  try(ZipFile z=new ZipFile(base.toFile())){for(var e:Collections.list(z.entries()))if(!e.isDirectory())PatchPolish.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
   // Gson is a real dependency, not an engine fixture.
-  try(ZipFile z=new ZipFile(args[3])){for(var e:Collections.list(z.entries()))if(e.getName().endsWith(".class"))PatchReviewed.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
-  var before=new CatalogueLoader(new HashMap<>(PatchReviewed.entries),resources);
+  try(ZipFile z=new ZipFile(args[3])){for(var e:Collections.list(z.entries()))if(e.getName().endsWith(".class"))PatchPolish.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
+  var before=new CatalogueLoader(new HashMap<>(PatchPolish.entries),resources);
   var old=(List<?>)Class.forName("dev.shadowsovereign.mythic.MythicProfiles",true,before).getField("ALL").get(null);
-  PatchReviewed.profiles(JsonParser.parseString(Files.readString(spec)).getAsJsonObject().getAsJsonArray("profiles"));
-  var after=new CatalogueLoader(new HashMap<>(PatchReviewed.entries),resources);
+  PatchPolish.profiles(JsonParser.parseString(Files.readString(spec)).getAsJsonObject().getAsJsonArray("profiles"));
+  var after=new CatalogueLoader(new HashMap<>(PatchPolish.entries),resources);
   var type=Class.forName("dev.shadowsovereign.mythic.MythicProfiles",true,after);var updated=(List<?>)type.getField("ALL").get(null);
   if(old.size()!=51||updated.size()!=54)throw new AssertionError("Wrong catalogue count");
-  for(int i=0;i<51;i++)if(!old.get(i).toString().equals(updated.get(i).toString()))throw new AssertionError("Existing profile changed "+i);
-  ClassNode ids=PatchReviewed.node("dev/shadowsovereign/mythic/MythicExpedition");ids.methods.removeIf(m->!m.name.equals("<clinit>"));ids.fields.removeIf(f->!f.name.equals("IDS"));
+  for(int i=0;i<54;i++)if(!old.get(i).toString().equals(updated.get(i).toString()))throw new AssertionError("Existing profile changed "+i);
+  ClassNode ids=PatchPolish.node("dev/shadowsovereign/mythic/MythicExpedition");ids.methods.removeIf(m->!m.name.equals("<clinit>"));ids.fields.removeIf(f->!f.name.equals("IDS"));
   ClassWriter w=new ClassWriter(0);ids.accept(w);Map<String,byte[]> only=new HashMap<>();only.put(ids.name+".class",w.toByteArray());
   String[] values=(String[])Class.forName(ids.name.replace('/','.'),true,new CatalogueLoader(only,resources)).getField("IDS").get(null);
   if(values.length!=54)throw new AssertionError("IDs count");

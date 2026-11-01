@@ -36,6 +36,9 @@ def main():
   for name in resources:
    if '/models/' not in name or not name.endswith('.json'):continue
    d=json.loads(resources[name])
+   for e in d.get('elements',[]):
+    assert all(-16<=v<=32 for v in e['from']+e['to']),('Illegal Java model coordinates',name)
+    if 'rotation' in e:assert e['rotation']['angle'] in [-45,-22.5,0,22.5,45] and e['rotation']['axis'] in ['x','y','z'],name
    for key,value in d.get('textures',{}).items():
     if value.startswith(NS+':'):assert 'assets/'+value.replace(':','/textures/')+'.png' in allfiles,(name,key,value)
   shared=json.loads(read(f'data/{NS}/worldgen/structure_set/reviewed_mythic_habitats.json'));oldshared=json.loads(before.read(f'data/{NS}/worldgen/structure_set/reviewed_mythic_habitats.json'));assert shared['placement']==oldshared['placement'] and shared['structures'][:-7]==oldshared['structures']

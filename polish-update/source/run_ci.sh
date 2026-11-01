@@ -39,6 +39,7 @@ java -cp 'build/tools/*:build/patcher' JdkBootstrapTest "$jar"
 python3 source/verify_release.py "$jar"
 java -cp 'build/tools/*:build/patcher' FinalCatalogueTest "$SOULBOUND_BASE_JAR" "$jar" build/tools/gson.jar
 python3 source/server_smoke.py
+python3 source/client_smoke.py
 phone_dir=$(mktemp -d "$task_dir/build/phone.XXXXXX")
 python3 source/package_phone.py "$jar" "$phone_dir" --version 1.8.1
 cp "$jar" "$phone_dir/"

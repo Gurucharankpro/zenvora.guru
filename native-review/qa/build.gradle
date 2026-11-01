@@ -18,3 +18,5 @@ dependencies { minecraft 'net.minecraftforge:forge:1.20.1-47.3.22'; implementati
 sourceSets { repair { java.srcDir 'src/repair/java'; compileClasspath += sourceSets.main.compileClasspath } }
 tasks.register('repairJar', Jar) { from sourceSets.repair.output; archiveClassifier='repair' }
 reobf { repairJar {} }
+
+if(project.hasProperty('polishClient')) { minecraft.runs.client.jvmArgs '-Xmx2500m' }

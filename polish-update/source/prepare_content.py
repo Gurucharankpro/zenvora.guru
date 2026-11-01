@@ -115,7 +115,8 @@ def decorations(jar,langs,spec):
  manifest=json.loads((root/'Documentation/asset_manifest.json').read_text())
  targets=[53,53,56,56,6,6,55,55,50,50,54,54,47,47,52,52,48,48,47,47]
  names=['مكتب عقود الأرواح','نصب العقد بأربع أيد','ساعة الأرملة الآلية','عرش الساعة الرملية المحطمة','نصب الفارس الأجوف','درع الحصن','طاولة خياطة ملكة الغربان','ثريا ألف غراب','تمثال الساموراي البلوري','مزار النصل المرآتي','تجربة الفطر العملاق','خزانة نباتات الكيميائي','نصب الأسطورة 67','العرش الملكي 67','تمثال دوقة الخزف','مرآة الزينة الملكية','مجسم 69 المقلوب','نصب وهم الجاذبية','عرش الإحراج المطلق','تمثال ملك الميمز']
- for a,kind,ar in zip(manifest['decorations'],targets,names):
+ centers='paper emerald clock sand iron_sword shield string feather amethyst_shard glass red_mushroom flower_pot gold_block diamond white_terracotta glass_pane ender_eye purple_dye nether_star cake'.split()
+ for a,kind,ar,center in zip(manifest['decorations'],targets,names,centers):
   id='syndicate_'+a['id'];d=json.loads((root/a['java_block_model']).read_text())
   d['textures']={k:NS+':block/'+id for k in d['textures']};d['render_type']='minecraft:translucent' if a.get('translucent_materials') else 'minecraft:cutout';d['ambientocclusion']=False
   for e in d['elements']:assert all(-16<=v<=32 for v in e['from']+e['to']),id
@@ -125,7 +126,8 @@ def decorations(jar,langs,spec):
   write(f'assets/{NS}/textures/block/{id}.png',(root/a['texture']).read_bytes())
   write(f'assets/{NS}/blockstates/{id}.json',{'variants':{f'facing={f}':{'model':NS+':block/'+id,'y':r} for f,r in [('north',0),('east',90),('south',180),('west',270)]}})
   block_loot(id)
-  write(f'data/{NS}/recipes/polish/{id}.json',{'type':'minecraft:crafting_shaped','pattern':['SSS','SCS','SSS'],'key':{'S':{'item':'minecraft:blackstone'},'C':{'item':'minecraft:amethyst_shard'}},'result':{'item':NS+':'+id}})
+  write(f'data/{NS}/recipes/polish/{id}.json',{'type':'minecraft:crafting_shaped','pattern':['SCS',' G ','S S'],'key':{'S':{'item':'minecraft:blackstone'},'C':{'item':'minecraft:'+center},'G':{'item':'minecraft:gold_nugget'}},'result':{'item':NS+':'+id}})
+  write(f'data/{NS}/advancements/recipes/polish/{id}.json',{'parent':'minecraft:recipes/root','criteria':{'materials':{'trigger':'minecraft:inventory_changed','conditions':{'items':[{'items':['minecraft:'+center]}]}}},'rewards':{'recipes':[NS+':polish/'+id]}})
   langs['en_us'][f'block.{NS}.{id}']=a['title'];langs['ar_sa'][f'block.{NS}.{id}']=ar
  old=json.loads(jar.read(f'assets/{NS}/content/blocks.json'));old['blocks'].extend(spec['blocks']);write(f'assets/{NS}/content/blocks.json',old)
 def block_loot(id):write(f'data/{NS}/loot_tables/blocks/{id}.json',{'type':'minecraft:block','pools':[{'rolls':1,'entries':[{'type':'minecraft:item','name':NS+':'+id}],'conditions':[{'condition':'minecraft:survives_explosion'}]}]})
@@ -146,9 +148,15 @@ def biome(jar,langs,spec,shared):
  for a,label in zip(manifest['assets'],ar):
   id=a['registry_name'].split(':')[1];spec['biome_blocks'].append(dict(id=id,type=a['type'],**a['properties']));block_loot(id)
   langs['en_us'][f'block.{NS}.{id}']=a['name'];langs['ar_sa'][f'block.{NS}.{id}']=label
- tags={'mineable/shovel':['violet_dune_sand','golden_glass_sand'],'mineable/axe':['glasswood_log','mirage_palm_log'],'mineable/pickaxe':['ancient_desert_sandstone','cracked_desert_sandstone','polished_mirage_stone','singing_crystal_ore','singing_crystal_block','singing_crystal_cluster'],'needs_iron_tool':['singing_crystal_ore']}
+ tags={'mineable/shovel':['violet_dune_sand','golden_glass_sand'],'mineable/axe':['glasswood_log','mirage_palm_log'],'mineable/pickaxe':['ancient_desert_sandstone','cracked_desert_sandstone','polished_mirage_stone','singing_crystal_ore','singing_crystal_block','singing_crystal_cluster'],'needs_iron_tool':['singing_crystal_ore'],'logs':['glasswood_log','mirage_palm_log'],'logs_that_burn':['glasswood_log','mirage_palm_log'],'leaves':['glasswood_leaves','mirage_palm_leaves']}
  for tag,ids in tags.items():
   path=f'data/minecraft/tags/blocks/{tag}.json';d=json.loads(jar.read(path)) if path in jar.namelist() else {'replace':False,'values':[]};d['values']+= [NS+':'+id for id in ids];write(path,d)
+ for wood in ['glasswood','mirage_palm']:
+  leaf=NS+':'+wood+'_leaves';sapling=NS+':'+wood+'_sapling'
+  children=[{'type':'minecraft:item','name':leaf,'conditions':[{'condition':'minecraft:match_tool','predicate':{'items':['minecraft:shears']}}]},
+            {'type':'minecraft:item','name':leaf,'conditions':[{'condition':'minecraft:match_tool','predicate':{'enchantments':[{'enchantment':'minecraft:silk_touch','levels':{'min':1}}]}}]},
+            {'type':'minecraft:item','name':sapling,'conditions':[{'condition':'minecraft:random_chance','chance':.08}]}]
+  write(f'data/{NS}/loot_tables/blocks/{wood}_leaves.json',{'type':'minecraft:block','pools':[{'rolls':1,'entries':[{'type':'minecraft:alternatives','children':children}],'conditions':[{'condition':'minecraft:survives_explosion'}]}]})
  for tree in sorted((root/'Tree_Designs').glob('*.nbt')):
   n=normalize(nbtlib.load(tree))
   for s in n['palette']:s['Name']=nbtlib.String(str(s['Name']).replace('soulbound:',NS+':'))

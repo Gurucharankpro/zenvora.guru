@@ -18,8 +18,7 @@ public final class PolishRuntimeCheck {
   if(!Boolean.getBoolean("soulboundqa.polish"))return;
   var server=event.getServer();var level=server.overworld();var rm=server.getResourceManager();
   int blocks=0,states=0,templates=0,entities=0;
-  JsonObject spec;
-  try(var in=PolishRuntimeCheck.class.getResourceAsStream("/assets/shadowsovereign/content/polish.json")){if(in==null)throw new AssertionError("No final content metadata");spec=JsonParser.parseReader(new java.io.InputStreamReader(in,java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();}
+  JsonObject spec=(JsonObject)Class.forName("dev.shadowsovereign.content.PolishContent").getField("DATA").get(null);
   for(String group:List.of("blocks","biome_blocks"))for(JsonElement e:spec.getAsJsonArray(group)){
    var id=new ResourceLocation("shadowsovereign",e.getAsJsonObject().get("id").getAsString());
    if(!ForgeRegistries.BLOCKS.containsKey(id)||!ForgeRegistries.ITEMS.containsKey(id))throw new AssertionError("Missing block or item "+id);blocks++;
