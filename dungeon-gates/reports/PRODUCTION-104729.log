@@ -1,131 +1,165 @@
-2026-11-01 17:38:04,434 main WARN Advanced terminal features are not available in this environment
-[17:38:04] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.3.22, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
-[17:38:04] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21 by Eclipse Adoptium; OS Linux arch amd64 version 6.8.0-1070-azure
-[17:38:04] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/config/fml.toml is not correct. Correcting
-[17:38:04] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
-[17:38:04] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
-[17:38:04] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
-[17:38:04] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
-[17:38:04] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
-[17:38:04] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
-[17:38:05] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/fmlcore/1.20.1-47.3.22/fmlcore-1.20.1-47.3.22.jar is missing mods.toml file
-[17:38:05] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.3.22/javafmllanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[17:38:05] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.3.22/lowcodelanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[17:38:05] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/mclanguage/1.20.1-47.3.22/mclanguage-1.20.1-47.3.22.jar is missing mods.toml file
-[17:38:05] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[17:38:06] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[17:38:06] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
-[17:38:12] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.22, for MC 1.20.1 with MCP 20230612.114412
-[17:38:12] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.3.22 Initialized
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/config/dungeongates-common.toml is not correct. Correcting
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation was corrected from null to its default, SimpleCommentedConfig:{}. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.spacingChunks was corrected from null to its default, 12. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.cellSpawnChance was corrected from null to its default, 0.75. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.emeraldWeight was corrected from null to its default, 30. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.frozenWeight was corrected from null to its default, 24. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat was corrected from null to its default, SimpleCommentedConfig:{}. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat.healthMultiplier was corrected from null to its default, 1.0. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat.damageMultiplier was corrected from null to its default, 1.0. 
-[17:38:13] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key maximumPersistentInstances was corrected from null to its default, 8192. 
-[17:38:13] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[17:38:13] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.22 Target: 47.4.28
-[17:38:14] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[17:38:14] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23107!/assets/.mcassetsroot' uses unexpected schema
-[17:38:14] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23107!/data/.mcassetsroot' uses unexpected schema
-[17:38:16] [main/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
-[17:38:16] [main/INFO] [minecraft/AdvancementList]: Loaded 1271 advancements
-[17:38:16] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
-[17:38:16] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
-[17:38:16] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
-[17:38:16] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
-[17:38:17] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25579
-[17:38:17] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
-[17:38:17] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[17:38:17] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
-[17:38:17] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[17:38:17] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./qa-104729/serverconfig/forge-server.toml is not correct. Correcting
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
-[17:38:17] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false. 
-[17:38:17] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "qa-104729"
-[17:38:23] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
-[17:38:23] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[17:38:23] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[17:38:24] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[17:38:24] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[17:38:25] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
-[17:38:25] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
-[17:38:26] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
-[17:38:26] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 3%
-[17:38:27] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 4%
-[17:38:27] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
-[17:38:28] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
-[17:38:28] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
-[17:38:29] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 10%
-[17:38:29] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 12%
-[17:38:30] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 14%
-[17:38:30] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 16%
-[17:38:31] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 18%
-[17:38:31] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 20%
-[17:38:32] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 22%
-[17:38:32] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 24%
-[17:38:33] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 28%
-[17:38:33] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 30%
-[17:38:34] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 32%
-[17:38:34] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 34%
-[17:38:35] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 36%
-[17:38:35] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 38%
-[17:38:36] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 41%
-[17:38:36] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 43%
-[17:38:37] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 46%
-[17:38:37] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 49%
-[17:38:38] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 53%
-[17:38:38] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 55%
-[17:38:39] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 58%
-[17:38:39] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 59%
-[17:38:40] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 63%
-[17:38:40] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 66%
-[17:38:41] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 69%
-[17:38:41] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 71%
-[17:38:42] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 74%
-[17:38:42] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 78%
-[17:38:43] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 82%
-[17:38:43] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 85%
-[17:38:44] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 87%
-[17:38:44] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 91%
-[17:38:45] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 92%
-[17:38:45] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 96%
-[17:38:46] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 22917 ms
-[17:38:46] [Server thread/INFO] [minecraft/DedicatedServer]: Done (28.987s)! For help, type "help"
-[17:38:46] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-java.lang.NoSuchMethodError: 'float dev.dungeongates.DungeonMob.getMaxHealth()'
-	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.NativeQA.checks(NativeQA.java:95)
-	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.NativeQA.started(NativeQA.java:39)
-	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.__NativeQA_started_ServerStartedEvent.invoke(.dynamic)
+2026-11-01 17:46:32,362 main WARN Advanced terminal features are not available in this environment
+[17:46:32] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.3.22, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
+[17:46:32] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21 by Eclipse Adoptium; OS Linux arch amd64 version 6.8.0-1070-azure
+[17:46:32] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/config/fml.toml is not correct. Correcting
+[17:46:32] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[17:46:32] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
+[17:46:32] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[17:46:32] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
+[17:46:32] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[17:46:32] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[17:46:32] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/fmlcore/1.20.1-47.3.22/fmlcore-1.20.1-47.3.22.jar is missing mods.toml file
+[17:46:32] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.3.22/javafmllanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[17:46:32] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.3.22/lowcodelanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[17:46:32] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraftforge/mclanguage/1.20.1-47.3.22/mclanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[17:46:32] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[17:46:34] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[17:46:34] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
+[17:46:39] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.22, for MC 1.20.1 with MCP 20230612.114412
+[17:46:39] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.3.22 Initialized
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/config/dungeongates-common.toml is not correct. Correcting
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation was corrected from null to its default, SimpleCommentedConfig:{}. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.spacingChunks was corrected from null to its default, 12. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.cellSpawnChance was corrected from null to its default, 0.75. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.emeraldWeight was corrected from null to its default, 30. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key generation.frozenWeight was corrected from null to its default, 24. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat was corrected from null to its default, SimpleCommentedConfig:{}. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat.healthMultiplier was corrected from null to its default, 1.0. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combat.damageMultiplier was corrected from null to its default, 1.0. 
+[17:46:39] [main/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key maximumPersistentInstances was corrected from null to its default, 8192. 
+[17:46:39] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[17:46:39] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.22 Target: 47.4.28
+[17:46:40] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[17:46:40] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23107!/assets/.mcassetsroot' uses unexpected schema
+[17:46:40] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/dungeon-gates/build/isolated-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23107!/data/.mcassetsroot' uses unexpected schema
+[17:46:41] [main/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
+[17:46:41] [main/INFO] [minecraft/AdvancementList]: Loaded 1271 advancements
+[17:46:42] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[17:46:42] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[17:46:42] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[17:46:42] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[17:46:42] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25579
+[17:46:42] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[17:46:42] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[17:46:42] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[17:46:42] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[17:46:42] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./qa-104729/serverconfig/forge-server.toml is not correct. Correcting
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[17:46:42] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false. 
+[17:46:42] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "qa-104729"
+[17:46:47] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[17:46:47] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[17:46:47] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[17:46:48] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[17:46:48] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[17:46:49] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 1%
+[17:46:49] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 2%
+[17:46:50] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 3%
+[17:46:50] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 4%
+[17:46:51] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 5%
+[17:46:51] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 7%
+[17:46:52] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 9%
+[17:46:52] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 11%
+[17:46:53] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 13%
+[17:46:53] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 16%
+[17:46:54] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 17%
+[17:46:54] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 20%
+[17:46:55] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 23%
+[17:46:55] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 25%
+[17:46:56] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 27%
+[17:46:56] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 30%
+[17:46:57] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 32%
+[17:46:57] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 35%
+[17:46:58] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 38%
+[17:46:58] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 42%
+[17:46:59] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 43%
+[17:46:59] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 47%
+[17:47:00] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 51%
+[17:47:00] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 54%
+[17:47:01] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 56%
+[17:47:01] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 60%
+[17:47:02] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 63%
+[17:47:02] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 68%
+[17:47:03] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 68%
+[17:47:03] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 73%
+[17:47:04] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 76%
+[17:47:04] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 80%
+[17:47:05] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 83%
+[17:47:05] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 86%
+[17:47:06] [Worker-Main-3/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 90%
+[17:47:06] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 93%
+[17:47:07] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 97%
+[17:47:07] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 20217 ms
+[17:47:07] [Server thread/INFO] [minecraft/DedicatedServer]: Done (24.873s)! For help, type "help"
+[17:47:07] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+DGATES_NATIVE_PALETTES=39;entities=6;templates=2;assembly=2;completion=2
+DGATES_NATURAL_PROGRESS 1 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 2 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 3 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 4 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 5 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 6 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 7 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 8 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 9 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 10 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 11 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 12 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 13 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 14 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 15 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 16 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 17 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 18 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 19 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 20 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 21 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 22 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 23 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 24 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 25 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 26 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 27 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 28 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 29 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 30 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 31 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 32 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 33 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 34 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 35 counts=[0, 0]
+DGATES_NATURAL_PROGRESS 36 counts=[0, 0]
+java.lang.AssertionError: entity-ready boss exists after native chunk readiness
+	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.NativeQA.check(NativeQA.java:48)
+	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.NativeQA.finishAssembly(NativeQA.java:176)
+	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.NativeQA.tick(NativeQA.java:142)
+	at TRANSFORMER/dungeongatesqa@0.1.0/dev.dungeongates.qa.__NativeQA_tick_ServerTickEvent.invoke(.dynamic)
 	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73)
 	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:315)
 	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:296)
-	at TRANSFORMER/forge@47.3.22/net.minecraftforge.server.ServerLifecycleHooks.handleServerStarted(ServerLifecycleHooks.java:115)
-	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:638)
+	at TRANSFORMER/forge@47.3.22/net.minecraftforge.event.ForgeEventFactory.onPostServerTick(ForgeEventFactory.java:950)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:835)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:661)
 	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251)
 	at java.base/java.lang.Thread.run(Thread.java:840)
 DGATES_NATIVE_FAIL
-[17:38:46] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
-[17:38:46] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
-[17:38:46] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
-[17:38:48] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:overworld
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:the_end
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/dungeongates:dungeons
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:the_nether
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (qa-104729): All chunks are saved
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dungeons): All chunks are saved
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[17:38:49] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
+[17:47:27] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[17:47:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[17:47:27] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[17:47:28] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:overworld
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/dungeongates:dungeons
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:the_nether
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[qa-104729]'/minecraft:the_end
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (qa-104729): All chunks are saved
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (dungeons): All chunks are saved
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[17:47:29] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved

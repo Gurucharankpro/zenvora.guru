@@ -1,14 +1,195 @@
 {
   "passed": false,
-  "failure": "java.lang.NoSuchMethodError: 'float dev.dungeongates.DungeonMob.getMaxHealth()'",
+  "failure": "java.lang.AssertionError: entity-ready boss exists after native chunk readiness",
   "seed": 104729,
-  "candidate_chunks_requested": 0,
+  "candidate_chunks_requested": 36,
   "test_spacing_chunks": 4,
   "test_cell_spawn_chance": 1,
   "emerald_occurrences": 0,
   "frozen_occurrences": 0,
-  "actual_generated_candidates": [],
-  "elapsed_ms": 253,
-  "source_commit": "4c0b69a9e53be4a2a0b40f23ce31da4d97ec23eb",
-  "final_jar_sha256": "2ea9477798c22dd50df4096aa9858c86b49b99e26ac6153ffbb8f967e0e30a80"
+  "actual_generated_candidates": [
+    {
+      "chunk_x": 2,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 2,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 2,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 6,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 2,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 10,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 2,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 14,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 2,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 18,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 2,
+      "chunk_z": 22,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 6,
+      "chunk_z": 22,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 10,
+      "chunk_z": 22,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 14,
+      "chunk_z": 22,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 18,
+      "chunk_z": 22,
+      "gate": "none"
+    },
+    {
+      "chunk_x": 22,
+      "chunk_z": 22,
+      "gate": "none"
+    }
+  ],
+  "elapsed_ms": 19849,
+  "source_commit": "25e138d4543422d520fac6ce385f7fbd229f81cd",
+  "final_jar_sha256": "6e79e40d7976a33df24ae5a3d0c9fbadb6cf64126790e963d79efbbc72c8b50a"
 }
