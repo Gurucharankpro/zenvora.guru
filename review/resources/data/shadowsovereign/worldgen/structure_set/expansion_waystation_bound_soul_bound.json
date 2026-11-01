@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:expansion_waystation_bound_soul_bound",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 28,
+    "separation": 10,
+    "salt": 872303
+  }
+}

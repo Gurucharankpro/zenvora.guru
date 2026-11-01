@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:polished_diorite"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.recipe_polished_diorite.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.recipe_polished_diorite.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:polished_diorite"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/kit_polished_andesite"
+}

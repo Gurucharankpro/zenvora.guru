@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " A ",
+    "PCP",
+    "PPP"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "P": {
+      "item": "minecraft:oak_planks"
+    },
+    "C": {
+      "item": "minecraft:smoker"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:odyssey_kitchen",
+    "count": 1
+  }
+}

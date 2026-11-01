@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_pearlstone"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_sunken_pearlstone.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_sunken_pearlstone.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:sunken_pearlstone"
+            ],
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_sunken_pearlstone"
+}

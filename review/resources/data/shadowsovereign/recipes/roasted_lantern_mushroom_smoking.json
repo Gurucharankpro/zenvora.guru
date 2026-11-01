@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "shadowsovereign:lantern_mushroom"
+  },
+  "result": "shadowsovereign:roasted_lantern_mushroom",
+  "experience": 0.35,
+  "cookingtime": 100
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shadowsovereign:moon_mushroom"
+    },
+    {
+      "item": "shadowsovereign:dusk_carrot"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "shadowsovereign:dark_forest_stew",
+    "count": 1
+  }
+}

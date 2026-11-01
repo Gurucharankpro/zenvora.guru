@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_ancient_beast_skull_relic"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_devourer_ancient_beast_skull_relic.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_devourer_ancient_beast_skull_relic.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_ancient_beast_skull_relic",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_devourer_ancient_beast_skull_relic"
+}

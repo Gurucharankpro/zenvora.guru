@@ -1,0 +1,1 @@
+{"variants": {"facing=north": {"model": "shadowsovereign:block/odyssey_bench", "y": 0}, "facing=east": {"model": "shadowsovereign:block/odyssey_bench", "y": 90}, "facing=south": {"model": "shadowsovereign:block/odyssey_bench", "y": 180}, "facing=west": {"model": "shadowsovereign:block/odyssey_bench", "y": 270}}}

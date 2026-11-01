@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OAO",
+    "ASA",
+    "OAO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "S": {
+      "item": "shadowsovereign:shadow_sigil"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:soul_sanctuary"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "shadowsovereign:block/crimson_shadow_shadowwood_log"
+    },
+    "axis=z": {
+      "model": "shadowsovereign:block/crimson_shadow_shadowwood_log_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "shadowsovereign:block/crimson_shadow_shadowwood_log_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "shadowsovereign:bound_soul_wood_planks"
+    }
+  },
+  "result": {
+    "count": 2,
+    "item": "shadowsovereign:bound_soul_wood_trapdoor"
+  }
+}

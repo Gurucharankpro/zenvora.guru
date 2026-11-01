@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "shadowsovereign:block/crimson_shadow_mourning_willow_sapling"
+  }
+}

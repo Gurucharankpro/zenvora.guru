@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shadowsovereign:item/king_of_corny_memes_spawn_egg"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " C ",
+    "CPC",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "shadowsovereign:bound_cyan_crystal_shard"
+    },
+    "P": {
+      "item": "shadowsovereign:bound_soul_wood_planks"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "shadowsovereign:bound_soul_lantern_block"
+  }
+}

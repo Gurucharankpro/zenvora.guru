@@ -1,0 +1,95 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.45,
+  "downfall": 0.7,
+  "effects": {
+    "fog_color": 4860536,
+    "sky_color": 2956126,
+    "water_color": 3127496,
+    "water_fog_color": 998223,
+    "grass_color": 4864908,
+    "foliage_color": 3844280,
+    "particle": {
+      "probability": 0.0035,
+      "options": {
+        "type": "minecraft:witch"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "mood_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    }
+  },
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:canyon"
+    ]
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [
+      {
+        "type": "shadowsovereign:bound_soul_hare",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "shadowsovereign:bound_gloom_moth",
+        "weight": 6,
+        "minCount": 2,
+        "maxCount": 3
+      },
+      {
+        "type": "shadowsovereign:bound_crystal_tortoise",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "features": [
+    [],
+    [
+      "shadowsovereign:bound_glow_pond_placed"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "shadowsovereign:bound_ore_violet_crystal_placed",
+      "shadowsovereign:bound_ore_cyan_crystal_placed"
+    ],
+    [],
+    [],
+    [
+      "shadowsovereign:bound_whispering_soul_tree_placed",
+      "shadowsovereign:bound_mourning_willow_placed",
+      "shadowsovereign:bound_soul_fern_patch_placed",
+      "shadowsovereign:bound_glowing_moss_patch_placed",
+      "shadowsovereign:bound_ghost_flower_patch_placed",
+      "shadowsovereign:bound_violet_thorn_patch_placed",
+      "shadowsovereign:bound_whispering_mushroom_patch_placed",
+      "shadowsovereign:bound_spirit_mushroom_patch_placed",
+      "shadowsovereign:bound_crystal_berry_patch_placed",
+      "shadowsovereign:bound_wild_soul_wheat_patch_placed"
+    ],
+    []
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "item": "shadowsovereign:monolith_polished_white_marble"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:monolith_chiseled_marble_pillar",
+    "count": 2
+  }
+}

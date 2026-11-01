@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "shadowsovereign:ashen_stone"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:ashen_bricks",
+    "count": 4
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_tidewood_log"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_sunken_tidewood_log.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_sunken_tidewood_log.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:sunken_tidewood_log"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_sunken_floating_spore_plant"
+}

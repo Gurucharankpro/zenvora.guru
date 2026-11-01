@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:dark_leaves",
+    "shadowsovereign:ashen_leaves",
+    "shadowsovereign:bound_soul_wood_leaves",
+    "shadowsovereign:bound_mourning_willow_leaves",
+    "shadowsovereign:bound_glowing_moss",
+    "shadowsovereign:bound_mourning_vine",
+    "shadowsovereign:bound_violet_thorn_bush"
+  ]
+}

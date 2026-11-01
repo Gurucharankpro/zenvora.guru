@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shadowsovereign:monolith_ashen_log"
+    }
+  ],
+  "result": {
+    "item": "shadowsovereign:monolith_ashen_planks",
+    "count": 4
+  }
+}

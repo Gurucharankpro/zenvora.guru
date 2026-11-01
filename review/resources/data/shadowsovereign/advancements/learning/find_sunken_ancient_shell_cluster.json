@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_ancient_shell_cluster"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_sunken_ancient_shell_cluster.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_sunken_ancient_shell_cluster.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:sunken_ancient_shell_cluster"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_sunken_tidewood_sapling"
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shadowsovereign:block/crimson_shadow_dark_reeds"
+  }
+}

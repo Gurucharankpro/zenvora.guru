@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:bound_abandoned_soul_shrine",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 12,
+    "salt": 1734001
+  }
+}

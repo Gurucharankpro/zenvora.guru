@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "shadowsovereign:item/unbound_soul_sigil"
+  }
+}

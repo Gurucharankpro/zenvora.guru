@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "shadowsovereign:block/monolith_translucent_gray_leaves"
+  },
+  "render_type": "minecraft:cutout_mipped"
+}

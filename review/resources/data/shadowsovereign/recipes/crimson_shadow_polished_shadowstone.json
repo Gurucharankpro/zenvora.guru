@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "shadowsovereign:crimson_shadow_blackstone_rock"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:crimson_shadow_polished_shadowstone",
+    "count": 4
+  }
+}

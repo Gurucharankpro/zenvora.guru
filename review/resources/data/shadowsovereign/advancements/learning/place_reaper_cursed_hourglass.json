@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_cursed_hourglass"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_reaper_cursed_hourglass.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_reaper_cursed_hourglass.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_cursed_hourglass",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_reaper_cursed_hourglass"
+}

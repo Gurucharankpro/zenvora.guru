@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:shattered_crystal_nest_sanctuary",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 38,
+    "separation": 13,
+    "salt": 124106
+  }
+}

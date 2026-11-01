@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "shadowsovereign:dark_planks"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:dusk_slab",
+    "count": 6
+  }
+}

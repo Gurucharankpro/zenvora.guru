@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_hanging_soul_roots"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_abyss_hanging_soul_roots.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_abyss_hanging_soul_roots.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:abyss_hanging_soul_roots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_abyss_abyss_grass"
+}

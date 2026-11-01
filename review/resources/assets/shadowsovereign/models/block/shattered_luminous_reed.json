@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "shadowsovereign:block/shattered_luminous_reed"
+  }
+}

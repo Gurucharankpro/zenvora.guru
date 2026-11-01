@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "shadowsovereign:block/crimson_shadow_shadow_dirt"
+  }
+}

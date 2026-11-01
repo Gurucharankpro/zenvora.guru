@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_heart_of_the_devourer"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_heart_of_the_devourer.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_heart_of_the_devourer.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_heart_of_the_devourer",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:sunken_kingdom"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_devourer_heart_of_the_devourer"
+}

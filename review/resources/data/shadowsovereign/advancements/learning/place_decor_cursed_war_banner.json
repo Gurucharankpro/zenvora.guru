@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_cursed_war_banner"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_decor_cursed_war_banner.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_decor_cursed_war_banner.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_cursed_war_banner",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_decor_cursed_war_banner"
+}

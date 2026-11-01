@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "shadowsovereign:block/shadow_pepper_stage1"
+  }
+}

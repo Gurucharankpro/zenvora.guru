@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_ancient_drum_ruin"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_ancient_drum_ruin.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_ancient_drum_ruin.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_ancient_drum_ruin",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:echo_haven"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_ancient_drum_ruin"
+}

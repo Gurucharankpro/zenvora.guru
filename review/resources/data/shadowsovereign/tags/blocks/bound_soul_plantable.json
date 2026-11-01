@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:bound_dark_soul_grass_block",
+    "shadowsovereign:bound_soul_soil",
+    "shadowsovereign:bound_ancient_soul_stone",
+    "shadowsovereign:bound_polished_soul_stone"
+  ]
+}

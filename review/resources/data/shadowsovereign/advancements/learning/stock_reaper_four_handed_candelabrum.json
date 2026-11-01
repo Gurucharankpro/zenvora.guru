@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_four_handed_candelabrum"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_reaper_four_handed_candelabrum.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_reaper_four_handed_candelabrum.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:reaper_four_handed_candelabrum"
+            ],
+            "count": {
+              "min": 2
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_reaper_four_handed_candelabrum"
+}

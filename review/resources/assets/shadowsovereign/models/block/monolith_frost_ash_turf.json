@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "shadowsovereign:block/monolith_frost_ash_turf",
+    "side": "shadowsovereign:block/monolith_frost_ash_turf_side",
+    "bottom": "shadowsovereign:block/monolith_ashen_crystal_soil"
+  }
+}

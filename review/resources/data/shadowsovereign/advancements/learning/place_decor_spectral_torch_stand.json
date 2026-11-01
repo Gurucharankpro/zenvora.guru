@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_spectral_torch_stand"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_decor_spectral_torch_stand.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_decor_spectral_torch_stand.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_spectral_torch_stand",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_decor_spectral_torch_stand"
+}

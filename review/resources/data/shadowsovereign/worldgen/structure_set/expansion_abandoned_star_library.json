@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:expansion_abandoned_star_library",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 32,
+    "separation": 12,
+    "salt": 872106
+  }
+}

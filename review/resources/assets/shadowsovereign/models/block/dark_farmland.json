@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_farmland",
+  "textures": {
+    "dirt": "shadowsovereign:block/dark_dirt",
+    "top": "shadowsovereign:block/dark_farmland"
+  }
+}

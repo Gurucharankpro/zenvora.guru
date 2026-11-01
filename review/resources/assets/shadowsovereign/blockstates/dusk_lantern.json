@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "shadowsovereign:block/dusk_lantern"
+    },
+    "hanging=true": {
+      "model": "shadowsovereign:block/dusk_lantern_hanging"
+    }
+  }
+}

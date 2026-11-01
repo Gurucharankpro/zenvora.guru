@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "shadowsovereign:block/abyss_abyss_moss_top",
+    "side": "shadowsovereign:block/abyss_abyss_moss_side",
+    "bottom": "shadowsovereign:block/abyss_abyss_soil"
+  }
+}

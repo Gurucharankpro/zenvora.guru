@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:ashen_soil",
+    "shadowsovereign:dark_grass",
+    "shadowsovereign:bound_soul_soil",
+    "shadowsovereign:bound_dark_soul_grass_block"
+  ]
+}

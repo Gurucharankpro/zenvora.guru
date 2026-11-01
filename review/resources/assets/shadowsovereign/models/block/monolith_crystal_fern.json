@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "shadowsovereign:block/monolith_crystal_fern"
+  }
+}

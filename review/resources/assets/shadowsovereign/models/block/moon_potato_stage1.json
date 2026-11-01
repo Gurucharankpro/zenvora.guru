@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "shadowsovereign:block/moon_potato_stage1"
+  }
+}

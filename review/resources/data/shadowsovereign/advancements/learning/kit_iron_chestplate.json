@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.kit_iron_chestplate.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.kit_iron_chestplate.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_chestplate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/recipe_iron_chestplate"
+}

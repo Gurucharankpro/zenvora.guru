@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "shadowsovereign:shattered_crystalwood_log"
+    }
+  ],
+  "result": {
+    "item": "minecraft:birch_planks",
+    "count": 4
+  }
+}

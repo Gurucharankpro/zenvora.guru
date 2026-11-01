@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "shadowsovereign:block/moonveil_duskwet_grass_top",
+    "side": "shadowsovereign:block/moonveil_duskwet_grass_side",
+    "bottom": "shadowsovereign:block/moonveil_moon_soil"
+  }
+}

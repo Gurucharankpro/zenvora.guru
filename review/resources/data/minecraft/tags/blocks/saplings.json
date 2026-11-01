@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:dusk_sapling",
+    "shadowsovereign:ashen_sapling",
+    "shadowsovereign:bound_whispering_soul_sapling",
+    "shadowsovereign:bound_mourning_willow_sapling",
+    "shadowsovereign:monolith_ashen_sapling",
+    "shadowsovereign:moonveil_silverroot_sapling",
+    "shadowsovereign:moonveil_veilwood_sapling",
+    "shadowsovereign:crimson_shadow_mourning_willow_sapling",
+    "shadowsovereign:crimson_shadow_shadowwood_sapling",
+    "shadowsovereign:shattered_crystalwood_sapling",
+    "shadowsovereign:shattered_starfall_sapling",
+    "shadowsovereign:sunken_tidewood_sapling"
+  ]
+}

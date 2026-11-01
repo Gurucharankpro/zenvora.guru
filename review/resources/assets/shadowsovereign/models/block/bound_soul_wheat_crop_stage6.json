@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "shadowsovereign:block/bound_soul_wheat_crop_stage6"
+  }
+}

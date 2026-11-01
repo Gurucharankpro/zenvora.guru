@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_eternal_prison_gate"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_eternal_prison_gate.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_eternal_prison_gate.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_eternal_prison_gate",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:eternal_abyss"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_devourer_eternal_prison_gate"
+}

@@ -1,0 +1,94 @@
+{
+  "textures": {
+    "cross": "shadowsovereign:block/crimson_shadow_black_fern",
+    "particle": "shadowsovereign:block/crimson_shadow_black_fern"
+  },
+  "elements": [
+    {
+      "from": [
+        -0.27999999999999936,
+        0,
+        8
+      ],
+      "to": [
+        16.28,
+        16,
+        8
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": 45,
+        "rescale": true
+      },
+      "shade": false,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#cross"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#cross"
+        }
+      }
+    },
+    {
+      "from": [
+        -0.27999999999999936,
+        0,
+        8
+      ],
+      "to": [
+        16.28,
+        16,
+        8
+      ],
+      "rotation": {
+        "origin": [
+          8,
+          8,
+          8
+        ],
+        "axis": "y",
+        "angle": -45,
+        "rescale": true
+      },
+      "shade": false,
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#cross"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": "#cross"
+        }
+      }
+    }
+  ]
+}

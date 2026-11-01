@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "shadowsovereign:block/crimson_shadow_mourning_willow_log_top",
+    "side": "shadowsovereign:block/crimson_shadow_mourning_willow_log"
+  }
+}

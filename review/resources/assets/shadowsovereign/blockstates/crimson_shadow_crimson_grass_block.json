@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "shadowsovereign:block/crimson_shadow_crimson_grass_block"
+      },
+      {
+        "model": "shadowsovereign:block/crimson_shadow_crimson_grass_block",
+        "y": 90
+      },
+      {
+        "model": "shadowsovereign:block/crimson_shadow_crimson_grass_block",
+        "y": 180
+      },
+      {
+        "model": "shadowsovereign:block/crimson_shadow_crimson_grass_block",
+        "y": 270
+      }
+    ]
+  }
+}

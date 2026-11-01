@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_broken_beast_idol"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_broken_beast_idol.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_broken_beast_idol.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_broken_beast_idol",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:bound_soul_bound"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_broken_beast_idol"
+}

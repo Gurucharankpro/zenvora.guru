@@ -1,0 +1,48 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "shadowsovereign:block/bound_soul_wood_fence_post"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "shadowsovereign:block/bound_soul_wood_fence_side",
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "shadowsovereign:block/bound_soul_wood_fence_side",
+        "uvlock": true,
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "shadowsovereign:block/bound_soul_wood_fence_side",
+        "uvlock": true,
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "shadowsovereign:block/bound_soul_wood_fence_side",
+        "uvlock": true,
+        "y": 270
+      }
+    }
+  ]
+}

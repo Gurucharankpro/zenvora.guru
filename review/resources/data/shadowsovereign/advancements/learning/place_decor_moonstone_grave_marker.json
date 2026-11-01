@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_moonstone_grave_marker"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_decor_moonstone_grave_marker.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_decor_moonstone_grave_marker.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_moonstone_grave_marker",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_decor_moonstone_grave_marker"
+}

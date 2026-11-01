@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_floating_rune_ornament"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_decor_floating_rune_ornament.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_decor_floating_rune_ornament.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:decor_floating_rune_ornament"
+            ],
+            "count": {
+              "min": 2
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15,
+    "loot": [
+      "shadowsovereign:chests/waystation"
+    ]
+  },
+  "parent": "shadowsovereign:learning/place_decor_floating_rune_ornament"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:expansion_abyssal_bridge_fortress",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:expansion/abyssal_bridge_fortress",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

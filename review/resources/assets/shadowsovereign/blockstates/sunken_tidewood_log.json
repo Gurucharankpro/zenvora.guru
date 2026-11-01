@@ -1,0 +1,16 @@
+{
+ "variants": {
+  "axis=y": {
+   "model": "shadowsovereign:block/sunken_tidewood_log"
+  },
+  "axis=z": {
+   "model": "shadowsovereign:block/sunken_tidewood_log",
+   "x": 90
+  },
+  "axis=x": {
+   "model": "shadowsovereign:block/sunken_tidewood_log",
+   "x": 90,
+   "y": 90
+  }
+ }
+}

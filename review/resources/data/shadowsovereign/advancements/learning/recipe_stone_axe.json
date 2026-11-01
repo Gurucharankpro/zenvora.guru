@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:stone_axe"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.recipe_stone_axe.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.recipe_stone_axe.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:stone_axe"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/kit_stone_pickaxe"
+}

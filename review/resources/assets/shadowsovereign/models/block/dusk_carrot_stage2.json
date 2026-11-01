@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "shadowsovereign:block/dusk_carrot_stage2"
+  }
+}

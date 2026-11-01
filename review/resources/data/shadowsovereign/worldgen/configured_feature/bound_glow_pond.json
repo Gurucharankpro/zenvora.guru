@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:lake",
+  "config": {
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:water",
+        "Properties": {
+          "level": "0"
+        }
+      }
+    },
+    "barrier": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 6,
+          "data": {
+            "Name": "shadowsovereign:bound_ancient_soul_stone"
+          }
+        },
+        {
+          "weight": 1,
+          "data": {
+            "Name": "shadowsovereign:bound_soul_lantern_block"
+          }
+        }
+      ]
+    }
+  }
+}

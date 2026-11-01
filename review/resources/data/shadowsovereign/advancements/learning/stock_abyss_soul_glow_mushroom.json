@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_soul_glow_mushroom"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_abyss_soul_glow_mushroom.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_abyss_soul_glow_mushroom.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:abyss_soul_glow_mushroom"
+            ],
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15,
+    "loot": [
+      "shadowsovereign:chests/waystation"
+    ]
+  },
+  "parent": "shadowsovereign:learning/place_abyss_soul_glow_mushroom"
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_four_armed_reaper_statue"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_four_armed_reaper_statue.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_four_armed_reaper_statue.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_four_armed_reaper_statue",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:gloomwood"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_reaper_four_armed_reaper_statue"
+}

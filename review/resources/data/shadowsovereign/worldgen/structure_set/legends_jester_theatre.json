@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:legends_jester_theatre",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 12,
+    "salt": 120274
+  }
+}

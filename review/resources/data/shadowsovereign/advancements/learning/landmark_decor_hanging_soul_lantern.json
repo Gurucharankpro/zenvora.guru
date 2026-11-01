@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_hanging_soul_lantern"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_hanging_soul_lantern.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_hanging_soul_lantern.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_hanging_soul_lantern",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:moonveil_hollow"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_hanging_soul_lantern"
+}

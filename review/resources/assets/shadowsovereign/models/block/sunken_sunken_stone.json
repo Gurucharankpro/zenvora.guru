@@ -1,0 +1,6 @@
+{
+ "parent": "minecraft:block/cube_all",
+ "textures": {
+  "all": "shadowsovereign:block/sunken_sunken_stone"
+ }
+}

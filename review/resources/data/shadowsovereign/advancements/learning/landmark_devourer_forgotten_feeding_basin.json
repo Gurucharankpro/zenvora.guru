@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_forgotten_feeding_basin"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_forgotten_feeding_basin.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_forgotten_feeding_basin.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_forgotten_feeding_basin",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:ashen_monolith"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_devourer_forgotten_feeding_basin"
+}

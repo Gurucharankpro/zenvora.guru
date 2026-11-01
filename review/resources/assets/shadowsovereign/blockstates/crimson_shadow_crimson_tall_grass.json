@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "shadowsovereign:block/crimson_shadow_crimson_tall_grass_lower"
+    },
+    "half=upper": {
+      "model": "shadowsovereign:block/crimson_shadow_crimson_tall_grass_upper"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:mythic_wyngcat_roost",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:mythic_wyngcat_roost",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

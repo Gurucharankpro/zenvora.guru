@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "shadowsovereign:block/moonveil_veilwood_log"
+    },
+    "axis=z": {
+      "model": "shadowsovereign:block/moonveil_veilwood_log_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "shadowsovereign:block/moonveil_veilwood_log_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

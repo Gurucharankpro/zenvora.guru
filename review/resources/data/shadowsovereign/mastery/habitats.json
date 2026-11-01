@@ -1,0 +1,34 @@
+[
+  {
+    "id": "mastery_cursed_farmhouse",
+    "kind": 25,
+    "size": [
+      35,
+      18,
+      35
+    ],
+    "ground": 4,
+    "altar": [
+      17,
+      5,
+      20
+    ],
+    "biome": "moonveil_hollow"
+  },
+  {
+    "id": "mastery_plague_hospital",
+    "kind": 26,
+    "size": [
+      37,
+      31,
+      23
+    ],
+    "ground": 8,
+    "altar": [
+      18,
+      10,
+      17
+    ],
+    "biome": "gloomwood"
+  }
+]

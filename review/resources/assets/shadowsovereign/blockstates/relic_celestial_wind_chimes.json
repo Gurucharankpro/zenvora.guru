@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/relic_celestial_wind_chimes",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/relic_celestial_wind_chimes",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/relic_celestial_wind_chimes",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/relic_celestial_wind_chimes",
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="shadowsovereign"
+version="1.8.1-shadow-awakening-fix"
+displayName="Soulbound Army"
+authors="Shadow Sovereign contributors"
+description='''Soulbound Army 1.2.0 — Legends Expansion: The Ashen Monolith. Nineteen animated mythical companions, faster server-timed combat, ten supplied creatures added within1.2.0, a silver-and-white biome, twenty core blocks, flowing silver, a modular cathedral and gothic spire. Includes automatic new sites when structures are disabled. Preserves armies, worlds, progression, equipment and offline play.'''
+[[dependencies.shadowsovereign]]
+modId="forge"
+mandatory=true
+versionRange="[47.3,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.shadowsovereign]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"

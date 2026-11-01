@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_soulfire_brazier"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_soulfire_brazier.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_soulfire_brazier.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_soulfire_brazier",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:gloomwood"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_soulfire_brazier"
+}

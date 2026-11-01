@@ -1,0 +1,1623 @@
+{
+  "chapters": [
+    {
+      "id": "awakening",
+      "en": "I · The First Oath",
+      "ar": "١ · العهد الأول",
+      "scene": 0,
+      "goals": [
+        {
+          "id": "awakening.1",
+          "en": "Read the monarch’s field guide",
+          "ar": "اقرأ دليل الملك",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Souls are persistent companions. H opens the codex, K opens the army. Complete real actions, then claim verified stages here.",
+          "helpAr": "الأرواح رفاق محفوظون. H يفتح الدليل وK يفتح الجيش. نفّذ المطلوب ثم اعتمد المرحلة هنا.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "awakening.2",
+          "en": "Keep your storybook",
+          "ar": "احتفظ بكتاب رحلتك",
+          "metric": "item.shadowsovereign.sovereign_journey",
+          "target": 1,
+          "helpEn": "Keep the Sovereign Journey book in your inventory. It is delivered automatically; restore it from the codex if lost.",
+          "helpAr": "ضع كتاب رحلة الملك في حقيبتك. يصلك تلقائيًا ويمكن استعادته من الدليل إذا فُقد.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "awakening.3",
+          "en": "Your first soul",
+          "ar": "روحك الأولى",
+          "metric": "souls",
+          "target": 1,
+          "helpEn": "Defeat mobs and use Arise on an offered soul, or use an Unbound Soul Sigil from a bonus chest. Ordinary extraction is rare.",
+          "helpAr": "اهزم الموبات واستخرج الروح المعروضة، أو استخدم ختم الروح المجهولة من صندوق البداية. الاستخراج العادي نادر.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "awakening.4",
+          "en": "A companion at your side",
+          "ar": "رفيق إلى جانبك",
+          "metric": "active",
+          "target": 1,
+          "helpEn": "Select a soul in K and Summon it on safe, open ground.",
+          "helpAr": "اختر روحًا من K واستدعها على أرض آمنة وواسعة.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "awakening.5",
+          "en": "Follow my lead",
+          "ar": "اتبعني",
+          "metric": "event.order.follow",
+          "target": 1,
+          "helpEn": "Order a companion to Follow from K. It moves with you.",
+          "helpAr": "أصدر أمر اتبعني لرفيق من K ليتحرك معك.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "awakening.6",
+          "en": "Hold this position",
+          "ar": "اثبت هنا",
+          "metric": "event.order.stay",
+          "target": 1,
+          "helpEn": "Use Stay / sit. Staying companions remain where ordered.",
+          "helpAr": "استخدم الثبات أو الجلوس ليبقى الرفيق في موضعه.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "awakening.7",
+          "en": "Guard this ground",
+          "ar": "احرس هذا المكان",
+          "metric": "event.order.guard",
+          "target": 1,
+          "helpEn": "Use Guard here to assign a defensive anchor.",
+          "helpAr": "استخدم احرس هنا لتحديد نقطة دفاع.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "awakening.8",
+          "en": "Recall without losing",
+          "ar": "اسحب دون فقدان",
+          "metric": "event.recalled",
+          "target": 1,
+          "helpEn": "Recall a companion. Recall keeps its identity, equipment, level and health record.",
+          "helpAr": "اسحب رفيقًا. السحب يحتفظ بهويته ومعداته ومستواه وسجل صحته.",
+          "route": "army",
+          "icon": 3
+        }
+      ]
+    },
+    {
+      "id": "care",
+      "en": "II · Steel and Kindness",
+      "ar": "٢ · الحديد والرفق",
+      "scene": 1,
+      "goals": [
+        {
+          "id": "care.1",
+          "en": "Read equipment rules",
+          "ar": "افهم قواعد المعدات",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Equipment belongs to each individual soul. Original abilities stay intact; compatible equipment adds its own benefits.",
+          "helpAr": "لكل روح معدات مستقلة. تبقى قدراتها الأصلية وتضيف المعدات المتوافقة فوائدها.",
+          "route": "equipment",
+          "icon": 3
+        },
+        {
+          "id": "care.2",
+          "en": "Arm a companion",
+          "ar": "سلّح رفيقًا",
+          "metric": "weapon",
+          "target": 1,
+          "helpEn": "Put a weapon in a companion’s main weapon slot through Equipment / Soul Forge.",
+          "helpAr": "ضع سلاحًا في خانة سلاح رفيق من المعدات أو صياغة الأرواح.",
+          "route": "equipment",
+          "icon": 4
+        },
+        {
+          "id": "care.3",
+          "en": "Protect a companion",
+          "ar": "احمِ رفيقًا",
+          "metric": "armor",
+          "target": 1,
+          "helpEn": "Give any companion an armor piece. Keep a full set as a later upgrade.",
+          "helpAr": "أعطِ رفيقًا قطعة درع واحدة، ثم أكمل مجموعته لاحقًا.",
+          "route": "equipment",
+          "icon": 4
+        },
+        {
+          "id": "care.4",
+          "en": "A travelling pack",
+          "ar": "حقيبة متنقلة",
+          "metric": "storage",
+          "target": 1,
+          "helpEn": "Store an item in one of the companion’s five cargo slots. Equipment slots are separate.",
+          "helpAr": "ضع عنصرًا في إحدى خانات التخزين الخمس؛ خانات المعدات منفصلة.",
+          "route": "equipment",
+          "icon": 4
+        },
+        {
+          "id": "care.5",
+          "en": "A shared meal",
+          "ar": "وجبة مشتركة",
+          "metric": "fed",
+          "target": 1,
+          "helpEn": "Feed a companion through its care controls. Meals help your relationship.",
+          "helpAr": "أطعم رفيقًا من خيارات العناية لتقوية علاقتكما.",
+          "route": "care",
+          "icon": 9
+        },
+        {
+          "id": "care.6",
+          "en": "First five victories",
+          "ar": "أول خمس انتصارات",
+          "metric": "kills",
+          "target": 5,
+          "helpEn": "Let one specific companion land five confirmed kills. Owner kills do not count.",
+          "helpAr": "دع رفيقًا واحدًا يقتل خمسة أعداء بنفسه؛ قتلاتك لا تُحسب له.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "care.7",
+          "en": "Level two",
+          "ar": "المستوى الثاني",
+          "metric": "level",
+          "target": 2,
+          "helpEn": "At five personal kills a companion reaches level2 and gains +10% original base damage.",
+          "helpAr": "عند خمس قتلات شخصية يبلغ الرفيق المستوى٢ ويكسب ١٠٪ من ضرره الأساسي.",
+          "route": "army",
+          "icon": 12
+        },
+        {
+          "id": "care.8",
+          "en": "Two different allies",
+          "ar": "حليفان مختلفان",
+          "metric": "types",
+          "target": 2,
+          "helpEn": "Obtain two different mob types; two copies of one type do not count as diversity.",
+          "helpAr": "احصل على نوعين مختلفين من الموبات؛ النسختان من النوع نفسه ليستا تنوعًا.",
+          "route": "army",
+          "icon": 6
+        }
+      ]
+    },
+    {
+      "id": "command",
+      "en": "III · The Commander",
+      "ar": "٣ · القائد",
+      "scene": 5,
+      "goals": [
+        {
+          "id": "command.1",
+          "en": "Five companies, one army",
+          "ar": "خمس فرق وجيش واحد",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Save up to five named companies in the army controls, then summon a saved team with one action. Respect the active army limit.",
+          "helpAr": "احفظ حتى خمس فرق مسماة ثم استدعِ الفريق بضغطة، مع مراعاة حد الجيش النشط.",
+          "route": "companies",
+          "icon": 3
+        },
+        {
+          "id": "command.2",
+          "en": "Save a company",
+          "ar": "احفظ فريقًا",
+          "metric": "companies",
+          "target": 1,
+          "helpEn": "Add at least one owned soul to a saved company.",
+          "helpAr": "أضف روحًا مملوكة واحدة على الأقل إلى فريق محفوظ.",
+          "route": "companies",
+          "icon": 6
+        },
+        {
+          "id": "command.3",
+          "en": "A three-soul roster",
+          "ar": "قائمة من ثلاث أرواح",
+          "metric": "souls",
+          "target": 3,
+          "helpEn": "Own three souls. Reserves count; you need not summon all of them.",
+          "helpAr": "امتلك ثلاث أرواح؛ الاحتياط محسوب ولا يلزم استدعاؤها كلها.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "command.4",
+          "en": "Three on the field",
+          "ar": "ثلاثة في الميدان",
+          "metric": "active",
+          "target": 3,
+          "helpEn": "Summon three companions together in an open area.",
+          "helpAr": "استدعِ ثلاثة رفاق معًا في مساحة مفتوحة.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "command.5",
+          "en": "Aggression has a purpose",
+          "ar": "العدوانية لها هدف",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Aggressive companions hunt permitted enemies; passive behavior avoids starting fights. Change the selected companion’s mode in K.",
+          "helpAr": "العدواني يلاحق الأعداء المسموحين، والسلوك المسالم يتجنب بدء القتال. غيّر الوضع في K.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "command.6",
+          "en": "The emergency circle",
+          "ar": "دائرة الطوارئ",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "After a hostile hit leaves you below three hearts, allies gather in a 5×5 protection ring until you fully heal. They avoid chasing beyond it.",
+          "helpAr": "بعد ضربة عدو تتركك بأقل من ثلاثة قلوب يجتمع الرفاق في حماية ٥×٥ حتى تمتلئ صحتك، ولا يطاردون خارجها.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "command.7",
+          "en": "A permanent watch",
+          "ar": "حراسة دائمة",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Guard and posted companions are saved allies, not disposable summons. Return to them or recall them when needed.",
+          "helpAr": "الحراس رفاق محفوظون، لا استدعاءات مؤقتة. ارجع لهم أو اسحبهم عند الحاجة.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "command.8",
+          "en": "A trusted companion",
+          "ar": "رفيق موثوق",
+          "metric": "bond",
+          "target": 10,
+          "helpEn": "Care for a companion until bond or affection reaches10. Repeated real care builds trust.",
+          "helpAr": "اعتنِ برفيق حتى تبلغ الرابطة أو المودة١٠. العناية الفعلية تبني الثقة.",
+          "route": "care",
+          "icon": 9
+        }
+      ]
+    },
+    {
+      "id": "threshold",
+      "en": "IV · Beyond the Gate",
+      "ar": "٤ · خلف البوابة",
+      "scene": 2,
+      "goals": [
+        {
+          "id": "threshold.1",
+          "en": "Build a real gateway",
+          "ar": "ابنِ بوابة حقيقية",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Use Soul Gate Frame blocks to build a vertical Nether-style frame, then activate its interior with flint and steel. Use the existing portal guide for valid frame sizes.",
+          "helpAr": "ابنِ إطارًا رأسيًا كالنذر ببلوكات إطار بوابة الأرواح ثم أشعل داخله بالقداحة. راجع دليل البوابة للمقاسات.",
+          "route": "portal",
+          "icon": 3
+        },
+        {
+          "id": "threshold.2",
+          "en": "Gather a gateway frame",
+          "ar": "اجمع إطار البوابة",
+          "metric": "item.shadowsovereign.soul_gate_frame",
+          "target": 10,
+          "helpEn": "Acquire ten Soul Gate Frame blocks; cornerless frames use ten.",
+          "helpAr": "احصل على عشر بلوكات إطار؛ الإطار دون زوايا يستخدم عشرًا.",
+          "route": "portal",
+          "icon": 4
+        },
+        {
+          "id": "threshold.3",
+          "en": "Carry a spark",
+          "ar": "احمل شرارة",
+          "metric": "item.minecraft.flint_and_steel",
+          "target": 1,
+          "helpEn": "Carry flint and steel for gateway activation.",
+          "helpAr": "احمل قداحة لتفعيل البوابة.",
+          "route": "portal",
+          "icon": 4
+        },
+        {
+          "id": "threshold.4",
+          "en": "Step into Echo Realms",
+          "ar": "ادخل عالم الأصداء",
+          "metric": "realm",
+          "target": 1,
+          "helpEn": "Enter the mod’s dimension through a working gateway. New structures generate in new chunks with Generate Structures enabled.",
+          "helpAr": "ادخل الدايمنشن من بوابة عاملة. تظهر المنشآت في مناطق جديدة مع تفعيل توليد المنشآت.",
+          "route": "portal",
+          "icon": 3
+        },
+        {
+          "id": "threshold.5",
+          "en": "Find your way home",
+          "ar": "اعرف طريق العودة",
+          "metric": "event.gateway_return",
+          "target": 1,
+          "helpEn": "Return through the dimension’s return gateway or the supported return control.",
+          "helpAr": "عد من بوابة العودة أو خيار الرجوع المدعوم.",
+          "route": "portal",
+          "icon": 3
+        },
+        {
+          "id": "threshold.6",
+          "en": "Craft the explorer’s compass",
+          "ar": "احصل على بوصلة المستكشف",
+          "metric": "item.shadowsovereign.explorers_compass",
+          "target": 1,
+          "helpEn": "Place four Starlight Shards around a normal compass. Hold and use it to open its exclusive atlas.",
+          "helpAr": "ضع أربع شظايا نجوم حول بوصلة عادية. أمسكها واستخدمها لفتح أطلسها الخاص.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "threshold.7",
+          "en": "Read the stars",
+          "ar": "اقرأ النجوم",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Only the held Explorer’s Compass opens its atlas. Choose a destination, locate it inside Echo Realms, then follow its needle. A search is not a teleport.",
+          "helpAr": "أطلس البوصلة يفتح من البوصلة الممسوكة فقط. اختر وجهة وحددها داخل الدايمنشن ثم اتبع الإبرة؛ البحث ليس انتقالًا فوريًا.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "threshold.8",
+          "en": "Locate a real destination",
+          "ar": "حدد وجهة حقيقية",
+          "metric": "locations",
+          "target": 1,
+          "helpEn": "Use the compass to successfully locate one registered structure. Searches have a ten-second cooldown.",
+          "helpAr": "استخدم البوصلة لتحديد منشأة فعلية؛ بين عمليتي البحث عشر ثوانٍ.",
+          "route": "compass",
+          "icon": 3
+        }
+      ]
+    },
+    {
+      "id": "harvest",
+      "en": "V · A Living Harvest",
+      "ar": "٥ · حصاد حي",
+      "scene": 14,
+      "goals": [
+        {
+          "id": "harvest.1",
+          "en": "Seeds of soul wheat",
+          "ar": "بذور قمح الأرواح",
+          "metric": "item.shadowsovereign.soul_wheat_seeds",
+          "target": 1,
+          "helpEn": "Acquire Soul Wheat Seeds. Plant them on hydrated farmland and harvest mature crops.",
+          "helpAr": "احصل على بذور قمح الأرواح وازرعها على تربة مروية واحصدها ناضجة.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.2",
+          "en": "Shadow pepper",
+          "ar": "فلفل الظل",
+          "metric": "item.shadowsovereign.shadow_pepper_seeds",
+          "target": 1,
+          "helpEn": "Acquire Shadow Pepper Seeds and reserve some harvest for replanting.",
+          "helpAr": "احصل على بذور فلفل الظل واحتفظ بجزء من الحصاد لإعادة الزراعة.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.3",
+          "en": "Herbs for the road",
+          "ar": "أعشاب الطريق",
+          "metric": "item.shadowsovereign.soul_herb_seeds",
+          "target": 1,
+          "helpEn": "Acquire Soul Herb Seeds for your future tea supply.",
+          "helpAr": "احصل على بذور عشبة الأرواح لإمداد الشاي.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.4",
+          "en": "A ghostly garden",
+          "ar": "حديقة شبحية",
+          "metric": "item.shadowsovereign.ghost_pumpkin_seeds",
+          "target": 1,
+          "helpEn": "Acquire Ghost Pumpkin Seeds. Leave room around growing plants.",
+          "helpAr": "احصل على بذور اليقطين الشبحي واترك مساحة للنباتات.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.5",
+          "en": "Bake soul bread",
+          "ar": "خبز الأرواح",
+          "metric": "item.shadowsovereign.soul_bread",
+          "target": 1,
+          "helpEn": "Acquire Soul Bread, crafted from harvested Soul Wheat.",
+          "helpAr": "احصل على خبز الأرواح المصنوع من قمح الأرواح المحصود.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.6",
+          "en": "Carry soul tea",
+          "ar": "احمل شاي الأرواح",
+          "metric": "item.shadowsovereign.soul_tea",
+          "target": 1,
+          "helpEn": "Acquire Soul Tea. It provides short regeneration and returns its bottle after drinking.",
+          "helpAr": "احصل على شاي الأرواح؛ يمنح تجددًا قصيرًا ويعيد الزجاجة.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "harvest.7",
+          "en": "Water, maturity and replanting",
+          "ar": "الماء والنضج وإعادة الزراعة",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Hydrate farmland, harvest at the final growth stage, and keep seeds. No need to destroy the whole farm each harvest.",
+          "helpAr": "اروِ التربة واحصد عند آخر مرحلة نمو واحتفظ بالبذور؛ لا تهدم المزرعة كل مرة.",
+          "route": "recipes",
+          "icon": 3
+        },
+        {
+          "id": "harvest.8",
+          "en": "A gardener at work",
+          "ar": "بستاني يعمل",
+          "metric": "event.garden_harvest",
+          "target": 1,
+          "helpEn": "Assign a companion as gardener at camp with a suitable tool and replanting supplies; let it harvest once.",
+          "helpAr": "كلّف رفيقًا بالبستنة في المعسكر مع أداة ومخزون لإعادة الزراعة ودعه يحصد مرة.",
+          "route": "camp",
+          "icon": 9
+        }
+      ]
+    },
+    {
+      "id": "homestead",
+      "en": "VI · A Place to Return",
+      "ar": "٦ · مكان للعودة",
+      "scene": 14,
+      "goals": [
+        {
+          "id": "homestead.1",
+          "en": "Dark foundations",
+          "ar": "أساسات داكنة",
+          "metric": "item.shadowsovereign.dark_planks",
+          "target": 1,
+          "helpEn": "Acquire Dark Planks for building in the realm.",
+          "helpAr": "احصل على ألواح داكنة لبناء مقرك.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.2",
+          "en": "Build a boundary",
+          "ar": "ابنِ حدودًا",
+          "metric": "item.shadowsovereign.dusk_fence",
+          "target": 1,
+          "helpEn": "Acquire Dusk Fence for paths and enclosures.",
+          "helpAr": "احصل على سياج الغسق للممرات والحظائر.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.3",
+          "en": "Leave a doorway",
+          "ar": "اترك مدخلًا",
+          "metric": "item.shadowsovereign.dusk_fence_gate",
+          "target": 1,
+          "helpEn": "Acquire Dusk Fence Gate; it opens and closes like a normal fence gate.",
+          "helpAr": "احصل على بوابة سياج الغسق؛ تفتح وتغلق كبوابة عادية.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.4",
+          "en": "Stairs with a purpose",
+          "ar": "سلالم مفيدة",
+          "metric": "item.shadowsovereign.dusk_stairs",
+          "target": 1,
+          "helpEn": "Acquire Dusk Stairs for accessible roofs and raised paths.",
+          "helpAr": "احصل على سلالم الغسق للأسقف والممرات المرتفعة.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.5",
+          "en": "A careful builder",
+          "ar": "بنّاء دقيق",
+          "metric": "item.shadowsovereign.dusk_slab",
+          "target": 1,
+          "helpEn": "Acquire Dusk Slabs for low steps and decorative roofs.",
+          "helpAr": "احصل على بلاطات الغسق للدرجات المنخفضة والأسقف.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.6",
+          "en": "Light the return path",
+          "ar": "أنر طريق العودة",
+          "metric": "item.shadowsovereign.dusk_lantern",
+          "target": 1,
+          "helpEn": "Acquire a Dusk Lantern. It can stand on a surface or hang beneath a block.",
+          "helpAr": "احصل على فانوس الغسق؛ يوضع على الأرض أو يعلق أسفل بلوك.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "homestead.7",
+          "en": "Know your workshops",
+          "ar": "اعرف ورشك",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "The workshop field manual explains each station, its function and available crafting recipes. Start with equipment, cemetery and kitchen.",
+          "helpAr": "دليل الورش يوضح وظيفة كل محطة ووصفاتها. ابدأ بالمعدات والمقبرة والمطبخ.",
+          "route": "workshops",
+          "icon": 3
+        },
+        {
+          "id": "homestead.8",
+          "en": "Place a camp station",
+          "ar": "ضع محطة معسكر",
+          "metric": "event.camp_placed",
+          "target": 1,
+          "helpEn": "Place an owned camp station inside your assigned camp. Building outside camp does not count for this lesson.",
+          "helpAr": "ضع محطة معسكر مملوكة داخل معسكرك المخصص؛ البناء خارجه لا يحتسب.",
+          "route": "camp",
+          "icon": 4
+        }
+      ]
+    },
+    {
+      "id": "cartography",
+      "en": "VII · The Realm Survey",
+      "ar": "٧ · مسح العالم",
+      "scene": 3,
+      "goals": [
+        {
+          "id": "cartography.1",
+          "en": "Visit Gloomwood",
+          "ar": "زر غابة الكآبة",
+          "metric": "biome.shadowsovereign.gloomwood",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.2",
+          "en": "Visit Ashen Wilds",
+          "ar": "زر البراري الرمادية",
+          "metric": "biome.shadowsovereign.ashen_weald",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.3",
+          "en": "Visit Soul Bound",
+          "ar": "زر الأرواح المقيّدة",
+          "metric": "biome.shadowsovereign.bound_soul_bound",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.4",
+          "en": "Visit The Ashen Monolith",
+          "ar": "زر المونوليث الرمادي",
+          "metric": "biome.shadowsovereign.ashen_monolith",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.5",
+          "en": "Visit Moonveil Hollow",
+          "ar": "زر وادي حجاب القمر",
+          "metric": "biome.shadowsovereign.moonveil_hollow",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.6",
+          "en": "Visit Crimson Shadow",
+          "ar": "زر الظل القرمزي",
+          "metric": "biome.shadowsovereign.crimson_shadow",
+          "target": 1,
+          "helpEn": "Walk into this biome inside Echo Realms; the book records your actual position, not a button press.",
+          "helpAr": "امشِ داخل هذا البيوم في الدايمنشن؛ يسجل الكتاب موقعك الفعلي، لا ضغطة زر.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.7",
+          "en": "Three charted destinations",
+          "ar": "ثلاث وجهات محددة",
+          "metric": "locations",
+          "target": 3,
+          "helpEn": "Locate three different mod structures using the physical compass. Repeated scans of one structure type count once.",
+          "helpAr": "حدد ثلاثة أنواع مختلفة من المنشآت بالبوصلة. تكرار النوع نفسه يحسب مرة واحدة.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "cartography.8",
+          "en": "Protect the encounters",
+          "ar": "احمِ ساحات المواجهات",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Guardian buildings are protected so their battles keep working. Gather resources and build in the surrounding forest.",
+          "helpAr": "مباني الحراس محمية حتى لا تتعطل المواجهات. اجمع الموارد وابنِ في الغابة المحيطة.",
+          "route": "compass",
+          "icon": 3
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "en": "VIII · Never Forgotten",
+      "ar": "٨ · لن تُنسى",
+      "scene": 6,
+      "goals": [
+        {
+          "id": "restoration.1",
+          "en": "Build a soul cemetery",
+          "ar": "ابنِ مقبرة أرواح",
+          "metric": "item.shadowsovereign.soul_cemetery",
+          "target": 1,
+          "helpEn": "Acquire a Soul Cemetery. It manages paid returns after a soul’s free returns have been used.",
+          "helpAr": "احصل على مقبرة الأرواح لإدارة العودة المدفوعة بعد استنفاد الفرص المجانية.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "restoration.2",
+          "en": "Five free returns",
+          "ar": "خمس عودات مجانية",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Each companion has five successful free returns after death. Later returns use the cemetery and diamonds: ceil(maximum health /50).",
+          "helpAr": "لكل رفيق خمس عودات مجانية ناجحة بعد الموت. بعدها تكلف المقبرة ألماسًا بعدد تقريب الصحة القصوى÷٥٠ إلى الأعلى.",
+          "route": "cemetery",
+          "icon": 3
+        },
+        {
+          "id": "restoration.3",
+          "en": "A patient recovery",
+          "ar": "تعافٍ صبور",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "An ally regenerates1HP every five seconds, starting five seconds after its last damage. Recovery never exceeds maximum health.",
+          "helpAr": "يتجدد الرفيق نقطة صحة كل خمس ثوانٍ، بدءًا من مرور خمس ثوانٍ على آخر ضرر، دون تجاوز الحد الأقصى.",
+          "route": "care",
+          "icon": 3
+        },
+        {
+          "id": "restoration.4",
+          "en": "Owner and soul",
+          "ar": "المالك والروح",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Respawn waits for the owner to be online. Pending souls and progression are saved; do not replace the mod with two installed copies.",
+          "helpAr": "تنتظر العودة وجود المالك أونلاين. تُحفظ الأرواح والتقدم؛ لا تثبت نسختين من المود معًا.",
+          "route": "cemetery",
+          "icon": 3
+        },
+        {
+          "id": "restoration.5",
+          "en": "Set up a kitchen",
+          "ar": "جهّز مطبخًا",
+          "metric": "item.shadowsovereign.odyssey_kitchen",
+          "target": 1,
+          "helpEn": "Acquire the Odyssey Kitchen station for camp recipes.",
+          "helpAr": "احصل على محطة مطبخ الرحلة لوصفات المعسكر.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "restoration.6",
+          "en": "A cooked camp meal",
+          "ar": "وجبة معسكر مطهية",
+          "metric": "event.cooked",
+          "target": 1,
+          "helpEn": "Use an owned camp kitchen with the recipe’s actual ingredients to prepare one meal.",
+          "helpAr": "استخدم مطبخ معسكر مملوكًا مع المكونات المطلوبة لتحضير وجبة.",
+          "route": "camp",
+          "icon": 9
+        },
+        {
+          "id": "restoration.7",
+          "en": "Ranks without stacking",
+          "ar": "رتب دون تكديس",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Tier strength and kill levels are separate. Damage gains10% of original base per level; level5 is140%, level10 is190%, not compounded.",
+          "helpAr": "قوة الرتبة ومستوى القتل نظامان منفصلان. كل مستوى يضيف١٠٪ من الأصل: المستوى٥=١٤٠٪ والمستوى١٠=١٩٠٪، دون تراكم مضاعف.",
+          "route": "army",
+          "icon": 3
+        },
+        {
+          "id": "restoration.8",
+          "en": "Compatible worlds",
+          "ar": "عوالم متوافقة",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Other mods’ Mob entities may join your army if their constructors, snapshots and AI support it. Their original appearance and abilities are preserved where supported.",
+          "helpAr": "قد تنضم موبات المودات الأخرى إن دعمت الإنشاء والحفظ والذكاء الاصطناعي. يُحفظ مظهرها وقدراتها حيثما يتوافق ذلك.",
+          "route": "army",
+          "icon": 3
+        }
+      ]
+    },
+    {
+      "id": "veteran",
+      "en": "IX · From Recruit to Veteran",
+      "ar": "٩ · من مجند إلى مخضرم",
+      "scene": 5,
+      "goals": [
+        {
+          "id": "veteran.1",
+          "en": "Level three",
+          "ar": "المستوى الثالث",
+          "metric": "level",
+          "target": 3,
+          "helpEn": "One companion needs15 personal kills in total to reach level3.",
+          "helpAr": "يحتاج رفيق إلى١٥ قتلة شخصية إجمالًا لبلوغ المستوى٣.",
+          "route": "army",
+          "icon": 12
+        },
+        {
+          "id": "veteran.2",
+          "en": "Fifteen proven kills",
+          "ar": "خمس عشرة قتلة مؤكدة",
+          "metric": "kills",
+          "target": 15,
+          "helpEn": "Record15 confirmed kills on one companion. Shared owner kills do not count.",
+          "helpAr": "سجل١٥ قتلة مؤكدة لرفيق واحد؛ قتلات المالك لا تُنسب إليه.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "veteran.3",
+          "en": "Level four",
+          "ar": "المستوى الرابع",
+          "metric": "level",
+          "target": 4,
+          "helpEn": "Reach30 personal kills on one companion.",
+          "helpAr": "بلغ٣٠ قتلة شخصية لرفيق واحد.",
+          "route": "army",
+          "icon": 12
+        },
+        {
+          "id": "veteran.4",
+          "en": "Thirty victories",
+          "ar": "ثلاثون انتصارًا",
+          "metric": "kills",
+          "target": 30,
+          "helpEn": "Train one companion to30 personal kills while keeping its gear current.",
+          "helpAr": "درّب رفيقًا حتى٣٠ قتلة شخصية مع تطوير معداته.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "veteran.5",
+          "en": "Level five",
+          "ar": "المستوى الخامس",
+          "metric": "level",
+          "target": 5,
+          "helpEn": "Reach50 personal kills: +40% original base damage.",
+          "helpAr": "بلغ٥٠ قتلة شخصية: زيادة٤٠٪ من الضرر الأساسي.",
+          "route": "army",
+          "icon": 12
+        },
+        {
+          "id": "veteran.6",
+          "en": "Fifty victories",
+          "ar": "خمسون انتصارًا",
+          "metric": "kills",
+          "target": 50,
+          "helpEn": "Reach50 kills with one companion, not fifty summed across the army.",
+          "helpAr": "بلغ٥٠ قتلة لرفيق واحد، لا مجموع الجيش.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "veteran.7",
+          "en": "Six different allies",
+          "ar": "ستة حلفاء مختلفين",
+          "metric": "types",
+          "target": 6,
+          "helpEn": "Own six different compatible mob types.",
+          "helpAr": "امتلك ستة أنواع مختلفة من الموبات المتوافقة.",
+          "route": "army",
+          "icon": 6
+        },
+        {
+          "id": "veteran.8",
+          "en": "A deep bond",
+          "ar": "رابطة عميقة",
+          "metric": "bond",
+          "target": 25,
+          "helpEn": "Raise a companion’s bond or affection to25 through real care.",
+          "helpAr": "ارفع رابطة أو مودة رفيق إلى٢٥ بالعناية الفعلية.",
+          "route": "care",
+          "icon": 9
+        }
+      ]
+    },
+    {
+      "id": "legends",
+      "en": "X · The Legendary Hunt",
+      "ar": "١٠ · الصيد الأسطوري",
+      "scene": 12,
+      "goals": [
+        {
+          "id": "legends.1",
+          "en": "Grimoire of Bound Legends",
+          "ar": "كتاب الأساطير المقيّدة",
+          "metric": "item.shadowsovereign.mythic_grimoire",
+          "target": 1,
+          "helpEn": "Acquire the craftable Grimoire of Bound Legends. Each earned legendary soul has its own detailed page.",
+          "helpAr": "احصل على كتاب الأساطير القابل للصناعة؛ لكل روح أسطورية مكتسبة صفحة تفصيلية.",
+          "route": "recipes",
+          "icon": 4
+        },
+        {
+          "id": "legends.2",
+          "en": "Know your quarry",
+          "ar": "اعرف فريستك",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Every legendary creature has a native habitat in Echo Realms. Its dossier below explains the biome, combat kit and next practical task.",
+          "helpAr": "لكل أسطورة موطن في الدايمنشن. ملفات الصيد أدناه توضح البيوم والقدرات والخطوة العملية التالية.",
+          "route": "grimoire",
+          "icon": 3
+        },
+        {
+          "id": "legends.3",
+          "en": "Five places on the map",
+          "ar": "خمسة أماكن على الخريطة",
+          "metric": "locations",
+          "target": 5,
+          "helpEn": "Successfully locate five distinct mod structure types with the compass.",
+          "helpAr": "حدد خمسة أنواع مختلفة من منشآت المود بالبوصلة.",
+          "route": "compass",
+          "icon": 3
+        },
+        {
+          "id": "legends.4",
+          "en": "First legendary soul",
+          "ar": "أول روح أسطورية",
+          "metric": "legends",
+          "target": 1,
+          "helpEn": "Defeat an eligible legendary guardian for its guaranteed once-per-owner soul, or obtain one from an Unbound Soul Sigil.",
+          "helpAr": "اهزم حارسًا أسطوريًا لتحصل على روحه المضمونة مرة لكل مالك، أو احصل عليها بختم الروح المجهولة.",
+          "route": "grimoire",
+          "icon": 6
+        },
+        {
+          "id": "legends.5",
+          "en": "Two legendary companions",
+          "ar": "رفيقان أسطوريان",
+          "metric": "legends",
+          "target": 2,
+          "helpEn": "Obtain two different legendary types. Repeated copies do not increase the collection.",
+          "helpAr": "احصل على نوعين أسطوريين مختلفين؛ النسخ المكررة لا تزيد المجموعة.",
+          "route": "grimoire",
+          "icon": 6
+        },
+        {
+          "id": "legends.6",
+          "en": "Four legendary companions",
+          "ar": "أربعة رفاق أسطوريين",
+          "metric": "legends",
+          "target": 4,
+          "helpEn": "Obtain four distinct legendary souls. Your original discoveries count.",
+          "helpAr": "احصل على أربع أرواح أسطورية مختلفة. اكتشافاتك السابقة محسوبة.",
+          "route": "grimoire",
+          "icon": 6
+        },
+        {
+          "id": "legends.7",
+          "en": "A legend answers",
+          "ar": "أسطورة تستجيب",
+          "metric": "legendactive",
+          "target": 1,
+          "helpEn": "Summon an owned legendary soul in a safe, open place.",
+          "helpAr": "استدعِ روحًا أسطورية مملوكة في مكان آمن وواسع.",
+          "route": "grimoire",
+          "icon": 6
+        },
+        {
+          "id": "legends.8",
+          "en": "The archive grows with you",
+          "ar": "الأرشيف ينمو معك",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Each registered legendary creature automatically adds an eight-stage hunt. New updates append stable IDs so previous claims and rewards remain yours.",
+          "helpAr": "كل أسطورة مسجلة تضيف مسار صيد من ثماني مراحل تلقائيًا. التحديثات توسع المسار دون فقدان مراحل أو مكافآت سابقة.",
+          "route": "grimoire",
+          "icon": 3
+        }
+      ]
+    },
+    {
+      "id": "old_paths",
+      "en": "XI · Adventures and Legacy",
+      "ar": "١١ · المغامرات والإرث",
+      "scene": 4,
+      "goals": [
+        {
+          "id": "old_paths.1",
+          "en": "Bind a sanctuary",
+          "ar": "اربط ملاذًا",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Open Adventures, bind an owned sanctuary and use it to prepare expeditions and contracts.",
+          "helpAr": "افتح المغامرات واربط ملاذًا مملوكًا للاستعداد للبعثات والعقود.",
+          "route": "adventure",
+          "icon": 3
+        },
+        {
+          "id": "old_paths.2",
+          "en": "A bound sanctuary",
+          "ar": "ملاذ مرتبط",
+          "metric": "event.sanctuary",
+          "target": 1,
+          "helpEn": "Bind an actual sanctuary through its supported controls.",
+          "helpAr": "اربط ملاذًا فعليًا من خياراته.",
+          "route": "adventure",
+          "icon": 3
+        },
+        {
+          "id": "old_paths.3",
+          "en": "A trial cleared",
+          "ar": "تجربة مكتملة",
+          "metric": "event.clear.trial",
+          "target": 1,
+          "helpEn": "Complete and claim a native trial; starting it is not completion.",
+          "helpAr": "أكمل تجربة أصلية واعتمد نتيجتها؛ بدء التجربة ليس إكمالًا.",
+          "route": "adventure",
+          "icon": 6
+        },
+        {
+          "id": "old_paths.4",
+          "en": "An escort protected",
+          "ar": "مرافقة محمية",
+          "metric": "event.clear.escort",
+          "target": 1,
+          "helpEn": "Finish an escort activity and claim its success.",
+          "helpAr": "أكمل نشاط المرافقة واعتمد نجاحه.",
+          "route": "adventure",
+          "icon": 6
+        },
+        {
+          "id": "old_paths.5",
+          "en": "Bring an expedition home",
+          "ar": "أعد بعثة إلى البيت",
+          "metric": "event.expedition_claim",
+          "target": 1,
+          "helpEn": "Send a supported expedition and claim it when its server deadline is complete.",
+          "helpAr": "أرسل بعثة مدعومة واعتمدها بعد انتهاء موعدها على السيرفر.",
+          "route": "adventure",
+          "icon": 3
+        },
+        {
+          "id": "old_paths.6",
+          "en": "Read the legacy arts",
+          "ar": "افهم فنون الإرث",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Legacy exchanges, bursts and duos extend your army. Open Legacy through the original adventure controls and read each cost before using it.",
+          "helpAr": "توسع المبادلات والدفعات والثنائيات قدرات الجيش. افتح الإرث من الخيارات الأصلية واقرأ تكلفة كل قدرة.",
+          "route": "legacy",
+          "icon": 3
+        },
+        {
+          "id": "old_paths.7",
+          "en": "Three legacy techniques",
+          "ar": "ثلاث تقنيات إرث",
+          "metric": "event.legacy_powers",
+          "target": 1,
+          "helpEn": "Use at least one exchange, burst and duo. Existing recorded uses count.",
+          "helpAr": "استخدم مبادلة ودفعة وثنائية مرة على الأقل؛ الاستخدامات المحفوظة محسوبة.",
+          "route": "legacy",
+          "icon": 6
+        },
+        {
+          "id": "old_paths.8",
+          "en": "Legacy field experience",
+          "ar": "خبرة إرث ميدانية",
+          "metric": "event.legacy_challenges",
+          "target": 1,
+          "helpEn": "Complete the existing siege and vault challenges and reach at least wave5 in the legacy survival path.",
+          "helpAr": "أكمل تحديي الحصار والخزنة وبلغ الموجة٥ على الأقل في مسار بقاء الإرث.",
+          "route": "legacy",
+          "icon": 13
+        }
+      ]
+    },
+    {
+      "id": "chronicles",
+      "en": "XII · Journey and Ascension",
+      "ar": "١٢ · الرحلة والصعود",
+      "scene": 4,
+      "goals": [
+        {
+          "id": "chronicles.1",
+          "en": "A different campaign",
+          "ar": "حملة مختلفة",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "The original Journey campaign is separate from this guide. Its completed chapters remain valid evidence and keep their own rewards.",
+          "helpAr": "حملة الرحلة الأصلية منفصلة عن هذا الدليل. فصولها المكتملة تبقى دليلًا صالحًا وتحافظ على مكافآتها.",
+          "route": "journey",
+          "icon": 3
+        },
+        {
+          "id": "chronicles.2",
+          "en": "A chronicle boss victory",
+          "ar": "انتصار على زعيم الرحلة",
+          "metric": "event.clear.boss",
+          "target": 1,
+          "helpEn": "Defeat and claim a native Journey boss encounter.",
+          "helpAr": "اهزم زعيمًا من مواجهات الرحلة واعتمد الفوز.",
+          "route": "journey",
+          "icon": 6
+        },
+        {
+          "id": "chronicles.3",
+          "en": "Across a rift",
+          "ar": "عبر الشق",
+          "metric": "event.clear.rift",
+          "target": 1,
+          "helpEn": "Complete one original rift activity.",
+          "helpAr": "أكمل نشاط شق أصليًا واحدًا.",
+          "route": "journey",
+          "icon": 3
+        },
+        {
+          "id": "chronicles.4",
+          "en": "Rally the army",
+          "ar": "احشد الجيش",
+          "metric": "event.clear.rally",
+          "target": 1,
+          "helpEn": "Complete one original rally activity.",
+          "helpAr": "أكمل نشاط حشد أصليًا واحدًا.",
+          "route": "journey",
+          "icon": 6
+        },
+        {
+          "id": "chronicles.5",
+          "en": "Three chronicle foes",
+          "ar": "ثلاثة أعداء من الرحلة",
+          "metric": "event.chronicle_bosses",
+          "target": 1,
+          "helpEn": "Complete the three different chronicle boss types recorded by the original Journey campaign.",
+          "helpAr": "أكمل أنواع زعماء الرحلة الثلاثة المسجلة في حملتها الأصلية.",
+          "route": "journey",
+          "icon": 6
+        },
+        {
+          "id": "chronicles.6",
+          "en": "Choose an ascension challenge",
+          "ar": "اختر تحدي صعود",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Ascension has heist, domination, mirror, draft and rush challenges. Their rewards are granted by the original activities, never by a lesson button.",
+          "helpAr": "للصعود تحديات السرقة والسيطرة والمرآة والتشكيل والاندفاع. تمنح أنشطتها الأصلية المكافآت، لا زر قراءة الدرس.",
+          "route": "ascension",
+          "icon": 3
+        },
+        {
+          "id": "chronicles.7",
+          "en": "Ascension versatility",
+          "ar": "تنوع الصعود",
+          "metric": "event.ascension_modes",
+          "target": 1,
+          "helpEn": "Win each of the five original Ascension modes. Previously saved wins count.",
+          "helpAr": "اربح أنماط الصعود الخمسة الأصلية. الانتصارات السابقة محفوظة ومحسوبة.",
+          "route": "ascension",
+          "icon": 13
+        },
+        {
+          "id": "chronicles.8",
+          "en": "The Journey campaign",
+          "ar": "حملة الرحلة",
+          "metric": "event.journey_campaign",
+          "target": 1,
+          "helpEn": "Finish the six-chapter original Journey campaign.",
+          "helpAr": "أكمل حملة الرحلة الأصلية ذات الفصول الستة.",
+          "route": "journey",
+          "icon": 13
+        }
+      ]
+    },
+    {
+      "id": "warcraft",
+      "en": "XIII · Warfront and Sovereignty",
+      "ar": "١٣ · الجبهات والسيادة",
+      "scene": 5,
+      "goals": [
+        {
+          "id": "warcraft.1",
+          "en": "Plan before the battle",
+          "ar": "خطط قبل القتال",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Warfront uses builds, arts, runes, plans and pacts. Open its original controls to inspect requirements before spending materials.",
+          "helpAr": "تستخدم الجبهات التجهيزات والفنون والرون والخطط والعهود. راجع الشروط في خياراتها الأصلية قبل إنفاق الموارد.",
+          "route": "warfront",
+          "icon": 3
+        },
+        {
+          "id": "warcraft.2",
+          "en": "An art and a rune",
+          "ar": "فن ورون",
+          "metric": "event.art_rune",
+          "target": 1,
+          "helpEn": "Equip an existing Warfront build with both a non-empty art and rune.",
+          "helpAr": "جهّز بناء جبهة بفن ورون غير فارغين.",
+          "route": "warfront",
+          "icon": 4
+        },
+        {
+          "id": "warcraft.3",
+          "en": "A four-step battle plan",
+          "ar": "خطة قتال من أربع خطوات",
+          "metric": "event.battle_plan",
+          "target": 1,
+          "helpEn": "Save a complete four-step battle plan through Warfront.",
+          "helpAr": "احفظ خطة قتال كاملة من أربع خطوات في الجبهات.",
+          "route": "warfront",
+          "icon": 3
+        },
+        {
+          "id": "warcraft.4",
+          "en": "A rival pact",
+          "ar": "عهد خصم",
+          "metric": "event.rival_pact",
+          "target": 1,
+          "helpEn": "Complete an original rival pact or bind a valid pactbound build.",
+          "helpAr": "أكمل عهد خصم أصليًا أو اربط بناء بعهد صالح.",
+          "route": "warfront",
+          "icon": 6
+        },
+        {
+          "id": "warcraft.5",
+          "en": "Campaign commander",
+          "ar": "قائد الحملة",
+          "metric": "event.warfront_campaign",
+          "target": 1,
+          "helpEn": "Complete the existing Warfront campaign or its six-territory conquest.",
+          "helpAr": "أكمل حملة الجبهات الأصلية أو فتح مناطقها الست.",
+          "route": "warfront",
+          "icon": 13
+        },
+        {
+          "id": "warcraft.6",
+          "en": "Sovereign trials",
+          "ar": "تجارب السيادة",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Sovereign trails test your prepared army. Use existing trial controls, take supplies and respect party locks.",
+          "helpAr": "تختبر مسارات السيادة جيشك المجهز. استخدم خيارات التجارب واحمل الإمدادات واحترم قفل المجموعة.",
+          "route": "sovereign",
+          "icon": 3
+        },
+        {
+          "id": "warcraft.7",
+          "en": "A sovereign trail completed",
+          "ar": "مسار سيادة مكتمل",
+          "metric": "event.sovereign_trail",
+          "target": 1,
+          "helpEn": "Complete one original sovereign trail.",
+          "helpAr": "أكمل مسار سيادة أصليًا واحدًا.",
+          "route": "sovereign",
+          "icon": 13
+        },
+        {
+          "id": "warcraft.8",
+          "en": "A personal mastery upgrade",
+          "ar": "ترقية إتقان شخصية",
+          "metric": "event.mastery",
+          "target": 1,
+          "helpEn": "Raise one existing Royal mastery above its first level.",
+          "helpAr": "ارفع أحد مستويات الإتقان الملكي الأصلي فوق مستواه الأول.",
+          "route": "royal",
+          "icon": 12
+        }
+      ]
+    },
+    {
+      "id": "royal_craft",
+      "en": "XIV · The Complete Monarch",
+      "ar": "١٤ · الملك المتكامل",
+      "scene": 6,
+      "goals": [
+        {
+          "id": "royal_craft.1",
+          "en": "The eclipse systems",
+          "ar": "أنظمة الكسوف",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Eclipse stations and modes belong to their existing campaign. Open Eclipse to read station costs, energy and mode requirements.",
+          "helpAr": "محطات الكسوف وأنماطه تتبع حملتها الأصلية. افتح الكسوف واقرأ تكاليف المحطات والطاقة والشروط.",
+          "route": "eclipse",
+          "icon": 3
+        },
+        {
+          "id": "royal_craft.2",
+          "en": "An eclipse run",
+          "ar": "جولة كسوف",
+          "metric": "event.clear.eclipse_run",
+          "target": 1,
+          "helpEn": "Complete one original eclipse run.",
+          "helpAr": "أكمل جولة كسوف أصلية واحدة.",
+          "route": "eclipse",
+          "icon": 6
+        },
+        {
+          "id": "royal_craft.3",
+          "en": "All eclipse disciplines",
+          "ar": "كل اختصاصات الكسوف",
+          "metric": "event.eclipse_modes",
+          "target": 1,
+          "helpEn": "Complete an eclipse run, reactor, investigation, board, crystal and chronophage activity in their original systems.",
+          "helpAr": "أكمل جولة الكسوف والمفاعل والتحقيق واللوح والكريستال ونشاط آكل الزمن في أنظمتها الأصلية.",
+          "route": "eclipse",
+          "icon": 13
+        },
+        {
+          "id": "royal_craft.4",
+          "en": "Royal practical training",
+          "ar": "تدريب ملكي عملي",
+          "metric": "event.royal_modes",
+          "target": 1,
+          "helpEn": "Finish original training, skill course, seal puzzle and mimic activities.",
+          "helpAr": "أنهِ التدريب ومسار المهارة ولغز الأختام والمقلد الأصلية.",
+          "route": "royal",
+          "icon": 13
+        },
+        {
+          "id": "royal_craft.5",
+          "en": "Banners for a company",
+          "ar": "رايات لفريق",
+          "metric": "event.companies_banners",
+          "target": 1,
+          "helpEn": "Keep at least one saved company and an owned Royal banner.",
+          "helpAr": "احفظ فريقًا واحدًا على الأقل وامتلك راية ملكية.",
+          "route": "companies",
+          "icon": 6
+        },
+        {
+          "id": "royal_craft.6",
+          "en": "All camp stations",
+          "ar": "كل محطات المعسكر",
+          "metric": "event.camp_stations",
+          "target": 1,
+          "helpEn": "Build the existing Eclipse camp-station types in their supported camp system.",
+          "helpAr": "ابنِ أنواع محطات معسكر الكسوف الأصلية في نظامها المدعوم.",
+          "route": "eclipse",
+          "icon": 4
+        },
+        {
+          "id": "royal_craft.7",
+          "en": "A companion’s personal story",
+          "ar": "قصة رفيق شخصية",
+          "metric": "event.personal_story",
+          "target": 1,
+          "helpEn": "Complete one companion’s three-stage personal story through the original camp controls.",
+          "helpAr": "أكمل قصة رفيق الشخصية ذات المراحل الثلاث من خيارات المعسكر الأصلية.",
+          "route": "camp",
+          "icon": 9
+        },
+        {
+          "id": "royal_craft.8",
+          "en": "A life beyond combat",
+          "ar": "حياة خارج القتال",
+          "metric": "event.care_friend_story",
+          "target": 1,
+          "helpEn": "One companion must have a real petting interaction, meal, story and friendship.",
+          "helpAr": "يجب أن يحصل رفيق واحد على مداعبة ووجبة وحكاية وصداقة فعلية.",
+          "route": "care",
+          "icon": 9
+        }
+      ]
+    },
+    {
+      "id": "sentinel",
+      "requires": "awakening.8",
+      "en": "XV · The Eternal Watch",
+      "ar": "١٥ · الحراسة الدائمة",
+      "scene": 5,
+      "goals": [
+        {
+          "id": "sentinel.1",
+          "en": "Read the milestone rewards",
+          "ar": "افهم جوائز الإنجازات",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Major milestones now award real items such as Unbound Soul Sigils. Collect them from the saved quest mailbox; full bags never delete them.",
+          "helpAr": "تمنح الإنجازات الكبيرة عناصر فعلية كختم الروح. استلمها من بريد المهمات؛ امتلاء الحقيبة لا يحذفها.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.2",
+          "en": "Two patrol torches",
+          "ar": "شعلتا دورية",
+          "metric": "item.shadowsovereign.patrol_torch",
+          "target": 2,
+          "helpEn": "Craft two torches with amethyst, copper, a stick and cobbled deepslate, then place them on your chosen patrol path.",
+          "helpAr": "اصنع شعلتين بالجمشت والنحاس والعصا والديبسليت المرصوف وضعهما على مسار الدورية.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.3",
+          "en": "A route linker",
+          "ar": "رابط مسار",
+          "metric": "item.shadowsovereign.soul_route_linker",
+          "target": 1,
+          "helpEn": "Craft a compass, amethyst shard and string into a Soul Route Linker.",
+          "helpAr": "اصنع رابط مسار من بوصلة وشظية جمشت وخيط.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.4",
+          "en": "Connect the watch",
+          "ar": "اربط الحراسة",
+          "metric": "event.sentinel.link",
+          "target": 1,
+          "helpEn": "Use the linker on the first torch and then the second. Both must belong to you and be within96 blocks.",
+          "helpAr": "استخدم الرابط على الأولى ثم الثانية. يجب أن تملكهما وأن تكون المسافة ضمن٩٦ بلوكًا.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.5",
+          "en": "Assign a patrol soul",
+          "ar": "عيّن روحًا للدورية",
+          "metric": "event.sentinel.route",
+          "target": 1,
+          "helpEn": "Open the first torch, select your soul and apply its linked route. Two to eight nodes form a repeating patrol.",
+          "helpAr": "افتح الأولى واختر روحك واعتمد المسار. من نقطتين إلى ثمانٍ تُكوّن دورية متكررة.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.6",
+          "en": "One complete patrol",
+          "ar": "دورة حراسة كاملة",
+          "metric": "event.sentinel.lap",
+          "target": 1,
+          "helpEn": "Let the companion walk the entire programmed route and return to the first point. Keep the route’s terrain walkable.",
+          "helpAr": "دع الرفيق يمشي كامل المسار ويعود للنقطة الأولى. اجعل الطريق قابلًا للمشي.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.7",
+          "en": "A meaningful new order",
+          "ar": "أمر جديد مفيد",
+          "metric": "event.sentinel.command",
+          "target": 1,
+          "helpEn": "Use a new order from K → Orders / Patrol, such as Close, Bodyguard, Rally, Retreat or Save Post.",
+          "helpAr": "استخدم أمرًا جديدًا من K ثم الأوامر والدوريات، مثل الزم جانبي أو احمني أو تعال واثبت أو انسحب أو احفظ نقطة.",
+          "route": "sentinel",
+          "icon": 3
+        },
+        {
+          "id": "sentinel.8",
+          "en": "Persistence without endless loading",
+          "ar": "حفظ دون تحميل لا نهائي",
+          "metric": "lesson",
+          "target": 1,
+          "helpEn": "Guards remain saved in their own chunks; unloaded areas sleep. Following allies catch up safely. Genuine death still uses soul return and cemetery rules, while explicit Recall cancels live recovery.",
+          "helpAr": "الحراس محفوظون في مناطقهم؛ المناطق غير المحملة تنام. يلحق المتابعون بأمان. الموت الحقيقي يتبع العودة والمقبرة، والسحب الصريح يوقف الاستعادة التلقائية.",
+          "route": "sentinel",
+          "icon": 3
+        }
+      ]
+    }
+  ],
+  "graduation": [
+    {
+      "id": "collection.8",
+      "en": "8 legendary souls",
+      "ar": "8 روحًا أسطورية",
+      "metric": "legends",
+      "target": 8,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "collection.12",
+      "en": "12 legendary souls",
+      "ar": "12 روحًا أسطورية",
+      "metric": "legends",
+      "target": 12,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "collection.16",
+      "en": "16 legendary souls",
+      "ar": "16 روحًا أسطورية",
+      "metric": "legends",
+      "target": 16,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "collection.20",
+      "en": "20 legendary souls",
+      "ar": "20 روحًا أسطورية",
+      "metric": "legends",
+      "target": 20,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "collection.24",
+      "en": "24 legendary souls",
+      "ar": "24 روحًا أسطورية",
+      "metric": "legends",
+      "target": 24,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "collection.all",
+      "en": "Every legendary soul",
+      "ar": "كل الأرواح الأسطورية",
+      "metric": "legends",
+      "target": -1,
+      "helpEn": "Secure distinct legendary types. Old discoveries and valid sigil rewards count; duplicates do not.",
+      "helpAr": "اجمع أنواعًا أسطورية مختلفة؛ تُحسب الاكتشافات القديمة والختم المتوافق دون النسخ المكررة.",
+      "route": "grimoire",
+      "icon": 6
+    },
+    {
+      "id": "master.level6",
+      "en": "One soul at level6",
+      "ar": "روح في المستوى6",
+      "metric": "level",
+      "target": 6,
+      "helpEn": "Train one companion to level6. Total personal kill thresholds:75,105,140,180,225 for levels6–10.",
+      "helpAr": "درّب رفيقًا للمستوى6. حدود قتلات المستويات٦–١٠ هي٧٥،١٠٥،١٤٠،١٨٠،٢٢٥.",
+      "route": "army",
+      "icon": 12
+    },
+    {
+      "id": "master.level7",
+      "en": "One soul at level7",
+      "ar": "روح في المستوى7",
+      "metric": "level",
+      "target": 7,
+      "helpEn": "Train one companion to level7. Total personal kill thresholds:75,105,140,180,225 for levels6–10.",
+      "helpAr": "درّب رفيقًا للمستوى7. حدود قتلات المستويات٦–١٠ هي٧٥،١٠٥،١٤٠،١٨٠،٢٢٥.",
+      "route": "army",
+      "icon": 12
+    },
+    {
+      "id": "master.level8",
+      "en": "One soul at level8",
+      "ar": "روح في المستوى8",
+      "metric": "level",
+      "target": 8,
+      "helpEn": "Train one companion to level8. Total personal kill thresholds:75,105,140,180,225 for levels6–10.",
+      "helpAr": "درّب رفيقًا للمستوى8. حدود قتلات المستويات٦–١٠ هي٧٥،١٠٥،١٤٠،١٨٠،٢٢٥.",
+      "route": "army",
+      "icon": 12
+    },
+    {
+      "id": "master.level9",
+      "en": "One soul at level9",
+      "ar": "روح في المستوى9",
+      "metric": "level",
+      "target": 9,
+      "helpEn": "Train one companion to level9. Total personal kill thresholds:75,105,140,180,225 for levels6–10.",
+      "helpAr": "درّب رفيقًا للمستوى9. حدود قتلات المستويات٦–١٠ هي٧٥،١٠٥،١٤٠،١٨٠،٢٢٥.",
+      "route": "army",
+      "icon": 12
+    },
+    {
+      "id": "master.level10",
+      "en": "One soul at level10",
+      "ar": "روح في المستوى10",
+      "metric": "level",
+      "target": 10,
+      "helpEn": "Train one companion to level10. Total personal kill thresholds:75,105,140,180,225 for levels6–10.",
+      "helpAr": "درّب رفيقًا للمستوى10. حدود قتلات المستويات٦–١٠ هي٧٥،١٠٥،١٤٠،١٨٠،٢٢٥.",
+      "route": "army",
+      "icon": 12
+    },
+    {
+      "id": "master.kills",
+      "en": "225 confirmed victories",
+      "ar": "٢٢٥ انتصارًا مؤكدًا",
+      "metric": "kills",
+      "target": 225,
+      "helpEn": "One companion must personally earn225 kills.",
+      "helpAr": "يجب أن يحقق رفيق واحد٢٢٥ قتلة شخصية.",
+      "route": "army",
+      "icon": 13
+    },
+    {
+      "id": "master.legend",
+      "en": "A veteran legend",
+      "ar": "أسطورة مخضرمة",
+      "metric": "legendlevel",
+      "target": 5,
+      "helpEn": "Raise an owned legendary companion to level5.",
+      "helpAr": "ارفع رفيقًا أسطوريًا إلى المستوى٥.",
+      "route": "army",
+      "icon": 13
+    },
+    {
+      "id": "master.foundation",
+      "en": "The complete field education",
+      "ar": "التعليم الميداني الكامل",
+      "metric": "coreclaims",
+      "target": 120,
+      "helpEn": "Claim all120 foundation and specialist stages.",
+      "helpAr": "اعتمد مراحل التأسيس والتخصص الـ١٢٠.",
+      "route": "army",
+      "icon": 13
+    },
+    {
+      "id": "master.hunts",
+      "en": "Every hunt mastered",
+      "ar": "إتقان كل مسارات الصيد",
+      "metric": "huntclaims",
+      "target": -2,
+      "helpEn": "Claim every eight-stage legendary hunt. This goal expands with later legendary additions.",
+      "helpAr": "اعتمد مراحل صيد جميع الأساطير؛ يتوسع المطلوب عند إضافة أساطير مستقبلًا.",
+      "route": "army",
+      "icon": 13
+    },
+    {
+      "id": "master.oath",
+      "en": "The sovereign’s oath",
+      "ar": "عهد الملك",
+      "metric": "lesson",
+      "target": 1,
+      "helpEn": "You now know capture, equipment, care, the realm and every legendary companion. Claim your final stage; future additions continue the journey.",
+      "helpAr": "أصبحت تفهم الاستخراج والمعدات والعناية والدايمنشن وكل رفيق أسطوري. اعتمد المرحلة الأخيرة؛ الإضافات المقبلة تواصل الرحلة.",
+      "route": "army",
+      "icon": 13
+    }
+  ]
+}

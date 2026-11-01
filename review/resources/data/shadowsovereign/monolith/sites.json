@@ -1,0 +1,788 @@
+[
+  {
+    "name": "monolith_sanctum",
+    "kind": 8,
+    "size": [
+      81,
+      41,
+      97
+    ],
+    "altar": [
+      40,
+      4,
+      48
+    ],
+    "rootOffset": [
+      27,
+      0,
+      33
+    ],
+    "pieces": [
+      {
+        "template": "monolith_sanctum/piece_0",
+        "offset": [
+          27,
+          0,
+          33
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_1",
+        "offset": [
+          27,
+          0,
+          0
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_2",
+        "offset": [
+          54,
+          0,
+          33
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_3",
+        "offset": [
+          0,
+          0,
+          33
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_4",
+        "offset": [
+          27,
+          0,
+          66
+        ],
+        "size": [
+          27,
+          21,
+          31
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_5",
+        "offset": [
+          27,
+          21,
+          33
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_6",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_7",
+        "offset": [
+          54,
+          0,
+          0
+        ],
+        "size": [
+          27,
+          21,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_8",
+        "offset": [
+          27,
+          21,
+          0
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_9",
+        "offset": [
+          54,
+          0,
+          66
+        ],
+        "size": [
+          27,
+          21,
+          31
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_10",
+        "offset": [
+          54,
+          21,
+          33
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_11",
+        "offset": [
+          0,
+          0,
+          66
+        ],
+        "size": [
+          27,
+          21,
+          31
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_12",
+        "offset": [
+          0,
+          21,
+          33
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_13",
+        "offset": [
+          27,
+          21,
+          66
+        ],
+        "size": [
+          27,
+          20,
+          31
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_14",
+        "offset": [
+          0,
+          21,
+          0
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_15",
+        "offset": [
+          54,
+          21,
+          0
+        ],
+        "size": [
+          27,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_16",
+        "offset": [
+          54,
+          21,
+          66
+        ],
+        "size": [
+          27,
+          20,
+          31
+        ]
+      },
+      {
+        "template": "monolith_sanctum/piece_17",
+        "offset": [
+          0,
+          21,
+          66
+        ],
+        "size": [
+          27,
+          20,
+          31
+        ]
+      }
+    ]
+  },
+  {
+    "name": "monolith_spire",
+    "kind": 11,
+    "size": [
+      33,
+      80,
+      33
+    ],
+    "altar": [
+      16,
+      65,
+      16
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "pieces": [
+      {
+        "template": "monolith_spire/piece_0",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          33,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_spire/piece_1",
+        "offset": [
+          0,
+          20,
+          0
+        ],
+        "size": [
+          33,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_spire/piece_2",
+        "offset": [
+          0,
+          40,
+          0
+        ],
+        "size": [
+          33,
+          20,
+          33
+        ]
+      },
+      {
+        "template": "monolith_spire/piece_3",
+        "offset": [
+          0,
+          60,
+          0
+        ],
+        "size": [
+          33,
+          20,
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "name": "monolith_phoenix_nest",
+    "kind": 9,
+    "size": [
+      33,
+      9,
+      33
+    ],
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "pieces": [
+      {
+        "template": "monolith_phoenix_nest",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          33,
+          9,
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "name": "monolith_pain_court",
+    "kind": 10,
+    "size": [
+      33,
+      9,
+      33
+    ],
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "pieces": [
+      {
+        "template": "monolith_pain_court",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          33,
+          9,
+          33
+        ]
+      }
+    ],
+    "biome": "shadowsovereign:crimson_shadow"
+  },
+  {
+    "name": "monolith_juggernaut_quarry",
+    "kind": 12,
+    "size": [
+      33,
+      9,
+      33
+    ],
+    "altar": [
+      16,
+      1,
+      16
+    ],
+    "pieces": [
+      {
+        "template": "monolith_juggernaut_quarry",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          33,
+          9,
+          33
+        ]
+      }
+    ]
+  },
+  {
+    "name": "legends_paper_shrine",
+    "kind": 13,
+    "size": [
+      49,
+      23,
+      49
+    ],
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "shadowsovereign:bound_soul_wood_log",
+    "stairs": "minecraft:quartz_stairs",
+    "pieces": [
+      {
+        "template": "legends_paper_shrine",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          23,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "name": "legends_jester_theatre",
+    "kind": 14,
+    "size": [
+      49,
+      16,
+      49
+    ],
+    "altar": [
+      24,
+      2,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:gloomwood",
+    "foundation": "minecraft:deepslate_bricks",
+    "stairs": "minecraft:dark_oak_stairs",
+    "pieces": [
+      {
+        "template": "legends_jester_theatre",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          16,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "name": "legends_emperor_palace",
+    "kind": 15,
+    "size": [
+      65,
+      28,
+      65
+    ],
+    "altar": [
+      32,
+      4,
+      42
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:ashen_monolith",
+    "foundation": "shadowsovereign:monolith_bleached_stone",
+    "stairs": "minecraft:quartz_stairs",
+    "pieces": [
+      {
+        "template": "legends_emperor_palace",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          65,
+          28,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "name": "legends_madara_bastion",
+    "kind": 16,
+    "size": [
+      65,
+      23,
+      65
+    ],
+    "altar": [
+      32,
+      1,
+      32
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "minecraft:deepslate_bricks",
+    "stairs": "minecraft:nether_brick_stairs",
+    "pieces": [
+      {
+        "template": "legends_madara_bastion",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          65,
+          23,
+          65
+        ]
+      }
+    ]
+  },
+  {
+    "name": "legends_sasori_workshop",
+    "kind": 17,
+    "size": [
+      49,
+      20,
+      49
+    ],
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "minecraft:red_sandstone",
+    "stairs": "minecraft:red_sandstone_stairs",
+    "pieces": [
+      {
+        "template": "legends_sasori_workshop",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          20,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronicles_penitent_cloister",
+    "kind": 18,
+    "size": [
+      49,
+      15,
+      49
+    ],
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:gloomwood",
+    "foundation": "minecraft:deepslate_bricks",
+    "stairs": "minecraft:stone_brick_stairs",
+    "pieces": [
+      {
+        "template": "chronicles_penitent_cloister",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          15,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronicles_oracle_pavilion",
+    "kind": 19,
+    "size": [
+      49,
+      21,
+      49
+    ],
+    "altar": [
+      24,
+      1,
+      24
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "shadowsovereign:bound_soul_wood_log",
+    "stairs": "minecraft:dark_oak_stairs",
+    "pieces": [
+      {
+        "template": "chronicles_oracle_pavilion",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          21,
+          49
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronicles_buried_belfry",
+    "kind": 20,
+    "size": [
+      49,
+      24,
+      57
+    ],
+    "altar": [
+      24,
+      4,
+      40
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:ashen_monolith",
+    "foundation": "minecraft:cobbled_deepslate",
+    "stairs": "minecraft:deepslate_brick_stairs",
+    "pieces": [
+      {
+        "template": "chronicles_buried_belfry",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          49,
+          24,
+          57
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronicles_lunar_monastery",
+    "kind": 21,
+    "size": [
+      57,
+      25,
+      57
+    ],
+    "altar": [
+      28,
+      1,
+      28
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "minecraft:deepslate_bricks",
+    "stairs": "minecraft:nether_brick_stairs",
+    "pieces": [
+      {
+        "template": "chronicles_lunar_monastery",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          57,
+          25,
+          57
+        ]
+      }
+    ]
+  },
+  {
+    "name": "chronicles_crow_retreat",
+    "kind": 22,
+    "size": [
+      57,
+      20,
+      57
+    ],
+    "altar": [
+      28,
+      1,
+      28
+    ],
+    "rootOffset": [
+      0,
+      0,
+      0
+    ],
+    "biome": "shadowsovereign:crimson_shadow",
+    "foundation": "minecraft:deepslate_bricks",
+    "stairs": "minecraft:nether_brick_stairs",
+    "pieces": [
+      {
+        "template": "chronicles_crow_retreat",
+        "offset": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          57,
+          20,
+          57
+        ]
+      }
+    ]
+  }
+]

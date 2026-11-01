@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/amethyst_cluster",
+  "textures": {
+    "cross": "shadowsovereign:block/monolith_glimmering_monolith_shard"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_chained_arch_fragment"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_chained_arch_fragment.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_chained_arch_fragment.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_chained_arch_fragment",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:ashen_monolith"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_chained_arch_fragment"
+}

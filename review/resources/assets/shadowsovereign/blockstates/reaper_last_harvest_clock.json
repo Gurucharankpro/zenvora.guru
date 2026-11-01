@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/reaper_last_harvest_clock",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/reaper_last_harvest_clock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/reaper_last_harvest_clock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/reaper_last_harvest_clock",
+      "y": 270
+    }
+  }
+}

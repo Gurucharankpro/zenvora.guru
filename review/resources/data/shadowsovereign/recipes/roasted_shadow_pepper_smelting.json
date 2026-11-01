@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "shadowsovereign:shadow_pepper"
+  },
+  "result": "shadowsovereign:roasted_shadow_pepper",
+  "experience": 0.35,
+  "cookingtime": 200
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:oak_planks"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.recipe_oak_planks.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.recipe_oak_planks.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:oak_planks"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/kit_ladder"
+}

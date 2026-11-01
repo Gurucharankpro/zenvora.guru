@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/reaper_eternal_mourning_fountain",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/reaper_eternal_mourning_fountain",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/reaper_eternal_mourning_fountain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/reaper_eternal_mourning_fountain",
+      "y": 270
+    }
+  }
+}

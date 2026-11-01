@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "shadowsovereign:block/soul_herb_stage2"
+  }
+}

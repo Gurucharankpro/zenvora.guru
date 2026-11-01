@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "shadowsovereign:block/lantern_mushroom"
+  }
+}

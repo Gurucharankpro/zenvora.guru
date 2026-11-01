@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_abyssal_stone"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_abyss_abyssal_stone.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_abyss_abyssal_stone.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:abyss_abyssal_stone"
+            ],
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_abyss_abyssal_stone"
+}

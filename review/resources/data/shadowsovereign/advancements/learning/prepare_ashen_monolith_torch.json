@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:torch"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.prepare_ashen_monolith_torch.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.prepare_ashen_monolith_torch.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "location": {
+            "dimension": "shadowsovereign:echo_realms",
+            "biome": "shadowsovereign:ashen_monolith"
+          }
+        },
+        "items": [
+          {
+            "items": [
+              "minecraft:torch"
+            ],
+            "count": {
+              "min": 16
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_abyss_abyssal_stone"
+}

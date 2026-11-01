@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:expansion_palace_of_eternal_cringe",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:expansion/palace_of_eternal_cringe",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

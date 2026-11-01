@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "shadowsovereign:block/bound_dark_soul_grass_block_top",
+    "side": "shadowsovereign:block/bound_dark_soul_grass_block_side",
+    "bottom": "shadowsovereign:block/bound_soul_soil"
+  }
+}

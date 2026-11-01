@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_luminous_anemone"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_sunken_luminous_anemone.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_sunken_luminous_anemone.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:sunken_luminous_anemone"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_sunken_deepwater_grass"
+}

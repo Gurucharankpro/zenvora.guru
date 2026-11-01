@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "shadowsovereign:shattered_celestial_stone"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:shattered_polished_celestial_stone",
+    "count": 4
+  }
+}

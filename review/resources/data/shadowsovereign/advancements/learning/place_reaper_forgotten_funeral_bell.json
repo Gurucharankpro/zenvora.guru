@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_forgotten_funeral_bell"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_reaper_forgotten_funeral_bell.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_reaper_forgotten_funeral_bell.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_forgotten_funeral_bell",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_reaper_forgotten_funeral_bell"
+}

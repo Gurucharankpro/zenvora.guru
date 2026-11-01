@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_six_claw_chandelier"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_six_claw_chandelier.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_six_claw_chandelier.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_six_claw_chandelier",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:sunken_kingdom"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_devourer_six_claw_chandelier"
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "moisture=0": {
+      "model": "shadowsovereign:block/dark_farmland"
+    },
+    "moisture=1": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=2": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=3": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=4": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=5": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=6": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    },
+    "moisture=7": {
+      "model": "shadowsovereign:block/dark_farmland_moist"
+    }
+  }
+}

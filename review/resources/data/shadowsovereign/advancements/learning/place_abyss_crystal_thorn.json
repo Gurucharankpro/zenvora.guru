@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_crystal_thorn"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_abyss_crystal_thorn.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_abyss_crystal_thorn.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:abyss_crystal_thorn",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_abyss_crystal_thorn"
+}

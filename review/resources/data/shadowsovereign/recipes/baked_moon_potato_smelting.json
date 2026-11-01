@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "shadowsovereign:moon_potato"
+  },
+  "result": "shadowsovereign:baked_moon_potato",
+  "experience": 0.35,
+  "cookingtime": 200
+}

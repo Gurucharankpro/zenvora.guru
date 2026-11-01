@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shadowsovereign:echo_reed"
+    },
+    {
+      "item": "shadowsovereign:echo_reed"
+    },
+    {
+      "item": "shadowsovereign:echo_reed"
+    }
+  ],
+  "result": {
+    "item": "minecraft:paper",
+    "count": 3
+  }
+}

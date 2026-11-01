@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:expansion_waystation_ashen_monolith",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:expansion/waystation_ashen_monolith",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

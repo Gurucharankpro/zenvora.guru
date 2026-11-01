@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_spectral_grave_cross"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_reaper_spectral_grave_cross.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_reaper_spectral_grave_cross.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:reaper_spectral_grave_cross"
+            ],
+            "count": {
+              "min": 2
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15,
+    "loot": [
+      "shadowsovereign:chests/waystation"
+    ]
+  },
+  "parent": "shadowsovereign:learning/place_reaper_spectral_grave_cross"
+}

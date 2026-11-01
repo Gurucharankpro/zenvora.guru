@@ -1,0 +1,15 @@
+{
+  "name": "shadowsovereign:shattered_forgotten_golden_pagoda",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "shadowsovereign:shattered_forgotten_golden_pagoda",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "shadowsovereign:block/abyss_voidshroom_stem"
+    },
+    "axis=x": {
+      "model": "shadowsovereign:block/abyss_voidshroom_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "shadowsovereign:block/abyss_voidshroom_stem",
+      "x": 90
+    }
+  }
+}

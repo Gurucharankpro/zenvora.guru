@@ -1,0 +1,7 @@
+{
+ "parent": "minecraft:block/cube_column",
+ "textures": {
+  "end": "shadowsovereign:block/sunken_tidewood_log_top",
+  "side": "shadowsovereign:block/sunken_tidewood_log"
+ }
+}

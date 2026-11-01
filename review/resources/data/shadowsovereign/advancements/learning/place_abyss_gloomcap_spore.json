@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_gloomcap_spore"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_abyss_gloomcap_spore.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_abyss_gloomcap_spore.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:abyss_gloomcap_spore",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_abyss_gloomcap_spore"
+}

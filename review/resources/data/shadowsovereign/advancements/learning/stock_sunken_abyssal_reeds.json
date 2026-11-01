@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_abyssal_reeds"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_sunken_abyssal_reeds.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_sunken_abyssal_reeds.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:sunken_abyssal_reeds"
+            ],
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_sunken_abyssal_reeds"
+}

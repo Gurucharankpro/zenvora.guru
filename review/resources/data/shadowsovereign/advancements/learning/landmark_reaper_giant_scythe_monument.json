@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_giant_scythe_monument"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_giant_scythe_monument.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_giant_scythe_monument.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_giant_scythe_monument",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:bound_soul_bound"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_reaper_giant_scythe_monument"
+}

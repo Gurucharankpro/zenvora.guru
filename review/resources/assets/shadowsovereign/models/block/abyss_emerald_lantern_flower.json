@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "shadowsovereign:block/abyss_emerald_lantern_flower"
+  },
+  "render_type": "minecraft:cutout"
+}

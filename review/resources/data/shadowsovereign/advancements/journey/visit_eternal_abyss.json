@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:compass"
+    },
+    "title": {
+      "translate": "quest.shadowsovereign.visit_eternal_abyss.title"
+    },
+    "description": {
+      "translate": "quest.shadowsovereign.visit_eternal_abyss.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "visit": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:eternal_abyss"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50,
+    "function": "shadowsovereign:journey/visit_eternal_abyss"
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

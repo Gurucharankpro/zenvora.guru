@@ -1,0 +1,62 @@
+{
+  "has_precipitation": false,
+  "temperature": 0.1,
+  "downfall": 0.3,
+  "effects": {
+    "fog_color": 1059623,
+    "water_color": 1523016,
+    "water_fog_color": 1059904,
+    "sky_color": 465185,
+    "grass_color": 2578763,
+    "foliage_color": 3309177,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "probability": 0.003,
+      "options": {
+        "type": "minecraft:spore_blossom_air"
+      }
+    }
+  },
+  "spawners": {
+    "creature": [],
+    "ambient": [],
+    "monster": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "shadowsovereign:abyss_emerald_soul_ore"
+    ],
+    [],
+    [],
+    [
+      "shadowsovereign:abyss_gloomcap_spore_patch",
+      "shadowsovereign:abyss_voidshroom_spore_patch",
+      "shadowsovereign:abyss_abyss_grass_patch",
+      "shadowsovereign:abyss_emerald_lantern_flower_patch",
+      "shadowsovereign:abyss_void_fern_patch",
+      "shadowsovereign:abyss_crystal_thorn_patch",
+      "shadowsovereign:abyss_abyss_reed_patch",
+      "shadowsovereign:abyss_soul_glow_mushroom_patch"
+    ],
+    []
+  ]
+}

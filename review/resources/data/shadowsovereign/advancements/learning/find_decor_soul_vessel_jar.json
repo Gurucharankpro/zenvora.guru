@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_soul_vessel_jar"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_decor_soul_vessel_jar.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_decor_soul_vessel_jar.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:decor_soul_vessel_jar"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_decor_bone_fence_segment"
+}

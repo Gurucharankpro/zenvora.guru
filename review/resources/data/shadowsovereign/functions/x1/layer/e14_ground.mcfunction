@@ -1,0 +1,21 @@
+execute if score @s sbx1_age matches 1..3 run data modify entity @s item.tag.CustomModelData set value 377
+execute if score @s sbx1_age matches 4..6 run data modify entity @s item.tag.CustomModelData set value 378
+execute if score @s sbx1_age matches 7..9 run data modify entity @s item.tag.CustomModelData set value 379
+execute if score @s sbx1_age matches 10..12 run data modify entity @s item.tag.CustomModelData set value 380
+execute if score @s sbx1_age matches 13..15 run data modify entity @s item.tag.CustomModelData set value 381
+execute if score @s sbx1_age matches 16..18 run data modify entity @s item.tag.CustomModelData set value 382
+execute if score @s sbx1_age matches 19..21 run data modify entity @s item.tag.CustomModelData set value 383
+execute if score @s sbx1_age matches 22..24 run data modify entity @s item.tag.CustomModelData set value 384
+execute if score @s sbx1_age matches 25..27 run data modify entity @s item.tag.CustomModelData set value 385
+execute if score @s sbx1_age matches 28..30 run data modify entity @s item.tag.CustomModelData set value 386
+execute if score @s sbx1_age matches 31..33 run data modify entity @s item.tag.CustomModelData set value 387
+execute if score @s sbx1_age matches 34..36 run data modify entity @s item.tag.CustomModelData set value 388
+execute if score @s sbx1_age matches 37..39 run data modify entity @s item.tag.CustomModelData set value 389
+execute if score @s sbx1_age matches 40..42 run data modify entity @s item.tag.CustomModelData set value 390
+execute if score @s sbx1_age matches 43..45 run data modify entity @s item.tag.CustomModelData set value 391
+execute if score @s sbx1_age matches 46..48 run data modify entity @s item.tag.CustomModelData set value 392
+execute if score @s sbx1_age matches 49..51 run data modify entity @s item.tag.CustomModelData set value 393
+execute if score @s sbx1_age matches 52..54 run data modify entity @s item.tag.CustomModelData set value 394
+execute if score @s sbx1_age matches 55..57 run data modify entity @s item.tag.CustomModelData set value 395
+execute if score @s sbx1_age matches 58..60 run data modify entity @s item.tag.CustomModelData set value 396
+execute if score @s sbx1_age matches 60.. run function shadowsovereign:x1/end

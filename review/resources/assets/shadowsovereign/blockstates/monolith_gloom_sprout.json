@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=false": {
+      "model": "shadowsovereign:block/monolith_gloom_sprout"
+    },
+    "open=true": {
+      "model": "shadowsovereign:block/monolith_gloom_sprout_open"
+    }
+  }
+}

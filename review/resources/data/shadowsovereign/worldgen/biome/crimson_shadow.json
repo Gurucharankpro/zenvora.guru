@@ -1,0 +1,66 @@
+{
+  "has_precipitation": true,
+  "temperature": 0.65,
+  "downfall": 0.7,
+  "effects": {
+    "fog_color": 2757668,
+    "water_color": 3817356,
+    "water_fog_color": 1447994,
+    "sky_color": 1708064,
+    "grass_color": 9051962,
+    "foliage_color": 7213104,
+    "ambient_particle": {
+      "probability": 0.002,
+      "options": {
+        "type": "minecraft:spore_blossom_air"
+      }
+    },
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "probability": 0.002,
+      "options": {
+        "type": "minecraft:ash"
+      }
+    }
+  },
+  "spawners": {
+    "creature": [],
+    "ambient": [],
+    "monster": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "shadowsovereign:crimson_shadow_crystal_ore"
+    ],
+    [],
+    [],
+    [
+      "shadowsovereign:crimson_shadow_shadowwood_tree",
+      "shadowsovereign:crimson_shadow_mourning_willow_tree",
+      "shadowsovereign:crimson_shadow_black_fern_patch",
+      "shadowsovereign:crimson_shadow_red_spider_lily_patch",
+      "shadowsovereign:crimson_shadow_shadow_mushroom_patch",
+      "shadowsovereign:crimson_shadow_crimson_tall_grass_patch"
+    ],
+    []
+  ]
+}

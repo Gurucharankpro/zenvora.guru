@@ -1,0 +1,55 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:compass"
+    },
+    "title": {
+      "translate": "quest.shadowsovereign.collect_soul_devourer.title"
+    },
+    "description": {
+      "translate": "quest.shadowsovereign.collect_soul_devourer.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "collect": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:devourer_soul_devourer_monument",
+              "shadowsovereign:devourer_grand_soul_prison_cage",
+              "shadowsovereign:devourer_devourers_throne",
+              "shadowsovereign:devourer_six_legged_guardian_totem",
+              "shadowsovereign:devourer_abyssal_soul_altar",
+              "shadowsovereign:devourer_caged_soul_lantern",
+              "shadowsovereign:devourer_devourers_jaw_arch",
+              "shadowsovereign:devourer_soul_extraction_obelisk",
+              "shadowsovereign:devourer_ancient_beast_skull_relic",
+              "shadowsovereign:devourer_six_claw_chandelier",
+              "shadowsovereign:devourer_imprisoned_star_crystal",
+              "shadowsovereign:devourer_devourers_war_banner",
+              "shadowsovereign:devourer_soul_cage_sarcophagus",
+              "shadowsovereign:devourer_abyssal_spine_pillar",
+              "shadowsovereign:devourer_forgotten_feeding_basin",
+              "shadowsovereign:devourer_soulbound_chain_rack",
+              "shadowsovereign:devourer_devourers_ritual_brazier",
+              "shadowsovereign:devourer_cursed_beast_footprint",
+              "shadowsovereign:devourer_eternal_prison_gate",
+              "shadowsovereign:devourer_heart_of_the_devourer"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100,
+    "function": "shadowsovereign:journey/collect_soul_devourer"
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

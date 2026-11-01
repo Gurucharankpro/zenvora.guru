@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:decor_summoning_circle_relic"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_decor_summoning_circle_relic.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_decor_summoning_circle_relic.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:decor_summoning_circle_relic",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:echo_haven"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_decor_summoning_circle_relic"
+}

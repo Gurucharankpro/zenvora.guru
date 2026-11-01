@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    " P ",
+    "PVP",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "shadowsovereign:bound_polished_soul_stone"
+    },
+    "V": {
+      "item": "shadowsovereign:bound_violet_crystal_shard"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "shadowsovereign:bound_ancient_rune_block"
+  }
+}

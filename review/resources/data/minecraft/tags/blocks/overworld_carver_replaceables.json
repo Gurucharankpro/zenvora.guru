@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:ashen_stone",
+    "shadowsovereign:dark_stone",
+    "shadowsovereign:dark_dirt",
+    "shadowsovereign:dark_grass",
+    "shadowsovereign:ashen_soil"
+  ]
+}

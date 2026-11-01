@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_cursed_beast_footprint"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_devourer_cursed_beast_footprint.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_devourer_cursed_beast_footprint.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:devourer_cursed_beast_footprint"
+            ],
+            "count": {
+              "min": 2
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_devourer_cursed_beast_footprint"
+}

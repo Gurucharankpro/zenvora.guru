@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NSN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "S": {
+      "item": "shadowsovereign:starlight_shard"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:starlight_lantern",
+    "count": 1
+  }
+}

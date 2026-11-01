@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:sunken_spirit_kelp"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_sunken_spirit_kelp.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_sunken_spirit_kelp.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:sunken_spirit_kelp",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_sunken_spirit_kelp"
+}

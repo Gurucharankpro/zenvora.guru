@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "shadowsovereign:ghost_pumpkin"
+    }
+  ],
+  "result": {
+    "item": "shadowsovereign:ghost_pumpkin_seeds",
+    "count": 4
+  }
+}

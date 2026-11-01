@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "shadowsovereign:bound_soul_wood_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "shadowsovereign:bound_soul_wood_planks"
+  }
+}

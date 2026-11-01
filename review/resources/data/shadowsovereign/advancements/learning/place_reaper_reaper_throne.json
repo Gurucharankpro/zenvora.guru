@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_reaper_throne"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_reaper_reaper_throne.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_reaper_reaper_throne.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_reaper_throne",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_reaper_reaper_throne"
+}

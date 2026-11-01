@@ -1,0 +1,120 @@
+[
+  {
+    "name": "moonveil_moonveil_shrine",
+    "size": [
+      17,
+      12,
+      17
+    ],
+    "ground": 4,
+    "biome": "moonveil_hollow",
+    "kind": null,
+    "nuna": []
+  },
+  {
+    "name": "moonveil_hollow_tree_house",
+    "size": [
+      19,
+      20,
+      19
+    ],
+    "ground": 1,
+    "biome": "moonveil_hollow",
+    "kind": null,
+    "nuna": [
+      [
+        12,
+        10,
+        9
+      ]
+    ]
+  },
+  {
+    "name": "moonveil_forgotten_pond_temple",
+    "size": [
+      23,
+      14,
+      23
+    ],
+    "ground": 4,
+    "biome": "moonveil_hollow",
+    "kind": null,
+    "nuna": []
+  },
+  {
+    "name": "moonveil_moon_burrow_village",
+    "size": [
+      29,
+      12,
+      29
+    ],
+    "ground": 4,
+    "biome": "moonveil_hollow",
+    "kind": null,
+    "nuna": [
+      [
+        17,
+        5,
+        14
+      ]
+    ]
+  },
+  {
+    "name": "crimson_akatsuki_shadow_hideout",
+    "size": [
+      35,
+      18,
+      35
+    ],
+    "ground": 11,
+    "biome": "crimson_shadow",
+    "kind": 23,
+    "nuna": [],
+    "altar": [
+      17,
+      6,
+      16
+    ]
+  },
+  {
+    "name": "crimson_crimson_moon_shrine",
+    "size": [
+      23,
+      17,
+      23
+    ],
+    "ground": 4,
+    "biome": "crimson_shadow",
+    "kind": 24,
+    "nuna": [],
+    "altar": [
+      11,
+      9,
+      11
+    ]
+  },
+  {
+    "name": "crimson_rain_watchtower",
+    "size": [
+      17,
+      28,
+      17
+    ],
+    "ground": 1,
+    "biome": "crimson_shadow",
+    "kind": null,
+    "nuna": []
+  },
+  {
+    "name": "crimson_forgotten_ninja_village",
+    "size": [
+      45,
+      16,
+      45
+    ],
+    "ground": 4,
+    "biome": "crimson_shadow",
+    "kind": null,
+    "nuna": []
+  }
+]

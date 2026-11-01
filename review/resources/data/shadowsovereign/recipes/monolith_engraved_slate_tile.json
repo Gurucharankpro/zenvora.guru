@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "shadowsovereign:monolith_monolithic_slate"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:monolith_engraved_slate_tile",
+    "count": 4
+  }
+}

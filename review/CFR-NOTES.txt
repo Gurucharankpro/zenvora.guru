@@ -1,0 +1,9 @@
+Summary for /workspace/mod-integration/dist/soulbound-army-1.20.1-1.8.1-shadow-awakening-fix.jar
+Decompiled with CFR 0.152
+
+
+dev.shadowsovereign.soullife.SoulPlay
+----------------------------
+
+tick(net.minecraft.server.level.ServerPlayer )
+  Unable to fully structure code

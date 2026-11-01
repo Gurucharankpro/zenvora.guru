@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_eternal_mourning_fountain"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_eternal_mourning_fountain.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_eternal_mourning_fountain.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_eternal_mourning_fountain",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:shattered_sky"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_reaper_eternal_mourning_fountain"
+}

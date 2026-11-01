@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_reapers_coffin"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.place_reaper_reapers_coffin.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.place_reaper_reapers_coffin.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_reapers_coffin",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/find_reaper_reapers_coffin"
+}

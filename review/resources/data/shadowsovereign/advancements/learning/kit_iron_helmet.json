@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_helmet"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.kit_iron_helmet.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.kit_iron_helmet.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:iron_helmet"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "shadowsovereign:learning/recipe_iron_helmet"
+}

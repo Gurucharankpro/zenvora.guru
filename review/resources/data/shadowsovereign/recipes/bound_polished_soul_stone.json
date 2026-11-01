@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "shadowsovereign:bound_ancient_soul_stone"
+    }
+  },
+  "result": {
+    "count": 4,
+    "item": "shadowsovereign:bound_polished_soul_stone"
+  }
+}

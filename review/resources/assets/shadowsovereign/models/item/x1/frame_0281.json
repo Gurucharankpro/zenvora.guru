@@ -1,0 +1,42 @@
+{
+  "gui_light": "front",
+  "textures": {
+    "v": "shadowsovereign:x1/e10_ground_010",
+    "particle": "shadowsovereign:x1/e10_ground_010"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        7.99,
+        0
+      ],
+      "to": [
+        16,
+        8.01,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#v",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        },
+        "down": {
+          "texture": "#v",
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ]
+        }
+      },
+      "shade": false
+    }
+  ]
+}

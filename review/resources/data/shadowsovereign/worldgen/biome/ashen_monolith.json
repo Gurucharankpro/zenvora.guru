@@ -1,0 +1,72 @@
+{
+  "has_precipitation": false,
+  "temperature": 0.45,
+  "downfall": 0.7,
+  "effects": {
+    "fog_color": 10462901,
+    "sky_color": 11250616,
+    "water_color": 14080491,
+    "water_fog_color": 9281185,
+    "grass_color": 12633041,
+    "foliage_color": 11185858,
+    "particle": {
+      "probability": 0.0015,
+      "options": {
+        "type": "minecraft:white_ash"
+      }
+    },
+    "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
+    "mood_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.mood",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2.0
+    },
+    "additions_sound": {
+      "sound": "minecraft:ambient.soul_sand_valley.additions",
+      "tick_chance": 0.0111
+    }
+  },
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:canyon"
+    ]
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "features": [
+    [],
+    [
+      "shadowsovereign:monolith_silver_pool"
+    ],
+    [],
+    [],
+    [],
+    [],
+    [
+      "shadowsovereign:monolith_slate_vein"
+    ],
+    [],
+    [],
+    [
+      "shadowsovereign:monolith_tree",
+      "shadowsovereign:monolith_pale_spores",
+      "shadowsovereign:monolith_ghost_grass",
+      "shadowsovereign:monolith_crystal_fern",
+      "shadowsovereign:monolith_ashen_bramble",
+      "shadowsovereign:monolith_gloom_sprout",
+      "shadowsovereign:monolith_glimmering_monolith_shard"
+    ],
+    []
+  ]
+}

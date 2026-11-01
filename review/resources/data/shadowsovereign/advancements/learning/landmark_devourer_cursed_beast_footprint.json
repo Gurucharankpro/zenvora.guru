@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_cursed_beast_footprint"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_cursed_beast_footprint.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_devourer_cursed_beast_footprint.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:devourer_cursed_beast_footprint",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:shattered_sky"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_devourer_cursed_beast_footprint"
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "shadowsovereign:block/bound_soul_wood_log"
+    },
+    "axis=z": {
+      "model": "shadowsovereign:block/bound_soul_wood_log",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "shadowsovereign:block/bound_soul_wood_log",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

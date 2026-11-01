@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:soul_wheat_crop",
+    "shadowsovereign:dusk_carrot_crop",
+    "shadowsovereign:moon_potato_crop",
+    "shadowsovereign:shadow_pepper_crop",
+    "shadowsovereign:soul_herb_crop",
+    "shadowsovereign:ghost_pumpkin_stem_crop",
+    "shadowsovereign:bound_soul_wheat_crop"
+  ]
+}

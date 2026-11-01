@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_abyssal_spine_pillar"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_devourer_abyssal_spine_pillar.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_devourer_abyssal_spine_pillar.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:devourer_abyssal_spine_pillar"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_devourer_soul_cage_sarcophagus"
+}

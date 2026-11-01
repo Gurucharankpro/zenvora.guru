@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "shadowsovereign:block/starlight_lantern"
+    },
+    "hanging=true": {
+      "model": "shadowsovereign:block/starlight_lantern_hanging"
+    }
+  }
+}

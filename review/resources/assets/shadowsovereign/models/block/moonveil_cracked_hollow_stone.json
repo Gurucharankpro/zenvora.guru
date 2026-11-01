@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "shadowsovereign:block/moonveil_cracked_hollow_stone"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "shadowsovereign:dark_log",
+    "shadowsovereign:ashen_log",
+    "shadowsovereign:bound_soul_wood_log",
+    "shadowsovereign:bound_stripped_soul_wood_log",
+    "#shadowsovereign:bound_soul_wood_logs",
+    "shadowsovereign:monolith_ashen_log",
+    "shadowsovereign:monolith_stripped_ashen_log",
+    "shadowsovereign:moonveil_silverroot_log",
+    "shadowsovereign:moonveil_veilwood_log",
+    "shadowsovereign:crimson_shadow_mourning_willow_log",
+    "shadowsovereign:crimson_shadow_shadowwood_log",
+    "shadowsovereign:shattered_crystalwood_log",
+    "shadowsovereign:shattered_starfall_log"
+  ]
+}

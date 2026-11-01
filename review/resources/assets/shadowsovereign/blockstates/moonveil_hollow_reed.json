@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "shadowsovereign:block/moonveil_hollow_reed_bottom"
+    },
+    "half=upper": {
+      "model": "shadowsovereign:block/moonveil_hollow_reed_top"
+    }
+  }
+}

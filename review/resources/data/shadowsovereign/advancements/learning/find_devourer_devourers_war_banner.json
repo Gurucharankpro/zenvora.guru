@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:devourer_devourers_war_banner"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_devourer_devourers_war_banner.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_devourer_devourers_war_banner.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:devourer_devourers_war_banner"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_devourer_imprisoned_star_crystal"
+}

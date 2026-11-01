@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_gloomcap_stem"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.stock_abyss_gloomcap_stem.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.stock_abyss_gloomcap_stem.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:abyss_gloomcap_stem"
+            ],
+            "count": {
+              "min": 8
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/place_abyss_gloomcap_stem"
+}

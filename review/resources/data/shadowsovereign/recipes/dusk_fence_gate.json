@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SPS",
+    "SPS"
+  ],
+  "key": {
+    "P": {
+      "item": "shadowsovereign:dark_planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:dusk_fence_gate",
+    "count": 1
+  }
+}

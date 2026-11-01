@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:reaper_chained_soul_obelisk"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_chained_soul_obelisk.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.landmark_reaper_chained_soul_obelisk.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "block": "shadowsovereign:reaper_chained_soul_obelisk",
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:shattered_sky"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 15
+  },
+  "parent": "shadowsovereign:learning/find_reaper_chained_soul_obelisk"
+}

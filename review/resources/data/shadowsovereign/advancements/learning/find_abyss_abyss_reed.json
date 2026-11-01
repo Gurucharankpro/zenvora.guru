@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:abyss_abyss_reed"
+    },
+    "title": {
+      "translate": "lesson.shadowsovereign.find_abyss_abyss_reed.title"
+    },
+    "description": {
+      "translate": "lesson.shadowsovereign.find_abyss_abyss_reed.help"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "practice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "shadowsovereign:abyss_abyss_reed"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "shadowsovereign:learning/stock_abyss_crystal_thorn"
+}
