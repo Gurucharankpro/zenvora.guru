@@ -27,7 +27,7 @@ dependencies {
 }
 tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
 jar { manifest.attributes(['Specification-Title':'Dungeon Gates','Implementation-Version':project.version]); finalizedBy 'reobfJar' }
-sourceSets { testmod { java.srcDir 'src/testmod/java'; resources.srcDir 'src/testmod/resources'; compileClasspath += sourceSets.main.output; runtimeClasspath += sourceSets.main.output } }
+sourceSets { testmod { java.setSrcDirs(['src/testmod/java']); resources.setSrcDirs(['src/testmod/resources']); compileClasspath += sourceSets.main.output; runtimeClasspath += sourceSets.main.output } }
 configurations { testmodImplementation.extendsFrom implementation; testmodRuntimeOnly.extendsFrom runtimeOnly }
 minecraft.runs.configureEach { mods { dungeongatesqa { source sourceSets.testmod } } }
 tasks.register('qaJar', Jar) { archiveClassifier='qa'; from sourceSets.testmod.output }

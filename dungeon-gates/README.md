@@ -21,7 +21,8 @@ control overall frequency; two positive weights select active gate types. Changi
 spacing affects future chunks only. Health/damage multipliers are configurable.
 Commands: /dgates status; /dgates verify_spawns (admin, reads loaded nearby chunks);
 /dgates extract (admin self); /dgates rescue <player> (admin);
-/dgates cleanup removes ONE completed inactive instance, without reusing its slot.
+/dgates repair rebuilds your active incomplete dungeon (admin);
+/dgates cleanup removes ONE completed, claimed and inactive instance, without reusing its slot.
 Death returns to the stored safe Overworld position. Reentering the same world gate
 reuses that player's persisted instance and does not duplicate the trophy.
 
