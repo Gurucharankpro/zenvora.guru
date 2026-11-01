@@ -20,9 +20,14 @@
     "enter": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms"
+            }
+          }
+        ]
       }
     }
   },

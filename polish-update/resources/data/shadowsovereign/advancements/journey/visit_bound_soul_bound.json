@@ -19,10 +19,15 @@
     "visit": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:bound_soul_bound"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:bound_soul_bound"
+            }
+          }
+        ]
       }
     }
   },

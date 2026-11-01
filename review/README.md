@@ -1,7 +1,7 @@
 # Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert
 
-Build: **SUCCESS**. Source: `7097fb98cedd112447b86e6e86b11ee6e3ce4889`.
-Final output SHA256: `5f69a5cd2abd25e16c0274afafb12fd0229d31a6aeaf444fdb63dba83859d520`.
+Build: **FAILURE**. Source: `7eca19e60ab60bc297cc1c3846b6edf17e6679d3`.
+Final output SHA256: `NOT BUILT`.
 Minecraft 1.20.1, Forge 47.3.22, Java 17, modid `shadowsovereign`.
 Mod version remains `1.8.1-reviewed`; matching client/server protocol is `39-polish-glass-desert`.
 
@@ -22,7 +22,8 @@ New content:
   three attached ravens, original UVs and numeric animation tracks are retained.
 - Clockwork Widow and Palace of Broken Hours: Moonveil Hollow, underground arena.
   Full 788-cube supplied model and 10 authored clips retained. Empty chests in the
-  two new Eclipse habitats receive existing vanilla loot tables.
+  new Eclipse habitats receive thematic library/ancient-city/end-city loot.
+  Invalid deepslate slab names and unsupported grindstone properties are fixed.
 - 20 Eclipse props: registered, craftable, in the decor tab and conservatively
   placed in matching future habitats. Valid supplied Java exports are used;
   illegal full-scale vanilla model coordinates are not shipped as block models.
@@ -35,7 +36,11 @@ New content:
 - Larger book previews use sampled visible idle-body bounds, excluding hidden FX.
   Combat scale/hitboxes and saved armies are unchanged. Four distinct new egg
   images and 16 bespoke journey badge images, including the new biome visit.
-  Fifteen compass placeholders are replaced; the two compass lessons keep their
+  Fifteen compass placeholders are replaced; legacy location predicates for the
+  journey visits/welcome/cartographer are corrected to player-context conditions
+  and tested in the actual engine for wrong dimension/biome, correct grant and
+  no repeated XP. Existing award state and reward definitions are preserved.
+  The two compass lessons keep their
   meaningful compass icons. Existing 500 lessons and rewards remain byte-identical.
 
 Verification: see [CI log](../polish-update/reports/CI-BUILD.log),
@@ -56,13 +61,5 @@ Worldgen frequency/terrain figures in the uploaded pack are guidance; the native
 implementation uses conservative bounded generation, not a literal new noise
 router for every dune or every described formation variant.
 
-## Downloads
 
-- [Complete updated JAR](../downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar?raw=true)
-- [All phone volumes, each <=8 MiB](../downloads/current)
-- [Exact changed-entry list and fingerprint](../downloads/current/CONTENT-MANIFEST.json)
-
-Download every matching .z01/.z02/.../.zip into one folder, then extract the LAST
-.zip with ZArchiver. CRC and extracted JAR SHA are verified against this build.
-Replace the previous JAR with this same file on client/server. Do not install the
-input under polish-update/base as the new mod. QA mod is never part of delivery.
+No final release is claimed. Read the failed build/runtime log; do not install the input as an update.

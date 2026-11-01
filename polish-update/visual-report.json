@@ -622,5 +622,6 @@
     "data/shadowsovereign/advancements/journey/visit_shattered_sky.json",
     "data/shadowsovereign/advancements/journey/visit_sunken_kingdom.json",
     "data/shadowsovereign/advancements/journey/visit_singing_glass_desert.json"
-  ]
+  ],
+  "location_criteria_fixed": 22
 }

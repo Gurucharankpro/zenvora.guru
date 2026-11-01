@@ -19,91 +19,141 @@
     "visit_gloomwood": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:gloomwood"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:gloomwood"
+            }
+          }
+        ]
       }
     },
     "visit_ashen_weald": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:ashen_weald"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:ashen_weald"
+            }
+          }
+        ]
       }
     },
     "visit_echo_haven": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:echo_haven"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:echo_haven"
+            }
+          }
+        ]
       }
     },
     "visit_bound_soul_bound": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:bound_soul_bound"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:bound_soul_bound"
+            }
+          }
+        ]
       }
     },
     "visit_ashen_monolith": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:ashen_monolith"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:ashen_monolith"
+            }
+          }
+        ]
       }
     },
     "visit_moonveil_hollow": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:moonveil_hollow"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:moonveil_hollow"
+            }
+          }
+        ]
       }
     },
     "visit_crimson_shadow": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:crimson_shadow"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:crimson_shadow"
+            }
+          }
+        ]
       }
     },
     "visit_shattered_sky": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:shattered_sky"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:shattered_sky"
+            }
+          }
+        ]
       }
     },
     "visit_eternal_abyss": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:eternal_abyss"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:eternal_abyss"
+            }
+          }
+        ]
       }
     },
     "visit_sunken_kingdom": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:sunken_kingdom"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:sunken_kingdom"
+            }
+          }
+        ]
       }
     }
   },

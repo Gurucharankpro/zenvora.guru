@@ -19,10 +19,15 @@
     "visit": {
       "trigger": "minecraft:location",
       "conditions": {
-        "location": {
-          "dimension": "shadowsovereign:echo_realms",
-          "biome": "shadowsovereign:moonveil_hollow"
-        }
+        "player": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "dimension": "shadowsovereign:echo_realms",
+              "biome": "shadowsovereign:moonveil_hollow"
+            }
+          }
+        ]
       }
     }
   },
