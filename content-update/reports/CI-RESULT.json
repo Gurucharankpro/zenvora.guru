@@ -1,0 +1,9 @@
+{
+  "status": "success",
+  "source_commit": "d91aee5ebdb2dcea72574bd9660f8440c9d43397",
+  "run_id": "41306916540",
+  "production_built": true,
+  "game_launched": false,
+  "jar_sha256": "aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec",
+  "jar_bytes": 47067897
+}

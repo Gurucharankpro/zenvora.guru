@@ -1,0 +1,126 @@
+/home/runner/work/zenvora.guru/zenvora.guru/content-update/base/soulbound-army-1.20.1-1.8.1-reviewed.jar: OK
+Prepared three appended creature resources, sixty decor resource sets and X2/X4 source assets; Java integration still required.
+Placed 1 props at covenant_crownless_sovereign
+Placed 5 props at chronicles_crow_retreat
+Placed 1 props at shattered_void_thread_court
+Placed 1 props at chronicles_lunar_monastery
+Placed 2 props at monolith_pain_court
+Placed 2 props at legends_paper_shrine
+Placed 3 props at legends_madara_bastion
+Placed 3 props at crimson_akatsuki_shadow_hideout
+Placed 2 props at legends_sasori_workshop
+Placed 2 props at shattered_sanctuary_of_lost_tears
+Placed 4 props at expansion_shattered_porcelain_temple
+Placed 2 props at mythic_bloom_garden
+Placed 2 props at expansion_pearl_sanctuary
+Placed 2 props at expansion_abandoned_star_library
+Placed 2 props at shattered_forgotten_golden_pagoda
+Placed 2 props at knighthaven_palace_of_frozen_memories
+Placed 2 props at expansion_drowned_glass_palace
+Placed 2 props at knighthaven_forgotten_dream_carnival
+Placed 6 props at knighthaven_refai_compound
+Placed 4 props at expansion_old_desouky_family_house
+Placed 2 props at expansion_el_nemr_mansion
+Placed 2 props at expansion_amin_el_nemr_workshop
+Placed 2 props at expansion_morsi_mobile_shop
+Placed 2 props at expansion_hanan_cairo_house
+Placed 2 props at expansion_refai_cursed_stronghold
+PASS: all sixty supplied props have conservative, supported habitat placements
+test_all_60_decor_models_recipes_and_real_placements (__main__.ContentResources.test_all_60_decor_models_recipes_and_real_placements) ... ok
+test_new_templates_1201_and_actual_guardian_clearance (__main__.ContentResources.test_new_templates_1201_and_actual_guardian_clearance) ... ok
+test_old_template_solids_and_loot_not_erased (__main__.ContentResources.test_old_template_solids_and_loot_not_erased) ... ok
+test_original_bones_cubes_and_all_authored_clips_retained (__main__.ContentResources.test_original_bones_cubes_and_all_authored_clips_retained) ... ok
+test_reviewed_baseline_and_critical_fixes_are_preserved (__main__.ContentResources.test_reviewed_baseline_and_critical_fixes_are_preserved) ... ok
+test_shared_habitats_append_without_altering_old_sites (__main__.ContentResources.test_shared_habitats_append_without_altering_old_sites) ... ok
+test_x2_sprites_and_only_existing_biome_bindings (__main__.ContentResources.test_x2_sprites_and_only_existing_biome_bindings) ... ok
+test_yuta_two_texture_regions_preserve_original_pixels (__main__.ContentResources.test_yuta_two_texture_regions_preserve_original_pixels) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 109.679s
+
+OK
+PASS: actual appended catalogue/IDs have 54 aligned profiles; all 51 old definitions unchanged; new combat clips load through the real native animation reader. No game API execution.
+
+Welcome to Gradle 8.8!
+
+Here are the highlights of this release:
+ - Running Gradle on Java 22
+ - Configurable Gradle daemon JVM
+ - Improved IDE performance for large projects
+
+For more details see https://docs.gradle.org/8.8/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :
+Neither the 'eclipse' nor the 'idea' plugins were found, but IDE resource copy has been enabled.
+
+> Task :compileRepairJava
+Setting up MCP environment
+Initializing steps
+Executing steps
+ > Running 'downloadManifest'
+ > Running 'downloadJson'
+ > Running 'downloadClient'
+ > Running 'downloadServer'
+ > Running 'extractServer'
+ > Running 'downloadClientMappings'
+ > Running 'mergeMappings'
+ > Running 'stripClient'
+ > Running 'stripServer'
+ > Running 'merge'
+ > Running 'listLibraries'
+ > Running 'rename'
+Stopping at requested step: /home/runner/.gradle/caches/forge_gradle/mcp_repo/de/oceanlabs/mcp/mcp_config/1.20.1-20230612.114412/joined/rename/output.jar
+[12:36:09] [main/INFO]: Writing debug log file accesstransform.log
+[12:36:09] [main/INFO]: Access Transformer processor running version 8.2.14
+[12:36:09] [main/INFO]: Command line arguments [--inJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar, --outJar, /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, --logFile, accesstransform.log, --atFile, /home/runner/work/zenvora.guru/zenvora.guru/native-review/qa/build/_atJar_4/parent_at.cfg]
+[12:36:09] [main/INFO]: Reading from /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22/forge-1.20.1-47.3.22-injected.jar
+[12:36:09] [main/INFO]: Writing to /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+[12:36:09] [main/INFO]: Transformer file /home/runner/work/zenvora.guru/zenvora.guru/native-review/qa/build/_atJar_4/parent_at.cfg
+[12:36:09] [main/WARN]: Found existing output jar /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar, overwriting
+[12:36:13] [main/INFO]: JAR transformation complete /home/runner/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.3.22_mapped_official_1.20.1/forge-1.20.1-47.3.22_mapped_official_1.20.1.jar
+Creating SRG -> MCP TSRG
+/home/runner/work/zenvora.guru/zenvora.guru/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentBootstrap.java:43: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+  ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER,ContentConfig.SERVER,"shadowsovereign-autopilot-server.toml");
+                   ^
+/home/runner/work/zenvora.guru/zenvora.guru/native-review/qa/src/repair/java/dev/shadowsovereign/content/ContentBootstrap.java:44: warning: [removal] get() in ModLoadingContext has been deprecated and marked for removal
+  ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT,ContentConfig.CLIENT,"shadowsovereign-living-client.toml");
+                   ^
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+2 warnings
+
+> Task :processRepairResources NO-SOURCE
+> Task :repairClasses
+> Task :repairJar
+> Task :downloadMcpConfig
+> Task :extractSrg
+> Task :createMcpToSrg
+> Task :reobfRepairJar
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/native-1793536491826.json
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 54s
+6 actionable tasks: 6 executed
+Wrote content overlay /home/runner/work/zenvora.guru/zenvora.guru/content-update/dist/soulbound-army-1.20.1-1.8.1-content.jar; reviewed OpenMythics/X1Hooks/mods.toml retained byte-for-byte
+PASS: 20705 owned method/handle references resolve, including private initializer factories. Minecraft/Forge inherited edges remain unverified.
+PASS: distribution CRC, explicit changes, untouched resources, protected reviewed fixes and artifact hash
+PASS: final built catalogue contains all 51 unchanged old and 3 new profiles; packaged moves load; all 180 decor classify correctly. No engine API execution.
+  adding: soulbound-army-1.20.1-1.8.1-content.jar (deflated 3%)
+PASS: 6 standard split ZIP volumes, CRC and reassembled JAR SHA-256 verified.
+JAR SHA-256: aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec
+Soulbound-Army-1.8.1-content-aa4e701d.z01: 8388608 bytes
+Soulbound-Army-1.8.1-content-aa4e701d.z02: 8388608 bytes
+Soulbound-Army-1.8.1-content-aa4e701d.z03: 8388608 bytes
+Soulbound-Army-1.8.1-content-aa4e701d.z04: 8388608 bytes
+Soulbound-Army-1.8.1-content-aa4e701d.z05: 8388608 bytes
+Soulbound-Army-1.8.1-content-aa4e701d.zip: 3551094 bytes
+aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec  /home/runner/work/zenvora.guru/zenvora.guru/content-update/dist/soulbound-army-1.20.1-1.8.1-content.jar
+CONTENT BUILD PASSED: real-API compile/reobfuscation, catalogue/resources, owned linkage, exact overlay and complete 8 MiB split delivery
