@@ -1,6 +1,6 @@
-976d525e5217f59248a06c0c2f50cfc4123cc29e8e1410dc6768d113606aff2c  Soulbound-Army-1.8.1-content-bce014dd.z01
-d93c4e9c19074cbbe62665bee3a3c7f56588913354d09d2b4e50cee3c7fb991a  Soulbound-Army-1.8.1-content-bce014dd.z02
-b763c6934a814804bf72cc5569bf01e8ff4f5f0e2dca095e6118db874b684ee7  Soulbound-Army-1.8.1-content-bce014dd.z03
-5fdbdc4c4018b80d1c40480a66eb07ce0129cf0adba1f2f19954bc0a7999772f  Soulbound-Army-1.8.1-content-bce014dd.z04
-0b151e6b8c5e6477b602606b649384887cce7985326f7a8513efe3a6bd7b7040  Soulbound-Army-1.8.1-content-bce014dd.z05
-eae363da789806f50ba0cd2b0d22cdff978923471a70c3a678616bbac1776885  Soulbound-Army-1.8.1-content-bce014dd.zip
+ff414c441e3bc5754b5476175450bf3c36a4858d0ca2e24360b9686f52eaca09  Soulbound-Army-1.8.1-content-5f69a5cd.z01
+5226dd552ed71b1047affca0aa1fd7d640dfb1be98e5bfeee985a8bc2708b1d8  Soulbound-Army-1.8.1-content-5f69a5cd.z02
+67302469cecc1a039cefe602f0ba566af770c0369c7e6ce08c94f7786fceb34a  Soulbound-Army-1.8.1-content-5f69a5cd.z03
+7519d17b0b1b00ea70b5cce872f9935bc90acd3df6589bfd2056c7aba260db3d  Soulbound-Army-1.8.1-content-5f69a5cd.z04
+ccd444a655da217ded30ebd356bbced0d3a3b5ce1614ed916084378bad0b7c88  Soulbound-Army-1.8.1-content-5f69a5cd.z05
+70fcb66205d1b4b27792954899354b56038633e082607d85dcd6c655be9f95e8  Soulbound-Army-1.8.1-content-5f69a5cd.zip

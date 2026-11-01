@@ -1,6 +1,6 @@
 # مراجعة التحديث الجديد وSinging Glass Desert
 
-الحالة: success. بصمة JAR النهائي: `bce014dd991d1307ba72ddf2b1568ee2b916677802025855dd0a9252257162f8`.
+الحالة: success. بصمة JAR النهائي: `5f69a5cd2abd25e16c0274afafb12fd0229d31a6aeaf444fdb63dba83859d520`.
 ابدأ من review/README.md ثم polish-update/reports/CI-RESULT.json والسجلات.
 استخدم downloads/current فقط عند نجاح البناء؛ ملفات base مدخلات تاريخية.
 المشروع إصلاحات وإضافات محدودة فوق آخر JAR كامل، وليس السورس الأصلي الكامل.

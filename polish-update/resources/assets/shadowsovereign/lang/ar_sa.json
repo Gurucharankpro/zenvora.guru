@@ -3970,5 +3970,7 @@
   "block.shadowsovereign.moon_sand_mushroom": "فطر رمل القمر",
   "entity.shadowsovereign.prism_jerboa": "يربوع المنشور",
   "item.shadowsovereign.prism_jerboa_spawn_egg": "بيضة يربوع المنشور",
-  "biome.shadowsovereign.singing_glass_desert": "صحراء الزجاج المغني"
+  "biome.shadowsovereign.singing_glass_desert": "صحراء الزجاج المغني",
+  "quest.shadowsovereign.visit_singing_glass_desert.title": "صحراء الزجاج المغني",
+  "quest.shadowsovereign.visit_singing_glass_desert.description": "اكتشف كثبان البلور ومخلوقاتها في الدايمنشن."
 }

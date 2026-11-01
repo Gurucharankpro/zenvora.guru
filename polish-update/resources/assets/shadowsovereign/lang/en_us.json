@@ -3970,5 +3970,7 @@
   "block.shadowsovereign.moon_sand_mushroom": "Moon Sand Mushroom",
   "entity.shadowsovereign.prism_jerboa": "Prism Jerboa",
   "item.shadowsovereign.prism_jerboa_spawn_egg": "Prism Jerboa Spawn Egg",
-  "biome.shadowsovereign.singing_glass_desert": "Singing Glass Desert"
+  "biome.shadowsovereign.singing_glass_desert": "Singing Glass Desert",
+  "quest.shadowsovereign.visit_singing_glass_desert.title": "Singing Glass Desert",
+  "quest.shadowsovereign.visit_singing_glass_desert.description": "Explore the crystal dunes and discover their wildlife."
 }

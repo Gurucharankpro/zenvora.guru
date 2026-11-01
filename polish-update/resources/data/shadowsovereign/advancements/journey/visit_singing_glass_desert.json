@@ -5,10 +5,10 @@
       "nbt": "{CustomModelData:10015}"
     },
     "title": {
-      "text": "Singing Glass Desert / صحراء الزجاج المغني"
+      "translate": "quest.shadowsovereign.visit_singing_glass_desert.title"
     },
     "description": {
-      "text": "Discover the glass dunes and their crystal wildlife. / اكتشف كثبان الزجاج ومخلوقاتها البلورية."
+      "translate": "quest.shadowsovereign.visit_singing_glass_desert.description"
     },
     "frame": "task",
     "show_toast": true,

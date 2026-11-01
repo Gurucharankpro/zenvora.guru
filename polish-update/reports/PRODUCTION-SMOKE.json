@@ -9,27 +9,27 @@
   "production_server_started": true,
   "isolated_save_flushed": true,
   "biome_located": [
-    4864,
-    -2368
+    3552,
+    3456
   ],
   "biome_chunks_requested": 4,
   "multiplayer": false,
   "saved_full_chunks": [
     [
-      304,
-      -148
+      222,
+      216
     ],
     [
-      304,
-      -147
+      222,
+      217
     ],
     [
-      305,
-      -148
+      223,
+      216
     ],
     [
-      305,
-      -147
+      223,
+      217
     ]
   ],
   "actual_desert_biome_and_surface_blocks": true
