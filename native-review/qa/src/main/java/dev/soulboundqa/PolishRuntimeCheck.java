@@ -18,6 +18,7 @@ public final class PolishRuntimeCheck {
   if(!Boolean.getBoolean("soulboundqa.polish"))return;
   var server=event.getServer();var level=server.overworld();var rm=server.getResourceManager();
   int blocks=0,states=0,templates=0,entities=0;
+  List<String> errors=new ArrayList<>();
   JsonObject spec=(JsonObject)Class.forName("dev.shadowsovereign.content.PolishContent").getField("DATA").get(null);
   for(String group:List.of("blocks","biome_blocks"))for(JsonElement e:spec.getAsJsonArray(group)){
    var id=new ResourceLocation("shadowsovereign",e.getAsJsonObject().get("id").getAsString());
@@ -34,16 +35,17 @@ public final class PolishRuntimeCheck {
    try(var in=rm.getResource(id).orElseThrow().open()){n=NbtIo.readCompressed(in);}
    for(var raw:n.getList("palette",10)){
     CompoundTag state=(CompoundTag)raw;var key=new ResourceLocation(state.getString("Name"));
-    if(!ForgeRegistries.BLOCKS.containsKey(key))throw new AssertionError("Unknown actual block "+key+" in "+path);
+    if(!ForgeRegistries.BLOCKS.containsKey(key)){errors.add("Unknown actual block "+key+" in "+path);continue;}
     var block=ForgeRegistries.BLOCKS.getValue(key);var props=state.getCompound("Properties");
     for(String name:props.getAllKeys()){
      var prop=block.getStateDefinition().getProperty(name);
-     if(prop==null||prop.getValue(props.getString(name)).isEmpty())throw new AssertionError("Invalid actual block property "+state+" in "+path);
+     if(prop==null||prop.getValue(props.getString(name)).isEmpty())errors.add("Invalid actual block property "+state+" in "+path);
     }states++;
    }
    String template=path.substring("data/shadowsovereign/structures/".length(),path.length()-4);
    if(server.overworld().getStructureManager().get(new ResourceLocation("shadowsovereign",template)).isEmpty())throw new AssertionError("Native structure decoder rejected "+path);templates++;
   }
+  if(!errors.isEmpty())throw new AssertionError(new Gson().toJson(errors));
   if(server.registryAccess().registryOrThrow(Registries.BIOME).get(new ResourceLocation("shadowsovereign:singing_glass_desert"))==null)throw new AssertionError("Biome registry failed");
   for(String id:List.of("dr_salmawy","raven_seamstress","clockwork_widow","prism_jerboa")){
    EntityType<?> type=ForgeRegistries.ENTITY_TYPES.getValue(new ResourceLocation("shadowsovereign",id));

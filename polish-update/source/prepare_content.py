@@ -43,6 +43,7 @@ def model_bounds(d):
      points.append(v)
  return [[min(v[i] for v in points) for i in range(3)],[max(v[i] for v in points) for i in range(3)]]
 def normalize(n):
+ compatibility_states(n)
  n['DataVersion']=nbtlib.Int(3465)
  for state in n['palette']:
   if str(state['Name'])=='minecraft:short_grass':state['Name']=nbtlib.String('minecraft:grass')
@@ -53,6 +54,13 @@ def normalize(n):
   if state.endswith(('chest','barrel')) and not b.get('nbt',{}).get('LootTable') and not b.get('nbt',{}).get('Items'):
    b['nbt']=nbtlib.Compound({'id':nbtlib.String('minecraft:barrel' if state.endswith('barrel') else 'minecraft:chest'),'LootTable':nbtlib.String('minecraft:chests/stronghold_library' if 'library' in state else 'minecraft:chests/abandoned_mineshaft')})
   if state=='minecraft:air' and 'nbt' in b:b.pop('nbt')
+ return n
+def compatibility_states(n):
+ # Confirmed against the real 1.20.1 state definition in native CI 4b209502.
+ # Vanilla ignores this stray authoring property; stripping it makes the
+ # affected templates valid without changing their actual grindstone state.
+ for state in n['palette']:
+  if str(state['Name'])=='minecraft:grindstone' and 'Properties' in state:state['Properties'].pop('powered',None)
  return n
 def add_structure(jar,shared,name,path,n,biome,floor):
  save_template(path,n)

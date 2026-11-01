@@ -11,7 +11,7 @@ import json
 import math
 from zipfile import ZipFile
 import nbtlib
-from prepare_content import ROOT,OUT,BASE,NS,load_template,save_template
+from prepare_content import ROOT,OUT,BASE,NS,load_template,save_template,compatibility_states
 
 AIR={'minecraft:air','minecraft:cave_air','minecraft:void_air'}
 
@@ -92,7 +92,7 @@ def main():
     structure=json.loads(base.read(f'data/{NS}/worldgen/structure/{site["structure"]}.json'))
     pool=json.loads(base.read('data/'+structure['start_pool'].replace(':','/worldgen/template_pool/')+'.json'))
     location=pool['elements'][0]['element']['location'];path='data/'+location.replace(':','/structures/')+'.nbt'
-   n=load_template((OUT/path).read_bytes() if fresh else base.read(path))
+   n=compatibility_states(load_template((OUT/path).read_bytes() if fresh else base.read(path)))
    placements=place(n,entries,site['altar'])
    for p in placements:p['template']=path;p['kind']=kind
    spec['decor_placements'].extend(placements);save_template(path,n)

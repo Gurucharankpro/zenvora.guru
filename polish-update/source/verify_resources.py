@@ -30,7 +30,9 @@ def main():
     for b in old['blocks']:
      pos=tuple(map(int,b['pos']));state=old['palette'][int(b['state'])]
      if str(state['Name']) not in {'minecraft:air','minecraft:cave_air','minecraft:void_air'}:
-      other=positions[pos];assert new['palette'][int(other['state'])]==state and other.get('nbt')==b.get('nbt'),('Existing block/loot overwritten',path,pos)
+      expected=copy.deepcopy(state)
+      if str(expected['Name'])=='minecraft:grindstone' and 'Properties' in expected:expected['Properties'].pop('powered',None)
+      other=positions[pos];assert new['palette'][int(other['state'])]==expected and other.get('nbt')==b.get('nbt'),('Existing block/loot overwritten',path,pos)
   # Every texture/model reference from the new block models resolves, including
   # parent's external vanilla assets which are supplied by the engine.
   for name in resources:
