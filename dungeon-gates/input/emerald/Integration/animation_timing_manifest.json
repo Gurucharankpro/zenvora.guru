@@ -1,0 +1,255 @@
+{
+  "mossbound_skulker": {
+    "idle": {
+      "length_s": 3.0,
+      "length_ticks": 60,
+      "loop": true,
+      "events_s": {},
+      "events_ticks": {}
+    },
+    "move": {
+      "length_s": 0.8,
+      "length_ticks": 16,
+      "loop": true,
+      "events_s": {
+        "footfall_FL_HR": 0.0,
+        "footfall_FR_HL": 0.4
+      },
+      "events_ticks": {
+        "footfall_FL_HR": 0,
+        "footfall_FR_HL": 8
+      }
+    },
+    "claw_attack": {
+      "length_s": 1.0,
+      "length_ticks": 20,
+      "loop": false,
+      "events_s": {
+        "windup_end": 0.3,
+        "impact": 0.4,
+        "recovery_start": 0.55
+      },
+      "events_ticks": {
+        "windup_end": 6,
+        "impact": 8,
+        "recovery_start": 11
+      }
+    },
+    "tail_sweep": {
+      "length_s": 1.3,
+      "length_ticks": 26,
+      "loop": false,
+      "events_s": {
+        "windup_end": 0.5,
+        "impact_start": 0.55,
+        "impact": 0.6,
+        "impact_end": 0.7,
+        "recovery_start": 0.8
+      },
+      "events_ticks": {
+        "windup_end": 10,
+        "impact_start": 11,
+        "impact": 12,
+        "impact_end": 14,
+        "recovery_start": 16
+      }
+    },
+    "death": {
+      "length_s": 1.4,
+      "length_ticks": 28,
+      "loop": "hold_on_last_frame",
+      "events_s": {
+        "collapse_complete": 1.4
+      },
+      "events_ticks": {
+        "collapse_complete": 28
+      }
+    }
+  },
+  "crystal_sentinel": {
+    "idle": {
+      "length_s": 3.2,
+      "length_ticks": 64,
+      "loop": true,
+      "events_s": {},
+      "events_ticks": {}
+    },
+    "move": {
+      "length_s": 1.0,
+      "length_ticks": 20,
+      "loop": true,
+      "events_s": {
+        "footfall_R": 0.0,
+        "footfall_L": 0.5
+      },
+      "events_ticks": {
+        "footfall_R": 0,
+        "footfall_L": 10
+      }
+    },
+    "heavy_punch": {
+      "length_s": 1.4,
+      "length_ticks": 28,
+      "loop": false,
+      "events_s": {
+        "windup_end": 0.5,
+        "impact": 0.62,
+        "recovery_start": 0.9
+      },
+      "events_ticks": {
+        "windup_end": 10,
+        "impact": 12,
+        "recovery_start": 18
+      }
+    },
+    "crystal_burst": {
+      "length_s": 2.0,
+      "length_ticks": 40,
+      "loop": false,
+      "events_s": {
+        "charge_end": 0.7,
+        "burst_release": 0.8,
+        "recovery_start": 1.3
+      },
+      "events_ticks": {
+        "charge_end": 14,
+        "burst_release": 16,
+        "recovery_start": 26
+      }
+    },
+    "death": {
+      "length_s": 2.2,
+      "length_ticks": 44,
+      "loop": "hold_on_last_frame",
+      "events_s": {
+        "knees_hit": 1.2,
+        "collapse_complete": 2.2
+      },
+      "events_ticks": {
+        "knees_hit": 24,
+        "collapse_complete": 44
+      }
+    }
+  },
+  "emerald_root_warden": {
+    "idle": {
+      "length_s": 3.6,
+      "length_ticks": 72,
+      "loop": true,
+      "events_s": {},
+      "events_ticks": {}
+    },
+    "move": {
+      "length_s": 1.2,
+      "length_ticks": 24,
+      "loop": true,
+      "events_s": {
+        "footfall_R": 0.0,
+        "footfall_L": 0.6
+      },
+      "events_ticks": {
+        "footfall_R": 0,
+        "footfall_L": 12
+      }
+    },
+    "heavy_slam": {
+      "length_s": 2.2,
+      "length_ticks": 44,
+      "loop": false,
+      "events_s": {
+        "windup_end": 0.9,
+        "impact": 1.05,
+        "recovery_start": 1.4
+      },
+      "events_ticks": {
+        "windup_end": 18,
+        "impact": 21,
+        "recovery_start": 28
+      }
+    },
+    "root_sweep": {
+      "length_s": 2.0,
+      "length_ticks": 40,
+      "loop": false,
+      "events_s": {
+        "windup_end": 0.8,
+        "impact_start": 0.85,
+        "impact": 0.93,
+        "impact_end": 1.0,
+        "recovery_start": 1.3
+      },
+      "events_ticks": {
+        "windup_end": 16,
+        "impact_start": 17,
+        "impact": 19,
+        "impact_end": 20,
+        "recovery_start": 26
+      }
+    },
+    "emerald_projectile": {
+      "length_s": 2.4,
+      "length_ticks": 48,
+      "loop": false,
+      "events_s": {
+        "charge_start": 0.0,
+        "charge_end": 1.2,
+        "projectile_spawn": 1.25,
+        "recovery_start": 1.7
+      },
+      "events_ticks": {
+        "charge_start": 0,
+        "charge_end": 24,
+        "projectile_spawn": 25,
+        "recovery_start": 34
+      }
+    },
+    "crystal_shield": {
+      "length_s": 2.0,
+      "length_ticks": 40,
+      "loop": false,
+      "events_s": {
+        "barrier_forming_start": 0.4,
+        "barrier_complete": 0.8,
+        "barrier_hold_start": 0.8,
+        "barrier_hold_end": 1.6,
+        "barrier_down_complete": 1.9
+      },
+      "events_ticks": {
+        "barrier_forming_start": 8,
+        "barrier_complete": 16,
+        "barrier_hold_start": 16,
+        "barrier_hold_end": 32,
+        "barrier_down_complete": 38
+      }
+    },
+    "phase_transition": {
+      "length_s": 3.0,
+      "length_ticks": 60,
+      "loop": false,
+      "events_s": {
+        "invulnerable_start": 0.0,
+        "shockwave": 1.8,
+        "invulnerable_end": 3.0
+      },
+      "events_ticks": {
+        "invulnerable_start": 0,
+        "shockwave": 36,
+        "invulnerable_end": 60
+      }
+    },
+    "death": {
+      "length_s": 4.0,
+      "length_ticks": 80,
+      "loop": "hold_on_last_frame",
+      "events_s": {
+        "knees_hit": 1.6,
+        "collapse_complete": 4.0
+      },
+      "events_ticks": {
+        "knees_hit": 32,
+        "collapse_complete": 80
+      }
+    }
+  },
+  "_note": "ticks = seconds*20. Impact/release events are the animation-synchronised moments for hit detection / projectile spawn."
+}

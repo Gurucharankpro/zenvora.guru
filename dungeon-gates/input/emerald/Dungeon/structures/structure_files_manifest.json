@@ -1,0 +1,164 @@
+[
+  {
+    "variant": "custom",
+    "file": "structures/p1_1_emerald_sanctuary_x0_z0.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "blocks": 28672,
+    "palette": 23
+  },
+  {
+    "variant": "custom",
+    "file": "structures/p1_1_emerald_sanctuary_x1_z0.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      32,
+      0,
+      0
+    ],
+    "blocks": 28672,
+    "palette": 18
+  },
+  {
+    "variant": "custom",
+    "file": "structures/p1_1_emerald_sanctuary_x0_z1.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      0,
+      0,
+      32
+    ],
+    "blocks": 28672,
+    "palette": 17
+  },
+  {
+    "variant": "custom",
+    "file": "structures/p1_1_emerald_sanctuary_x1_z1.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      32,
+      0,
+      32
+    ],
+    "blocks": 28672,
+    "palette": 15
+  },
+  {
+    "variant": "custom",
+    "file": "structures/p1_1_emerald_sanctuary_FULL_64x28x64.nbt",
+    "size": [
+      64,
+      28,
+      64
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "blocks": 114688,
+    "palette": 24,
+    "note": "single piece for StructureTemplate API / code placement (exceeds 48-block structure-block UI limit)"
+  },
+  {
+    "variant": "vanilla",
+    "file": "structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z0.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "blocks": 28672,
+    "palette": 23
+  },
+  {
+    "variant": "vanilla",
+    "file": "structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z0.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      32,
+      0,
+      0
+    ],
+    "blocks": 28672,
+    "palette": 18
+  },
+  {
+    "variant": "vanilla",
+    "file": "structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z1.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      0,
+      0,
+      32
+    ],
+    "blocks": 28672,
+    "palette": 17
+  },
+  {
+    "variant": "vanilla",
+    "file": "structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z1.nbt",
+    "size": [
+      32,
+      28,
+      32
+    ],
+    "offset": [
+      32,
+      0,
+      32
+    ],
+    "blocks": 28672,
+    "palette": 15
+  },
+  {
+    "variant": "vanilla",
+    "file": "structures_vanilla_fallback/p1_1_emerald_sanctuary_FULL_64x28x64.nbt",
+    "size": [
+      64,
+      28,
+      64
+    ],
+    "offset": [
+      0,
+      0,
+      0
+    ],
+    "blocks": 114688,
+    "palette": 24,
+    "note": "single piece for StructureTemplate API / code placement (exceeds 48-block structure-block UI limit)"
+  }
+]

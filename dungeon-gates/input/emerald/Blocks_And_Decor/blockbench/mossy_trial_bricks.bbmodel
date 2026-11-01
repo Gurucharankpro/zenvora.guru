@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "mossy_trial_bricks",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 1,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "bbd5d21b-fe5e-5ba1-9228-870279fd263c"
+    }
+  ],
+  "outliner": [
+    "bbd5d21b-fe5e-5ba1-9228-870279fd263c"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "mossy_trial_bricks.png",
+      "folder": "block",
+      "namespace": "soulbound_decor",
+      "id": "0",
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "particle": true,
+      "render_mode": "default",
+      "frame_time": 1,
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhElEQVR4nI2STWvbQBCGn9gbY2Mj7dqSDlbSLi2B5hjaU3rxT89P8L0XQYkPkW2thIwDsUgPYTbalFK/F0nDvPPxjC6u7rNXgMhOaIojQ2YAdLSIPq0SXHGgKY70FdkJAzEoZ4jshFhHdLQMmTHXS77e3HpzZCe+wVwvaYojA+m0dxuUM+zdhrle0tGyd5ugo3KGfj6AGjIj1hEmjanKmrleAiBxgG/5D3aXW6qy9hPEOqJ2DRef77+8coamtuNQDP+Kq+8/79g9bQEofv3G3lxTlXWQVLsG5QyxfnuXyWrXMNg9bVlkCYss8QaTxucMBcCgb+zrX0Wku+gsBrJ/vhrjikPAQgEIh0WWBDyk24nKm7Wdoi2069Ebg34nMffXOukKbae06xHKGVxx8OZYR2GBj4VMGqOcoV2P/PfHUwYM8tWYx4fn/yEJpOTuJ13x+PDM1HYoZ4IryP/RV1XW7wxMGpNeWvLV2I8qeslLHxc2iyzxOQEDoSzGl7wE8GsJG3kC/AElRLL78rM6IQAAAABJRU5ErkJggg=="
+    }
+  ]
+}

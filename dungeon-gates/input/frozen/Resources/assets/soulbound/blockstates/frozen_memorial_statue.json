@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "soulbound:block/frozen_memorial_statue"
+    },
+    "facing=east": {
+      "model": "soulbound:block/frozen_memorial_statue",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "soulbound:block/frozen_memorial_statue",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "soulbound:block/frozen_memorial_statue",
+      "y": 270
+    }
+  }
+}

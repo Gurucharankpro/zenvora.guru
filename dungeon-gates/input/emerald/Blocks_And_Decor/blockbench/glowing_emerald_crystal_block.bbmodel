@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "glowing_emerald_crystal_block",
+  "resolution": {
+    "width": 32,
+    "height": 32
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 1,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            32,
+            32
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "30cc32cc-7b47-5bf4-a5aa-bd78a790dd96"
+    }
+  ],
+  "outliner": [
+    "30cc32cc-7b47-5bf4-a5aa-bd78a790dd96"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "glowing_emerald_crystal_block.png",
+      "folder": "block",
+      "namespace": "soulbound_decor",
+      "id": "0",
+      "width": 32,
+      "height": 32,
+      "uv_width": 32,
+      "uv_height": 32,
+      "particle": true,
+      "render_mode": "default",
+      "frame_time": 1,
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFWUlEQVR4nMWXT0ibdxjHP4pQZpBVaHd4pUNM0R5CEXewxb5DCBORoj0UhHpIyVohNm+6QzHQw0x6GGTs0Jo0gcBCe/Ag7KIUkY6A9K2MDSal5DCFlDDpe5kga4ljILqDPE/fn0nZrX3ghfff7/d9vs+/7/u2tN+4cMhHtDaA9ks9HwX8ZSRPq1z881ut4RiJXOHgTV2PXGQW9vb03P9MjpHIFXKRWXKRWQI9Jwn0nIS9PT3PRWYZ+OoLXkbyAO8cAPgk9BkTD7/R66Vb98k7afJOmhVnnpnsHAf7Rxmbyc6Rd9K0trUw6kzpmnF6SbpFABbtJACBkKXPS16ZR9bXeq0O/Pgwz8H+IavZBcOhbjoBGMsmjPCNOlPMZOfIxVKsZhfIO2k6+ruIF1Is2kmSbpEau/p+XzDIkD1sgJ+9OUpL+40Lh+2Xejh4UyfvpJVZN50GaN5JEy+kNAL++wBJt8iinWTSzRjP6xWPQMiiLxg0wM8/nmHv+at3EWhtawHQUAu4hFfY+oFb21pIukW66SRjTyv4kD2s7wVCFhl72gC/6N5tTMGT2AMFHnWm1CF/SiQ6cv4k9gCASTfDMlvUKx4A6+4aABl7GoAv6dY9/uRvI0LqwDy/6s3V7ILB1h+hmewcK858w5p1d03ZCnC8kOIX+zt95xk1Y43hwNKt+/z7x18NbKW4AiGLFWeeUWeKsWyC1rYWIzrCWDoA4GXskZ5fdO8SL6QYp7e5AyfOnebEudPKVgoS3rXTWDahoAf7h5qOjD1NveIpeNItGswl5wMTtr7f4IBslnfSHOwfssyWFuTlwm3evngNQEd/V1PWgZDFkD3Mop1sCi6gJa9sRMkYRNLbK848q9kF7QRhK+D+elhmi4w9zaKdZN1d43M+NcD99SDm7xJ1YCY7R4JBWttaGoYOHIVVNhuJXaOjv4uO/i4SDBIvpKix21Bw/nUjsWv6LMFg8wiMZRNGboVt3kkzZA/rZuvumtbFpJshELKMVjtfuE7JKyvTpFtknF7uWVcB+Nb7Sd81JqHf8k6aZba0p8XqFY9cLEXSLdIXDLJZrRrM7/CUHW8bgM1qVddIi5a8MlErTPzx9+YkFLajzpR2gL9l/MLiT8fxglt314haYTarVV0zMGHTFwwCHIH76sFwQIQl6RYNYXn74nVDXSyz1XS81itew2iOWmFdU/LKxpAz2lD6XhgHQhZj2YTWRL3iKfMfGGkAlzWTbkajVK94lLwygKZGrsFXA+ztkYul6KbTULQhe1jlVvr3eNiPq+CQPaxgUStsAG4suQxM2Gz8/LtZAyJGNXYZsodVWMbppaO/Sxn5wUVYJt2MsUbAha2kIGqFVcAaUiAiIcUneRLW9YpntNpF966ukdbMxVJabMJWTFrwvWIkM/54LYj5heUZNeoVj3F66QsGDQ0QtnBU/fesqyyzRY1d4oWUER3DAb/Ot7a1MJOde2+rwVHHSG77gkHqFY++YFBDLoxr7LLjbVPyygxM2EStsOGkMYrFDvYPGXWm6KbzveO1GdtT1hnuWVcpeWUuF24DZsU3MyMC8vklYnRcWPz1IJufss4ARzne8bb1Q1TYikk9lLwyy2w1j4BfjCrOYwPcr+EiLJvVKgkG2VhyFdhf9f7z/xWjjv4uJt0MuVjKAD9fuA6gsgsYYlRjVz80xOKFFFErrNGJWmF2vO2mYmSM4ow9bbTaHZ7qT8W6u0bSLWr4/Yz9bE9ZZ9Qh0RJxyA/c1AE/+DNqhhIK41wsZXz7bSy5yrTklRW05JX1p0Y6RtLhnw86iuVfDY5+Gj6E7T1/dfR37Ac/e3P0g4CL/Qc4WAEjeTcWVgAAAABJRU5ErkJggg=="
+    }
+  ]
+}

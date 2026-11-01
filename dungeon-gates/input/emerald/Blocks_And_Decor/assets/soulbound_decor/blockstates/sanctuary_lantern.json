@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "soulbound_decor:block/sanctuary_lantern"
+    },
+    "hanging=true": {
+      "model": "soulbound_decor:block/sanctuary_lantern_hanging"
+    }
+  }
+}

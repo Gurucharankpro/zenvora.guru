@@ -1,0 +1,153 @@
+{
+  "id": "P1-1",
+  "name": "The Emerald Trial Gate",
+  "level": 1,
+  "gate": "1/5",
+  "difficulty": "1/5",
+  "color": "emerald",
+  "geometry": {
+    "width_blocks": 3.0,
+    "height_blocks": 4.5,
+    "oval": "ellipse semi-axes 1.5 x 2.25 blocks",
+    "float_height_above_ground_blocks": 0.5,
+    "model_px": {
+      "width": 48,
+      "height": 72,
+      "bottom_y_px": 8,
+      "top_y_px": 80,
+      "center_y_px": 44
+    },
+    "physical_frame": "NONE",
+    "double_sided": true,
+    "layers_back_to_front": [
+      {
+        "name": "distortion",
+        "z_px": -0.4,
+        "texture": "portal_distortion_anim.png",
+        "frames": 8,
+        "frametime_ticks": 4
+      },
+      {
+        "name": "surface",
+        "z_px": 0,
+        "texture": "portal_surface_anim.png",
+        "frames": 16,
+        "frametime_ticks": 2
+      },
+      {
+        "name": "border",
+        "z_px": 0.4,
+        "texture": "portal_border_anim.png",
+        "frames": 16,
+        "frametime_ticks": 2
+      }
+    ],
+    "rune_ring": {
+      "runes": 8,
+      "ellipse_radius_px": [
+        30,
+        44
+      ],
+      "rotation_period_s": 20,
+      "runes_counter_rotate_to_stay_upright": true,
+      "texture": "portal_runes_anim.png",
+      "glow_frames": 4
+    },
+    "ground_projection": {
+      "texture": "portal_ground_projection.png",
+      "size_blocks": [
+        3.0,
+        1.5
+      ],
+      "y_offset": 0.01,
+      "additive_or_translucent": true
+    },
+    "particles": {
+      "spark": "particle_emerald_spark.png (6 frames, 8x8)",
+      "mist": "particle_green_mist.png (8 frames, 16x16)",
+      "strand": "particle_energy_strand.png (4 frames, 8x16, spawn at border at random angles, 0.1-0.2 s life)",
+      "emitters": [
+        "emitter_top",
+        "emitter_bottom",
+        "emitter_rim (bones in emerald_portal_rift.geo.json)"
+      ]
+    }
+  },
+  "rendering": {
+    "transparency": "translucent (alpha blend) on all portal layers; disable back-face culling (double sided); full-bright / emissive; no depth write for surface and distortion layers",
+    "emissive_textures": "*_emissive.png variants provided for surface and border",
+    "animation_timing": "texture frames loop (16 x 2 ticks = 1.6 s); idle bone animation 20 s loop (rune ring orbit); activate animation 1.0 s"
+  },
+  "contact_entry": {
+    "activation": "touching the magical surface (no right click, item or button)",
+    "trigger_volume_blocks": {
+      "width": 2.6,
+      "height": 4.1,
+      "depth": 0.9,
+      "centre_offset_from_base": [
+        0,
+        2.55,
+        0
+      ],
+      "shape": "axis-aligned box rotated with portal yaw; centre y = ground+0.5+2.05"
+    },
+    "suggested_collision": "none (players pass through); entity intersection test against trigger volume each tick",
+    "cooldown_ticks": 60,
+    "play": "activation_burst + entry_flash + sound by integration",
+    "notes": "Trigger is slightly narrower than the 3.0 visual width so grazing the border does not fire."
+  },
+  "label": {
+    "panel_png": "assets/soulbound/textures/entity/portal/portal_label_panel.png",
+    "panel_size_px": [
+      256,
+      112
+    ],
+    "world_size_blocks": [
+      2.4,
+      1.05
+    ],
+    "anchor": "above portal, centered on portal vertical axis",
+    "anchor_height_above_ground_blocks": 5.6,
+    "bob_amplitude_blocks": 0.08,
+    "bob_period_s": 4.0,
+    "billboard": "always face camera (yaw only), unlit/full-bright, translucent",
+    "visible_distance_blocks": 32,
+    "lines": [
+      {
+        "text": "LEVEL 1",
+        "color": "#7DFFB6",
+        "relative_size": 1.0,
+        "y_px": 6
+      },
+      {
+        "text": "GATE 1/5",
+        "color": "#52F59A",
+        "relative_size": 0.73,
+        "y_px": 38
+      },
+      {
+        "text": "EMERALD TRIAL",
+        "color": "#A8FFD2",
+        "relative_size": 0.77,
+        "y_px": 60
+      },
+      {
+        "text": "DIFFICULTY: 1/5",
+        "color": "#78E6A0",
+        "relative_size": 0.64,
+        "y_px": 86
+      }
+    ],
+    "note": "Text baked into panel PNG for a texture-based implementation; alternatively render the four strings with the colors above in a billboard text component."
+  },
+  "files": {
+    "bbmodel": "Portal/blockbench/emerald_portal.bbmodel",
+    "geo": [
+      "emerald_portal_rift",
+      "emerald_portal_runes",
+      "emerald_portal_ground"
+    ],
+    "animation": "Portal/assets/soulbound/animations/emerald_portal.animation.json",
+    "textures_dir": "Portal/assets/soulbound/textures/entity/portal/"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "glowing_blue_ice_crystal",
+  "model_identifier": "glowing_blue_ice_crystal",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "variable_placeholders": "",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "172444db-4eaa-4c44-8833-e7b6097e9d6d"
+    }
+  ],
+  "outliner": [
+    "172444db-4eaa-4c44-8833-e7b6097e9d6d"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "glowing_blue_ice_crystal.png",
+      "folder": "",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "render_sides": "auto",
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_interpolate": false,
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "9cad8432-900b-478e-87ea-0c604e22cf75",
+      "relative_path": "",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAuUlEQVR4nGMUqdj3n4ECwMLAwMDgluIIF7ARgdDLzn2Ei715842BgYGBwchIEkUN3AB0QZhmmEZsmmFqWLAJwjReD5VkiL6L3wIWfM4lpBnFC9j8ulSZgWH6R/zeYsHnV1yaYWpQXIAsiB4mhx35GTRXP8eqjgXdVmx+1VxNQjQSE4XI6uDRiC/hYLMApg4lGom1FVkd3AukaoapYcEmSGyyRnEBLNkSykxLlRlQ1MGjcfpH4mIC3RIAXvGap867yXYAAAAASUVORK5CYII="
+    }
+  ]
+}

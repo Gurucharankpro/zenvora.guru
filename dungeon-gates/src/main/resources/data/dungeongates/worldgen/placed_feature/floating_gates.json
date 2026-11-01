@@ -1,0 +1,8 @@
+{
+  "feature": "dungeongates:floating_gates",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

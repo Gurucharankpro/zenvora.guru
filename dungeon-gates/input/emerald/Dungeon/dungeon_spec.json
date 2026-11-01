@@ -1,0 +1,634 @@
+{
+  "dungeon_id": "P1-1",
+  "name": "The Forgotten Emerald Sanctuary",
+  "size": [
+    64,
+    28,
+    64
+  ],
+  "axes": "x east, y up, z south; coordinates relative to the dungeon origin (corner with min x,y,z)",
+  "floor_block_layer_y": 2,
+  "standing_y": 3,
+  "boundaries": {
+    "outer_shell": "1-block bedrock on all six sides of the 64x28x64 volume",
+    "playable_box_inclusive": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        62,
+        26,
+        62
+      ]
+    ],
+    "integration": "optionally add barrier/world-border-like checks: kill-plane at y<1 and clamp to playable box"
+  },
+  "pieces": [
+    {
+      "file": "structures/p1_1_emerald_sanctuary_x0_z0.nbt",
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ]
+    },
+    {
+      "file": "structures/p1_1_emerald_sanctuary_x1_z0.nbt",
+      "offset": [
+        32,
+        0,
+        0
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ]
+    },
+    {
+      "file": "structures/p1_1_emerald_sanctuary_x0_z1.nbt",
+      "offset": [
+        0,
+        0,
+        32
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ]
+    },
+    {
+      "file": "structures/p1_1_emerald_sanctuary_x1_z1.nbt",
+      "offset": [
+        32,
+        0,
+        32
+      ],
+      "size": [
+        32,
+        28,
+        32
+      ]
+    }
+  ],
+  "full_piece": "structures/p1_1_emerald_sanctuary_FULL_64x28x64.nbt",
+  "assembly": "Place the 4 quadrant pieces at origin+offset (no rotation), or place the FULL piece once via StructureTemplate API. Pieces tile exactly; do not mirror/rotate (spawn coordinates assume NONE).",
+  "datafixer": "DataVersion 3465 (1.20.1)",
+  "palette_variants": {
+    "custom": "structures/ (uses soulbound_decor blocks; requires the 12 blocks registered)",
+    "vanilla_fallback": "structures_vanilla_fallback/ (vanilla blocks only; loadable now with a structure block for layout testing)"
+  },
+  "rooms": {
+    "R1_arrival": {
+      "name": "Arrival Chamber",
+      "shape": "circle",
+      "centre": [
+        10,
+        53
+      ],
+      "radius": 8,
+      "air_y": [
+        3,
+        13
+      ],
+      "floor_y": 2
+    },
+    "R2_corridors": {
+      "name": "Mossbound Corridors",
+      "path_xz": [
+        [
+          10,
+          46
+        ],
+        [
+          10,
+          41
+        ],
+        [
+          15,
+          41
+        ],
+        [
+          15,
+          35
+        ]
+      ],
+      "width": 3,
+      "height": 4,
+      "alcoves": [
+        [
+          8,
+          43
+        ],
+        [
+          17,
+          39
+        ],
+        [
+          13,
+          38
+        ]
+      ]
+    },
+    "R3_garden": {
+      "name": "Forgotten Garden",
+      "shape": "ellipse",
+      "centre": [
+        22,
+        27
+      ],
+      "radii": [
+        14,
+        10
+      ],
+      "air_y": [
+        3,
+        14
+      ],
+      "pond_centre": [
+        23,
+        27
+      ]
+    },
+    "R4_crystal_hall": {
+      "name": "Crystal Trial Hall",
+      "box_xz": [
+        38,
+        26,
+        57,
+        46
+      ],
+      "air_y": [
+        3,
+        18
+      ],
+      "secret_alcove_box": [
+        59,
+        36,
+        62,
+        38
+      ],
+      "secret_wall_x": 58
+    },
+    "R5_boss_arena": {
+      "name": "Emerald Root Warden Arena",
+      "shape": "circle",
+      "centre": [
+        48,
+        12
+      ],
+      "radius": 10,
+      "air_y": [
+        3,
+        24
+      ],
+      "pillars": 8,
+      "suspended_crystal_centre": [
+        48,
+        19,
+        12
+      ]
+    },
+    "R6_reward": {
+      "name": "Reward Sanctuary",
+      "box_xz": [
+        8,
+        5,
+        20,
+        15
+      ],
+      "air_y": [
+        3,
+        11
+      ]
+    },
+    "connections": [
+      {
+        "from": "R1",
+        "to": "R2",
+        "at": [
+          10,
+          46
+        ]
+      },
+      {
+        "from": "R2",
+        "to": "R3",
+        "at": [
+          15,
+          35
+        ]
+      },
+      {
+        "from": "R3",
+        "to": "R4",
+        "path": [
+          [
+            35,
+            27
+          ],
+          [
+            38,
+            27
+          ]
+        ]
+      },
+      {
+        "from": "R4",
+        "to": "R5",
+        "path": [
+          [
+            48,
+            25
+          ],
+          [
+            48,
+            20
+          ]
+        ]
+      },
+      {
+        "from": "R5",
+        "to": "R6",
+        "path": [
+          [
+            38,
+            12
+          ],
+          [
+            30,
+            12
+          ],
+          [
+            30,
+            10
+          ],
+          [
+            21,
+            10
+          ]
+        ]
+      }
+    ]
+  },
+  "markers": {
+    "player_arrival": {
+      "pos": [
+        10,
+        2,
+        50
+      ],
+      "stand": [
+        10,
+        3,
+        50
+      ],
+      "note": "players placed here on entry, facing north (-Z)"
+    },
+    "arrival_portal_anchor": {
+      "pos": [
+        10,
+        2,
+        57
+      ],
+      "stand": [
+        10,
+        3,
+        57
+      ],
+      "note": "floating arrival/return-to-overworld portal centre (portal bottom 0.5 above y+1)"
+    },
+    "skulker_spawn_corridor_1": {
+      "pos": [
+        10,
+        2,
+        43
+      ],
+      "stand": [
+        10,
+        3,
+        43
+      ],
+      "note": ""
+    },
+    "skulker_spawn_corridor_2": {
+      "pos": [
+        15,
+        2,
+        38
+      ],
+      "stand": [
+        15,
+        3,
+        38
+      ],
+      "note": ""
+    },
+    "skulker_spawn_garden_1": {
+      "pos": [
+        16,
+        2,
+        28
+      ],
+      "stand": [
+        16,
+        3,
+        28
+      ],
+      "note": ""
+    },
+    "skulker_spawn_garden_2": {
+      "pos": [
+        28,
+        2,
+        21
+      ],
+      "stand": [
+        28,
+        3,
+        21
+      ],
+      "note": ""
+    },
+    "skulker_spawn_garden_3": {
+      "pos": [
+        29,
+        2,
+        32
+      ],
+      "stand": [
+        29,
+        3,
+        32
+      ],
+      "note": ""
+    },
+    "skulker_spawn_garden_4": {
+      "pos": [
+        20,
+        2,
+        21
+      ],
+      "stand": [
+        20,
+        3,
+        21
+      ],
+      "note": ""
+    },
+    "sentinel_spawn_hall_1": {
+      "pos": [
+        45,
+        2,
+        32
+      ],
+      "stand": [
+        45,
+        3,
+        32
+      ],
+      "note": ""
+    },
+    "sentinel_spawn_hall_2": {
+      "pos": [
+        50,
+        2,
+        32
+      ],
+      "stand": [
+        50,
+        3,
+        32
+      ],
+      "note": ""
+    },
+    "sentinel_spawn_hall_3": {
+      "pos": [
+        45,
+        2,
+        40
+      ],
+      "stand": [
+        45,
+        3,
+        40
+      ],
+      "note": ""
+    },
+    "sentinel_spawn_hall_4": {
+      "pos": [
+        50,
+        2,
+        40
+      ],
+      "stand": [
+        50,
+        3,
+        40
+      ],
+      "note": ""
+    },
+    "boss_spawn": {
+      "pos": [
+        48,
+        2,
+        12
+      ],
+      "stand": [
+        48,
+        3,
+        12
+      ],
+      "note": "Emerald Root Warden spawn; arena centre"
+    },
+    "boss_arena_entrance": {
+      "pos": [
+        48,
+        2,
+        21
+      ],
+      "stand": [
+        48,
+        3,
+        21
+      ],
+      "note": "players enter arena here; lock door when fight starts if desired"
+    },
+    "trophy_display": {
+      "pos": [
+        14,
+        3,
+        11
+      ],
+      "stand": [
+        14,
+        4,
+        11
+      ],
+      "note": "display crown on top of platform centre (y+1)"
+    },
+    "return_portal_anchor": {
+      "pos": [
+        14,
+        2,
+        7
+      ],
+      "stand": [
+        14,
+        3,
+        7
+      ],
+      "note": "floating return portal centre; keep inactive until boss defeated"
+    },
+    "exit_position": {
+      "pos": [
+        14,
+        2,
+        9
+      ],
+      "stand": [
+        14,
+        3,
+        9
+      ],
+      "note": "safe standing spot in front of return portal"
+    },
+    "hidden_alcove_marker": {
+      "pos": [
+        61,
+        2,
+        37
+      ],
+      "stand": [
+        61,
+        3,
+        37
+      ],
+      "note": "secret alcove interior; sealed wall at x=58"
+    },
+    "reward_chest": {
+      "pos": [
+        9,
+        3,
+        7
+      ],
+      "stand": [
+        9,
+        3,
+        7
+      ],
+      "note": "ancient_emerald_chest facing east (placed in structure)"
+    },
+    "hidden_alcove_chest": {
+      "pos": [
+        60,
+        3,
+        37
+      ],
+      "stand": [
+        60,
+        3,
+        37
+      ],
+      "note": "secondary chest (placed in structure)"
+    }
+  },
+  "marker_mechanism": "Each marker is a minecraft:structure_block in DATA mode with metadata \"p1_1:<name>\" embedded in the NBT at pos (replacing the floor block at y=2). The integration code should scan placed structure blocks (or read this JSON), record positions, then replace the marker block with the room floor block (polished_sanctuary_stone / moss / etc.). Spawn target = marker pos + (0,1,0).",
+  "reward": {
+    "chest": {
+      "pos": [
+        9,
+        3,
+        7
+      ],
+      "stand": [
+        9,
+        3,
+        7
+      ],
+      "note": "ancient_emerald_chest facing east (placed in structure)"
+    },
+    "trophy_display": {
+      "pos": [
+        14,
+        3,
+        11
+      ],
+      "stand": [
+        14,
+        4,
+        11
+      ],
+      "note": "display crown on top of platform centre (y+1)"
+    },
+    "return_portal_anchor": {
+      "pos": [
+        14,
+        2,
+        7
+      ],
+      "stand": [
+        14,
+        3,
+        7
+      ],
+      "note": "floating return portal centre; keep inactive until boss defeated"
+    },
+    "exit_position": {
+      "pos": [
+        14,
+        2,
+        9
+      ],
+      "stand": [
+        14,
+        3,
+        9
+      ],
+      "note": "safe standing spot in front of return portal"
+    }
+  },
+  "exit_unlock": "Return portal (floating, same visuals as entry but contact-based) is NOT active until boss entity death event; activate with portal activate animation + activation burst. Chest and trophy may be populated on boss death.",
+  "multiplayer": "One instance per party/portal-use; slot allocation on a grid (e.g. 128-block spacing, instance origin y>=48) inside the mod's existing Soul Bound Dimension - no new dimension; track player list per instance; scale boss HP by player count; keep instance loaded while players inside; forceload chunks (4x4 chunks) per instance.",
+  "recovery": {
+    "requirements": [
+      "persist instance state (slot, origin, party UUIDs, boss_defeated, created_tick) in SavedData",
+      "admin command to list/teleport/reset/force-complete/force-exit instances",
+      "on login inside missing/corrupted instance, teleport player to stored overworld return location",
+      "instance expiry + chunk clean-up task",
+      "rebuild-from-template command re-places the pieces and respawns mobs without touching player inventories"
+    ]
+  },
+  "verification": {
+    "walkability": "BFS from player_arrival over standing cells (step up/down <=1) reached all spawn markers, boss spawn, trophy display, return portal anchor, exit position and chest-adjacent cells",
+    "reachable_standing_cells": 1476,
+    "checks": {
+      "player_arrival": true,
+      "arrival_portal_anchor": true,
+      "skulker_spawn_corridor_1": true,
+      "skulker_spawn_corridor_2": true,
+      "skulker_spawn_garden_1": true,
+      "skulker_spawn_garden_2": true,
+      "skulker_spawn_garden_3": true,
+      "skulker_spawn_garden_4": true,
+      "sentinel_spawn_hall_1": true,
+      "sentinel_spawn_hall_2": true,
+      "sentinel_spawn_hall_3": true,
+      "sentinel_spawn_hall_4": true,
+      "boss_spawn": true,
+      "boss_arena_entrance": true,
+      "trophy_display": true,
+      "return_portal_anchor": true,
+      "exit_position": true,
+      "reward_chest_adjacent": true
+    }
+  }
+}

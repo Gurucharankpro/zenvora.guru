@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "dungeongates:ghostfrost_flower",
+    "dungeongates:emerald_hanging_vines",
+    "dungeongates:winter_royal_chest",
+    "dungeongates:winterveil_vines",
+    "dungeongates:mossy_trial_bricks",
+    "dungeongates:ancient_emerald_chest",
+    "dungeongates:silver_chain_column",
+    "dungeongates:glowing_emerald_crystal_block",
+    "dungeongates:sanctuary_lantern",
+    "dungeongates:ancient_root_column",
+    "dungeongates:royal_frost_marble",
+    "dungeongates:guardian_rune_pillar",
+    "dungeongates:polished_sanctuary_stone",
+    "dungeongates:royal_ice_lantern",
+    "dungeongates:emerald_crystal_cluster",
+    "dungeongates:frozen_crystal_cluster",
+    "dungeongates:polished_frostgrave_stone",
+    "dungeongates:emerald_trial_stone",
+    "dungeongates:frostgrave_stone",
+    "dungeongates:forgotten_garden_flower",
+    "dungeongates:cracked_emerald_bricks",
+    "dungeongates:cracked_icebound_bricks",
+    "dungeongates:glowing_blue_ice_crystal",
+    "dungeongates:frozen_memorial_statue"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "soulbound:block/frozen_crystal_cluster"
+    },
+    "facing=down": {
+      "model": "soulbound:block/frozen_crystal_cluster",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "soulbound:block/frozen_crystal_cluster",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "soulbound:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "soulbound:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "soulbound:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

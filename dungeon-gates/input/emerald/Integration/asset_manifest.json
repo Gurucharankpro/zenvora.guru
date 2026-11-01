@@ -1,0 +1,1410 @@
+{
+ "package": "P1-1_Emerald_Trial_Gate_Forge_1.20.1",
+ "files": [
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/ancient_emerald_chest.json",
+   "bytes": 441,
+   "sha256": "1a51c93eccc9e261f44db44edc1c09544147a74ac8bd3500d33b311f8afd0b54"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/ancient_root_column.json",
+   "bytes": 98,
+   "sha256": "6fd7596a9ca205baf6a72db34f50bcbb531f357d3314daf3e957056e296a7f0c"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/cracked_emerald_bricks.json",
+   "bytes": 101,
+   "sha256": "b1bdece6378aaf9539e36c4f1859656641cfa9dfc7e19c01710ea305064529c6"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/emerald_crystal_cluster.json",
+   "bytes": 102,
+   "sha256": "d7bce21151b40b2ab416c1a1e0c04c91f7680350e86d9421b1790ed96fe08800"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/emerald_hanging_vines.json",
+   "bytes": 100,
+   "sha256": "ef18375de27bce5a2d202d5fcefb37eb7d6ed13bb175a4bf5e2333e9e616aad5"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/emerald_trial_stone.json",
+   "bytes": 98,
+   "sha256": "6bb6ca76a015a810632239d04f0937a2702ad05abdeccc52e4a9051670907295"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/forgotten_garden_flower.json",
+   "bytes": 102,
+   "sha256": "b6ee5c9fcef4b93c8aa98af5c49de946ba8eaf61e9fb90bb86f622ef08680869"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/glowing_emerald_crystal_block.json",
+   "bytes": 108,
+   "sha256": "02d8f7c7c0aed230f83d0475e71159b294aae2eabc385783e6773bd45b1e1cb8"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/guardian_rune_pillar.json",
+   "bytes": 99,
+   "sha256": "5cec17480e6ec63dc34b533e073e9d395938a835bbc6078604a663730cf01372"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/mossy_trial_bricks.json",
+   "bytes": 97,
+   "sha256": "7bbd6c2810273a151455a405e75e5c71fc21e6c9a52aae28cd79671cdddd40da"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/polished_sanctuary_stone.json",
+   "bytes": 103,
+   "sha256": "420cd01582ca14a0d004c51f25511c59eccfb96888cd25bd0572f7ad836daba1"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/blockstates/sanctuary_lantern.json",
+   "bytes": 203,
+   "sha256": "c41649e5f13a04d03f5df3362872b6b3908adbc6d129a914ac8b27e2400d9c28"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/ancient_emerald_chest.json",
+   "bytes": 7015,
+   "sha256": "0eecd2e28e8380db65ceb8c6bf8bccb15fd915e067e73603236ad2a533f94f73"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/ancient_root_column.json",
+   "bytes": 9109,
+   "sha256": "3b08dadbe726acc11033392e80e8e2a5df966554372e66a2e764166a439d4519"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/cracked_emerald_bricks.json",
+   "bytes": 121,
+   "sha256": "40b4e447c2be4843b239333a8876bd24cc047b7d4aff65fb7d939ad68b8855d2"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/emerald_crystal_cluster.json",
+   "bytes": 7473,
+   "sha256": "098a9f9fe638114be15bfd04977eee51d938ba70e4b7dc03e4d6bb993251016b"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/emerald_hanging_vines.json",
+   "bytes": 1473,
+   "sha256": "d52ba4cee41ec8d477b1d4b98362b1158266e62446c09ab2953a29f7765237a8"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/emerald_trial_stone.json",
+   "bytes": 118,
+   "sha256": "8d5a0cc505755aa5b2ee4a1d2a18dfdcaec5cdab4fcf608a7fb4cfcc56a283c7"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/forgotten_garden_flower.json",
+   "bytes": 1477,
+   "sha256": "c6da7f2f429444c81b8c26ba8ef2123f7e2cd58120c831cd3ff76bf18fbdb747"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/glowing_emerald_crystal_block.json",
+   "bytes": 128,
+   "sha256": "954fc96c50f58547aa9503e8f8f55ee88836fbe79b335ae99c31227534484720"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/guardian_rune_pillar.json",
+   "bytes": 5753,
+   "sha256": "07ff057df2872831c45250fca500b12144563e1a561593f48103ece448281ba0"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/mossy_trial_bricks.json",
+   "bytes": 117,
+   "sha256": "b89bd0d41e7b621be3174c4764dd9567a67fc78a669e4d0716fc23d45bdfa5d0"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/polished_sanctuary_stone.json",
+   "bytes": 123,
+   "sha256": "c271a32694ddb7d26249e78eb56066e54e595fddc81f04081b393add0254af3e"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/sanctuary_lantern.json",
+   "bytes": 10161,
+   "sha256": "abc1e48e8510d98c28b998d02af70ca22e2bbb94942e3b828f9d3bd1c843635a"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/block/sanctuary_lantern_hanging.json",
+   "bytes": 11277,
+   "sha256": "04f95cb3f81b9e85aca8b2e1e10ec27ee4b465b8c97a9c1dc7d6ddcf6495501e"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/ancient_emerald_chest.json",
+   "bytes": 61,
+   "sha256": "c8801d743eda2f92780a1ab09f44a9c776edbdb40ff74ac43023014f7281fa6b"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/ancient_root_column.json",
+   "bytes": 59,
+   "sha256": "2632ecf973a372f370502184f8c84a4e924c3ec7d801197a2a277dbc312cb967"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/cracked_emerald_bricks.json",
+   "bytes": 62,
+   "sha256": "f947caec60545da74e1b1e9dc4c20e78ac4ae5603497899024a92adcc73e98ef"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/emerald_crystal_cluster.json",
+   "bytes": 63,
+   "sha256": "4c6dcec2b7b8feb882905e93d425dc6fd6c61e434a38b3b875a1cf26425cfd5d"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/emerald_hanging_vines.json",
+   "bytes": 123,
+   "sha256": "9865e9f7ae9e2709d4f5f8323cc03e5783f8056514308c2c3a6b0141e9c9d5aa"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/emerald_trial_stone.json",
+   "bytes": 59,
+   "sha256": "da4c0b97bce4adb1ec8dd785267eabac0c90cdafdcc5f548d6f5d2f257521f97"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/forgotten_garden_flower.json",
+   "bytes": 125,
+   "sha256": "bd3e01a36b9fea48c2f14ced952240c9f16a481ba6d280cf5935bf812d264849"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/glowing_emerald_crystal_block.json",
+   "bytes": 69,
+   "sha256": "dcc63191d304efcb2bc8f10d96d2ad669fa7d03d7077ce9a4310647fdf615ea7"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/guardian_rune_pillar.json",
+   "bytes": 60,
+   "sha256": "b2ba30da1839777e024efe9916d22843f66b75b9e90f2ef4d5314a56b2ddd36c"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/mossy_trial_bricks.json",
+   "bytes": 58,
+   "sha256": "48b72d1ed626dd89f4032359bac0c23ba7304d9ab260841deeb28c127c6f0a4b"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/polished_sanctuary_stone.json",
+   "bytes": 64,
+   "sha256": "14c51562c60439edd17974d51954922eef39241838d998ad08471e608d5b00a4"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/models/item/sanctuary_lantern.json",
+   "bytes": 57,
+   "sha256": "20967a8ce8b120b13b7381f17d41ddb8a82d5f324aaeeb7c74169c2086926f99"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/ancient_emerald_chest.png",
+   "bytes": 2548,
+   "sha256": "dd4bc12b9d2d9caa3a5091ab440425a6ae4dc7dd14ef00eb63edc83363b30732"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/ancient_root_column.png",
+   "bytes": 2652,
+   "sha256": "7c563d51ee6650d8cce863dd62e67c7ac4a75daf5849de4d823f6a0181037c01"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/cracked_emerald_bricks.png",
+   "bytes": 446,
+   "sha256": "5c9d3c71956e76da678bc56a96e147d5627d9d85620b8a9b40a6fb6658159e5e"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/emerald_crystal_cluster.png",
+   "bytes": 880,
+   "sha256": "c73732c126b5b93e1b1c9d990de2fb28f79dd12a7903e3f5bb884f3807ea5da3"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/emerald_hanging_vines.png",
+   "bytes": 195,
+   "sha256": "1b6598a8021d7eb0e92e2b875479fb9b3abb4f608ce040ebd7719661358435bd"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/emerald_trial_stone.png",
+   "bytes": 412,
+   "sha256": "7dcbfa5a6e56ba86d4b9d6d886a160f77b80127b15790d66a23c186cb7327b80"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/forgotten_garden_flower.png",
+   "bytes": 165,
+   "sha256": "6669b874cd2283dd3b59fe94afb149c31ee6ed12929ba6286dcca58512db86c7"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/glowing_emerald_crystal_block.png",
+   "bytes": 1452,
+   "sha256": "0c9bdc5ca7e9cfc4aeb05ad46b3159d16085bb1483c8068e93e998cb30f49cc1"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/guardian_rune_pillar.png",
+   "bytes": 2252,
+   "sha256": "ad01ab1fef78099845941e6215dc13fbbd21fd95b9b4f5d5b9eeddcb3f1d4a16"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/mossy_trial_bricks.png",
+   "bytes": 442,
+   "sha256": "10654915008275225edfe635a55dc43717d7db3591cf8c4a90498308b755e5ea"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/polished_sanctuary_stone.png",
+   "bytes": 362,
+   "sha256": "2931961e64a47e6061968c1833d9ad97c4729e989eed69cac7fa44c2f2d7204a"
+  },
+  {
+   "path": "Blocks_And_Decor/assets/soulbound_decor/textures/block/sanctuary_lantern.png",
+   "bytes": 916,
+   "sha256": "f9852e94e3d6cf9c007862017cc8baedcee81797bc8a1819ea84d0fb330aea77"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/ancient_emerald_chest.bbmodel",
+   "bytes": 12603,
+   "sha256": "337b54209d33ebce66dee5d915c740c7c4dee416c62df51d1f8548094a1b00f3"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/ancient_root_column.bbmodel",
+   "bytes": 15499,
+   "sha256": "b48aa715f0311b3cf31d360d60a0935e7b0fff84bc1a930bc3ec9aa2d934a4c9"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/cracked_emerald_bricks.bbmodel",
+   "bytes": 2608,
+   "sha256": "56a3d1767437c64f08bade7cfeeb983ed74f8a09116f916aa9e1a84e20926a20"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/emerald_crystal_cluster.bbmodel",
+   "bytes": 10213,
+   "sha256": "29198f682655eb8bea8b1b66cfdcfc7f9d57c9d71ae06f5dc2dc6173974f51f6"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/emerald_trial_stone.bbmodel",
+   "bytes": 2514,
+   "sha256": "785dc1a5aa88fcda1ec8e23b23b44b5ac801a054905d3d4f5ba3ebbf68f5ff35"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/glowing_emerald_crystal_block.bbmodel",
+   "bytes": 3918,
+   "sha256": "336f2ed52902488371efbb14ea7bfcca9fe7b05dfb96da6bb48d305047caa26d"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/guardian_rune_pillar.bbmodel",
+   "bytes": 10776,
+   "sha256": "05e57e4482eeaab6c2d642f8fd11fe9f29af426ffe935faf0897a4d57b5e712f"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/mossy_trial_bricks.bbmodel",
+   "bytes": 2588,
+   "sha256": "661b16cc99ca1f9f18f48f11b8f59a404dd52d5da955ad4cdccc51541aada9bb"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/polished_sanctuary_stone.bbmodel",
+   "bytes": 2492,
+   "sha256": "54e9212ca65e44799613765112acffab472887818331effabee7f8466955cba8"
+  },
+  {
+   "path": "Blocks_And_Decor/blockbench/sanctuary_lantern.bbmodel",
+   "bytes": 14457,
+   "sha256": "e53e6db856e4ef960f1a4e8a3dd8e9ef9d40aea8937c9417529e3e5e5778b097"
+  },
+  {
+   "path": "Blocks_And_Decor/blocks_manifest.json",
+   "bytes": 5235,
+   "sha256": "4b4d6eddb3c38747d6960ade8384527325dc086ad566deabeebe5b381c729069"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/01_emerald_trial_stone.png",
+   "bytes": 26685,
+   "sha256": "672f39f01ef6c7ab5e5572672944ccff394f6e0c298eb53bfe65dc518e5e8f5d"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/02_mossy_trial_bricks.png",
+   "bytes": 28347,
+   "sha256": "514d82b5e6451686e9b32e8f60ca1fe9377144aff17a845e9ba05638e44c4a2c"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/03_cracked_emerald_bricks.png",
+   "bytes": 37450,
+   "sha256": "937aa6afd407f8e5fdfab99ffecc5952d2ced2483302f04c0d400297825de6af"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/04_polished_sanctuary_stone.png",
+   "bytes": 25486,
+   "sha256": "0bb822bc35e4de6660ef2fce54a67ae217844be240b8bc0b269aae14f6f0f236"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/05_glowing_emerald_crystal_block.png",
+   "bytes": 48835,
+   "sha256": "6317f27f0c5a2f056d17d0af00b44ec779b5ec0d88fa8dffcd2cbb0b32aafcb9"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/06_emerald_crystal_cluster.png",
+   "bytes": 38840,
+   "sha256": "04248fa19767ebcdab4b9b9638a6321a657a0ca15e87a4c6babb79a3ad840e9b"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/07_ancient_root_column.png",
+   "bytes": 26229,
+   "sha256": "e4defc1c8884f6aaa818873bb0bdc4d480a24b0ae449a3bdd9245e3b1a2c2642"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/08_emerald_hanging_vines.png",
+   "bytes": 1111,
+   "sha256": "73cce3127da4e25aa6acd54ce75fe07098d69d5eb4538aa14e9740e86392edf0"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/09_forgotten_garden_flower.png",
+   "bytes": 972,
+   "sha256": "57b2a9fca2ebbebd6f909a9c9ad77555d3d141f82e2fd5d5db3efb746f2ee10a"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/10_sanctuary_lantern.png",
+   "bytes": 15690,
+   "sha256": "b06b73075796a47875ea8b348782046c297bedb251dff6f7953e81afa5c9cfec"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/11_guardian_rune_pillar.png",
+   "bytes": 21962,
+   "sha256": "8178f89a8878b8a8adca0877ecea38e93e82cbeb3af93e7255e51daae5ba7553"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/12_ancient_emerald_chest.png",
+   "bytes": 27157,
+   "sha256": "50ea257c9d2fbeb1e9d3d447e3b80074fc73d9f671fce32b26a9187f24ce76c6"
+  },
+  {
+   "path": "Blocks_And_Decor/previews/_overview_12_blocks.png",
+   "bytes": 328219,
+   "sha256": "1bf215c8b06a586c81ab3eb0ba9291b6a03bc31295f8f57445fa2045432d09d3"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/assets/soulbound/animations/emerald_root_warden.animation.json",
+   "bytes": 74432,
+   "sha256": "c4ec86ab768a6d5cbe9de2e350192145d9acaf4d17968b426f07ba4204719140"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/assets/soulbound/geo/emerald_root_warden.geo.json",
+   "bytes": 26577,
+   "sha256": "ed594f99c3adf9c8cb5f2d1b9307ed40d7bd344a0c7eeebe6ef5bdd9fd130167"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/assets/soulbound/textures/entity/emerald_root_warden.png",
+   "bytes": 12198,
+   "sha256": "6b6ba8ebb8f96266e531022a22c9d6eeedfaedcf3a2b17c089cc635d947447cc"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/assets/soulbound/textures/entity/emerald_root_warden_glowmask.png",
+   "bytes": 2261,
+   "sha256": "be8a219cfae854d5183fd290b962ad5a396ae61ad34d8d1a0098459363c81803"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/blockbench/emerald_root_warden.bbmodel",
+   "bytes": 366022,
+   "sha256": "5bde1e4c7272c981ddd70d1896ecdd6e597cd81767d68f0a50ca36b1dfc7e2ae"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/previews/emerald_root_warden_hero.png",
+   "bytes": 101191,
+   "sha256": "08649d63a57b279b69268fdc92e23815e364bbee0a9328af44640e49f1b4fcc9"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/previews/emerald_root_warden_poses.png",
+   "bytes": 554157,
+   "sha256": "b80dd990f222983d2ce427d40ecc5e4bd1e4937945773ed5dbf3bbc9363a6b90"
+  },
+  {
+   "path": "Boss/EmeraldRootWarden/previews/emerald_root_warden_texture_x4.png",
+   "bytes": 19714,
+   "sha256": "1e16484fcb67611095644eb6018fd7a04c1aacfc6fe57b6592787af322018275"
+  },
+  {
+   "path": "Dungeon/block_palettes.json",
+   "bytes": 3886,
+   "sha256": "86d84b9e7e992e83d75bccc9358e6963321dedb479399633312f2ff7ed74fc71"
+  },
+  {
+   "path": "Dungeon/dungeon_spec.json",
+   "bytes": 11995,
+   "sha256": "f7abcb90d9632637b6c20ac605e8eb1af9cda50feb5c39f6d52a38c540d2bc24"
+  },
+  {
+   "path": "Dungeon/previews/dungeon_floor_plan.png",
+   "bytes": 25110,
+   "sha256": "bf4366c629cae2e9aaa3d361d5a30d383d7e9650853cbfb0fd7fe2ec6a2044aa"
+  },
+  {
+   "path": "Dungeon/previews/dungeon_isometric_cutaway.png",
+   "bytes": 55846,
+   "sha256": "d0024d04a8232536343d42014bbd0b2b2e5db34567f206a42c2c378c514b8de2"
+  },
+  {
+   "path": "Dungeon/previews/dungeon_isometric_full_height.png",
+   "bytes": 43655,
+   "sha256": "0cbb18d3c377b3def654b194eb31c82e2714df9ddc597ed604cce0f1abd34701"
+  },
+  {
+   "path": "Dungeon/previews/section_R1_arrival_z53.png",
+   "bytes": 6403,
+   "sha256": "e829c087c759025d4e598e2c5106cc95c771c94cd9f5755871eb8ee98126e5ef"
+  },
+  {
+   "path": "Dungeon/previews/section_R3_R4_z27.png",
+   "bytes": 6816,
+   "sha256": "cd59fe78a926f4f14aee30307217a4d59bfda2337060589ee5cfc1727cf499ef"
+  },
+  {
+   "path": "Dungeon/previews/section_R4_R5_x48.png",
+   "bytes": 7463,
+   "sha256": "42f5690d10aa6385a820d28090e0724950966cd82ac73076139cf7e39a9c13ea"
+  },
+  {
+   "path": "Dungeon/previews/section_R5_R6_z12.png",
+   "bytes": 7138,
+   "sha256": "ae0e922504c27e5775fd751363be52e4c5158a58b070c99c0961a63ae3c2d159"
+  },
+  {
+   "path": "Dungeon/structures/p1_1_emerald_sanctuary_FULL_64x28x64.nbt",
+   "bytes": 303697,
+   "sha256": "2de5dc42dd7e72227536c0a0cfa18fed052aa8e3350f558b3d0a173adeb9b740"
+  },
+  {
+   "path": "Dungeon/structures/p1_1_emerald_sanctuary_x0_z0.nbt",
+   "bytes": 74141,
+   "sha256": "9e404d17988980b98f6e2f0eb040a97879a8733847293ea5302b7e9c2c06bb4b"
+  },
+  {
+   "path": "Dungeon/structures/p1_1_emerald_sanctuary_x0_z1.nbt",
+   "bytes": 72916,
+   "sha256": "e839ab9bb9e88b568fa421fd7ad3c688073b51197222b07dfef8ea32513d96cb"
+  },
+  {
+   "path": "Dungeon/structures/p1_1_emerald_sanctuary_x1_z0.nbt",
+   "bytes": 72977,
+   "sha256": "ec158268d77529ec6092f41e7f09b6c27242f003619098af2cfa08c47336eac7"
+  },
+  {
+   "path": "Dungeon/structures/p1_1_emerald_sanctuary_x1_z1.nbt",
+   "bytes": 72397,
+   "sha256": "2565c8237e40135d42d259ddd1bc5b4471b6f6082336bbe7dd9fea9dcd1a61c0"
+  },
+  {
+   "path": "Dungeon/structures/structure_files_manifest.json",
+   "bytes": 2658,
+   "sha256": "c7e2a2aa6ebf702ab9af95a40796d3f7f24e3000a6e5be294873bbd99125eb4e"
+  },
+  {
+   "path": "Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_FULL_64x28x64.nbt",
+   "bytes": 303672,
+   "sha256": "1face49c8788f5692a3193bc43b167d2ec030eeebaa1951c6d1c8067b9471ac8"
+  },
+  {
+   "path": "Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z0.nbt",
+   "bytes": 74110,
+   "sha256": "875937fca2e6c5423ee1a8d1fe1ca8d49d5371c247623dc81bdeec7a826a8ddd"
+  },
+  {
+   "path": "Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z1.nbt",
+   "bytes": 72858,
+   "sha256": "08bd01de5b9230b65dac53cd628b759b881b898593de0544b064210828ebd1e2"
+  },
+  {
+   "path": "Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z0.nbt",
+   "bytes": 72964,
+   "sha256": "64e6bb7f1d55bf7d1f5694dd77d8a0dc0a81a062f7ef248d3eb966795e2a5199"
+  },
+  {
+   "path": "Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z1.nbt",
+   "bytes": 72355,
+   "sha256": "047b1491268704f59296fe82e99d2a75da7170dde282bb09fc67d24c5c40cad5"
+  },
+  {
+   "path": "Integration/INTEGRATION.md",
+   "bytes": 4742,
+   "sha256": "444212f8cf49f5aa3d615551f11f08246a2e3c7498f7ef3a9186cc36d5a17033"
+  },
+  {
+   "path": "Integration/animation_timing_manifest.json",
+   "bytes": 5599,
+   "sha256": "3bcb8ef42718e4ee874483e712d8b318b469bfbaba1cde0878486b94170a9b24"
+  },
+  {
+   "path": "Integration/blocks_manifest.json",
+   "bytes": 5235,
+   "sha256": "4b4d6eddb3c38747d6960ade8384527325dc086ad566deabeebe5b381c729069"
+  },
+  {
+   "path": "Integration/creature_spec.json",
+   "bytes": 18564,
+   "sha256": "71caaaf67dec810391d9fca9ec4e6724323c65178846907e4375f935167308ca"
+  },
+  {
+   "path": "Integration/dungeon_spec.json",
+   "bytes": 11995,
+   "sha256": "f7abcb90d9632637b6c20ac605e8eb1af9cda50feb5c39f6d52a38c540d2bc24"
+  },
+  {
+   "path": "Integration/overworld_placement_spec.json",
+   "bytes": 2468,
+   "sha256": "10986cd658f07d441d741d6ad0e6b8b21a4e1082531e231c4f5f440888f82779"
+  },
+  {
+   "path": "Integration/portal_spec.json",
+   "bytes": 4516,
+   "sha256": "58b43ee7bd0c9b68ea9d90390933a969bf9c01ab68193926be9c5dbb2e053bd1"
+  },
+  {
+   "path": "Integration/verification_report.json",
+   "bytes": 20659,
+   "sha256": "ece0cdac5be62e4922949aca476a7d1ee1ff64c61f748a5f1bdd5aa542121c67"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/assets/soulbound/animations/crystal_sentinel.animation.json",
+   "bytes": 44275,
+   "sha256": "4afde9c9d0bf5a46280c5dea326c3e6f2c6498995d0b882205e421c431f2d745"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/assets/soulbound/geo/crystal_sentinel.geo.json",
+   "bytes": 17681,
+   "sha256": "42d581191eb3abb8d634845d68f1f5a3f20d12b87d2e09c6d63331e7fbf45e7c"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/assets/soulbound/textures/entity/crystal_sentinel.png",
+   "bytes": 6526,
+   "sha256": "36e47591a78b9ecb8bfd87529002c1b1ad447d5706b4d896de2816875cf15738"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/assets/soulbound/textures/entity/crystal_sentinel_glowmask.png",
+   "bytes": 1061,
+   "sha256": "dc2b791bd2bdeb67a816a543064a4e22652c65af922f11742582495c389541d3"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/blockbench/crystal_sentinel.bbmodel",
+   "bytes": 220860,
+   "sha256": "a1af6621fe8db472d7261b96e70a7e0b02e2d97ac5e4e358cba8c4d15dfdbf2a"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/previews/crystal_sentinel_hero.png",
+   "bytes": 78690,
+   "sha256": "642a75eff8156bc6847e852f571ef95090db20f8a9d504731c89bb03f081c21d"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/previews/crystal_sentinel_poses.png",
+   "bytes": 361905,
+   "sha256": "452b58faa701623d1acac120ce04c191557cc3e32886343ccde718bde907f602"
+  },
+  {
+   "path": "Mobs/CrystalSentinel/previews/crystal_sentinel_texture_x4.png",
+   "bytes": 10366,
+   "sha256": "b9d7d27577c82cb6ce5a4cd2d695c64d2619bc929a05f5922db7246aefc31dfe"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/assets/soulbound/animations/mossbound_skulker.animation.json",
+   "bytes": 37097,
+   "sha256": "32719a363e7f2c344df180b9210b3db557e9047990da38b0bc5df459f8cf8cbb"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/assets/soulbound/geo/mossbound_skulker.geo.json",
+   "bytes": 22614,
+   "sha256": "f3b245bef2e42bb8ad62e883123cddf6c0770c0e6397703956c35e21e19c3d4b"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/assets/soulbound/textures/entity/mossbound_skulker.png",
+   "bytes": 4043,
+   "sha256": "d0b726b377fff3f96bdb9b2dcd33720628c733a9a2dcd68868a006fc763b8706"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/assets/soulbound/textures/entity/mossbound_skulker_glowmask.png",
+   "bytes": 476,
+   "sha256": "ca9c23ed6f1a2087d9223b0cafab8c5ec9ee08a98171657ffca7ea604dca0a32"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/blockbench/mossbound_skulker.bbmodel",
+   "bytes": 196773,
+   "sha256": "7a864cc400172a5da850a18603af39bf8030dfc8d090353e11955e05f0a00f98"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/previews/mossbound_skulker_hero.png",
+   "bytes": 71394,
+   "sha256": "06dcd1bc991263787e9843c1d472f52d58db88f439e5841b71f8326902352ec0"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/previews/mossbound_skulker_poses.png",
+   "bytes": 261827,
+   "sha256": "4677fb254c9ba0ba94470043cacfd298891b0d76b0147f2e7a2d716dca21e329"
+  },
+  {
+   "path": "Mobs/MossboundSkulker/previews/mossbound_skulker_texture_x4.png",
+   "bytes": 6473,
+   "sha256": "983dda4426bc61f0a919f4faeccf5f38e50a6224ff1e8f2d5f80f083da5c6dce"
+  },
+  {
+   "path": "Portal/assets/soulbound/animations/emerald_portal.animation.json",
+   "bytes": 14850,
+   "sha256": "5b1f8e706d4f0e9c84bfd3803a8d72d5b86034e2835dc23a67cc7629318f7657"
+  },
+  {
+   "path": "Portal/assets/soulbound/geo/emerald_portal_ground.geo.json",
+   "bytes": 1297,
+   "sha256": "83ea0d85b7c7bf3a22a959c5f30ea0f7b0e47f3c90f5e53c42b40b00f92da4b7"
+  },
+  {
+   "path": "Portal/assets/soulbound/geo/emerald_portal_rift.geo.json",
+   "bytes": 4160,
+   "sha256": "bb24e916f8fce6e9912c321a23cff876219f74398523dd8108778e0098391a47"
+  },
+  {
+   "path": "Portal/assets/soulbound/geo/emerald_portal_runes.geo.json",
+   "bytes": 8249,
+   "sha256": "66542fa20da38275c39d3d3804db76d5cf66937cf07be245fac48062a78dccfb"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_emerald_spark.png",
+   "bytes": 115,
+   "sha256": "25cf2f54bcfc7853da8149c167c6ecaedcdcc8e81a75a336fccf681608ef7cf8"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_emerald_spark.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_energy_strand.png",
+   "bytes": 163,
+   "sha256": "040f5b2562d2bab52e8cb8327a907ddb212a75715493271b253edc26f3865af8"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_energy_strand.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_green_mist.png",
+   "bytes": 437,
+   "sha256": "ec47a2f798eb3f95d525d6ab05197b78bce650e6ed891a5b5b19665c89bd583b"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/particle_green_mist.png.mcmeta",
+   "bytes": 69,
+   "sha256": "4c0be797667ed99c0e44e70ad3f7329f6e8a39d9768ba20f8966beb53e0ab317"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_activation_burst.png",
+   "bytes": 10256,
+   "sha256": "a8052bd532aa36c64998573ca795a5124c97d14f45a6744a5ca514ed2f4185fd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_activation_burst.png.mcmeta",
+   "bytes": 69,
+   "sha256": "4f64f7a459b1cc85fb65d66efc192683a710a0255828b42b83cb4478f7c40d87"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_border_anim.png",
+   "bytes": 49509,
+   "sha256": "584a4c15dcadcb0e5596e7f3409b962e9892fb6c9da0a90343fed87c7670769b"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_border_anim.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_border_anim_emissive.png",
+   "bytes": 31074,
+   "sha256": "436dd9d79f83b2e93b08b838084e092fe88defc3d835eeaa43c15af318a97d30"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_border_anim_emissive.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_distortion_anim.png",
+   "bytes": 7800,
+   "sha256": "a0023c395ff3b858c939c20e55dc604efa3caa73a5d6adf28ef29b650dee3faa"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_distortion_anim.png.mcmeta",
+   "bytes": 69,
+   "sha256": "96fb720f1febe8db48fd5355c86415d56fee94761caa712bf0dee8caaedd0b97"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_distortion_anim_emissive.png",
+   "bytes": 7996,
+   "sha256": "a5b7ed47d1b1b3ae620d26345734b5fd8998b0de1c536012bf34f637f4d5ef95"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_distortion_anim_emissive.png.mcmeta",
+   "bytes": 69,
+   "sha256": "96fb720f1febe8db48fd5355c86415d56fee94761caa712bf0dee8caaedd0b97"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_entry_flash.png",
+   "bytes": 3700,
+   "sha256": "537ec2bea099ba063d326d9d11321ec9b4d9fc9e7640e44eb6a4528d9fb2c25f"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_entry_flash.png.mcmeta",
+   "bytes": 69,
+   "sha256": "4f64f7a459b1cc85fb65d66efc192683a710a0255828b42b83cb4478f7c40d87"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_ground_projection.png",
+   "bytes": 1477,
+   "sha256": "cc30124573e601b8ffe99c54bd5ec28ac8c2f4acac0cd562a2cb770ff0fe946c"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_label_panel.png",
+   "bytes": 2391,
+   "sha256": "72f784a097a6701d11ad64ff3734549498215190a6c5392458ebc8830a89e263"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_label_text_only.png",
+   "bytes": 1915,
+   "sha256": "178714443be466b29d69a8f9f612a7db8a9cb3ef63a0269264657ce66f77319f"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_runes_anim.png",
+   "bytes": 1568,
+   "sha256": "d41a0d02806eb1770b958773c8f74729174b67ed8a3f8134c62b8d237fc49322"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_runes_anim.png.mcmeta",
+   "bytes": 69,
+   "sha256": "f4fa286c6f2de63ea3297b8bf1cc73841d47f19a59679f7f0aca0cced62e90b5"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_surface_anim.png",
+   "bytes": 150815,
+   "sha256": "e9928203b76f7d21550de487a1cfb7dd51dbe889c4fe4643203232e3c3183bc1"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_surface_anim.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_surface_anim_emissive.png",
+   "bytes": 52368,
+   "sha256": "938587a167513e1c1ae213a5e68a1be56d6d562ac0c1d70f6f1e7df17e78e402"
+  },
+  {
+   "path": "Portal/assets/soulbound/textures/entity/portal/portal_surface_anim_emissive.png.mcmeta",
+   "bytes": 69,
+   "sha256": "659f603de1f7c9e96725aa76415074d43625c2d1cc9dd3a6a6f2642f2d2a34bd"
+  },
+  {
+   "path": "Portal/blockbench/emerald_portal.bbmodel",
+   "bytes": 302629,
+   "sha256": "3f803181222bcec552b86d90a26761c533b938eb28d50cd60e6dc4b79affcb2c"
+  },
+  {
+   "path": "Portal/frames/activation/burst_00.png",
+   "bytes": 396,
+   "sha256": "c0d61cebe1603920d454597e278c6a138c7120094f90a8a4680bcf5c65b9b8e3"
+  },
+  {
+   "path": "Portal/frames/activation/burst_01.png",
+   "bytes": 518,
+   "sha256": "f6c4d8020ab2deb2a7af15808e2d7db49ce6e05b018dae603210962c532a6b6b"
+  },
+  {
+   "path": "Portal/frames/activation/burst_02.png",
+   "bytes": 647,
+   "sha256": "8dde23b1ae1250b60c8bdc8d229ac9fa63cb68a95d757fe95162a9684dbcd122"
+  },
+  {
+   "path": "Portal/frames/activation/burst_03.png",
+   "bytes": 808,
+   "sha256": "2a043ca22a2110a6949d66b1fd61273c9ab2bf87c3b5dfb4f0970304b14b81c2"
+  },
+  {
+   "path": "Portal/frames/activation/burst_04.png",
+   "bytes": 925,
+   "sha256": "8d383d9c0af9de0f9c26c04195c5a284285882e527d2215868d0b47ca60d8ecf"
+  },
+  {
+   "path": "Portal/frames/activation/burst_05.png",
+   "bytes": 1009,
+   "sha256": "62b065cc9864d28e7de5a8c6036bc6436a089d8f4ec902d533653caf7939ac87"
+  },
+  {
+   "path": "Portal/frames/activation/burst_06.png",
+   "bytes": 1101,
+   "sha256": "b39991de5f1aa427976dba0ee04b4b3f3244b218615ef413d27cec787de5b346"
+  },
+  {
+   "path": "Portal/frames/activation/burst_07.png",
+   "bytes": 1117,
+   "sha256": "1cd390970bcabac7df73bfcad51da9f59187d2c78461a2e527e6bcc1468f2d36"
+  },
+  {
+   "path": "Portal/frames/activation/burst_08.png",
+   "bytes": 1178,
+   "sha256": "b9ad74a8ba1152d3d98a8ebff1d225a120e0b54fe8f80aa15a6181e982ff1504"
+  },
+  {
+   "path": "Portal/frames/activation/burst_09.png",
+   "bytes": 1160,
+   "sha256": "b240ea2349b9b5d79f186fde2d0a3de363fc2e6115e5cf6d1d6d1ef5bff5d972"
+  },
+  {
+   "path": "Portal/frames/activation/burst_10.png",
+   "bytes": 1219,
+   "sha256": "d3ef6391118b9b60da5ace273e74467533aa060b134b8701678e1a654040fa54"
+  },
+  {
+   "path": "Portal/frames/activation/burst_11.png",
+   "bytes": 1193,
+   "sha256": "062d8af106aa1874a29ebfce96c959e549e2355891f3b8c10bd7ec873661bd2a"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_00.png",
+   "bytes": 3175,
+   "sha256": "b0db7061df005a62393743235ad36fdaebf78047ed3a45586a0ed4ca1b53f209"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_01.png",
+   "bytes": 3735,
+   "sha256": "ea51fb9caf0459e6104da2c48ea34b03b155e95aba4e6cd06bbe6e583b6c1b9e"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_02.png",
+   "bytes": 3437,
+   "sha256": "348078414286bbe8be321c541dc4a28e316efab0a40d3b874426201af10b14b1"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_03.png",
+   "bytes": 3181,
+   "sha256": "cda940d486fa29299bc2fcebeddb70fcb002d16ad49056b945e014ef33b6cd2f"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_04.png",
+   "bytes": 3154,
+   "sha256": "053a850fc211725a62326269fd94e81f02d862c1448bd384db112e5d09df8bca"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_05.png",
+   "bytes": 3709,
+   "sha256": "d5f42fd308c390592c50ac3a80a1d5b13d3c469ea5fbdfb94af0cf53bdd5ffaf"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_06.png",
+   "bytes": 3507,
+   "sha256": "68721eebafbc255741d78c1f6bc0012dabe81a0fcc391ea9ad7ca6b82a9ad049"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_07.png",
+   "bytes": 3149,
+   "sha256": "b563d8107618cc4eccb5cb0712f0e25d095c185e6680c49aeaa908280ccae40b"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_08.png",
+   "bytes": 3144,
+   "sha256": "314f90ff387401ed7b16b66b0a3d459beef9d5b066bc4325e274ccb61e2077d4"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_09.png",
+   "bytes": 3358,
+   "sha256": "bfae0185ce223205c3d0fd3ed1036165c84ec1e35f604fa63e294a7927f277e8"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_10.png",
+   "bytes": 3411,
+   "sha256": "b1be385fa9a05b4cfff3721f7291eeae2989955c7759dd931b7254c2f13c89f0"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_11.png",
+   "bytes": 2899,
+   "sha256": "c31ffb22c7bbe015c99127abc0c12d003edd02f0c4460dce0119434416ab4cde"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_12.png",
+   "bytes": 2838,
+   "sha256": "0b990eb3f14b2c51185fcfbc4479b88739a5be35090f785078f8e4e431b53284"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_13.png",
+   "bytes": 3374,
+   "sha256": "27912cce0f281a55e6a5e32d1fc96fbb2d667f96e34dc01514f5791505fb5191"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_14.png",
+   "bytes": 3319,
+   "sha256": "267b5c8dc51a6ce70e854f69a458a0e4e5f311ab195626042af367f48de81f85"
+  },
+  {
+   "path": "Portal/frames/portal_border/portal_border_15.png",
+   "bytes": 3046,
+   "sha256": "5c3b274f5003ed1fa097b362195e1e9120e0249ece88ed69bafbf528298bd680"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_00.png",
+   "bytes": 922,
+   "sha256": "b2c8d7c1cdb68f19ee7bc9652152b249d3660de94762c4f69c82202fa0cd7298"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_01.png",
+   "bytes": 1007,
+   "sha256": "18c4d97dc5322abf45ce284a97357968269246d5fb46f1b7fd4848fc4f30e16d"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_02.png",
+   "bytes": 1040,
+   "sha256": "2931f8cd78aa933be3e18a466b144c6b3de550c50890639c7f078097ecd5f5b8"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_03.png",
+   "bytes": 1051,
+   "sha256": "2468f520b640a5d3eb81c09f0d729004fb7ab520287f7d9f83a05696561bc5bd"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_04.png",
+   "bytes": 1175,
+   "sha256": "f73478c3b15ae1271ef9687b275b666e4734e127621cc23d8060d5eca6a8bdf8"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_05.png",
+   "bytes": 1186,
+   "sha256": "9af65ecb84c8fac0ace15614ec5d712dea78703c9cf04b66ddd990c75d4c8e20"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_06.png",
+   "bytes": 1235,
+   "sha256": "01ef848a36002fcb783965edecd9939e0ead7d917b7f719ca838649ac4c1d8d2"
+  },
+  {
+   "path": "Portal/frames/portal_distortion/portal_distortion_07.png",
+   "bytes": 921,
+   "sha256": "22340f369c3cfc03eff4d4637bf87ec74927de803240e3f6ac5c2f4fe391f322"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_00.png",
+   "bytes": 9606,
+   "sha256": "48d39fcd5b532e45539d86d870075ac9fe499f3a28b0e2b6ba39d7d575352f3f"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_01.png",
+   "bytes": 9364,
+   "sha256": "ee0f86fdc697c21cc043eb673d06c0380ecbf6144cf5a5f36761f592737e34f6"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_02.png",
+   "bytes": 9541,
+   "sha256": "67df906c2c8e2443400b54440bb294a6e1d13ee8762625c178245785817ab372"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_03.png",
+   "bytes": 9463,
+   "sha256": "deb95194aaa76c00d3445c4a1a907a335f33fe9e59c44d46f3aed05d844a7551"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_04.png",
+   "bytes": 9452,
+   "sha256": "7eefb1d0896658bdef0ed625c4218832d7e2a7f5055550fe2d85ef206a7430ff"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_05.png",
+   "bytes": 9545,
+   "sha256": "f66d757710157cde37008a7e499e7b30dd0c4101fc9b73a6a945ad410221fbd9"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_06.png",
+   "bytes": 9649,
+   "sha256": "c0b80c4e76a1f97e8349b4ef29bf9560ad35ed8e12ea3a04aa718561bf1009bb"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_07.png",
+   "bytes": 9690,
+   "sha256": "397015fbb0c5e0c2a0f5ca14345eb777899a4dbbef79edb9e84b76b4904af0ec"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_08.png",
+   "bytes": 9815,
+   "sha256": "822c6af5f5bb1ad6d83528a48c8497e8bff3d5643377e9da7046fc1677f13db6"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_09.png",
+   "bytes": 10348,
+   "sha256": "fdea719345dd7623763115428e716d8546319c098b539c9f441ff2440451c0f4"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_10.png",
+   "bytes": 10370,
+   "sha256": "48239e4198fe6d9534c34819a8b2f45ef0a8edec1551cd9aa0cd205f59957de4"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_11.png",
+   "bytes": 10510,
+   "sha256": "797892811a945e17ba47085d3fcd54f0c5ed66ccf384260dc211515a75d8b926"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_12.png",
+   "bytes": 10512,
+   "sha256": "4494fdc36c5de19242431d8c6541becf9de71971da243768cdb71fb6d3a63df2"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_13.png",
+   "bytes": 10213,
+   "sha256": "623c41ae1d2144c8323743109d577a81aeed34dfb58de936a7635453e759ba27"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_14.png",
+   "bytes": 9629,
+   "sha256": "223dd8e7a4a4901b5c6f8eb743aab8a0d88c4bdccf7caa534940b392c983ca5c"
+  },
+  {
+   "path": "Portal/frames/portal_surface/portal_surface_15.png",
+   "bytes": 9470,
+   "sha256": "19101e913d01d1154dbc2f3b82cfe4464074c80a258754ab462fd0f6d326ddba"
+  },
+  {
+   "path": "Portal/frames/runes/rune_1_glow0.png",
+   "bytes": 223,
+   "sha256": "40f1ba27b4a72b33c1f5c837b2a54f6b5c380138ae4448d5b0640392539fb240"
+  },
+  {
+   "path": "Portal/frames/runes/rune_1_glow1.png",
+   "bytes": 219,
+   "sha256": "4e76c14eaa21cfa9e2f14fe5b9a26f8f519d1946f872c2eb9ba089a2c06de14f"
+  },
+  {
+   "path": "Portal/frames/runes/rune_1_glow2.png",
+   "bytes": 221,
+   "sha256": "6788487be223e8df0454c713ba537269e3463960f95871b360e5c84a6dd84a19"
+  },
+  {
+   "path": "Portal/frames/runes/rune_1_glow3.png",
+   "bytes": 221,
+   "sha256": "6788487be223e8df0454c713ba537269e3463960f95871b360e5c84a6dd84a19"
+  },
+  {
+   "path": "Portal/frames/runes/rune_2_glow0.png",
+   "bytes": 213,
+   "sha256": "9005c29622b2cb68ad2985a439b57369a4576ce9c537ff5338966436a9b4d18c"
+  },
+  {
+   "path": "Portal/frames/runes/rune_2_glow1.png",
+   "bytes": 215,
+   "sha256": "73cb1ed1d1ef2d57ce9f26d8a458bace2dcd5f8170f4eba5407c4553713faf0d"
+  },
+  {
+   "path": "Portal/frames/runes/rune_2_glow2.png",
+   "bytes": 215,
+   "sha256": "938d9429cacf0b07d55401c597d6c6c800e077de9e2582d3132bffa77270e217"
+  },
+  {
+   "path": "Portal/frames/runes/rune_2_glow3.png",
+   "bytes": 215,
+   "sha256": "938d9429cacf0b07d55401c597d6c6c800e077de9e2582d3132bffa77270e217"
+  },
+  {
+   "path": "Portal/frames/runes/rune_3_glow0.png",
+   "bytes": 202,
+   "sha256": "b7369570f1805edf877019b8f723aa7db051d5ed118dab5927084432b8bb6bb8"
+  },
+  {
+   "path": "Portal/frames/runes/rune_3_glow1.png",
+   "bytes": 202,
+   "sha256": "e0a1f7c676b3b24facb6f9dd18e225e0f9aeb152b8402f84f58e599cf43dc94e"
+  },
+  {
+   "path": "Portal/frames/runes/rune_3_glow2.png",
+   "bytes": 201,
+   "sha256": "79fbb60bc7c5626c7b9e99c481b31c0406c28c449bbfffa4ac274d68e94102c9"
+  },
+  {
+   "path": "Portal/frames/runes/rune_3_glow3.png",
+   "bytes": 201,
+   "sha256": "79fbb60bc7c5626c7b9e99c481b31c0406c28c449bbfffa4ac274d68e94102c9"
+  },
+  {
+   "path": "Portal/frames/runes/rune_4_glow0.png",
+   "bytes": 184,
+   "sha256": "f0262d37d4e7db7e8f5d634b9939076524925c28c8e18ee4ab4b96ceee414f4d"
+  },
+  {
+   "path": "Portal/frames/runes/rune_4_glow1.png",
+   "bytes": 166,
+   "sha256": "bee11b53d1ef8390b7b067a6338918c90c0eca8723be52b6fc31cfe8eae1b44b"
+  },
+  {
+   "path": "Portal/frames/runes/rune_4_glow2.png",
+   "bytes": 166,
+   "sha256": "8c1c66dee8be8f653123359cedb8c2223a124937a48c12273066b1ad5f439bff"
+  },
+  {
+   "path": "Portal/frames/runes/rune_4_glow3.png",
+   "bytes": 166,
+   "sha256": "8c1c66dee8be8f653123359cedb8c2223a124937a48c12273066b1ad5f439bff"
+  },
+  {
+   "path": "Portal/frames/runes/rune_5_glow0.png",
+   "bytes": 212,
+   "sha256": "aa3c76f941067ac2371754fb95fcaa7f18585de3b4c28643eb4cb0298fd5e25d"
+  },
+  {
+   "path": "Portal/frames/runes/rune_5_glow1.png",
+   "bytes": 212,
+   "sha256": "f9adbb82c4f4626c3ace0e5dac049703638d43723c43b3c1e5d67f90b0521f0a"
+  },
+  {
+   "path": "Portal/frames/runes/rune_5_glow2.png",
+   "bytes": 211,
+   "sha256": "bddbad8ba56f524cf31c8a9c40db0a6d8417bc9143338739c090a286a46a7f51"
+  },
+  {
+   "path": "Portal/frames/runes/rune_5_glow3.png",
+   "bytes": 211,
+   "sha256": "bddbad8ba56f524cf31c8a9c40db0a6d8417bc9143338739c090a286a46a7f51"
+  },
+  {
+   "path": "Portal/frames/runes/rune_6_glow0.png",
+   "bytes": 204,
+   "sha256": "d8dc3e71f9f9512f4f6a83df94adf7b6696fbd14d926f2440d1fb138ef08037d"
+  },
+  {
+   "path": "Portal/frames/runes/rune_6_glow1.png",
+   "bytes": 189,
+   "sha256": "ba3088f07f8e173e0e52942ac4ec72a5594a3c565c278a46d89a02cc81588c56"
+  },
+  {
+   "path": "Portal/frames/runes/rune_6_glow2.png",
+   "bytes": 183,
+   "sha256": "de33ad5665ca3c29de391e71b819aa4d57cf286ac53f6dd9a77218316584a3aa"
+  },
+  {
+   "path": "Portal/frames/runes/rune_6_glow3.png",
+   "bytes": 183,
+   "sha256": "de33ad5665ca3c29de391e71b819aa4d57cf286ac53f6dd9a77218316584a3aa"
+  },
+  {
+   "path": "Portal/frames/runes/rune_7_glow0.png",
+   "bytes": 200,
+   "sha256": "89c1cc9556972433063c1ca9fd75b731b535b91ba482135fce831ff797b80a79"
+  },
+  {
+   "path": "Portal/frames/runes/rune_7_glow1.png",
+   "bytes": 197,
+   "sha256": "4d6c7c0bbdf87110c08e3c2c5a7b624ce501166ef19d53f4825626abb04befe8"
+  },
+  {
+   "path": "Portal/frames/runes/rune_7_glow2.png",
+   "bytes": 195,
+   "sha256": "e24bafd9a8f4b9aed3514b33e902cb91a753f9a1ec09ec1653f9b4c3a7f41693"
+  },
+  {
+   "path": "Portal/frames/runes/rune_7_glow3.png",
+   "bytes": 195,
+   "sha256": "e24bafd9a8f4b9aed3514b33e902cb91a753f9a1ec09ec1653f9b4c3a7f41693"
+  },
+  {
+   "path": "Portal/frames/runes/rune_8_glow0.png",
+   "bytes": 211,
+   "sha256": "8cca8ff22398e20f8910c4f667767b62fcf8a9a169916437148ed8b909e914e1"
+  },
+  {
+   "path": "Portal/frames/runes/rune_8_glow1.png",
+   "bytes": 183,
+   "sha256": "a401c5d2712d3e2e104a462e61cee92d99cf292f447b290646559fb251a18d3d"
+  },
+  {
+   "path": "Portal/frames/runes/rune_8_glow2.png",
+   "bytes": 183,
+   "sha256": "b60b477524de8145341392ce85aaeb7fd0a5c621e250842a38fed77112a72cb2"
+  },
+  {
+   "path": "Portal/frames/runes/rune_8_glow3.png",
+   "bytes": 183,
+   "sha256": "b60b477524de8145341392ce85aaeb7fd0a5c621e250842a38fed77112a72cb2"
+  },
+  {
+   "path": "Portal/label_layout.json",
+   "bytes": 1084,
+   "sha256": "1cd61d38d098dad0fc261192dec3c58a7f7591736dab42a5c0f1c0ced255b6b2"
+  },
+  {
+   "path": "Portal/previews/activation_burst_sheet.png",
+   "bytes": 14626,
+   "sha256": "329a6023187173384a12f9203861fcf60e0dd07d783e0a56a50f9800736c7358"
+  },
+  {
+   "path": "Portal/previews/portal_frames_sheet.png",
+   "bytes": 231793,
+   "sha256": "c18be4e243d0682d451a81cea09c23c02224966f0e6c090f6f6a043b2b4f2901"
+  },
+  {
+   "path": "Portal/previews/portal_scene_preview.gif",
+   "bytes": 616644,
+   "sha256": "6ebc9c7aa2131eddb24f53a8aa6a77122f54eb77b68a9ffb12dc1082803a76aa"
+  },
+  {
+   "path": "Portal/previews/portal_scene_preview.png",
+   "bytes": 35372,
+   "sha256": "fa329c86b4f95974d6108ae0bd9399b5796196c9b7de8ab5ab6d88bbdf95b97a"
+  },
+  {
+   "path": "Portal/previews/rune_sheet_preview.png",
+   "bytes": 7474,
+   "sha256": "cf32f7bf8c44f5656d9f7edaa194a10feb0f6abe21b30c8f18608cb6a50b573d"
+  },
+  {
+   "path": "Previews/ASSET_OVERVIEW.png",
+   "bytes": 1025461,
+   "sha256": "7561b408bcca81cfb5432f5cf74aa813980a303e06249888294bf9e24a1ac60d"
+  },
+  {
+   "path": "Previews/Blocks_overview_12.png",
+   "bytes": 328219,
+   "sha256": "1bf215c8b06a586c81ab3eb0ba9291b6a03bc31295f8f57445fa2045432d09d3"
+  },
+  {
+   "path": "Previews/Creature_crystal_sentinel_hero.png",
+   "bytes": 78690,
+   "sha256": "642a75eff8156bc6847e852f571ef95090db20f8a9d504731c89bb03f081c21d"
+  },
+  {
+   "path": "Previews/Creature_crystal_sentinel_poses.png",
+   "bytes": 361905,
+   "sha256": "452b58faa701623d1acac120ce04c191557cc3e32886343ccde718bde907f602"
+  },
+  {
+   "path": "Previews/Creature_emerald_root_warden_hero.png",
+   "bytes": 101191,
+   "sha256": "08649d63a57b279b69268fdc92e23815e364bbee0a9328af44640e49f1b4fcc9"
+  },
+  {
+   "path": "Previews/Creature_emerald_root_warden_poses.png",
+   "bytes": 554157,
+   "sha256": "b80dd990f222983d2ce427d40ecc5e4bd1e4937945773ed5dbf3bbc9363a6b90"
+  },
+  {
+   "path": "Previews/Creature_mossbound_skulker_hero.png",
+   "bytes": 71394,
+   "sha256": "06dcd1bc991263787e9843c1d472f52d58db88f439e5841b71f8326902352ec0"
+  },
+  {
+   "path": "Previews/Creature_mossbound_skulker_poses.png",
+   "bytes": 261827,
+   "sha256": "4677fb254c9ba0ba94470043cacfd298891b0d76b0147f2e7a2d716dca21e329"
+  },
+  {
+   "path": "Previews/Dungeon_dungeon_floor_plan.png",
+   "bytes": 25110,
+   "sha256": "bf4366c629cae2e9aaa3d361d5a30d383d7e9650853cbfb0fd7fe2ec6a2044aa"
+  },
+  {
+   "path": "Previews/Dungeon_dungeon_isometric_cutaway.png",
+   "bytes": 55846,
+   "sha256": "d0024d04a8232536343d42014bbd0b2b2e5db34567f206a42c2c378c514b8de2"
+  },
+  {
+   "path": "Previews/Dungeon_dungeon_isometric_full_height.png",
+   "bytes": 43655,
+   "sha256": "0cbb18d3c377b3def654b194eb31c82e2714df9ddc597ed604cce0f1abd34701"
+  },
+  {
+   "path": "Previews/Dungeon_section_R1_arrival_z53.png",
+   "bytes": 6403,
+   "sha256": "e829c087c759025d4e598e2c5106cc95c771c94cd9f5755871eb8ee98126e5ef"
+  },
+  {
+   "path": "Previews/Dungeon_section_R3_R4_z27.png",
+   "bytes": 6816,
+   "sha256": "cd59fe78a926f4f14aee30307217a4d59bfda2337060589ee5cfc1727cf499ef"
+  },
+  {
+   "path": "Previews/Dungeon_section_R4_R5_x48.png",
+   "bytes": 7463,
+   "sha256": "42f5690d10aa6385a820d28090e0724950966cd82ac73076139cf7e39a9c13ea"
+  },
+  {
+   "path": "Previews/Dungeon_section_R5_R6_z12.png",
+   "bytes": 7138,
+   "sha256": "ae0e922504c27e5775fd751363be52e4c5158a58b070c99c0961a63ae3c2d159"
+  },
+  {
+   "path": "Previews/Portal_16_frames_sheet.png",
+   "bytes": 231793,
+   "sha256": "c18be4e243d0682d451a81cea09c23c02224966f0e6c090f6f6a043b2b4f2901"
+  },
+  {
+   "path": "Previews/Portal_activation_burst_sheet.png",
+   "bytes": 14626,
+   "sha256": "329a6023187173384a12f9203861fcf60e0dd07d783e0a56a50f9800736c7358"
+  },
+  {
+   "path": "Previews/Portal_rune_sheet.png",
+   "bytes": 7474,
+   "sha256": "cf32f7bf8c44f5656d9f7edaa194a10feb0f6abe21b30c8f18608cb6a50b573d"
+  },
+  {
+   "path": "Previews/Portal_scene_animated.gif",
+   "bytes": 616644,
+   "sha256": "6ebc9c7aa2131eddb24f53a8aa6a77122f54eb77b68a9ffb12dc1082803a76aa"
+  },
+  {
+   "path": "Previews/Portal_scene_preview.png",
+   "bytes": 35372,
+   "sha256": "fa329c86b4f95974d6108ae0bd9399b5796196c9b7de8ab5ab6d88bbdf95b97a"
+  },
+  {
+   "path": "Previews/Trophy_crown_on_pedestal.png",
+   "bytes": 68435,
+   "sha256": "c239f00bed922a539748f982692df0815b024bf62639aa667afa1b8f41c8aa54"
+  },
+  {
+   "path": "README.md",
+   "bytes": 5725,
+   "sha256": "7d934b4e3419f558ce58e2b2f54ad6578ecfd37ca6b188774893fa5d3e10e34c"
+  },
+  {
+   "path": "Trophy/Inventory_Icon_16.png",
+   "bytes": 869,
+   "sha256": "916d5683ad256cf9b962a6caf0d052272920ada77f9ce31a600bf50ec253f341"
+  },
+  {
+   "path": "Trophy/Inventory_Icon_32.png",
+   "bytes": 2276,
+   "sha256": "db5cc829afac899529d4c30ec7dd9842de39e6383631863adcf3cae3aa01baa0"
+  },
+  {
+   "path": "Trophy/assets/soulbound/models/block/emerald_wardens_crown_display.json",
+   "bytes": 23840,
+   "sha256": "aff49b70b1faf62097a9dd7399deee9063d9d7eea3fd9658816c748e19d731c6"
+  },
+  {
+   "path": "Trophy/assets/soulbound/models/item/emerald_wardens_crown.json",
+   "bytes": 21592,
+   "sha256": "630f32f94715bda18fcb3a4a29c95e724945eca10c74fcf53d490afbe6a35aa5"
+  },
+  {
+   "path": "Trophy/assets/soulbound/models/item/emerald_wardens_crown_display.json",
+   "bytes": 63,
+   "sha256": "de3be30ce39558d767cc6d90fc48fc71d67de19aa26ec91f7384de0b00054f63"
+  },
+  {
+   "path": "Trophy/assets/soulbound/textures/gui/emerald_wardens_crown_icon.png",
+   "bytes": 2276,
+   "sha256": "db5cc829afac899529d4c30ec7dd9842de39e6383631863adcf3cae3aa01baa0"
+  },
+  {
+   "path": "Trophy/assets/soulbound/textures/item/emerald_wardens_crown.png",
+   "bytes": 2098,
+   "sha256": "50411d379673b300259a4171f825b2ba44b92c5f25a11f76c1a17a758cb84c62"
+  },
+  {
+   "path": "Trophy/blockbench/emerald_wardens_crown.bbmodel",
+   "bytes": 33048,
+   "sha256": "d5f3fa74b3ff36690a35ccb82c92ad63247e36c3f532fcc991419d10d1c72243"
+  },
+  {
+   "path": "Trophy/previews/crown_item_front.png",
+   "bytes": 46624,
+   "sha256": "e910e340933c408418c226785329217138d41e0e365ce7561c58ab77dcb77360"
+  },
+  {
+   "path": "Trophy/previews/crown_item_top.png",
+   "bytes": 54059,
+   "sha256": "1b9640d1584281e649de7c8e093b68d37139e008ad55b69c0b445cabffabe00c"
+  },
+  {
+   "path": "Trophy/previews/crown_on_pedestal_preview.png",
+   "bytes": 68435,
+   "sha256": "c239f00bed922a539748f982692df0815b024bf62639aa667afa1b8f41c8aa54"
+  },
+  {
+   "path": "Trophy/previews/crown_texture_x8.png",
+   "bytes": 4683,
+   "sha256": "45671f79f181370f383529f6e4d3064df5bf9f6591129234d0b3021e08f0b962"
+  }
+ ]
+}

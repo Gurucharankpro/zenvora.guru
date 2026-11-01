@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "dungeongates:block/royal_ice_lantern"
+    },
+    "hanging=true": {
+      "model": "dungeongates:block/royal_ice_lantern_hanging"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "note": "Seconds. Use for server/client attack timing sync; animation names are exact.",
+  "animation_ids": [
+    "animation.chainbound_sentinel.idle",
+    "animation.chainbound_sentinel.walk",
+    "animation.chainbound_sentinel.run",
+    "animation.chainbound_sentinel.guard",
+    "animation.chainbound_sentinel.chain_swing",
+    "animation.chainbound_sentinel.ice_pulse",
+    "animation.chainbound_sentinel.heavy_strike",
+    "animation.chainbound_sentinel.stagger",
+    "animation.chainbound_sentinel.spawn",
+    "animation.chainbound_sentinel.death"
+  ],
+  "timings": {
+    "chain_swing": {
+      "windup_end": 0.6,
+      "hit_time": 0.8,
+      "recovery_start": 1.1
+    },
+    "ice_pulse": {
+      "windup_end": 0.8,
+      "effect_time": 1.0,
+      "recovery_start": 1.4
+    },
+    "heavy_strike": {
+      "windup_end": 0.9,
+      "hit_time": 1.1,
+      "recovery_start": 1.4
+    },
+    "stagger": {
+      "max_recoil": 0.15
+    },
+    "spawn": {
+      "fully_emerged": 1.2
+    }
+  }
+}

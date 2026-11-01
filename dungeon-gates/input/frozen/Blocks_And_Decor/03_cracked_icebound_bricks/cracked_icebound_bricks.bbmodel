@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "cracked_icebound_bricks",
+  "model_identifier": "cracked_icebound_bricks",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "variable_placeholders": "",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "e82e9522-47a3-4958-a982-d8af32ba9c53"
+    }
+  ],
+  "outliner": [
+    "e82e9522-47a3-4958-a982-d8af32ba9c53"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "cracked_icebound_bricks.png",
+      "folder": "",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "render_sides": "auto",
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_interpolate": false,
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "d9be551b-ee89-4d09-a258-c66a8a5ecb44",
+      "relative_path": "",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACDklEQVR4nJWT3UpVQRTHf7NnZm9nXwRK6NFqq3jQ0jooRIIP0AtIF9ZNjxYEUiA9gA8QZEpEXqQdyUwtCLo8xzOfXWzcqBTSuhmGGdb6fy1xY6RK/Ed520PlZXNXw2MzAEgpiTHy+2eXian7pJTw3hNjRCmFlJKj/S1UXnJzYpaiKEgpkRljkFLSWd9g8dWbprNzDq01eZ4jhOBof4vx6SUAtNaEEEgpoay1aK359OwJ3nsABoMBACEEsizjuLvNaNVBStm8G2Po9/uI6zS4yvlqKYCRVhshBFprBoMBWmu01lhr+fH1A972aE0tkuc51trmBMgAhBAURYG1lrIs0VrjvW8o3W4/pLO+wd0X682QoigIIdQIsixDCIExpkHgnKMoClRectzdxq2tcv733DFjzGUN/sb3Wg1uTT/g7OwMpRQAJwc7jE8vobUmpcT3L+8Zu3OPGCMAv072GB6bIc9zpJSoEEJjz8LL1ywAmyvtZkI1+4ij/S0m55ZJqQYrhEAIQb/fR8UYCSEghODz86ecHu4yObeM956Tgx2cc0zOLdPr9SjLmooxhhgjQ0ND/87Bddwv5aBVzTfRlFI2eqSUOD3cpVXNk2UZ1lqyLMN7j1KqjvJFG733OOcQQjQNoF60b3vvePy2C8DHtVVCCOR5XjeAenkuenweJqizP1p12FxpM1p1MMbgnCOlxB8WzfeGM7N3agAAAABJRU5ErkJggg=="
+    }
+  ]
+}

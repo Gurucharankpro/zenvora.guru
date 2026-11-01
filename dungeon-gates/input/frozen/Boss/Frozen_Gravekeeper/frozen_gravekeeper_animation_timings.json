@@ -1,0 +1,52 @@
+{
+  "note": "Seconds. Use for server/client attack timing sync; animation names are exact.",
+  "animation_ids": [
+    "animation.frozen_gravekeeper.idle",
+    "animation.frozen_gravekeeper.walk",
+    "animation.frozen_gravekeeper.run",
+    "animation.frozen_gravekeeper.battle_roar",
+    "animation.frozen_gravekeeper.axe_slam",
+    "animation.frozen_gravekeeper.frozen_sweep",
+    "animation.frozen_gravekeeper.ice_spike_attack",
+    "animation.frozen_gravekeeper.royal_guard",
+    "animation.frozen_gravekeeper.phase_transition",
+    "animation.frozen_gravekeeper.death"
+  ],
+  "timings": {
+    "battle_roar": {
+      "windup_end": 0.7,
+      "effect_time": 1.0,
+      "recovery_start": 1.5
+    },
+    "axe_slam": {
+      "windup_end": 1.0,
+      "hit_time": 1.15,
+      "recovery_start": 1.6
+    },
+    "frozen_sweep": {
+      "windup_end": 0.9,
+      "hit_window": [
+        1.0,
+        1.35
+      ],
+      "hit_time": 1.15,
+      "recovery_start": 1.7
+    },
+    "ice_spike_attack": {
+      "windup_end": 0.9,
+      "hit_time": 1.2,
+      "spike_spawn_time": 1.25,
+      "recovery_start": 1.9
+    },
+    "phase_transition": {
+      "invulnerable_until": 2.5,
+      "crown_crack_time": 2.6,
+      "recovery_start": 3.0
+    },
+    "death": {
+      "kneel_time": 1.4,
+      "topple_time": 2.2,
+      "final_pose_time": 3.0
+    }
+  }
+}

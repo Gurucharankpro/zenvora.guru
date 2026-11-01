@@ -1,0 +1,170 @@
+[
+  {
+    "index": 1,
+    "id": "soulbound_decor:emerald_trial_stone",
+    "title": "Emerald Trial Stone",
+    "texture": "assets/soulbound_decor/textures/block/emerald_trial_stone.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/emerald_trial_stone.json",
+    "props": "",
+    "light_level": 0,
+    "notes": "basic solid block"
+  },
+  {
+    "index": 2,
+    "id": "soulbound_decor:mossy_trial_bricks",
+    "title": "Mossy Trial Bricks",
+    "texture": "assets/soulbound_decor/textures/block/mossy_trial_bricks.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/mossy_trial_bricks.json",
+    "props": "",
+    "light_level": 0,
+    "notes": ""
+  },
+  {
+    "index": 3,
+    "id": "soulbound_decor:cracked_emerald_bricks",
+    "title": "Cracked Emerald Bricks",
+    "texture": "assets/soulbound_decor/textures/block/cracked_emerald_bricks.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/cracked_emerald_bricks.json",
+    "props": "",
+    "light_level": 5,
+    "notes": "glowing veins: suggested light 5 (+ optional emissive)"
+  },
+  {
+    "index": 4,
+    "id": "soulbound_decor:polished_sanctuary_stone",
+    "title": "Polished Sanctuary Stone",
+    "texture": "assets/soulbound_decor/textures/block/polished_sanctuary_stone.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/polished_sanctuary_stone.json",
+    "props": "",
+    "light_level": 0,
+    "notes": ""
+  },
+  {
+    "index": 5,
+    "id": "soulbound_decor:glowing_emerald_crystal_block",
+    "title": "Glowing Emerald Crystal Block",
+    "texture": "assets/soulbound_decor/textures/block/glowing_emerald_crystal_block.png",
+    "texture_size": [
+      32,
+      32
+    ],
+    "model": "assets/soulbound_decor/models/block/glowing_emerald_crystal_block.json",
+    "props": "",
+    "light_level": 13,
+    "notes": "suggested light 13; may use translucent render type if desired"
+  },
+  {
+    "index": 6,
+    "id": "soulbound_decor:emerald_crystal_cluster",
+    "title": "Emerald Crystal Cluster",
+    "texture": "assets/soulbound_decor/textures/block/emerald_crystal_cluster.png",
+    "texture_size": [
+      64,
+      64
+    ],
+    "model": "assets/soulbound_decor/models/block/emerald_crystal_cluster.json",
+    "props": "none (single state; ground cluster pointing up)",
+    "light_level": 9,
+    "notes": "suggested light 9; non-full-cube, no occlusion"
+  },
+  {
+    "index": 7,
+    "id": "soulbound_decor:ancient_root_column",
+    "title": "Ancient Root Column",
+    "texture": "assets/soulbound_decor/textures/block/ancient_root_column.png",
+    "texture_size": [
+      64,
+      64
+    ],
+    "model": "assets/soulbound_decor/models/block/ancient_root_column.json",
+    "props": "none; stacks vertically",
+    "light_level": 0,
+    "notes": "tiles vertically (top/bottom faces at 3..13 px inset)"
+  },
+  {
+    "index": 8,
+    "id": "soulbound_decor:emerald_hanging_vines",
+    "title": "Emerald Hanging Vines",
+    "texture": "assets/soulbound_decor/textures/block/emerald_hanging_vines.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/emerald_hanging_vines.json",
+    "props": "none; hangs from block above",
+    "light_level": 7,
+    "notes": "cross-plane, cutout; suggested light 7"
+  },
+  {
+    "index": 9,
+    "id": "soulbound_decor:forgotten_garden_flower",
+    "title": "Forgotten Garden Flower",
+    "texture": "assets/soulbound_decor/textures/block/forgotten_garden_flower.png",
+    "texture_size": [
+      16,
+      16
+    ],
+    "model": "assets/soulbound_decor/models/block/forgotten_garden_flower.json",
+    "props": "none; plant on soil/moss",
+    "light_level": 5,
+    "notes": "cross-plane, cutout; suggested light 5"
+  },
+  {
+    "index": 10,
+    "id": "soulbound_decor:sanctuary_lantern",
+    "title": "Sanctuary Lantern",
+    "texture": "assets/soulbound_decor/textures/block/sanctuary_lantern.png",
+    "texture_size": [
+      32,
+      32
+    ],
+    "model": "assets/soulbound_decor/models/block/sanctuary_lantern.json",
+    "props": "hanging=true|false",
+    "light_level": 15,
+    "notes": "light 15 (soul-lantern-like); emerald light colour via texture only"
+  },
+  {
+    "index": 11,
+    "id": "soulbound_decor:guardian_rune_pillar",
+    "title": "Guardian Rune Pillar",
+    "texture": "assets/soulbound_decor/textures/block/guardian_rune_pillar.png",
+    "texture_size": [
+      64,
+      64
+    ],
+    "model": "assets/soulbound_decor/models/block/guardian_rune_pillar.json",
+    "props": "none (inlay faces north)",
+    "light_level": 10,
+    "notes": "glowing runes; suggested light 10"
+  },
+  {
+    "index": 12,
+    "id": "soulbound_decor:ancient_emerald_chest",
+    "title": "Ancient Emerald Chest",
+    "texture": "assets/soulbound_decor/textures/block/ancient_emerald_chest.png",
+    "texture_size": [
+      64,
+      64
+    ],
+    "model": "assets/soulbound_decor/models/block/ancient_emerald_chest.json",
+    "props": "facing=north|east|south|west",
+    "light_level": 0,
+    "notes": "static model; lid does not animate (no BER); front faces -Z at facing=north"
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "polished_sanctuary_stone",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 1,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "c48d4574-c7cc-522b-87e5-d83943d2dbcd"
+    }
+  ],
+  "outliner": [
+    "c48d4574-c7cc-522b-87e5-d83943d2dbcd"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "polished_sanctuary_stone.png",
+      "folder": "block",
+      "namespace": "soulbound_decor",
+      "id": "0",
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "particle": true,
+      "render_mode": "default",
+      "frame_time": 1,
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABM0lEQVR4nKWTMU7DMBiFvyCkDiiLG4UFtZ0qcBYOkPQezcwxGDkBM3N6jzZXqGeoWIhSL0ydyhB+K3ZSCYl/+WW//z0/P8vRbDk/c6HylzUA9fPm0gjRbDk/l0/rUfCw6PrsfZxcvW24lsXXZ+OBtrXcLO4HmG0tAA+PHXYlQJJOva4SxaRumNS+cFjOQdscSdIpbXN04G5bA1Cscne6SpQn4DkIycUqJ9PaCYXkgQM5ZW8MmdbEpSYGVKWcYOjCCUg4e2MoVjlxqfmuDABxqSl+XWVaY1vL7V3qX6FfIvaXcg5UorCtJdOavTGoShGXGoCP19o5uygQiuy2NQVduEIeewVPQEQAL30h968oGQwEZECIobswn0GI/YFTnnLK08H+6DOKJekAhx7W3+9X9N/v/APdLYzo7C3puwAAAABJRU5ErkJggg=="
+    }
+  ]
+}

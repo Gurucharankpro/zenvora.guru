@@ -1,0 +1,94 @@
+PASS  105 JSON/bbmodel/mcmeta files parse correctly
+PASS  frostgrave_prowler: exactly the 10 required animation names (10)
+PASS    idle: 90 keyframes, last key 2.0 <= length 2.0
+PASS    walk: 135 keyframes, last key 1.0 <= length 1.0
+PASS    run: 153 keyframes, last key 0.5 <= length 0.5
+PASS    alert: 35 keyframes, last key 1.2 <= length 1.2
+PASS    jump: 64 keyframes, last key 0.9 <= length 0.9
+PASS    claw_attack: 41 keyframes, last key 0.9 <= length 0.9
+PASS    frost_bite: 41 keyframes, last key 1.1 <= length 1.1
+PASS    ice_howl: 70 keyframes, last key 2.0 <= length 2.0
+PASS    spawn: 37 keyframes, last key 1.6 <= length 1.6
+PASS    death: 49 keyframes, last key 1.4 <= length 1.4
+PASS  frostgrave_prowler.png is exactly (128, 128)
+PASS  frostgrave_prowler_glowing.png 128x128 with emissive pixels
+PASS  frostgrave_prowler: all bone parents exist (18 bones)
+PASS  frostgrave_prowler: animations only reference existing bones
+PASS  frostgrave_prowler: every UV rectangle inside 128x128
+PASS  frostgrave_prowler: cubes present
+PASS  chainbound_sentinel: exactly the 10 required animation names (10)
+PASS    idle: 63 keyframes, last key 3.0 <= length 3.0
+PASS    walk: 99 keyframes, last key 1.6 <= length 1.6
+PASS    run: 99 keyframes, last key 0.9 <= length 0.9
+PASS    guard: 39 keyframes, last key 1.0 <= length 1.0
+PASS    chain_swing: 39 keyframes, last key 1.6 <= length 1.6
+PASS    ice_pulse: 41 keyframes, last key 1.8 <= length 1.8
+PASS    heavy_strike: 41 keyframes, last key 2.0 <= length 2.0
+PASS    stagger: 33 keyframes, last key 1.2 <= length 1.2
+PASS    spawn: 38 keyframes, last key 2.0 <= length 2.0
+PASS    death: 42 keyframes, last key 2.2 <= length 2.2
+PASS  chainbound_sentinel.png is exactly (128, 128)
+PASS  chainbound_sentinel_glowing.png 128x128 with emissive pixels
+PASS  chainbound_sentinel: all bone parents exist (15 bones)
+PASS  chainbound_sentinel: animations only reference existing bones
+PASS  chainbound_sentinel: every UV rectangle inside 128x128
+PASS  chainbound_sentinel: cubes present
+PASS  frozen_gravekeeper: exactly the 10 required animation names (10)
+PASS    idle: 72 keyframes, last key 3.2 <= length 3.2
+PASS    walk: 117 keyframes, last key 1.4 <= length 1.4
+PASS    run: 117 keyframes, last key 0.8 <= length 0.8
+PASS    battle_roar: 71 keyframes, last key 2.4 <= length 2.4
+PASS    axe_slam: 54 keyframes, last key 2.2 <= length 2.2
+PASS    frozen_sweep: 46 keyframes, last key 2.4 <= length 2.4
+PASS    ice_spike_attack: 44 keyframes, last key 2.6 <= length 2.6
+PASS    royal_guard: 39 keyframes, last key 1.2 <= length 1.2
+PASS    phase_transition: 110 keyframes, last key 3.5 <= length 3.5
+PASS    death: 49 keyframes, last key 3.5 <= length 3.5
+PASS  frozen_gravekeeper.png is exactly (128, 128)
+PASS  frozen_gravekeeper_glowing.png 128x128 with emissive pixels
+PASS  frozen_gravekeeper: all bone parents exist (17 bones)
+PASS  frozen_gravekeeper: animations only reference existing bones
+PASS  frozen_gravekeeper: every UV rectangle inside 128x128
+PASS  frozen_gravekeeper: cubes present
+PASS  exactly 12 blockstates (12)
+PASS  block texture cracked_icebound_bricks.png
+PASS  item model cracked_icebound_bricks
+PASS  block texture frostgrave_stone.png
+PASS  item model frostgrave_stone
+PASS  block texture frozen_crystal_cluster.png
+PASS  item model frozen_crystal_cluster
+PASS  block texture frozen_memorial_statue.png
+PASS  item model frozen_memorial_statue
+PASS  block texture ghostfrost_flower.png
+PASS  item model ghostfrost_flower
+PASS  block texture glowing_blue_ice_crystal.png
+PASS  item model glowing_blue_ice_crystal
+PASS  block texture polished_frostgrave_stone.png
+PASS  item model polished_frostgrave_stone
+PASS  block texture royal_frost_marble.png
+PASS  item model royal_frost_marble
+PASS  block texture royal_ice_lantern.png
+PASS  item model royal_ice_lantern
+PASS  block texture silver_chain_column.png
+PASS  item model silver_chain_column
+PASS  block texture winter_royal_chest.png
+PASS  item model winter_royal_chest
+PASS  block texture winterveil_vines.png
+PASS  item model winterveil_vines
+PASS  block-model UVs all within 0-16 (checked)
+PASS  portal surface strip 64x512 (8 frames)
+
+OVERALL: ALL CHECKS PASSED
+
+=====================================================================
+NOT VERIFIED (be honest - no tool in this environment could do it)
+=====================================================================
+- Nothing was loaded in Minecraft / Blockbench / GeckoLib. No in-game test was run.
+- Animation rotation signs/axes follow my own convention; open each .animation.json in Blockbench
+  (GeckoLib animation format) and flip axis signs globally if limbs swing the wrong way.
+- Previews (*_preview.png) are rendered by my own bind-pose software renderer (no animation, no lighting engine).
+- .bbmodel files are generated from the same data as the .geo.json. Blockbench may re-order UV/rotation
+  signs on import; treat geo.json as the authoritative runtime file and re-export from Blockbench if you edit.
+- Animated portal texture (.mcmeta strip) depends on the GeckoLib version supporting animated textures.
+- Dungeon NBT structures: NOT part of this package (phase not requested).
+- No Java code, no sounds, in this package (by request).

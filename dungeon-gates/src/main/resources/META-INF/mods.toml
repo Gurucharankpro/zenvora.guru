@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+[[mods]]
+modId="dungeongates"
+version="0.1.0"
+displayName="Dungeon Gates"
+description='''Independent floating dungeon gates. First chapter: Emerald Trial and Frozen Grave.'''
+[[dependencies.dungeongates]]
+modId="forge"
+mandatory=true
+versionRange="[47.3,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.dungeongates]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.dungeongates]]
+modId="geckolib"
+mandatory=true
+versionRange="[4.4.9,5)"
+ordering="BEFORE"
+side="BOTH"

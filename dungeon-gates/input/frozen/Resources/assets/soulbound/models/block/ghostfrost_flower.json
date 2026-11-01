@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "soulbound:block/ghostfrost_flower"
+  }
+}

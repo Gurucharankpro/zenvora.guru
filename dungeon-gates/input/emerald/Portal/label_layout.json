@@ -1,0 +1,44 @@
+{
+  "panel_png": "assets/soulbound/textures/entity/portal/portal_label_panel.png",
+  "panel_size_px": [
+    256,
+    112
+  ],
+  "world_size_blocks": [
+    2.4,
+    1.05
+  ],
+  "anchor": "above portal, centered on portal vertical axis",
+  "anchor_height_above_ground_blocks": 5.6,
+  "bob_amplitude_blocks": 0.08,
+  "bob_period_s": 4.0,
+  "billboard": "always face camera (yaw only), unlit/full-bright, translucent",
+  "visible_distance_blocks": 32,
+  "lines": [
+    {
+      "text": "LEVEL 1",
+      "color": "#7DFFB6",
+      "relative_size": 1.0,
+      "y_px": 6
+    },
+    {
+      "text": "GATE 1/5",
+      "color": "#52F59A",
+      "relative_size": 0.73,
+      "y_px": 38
+    },
+    {
+      "text": "EMERALD TRIAL",
+      "color": "#A8FFD2",
+      "relative_size": 0.77,
+      "y_px": 60
+    },
+    {
+      "text": "DIFFICULTY: 1/5",
+      "color": "#78E6A0",
+      "relative_size": 0.64,
+      "y_px": 86
+    }
+  ],
+  "note": "Text baked into panel PNG for a texture-based implementation; alternatively render the four strings with the colors above in a billboard text component."
+}

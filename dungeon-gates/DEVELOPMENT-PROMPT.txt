@@ -1,0 +1,283 @@
+# COMPLETE DUNGEON GATES MOD
+## Minecraft Java Edition — Forge 1.20.1 — Java 17
+
+You are an expert Minecraft Forge developer specializing in procedural world generation, custom dimensions, dungeon systems, GeckoLib animation, and entity development.
+
+I will upload ZIP packages created by Claude containing dungeon portals, blocks, structures, mobs, bosses, textures, and animations.
+
+YOUR TASK IS TO BUILD A COMPLETELY INDEPENDENT, FUNCTIONAL MINECRAFT MOD FOCUSED EXCLUSIVELY ON DUNGEON GATES.
+
+This is NOT the Soulbound Army mod. Do not implement soul extraction, soul binding, summoning, shadow armies, recruitment, or army management. A separate AI will integrate this dungeon-gates mod with my existing soul-summoning mod in the future.
+
+# 1. TECHNICAL REQUIREMENTS
+- Minecraft Java Edition 1.20.1.
+- Minecraft Forge 47.x.
+- Java 17.
+- Compatible GeckoLib version.
+- Complete Gradle Forge project.
+- Functional Java code.
+- Registered entities, blocks, items, and structures.
+- Multiplayer-compatible server-side gameplay.
+- Persistent save data.
+- Working compiled JAR when the build environment supports it.
+- Use a separate mod ID such as `dungeongates`, after checking for conflicts.
+- No dependency on Soulbound Army; modular architecture for future integration.
+
+# 2. SIX REQUIRED PORTALS
+
+| Portal ID | Gate Name | Level | Category |
+|---|---|---|---|
+| P1-1 | Emerald Trial Gate | 1 | Regular Gate I |
+| P1-2 | Frozen Grave Gate | 1 | Regular Gate II |
+| P1-3 | Violet Clockwork Gate | 1 | Regular Gate III |
+| P1-4 | Crimson Bloodmoon Gate | 1 | Regular Gate IV |
+| P1-5 | Black Eclipse Gate | 1 | Final Boss Gate |
+| P2-1 | Azure Ruins Gate | 2 | Regular Gate I |
+
+ALL SIX PORTAL TYPES MUST ACTUALLY SPAWN NATURALLY IN THE NORMAL OVERWORLD.
+
+Do not make only some of them generate naturally. They must not be creative-only or command-only. Every gate connects to its own distinct dungeon.
+
+# 3. HIGHEST PRIORITY — RELIABLE NATURAL OVERWORLD GENERATION
+
+Implement reliable Minecraft Forge 1.20.1-compatible natural world generation:
+1. Register all six portal variants.
+2. Generate every type naturally in newly generated suitable Overworld chunks.
+3. Use configurable spawning weights and overall frequency.
+4. Validate terrain and provide sufficient clear space.
+5. Avoid portals embedded in solid blocks or in unsuitable hazardous locations.
+6. Prevent portal overlap and enforce reasonable spacing.
+7. Keep spawning performant and chunk-safe.
+8. Preserve gate identity through save/load.
+9. Support single-player and dedicated multiplayer servers.
+10. Never require commands for normal generation.
+
+Suggested relative selection weights (NOT percent of chunks):
+- P1-1: 30
+- P1-2: 24
+- P1-3: 18
+- P1-4: 13
+- P1-5: 8
+- P2-1: 7
+
+Every type must have a nonzero chance and be realistically discoverable. Expose the overall spawn rate separately as a configuration option.
+
+Validate every portal's registration, generation eligibility, real biome/terrain conditions, and successful placement in the Overworld. Add a development command such as `/dgates verify_spawns` plus controlled placement tests that exercise the actual generation logic.
+
+When possible run multiple-seed, newly generated Overworld tests and report seed, chunks tested, and occurrences per portal type. A manually placed portal or a summon command DOES NOT prove natural spawning works. NEVER claim all six naturally spawn unless actual world-generation tests confirm this.
+
+# 4. FLOATING FRAMELESS PORTAL DESIGN
+
+All six portals are SOLO LEVELING-INSPIRED FLOATING MAGICAL RIFTS:
+- Floating vertical magical oval/tear of energy, slightly above ground.
+- NO stone arch, obsidian frame, block doorway, supporting pillars, or surrounding structures.
+- Individual colors, effects, particles, animated textures, and appearances from the uploaded asset ZIPs.
+
+Colors:
+- P1-1: Emerald Green.
+- P1-2: Icy Cyan Blue.
+- P1-3: Deep Violet.
+- P1-4: Crimson Red.
+- P1-5: Black, Violet, and Gold.
+- P2-1: Azure Blue and Turquoise.
+
+Use the actual models and textures where possible; repair conversions, transparency, UV mapping, animation resources, and rendering problems. Do not reuse one generic texture for every gate.
+
+# 5. CRITICAL — FLOATING LEVEL AND CATEGORY TEXT ABOVE EVERY PORTAL
+
+EVERY PORTAL MUST HAVE PERMANENT, AUTOMATICALLY DISPLAYED FLOATING INFORMATION ABOVE IT:
+1. LEVEL.
+2. GATE NUMBER.
+3. GATE NAME.
+4. GATE CATEGORY.
+
+Exact text examples:
+
+P1-1:
+LEVEL 1
+GATE 1/5
+EMERALD TRIAL
+CATEGORY: REGULAR I
+
+P1-2:
+LEVEL 1
+GATE 2/5
+FROZEN GRAVE
+CATEGORY: REGULAR II
+
+P1-3:
+LEVEL 1
+GATE 3/5
+VIOLET CLOCKWORK
+CATEGORY: REGULAR III
+
+P1-4:
+LEVEL 1
+GATE 4/5
+CRIMSON BLOODMOON
+CATEGORY: REGULAR IV
+
+P1-5:
+LEVEL 1
+GATE 5/5
+BLACK ECLIPSE
+CATEGORY: FINAL BOSS
+
+P2-1:
+LEVEL 2
+GATE 1/5
+AZURE RUINS
+CATEGORY: REGULAR I
+
+Rendering requirements:
+- Text hovers over each portal's top edge and faces the camera.
+- Clearly readable, appropriate max render distance.
+- Always corresponds to the exact registered gate variant.
+- No need to point at the gate or press buttons.
+- Does not visibly render through solid terrain unnecessarily.
+- Works for naturally generated gates, save/load, and multiplayer.
+- Does not require manually placing a named entity.
+- The gate category must be visibly distinguishable.
+- Implement efficient Forge 1.20.1-compatible in-world text rendering.
+
+THIS FEATURE AND NATURAL SPAWNING ARE THE TOP TWO PRIORITIES.
+
+# 6. TOUCH TO ENTER
+
+On contact with a portal's energy surface, the player must enter immediately:
+- NO right-click.
+- NO button.
+- NO activation item.
+
+Implement reliable server-side collision detection, safe teleportation, cooldowns to prevent loops, saved return position, safe dungeon arrival, and multiplayer handling.
+
+# 7. DUNGEONS
+
+Integrate the six unique dungeons using the actual uploaded structure assets:
+- P1-1 — Forgotten Emerald Sanctuary: underground emerald forest sanctuary.
+- P1-2 — Crypt of Eternal Winter: frozen royal crypt.
+- P1-3 — Forgotten Clockwork Factory: enchanted clockwork factory.
+- P1-4 — Forgotten Bloodmoon Fortress: gothic crimson fortress.
+- P1-5 — Citadel of the Fallen Eclipse: massive royal eclipse citadel.
+- P2-1 — Forgotten Azure City: partially flooded turquoise ruins.
+
+Dungeons should feel like separate dimensions, but DO NOT create a new Minecraft dimension for every gate. Prefer one shared dungeon dimension with isolated instances, or another technically robust architecture.
+
+Implement complete connected structures, bounded playable areas, arrival points, enemy encounters, boss arenas, reward chambers, exit portals, persistent state, instance isolation, proper cleanup, and multiplayer safety. Prevent structure overlap and unsafe teleports.
+
+# 8. MOBS AND BOSSES — ALL SIX PACKS
+
+Integrate exactly two regular mobs and one boss per gate, using the uploaded asset files:
+
+P1-1:
+- Mossbound Skulker
+- Crystal Sentinel
+- Emerald Root Warden (mini-boss)
+
+P1-2:
+- Frostgrave Prowler
+- Chainbound Sentinel
+- Frozen Gravekeeper (mini-boss)
+
+P1-3:
+- Ticking Crawler
+- Hollow Timekeeper
+- Broken Chrono King (mini-boss)
+
+P1-4:
+- Crimson Stalker
+- Masked Moon Guard
+- Bloodmoon Knight (mini-boss)
+
+P1-5:
+- Eclipse Hound
+- Royal Void Sentinel
+- Black Eclipse Sovereign (MAIN BOSS)
+
+P2-1:
+- Tidal Skitter
+- Drowned Pearl Guardian
+- Azure Tidekeeper (mini-boss)
+
+TOTAL: 18 CREATURES.
+
+Regular mobs use five meaningful animations each. Regular mini-bosses use eight each. The P1-5 main boss uses ten. Respect the exact animation names and assets from the uploaded ZIPs.
+
+Use compatible GeckoLib and implement registrations, attributes, AI, attacks, hit detection, animation triggering/synchronization, boss health bars, death, and completion events. Implement actual damage based on server-side gameplay events, not merely animation playback.
+
+# 9. GRADUAL DIFFICULTY
+
+Increase difficulty gradually between adjacent gates. No huge jumps in health, damage, or mob numbers. P2-1 should be only slightly harder overall than P1-5 despite P1-5 having a special final boss encounter. Keep relevant combat values configurable. Favor interesting patterns and fair telegraphs over excessive statistics.
+
+# 10. FINAL GATE SPECIAL RULE
+
+P1-5 is a final-boss dungeon. Its normal exit remains LOCKED until the Black Eclipse Sovereign is defeated. After victory, unlock the reward room and return portal, award the trophy, persist completion, and return the player safely to the saved Overworld position.
+
+Normal gates should unlock their reward exit after their respective mini-boss is defeated. Provide administrative emergency extraction, crash/restart recovery, and protection against softlocks and reward duplication.
+
+# 11. BLOCKS, DECOR, AND TROPHIES
+
+Import actual uploaded custom dungeon blocks, decorations, treasure chests, animated effects, and trophies.
+
+Implement all required Forge registrations, blockstates, models, textures, collision/placement shapes, lighting where applicable, and loot. Convert `.bbmodel` to appropriate resource models as needed; do not assume `.bbmodel` can be loaded directly as a Minecraft block. No missing textures, broken model references, or empty placeholder content.
+
+# 12. FUTURE INTEGRATION — NOT NOW
+
+This mod must remain independent. Another AI will later integrate it with my existing soul-summoning mod.
+
+Use clean resource IDs, modular systems, stable entity IDs, and documented integration hooks for boss defeat / dungeon completion. Do NOT implement soul extraction, soul binding, shadow armies, recruiting, army management, or summoning. No runtime dependency on the soul mod.
+
+# 13. DEVELOPMENT WORKFLOW
+
+STEP 1 — AUDIT: Inspect every uploaded ZIP, list real assets, missing files, invalid JSON, structure errors, resource conflicts, and animation issues. Do not assume files exist.
+
+STEP 2 — BUILD: Create a complete Forge 1.20.1/Java 17 project with registries, rendering, portal world generation, instance architecture, structures, entities, and rewards.
+
+STEP 3 — INTEGRATE: Integrate ALL SIX gates, with unique floating appearance, natural generation, accurate level/category labels, contact entry, and distinct destinations.
+
+STEP 4 — DUNGEONS: Build/connect all six dungeons, enemy encounters, bosses, rewards, and exits.
+
+STEP 5 — SPAWN VERIFICATION: Run controlled generation tests and, where possible, multi-seed natural world-generation tests. Report seeds, generated chunks, counts for each of the six gate types, and failed types. A summon/manual placement test is NOT enough. Clearly disclose if live tests cannot be run.
+
+STEP 6 — LABEL VERIFICATION: Confirm all six naturally generated gate variants automatically display exact LEVEL, GATE NUMBER, NAME, and CATEGORY text above them.
+
+STEP 7 — BUILD AND TEST: Run Gradle if available, fix compilation errors, validate resource loading, portal entry, dungeon assembly, animations, boss completion, exits, save/load, and multiplayer where feasible. Distinguish a successful build from actual in-game testing.
+
+# 14. DELIVERABLE
+
+Deliver exactly ONE ZIP:
+
+Dungeon_Gates_Forge_1.20.1_Complete_Mod.zip
+
+Include:
+- Complete Forge source project.
+- All six portal types and Overworld generation.
+- Automatic floating labels.
+- All six complete dungeons.
+- All available integrated models, textures, animations, blocks, mobs, bosses, trophies.
+- Configurations and README.
+- Build instructions and accurate test results.
+- Working compiled JAR if successfully built.
+
+Do not substitute a plan, screenshots, or disconnected code snippets for actual working project files.
+
+# 15. FINAL ACCEPTANCE CRITERIA
+
+1. All six portals are registered.
+2. ALL SIX naturally generate in the Overworld.
+3. All are floating energy rifts with NO solid frames.
+4. Every gate displays accurate LEVEL, GATE NUMBER, NAME, and CATEGORY above it.
+5. Touching a portal enters the correct dungeon.
+6. All six dungeons load and connect correctly.
+7. All 18 intended creatures are registered and available in their dungeons.
+8. Real combat and supplied animations work.
+9. Boss defeat unlocks the correct return path.
+10. P1-5 normal exit stays locked until its main boss is defeated.
+11. Trophies and rewards work.
+12. This mod works independently of Soulbound Army.
+13. Forge 1.20.1 compatibility is maintained.
+14. Compilation and runtime tests are reported accurately and honestly.
+
+HIGHEST PRIORITY: EVERY PORTAL MUST NATURALLY SPAWN IN THE OVERWORLD, AND EVERY PORTAL MUST SHOW ITS LEVEL AND CATEGORY ABOVE IT.
+
+START BY INSPECTING THE UPLOADED ASSET ZIP PACKAGES, THEN IMPLEMENT THE MOD. DO NOT IMPLEMENT ANY SOUL SUMMONING OR SHADOW ARMY SYSTEM.

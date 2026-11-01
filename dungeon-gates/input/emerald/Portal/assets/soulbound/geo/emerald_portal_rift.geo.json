@@ -1,0 +1,209 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.emerald_portal_rift",
+        "texture_width": 96,
+        "texture_height": 144,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 7,
+        "visible_bounds_offset": [
+          0,
+          2.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "root",
+          "pivot": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "portal_center",
+          "parent": "root",
+          "pivot": [
+            0,
+            44,
+            0
+          ]
+        },
+        {
+          "name": "distortion",
+          "parent": "portal_center",
+          "pivot": [
+            0,
+            44,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -24,
+                8,
+                -0.4
+              ],
+              "size": [
+                48,
+                72,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "surface",
+          "parent": "portal_center",
+          "pivot": [
+            0,
+            44,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -24,
+                8,
+                0
+              ],
+              "size": [
+                48,
+                72,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "border",
+          "parent": "portal_center",
+          "pivot": [
+            0,
+            44,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -24,
+                8,
+                0.4
+              ],
+              "size": [
+                48,
+                72,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    96,
+                    144
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "label_anchor",
+          "parent": "root",
+          "pivot": [
+            0,
+            90,
+            0
+          ]
+        },
+        {
+          "name": "emitter_top",
+          "parent": "root",
+          "pivot": [
+            0,
+            80,
+            0
+          ]
+        },
+        {
+          "name": "emitter_bottom",
+          "parent": "root",
+          "pivot": [
+            0,
+            8,
+            0
+          ]
+        },
+        {
+          "name": "emitter_rim",
+          "parent": "portal_center",
+          "pivot": [
+            0,
+            44,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

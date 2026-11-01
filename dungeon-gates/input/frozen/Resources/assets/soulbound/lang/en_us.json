@@ -1,0 +1,19 @@
+{
+  "block.soulbound.frostgrave_stone": "Frostgrave Stone",
+  "block.soulbound.polished_frostgrave_stone": "Polished Frostgrave Stone",
+  "block.soulbound.cracked_icebound_bricks": "Cracked Icebound Bricks",
+  "block.soulbound.royal_frost_marble": "Royal Frost Marble",
+  "block.soulbound.glowing_blue_ice_crystal": "Glowing Blue Ice Crystal",
+  "block.soulbound.frozen_crystal_cluster": "Frozen Crystal Cluster",
+  "block.soulbound.silver_chain_column": "Silver Chain Column",
+  "block.soulbound.winterveil_vines": "Winterveil Vines",
+  "block.soulbound.ghostfrost_flower": "Ghostfrost Flower",
+  "block.soulbound.royal_ice_lantern": "Royal Ice Lantern",
+  "block.soulbound.frozen_memorial_statue": "Frozen Memorial Statue",
+  "block.soulbound.winter_royal_chest": "Winter Royal Chest",
+  "block.soulbound.frozen_grave_gate": "The Frozen Grave Gate",
+  "item.soulbound.frozen_kings_crown": "The Frozen King's Crown",
+  "entity.soulbound.frostgrave_prowler": "Frostgrave Prowler",
+  "entity.soulbound.chainbound_sentinel": "Chainbound Sentinel",
+  "entity.soulbound.frozen_gravekeeper": "The Frozen Gravekeeper"
+}

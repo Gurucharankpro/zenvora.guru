@@ -1,0 +1,50 @@
+{
+  "portal_id": "P1-1",
+  "dimension": "minecraft:overworld",
+  "spawn": {
+    "method": "chunk-based random roll with region spacing (e.g. one candidate per 48x48-chunk region... tune), persisted so a portal is generated once",
+    "rarity": "target roughly 1 P1-1 portal per ~1500x1500 blocks of land (config)",
+    "region_spacing_chunks": 94,
+    "region_separation_chunks": 50,
+    "min_distance_between_any_two_gate_portals_blocks": 400,
+    "min_distance_from_world_spawn_blocks": 96,
+    "min_distance_from_villages_and_vanilla_structures_blocks": 48,
+    "min_distance_from_other_soulbound_structures_blocks": 96,
+    "valid_biomes": "any land biome; exclude ocean, deep ocean, river, void, mushroom islands (config list)",
+    "terrain": {
+      "clear_ground_radius_blocks": 4,
+      "max_height_variation": 2,
+      "ground_must_be_solid_non_liquid": true,
+      "air_clearance_above_ground_blocks": 7,
+      "no_liquid_within_radius": 3
+    },
+    "placement_height": "portal bottom = surface Y + 0.5 (float); never underground; if clearance fails shift +/-8 blocks up to 3 times then abort roll"
+  },
+  "orientation": {
+    "yaw": "random multiple of 45 degrees chosen at creation, stored",
+    "double_sided": true,
+    "safe_entry": "keep a 5x5 area in front of and behind the plane free of blocks at feet/head height; no block placement protection needed beyond that clear zone"
+  },
+  "no_structure": "Do NOT generate any blocks around the portal (no frame, supports, stones). Optional: faint ground decals only via ground_projection texture.",
+  "overlap_protection": "reject candidates whose 24x24 footprint intersects any structure bounding box (use structure manager) or another portal footprint",
+  "persistent_identity": {
+    "fields": [
+      "portal_uuid",
+      "portal_id=P1-1",
+      "level=1",
+      "gate=1",
+      "world_seed_derived_nonce",
+      "pos",
+      "yaw",
+      "created_gametime",
+      "instance_state(none|active|completed)",
+      "instance_slot"
+    ],
+    "storage": "SavedData on overworld",
+    "notes": "Portal remains after completion (or per design), re-entry rules by integration developer."
+  },
+  "return_location": {
+    "record_on_entry": "dimension, exact feet position, yaw, game mode",
+    "safe_return": "on exit place player 2 blocks in front of the portal plane on the side they entered; verify solid floor + 2 air blocks; else spiral search radius 6, then scan upward; last resort world spawn"
+  }
+}

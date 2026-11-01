@@ -1,0 +1,39 @@
+{
+  "note": "Seconds. Use for server/client attack timing sync; animation names are exact.",
+  "animation_ids": [
+    "animation.frostgrave_prowler.idle",
+    "animation.frostgrave_prowler.walk",
+    "animation.frostgrave_prowler.run",
+    "animation.frostgrave_prowler.alert",
+    "animation.frostgrave_prowler.jump",
+    "animation.frostgrave_prowler.claw_attack",
+    "animation.frostgrave_prowler.frost_bite",
+    "animation.frostgrave_prowler.ice_howl",
+    "animation.frostgrave_prowler.spawn",
+    "animation.frostgrave_prowler.death"
+  ],
+  "timings": {
+    "claw_attack": {
+      "windup_end": 0.3,
+      "hit_time": 0.4,
+      "recovery_start": 0.55
+    },
+    "frost_bite": {
+      "windup_end": 0.4,
+      "hit_time": 0.55,
+      "recovery_start": 0.7
+    },
+    "ice_howl": {
+      "windup_end": 0.5,
+      "effect_time": 0.9,
+      "recovery_start": 1.6
+    },
+    "jump": {
+      "launch_time": 0.35,
+      "landing_time": 0.8
+    },
+    "spawn": {
+      "fully_emerged": 1.0
+    }
+  }
+}

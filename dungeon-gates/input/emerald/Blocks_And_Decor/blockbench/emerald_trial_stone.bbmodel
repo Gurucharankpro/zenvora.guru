@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "emerald_trial_stone",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 1,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "1f8c3fc0-df9e-54d9-b1b0-b6066f7291b7"
+    }
+  ],
+  "outliner": [
+    "1f8c3fc0-df9e-54d9-b1b0-b6066f7291b7"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "emerald_trial_stone.png",
+      "folder": "block",
+      "namespace": "soulbound_decor",
+      "id": "0",
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "particle": true,
+      "render_mode": "default",
+      "frame_time": 1,
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABS0lEQVR4nHVTPU/DMBB9ibIh5ctUCjsSjCgZIrFERWJk4ceE39Dfww9gqZhZKpUItcoW0TpNPTERhnDJ2XVvsXy+d/fe3dlJi7w/ygMCEYFbKHzt3kmFUPjaCQAuAAQiwlEeYLNOqhFkK+DxB575HBvOIhT+wMBWgftVmVkTA4Dz8PzYA0CcCLSN1MAmgzgRGrht5MAAADarLTqpUFc16qrWAlWZaaC2kZglM3RSwUmLvKcqdVWP06Cm0t2UGCcCm9V2YkCUTSCBOQsuxQMAdzHH93KNy1ddM52qzPD78gb1H3f9LqHKDPvlzySBGwHNpbFJcWme9BgK/6TbPIZLiBMx9YAH0DjdxRxf9xejjP3TlZa4beSwB7QDvDIlubm7xefH2lQ5/QXbcnCqu2Y3Amy9cNIi7019PAmBz/0Tz3TYwABOtjMQEULh4w9DWq2u7tActAAAAABJRU5ErkJggg=="
+    }
+  ]
+}

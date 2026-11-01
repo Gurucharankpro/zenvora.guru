@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "dungeongates:block/frozen_crystal_cluster"
+    },
+    "facing=down": {
+      "model": "dungeongates:block/frozen_crystal_cluster",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "dungeongates:block/frozen_crystal_cluster",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "dungeongates:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "dungeongates:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "dungeongates:block/frozen_crystal_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

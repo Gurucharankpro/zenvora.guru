@@ -1,0 +1,109 @@
+{
+  "note": "key -> state in each NBT variant; markers are minecraft:structure_block[mode=data] with block-entity NBT",
+  "palette": {
+    "air": {
+      "custom": "minecraft:air",
+      "vanilla_fallback": "minecraft:air"
+    },
+    "bedrock": {
+      "custom": "minecraft:bedrock",
+      "vanilla_fallback": "minecraft:bedrock"
+    },
+    "trialstone": {
+      "custom": "soulbound_decor:emerald_trial_stone",
+      "vanilla_fallback": "minecraft:stone"
+    },
+    "mossbricks": {
+      "custom": "soulbound_decor:mossy_trial_bricks",
+      "vanilla_fallback": "minecraft:mossy_stone_bricks"
+    },
+    "crackedbricks": {
+      "custom": "soulbound_decor:cracked_emerald_bricks",
+      "vanilla_fallback": "minecraft:cracked_stone_bricks"
+    },
+    "polished": {
+      "custom": "soulbound_decor:polished_sanctuary_stone",
+      "vanilla_fallback": "minecraft:polished_andesite"
+    },
+    "crystal": {
+      "custom": "soulbound_decor:glowing_emerald_crystal_block",
+      "vanilla_fallback": "minecraft:emerald_block"
+    },
+    "cluster": {
+      "custom": "soulbound_decor:emerald_crystal_cluster",
+      "vanilla_fallback": "minecraft:amethyst_cluster[facing=up,waterlogged=false]"
+    },
+    "root": {
+      "custom": "soulbound_decor:ancient_root_column",
+      "vanilla_fallback": "minecraft:mangrove_log[axis=y]"
+    },
+    "vines": {
+      "custom": "soulbound_decor:emerald_hanging_vines",
+      "vanilla_fallback": "minecraft:cave_vines_plant[berries=false]"
+    },
+    "flower": {
+      "custom": "soulbound_decor:forgotten_garden_flower",
+      "vanilla_fallback": "minecraft:lily_of_the_valley"
+    },
+    "lantern": {
+      "custom": "soulbound_decor:sanctuary_lantern[hanging=false]",
+      "vanilla_fallback": "minecraft:soul_lantern[hanging=false,waterlogged=false]"
+    },
+    "lantern_h": {
+      "custom": "soulbound_decor:sanctuary_lantern[hanging=true]",
+      "vanilla_fallback": "minecraft:soul_lantern[hanging=true,waterlogged=false]"
+    },
+    "pillar": {
+      "custom": "soulbound_decor:guardian_rune_pillar",
+      "vanilla_fallback": "minecraft:chiseled_stone_bricks"
+    },
+    "chest_n": {
+      "custom": "soulbound_decor:ancient_emerald_chest[facing=north]",
+      "vanilla_fallback": "minecraft:chest[facing=north,type=single,waterlogged=false]"
+    },
+    "chest_e": {
+      "custom": "soulbound_decor:ancient_emerald_chest[facing=east]",
+      "vanilla_fallback": "minecraft:chest[facing=east,type=single,waterlogged=false]"
+    },
+    "chest_s": {
+      "custom": "soulbound_decor:ancient_emerald_chest[facing=south]",
+      "vanilla_fallback": "minecraft:chest[facing=south,type=single,waterlogged=false]"
+    },
+    "chest_w": {
+      "custom": "soulbound_decor:ancient_emerald_chest[facing=west]",
+      "vanilla_fallback": "minecraft:chest[facing=west,type=single,waterlogged=false]"
+    },
+    "moss": {
+      "custom": "minecraft:moss_block",
+      "vanilla_fallback": "minecraft:moss_block"
+    },
+    "mosscarpet": {
+      "custom": "minecraft:moss_carpet",
+      "vanilla_fallback": "minecraft:moss_carpet"
+    },
+    "water": {
+      "custom": "minecraft:water[level=0]",
+      "vanilla_fallback": "minecraft:water[level=0]"
+    },
+    "gold": {
+      "custom": "minecraft:gold_block",
+      "vanilla_fallback": "minecraft:gold_block"
+    },
+    "fungus": {
+      "custom": "minecraft:warped_fungus",
+      "vanilla_fallback": "minecraft:warped_fungus"
+    },
+    "azalea": {
+      "custom": "minecraft:azalea_leaves[distance=1,persistent=true,waterlogged=false]",
+      "vanilla_fallback": "minecraft:azalea_leaves[distance=1,persistent=true,waterlogged=false]"
+    },
+    "rooted": {
+      "custom": "minecraft:rooted_dirt",
+      "vanilla_fallback": "minecraft:rooted_dirt"
+    },
+    "marker": {
+      "custom": "minecraft:structure_block[mode=data]",
+      "vanilla_fallback": "minecraft:structure_block[mode=data]"
+    }
+  }
+}

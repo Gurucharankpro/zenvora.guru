@@ -1,0 +1,47 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "up": "true"
+      },
+      "apply": {
+        "model": "soulbound:block/winterveil_vines_up"
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "soulbound:block/winterveil_vines_side"
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "soulbound:block/winterveil_vines_side",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "soulbound:block/winterveil_vines_side",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "soulbound:block/winterveil_vines_side",
+        "y": 270
+      }
+    }
+  ]
+}

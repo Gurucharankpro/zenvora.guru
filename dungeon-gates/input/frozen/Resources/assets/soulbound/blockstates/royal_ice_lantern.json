@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "soulbound:block/royal_ice_lantern"
+    },
+    "hanging=true": {
+      "model": "soulbound:block/royal_ice_lantern_hanging"
+    }
+  }
+}

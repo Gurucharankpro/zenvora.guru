@@ -1,0 +1,398 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.emerald_portal_runes",
+        "texture_width": 128,
+        "texture_height": 16,
+        "visible_bounds_width": 5,
+        "visible_bounds_height": 7,
+        "visible_bounds_offset": [
+          0,
+          2.5,
+          0
+        ]
+      },
+      "bones": [
+        {
+          "name": "rune_root",
+          "pivot": [
+            0,
+            44,
+            0
+          ]
+        },
+        {
+          "name": "rune_ring",
+          "parent": "rune_root",
+          "pivot": [
+            0,
+            44,
+            0
+          ]
+        },
+        {
+          "name": "rune_1",
+          "parent": "rune_ring",
+          "pivot": [
+            30.0,
+            44.0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                26.0,
+                40.0,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    0,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_2",
+          "parent": "rune_ring",
+          "pivot": [
+            21.213,
+            75.113,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                17.213,
+                71.113,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    16,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    16,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_3",
+          "parent": "rune_ring",
+          "pivot": [
+            0.0,
+            88.0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.0,
+                84.0,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    32,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    32,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_4",
+          "parent": "rune_ring",
+          "pivot": [
+            -21.213,
+            75.113,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -25.213,
+                71.113,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    48,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    48,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_5",
+          "parent": "rune_ring",
+          "pivot": [
+            -30.0,
+            44.0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -34.0,
+                40.0,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    64,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    64,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_6",
+          "parent": "rune_ring",
+          "pivot": [
+            -21.213,
+            12.887,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -25.213,
+                8.887,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    80,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_7",
+          "parent": "rune_ring",
+          "pivot": [
+            -0.0,
+            0.0,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                -4.0,
+                -4.0,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    96,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "rune_8",
+          "parent": "rune_ring",
+          "pivot": [
+            21.213,
+            12.887,
+            0
+          ],
+          "cubes": [
+            {
+              "origin": [
+                17.213,
+                8.887,
+                0
+              ],
+              "size": [
+                8,
+                8,
+                0
+              ],
+              "uv": {
+                "north": {
+                  "uv": [
+                    112,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                },
+                "south": {
+                  "uv": [
+                    112,
+                    0
+                  ],
+                  "uv_size": [
+                    16,
+                    16
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

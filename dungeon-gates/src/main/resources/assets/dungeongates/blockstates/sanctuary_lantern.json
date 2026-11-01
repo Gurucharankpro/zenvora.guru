@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "dungeongates:block/sanctuary_lantern"
+    },
+    "hanging=true": {
+      "model": "dungeongates:block/sanctuary_lantern_hanging"
+    }
+  }
+}

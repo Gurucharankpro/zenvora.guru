@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "polished_frostgrave_stone",
+  "model_identifier": "polished_frostgrave_stone",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "variable_placeholders": "",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "f87b1ba2-74e6-4e60-99d2-7a4a677ea437"
+    }
+  ],
+  "outliner": [
+    "f87b1ba2-74e6-4e60-99d2-7a4a677ea437"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "polished_frostgrave_stone.png",
+      "folder": "",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "render_sides": "auto",
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_interpolate": false,
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "1485d8fd-9b48-4b76-9511-21913a2f4c16",
+      "relative_path": "",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABd0lEQVR4nKWTO3YqQQxEb6s7gDcfw+FjQoO9BNbhlXjJ+OEQGwJsCKdbDkCCia1ojj5VpVJPGNRz5Q8hAOvXN4bVmKqZUDUThtWYup0yrMYsVmsG/0aeq9spVTNh/foGQBjUc63bKTlnRIQQAqoXUc1syffnOzFGuq7zeimFGCPnnwMJQFUREUopF9QQaOcrjrsNKaUeuA33VjDGGCMiQjtfOXPO+dJ4BbDhevp0AxARcs6oKs1syWm/xYBVlRgjqkopBVWlnj7x/fl+A8g5E0KgmS05Hz5cnqqSUkJV3ZtmtuS423hPso+Hx2eOu4033rPe99hqlhcrnPZbQgiICCkllwtQSvHVzGyrJYDTfttjMuPMg9HixdWFEPxSrsDlXJ0WEUQEgNHihfPhw/M22DtjjNHRjb2U4sz3YYbbOd1EO6WIoKo9U+3xdF3n4OaBn9ESAO18xc/Xf1dmQ/dKHx6fbwCq2nsL5rYpKqW4knt1cP2Z+EP8AtVg4wEszStsAAAAAElFTkSuQmCC"
+    }
+  ]
+}

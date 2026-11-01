@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "cracked_emerald_bricks",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 1,
+      "color": 0,
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "7b2f7436-001d-59a5-ad1f-7c4b7309ade7"
+    }
+  ],
+  "outliner": [
+    "7b2f7436-001d-59a5-ad1f-7c4b7309ade7"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "cracked_emerald_bricks.png",
+      "folder": "block",
+      "namespace": "soulbound_decor",
+      "id": "0",
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "particle": true,
+      "render_mode": "default",
+      "frame_time": 1,
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABjUlEQVR4nJ2SPWrDQBBGn0VcGfy3GAc3W8QIF17cCHUB3cHkBL5CfArrBIGcwOQOqkMao0aF6iXGbCwLUqVwCrNrWUqVgWWXkeZjvjfTepj7Z4BJ+oxWMfU46D2jybjxttF6mPvnSfpMe7l1ycKUnMyRnhjQF10+kneCKKQwJXmaEUQhw3vB16fBqxYVpmx08JG8M1UzAPI0YzQZM7wX7rsH8B290klWjWKAqZqRp1lD/OvTXC3Y5H843Elf8vP2BIBWMT0xAHAdtZdbDnqP9CWFKemJAXmaMVUzTuZI6/H8cm4vtw4c4ESskFYxB713diyTkzleGBSmpC+6jeJqB0EU3hTbcGP8y7v1vDAbdmLd2AHgOsaeGNwcmwuikJ1YE0QhB71vdOkEOsmKTrKiL7rODuAAF6ZkqmZOpCFQ30QbO7FmYTbAdZGqsD24jO/n7cnd9gd7axW7dzVO5ognfYn0JXBZpPZye8PA5u0kpC9vOHlVn7aDOqi6tSqnPxlYmHmasTAbtIrdEtUZ/QIISdDW2glopAAAAABJRU5ErkJggg=="
+    }
+  ]
+}

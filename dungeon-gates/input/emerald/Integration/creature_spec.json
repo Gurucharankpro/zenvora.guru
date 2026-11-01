@@ -1,0 +1,748 @@
+{
+  "mossbound_skulker": {
+    "display_name": "Mossbound Skulker",
+    "suggested_entity_id": "soulbound:mossbound_skulker",
+    "folder_in_zip": "Mobs/MossboundSkulker",
+    "geo": "Mobs/MossboundSkulker/assets/soulbound/geo/mossbound_skulker.geo.json",
+    "geo_identifier": "geometry.mossbound_skulker",
+    "animation_file": "Mobs/MossboundSkulker/assets/soulbound/animations/mossbound_skulker.animation.json",
+    "texture": "Mobs/MossboundSkulker/assets/soulbound/textures/entity/mossbound_skulker.png",
+    "texture_runtime_path": "soulbound:textures/entity/mossbound_skulker.png",
+    "glowmask": "soulbound:textures/entity/mossbound_skulker_glowmask.png",
+    "blockbench_project": "Mobs/MossboundSkulker/blockbench/mossbound_skulker.bbmodel",
+    "texture_size": [
+      128,
+      128
+    ],
+    "bones": [
+      "root",
+      "body",
+      "head",
+      "eyeL",
+      "eyeR",
+      "earL",
+      "earR",
+      "hornL",
+      "hornR",
+      "hornTipL",
+      "hornTipR",
+      "tail1",
+      "tail2",
+      "tail3",
+      "legFL",
+      "legFR",
+      "legFlowL",
+      "legFlowR",
+      "legHL",
+      "legHR",
+      "legHlowL",
+      "legHlowR"
+    ],
+    "animations": {
+      "idle": {
+        "resource_name": "animation.mossbound_skulker.idle",
+        "length_s": 3.0,
+        "length_ticks": 60,
+        "loop": true,
+        "events_s": {},
+        "events_ticks": {},
+        "animated_bones": [
+          "body",
+          "earL",
+          "earR",
+          "eyeL",
+          "eyeR",
+          "head",
+          "tail1",
+          "tail2",
+          "tail3"
+        ]
+      },
+      "move": {
+        "resource_name": "animation.mossbound_skulker.move",
+        "length_s": 0.8,
+        "length_ticks": 16,
+        "loop": true,
+        "events_s": {
+          "footfall_FL_HR": 0.0,
+          "footfall_FR_HL": 0.4
+        },
+        "events_ticks": {
+          "footfall_FL_HR": 0,
+          "footfall_FR_HL": 8
+        },
+        "animated_bones": [
+          "body",
+          "earL",
+          "earR",
+          "head",
+          "legFL",
+          "legFR",
+          "legFlowL",
+          "legFlowR",
+          "legHL",
+          "legHR",
+          "legHlowL",
+          "legHlowR",
+          "tail1",
+          "tail2",
+          "tail3"
+        ]
+      },
+      "claw_attack": {
+        "resource_name": "animation.mossbound_skulker.claw_attack",
+        "length_s": 1.0,
+        "length_ticks": 20,
+        "loop": false,
+        "events_s": {
+          "windup_end": 0.3,
+          "impact": 0.4,
+          "recovery_start": 0.55
+        },
+        "events_ticks": {
+          "windup_end": 6,
+          "impact": 8,
+          "recovery_start": 11
+        },
+        "animated_bones": [
+          "body",
+          "earL",
+          "earR",
+          "head",
+          "legFL",
+          "legFR",
+          "legFlowR",
+          "legHL",
+          "legHR",
+          "tail1",
+          "tail2"
+        ]
+      },
+      "tail_sweep": {
+        "resource_name": "animation.mossbound_skulker.tail_sweep",
+        "length_s": 1.3,
+        "length_ticks": 26,
+        "loop": false,
+        "events_s": {
+          "windup_end": 0.5,
+          "impact_start": 0.55,
+          "impact": 0.6,
+          "impact_end": 0.7,
+          "recovery_start": 0.8
+        },
+        "events_ticks": {
+          "windup_end": 10,
+          "impact_start": 11,
+          "impact": 12,
+          "impact_end": 14,
+          "recovery_start": 16
+        },
+        "animated_bones": [
+          "body",
+          "earL",
+          "earR",
+          "head",
+          "legFL",
+          "legFR",
+          "tail1",
+          "tail2",
+          "tail3"
+        ]
+      },
+      "death": {
+        "resource_name": "animation.mossbound_skulker.death",
+        "length_s": 1.4,
+        "length_ticks": 28,
+        "loop": "hold_on_last_frame",
+        "events_s": {
+          "collapse_complete": 1.4
+        },
+        "events_ticks": {
+          "collapse_complete": 28
+        },
+        "animated_bones": [
+          "body",
+          "earL",
+          "earR",
+          "eyeL",
+          "eyeR",
+          "head",
+          "legFL",
+          "legFR",
+          "legFlowL",
+          "legFlowR",
+          "legHL",
+          "legHR",
+          "legHlowL",
+          "legHlowR",
+          "tail1",
+          "tail2",
+          "tail3"
+        ]
+      }
+    },
+    "suggested_hitbox_blocks": {
+      "width": 0.9,
+      "height": 1.1
+    },
+    "suggested_eye_height": 1.0,
+    "geckolib_state_mapping": {
+      "idle": "idle",
+      "moving": "move (animation speed 0.6 walking .. 1.0 running)",
+      "attack_melee": "claw_attack",
+      "attack_special": "tail_sweep",
+      "dying": "death"
+    },
+    "suggested_spawn_markers": [
+      "skulker_spawn_corridor_1",
+      "skulker_spawn_corridor_2",
+      "skulker_spawn_garden_1",
+      "skulker_spawn_garden_2",
+      "skulker_spawn_garden_3",
+      "skulker_spawn_garden_4"
+    ],
+    "notes": "Rear of the animation set: right front paw is the striking paw (legFR/legFlowR). Tail thorn hit arc sweeps from left (-X) to right (+X) of body."
+  },
+  "crystal_sentinel": {
+    "display_name": "Crystal Sentinel",
+    "suggested_entity_id": "soulbound:crystal_sentinel",
+    "folder_in_zip": "Mobs/CrystalSentinel",
+    "geo": "Mobs/CrystalSentinel/assets/soulbound/geo/crystal_sentinel.geo.json",
+    "geo_identifier": "geometry.crystal_sentinel",
+    "animation_file": "Mobs/CrystalSentinel/assets/soulbound/animations/crystal_sentinel.animation.json",
+    "texture": "Mobs/CrystalSentinel/assets/soulbound/textures/entity/crystal_sentinel.png",
+    "texture_runtime_path": "soulbound:textures/entity/crystal_sentinel.png",
+    "glowmask": "soulbound:textures/entity/crystal_sentinel_glowmask.png",
+    "blockbench_project": "Mobs/CrystalSentinel/blockbench/crystal_sentinel.bbmodel",
+    "texture_size": [
+      128,
+      128
+    ],
+    "bones": [
+      "root",
+      "pelvis",
+      "torso",
+      "chestCrystal",
+      "head",
+      "eyeL",
+      "eyeR",
+      "armL",
+      "armR",
+      "forearmL",
+      "forearmR",
+      "fistL",
+      "fistR",
+      "legL",
+      "legR",
+      "shinL",
+      "shinR",
+      "footL",
+      "footR",
+      "orbit"
+    ],
+    "animations": {
+      "idle": {
+        "resource_name": "animation.crystal_sentinel.idle",
+        "length_s": 3.2,
+        "length_ticks": 64,
+        "loop": true,
+        "events_s": {},
+        "events_ticks": {},
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "forearmL",
+          "forearmR",
+          "head",
+          "orbit",
+          "pelvis",
+          "torso"
+        ]
+      },
+      "move": {
+        "resource_name": "animation.crystal_sentinel.move",
+        "length_s": 1.0,
+        "length_ticks": 20,
+        "loop": true,
+        "events_s": {
+          "footfall_R": 0.0,
+          "footfall_L": 0.5
+        },
+        "events_ticks": {
+          "footfall_R": 0,
+          "footfall_L": 10
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "footL",
+          "footR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orbit",
+          "pelvis",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      },
+      "heavy_punch": {
+        "resource_name": "animation.crystal_sentinel.heavy_punch",
+        "length_s": 1.4,
+        "length_ticks": 28,
+        "loop": false,
+        "events_s": {
+          "windup_end": 0.5,
+          "impact": 0.62,
+          "recovery_start": 0.9
+        },
+        "events_ticks": {
+          "windup_end": 10,
+          "impact": 12,
+          "recovery_start": 18
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "fistR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "pelvis",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      },
+      "crystal_burst": {
+        "resource_name": "animation.crystal_sentinel.crystal_burst",
+        "length_s": 2.0,
+        "length_ticks": 40,
+        "loop": false,
+        "events_s": {
+          "charge_end": 0.7,
+          "burst_release": 0.8,
+          "recovery_start": 1.3
+        },
+        "events_ticks": {
+          "charge_end": 14,
+          "burst_release": 16,
+          "recovery_start": 26
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orbit",
+          "pelvis",
+          "torso"
+        ]
+      },
+      "death": {
+        "resource_name": "animation.crystal_sentinel.death",
+        "length_s": 2.2,
+        "length_ticks": 44,
+        "loop": "hold_on_last_frame",
+        "events_s": {
+          "knees_hit": 1.2,
+          "collapse_complete": 2.2
+        },
+        "events_ticks": {
+          "knees_hit": 24,
+          "collapse_complete": 44
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "eyeL",
+          "eyeR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orbit",
+          "pelvis",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      }
+    },
+    "suggested_hitbox_blocks": {
+      "width": 1.0,
+      "height": 2.2
+    },
+    "suggested_eye_height": 2.0,
+    "geckolib_state_mapping": {
+      "idle": "idle",
+      "moving": "move",
+      "attack_melee": "heavy_punch",
+      "attack_special": "crystal_burst",
+      "dying": "death"
+    },
+    "suggested_spawn_markers": [
+      "sentinel_spawn_hall_1",
+      "sentinel_spawn_hall_2",
+      "sentinel_spawn_hall_3",
+      "sentinel_spawn_hall_4"
+    ],
+    "notes": "Right fist is the striking fist (fistR). crystal_burst is a radial AoE: release at 0.8s; chestCrystal + orbit bones scale up as telegraph."
+  },
+  "emerald_root_warden": {
+    "display_name": "Emerald Root Warden",
+    "suggested_entity_id": "soulbound:emerald_root_warden",
+    "folder_in_zip": "Boss/EmeraldRootWarden",
+    "geo": "Boss/EmeraldRootWarden/assets/soulbound/geo/emerald_root_warden.geo.json",
+    "geo_identifier": "geometry.emerald_root_warden",
+    "animation_file": "Boss/EmeraldRootWarden/assets/soulbound/animations/emerald_root_warden.animation.json",
+    "texture": "Boss/EmeraldRootWarden/assets/soulbound/textures/entity/emerald_root_warden.png",
+    "texture_runtime_path": "soulbound:textures/entity/emerald_root_warden.png",
+    "glowmask": "soulbound:textures/entity/emerald_root_warden_glowmask.png",
+    "blockbench_project": "Boss/EmeraldRootWarden/blockbench/emerald_root_warden.bbmodel",
+    "texture_size": [
+      128,
+      128
+    ],
+    "bones": [
+      "root",
+      "pelvis",
+      "torso",
+      "chestCrystal",
+      "plateL",
+      "plateR",
+      "head",
+      "eyeL",
+      "eyeR",
+      "crown",
+      "antlerL",
+      "antlerR",
+      "antler2L",
+      "antler2R",
+      "antler3L",
+      "antler3R",
+      "armL",
+      "armR",
+      "forearmL",
+      "forearmR",
+      "fistL",
+      "fistR",
+      "legL",
+      "legR",
+      "shinL",
+      "shinR",
+      "footL",
+      "footR",
+      "shieldFront",
+      "orb"
+    ],
+    "animations": {
+      "idle": {
+        "resource_name": "animation.emerald_root_warden.idle",
+        "length_s": 3.6,
+        "length_ticks": 72,
+        "loop": true,
+        "events_s": {},
+        "events_ticks": {},
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "crown",
+          "forearmL",
+          "forearmR",
+          "head",
+          "orb",
+          "pelvis",
+          "plateL",
+          "plateR",
+          "shieldFront",
+          "torso"
+        ]
+      },
+      "move": {
+        "resource_name": "animation.emerald_root_warden.move",
+        "length_s": 1.2,
+        "length_ticks": 24,
+        "loop": true,
+        "events_s": {
+          "footfall_R": 0.0,
+          "footfall_L": 0.6
+        },
+        "events_ticks": {
+          "footfall_R": 0,
+          "footfall_L": 12
+        },
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "crown",
+          "footL",
+          "footR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      },
+      "heavy_slam": {
+        "resource_name": "animation.emerald_root_warden.heavy_slam",
+        "length_s": 2.2,
+        "length_ticks": 44,
+        "loop": false,
+        "events_s": {
+          "windup_end": 0.9,
+          "impact": 1.05,
+          "recovery_start": 1.4
+        },
+        "events_ticks": {
+          "windup_end": 18,
+          "impact": 21,
+          "recovery_start": 28
+        },
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "crown",
+          "fistL",
+          "fistR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      },
+      "root_sweep": {
+        "resource_name": "animation.emerald_root_warden.root_sweep",
+        "length_s": 2.0,
+        "length_ticks": 40,
+        "loop": false,
+        "events_s": {
+          "windup_end": 0.8,
+          "impact_start": 0.85,
+          "impact": 0.93,
+          "impact_end": 1.0,
+          "recovery_start": 1.3
+        },
+        "events_ticks": {
+          "windup_end": 16,
+          "impact_start": 17,
+          "impact": 19,
+          "impact_end": 20,
+          "recovery_start": 26
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "torso"
+        ]
+      },
+      "emerald_projectile": {
+        "resource_name": "animation.emerald_root_warden.emerald_projectile",
+        "length_s": 2.4,
+        "length_ticks": 48,
+        "loop": false,
+        "events_s": {
+          "charge_start": 0.0,
+          "charge_end": 1.2,
+          "projectile_spawn": 1.25,
+          "recovery_start": 1.7
+        },
+        "events_ticks": {
+          "charge_start": 0,
+          "charge_end": 24,
+          "projectile_spawn": 25,
+          "recovery_start": 34
+        },
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "torso"
+        ]
+      },
+      "crystal_shield": {
+        "resource_name": "animation.emerald_root_warden.crystal_shield",
+        "length_s": 2.0,
+        "length_ticks": 40,
+        "loop": false,
+        "events_s": {
+          "barrier_forming_start": 0.4,
+          "barrier_complete": 0.8,
+          "barrier_hold_start": 0.8,
+          "barrier_hold_end": 1.6,
+          "barrier_down_complete": 1.9
+        },
+        "events_ticks": {
+          "barrier_forming_start": 8,
+          "barrier_complete": 16,
+          "barrier_hold_start": 16,
+          "barrier_hold_end": 32,
+          "barrier_down_complete": 38
+        },
+        "animated_bones": [
+          "armL",
+          "armR",
+          "chestCrystal",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "torso"
+        ]
+      },
+      "phase_transition": {
+        "resource_name": "animation.emerald_root_warden.phase_transition",
+        "length_s": 3.0,
+        "length_ticks": 60,
+        "loop": false,
+        "events_s": {
+          "invulnerable_start": 0.0,
+          "shockwave": 1.8,
+          "invulnerable_end": 3.0
+        },
+        "events_ticks": {
+          "invulnerable_start": 0,
+          "shockwave": 36,
+          "invulnerable_end": 60
+        },
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "crown",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "plateL",
+          "plateR",
+          "shieldFront",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      },
+      "death": {
+        "resource_name": "animation.emerald_root_warden.death",
+        "length_s": 4.0,
+        "length_ticks": 80,
+        "loop": "hold_on_last_frame",
+        "events_s": {
+          "knees_hit": 1.6,
+          "collapse_complete": 4.0
+        },
+        "events_ticks": {
+          "knees_hit": 32,
+          "collapse_complete": 80
+        },
+        "animated_bones": [
+          "antlerL",
+          "antlerR",
+          "armL",
+          "armR",
+          "chestCrystal",
+          "crown",
+          "eyeL",
+          "eyeR",
+          "footL",
+          "footR",
+          "forearmL",
+          "forearmR",
+          "head",
+          "legL",
+          "legR",
+          "orb",
+          "pelvis",
+          "shieldFront",
+          "shinL",
+          "shinR",
+          "torso"
+        ]
+      }
+    },
+    "suggested_hitbox_blocks": {
+      "width": 1.6,
+      "height": 3.5
+    },
+    "suggested_eye_height": 3.1,
+    "geckolib_state_mapping": {
+      "idle": "idle",
+      "moving": "move",
+      "attack_melee_1": "heavy_slam",
+      "attack_melee_2": "root_sweep",
+      "ranged": "emerald_projectile",
+      "defense": "crystal_shield",
+      "phase_2_trigger": "phase_transition",
+      "dying": "death"
+    },
+    "suggested_spawn_markers": [
+      "boss_spawn"
+    ],
+    "notes": "Bones shieldFront and orb are scaled to 0.001 in every animation where they are not shown (GeckoLib has no default-hidden flag). Phase 2 visuals (plates open / brighter crystal) are not persisted by animation; use a gameplay flag + optional second glowmask."
+  }
+}

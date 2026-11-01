@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "format_version": "4.10",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "royal_frost_marble",
+  "model_identifier": "royal_frost_marble",
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "variable_placeholders": "",
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "rescale": false,
+      "locked": false,
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "autouv": 0,
+      "color": 0,
+      "origin": [
+        8.0,
+        8.0,
+        8.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            16,
+            16
+          ],
+          "texture": 0
+        }
+      },
+      "type": "cube",
+      "uuid": "cddffd05-d9ba-4af5-80bc-6722d2db21b4"
+    }
+  ],
+  "outliner": [
+    "cddffd05-d9ba-4af5-80bc-6722d2db21b4"
+  ],
+  "textures": [
+    {
+      "path": "",
+      "name": "royal_frost_marble.png",
+      "folder": "",
+      "namespace": "",
+      "id": "0",
+      "particle": false,
+      "render_mode": "default",
+      "render_sides": "auto",
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_interpolate": false,
+      "visible": true,
+      "mode": "bitmap",
+      "saved": true,
+      "uuid": "f79ad694-1e8e-4594-8a3a-bfb47d9dea62",
+      "relative_path": "",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAByElEQVR4nKWTS2oWQRSFv3r0A3EBSdBkrvFHk4ETpyFoXIJjwT0oiCBmD27ABUjAKI4cCSFiNEJmEkniCuyux70OQt+ff5yGhu6uU1+fc6rKvfp8plzhigBPbl3He4+qUmvFe4/3nr3DUwB2NlZxzpFzxjmHiCAivDsZLgG1VkQE7z1t2/L+4DcAW+tLxBhtsoigqnRdh3MOGPAA3nsAnh+LTQZMOAwDqkrbtrw88ZRSUNV5BFVFVXmQLwDYnq0gIozjSNu29H2PiOCc482dxhwZYP/ofCErwDAMTPFKKYQQbGwcx8USt9aXCCGQUsI5Z/batrVSQwiIiIEmmAf4+OMCVbWVmDp5+vUfzw4uoRMk50zTNObATw8fvp8hIjbY9/3cZowMw4CIMHUWY5xHeLy5RkqJ/aNzHt69Qa0VVeXt/WuM40jOmb7vrYuU0iJAVY0+ZW6axoSlFLudc3RdZ/oI2EfAykopEUKg1mqxJo2qEkKYAybxl2YZvv2x7I/u3QSwv4kIL34pu7PL1VlwkHPm9e2GWpdxzlFrZe/wlJ2NVXLOtld2N9copRjUA2ax1kqMERHh08+/TO6mwrZnK/Y+7QN31eP8H4C4BmdzPDYBAAAAAElFTkSuQmCC"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "_note": "DATA ONLY. In-world floating text must be drawn by client rendering code (BlockEntityRenderer); a PNG cannot float by itself.",
+  "portal_id": "P1-2",
+  "lines": [
+    {
+      "text": "LEVEL 1",
+      "color": "#78F0FF",
+      "scale": 1.2
+    },
+    {
+      "text": "GATE 2/5",
+      "color": "#C8FAFF",
+      "scale": 1.0
+    },
+    {
+      "text": "FROZEN GRAVE",
+      "color": "#5AC8FF",
+      "scale": 1.0
+    },
+    {
+      "text": "DIFFICULTY: BEGINNER II",
+      "color": "#96E6FF",
+      "scale": 0.7
+    }
+  ],
+  "background_texture": "soulbound:textures/gui/portal_label_bg.png",
+  "background_nine_slice_border_px": 6,
+  "offset_above_gate_blocks": 1.0,
+  "billboard": true,
+  "visible_distance_blocks": 32,
+  "fade_start_blocks": 24,
+  "min_readable_distance_blocks": 2,
+  "background_alpha": 0.8,
+  "text_shadow": true
+}

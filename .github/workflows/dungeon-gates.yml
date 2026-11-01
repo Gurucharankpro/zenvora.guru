@@ -1,0 +1,48 @@
+name: Dungeon Gates build and actual runtime checks
+on:
+  push:
+    branches: [dungeon-gates-forge-1.20.1]
+    paths: ['dungeon-gates/**', '.github/workflows/dungeon-gates.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dungeon-gates-build
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build and test real engine
+        id: build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dungeon-gates/reports
+          {
+            python -m pip install nbtlib==2.0.4 numpy==2.2.6 Pillow==11.3.0
+            python dungeon-gates/scripts/assets.py
+            cd dungeon-gates
+            gradle --no-daemon --console=plain build qaJar reobfQaJar
+            cd ..
+            python dungeon-gates/scripts/smoke.py
+            python dungeon-gates/scripts/package.py
+          } 2>&1 | tee dungeon-gates/reports/CI-BUILD.log
+      - name: Publish exact output or failure evidence
+        if: always()
+        shell: bash
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+        run: python dungeon-gates/scripts/publish.py

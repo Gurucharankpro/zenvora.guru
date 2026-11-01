@@ -1,0 +1,799 @@
+{
+ "checks": [
+  {
+   "check": "all JSON/.bbmodel/.mcmeta files parse",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "no Java/class source files shipped",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: texture exactly 128x128 PNG RGBA",
+   "pass": true,
+   "detail": "(128, 128) RGBA"
+  },
+  {
+   "check": "mossbound_skulker: texture has opaque + transparent regions",
+   "pass": true,
+   "detail": "opaque px 1996"
+  },
+  {
+   "check": "mossbound_skulker: glowmask 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: geo texture size 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: unique bone names",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: every parent bone exists (hierarchy valid)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: all 50 cube UV boxes inside texture",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: no overlapping UV boxes between different cubes",
+   "pass": true,
+   "detail": "max overlap 1"
+  },
+  {
+   "check": "mossbound_skulker: UV boxes fully painted (no transparent holes inside any box)",
+   "pass": true,
+   "detail": "0 boxes with holes"
+  },
+  {
+   "check": "mossbound_skulker: exactly 5 animations",
+   "pass": true,
+   "detail": "['animation.mossbound_skulker.idle', 'animation.mossbound_skulker.move', 'animation.mossbound_skulker.claw_attack', 'animation.mossbound_skulker.tail_sweep', 'animation.mossbound_skulker.death']"
+  },
+  {
+   "check": "mossbound_skulker: no duplicate animations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: every animation keyframes >=5 bones and >=20 keyframes",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "mossbound_skulker: loop flags correct (idle/move loop, others once/hold)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: bbmodel cube count == geo cube count",
+   "pass": true,
+   "detail": "50 vs 50"
+  },
+  {
+   "check": "mossbound_skulker: bbmodel embeds animations (5)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "mossbound_skulker: bbmodel embedded texture 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: texture exactly 128x128 PNG RGBA",
+   "pass": true,
+   "detail": "(128, 128) RGBA"
+  },
+  {
+   "check": "crystal_sentinel: texture has opaque + transparent regions",
+   "pass": true,
+   "detail": "opaque px 4142"
+  },
+  {
+   "check": "crystal_sentinel: glowmask 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: geo texture size 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: unique bone names",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: every parent bone exists (hierarchy valid)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: all 38 cube UV boxes inside texture",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: no overlapping UV boxes between different cubes",
+   "pass": true,
+   "detail": "max overlap 1"
+  },
+  {
+   "check": "crystal_sentinel: UV boxes fully painted (no transparent holes inside any box)",
+   "pass": true,
+   "detail": "0 boxes with holes"
+  },
+  {
+   "check": "crystal_sentinel: exactly 5 animations",
+   "pass": true,
+   "detail": "['animation.crystal_sentinel.idle', 'animation.crystal_sentinel.move', 'animation.crystal_sentinel.heavy_punch', 'animation.crystal_sentinel.crystal_burst', 'animation.crystal_sentinel.death']"
+  },
+  {
+   "check": "crystal_sentinel: no duplicate animations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: every animation keyframes >=5 bones and >=20 keyframes",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "crystal_sentinel: loop flags correct (idle/move loop, others once/hold)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: bbmodel cube count == geo cube count",
+   "pass": true,
+   "detail": "38 vs 38"
+  },
+  {
+   "check": "crystal_sentinel: bbmodel embeds animations (5)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "crystal_sentinel: bbmodel embedded texture 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: texture exactly 128x128 PNG RGBA",
+   "pass": true,
+   "detail": "(128, 128) RGBA"
+  },
+  {
+   "check": "emerald_root_warden: texture has opaque + transparent regions",
+   "pass": true,
+   "detail": "opaque px 9404"
+  },
+  {
+   "check": "emerald_root_warden: glowmask 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: geo texture size 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: unique bone names",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: every parent bone exists (hierarchy valid)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: all 56 cube UV boxes inside texture",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: no overlapping UV boxes between different cubes",
+   "pass": true,
+   "detail": "max overlap 1"
+  },
+  {
+   "check": "emerald_root_warden: UV boxes fully painted (no transparent holes inside any box)",
+   "pass": true,
+   "detail": "0 boxes with holes"
+  },
+  {
+   "check": "emerald_root_warden: exactly 8 animations",
+   "pass": true,
+   "detail": "['animation.emerald_root_warden.idle', 'animation.emerald_root_warden.move', 'animation.emerald_root_warden.heavy_slam', 'animation.emerald_root_warden.root_sweep', 'animation.emerald_root_warden.emerald_projectile', 'animation.emerald_root_warden.crystal_shield', 'animation.emerald_root_warden.phase_transition', 'animation.emerald_root_warden.death']"
+  },
+  {
+   "check": "emerald_root_warden: no duplicate animations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: every animation keyframes >=5 bones and >=20 keyframes",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "check": "emerald_root_warden: loop flags correct (idle/move loop, others once/hold)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: bbmodel cube count == geo cube count",
+   "pass": true,
+   "detail": "56 vs 56"
+  },
+  {
+   "check": "emerald_root_warden: bbmodel embeds animations (8)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "emerald_root_warden: bbmodel embedded texture 128x128",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "total animations across 3 creatures == 18",
+   "pass": true,
+   "detail": "18"
+  },
+  {
+   "check": "portal strip portal_surface_anim: 16 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 2304)"
+  },
+  {
+   "check": "portal strip portal_border_anim: 16 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 2304)"
+  },
+  {
+   "check": "portal strip portal_distortion_anim: 8 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 1152)"
+  },
+  {
+   "check": "portal strip portal_surface_anim_emissive: 16 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 2304)"
+  },
+  {
+   "check": "portal strip portal_border_anim_emissive: 16 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 2304)"
+  },
+  {
+   "check": "portal strip portal_runes_anim: 4 frames of 128x16",
+   "pass": true,
+   "detail": "(128, 64)"
+  },
+  {
+   "check": "portal strip portal_activation_burst: 12 frames of 128x128",
+   "pass": true,
+   "detail": "(128, 1536)"
+  },
+  {
+   "check": "portal strip portal_entry_flash: 6 frames of 96x144",
+   "pass": true,
+   "detail": "(96, 864)"
+  },
+  {
+   "check": "portal strip particle_emerald_spark: 6 frames of 8x8",
+   "pass": true,
+   "detail": "(8, 48)"
+  },
+  {
+   "check": "portal strip particle_green_mist: 8 frames of 16x16",
+   "pass": true,
+   "detail": "(16, 128)"
+  },
+  {
+   "check": "portal strip particle_energy_strand: 4 frames of 8x16",
+   "pass": true,
+   "detail": "(8, 64)"
+  },
+  {
+   "check": "portal surface has translucent alpha (semi-transparent interior)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal frames dir has 16+16+8 frames",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal surface loop: frame 15 -> frame 0 step similar to normal step",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal geo rift parses",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal geo runes parses",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal geo ground parses",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "portal has no solid frame cubes (only zero-thickness planes)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "exactly 12 blocks/decorations",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_trial_stone: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_trial_stone: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_trial_stone: blockstate model block/emerald_trial_stone exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_trial_stone: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block mossy_trial_bricks: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block mossy_trial_bricks: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block mossy_trial_bricks: blockstate model block/mossy_trial_bricks exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block mossy_trial_bricks: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block cracked_emerald_bricks: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block cracked_emerald_bricks: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block cracked_emerald_bricks: blockstate model block/cracked_emerald_bricks exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block cracked_emerald_bricks: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block polished_sanctuary_stone: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block polished_sanctuary_stone: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block polished_sanctuary_stone: blockstate model block/polished_sanctuary_stone exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block polished_sanctuary_stone: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block glowing_emerald_crystal_block: texture size (32, 32) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block glowing_emerald_crystal_block: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block glowing_emerald_crystal_block: blockstate model block/glowing_emerald_crystal_block exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block glowing_emerald_crystal_block: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: texture size (64, 64) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: blockstate model block/emerald_crystal_cluster exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_crystal_cluster: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: texture size (64, 64) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: blockstate model block/ancient_root_column exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_root_column: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: blockstate model block/emerald_hanging_vines exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block emerald_hanging_vines: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: texture size (16, 16) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: blockstate model block/forgotten_garden_flower exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block forgotten_garden_flower: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: texture size (32, 32) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: blockstate model block/sanctuary_lantern exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: blockstate model block/sanctuary_lantern_hanging exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block sanctuary_lantern: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: texture size (64, 64) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: blockstate model block/guardian_rune_pillar exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block guardian_rune_pillar: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: texture size (64, 64) in 16/32/64 square",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: blockstate + item model exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: blockstate model block/ancient_emerald_chest exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: blockstate model block/ancient_emerald_chest exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: blockstate model block/ancient_emerald_chest exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: blockstate model block/ancient_emerald_chest exists",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: java model UVs within 0-16",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: model coords within -16..32",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: element rotations valid (22.5 steps, <=45)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "block ancient_emerald_chest: model texture ref resolves",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "complex decorations have editable .bbmodel",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "trophy Inventory_Icon_32.png",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "trophy Inventory_Icon_16.png",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "trophy bbmodel + texture + preview exist",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "NBT Dungeon/structures/p1_1_emerald_sanctuary_FULL_64x28x64.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[64, 28, 64] pal=24"
+  },
+  {
+   "check": "NBT Dungeon/structures/p1_1_emerald_sanctuary_x0_z0.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=23"
+  },
+  {
+   "check": "NBT Dungeon/structures/p1_1_emerald_sanctuary_x0_z1.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=17"
+  },
+  {
+   "check": "NBT Dungeon/structures/p1_1_emerald_sanctuary_x1_z0.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=18"
+  },
+  {
+   "check": "NBT Dungeon/structures/p1_1_emerald_sanctuary_x1_z1.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=15"
+  },
+  {
+   "check": "NBT Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_FULL_64x28x64.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[64, 28, 64] pal=24"
+  },
+  {
+   "check": "NBT Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z0.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=23"
+  },
+  {
+   "check": "NBT Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x0_z1.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=17"
+  },
+  {
+   "check": "NBT Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z0.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=18"
+  },
+  {
+   "check": "NBT Dungeon/structures_vanilla_fallback/p1_1_emerald_sanctuary_x1_z1.nbt parses; DataVersion 3465; blocks==volume",
+   "pass": true,
+   "detail": "[32, 28, 32] pal=15"
+  },
+  {
+   "check": "dungeon spec: all markers reachable by BFS",
+   "pass": true,
+   "detail": "{'player_arrival': True, 'arrival_portal_anchor': True, 'skulker_spawn_corridor_1': True, 'skulker_spawn_corridor_2': True, 'skulker_spawn_garden_1': True, 'skulker_spawn_garden_2': True, 'skulker_spawn_garden_3': True, 'skulker_spawn_garden_4': True, 'sentinel_spawn_hall_1': True, 'sentinel_spawn_hall_2': True, 'sentinel_spawn_hall_3': True, 'sentinel_spawn_hall_4': True, 'boss_spawn': True, 'boss_arena_entrance': True, 'trophy_display': True, 'return_portal_anchor': True, 'exit_position': True, 'reward_chest_adjacent': True}"
+  }
+ ],
+ "failures": [],
+ "summary": {
+  "checks": 158,
+  "failed": 0
+ }
+}
