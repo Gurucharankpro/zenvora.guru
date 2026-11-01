@@ -1,0 +1,115 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:x1_visual",
+      "nbt": "{CustomModelData:10001}"
+    },
+    "title": {
+      "translate": "quest.shadowsovereign.cartographer.title"
+    },
+    "description": {
+      "translate": "quest.shadowsovereign.cartographer.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "visit_gloomwood": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:gloomwood"
+        }
+      }
+    },
+    "visit_ashen_weald": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:ashen_weald"
+        }
+      }
+    },
+    "visit_echo_haven": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:echo_haven"
+        }
+      }
+    },
+    "visit_bound_soul_bound": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:bound_soul_bound"
+        }
+      }
+    },
+    "visit_ashen_monolith": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:ashen_monolith"
+        }
+      }
+    },
+    "visit_moonveil_hollow": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:moonveil_hollow"
+        }
+      }
+    },
+    "visit_crimson_shadow": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:crimson_shadow"
+        }
+      }
+    },
+    "visit_shattered_sky": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:shattered_sky"
+        }
+      }
+    },
+    "visit_eternal_abyss": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:eternal_abyss"
+        }
+      }
+    },
+    "visit_sunken_kingdom": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:sunken_kingdom"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 300,
+    "function": "shadowsovereign:journey/cartographer"
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

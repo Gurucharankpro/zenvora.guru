@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:x1_visual",
+      "nbt": "{CustomModelData:10014}"
+    },
+    "title": {
+      "translate": "quest.shadowsovereign.visit_sunken_kingdom.title"
+    },
+    "description": {
+      "translate": "quest.shadowsovereign.visit_sunken_kingdom.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "visit": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:sunken_kingdom"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50,
+    "function": "shadowsovereign:journey/visit_sunken_kingdom"
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

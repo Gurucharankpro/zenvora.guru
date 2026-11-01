@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "shadowsovereign:block/violet_dune_sand"
+  },
+  "render_type": "minecraft:solid"
+}

@@ -1,0 +1,1744 @@
+{
+  "blocks": [
+    {
+      "id": "clan_throne_of_the_crownless_king",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.985346991432005,
+          0,
+          0
+        ],
+        [
+          21.985346991432003,
+          32.07251970880252,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_crimson_raven_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -7.412667745614376,
+          0,
+          1.6
+        ],
+        [
+          23.412667745614375,
+          21.619164850721752,
+          17.558651171807675
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_six_armed_shadow_idol",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8.430653451683726,
+          0,
+          2
+        ],
+        [
+          24.430653451683728,
+          30.25481618158139,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 28,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_blood_moon_shrine",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5,
+          0,
+          -0.14587011926902704
+        ],
+        [
+          21,
+          23.5,
+          16.145870119269027
+        ]
+      ],
+      "mount": "floor",
+      "kind": 21,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_sharingan_eye_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8,
+          0,
+          3
+        ],
+        [
+          24,
+          31,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_itachis_raven_lantern",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.5,
+          0,
+          0.5
+        ],
+        [
+          15.5,
+          32,
+          15.5
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_rinnegan_pillar",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.4145706961199149,
+          0,
+          -0.4
+        ],
+        [
+          16.414570696119917,
+          32,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 10,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_six_paths_ceremonial_altar",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.14587011926902704,
+          0,
+          -0.14587011926902704
+        ],
+        [
+          16.145870119269027,
+          15.2,
+          16.145870119269027
+        ]
+      ],
+      "mount": "floor",
+      "kind": 10,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_origami_angel_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -7.122727414430871,
+          0,
+          2.7
+        ],
+        [
+          23.12272741443087,
+          22.9095454429505,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 13,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_thousand_paper_flower_wall",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.3941125496954283,
+          -0.3941125496954283,
+          10.5
+        ],
+        [
+          16.39411254969543,
+          16.39411254969543,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 13,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_kamui_spiral_portal_frame",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.32694224173904,
+          0,
+          5.4
+        ],
+        [
+          21.32694224173904,
+          28.32694224173904,
+          10.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_orange_spiral_mask_relic",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.9289321881345249,
+          0,
+          2
+        ],
+        [
+          15.071067811865476,
+          22.571067811865476,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 22,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_madaras_war_fan_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5,
+          0,
+          11
+        ],
+        [
+          21,
+          29,
+          16.5
+        ]
+      ],
+      "mount": "wall",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_susanoo_guardian_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -5.2252113120447445,
+          0,
+          1
+        ],
+        [
+          21.225211312044742,
+          31,
+          15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_clay_dragon_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.5502841200629183,
+          0,
+          0.6
+        ],
+        [
+          16.55028412006292,
+          24.730442497387664,
+          31
+        ]
+      ],
+      "mount": "floor",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_explosive_clay_art_display",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          16,
+          18,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_crimson_puppet_display",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          32,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 17,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_scorpion_tail_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.6,
+          0,
+          -0.29685844399033756
+        ],
+        [
+          13.4,
+          32,
+          13.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 17,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_akatsuki_crimson_cloud_banner",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -2.5,
+          0.5,
+          6.8
+        ],
+        [
+          18.5,
+          32,
+          9.2
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 23,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "clan_shadow_council_table",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -8.755,
+          0,
+          -8.9
+        ],
+        [
+          24.755,
+          21.3,
+          24.325
+        ]
+      ],
+      "mount": "floor",
+      "kind": 16,
+      "pack": "clan",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_crystal_fawn_memorial",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.85,
+          0.0,
+          1.2
+        ],
+        [
+          13.15,
+          15.957106781186548,
+          13.15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 31,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_fountain_of_lost_tears",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.38447360876115677,
+          0.0,
+          -0.38447360876115677
+        ],
+        [
+          16.384473608761155,
+          14.057714679092992,
+          16.384473608761155
+        ]
+      ],
+      "mount": "floor",
+      "kind": 31,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_miniature_cathedral_shell",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.2,
+          0.0,
+          0.3
+        ],
+        [
+          13.8,
+          14.6,
+          15.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_bell_of_forgotten_souls",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.99,
+          0.0,
+          5.5
+        ],
+        [
+          15.01,
+          14.8,
+          10.657191560558699
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_celestial_moonmoth_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.0,
+          0.0,
+          2.6
+        ],
+        [
+          15.0,
+          15.6,
+          13.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 2,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_moonlit_butterfly_chandelier",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.676482422783954,
+          0.4,
+          6.3
+        ],
+        [
+          14.013172798364531,
+          16.0,
+          9.7
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 2,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_otters_pearl_fountain",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0.0,
+          0.4
+        ],
+        [
+          15.6,
+          15.5,
+          15.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 41,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_forgotten_watermill_miniature",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3088692381135185,
+          0.0,
+          0.5
+        ],
+        [
+          16.03604815860014,
+          11.2,
+          15.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 41,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_celestial_owl_observatory_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.3263455967290595,
+          0.0,
+          3.0
+        ],
+        [
+          16.32634559672906,
+          15.6,
+          13.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 38,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_astronomers_star_globe",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.0365767307483889,
+          0.0,
+          1.0365767307483889
+        ],
+        [
+          14.96342326925161,
+          16.045766958625883,
+          14.96342326925161
+        ]
+      ],
+      "mount": "floor",
+      "kind": 38,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_porcelain_pangolin_figurine",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.8,
+          0.0,
+          1.8
+        ],
+        [
+          14.35,
+          12.2,
+          14.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sapphire_ceramic_bell_tower",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.6,
+          0.0,
+          1.6
+        ],
+        [
+          14.4,
+          16.0,
+          14.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 42,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sleeping_red_panda_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.2,
+          0.0,
+          1.2
+        ],
+        [
+          14.8,
+          6.006982028664593,
+          14.8
+        ]
+      ],
+      "mount": "floor",
+      "kind": 32,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_golden_bamboo_lantern_shrine",
+      "category": "decor",
+      "light": 9,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.0,
+          0.0,
+          1.5
+        ],
+        [
+          15.5,
+          13.4,
+          14.742462120245873
+        ]
+      ],
+      "mount": "floor",
+      "kind": 34,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_crystal_axolotl_aquarium",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.5,
+          0.0,
+          0.5
+        ],
+        [
+          15.5,
+          11.8,
+          15.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 44,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_broken_heart_pearl_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.5,
+          0.0,
+          4.55
+        ],
+        [
+          13.5,
+          16.0,
+          11.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 44,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_sleeping_snow_leopard_sculpture",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1.3859082321716132,
+          0.0,
+          0.8
+        ],
+        [
+          14.559934369194051,
+          7.0,
+          15.159934369194055
+        ]
+      ],
+      "mount": "floor",
+      "kind": 35,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_frozen_royal_crystal_throne",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          2.0,
+          0.0,
+          2.0
+        ],
+        [
+          14.021745436475687,
+          16.16568542494924,
+          14.0
+        ]
+      ],
+      "mount": "floor",
+      "kind": 35,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_golden_elephant_music_box",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0.0,
+          0.4
+        ],
+        [
+          16.0,
+          11.2,
+          15.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 32,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "tormented_forgotten_dream_carousel",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.1,
+          0.0,
+          0.1
+        ],
+        [
+          15.9,
+          16.0,
+          15.9
+        ]
+      ],
+      "mount": "floor",
+      "kind": 34,
+      "pack": "tormented",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_refai_legendary_chair",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.2,
+          0,
+          1.5
+        ],
+        [
+          15.8,
+          16,
+          14.5
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_refai_memorial_statue",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          15,
+          28,
+          15
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_nasser_executive_desk",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3,
+          0,
+          1.2
+        ],
+        [
+          15.7,
+          16.8,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_twin_brothers_portrait",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          -0.2,
+          12.4
+        ],
+        [
+          16.2,
+          19.8,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_salmawy_archive_cabinet",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.8,
+          0,
+          0.8
+        ],
+        [
+          15.2,
+          16,
+          14
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_black_marble_conference_table",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          2.3
+        ],
+        [
+          16,
+          16,
+          13.7
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_traditional_egyptian_majlis",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          15.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_antique_cairo_grandfather_clock",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          13,
+          31,
+          13
+        ]
+      ],
+      "mount": "floor",
+      "kind": 37,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_el_nemr_golden_lion_throne",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0.8
+        ],
+        [
+          16,
+          25,
+          15.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 39,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_el_nemr_family_emblem",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.6,
+          0.2,
+          13.5
+        ],
+        [
+          16.6,
+          18,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 39,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_workshop_tool_cabinet",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.8,
+          0,
+          1.7
+        ],
+        [
+          15.2,
+          16.2,
+          13.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 46,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_vintage_workshop_machinery",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.6,
+          0,
+          1.4
+        ],
+        [
+          16.2,
+          20,
+          14.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 46,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_mobile_phone_display_counter",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          0,
+          1.6
+        ],
+        [
+          16.2,
+          13.6,
+          14.2
+        ]
+      ],
+      "mount": "floor",
+      "kind": 51,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_morsi_mobile_shop_sign",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          3,
+          13.2
+        ],
+        [
+          16.2,
+          16,
+          16.2
+        ]
+      ],
+      "mount": "wall",
+      "kind": 51,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_hanan_traditional_vanity",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.4,
+          0,
+          0.2
+        ],
+        [
+          15.6,
+          20.6,
+          13.6
+        ]
+      ],
+      "mount": "floor",
+      "kind": 49,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_egyptian_family_tea_set",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.6,
+          0,
+          1.6
+        ],
+        [
+          15.4,
+          10,
+          14.4
+        ]
+      ],
+      "mount": "floor",
+      "kind": 49,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_old_cairo_police_office_desk",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0.3,
+          0,
+          1.2
+        ],
+        [
+          15.7,
+          16.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_police_station_wall_clock",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          12.6
+        ],
+        [
+          16,
+          16.6,
+          16
+        ]
+      ],
+      "mount": "wall",
+      "kind": 36,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_giant_zombie_refai_monument",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          16,
+          31.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 45,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "ostoura_throne_of_the_undead_legend",
+      "category": "decor",
+      "light": 0,
+      "hardness": 1.5,
+      "visual_bounds": [
+        [
+          -0.2,
+          0,
+          0
+        ],
+        [
+          16.2,
+          31.4,
+          16
+        ]
+      ],
+      "mount": "floor",
+      "kind": 45,
+      "pack": "ostoura",
+      "source_scale": 1
+    },
+    {
+      "id": "syndicate_soul_contract_desk",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -5.2632,
+          0.0,
+          1.3684
+        ],
+        [
+          21.2632,
+          31.5,
+          14.6316
+        ]
+      ],
+      "mount": "floor",
+      "kind": 53,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_four_handed_contract_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -5.0717,
+          0.0,
+          -1.5646
+        ],
+        [
+          22.901450270348594,
+          32.495560673451585,
+          17.5646
+        ]
+      ],
+      "mount": "floor",
+      "kind": 53,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_widows_mechanical_clock",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -7.6557,
+          0.0,
+          3.0015
+        ],
+        [
+          23.6557,
+          31.5,
+          11.7725
+        ]
+      ],
+      "mount": "floor",
+      "kind": 56,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_broken_hourglass_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 0,
+      "visual_bounds": [
+        [
+          -2.1607,
+          0.0,
+          1.9585
+        ],
+        [
+          18.1607,
+          31.57906242226355,
+          14.0415
+        ]
+      ],
+      "mount": "floor",
+      "kind": 56,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_hollow_knight_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -2.4091,
+          0.0,
+          0.5649
+        ],
+        [
+          19.0907,
+          31.5,
+          15.4351
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_bastion_shield_display",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.031,
+          0.0,
+          -0.6697
+        ],
+        [
+          17.031,
+          31.5,
+          16.6697
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_raven_queens_sewing_table",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -8.2,
+          0.0,
+          0.09
+        ],
+        [
+          24.2,
+          27.0,
+          15.923668578215224
+        ]
+      ],
+      "mount": "floor",
+      "kind": 55,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_thousand_ravens_chandelier",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -9.7949,
+          -0.6848,
+          -2.3505
+        ],
+        [
+          25.7949,
+          31.5,
+          17.2446
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 55,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_crystal_samurai_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.0144,
+          0.0,
+          0.7142
+        ],
+        [
+          16.0144,
+          31.5,
+          15.2858
+        ]
+      ],
+      "mount": "floor",
+      "kind": 50,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_mirror_blade_shrine",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -9.3517,
+          0.0,
+          2.5275
+        ],
+        [
+          22.31288026843786,
+          32.26518026843786,
+          13.9396
+        ]
+      ],
+      "mount": "floor",
+      "kind": 50,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_giant_fungal_experiment",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.8438,
+          0.0,
+          -1.1875
+        ],
+        [
+          18.0406,
+          31.5,
+          17.1875
+        ]
+      ],
+      "mount": "floor",
+      "kind": 54,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_alchemists_botanical_cabinet",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.6892585743964812,
+          0.0,
+          3.5146
+        ],
+        [
+          16.426661203107557,
+          31.704023583144078,
+          12.4854
+        ]
+      ],
+      "mount": "floor",
+      "kind": 54,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_legendary_67_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -12.4084,
+          0.0,
+          0.4692
+        ],
+        [
+          29.416887788831087,
+          31.810045753811675,
+          15.5308
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_six_seven_royal_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.0136,
+          0.0,
+          1.738
+        ],
+        [
+          17.44672981305903,
+          31.5,
+          14.262
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_porcelain_duchess_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.4883885889232864,
+          0.0,
+          -1.1875
+        ],
+        [
+          17.488388588923286,
+          31.5,
+          17.1875
+        ]
+      ],
+      "mount": "floor",
+      "kind": 52,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_royal_mirror_vanity",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.8787345393197443,
+          0.0,
+          3.8698
+        ],
+        [
+          16.8112,
+          31.5,
+          12.4056
+        ]
+      ],
+      "mount": "floor",
+      "kind": 52,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_inverted_69_sculpture",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -6.0069,
+          0.0,
+          3.0198
+        ],
+        [
+          22.0069,
+          31.5,
+          12.9802
+        ]
+      ],
+      "mount": "floor",
+      "kind": 48,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_gravity_illusion_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -2.2308,
+          0.0,
+          -0.75
+        ],
+        [
+          18.214791348535464,
+          31.5,
+          16.75
+        ]
+      ],
+      "mount": "floor",
+      "kind": 48,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_ultimate_cringe_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.8878,
+          0.0,
+          2.2126
+        ],
+        [
+          16.8878,
+          31.5,
+          13.7874
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_king_of_corny_memes_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          0.7228,
+          0.0,
+          0.7228
+        ],
+        [
+          19.4356,
+          31.5,
+          15.2772
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+/home/runner/work/zenvora.guru/zenvora.guru/polish-update/base/soulbound-army-1.20.1-1.8.1-repaired-content.jar: OK
+Prepared 3 legendary creatures, 20 Eclipse decorations, biome with 20 assets, 4 buildings, 4 trees and Prism Jerboa
+Placed 2 props at expansion_abandoned_jujutsu_academy
+Placed 2 props at expansion_palace_of_broken_hours
+Placed 2 props at covenant_crownless_sovereign
+Placed 2 props at expansion_theater_of_black_curtains
+Placed 2 props at expansion_temple_of_thousand_mirrors
+Placed 2 props at expansion_salmawy_secret_mansion
+Placed 4 props at expansion_palace_of_eternal_cringe
+Placed 2 props at expansion_palace_of_silent_duchess
+Placed 2 props at expansion_inverted_circus
+PASS: all twenty Eclipse props have conservative, supported habitat placements
+PASS: body-only preview bounds; 15 placeholder journey icons replaced + 1 new biome badge; 444 existing X1 overrides retained
+PASS: 9 focused resource/preservation groups {'groups': 9, 'new_legendary': 3, 'new_decor': 20, 'new_biome_blocks': 20, 'habitat_placements': 20, 'new_biome_structures': 4, 'new_tree_templates': 4, 'preview_models': 64, 'graphical_client_tested': False}
+source/CatalogueTest.java:24: error: package PatchReviewed does not exist
+  try(ZipFile z=new ZipFile(base.toFile())){for(var e:Collections.list(z.entries()))if(!e.isDirectory())PatchReviewed.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
+                                                                                                                     ^
+source/CatalogueTest.java:26: error: package PatchReviewed does not exist
+  try(ZipFile z=new ZipFile(args[3])){for(var e:Collections.list(z.entries()))if(e.getName().endsWith(".class"))PatchReviewed.entries.put(e.getName(),z.getInputStream(e).readAllBytes());}
+                                                                                                                             ^
+source/CatalogueTest.java:27: error: cannot find symbol
+  var before=new CatalogueLoader(new HashMap<>(PatchReviewed.entries),resources);
+                                               ^
+  symbol:   variable PatchReviewed
+  location: class CatalogueTest
+source/CatalogueTest.java:29: error: cannot find symbol
+  PatchReviewed.profiles(JsonParser.parseString(Files.readString(spec)).getAsJsonObject().getAsJsonArray("profiles"));
+  ^
+  symbol:   variable PatchReviewed
+  location: class CatalogueTest
+source/CatalogueTest.java:30: error: cannot find symbol
+  var after=new CatalogueLoader(new HashMap<>(PatchReviewed.entries),resources);
+                                              ^
+  symbol:   variable PatchReviewed
+  location: class CatalogueTest
+source/CatalogueTest.java:34: error: cannot find symbol
+  ClassNode ids=PatchReviewed.node("dev/shadowsovereign/mythic/MythicExpedition");ids.methods.removeIf(m->!m.name.equals("<clinit>"));ids.fields.removeIf(f->!f.name.equals("IDS"));
+                ^
+  symbol:   variable PatchReviewed
+  location: class CatalogueTest
+6 errors

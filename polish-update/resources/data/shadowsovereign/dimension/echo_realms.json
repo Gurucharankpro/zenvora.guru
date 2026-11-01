@@ -1,0 +1,276 @@
+{
+  "type": "shadowsovereign:echo_realms",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "shadowsovereign:echo_expanses",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "shadowsovereign:gloomwood",
+          "parameters": {
+            "temperature": -0.45,
+            "humidity": -0.45,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:ashen_weald",
+          "parameters": {
+            "temperature": 0.45,
+            "humidity": 0.45,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:echo_haven",
+          "parameters": {
+            "temperature": 0.9,
+            "humidity": -0.9,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:bound_soul_bound",
+          "parameters": {
+            "temperature": -0.55,
+            "humidity": 0.55,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:ashen_monolith",
+          "parameters": {
+            "temperature": 0.15,
+            "humidity": -0.75,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:moonveil_hollow",
+          "parameters": {
+            "temperature": -0.35,
+            "humidity": 0.55,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:crimson_shadow",
+          "parameters": {
+            "temperature": 0.5,
+            "humidity": -0.4,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:shattered_sky",
+          "parameters": {
+            "temperature": -0.8,
+            "humidity": -0.5,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:eternal_abyss",
+          "parameters": {
+            "temperature": -0.9,
+            "humidity": 0.0,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:sunken_kingdom",
+          "parameters": {
+            "temperature": 0.0,
+            "humidity": 1.5,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        },
+        {
+          "biome": "shadowsovereign:singing_glass_desert",
+          "parameters": {
+            "temperature": 0.85,
+            "humidity": -0.55,
+            "continentalness": [
+              -2,
+              2
+            ],
+            "erosion": [
+              -2,
+              2
+            ],
+            "depth": [
+              -2,
+              2
+            ],
+            "weirdness": [
+              -2,
+              2
+            ],
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

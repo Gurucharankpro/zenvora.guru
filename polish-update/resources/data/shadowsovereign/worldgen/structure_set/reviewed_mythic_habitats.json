@@ -1,0 +1,258 @@
+{
+  "structures": [
+    {
+      "structure": "shadowsovereign:chronicles_buried_belfry",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:chronicles_crow_retreat",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:chronicles_lunar_monastery",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:chronicles_oracle_pavilion",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:chronicles_penitent_cloister",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:covenant_crownless_sovereign",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:covenant_eclipse_stag",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:covenant_forgotten_astronomer",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:covenant_weeping_puppeteer",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:crimson_akatsuki_shadow_hideout",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:crimson_crimson_moon_shrine",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_abandoned_star_library",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_amin_el_nemr_workshop",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_cursed_bell_tower",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_drowned_glass_palace",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_el_nemr_mansion",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_hanan_cairo_house",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_inverted_circus",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_mushroom_sovereign_sanctuary",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_old_desouky_family_house",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_palace_of_eternal_cringe",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_pearl_sanctuary",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_refai_cursed_stronghold",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_shattered_porcelain_temple",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_temple_of_thousand_mirrors",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:forgotten_stalker_shrine",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:knighthaven_forgotten_dream_carnival",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:knighthaven_haunted_toy_workshop",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:knighthaven_palace_of_frozen_memories",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:knighthaven_refai_compound",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:legends_emperor_palace",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:legends_jester_theatre",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:legends_madara_bastion",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:legends_paper_shrine",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:legends_sasori_workshop",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mastery_cursed_farmhouse",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mastery_plague_hospital",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:monolith_juggernaut_quarry",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:monolith_pain_court",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:monolith_phoenix_nest",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:monolith_sanctum",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:monolith_spire",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mythic_basilisk_citadel",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mythic_bloom_garden",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mythic_devourer_sanctum",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:mythic_wyngcat_roost",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:sentinel_execution_fortress",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:shattered_crystal_nest_sanctuary",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:shattered_forgotten_golden_pagoda",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:shattered_gentlemans_manor",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:shattered_sanctuary_of_lost_tears",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:shattered_void_thread_court",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_morsi_mobile_shop",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_palace_of_silent_duchess",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_abandoned_jujutsu_academy",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_salmawy_secret_mansion",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_theater_of_black_curtains",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:expansion_palace_of_broken_hours",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:glass_desert_cathedral_of_glass_harp",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:glass_desert_buried_mirage_observatory",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:glass_desert_lost_caravanserai",
+      "weight": 1
+    },
+    {
+      "structure": "shadowsovereign:glass_desert_thunderglass_labyrinth",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 48,
+    "separation": 32,
+    "salt": 181030
+  }
+}

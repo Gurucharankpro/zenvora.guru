@@ -1,0 +1,8 @@
+{
+  "feature": "shadowsovereign:singing_desert_ecology",
+  "placement": [
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "shadowsovereign:block/syndicate_soul_contract_desk",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "shadowsovereign:block/syndicate_soul_contract_desk",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "shadowsovereign:block/syndicate_soul_contract_desk",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "shadowsovereign:block/syndicate_soul_contract_desk",
+      "y": 270
+    }
+  }
+}

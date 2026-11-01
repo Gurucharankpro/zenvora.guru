@@ -1,0 +1,52 @@
+{
+  "has_precipitation": false,
+  "temperature": 1.6,
+  "downfall": 0,
+  "effects": {
+    "fog_color": 11824324,
+    "water_color": 4183752,
+    "water_fog_color": 1802118,
+    "sky_color": 14252090,
+    "grass_color": 12165846,
+    "foliage_color": 14202442,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
+  },
+  "spawners": {
+    "creature": [
+      {
+        "type": "shadowsovereign:prism_jerboa",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
+    "ambient": [],
+    "monster": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": []
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "shadowsovereign:singing_crystal_ore"
+    ],
+    [],
+    [],
+    [
+      "shadowsovereign:singing_desert_ecology"
+    ],
+    []
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "shadowsovereign:block/ancient_desert_sandstone"
+  },
+  "render_type": "minecraft:solid"
+}

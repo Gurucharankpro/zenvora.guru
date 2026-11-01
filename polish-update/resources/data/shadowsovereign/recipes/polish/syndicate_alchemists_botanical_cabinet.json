@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SCS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:blackstone"
+    },
+    "C": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "item": "shadowsovereign:syndicate_alchemists_botanical_cabinet"
+  }
+}

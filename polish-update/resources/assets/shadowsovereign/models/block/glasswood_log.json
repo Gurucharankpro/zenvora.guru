@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "shadowsovereign:block/glasswood_log_top",
+    "side": "shadowsovereign:block/glasswood_log"
+  },
+  "render_type": "minecraft:solid"
+}

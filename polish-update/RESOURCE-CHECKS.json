@@ -1,0 +1,11 @@
+{
+  "groups": 9,
+  "new_legendary": 3,
+  "new_decor": 20,
+  "new_biome_blocks": 20,
+  "habitat_placements": 20,
+  "new_biome_structures": 4,
+  "new_tree_templates": 4,
+  "preview_models": 64,
+  "graphical_client_tested": false
+}

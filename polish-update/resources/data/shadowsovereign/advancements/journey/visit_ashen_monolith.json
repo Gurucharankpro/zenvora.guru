@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:x1_visual",
+      "nbt": "{CustomModelData:10005}"
+    },
+    "title": {
+      "translate": "quest.shadowsovereign.visit_ashen_monolith.title"
+    },
+    "description": {
+      "translate": "quest.shadowsovereign.visit_ashen_monolith.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "visit": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:ashen_monolith"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50,
+    "function": "shadowsovereign:journey/visit_ashen_monolith"
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

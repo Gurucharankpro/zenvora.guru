@@ -1,45 +1,58 @@
-# Soulbound Army — content update on reviewed 1.8.1
+# Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert
 
-**Build status: SUCCESS. Final updated JAR built: true.**
+Build: **FAILURE**. Source: `00ee6b83da53a7ace9aba4a7338fc7f89aaf022e`.
+Final output SHA256: `NOT BUILT`.
+Minecraft 1.20.1, Forge 47.3.22, Java 17, modid `shadowsovereign`.
+Mod version remains `1.8.1-reviewed`; matching client/server protocol is `39-polish-glass-desert`.
 
-Source commit: `8ee8328acd95b42a675ce5c1f2c2a67629fbc6ee`.
-Base: `1.8.1-reviewed`, SHA256
-`2b9f00f36e7d1228fe31838daf6c147b5f5c719211d3f8467fedac88eba4da26`.
-Output SHA256: `aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec`.
+This update starts from the latest complete aa4e701d content distribution, repairs
+its 63 incorrect LambdaMetafactory bootstrap handles and debug-log minimum, then
+applies the new content. The reconstructed repair input SHA is
+`f88cac49bae0d10961a277ab2277738892cb5ba4aaaae596fc5b0c17d64edb04`.
+The supplied reports describe a b198b947 corrected file, but that binary was not
+attached; we do not claim our reconstructed ZIP is byte-identical to it. The
+repair changes exactly GloomContent.class and ContentConfig.class, preserving
+every other uncompressed entry of the latest complete distribution.
 
-New content: Morsi and mobile shop (Crimson Shadow); Porcelain Duchess and palace
-(Moonveil Hollow); Yuta/Rika and academy (Crimson Shadow). Cursed Bell Ringer is
-already present and its supplied native model/animations/textures match; no second
-registry entry was created. All 51 old profiles retain their order/definitions.
-60 new decor designs are registered/craftable and placed in matching habitats.
-X2 provides 20 registered effects/182 sprites, five verified existing-biome
-bindings, ten registered ambient sound assets and bounded client ambience.
-Its five absent biome profiles do not create invented biomes. X4 adds server-owned
-controls, follow/recovery/building/combat assistance, config and a scrolling GUI.
+New content:
+- Dr. Salmawy and Secret Mansion: Crimson Shadow. Data marker removed from body
+  space, dining entrance opened, last basement stair completed; all six supplied
+  loot chests retained. No second copy of the optional template is registered.
+- Raven Seamstress and Theater of Black Curtains: Moonveil Hollow. All four arms,
+  three attached ravens, original UVs and numeric animation tracks are retained.
+- Clockwork Widow and Palace of Broken Hours: Moonveil Hollow, underground arena.
+  Full 788-cube supplied model and 10 authored clips retained. Empty chests in the
+  two new Eclipse habitats receive existing vanilla loot tables.
+- 20 Eclipse props: registered, craftable, in the decor tab and conservatively
+  placed in matching future habitats. Valid supplied Java exports are used;
+  illegal full-scale vanilla model coordinates are not shipped as block models.
+  The pack's Pale Broker naming does not replace existing Yuta or invent a mob.
+- Singing Glass Desert: appended to Echo Realms' multi-noise source, preserving
+  the ten old biome entries. 20 supplied environmental blocks/plants, 4 buildings
+  and 4 tree templates, passive Prism Jerboa, glowing crystals, vegetation and
+  bounded oases. X2's existing desert sound and two effects are now biome-bound.
+  All seven new buildings share the reviewed cross-type structure placement.
+- Larger book previews use sampled visible idle-body bounds, excluding hidden FX.
+  Combat scale/hitboxes and saved armies are unchanged. Four distinct new egg
+  images and 16 bespoke journey badge images, including the new biome visit.
+  Fifteen compass placeholders are replaced; the two compass lessons keep their
+  meaningful compass icons. Existing 500 lessons and rewards remain byte-identical.
 
-Read [the reviewer prompt](NEXT-AGENT-PROMPT-AR.md) and [the actual build log](../content-update/reports/CI-BUILD.log).
-Game/render/multiplayer tests have NOT been run for this new update.
+Verification: see [CI log](../polish-update/reports/CI-BUILD.log),
+[runtime log](../polish-update/reports/PRODUCTION-SERVER.log),
+[native results](../polish-update/reports/PRODUCTION-SMOKE.json),
+[result summary](../polish-update/reports/CI-RESULT.json).
+Source compilation uses actual Forge/Minecraft APIs. Final obfuscated JAR checks
+include Java 17 bootstrap resolution and exact unchanged-entry comparison.
+On successful builds, an official isolated Forge server loads the final JAR with
+a separate QA mod, checks real block properties/template decodes/entity attributes
+and save/reload, locates the new biome, requests generation, flushes and stops.
+No graphical client, mobile rendering, long combat session or multiplayer test
+is claimed. Visual quality, performance, structure entrances/rotation across
+terrain and complete encounter/recruit/retreat gameplay need in-game review.
+Worldgen frequency/terrain figures in the uploaded pack are guidance; the native
+implementation uses conservative bounded generation, not a literal new noise
+router for every dune or every described formation variant.
 
-## Downloads
 
-- [Complete updated JAR](../downloads/current/soulbound-army-1.20.1-1.8.1-content.jar?raw=true)
-- [Phone split volumes, all <=8 MiB](../downloads/current)
-- [Output fingerprint and changed entries](../downloads/current/CONTENT-MANIFEST.json)
-
-Download every matching .z01/.z02/.../.zip into one folder and open the LAST .zip
-with ZArchiver. The extracted JAR is verified against the built artifact by CRC
-and SHA-256. Replace the old JAR; install this same new file on both sides.
-Mod version remains 1.8.1-reviewed as requested, content protocol is38-content-x2-x4.
-The file in content-update/base is only the input, not the updated mod.
-
-## Navigation
-
-- [Native production/QA project](../native-review)
-- [Overlay/resource build source](../content-update/source)
-- [Supplied assets](../content-update/inputs)
-- [Staged resources](../content-update/resources)
-
-This is a binary overlay and focused native project, not the original complete
-Forge source tree. Historical fixture compilation is retired and never used here.
-Reviewed OpenMythics/X1Hooks bytecode, the X1 atlas, 500 old lessons, save identities
-and the mod version are explicitly protected by final-distribution comparison.
+No final release is claimed. Read the failed build/runtime log; do not install the input as an update.

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "shadowsovereign:x1_visual",
+      "nbt": "{CustomModelData:10015}"
+    },
+    "title": {
+      "text": "Singing Glass Desert / صحراء الزجاج المغني"
+    },
+    "description": {
+      "text": "Discover the glass dunes and their crystal wildlife. / اكتشف كثبان الزجاج ومخلوقاتها البلورية."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "visit": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "dimension": "shadowsovereign:echo_realms",
+          "biome": "shadowsovereign:singing_glass_desert"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "experience": 75
+  },
+  "parent": "shadowsovereign:journey/welcome"
+}

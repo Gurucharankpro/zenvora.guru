@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "shadowsovereign:block/mirage_palm_log"
+    },
+    "axis=x": {
+      "model": "shadowsovereign:block/mirage_palm_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "shadowsovereign:block/mirage_palm_log",
+      "x": 90
+    }
+  }
+}

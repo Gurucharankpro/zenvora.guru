@@ -1,0 +1,2148 @@
+{
+  "profiles": [
+    {
+      "index": 54,
+      "id": "dr_salmawy",
+      "health": 620,
+      "damage": 19,
+      "armor": 8,
+      "speed": 0.29,
+      "width": 0.7,
+      "height": 2.1,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "punch_attack",
+          0.7,
+          0,
+          3.6,
+          1
+        ],
+        [
+          "counter_attack",
+          0.9,
+          5,
+          4,
+          0.7
+        ],
+        [
+          "command",
+          1.15,
+          3,
+          9,
+          0.4
+        ],
+        [
+          "intimidation",
+          1.3,
+          2,
+          8,
+          0.5
+        ]
+      ]
+    },
+    {
+      "index": 55,
+      "id": "raven_seamstress",
+      "health": 1050,
+      "damage": 24,
+      "armor": 10,
+      "speed": 0.28,
+      "width": 1.2,
+      "height": 3.1,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "silver_needle_attack",
+          0.8,
+          0,
+          5,
+          1
+        ],
+        [
+          "raven_swarm",
+          1.2,
+          47,
+          16,
+          0.9
+        ],
+        [
+          "thread_binding",
+          1.3,
+          2,
+          9,
+          0.7
+        ],
+        [
+          "feather_storm",
+          1.5,
+          1,
+          9,
+          1.1
+        ],
+        [
+          "black_curtain",
+          1.9,
+          5,
+          10,
+          0.4
+        ]
+      ]
+    },
+    {
+      "index": 56,
+      "id": "clockwork_widow",
+      "health": 1200,
+      "damage": 26,
+      "armor": 14,
+      "speed": 0.25,
+      "width": 0.9,
+      "height": 2.9,
+      "scale": 1,
+      "walk": "walk",
+      "run": "run",
+      "flies": false,
+      "moves": [
+        [
+          "clock_blade_combo",
+          0.8,
+          0,
+          5,
+          1.05
+        ],
+        [
+          "gear_storm",
+          1.4,
+          47,
+          15,
+          0.95
+        ],
+        [
+          "time_lock",
+          1.2,
+          2,
+          9,
+          0.6
+        ],
+        [
+          "six_arm_assault",
+          1.65,
+          1,
+          7,
+          1.15
+        ],
+        [
+          "broken_hourglass",
+          2.5,
+          6,
+          15,
+          1.2
+        ]
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "id": "syndicate_soul_contract_desk",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -5.2632,
+          0.0,
+          1.3684
+        ],
+        [
+          21.2632,
+          31.5,
+          14.6316
+        ]
+      ],
+      "mount": "floor",
+      "kind": 53,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_four_handed_contract_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -5.0717,
+          0.0,
+          -1.5646
+        ],
+        [
+          22.901450270348594,
+          32.495560673451585,
+          17.5646
+        ]
+      ],
+      "mount": "floor",
+      "kind": 53,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_widows_mechanical_clock",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -7.6557,
+          0.0,
+          3.0015
+        ],
+        [
+          23.6557,
+          31.5,
+          11.7725
+        ]
+      ],
+      "mount": "floor",
+      "kind": 56,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_broken_hourglass_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 0,
+      "visual_bounds": [
+        [
+          -2.1607,
+          0.0,
+          1.9585
+        ],
+        [
+          18.1607,
+          31.57906242226355,
+          14.0415
+        ]
+      ],
+      "mount": "floor",
+      "kind": 56,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_hollow_knight_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -2.4091,
+          0.0,
+          0.5649
+        ],
+        [
+          19.0907,
+          31.5,
+          15.4351
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_bastion_shield_display",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.031,
+          0.0,
+          -0.6697
+        ],
+        [
+          17.031,
+          31.5,
+          16.6697
+        ]
+      ],
+      "mount": "floor",
+      "kind": 6,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_raven_queens_sewing_table",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -8.2,
+          0.0,
+          0.09
+        ],
+        [
+          24.2,
+          27.0,
+          15.923668578215224
+        ]
+      ],
+      "mount": "floor",
+      "kind": 55,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_thousand_ravens_chandelier",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -9.7949,
+          -0.6848,
+          -2.3505
+        ],
+        [
+          25.7949,
+          31.5,
+          17.2446
+        ]
+      ],
+      "mount": "ceiling",
+      "kind": 55,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_crystal_samurai_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.0144,
+          0.0,
+          0.7142
+        ],
+        [
+          16.0144,
+          31.5,
+          15.2858
+        ]
+      ],
+      "mount": "floor",
+      "kind": 50,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_mirror_blade_shrine",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -9.3517,
+          0.0,
+          2.5275
+        ],
+        [
+          22.31288026843786,
+          32.26518026843786,
+          13.9396
+        ]
+      ],
+      "mount": "floor",
+      "kind": 50,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_giant_fungal_experiment",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.8438,
+          0.0,
+          -1.1875
+        ],
+        [
+          18.0406,
+          31.5,
+          17.1875
+        ]
+      ],
+      "mount": "floor",
+      "kind": 54,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_alchemists_botanical_cabinet",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.6892585743964812,
+          0.0,
+          3.5146
+        ],
+        [
+          16.426661203107557,
+          31.704023583144078,
+          12.4854
+        ]
+      ],
+      "mount": "floor",
+      "kind": 54,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_legendary_67_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -12.4084,
+          0.0,
+          0.4692
+        ],
+        [
+          29.416887788831087,
+          31.810045753811675,
+          15.5308
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_six_seven_royal_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.0136,
+          0.0,
+          1.738
+        ],
+        [
+          17.44672981305903,
+          31.5,
+          14.262
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_porcelain_duchess_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.4883885889232864,
+          0.0,
+          -1.1875
+        ],
+        [
+          17.488388588923286,
+          31.5,
+          17.1875
+        ]
+      ],
+      "mount": "floor",
+      "kind": 52,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_royal_mirror_vanity",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -1.8787345393197443,
+          0.0,
+          3.8698
+        ],
+        [
+          16.8112,
+          31.5,
+          12.4056
+        ]
+      ],
+      "mount": "floor",
+      "kind": 52,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_inverted_69_sculpture",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -6.0069,
+          0.0,
+          3.0198
+        ],
+        [
+          22.0069,
+          31.5,
+          12.9802
+        ]
+      ],
+      "mount": "floor",
+      "kind": 48,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_gravity_illusion_monument",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -2.2308,
+          0.0,
+          -0.75
+        ],
+        [
+          18.214791348535464,
+          31.5,
+          16.75
+        ]
+      ],
+      "mount": "floor",
+      "kind": 48,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_ultimate_cringe_throne",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          -0.8878,
+          0.0,
+          2.2126
+        ],
+        [
+          16.8878,
+          31.5,
+          13.7874
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    },
+    {
+      "id": "syndicate_king_of_corny_memes_statue",
+      "category": "decor",
+      "hardness": 1.5,
+      "light": 5,
+      "visual_bounds": [
+        [
+          0.7228,
+          0.0,
+          0.7228
+        ],
+        [
+          19.4356,
+          31.5,
+          15.2772
+        ]
+      ],
+      "mount": "floor",
+      "kind": 47,
+      "pack": "syndicate"
+    }
+  ],
+  "biome_blocks": [
+    {
+      "id": "violet_dune_sand",
+      "type": "cube",
+      "hard": 0.5,
+      "tool": "shovel",
+      "light": 0,
+      "layer": "solid",
+      "note": "falling block recommended (sand-like)"
+    },
+    {
+      "id": "golden_glass_sand",
+      "type": "cube",
+      "hard": 0.5,
+      "tool": "shovel",
+      "light": 0,
+      "layer": "solid",
+      "note": "falling block recommended; smelts to glass"
+    },
+    {
+      "id": "ancient_desert_sandstone",
+      "type": "cube",
+      "hard": 0.8,
+      "tool": "pickaxe",
+      "light": 0,
+      "layer": "solid"
+    },
+    {
+      "id": "cracked_desert_sandstone",
+      "type": "cube",
+      "hard": 0.8,
+      "tool": "pickaxe",
+      "light": 0,
+      "layer": "solid"
+    },
+    {
+      "id": "polished_mirage_stone",
+      "type": "cube",
+      "hard": 1.5,
+      "tool": "pickaxe",
+      "light": 0,
+      "layer": "solid"
+    },
+    {
+      "id": "singing_crystal_ore",
+      "type": "cube",
+      "hard": 3.0,
+      "tool": "pickaxe(iron)",
+      "light": 6,
+      "layer": "solid",
+      "note": "drops singing crystal shards (dev choice)"
+    },
+    {
+      "id": "singing_crystal_block",
+      "type": "cube",
+      "hard": 1.5,
+      "tool": "pickaxe",
+      "light": 15,
+      "layer": "solid"
+    },
+    {
+      "id": "glasswood_log",
+      "type": "log",
+      "hard": 2.0,
+      "tool": "axe",
+      "light": 4,
+      "layer": "solid",
+      "note": "axis block"
+    },
+    {
+      "id": "glasswood_leaves",
+      "type": "leaves",
+      "hard": 0.2,
+      "tool": "hoe/shears",
+      "light": 7,
+      "layer": "cutout_mipped",
+      "note": "decay like leaves"
+    },
+    {
+      "id": "glasswood_sapling",
+      "type": "cross",
+      "hard": 0,
+      "tool": "any",
+      "light": 0,
+      "layer": "cutout",
+      "note": "grows Glasswood tree (Tree_Designs)"
+    },
+    {
+      "id": "mirage_palm_log",
+      "type": "log",
+      "hard": 2.0,
+      "tool": "axe",
+      "light": 0,
+      "layer": "solid",
+      "note": "axis block"
+    },
+    {
+      "id": "mirage_palm_leaves",
+      "type": "leaves",
+      "hard": 0.2,
+      "tool": "hoe/shears",
+      "light": 0,
+      "layer": "cutout_mipped"
+    },
+    {
+      "id": "mirage_palm_sapling",
+      "type": "cross",
+      "hard": 0,
+      "tool": "any",
+      "light": 0,
+      "layer": "cutout",
+      "note": "grows Mirage Palm (Tree_Designs)"
+    },
+    {
+      "id": "whispering_desert_grass",
+      "type": "cross",
+      "hard": 0,
+      "tool": "any",
+      "light": 0,
+      "layer": "cutout",
+      "note": "replaceable plant; on violet/golden sand"
+    },
+    {
+      "id": "crystal_cactus",
+      "type": "complex",
+      "hard": 0.4,
+      "tool": "any",
+      "light": 3,
+      "layer": "cutout",
+      "note": "contact damage optional; custom 3D model"
+    },
+    {
+      "id": "mirage_lotus",
+      "type": "complex",
+      "hard": 0,
+      "tool": "any",
+      "light": 10,
+      "layer": "cutout",
+      "note": "place on oasis water edge/sand; custom 3D model"
+    },
+    {
+      "id": "golden_dune_fern",
+      "type": "cross",
+      "hard": 0,
+      "tool": "any",
+      "light": 0,
+      "layer": "cutout"
+    },
+    {
+      "id": "glass_thorn_bush",
+      "type": "complex",
+      "hard": 0.3,
+      "tool": "any",
+      "light": 0,
+      "layer": "translucent",
+      "note": "thorn contact damage optional; model uses semi-transparent texture"
+    },
+    {
+      "id": "singing_crystal_cluster",
+      "type": "complex",
+      "hard": 1.0,
+      "tool": "pickaxe",
+      "light": 9,
+      "layer": "cutout",
+      "note": "needs support below"
+    },
+    {
+      "id": "moon_sand_mushroom",
+      "type": "complex",
+      "hard": 0,
+      "tool": "any",
+      "light": 6,
+      "layer": "cutout",
+      "note": "place on sand"
+    }
+  ],
+  "templates": {
+    "54": {
+      "path": "data/shadowsovereign/structures/polish/salmawy_secret_mansion.nbt",
+      "altar": [
+        19,
+        7,
+        34
+      ],
+      "source_dimensions": [
+        39,
+        25,
+        39
+      ]
+    },
+    "55": {
+      "path": "data/shadowsovereign/structures/polish/theater_of_black_curtains.nbt",
+      "altar": [
+        22,
+        12,
+        25
+      ],
+      "source_dimensions": [
+        45,
+        43,
+        32
+      ]
+    },
+    "56": {
+      "path": "data/shadowsovereign/structures/polish/palace_of_broken_hours.nbt",
+      "altar": [
+        23,
+        3,
+        16
+      ],
+      "source_dimensions": [
+        47,
+        36,
+        47
+      ]
+    }
+  },
+  "biome_structures": [
+    {
+      "id": "glass_desert_cathedral_of_glass_harp",
+      "path": "data/shadowsovereign/structures/polish/cathedral_of_glass_harp.nbt",
+      "floor": 9,
+      "size": [
+        39,
+        32,
+        39
+      ]
+    },
+    {
+      "id": "glass_desert_buried_mirage_observatory",
+      "path": "data/shadowsovereign/structures/polish/buried_mirage_observatory.nbt",
+      "floor": 16,
+      "size": [
+        31,
+        28,
+        31
+      ]
+    },
+    {
+      "id": "glass_desert_lost_caravanserai",
+      "path": "data/shadowsovereign/structures/polish/lost_caravanserai.nbt",
+      "floor": 5,
+      "size": [
+        43,
+        19,
+        43
+      ]
+    },
+    {
+      "id": "glass_desert_thunderglass_labyrinth",
+      "path": "data/shadowsovereign/structures/polish/thunderglass_labyrinth.nbt",
+      "floor": 7,
+      "size": [
+        49,
+        25,
+        49
+      ]
+    }
+  ],
+  "decor_placements": [
+    {
+      "id": "syndicate_soul_contract_desk",
+      "position": [
+        2,
+        9,
+        1
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          9,
+          1
+        ],
+        [
+          1,
+          10,
+          1
+        ],
+        [
+          2,
+          9,
+          1
+        ],
+        [
+          2,
+          10,
+          1
+        ],
+        [
+          3,
+          9,
+          1
+        ],
+        [
+          3,
+          10,
+          1
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/abandoned_jujutsu_academy.nbt",
+      "kind": 53
+    },
+    {
+      "id": "syndicate_four_handed_contract_monument",
+      "position": [
+        9,
+        9,
+        34
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          8,
+          9,
+          33
+        ],
+        [
+          8,
+          9,
+          34
+        ],
+        [
+          8,
+          9,
+          35
+        ],
+        [
+          8,
+          10,
+          33
+        ],
+        [
+          8,
+          10,
+          34
+        ],
+        [
+          8,
+          10,
+          35
+        ],
+        [
+          8,
+          11,
+          33
+        ],
+        [
+          8,
+          11,
+          34
+        ],
+        [
+          8,
+          11,
+          35
+        ],
+        [
+          9,
+          9,
+          33
+        ],
+        [
+          9,
+          9,
+          34
+        ],
+        [
+          9,
+          9,
+          35
+        ],
+        [
+          9,
+          10,
+          33
+        ],
+        [
+          9,
+          10,
+          34
+        ],
+        [
+          9,
+          10,
+          35
+        ],
+        [
+          9,
+          11,
+          33
+        ],
+        [
+          9,
+          11,
+          34
+        ],
+        [
+          9,
+          11,
+          35
+        ],
+        [
+          10,
+          9,
+          33
+        ],
+        [
+          10,
+          9,
+          34
+        ],
+        [
+          10,
+          9,
+          35
+        ],
+        [
+          10,
+          10,
+          33
+        ],
+        [
+          10,
+          10,
+          34
+        ],
+        [
+          10,
+          10,
+          35
+        ],
+        [
+          10,
+          11,
+          33
+        ],
+        [
+          10,
+          11,
+          34
+        ],
+        [
+          10,
+          11,
+          35
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/abandoned_jujutsu_academy.nbt",
+      "kind": 53
+    },
+    {
+      "id": "syndicate_widows_mechanical_clock",
+      "position": [
+        10,
+        3,
+        38
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          9,
+          3,
+          38
+        ],
+        [
+          9,
+          4,
+          38
+        ],
+        [
+          10,
+          3,
+          38
+        ],
+        [
+          10,
+          4,
+          38
+        ],
+        [
+          11,
+          3,
+          38
+        ],
+        [
+          11,
+          4,
+          38
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/palace_of_broken_hours.nbt",
+      "kind": 56
+    },
+    {
+      "id": "syndicate_broken_hourglass_throne",
+      "position": [
+        13,
+        3,
+        22
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          12,
+          3,
+          22
+        ],
+        [
+          12,
+          4,
+          22
+        ],
+        [
+          13,
+          3,
+          22
+        ],
+        [
+          13,
+          4,
+          22
+        ],
+        [
+          14,
+          3,
+          22
+        ],
+        [
+          14,
+          4,
+          22
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/palace_of_broken_hours.nbt",
+      "kind": 56
+    },
+    {
+      "id": "syndicate_hollow_knight_monument",
+      "position": [
+        9,
+        1,
+        18
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          8,
+          1,
+          18
+        ],
+        [
+          8,
+          2,
+          18
+        ],
+        [
+          9,
+          1,
+          18
+        ],
+        [
+          9,
+          2,
+          18
+        ],
+        [
+          10,
+          1,
+          18
+        ],
+        [
+          10,
+          2,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/covenant_crownless_sovereign.nbt",
+      "kind": 6
+    },
+    {
+      "id": "syndicate_bastion_shield_display",
+      "position": [
+        5,
+        1,
+        17
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          1,
+          16
+        ],
+        [
+          4,
+          1,
+          17
+        ],
+        [
+          4,
+          1,
+          18
+        ],
+        [
+          4,
+          2,
+          16
+        ],
+        [
+          4,
+          2,
+          17
+        ],
+        [
+          4,
+          2,
+          18
+        ],
+        [
+          5,
+          1,
+          16
+        ],
+        [
+          5,
+          1,
+          17
+        ],
+        [
+          5,
+          1,
+          18
+        ],
+        [
+          5,
+          2,
+          16
+        ],
+        [
+          5,
+          2,
+          17
+        ],
+        [
+          5,
+          2,
+          18
+        ],
+        [
+          6,
+          1,
+          16
+        ],
+        [
+          6,
+          1,
+          17
+        ],
+        [
+          6,
+          1,
+          18
+        ],
+        [
+          6,
+          2,
+          16
+        ],
+        [
+          6,
+          2,
+          17
+        ],
+        [
+          6,
+          2,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/covenant_crownless_sovereign.nbt",
+      "kind": 6
+    },
+    {
+      "id": "syndicate_raven_queens_sewing_table",
+      "position": [
+        6,
+        12,
+        22
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          5,
+          12,
+          22
+        ],
+        [
+          5,
+          13,
+          22
+        ],
+        [
+          6,
+          12,
+          22
+        ],
+        [
+          6,
+          13,
+          22
+        ],
+        [
+          7,
+          12,
+          22
+        ],
+        [
+          7,
+          13,
+          22
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/theater_of_black_curtains.nbt",
+      "kind": 55
+    },
+    {
+      "id": "syndicate_thousand_ravens_chandelier",
+      "position": [
+        3,
+        14,
+        12
+      ],
+      "mount": "ceiling",
+      "reserved_cells": [
+        [
+          2,
+          13,
+          11
+        ],
+        [
+          2,
+          13,
+          12
+        ],
+        [
+          2,
+          13,
+          13
+        ],
+        [
+          2,
+          14,
+          11
+        ],
+        [
+          2,
+          14,
+          12
+        ],
+        [
+          2,
+          14,
+          13
+        ],
+        [
+          2,
+          15,
+          11
+        ],
+        [
+          2,
+          15,
+          12
+        ],
+        [
+          2,
+          15,
+          13
+        ],
+        [
+          3,
+          13,
+          11
+        ],
+        [
+          3,
+          13,
+          12
+        ],
+        [
+          3,
+          13,
+          13
+        ],
+        [
+          3,
+          14,
+          11
+        ],
+        [
+          3,
+          14,
+          12
+        ],
+        [
+          3,
+          14,
+          13
+        ],
+        [
+          3,
+          15,
+          11
+        ],
+        [
+          3,
+          15,
+          12
+        ],
+        [
+          3,
+          15,
+          13
+        ],
+        [
+          4,
+          13,
+          11
+        ],
+        [
+          4,
+          13,
+          12
+        ],
+        [
+          4,
+          13,
+          13
+        ],
+        [
+          4,
+          14,
+          11
+        ],
+        [
+          4,
+          14,
+          12
+        ],
+        [
+          4,
+          14,
+          13
+        ],
+        [
+          4,
+          15,
+          11
+        ],
+        [
+          4,
+          15,
+          12
+        ],
+        [
+          4,
+          15,
+          13
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/theater_of_black_curtains.nbt",
+      "kind": 55
+    },
+    {
+      "id": "syndicate_crystal_samurai_statue",
+      "position": [
+        1,
+        7,
+        0
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          1,
+          8,
+          0
+        ],
+        [
+          2,
+          7,
+          0
+        ],
+        [
+          2,
+          8,
+          0
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/temple_of_thousand_mirrors.nbt",
+      "kind": 50
+    },
+    {
+      "id": "syndicate_mirror_blade_shrine",
+      "position": [
+        1,
+        7,
+        46
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          0,
+          7,
+          46
+        ],
+        [
+          0,
+          8,
+          46
+        ],
+        [
+          0,
+          9,
+          46
+        ],
+        [
+          1,
+          7,
+          46
+        ],
+        [
+          1,
+          8,
+          46
+        ],
+        [
+          1,
+          9,
+          46
+        ],
+        [
+          2,
+          7,
+          46
+        ],
+        [
+          2,
+          8,
+          46
+        ],
+        [
+          2,
+          9,
+          46
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/temple_of_thousand_mirrors.nbt",
+      "kind": 50
+    },
+    {
+      "id": "syndicate_giant_fungal_experiment",
+      "position": [
+        30,
+        7,
+        36
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          29,
+          7,
+          35
+        ],
+        [
+          29,
+          7,
+          36
+        ],
+        [
+          29,
+          7,
+          37
+        ],
+        [
+          29,
+          8,
+          35
+        ],
+        [
+          29,
+          8,
+          36
+        ],
+        [
+          29,
+          8,
+          37
+        ],
+        [
+          30,
+          7,
+          35
+        ],
+        [
+          30,
+          7,
+          36
+        ],
+        [
+          30,
+          7,
+          37
+        ],
+        [
+          30,
+          8,
+          35
+        ],
+        [
+          30,
+          8,
+          36
+        ],
+        [
+          30,
+          8,
+          37
+        ],
+        [
+          31,
+          7,
+          35
+        ],
+        [
+          31,
+          7,
+          36
+        ],
+        [
+          31,
+          7,
+          37
+        ],
+        [
+          31,
+          8,
+          35
+        ],
+        [
+          31,
+          8,
+          36
+        ],
+        [
+          31,
+          8,
+          37
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/salmawy_secret_mansion.nbt",
+      "kind": 54
+    },
+    {
+      "id": "syndicate_alchemists_botanical_cabinet",
+      "position": [
+        2,
+        6,
+        2
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          1,
+          6,
+          2
+        ],
+        [
+          1,
+          7,
+          2
+        ],
+        [
+          2,
+          6,
+          2
+        ],
+        [
+          2,
+          7,
+          2
+        ],
+        [
+          3,
+          6,
+          2
+        ],
+        [
+          3,
+          7,
+          2
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/polish/salmawy_secret_mansion.nbt",
+      "kind": 54
+    },
+    {
+      "id": "syndicate_legendary_67_monument",
+      "position": [
+        3,
+        6,
+        18
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          6,
+          18
+        ],
+        [
+          2,
+          7,
+          18
+        ],
+        [
+          3,
+          6,
+          18
+        ],
+        [
+          3,
+          7,
+          18
+        ],
+        [
+          4,
+          6,
+          18
+        ],
+        [
+          4,
+          7,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/palace_of_eternal_cringe.nbt",
+      "kind": 47
+    },
+    {
+      "id": "syndicate_six_seven_royal_throne",
+      "position": [
+        3,
+        6,
+        45
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          6,
+          45
+        ],
+        [
+          2,
+          7,
+          45
+        ],
+        [
+          3,
+          6,
+          45
+        ],
+        [
+          3,
+          7,
+          45
+        ],
+        [
+          4,
+          6,
+          45
+        ],
+        [
+          4,
+          7,
+          45
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/palace_of_eternal_cringe.nbt",
+      "kind": 47
+    },
+    {
+      "id": "syndicate_ultimate_cringe_throne",
+      "position": [
+        6,
+        6,
+        18
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          5,
+          6,
+          18
+        ],
+        [
+          5,
+          7,
+          18
+        ],
+        [
+          6,
+          6,
+          18
+        ],
+        [
+          6,
+          7,
+          18
+        ],
+        [
+          7,
+          6,
+          18
+        ],
+        [
+          7,
+          7,
+          18
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/palace_of_eternal_cringe.nbt",
+      "kind": 47
+    },
+    {
+      "id": "syndicate_king_of_corny_memes_statue",
+      "position": [
+        2,
+        6,
+        13
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          2,
+          6,
+          13
+        ],
+        [
+          2,
+          7,
+          13
+        ],
+        [
+          3,
+          6,
+          13
+        ],
+        [
+          3,
+          7,
+          13
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/palace_of_eternal_cringe.nbt",
+      "kind": 47
+    },
+    {
+      "id": "syndicate_porcelain_duchess_statue",
+      "position": [
+        7,
+        9,
+        10
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          6,
+          9,
+          9
+        ],
+        [
+          6,
+          9,
+          10
+        ],
+        [
+          6,
+          9,
+          11
+        ],
+        [
+          6,
+          10,
+          9
+        ],
+        [
+          6,
+          10,
+          10
+        ],
+        [
+          6,
+          10,
+          11
+        ],
+        [
+          7,
+          9,
+          9
+        ],
+        [
+          7,
+          9,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ],
+        [
+          7,
+          10,
+          9
+        ],
+        [
+          7,
+          10,
+          10
+        ],
+        [
+          7,
+          10,
+          11
+        ],
+        [
+          8,
+          9,
+          9
+        ],
+        [
+          8,
+          9,
+          10
+        ],
+        [
+          8,
+          9,
+          11
+        ],
+        [
+          8,
+          10,
+          9
+        ],
+        [
+          8,
+          10,
+          10
+        ],
+        [
+          8,
+          10,
+          11
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt",
+      "kind": 52
+    },
+    {
+      "id": "syndicate_royal_mirror_vanity",
+      "position": [
+        5,
+        9,
+        7
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          4,
+          9,
+          7
+        ],
+        [
+          4,
+          10,
+          7
+        ],
+        [
+          5,
+          9,
+          7
+        ],
+        [
+          5,
+          10,
+          7
+        ],
+        [
+          6,
+          9,
+          7
+        ],
+        [
+          6,
+          10,
+          7
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt",
+      "kind": 52
+    },
+    {
+      "id": "syndicate_inverted_69_sculpture",
+      "position": [
+        9,
+        6,
+        32
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          8,
+          6,
+          32
+        ],
+        [
+          8,
+          7,
+          32
+        ],
+        [
+          9,
+          6,
+          32
+        ],
+        [
+          9,
+          7,
+          32
+        ],
+        [
+          10,
+          6,
+          32
+        ],
+        [
+          10,
+          7,
+          32
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/inverted_circus.nbt",
+      "kind": 48
+    },
+    {
+      "id": "syndicate_gravity_illusion_monument",
+      "position": [
+        4,
+        6,
+        19
+      ],
+      "mount": "floor",
+      "reserved_cells": [
+        [
+          3,
+          6,
+          18
+        ],
+        [
+          3,
+          6,
+          19
+        ],
+        [
+          3,
+          6,
+          20
+        ],
+        [
+          3,
+          7,
+          18
+        ],
+        [
+          3,
+          7,
+          19
+        ],
+        [
+          3,
+          7,
+          20
+        ],
+        [
+          4,
+          6,
+          18
+        ],
+        [
+          4,
+          6,
+          19
+        ],
+        [
+          4,
+          6,
+          20
+        ],
+        [
+          4,
+          7,
+          18
+        ],
+        [
+          4,
+          7,
+          19
+        ],
+        [
+          4,
+          7,
+          20
+        ],
+        [
+          5,
+          6,
+          18
+        ],
+        [
+          5,
+          6,
+          19
+        ],
+        [
+          5,
+          6,
+          20
+        ],
+        [
+          5,
+          7,
+          18
+        ],
+        [
+          5,
+          7,
+          19
+        ],
+        [
+          5,
+          7,
+          20
+        ]
+      ],
+      "template": "data/shadowsovereign/structures/expansion/inverted_circus.nbt",
+      "kind": 48
+    }
+  ]
+}

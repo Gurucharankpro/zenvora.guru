@@ -1,5 +1,5 @@
-# Soulbound Army content update
+# Soulbound Army — current update
 
-[Start here / ابدأ من هنا](review/README.md).
+[Downloads and actual test evidence / التحميل والفحوص](review/README.md).
 
-Build status: **success**.
+Build status: **failure**.
