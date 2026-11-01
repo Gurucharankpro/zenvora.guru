@@ -1,7 +1,8 @@
 """Launch the final obfuscated distribution in an isolated official Forge server.
 Also include a separate QA mod for real registry/template/entity checks.
 """
-import json,os,re,shutil,subprocess,sys,time
+import gzip,io,json,os,re,shutil,subprocess,sys,time,zlib
+import nbtlib
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1];repo=ROOT.parent
 def main():
@@ -34,7 +35,7 @@ def main():
    match=re.search(r'nearest shadowsovereign:singing_glass_desert is at \[(-?\d+),[^,]+,\s*(-?\d+)\]',text)
    if not match:raise RuntimeError('Could not parse actual biome location')
    x,z=map(int,match.groups());command(f'execute in shadowsovereign:echo_realms run forceload add {x} {z} {x+16} {z+16}')
-   until(lambda t:'Marked' in t and 'forced' in t,120)
+   until(lambda t:'Marked' in t and 'force load' in t,120)
    # Let generated chunk tasks finish, then flush every test dimension to disk.
    time.sleep(12);command('save-all flush');until(lambda t:'Saved the game' in t,120)
    command('stop');p.wait(timeout=120)
@@ -43,7 +44,23 @@ def main():
    forbidden=['NoSuchMethodError','NoSuchFieldError','BootstrapMethodError','VerifyError','Exception in server tick loop','Failed to load datapacks','Parsing error loading custom advancement','Error loading registry data','Unknown registry key']
    failures=[s for s in forbidden if s in text]
    if failures:raise RuntimeError('Final production smoke found '+repr(failures))
+   generated=[];surface=False;biome=False
+   region=server/'polish-isolated-test/dimensions/shadowsovereign/echo_realms/region'
+   for cx in [x//16,x//16+1]:
+    for cz in [z//16,z//16+1]:
+     raw=(region/f'r.{cx//32}.{cz//32}.mca').read_bytes();slot=4*((cx%32)+(cz%32)*32);offset=int.from_bytes(raw[slot:slot+3],'big')*4096
+     if offset==0:raise AssertionError('Requested chunk was never saved')
+     length=int.from_bytes(raw[offset:offset+4],'big');compression=raw[offset+4];payload=raw[offset+5:offset+4+length]
+     decoded=zlib.decompress(payload) if compression==2 else gzip.decompress(payload) if compression==1 else payload
+     chunk=nbtlib.File.parse(io.BytesIO(decoded));status=str(chunk['Status'])
+     if status not in ['full','minecraft:full']:raise AssertionError('Chunk not fully generated: '+status)
+     for section in chunk.get('sections',[]):
+      biome|=any(str(b)=='shadowsovereign:singing_glass_desert' for b in section.get('biomes',{}).get('palette',[]))
+      surface|=any(str(b['Name']) in ['shadowsovereign:violet_dune_sand','shadowsovereign:golden_glass_sand'] for b in section.get('block_states',{}).get('palette',[]))
+     generated.append([cx,cz])
+   if not biome or not surface:raise AssertionError('Saved chunks lack actual desert biome/surface blocks')
    result=json.loads((server/'POLISH-RUNTIME.json').read_text());result.update(production_server_started=True,isolated_save_flushed=True,biome_located=[x,z],biome_chunks_requested=4,graphical_client=False,multiplayer=False)
+   result.update(saved_full_chunks=generated,actual_desert_biome_and_surface_blocks=True)
    (ROOT/'reports').mkdir(exist_ok=True);(ROOT/'reports/PRODUCTION-SMOKE.json').write_text(json.dumps(result,indent=2)+'\n')
    shutil.copyfile(logfile,ROOT/'reports/PRODUCTION-SERVER.log');print('PASS: real Forge final-JAR startup, native checks, biome locate/generation and save/stop',result)
   finally:
