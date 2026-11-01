@@ -38,6 +38,7 @@ jobs:
       - name: Build and verify against real Forge APIs
         id: native
         run: |
+          set -euo pipefail
           mkdir -p polish-update/reports
           bash polish-update/source/run_ci.sh 2>&1 | tee polish-update/reports/CI-BUILD.log
       - name: Write truthful build handoff

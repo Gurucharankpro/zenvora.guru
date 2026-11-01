@@ -3,6 +3,8 @@ import hashlib,json,os
 from pathlib import Path
 repo=Path(__file__).resolve().parents[2];root=repo/'polish-update';report=root/'reports';report.mkdir(parents=True,exist_ok=True)
 status=os.environ['BUILD_OUTCOME'];ok=status=='success'
+if ok and not ((repo/'downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar').is_file() and (report/'PRODUCTION-SMOKE.json').is_file()):
+ status='failure';ok=False
 result={'status':status,'source_commit':os.environ['GITHUB_SHA'],'run_id':os.environ['GITHUB_RUN_ID'],'production_built':ok,'graphical_client_tested':False,'multiplayer_tested':False}
 smoke=report/'PRODUCTION-SMOKE.json'
 if smoke.exists():result['production_smoke']=json.loads(smoke.read_text())
