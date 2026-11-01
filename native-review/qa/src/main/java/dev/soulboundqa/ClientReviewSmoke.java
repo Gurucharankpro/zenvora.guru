@@ -31,7 +31,7 @@ public final class ClientReviewSmoke {
  static int ticks,stage,last,wait,retries;static boolean ready;static String save;static CompletableFuture<?> work;static UUID soul;static int kind;
  static void check(boolean ok,String why){if(!ok)throw new IllegalStateException("181 NATIVE CLIENT FAILED:"+why);}
  static void pressH(Minecraft m){try{var method=net.minecraftforge.fml.util.ObfuscationReflectionHelper.findMethod(net.minecraft.client.KeyboardHandler.class,"m_90893_",long.class,int.class,int.class,int.class,int.class);method.invoke(m.keyboardHandler,m.getWindow().getWindow(),72,0,1,0);method.invoke(m.keyboardHandler,m.getWindow().getWindow(),72,0,0,0);}catch(Exception e){throw new RuntimeException(e);}}
- static void next(int n){stage=n;last=ticks;wait=0;}
+ static void next(int n){stage=n;last=ticks;wait=0;if(Minecraft.getInstance()!=null)Minecraft.getInstance().getToasts().clear();}
  static void job(Minecraft m,java.util.function.Consumer<ServerPlayer> f){work=m.getSingleplayerServer().submit(()->f.accept(m.getSingleplayerServer().getPlayerList().getPlayer(m.player.getUUID())));}
  static void shot(Minecraft m,String name){try(var png=Screenshot.takeScreenshot(m.getMainRenderTarget())){var dir=java.nio.file.Path.of(System.getProperty("soulboundqa.screenshots","screenshots"));java.nio.file.Files.createDirectories(dir);png.writeToFile(dir.resolve(name+".png"));}catch(Exception e){throw new RuntimeException(e);}}
  @SubscribeEvent public static void tick(net.minecraftforge.event.TickEvent.ClientTickEvent e){if(e.phase!=net.minecraftforge.event.TickEvent.Phase.END)return;

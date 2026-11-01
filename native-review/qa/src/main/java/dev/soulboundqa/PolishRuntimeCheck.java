@@ -55,7 +55,32 @@ public final class PolishRuntimeCheck {
    if(EntityType.loadEntityRecursive(tag,level,x->x)==null)throw new AssertionError("Entity reload failed "+id);entities++;
   }
   JsonObject result=new JsonObject();result.addProperty("status","passed");result.addProperty("registered_blocks_items",blocks);result.addProperty("native_template_decodes",templates);result.addProperty("native_palette_states",states);result.addProperty("entity_attributes_save_reload",entities);result.addProperty("biome_registry",true);result.addProperty("graphical_client",false);
+  result.add("location_criteria",locations(server));
   Files.writeString(Path.of("POLISH-RUNTIME.json"),new GsonBuilder().setPrettyPrinting().create().toJson(result));
   System.out.println("SOULBOUND_POLISH_NATIVE_PASS "+result);
+ }
+ static JsonObject locations(net.minecraft.server.MinecraftServer server){
+  var manager=server.getAdvancements();var desertId=new ResourceLocation("shadowsovereign:journey/visit_singing_glass_desert");
+  List<ResourceLocation> visits=new ArrayList<>();
+  for(var a:manager.getAllAdvancements())if(a.getId().getNamespace().equals("shadowsovereign")&&a.getId().getPath().startsWith("journey/visit_"))visits.add(a.getId());
+  if(visits.size()!=11)throw new AssertionError("Expected eleven visit advancements");
+  var wrong=net.minecraftforge.common.util.FakePlayerFactory.get(server.overworld(),new com.mojang.authlib.GameProfile(UUID.randomUUID(),"WrongPredicateQA"));wrong.setPos(0,65,0);
+  net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(wrong);
+  List<ResourceLocation> restricted=new ArrayList<>(visits);restricted.add(new ResourceLocation("shadowsovereign:journey/welcome"));restricted.add(new ResourceLocation("shadowsovereign:journey/cartographer"));
+  for(var id:restricted)if(wrong.getAdvancements().getOrStartProgress(manager.getAdvancement(id)).isDone())throw new AssertionError("Location reward granted in wrong dimension: "+id);
+  var realm=server.getLevel(net.minecraft.resources.ResourceKey.create(Registries.DIMENSION,new ResourceLocation("shadowsovereign:echo_realms")));
+  var biomeKey=net.minecraft.resources.ResourceKey.create(Registries.BIOME,new ResourceLocation("shadowsovereign:singing_glass_desert"));
+  var found=realm.findClosestBiome3d(b->b.is(biomeKey),net.minecraft.core.BlockPos.ZERO,6400,32,64);
+  if(found==null)throw new AssertionError("No desert biome found for positive predicate test");
+  var at=found.getFirst();realm.getChunk(at.getX()>>4,at.getZ()>>4);
+  var right=net.minecraftforge.common.util.FakePlayerFactory.get(realm,new com.mojang.authlib.GameProfile(UUID.randomUUID(),"RealmPredicateQA"));right.setPos(at.getX()+.5,at.getY(),at.getZ()+.5);
+  net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(right);
+  if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(desertId)).isDone())throw new AssertionError("Correct biome did not grant its visit advancement");
+  for(var id:visits)if(!id.equals(desertId)&&right.getAdvancements().getOrStartProgress(manager.getAdvancement(id)).isDone())throw new AssertionError("Visit granted for the wrong biome: "+id);
+  if(right.getAdvancements().getOrStartProgress(manager.getAdvancement(new ResourceLocation("shadowsovereign:journey/cartographer"))).isDone())throw new AssertionError("Cartographer awarded without its ten biomes");
+  if(!right.getAdvancements().getOrStartProgress(manager.getAdvancement(new ResourceLocation("shadowsovereign:journey/welcome"))).isDone())throw new AssertionError("Correct dimension did not grant welcome");
+  int xp=right.totalExperience;net.minecraft.advancements.CriteriaTriggers.LOCATION.trigger(right);
+  if(right.totalExperience!=xp)throw new AssertionError("Repeated location trigger duplicated XP rewards");
+  JsonObject result=new JsonObject();result.addProperty("wrong_dimension_rejected",true);result.addProperty("wrong_biomes_rejected",10);result.addProperty("correct_desert_and_dimension_awarded",true);result.addProperty("repeat_reward_unchanged",true);return result;
  }
 }

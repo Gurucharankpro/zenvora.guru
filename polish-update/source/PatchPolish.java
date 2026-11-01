@@ -61,9 +61,15 @@ public class PatchPolish implements Opcodes {
  }
  static void hooks()throws Exception{
   // Preview framing changes only: no entity scale, attributes or hitbox edits.
-  ClassNode c=node(ROOT+"client/MythicGrimoireScreen");int fits=0;
-  for(var m:c.methods)if(m.name.equals("portrait"))for(var i:m.instructions)if(i instanceof LdcInsnNode l&&l.cst instanceof Double d&&d==.85){l.cst=.95;fits++;}
-  if(fits!=1)throw new IllegalStateException("Unknown actual portrait fit code "+fits);put(c);
+  ClassNode c=node(ROOT+"client/MythicGrimoireScreen");int fits=0,padding=0,anchor=0;
+  for(var m:c.methods)if(m.name.equals("portrait"))for(var i:m.instructions){
+   if(i instanceof LdcInsnNode l&&l.cst instanceof Double d&&d==.85){l.cst=.98;fits++;}
+   if(i instanceof IntInsnNode n&&n.getOpcode()==BIPUSH&&n.getNext().getOpcode()==ISUB){
+    if(n.operand==22&&n.getPrevious() instanceof VarInsnNode v&&v.getOpcode()==ILOAD&&v.var==3){n.operand=8;padding++;}
+    else if(n.operand==10&&n.getPrevious().getOpcode()==IADD){n.operand=6;anchor++;}
+   }
+  }
+  if(fits!=1||padding!=1||anchor!=1)throw new IllegalStateException("Unknown actual portrait fit/padding code "+fits+"/"+padding+"/"+anchor);put(c);
   // The real model has a private apply(String,float) player. Add the fauna
   // branch to its erased Mob setup method; all original branches are retained.
   c=node(ROOT+"client/DevourerModel");require(c.name,"apply","(Ljava/lang/String;F)V",false);

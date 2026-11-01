@@ -39,7 +39,8 @@ New content:
   three attached ravens, original UVs and numeric animation tracks are retained.
 - Clockwork Widow and Palace of Broken Hours: Moonveil Hollow, underground arena.
   Full 788-cube supplied model and 10 authored clips retained. Empty chests in the
-  two new Eclipse habitats receive existing vanilla loot tables.
+  new Eclipse habitats receive thematic library/ancient-city/end-city loot.
+  Invalid deepslate slab names and unsupported grindstone properties are fixed.
 - 20 Eclipse props: registered, craftable, in the decor tab and conservatively
   placed in matching future habitats. Valid supplied Java exports are used;
   illegal full-scale vanilla model coordinates are not shipped as block models.
@@ -52,7 +53,11 @@ New content:
 - Larger book previews use sampled visible idle-body bounds, excluding hidden FX.
   Combat scale/hitboxes and saved armies are unchanged. Four distinct new egg
   images and 16 bespoke journey badge images, including the new biome visit.
-  Fifteen compass placeholders are replaced; the two compass lessons keep their
+  Fifteen compass placeholders are replaced; legacy location predicates for the
+  journey visits/welcome/cartographer are corrected to player-context conditions
+  and tested in the actual engine for wrong dimension/biome, correct grant and
+  no repeated XP. Existing award state and reward definitions are preserved.
+  The two compass lessons keep their
   meaningful compass icons. Existing 500 lessons and rewards remain byte-identical.
 
 Verification: see [CI log](../polish-update/reports/CI-BUILD.log),
@@ -100,7 +105,8 @@ else:text+='\nNo final release is claimed. Read the failed build/runtime log; do
 2. معاينات الكتاب على شاشة صغيرة: التكبير، السحب، التمرير، العربية والإنجليزية،
    عدم قص الجسم أو Rika، وعدم تغير حجم الكائن في العالم.
 3. الصور الست عشرة للإنجازات وبيض المخلوقات الأربعة، والخامات والتوهج والحركات.
-   لم تتغير شروط أو مكافآت إنجازات قديمة، ولم تتغير دروس البوصلة الدالة عليها.
+   صُححت شروط زيارة البايومات القديمة بصيغة player الصحيحة لمحرك1.20.1؛
+   المكافآت وحالات المطالبة محفوظة، ودروس البوصلة الـ500 لم تتغير.
 4. السلماوي/قصره في Crimson Shadow؛ الخياطة/مسرحها والأرملة/قصرها في Moonveil
    Hollow. انتظر تحميل القطع وجاهزية بيانات العميل قبل الاستدعاء؛ افحص منصة
    الحارس وارتفاع المبنى ودورانه ومداخله ومسار القبو والغنائم وتوقيت الضرر.

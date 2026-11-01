@@ -2,6 +2,7 @@
 import copy,json,math
 from zipfile import ZipFile
 from prepare_content import ROOT,OUT,BASE,NS,PROFILES,load_template,write
+from criterion_fixes import fix_location_criteria
 
 def main():
  spec=json.loads((ROOT/'content-spec.json').read_text());assert len(spec['profiles'])==3 and len(spec['blocks'])==20 and len(spec['biome_blocks'])==20
@@ -26,7 +27,7 @@ def main():
    if path.startswith(f'assets/{NS}/mythic/') and path in before.namelist():
     original=json.loads(before.read(path));updated=json.loads(read(path));original.pop('previewBounds',None);updated.pop('previewBounds',None);assert original==updated,('World model/animation changed while framing preview',path)
    if '/advancements/' in path and path in before.namelist():
-    old=json.loads(before.read(path));new=json.loads(read(path));old['display']['icon']=new['display']['icon'];assert old==new,('Criteria/reward regression',path)
+    old,_=fix_location_criteria(json.loads(before.read(path)));new=json.loads(read(path));old['display']['icon']=new['display']['icon'];assert old==new,('Undeclared criteria/reward regression',path)
    if path.endswith('.nbt') and path in before.namelist():
     old=load_template(before.read(path));new=load_template(read(path));positions={tuple(map(int,b['pos'])):b for b in new['blocks']}
     for b in old['blocks']:

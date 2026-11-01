@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 from zipfile import ZipFile
 from prepare_content import ROOT,OUT,BASE,NS,write
+from criterion_fixes import fix_location_criteria
 
 def transform(position,rotation,scale=(1,1,1)):
  x,y,z=np.radians(rotation);cx,cy,cz=np.cos([x,y,z]);sx,sy,sz=np.sin([x,y,z])
@@ -67,7 +68,9 @@ def main():
     a=copy.deepcopy(json.loads(jar.read(f'data/{NS}/advancements/journey/visit_crimson_shadow.json')))
     a['display']['title']={'translate':f'quest.{NS}.visit_singing_glass_desert.title'};a['display']['description']={'translate':f'quest.{NS}.visit_singing_glass_desert.description'};a['criteria']['visit']['conditions']['location']['biome']=NS+':singing_glass_desert';a['rewards']={'experience':75}
    else:a=json.loads(jar.read(path));assert a['display']['icon']['item']=='minecraft:compass'
-   a['display']['icon']={'item':NS+':x1_visual','nbt':'{CustomModelData:'+str(value)+'}'};write(path,a);report['journey_icons'].append(path)
+   a['display']['icon']={'item':NS+':x1_visual','nbt':'{CustomModelData:'+str(value)+'}'}
+   a,fixed=fix_location_criteria(a);report.setdefault('location_criteria_fixed',0);report['location_criteria_fixed']+=fixed
+   write(path,a);report['journey_icons'].append(path)
   assert item['overrides'][:len(old)]==old;write(f'assets/{NS}/models/item/x1_visual.json',item)
  (ROOT/'visual-report.json').write_text(json.dumps(report,indent=2)+'\n')
  print('PASS: body-only preview bounds; 15 placeholder journey icons replaced + 1 new biome badge; 444 existing X1 overrides retained')

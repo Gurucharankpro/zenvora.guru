@@ -75,6 +75,8 @@ def add_structure(jar,shared,name,path,n,biome,floor):
 def egg(jar,id,index):
  d=json.loads(jar.read(f'assets/{NS}/models/item/hanan_spawn_egg.json'))
  d['textures']={'egg':NS+':item/polish_eggs','particle':NS+':item/polish_eggs'}
+ # The new atlas uses square cells; preserve the art's actual egg proportions.
+ d['elements'][0]['from'][0]=0;d['elements'][0]['to'][0]=16
  d['elements'][0]['faces']['north']['uv']=[index*4,0,(index+1)*4,16]
  d['elements'][0]['faces']['south']['uv']=[(index+1)*4,0,index*4,16]
  write(f'assets/{NS}/models/item/{id}_spawn_egg.json',d)
