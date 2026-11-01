@@ -1,7 +1,7 @@
 # Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert
 
-Build: **FAILURE**. Source: `2df3d282cfdb0643f5ebc404077925ee0b903ae8`.
-Final output SHA256: `NOT BUILT`.
+Build: **SUCCESS**. Source: `0a7434cb1533260e9e21682d0017b071a4448ae8`.
+Final output SHA256: `c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e`.
 Minecraft 1.20.1, Forge 47.3.22, Java 17, modid `shadowsovereign`.
 Mod version remains `1.8.1-reviewed`; matching client/server protocol is `39-polish-glass-desert`.
 
@@ -61,5 +61,13 @@ Worldgen frequency/terrain figures in the uploaded pack are guidance; the native
 implementation uses conservative bounded generation, not a literal new noise
 router for every dune or every described formation variant.
 
+## Downloads
 
-No final release is claimed. Read the failed build/runtime log; do not install the input as an update.
+- [Complete updated JAR](../downloads/current/soulbound-army-1.20.1-1.8.1-polished.jar?raw=true)
+- [All phone volumes, each <=8 MiB](../downloads/current)
+- [Exact changed-entry list and fingerprint](../downloads/current/CONTENT-MANIFEST.json)
+
+Download every matching .z01/.z02/.../.zip into one folder, then extract the LAST
+.zip with ZArchiver. CRC and extracted JAR SHA are verified against this build.
+Replace the previous JAR with this same file on client/server. Do not install the
+input under polish-update/base as the new mod. QA mod is never part of delivery.

@@ -1,8 +1,72 @@
 {
-  "status": "failure",
-  "source_commit": "2df3d282cfdb0643f5ebc404077925ee0b903ae8",
-  "run_id": "41319752226",
-  "production_built": false,
-  "graphical_client_tested": false,
-  "multiplayer_tested": false
+  "status": "success",
+  "source_commit": "0a7434cb1533260e9e21682d0017b071a4448ae8",
+  "run_id": "41320257250",
+  "production_built": true,
+  "graphical_client_tested": true,
+  "multiplayer_tested": false,
+  "production_smoke": {
+    "status": "passed",
+    "registered_blocks_items": 40,
+    "native_template_decodes": 17,
+    "native_palette_states": 792,
+    "entity_attributes_save_reload": 4,
+    "biome_registry": true,
+    "graphical_client": false,
+    "location_criteria": {
+      "wrong_dimension_rejected": true,
+      "wrong_biomes_rejected": 10,
+      "correct_desert_and_dimension_awarded": true,
+      "repeat_reward_unchanged": true
+    },
+    "production_server_started": true,
+    "isolated_save_flushed": true,
+    "biome_located": [
+      1280,
+      -288
+    ],
+    "biome_chunks_requested": 4,
+    "multiplayer": false,
+    "saved_full_chunks": [
+      [
+        80,
+        -18
+      ],
+      [
+        80,
+        -17
+      ],
+      [
+        81,
+        -18
+      ],
+      [
+        81,
+        -17
+      ]
+    ],
+    "actual_desert_biome_and_surface_blocks": true,
+    "source_commit": "0a7434cb1533260e9e21682d0017b071a4448ae8",
+    "final_input_sha256": "c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e"
+  },
+  "client_smoke": {
+    "status": "passed",
+    "graphical_client_tested": true,
+    "final_input_sha256": "c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e",
+    "runtime": "ForgeGradle remaps final production JAR to official dev mappings; Xvfb/Mesa software rendering",
+    "actual_menu_book_summon_save_reopen": true,
+    "latest_three_legends_and_jerboa_rendered": true,
+    "screenshots": [
+      "earned-latest-legend.png",
+      "world-companion-and-fx.png",
+      "latest-native-models.png",
+      "unique-eggs-and-journey-badges.png",
+      "h-army.png"
+    ],
+    "mobile": false,
+    "multiplayer": false,
+    "source_commit": "0a7434cb1533260e9e21682d0017b071a4448ae8"
+  },
+  "jar_sha256": "c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e",
+  "jar_bytes": 50841760
 }

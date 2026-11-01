@@ -6,31 +6,39 @@
   "entity_attributes_save_reload": 4,
   "biome_registry": true,
   "graphical_client": false,
+  "location_criteria": {
+    "wrong_dimension_rejected": true,
+    "wrong_biomes_rejected": 10,
+    "correct_desert_and_dimension_awarded": true,
+    "repeat_reward_unchanged": true
+  },
   "production_server_started": true,
   "isolated_save_flushed": true,
   "biome_located": [
-    3552,
-    3456
+    1280,
+    -288
   ],
   "biome_chunks_requested": 4,
   "multiplayer": false,
   "saved_full_chunks": [
     [
-      222,
-      216
+      80,
+      -18
     ],
     [
-      222,
-      217
+      80,
+      -17
     ],
     [
-      223,
-      216
+      81,
+      -18
     ],
     [
-      223,
-      217
+      81,
+      -17
     ]
   ],
-  "actual_desert_biome_and_surface_blocks": true
+  "actual_desert_biome_and_surface_blocks": true,
+  "source_commit": "0a7434cb1533260e9e21682d0017b071a4448ae8",
+  "final_input_sha256": "c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e"
 }

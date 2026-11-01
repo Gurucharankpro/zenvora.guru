@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "graphical_client_tested": true,
-  "final_input_sha256": "5f69a5cd2abd25e16c0274afafb12fd0229d31a6aeaf444fdb63dba83859d520",
+  "final_input_sha256": "c918aab576bd027675603dc5e11a6103c11a512749c2201e24beee61fd25df2e",
   "runtime": "ForgeGradle remaps final production JAR to official dev mappings; Xvfb/Mesa software rendering",
   "actual_menu_book_summon_save_reopen": true,
   "latest_three_legends_and_jerboa_rendered": true,
@@ -13,5 +13,6 @@
     "h-army.png"
   ],
   "mobile": false,
-  "multiplayer": false
+  "multiplayer": false,
+  "source_commit": "0a7434cb1533260e9e21682d0017b071a4448ae8"
 }
