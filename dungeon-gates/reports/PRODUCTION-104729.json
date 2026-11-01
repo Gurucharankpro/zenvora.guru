@@ -1,6 +1,6 @@
 {
   "passed": false,
-  "failure": "java.lang.AssertionError: entity-ready boss exists after native chunk readiness",
+  "failure": "java.lang.AssertionError: Both real natural gate types must occur on this seed; actual counts=[0, 0]",
   "seed": 104729,
   "candidate_chunks_requested": 36,
   "test_spacing_chunks": 4,
@@ -9,187 +9,326 @@
   "frozen_occurrences": 0,
   "actual_generated_candidates": [
     {
-      "chunk_x": 2,
-      "chunk_z": 2,
+      "chunk_x": 514,
+      "chunk_z": 514,
+      "surface_y": 71,
+      "biome": "minecraft:forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 2,
+      "chunk_x": 526,
+      "chunk_z": 514,
+      "surface_y": 65,
+      "biome": "minecraft:birch_forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 2,
+      "chunk_x": 538,
+      "chunk_z": 514,
+      "surface_y": 72,
+      "biome": "minecraft:forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 2,
+      "chunk_x": 550,
+      "chunk_z": 514,
+      "surface_y": 63,
+      "biome": "minecraft:river",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 2,
+      "chunk_x": 562,
+      "chunk_z": 514,
+      "surface_y": 64,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 2,
+      "chunk_x": 574,
+      "chunk_z": 514,
+      "surface_y": 87,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 2,
-      "chunk_z": 6,
+      "chunk_x": 514,
+      "chunk_z": 526,
+      "surface_y": 80,
+      "biome": "minecraft:forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 6,
+      "chunk_x": 526,
+      "chunk_z": 526,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 6,
+      "chunk_x": 538,
+      "chunk_z": 526,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 6,
+      "chunk_x": 550,
+      "chunk_z": 526,
+      "surface_y": 107,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 6,
+      "chunk_x": 562,
+      "chunk_z": 526,
+      "surface_y": 99,
+      "biome": "minecraft:meadow",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 6,
+      "chunk_x": 574,
+      "chunk_z": 526,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 2,
-      "chunk_z": 10,
+      "chunk_x": 514,
+      "chunk_z": 538,
+      "surface_y": 66,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 10,
+      "chunk_x": 526,
+      "chunk_z": 538,
+      "surface_y": 64,
+      "biome": "minecraft:forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 10,
+      "chunk_x": 538,
+      "chunk_z": 538,
+      "surface_y": 63,
+      "biome": "minecraft:river",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 10,
+      "chunk_x": 550,
+      "chunk_z": 538,
+      "surface_y": 112,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 10,
+      "chunk_x": 562,
+      "chunk_z": 538,
+      "surface_y": 69,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 10,
+      "chunk_x": 574,
+      "chunk_z": 538,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 2,
-      "chunk_z": 14,
+      "chunk_x": 514,
+      "chunk_z": 550,
+      "surface_y": 77,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 14,
+      "chunk_x": 526,
+      "chunk_z": 550,
+      "surface_y": 78,
+      "biome": "minecraft:savanna",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 14,
+      "chunk_x": 538,
+      "chunk_z": 550,
+      "surface_y": 63,
+      "biome": "minecraft:savanna",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 14,
+      "chunk_x": 550,
+      "chunk_z": 550,
+      "surface_y": 79,
+      "biome": "minecraft:savanna",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 14,
+      "chunk_x": 562,
+      "chunk_z": 550,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 14,
+      "chunk_x": 574,
+      "chunk_z": 550,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 2,
-      "chunk_z": 18,
+      "chunk_x": 514,
+      "chunk_z": 562,
+      "surface_y": 63,
+      "biome": "minecraft:forest",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 18,
+      "chunk_x": 526,
+      "chunk_z": 562,
+      "surface_y": 66,
+      "biome": "minecraft:plains",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 18,
+      "chunk_x": 538,
+      "chunk_z": 562,
+      "surface_y": 72,
+      "biome": "minecraft:savanna",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 18,
+      "chunk_x": 550,
+      "chunk_z": 562,
+      "surface_y": 70,
+      "biome": "minecraft:savanna",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 18,
+      "chunk_x": 562,
+      "chunk_z": 562,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 18,
+      "chunk_x": 574,
+      "chunk_z": 562,
+      "surface_y": 63,
+      "biome": "minecraft:deep_ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 2,
-      "chunk_z": 22,
+      "chunk_x": 514,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:river",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 6,
-      "chunk_z": 22,
+      "chunk_x": 526,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:river",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 10,
-      "chunk_z": 22,
+      "chunk_x": 538,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:lukewarm_ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 14,
-      "chunk_z": 22,
+      "chunk_x": 550,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:lukewarm_ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 18,
-      "chunk_z": 22,
+      "chunk_x": 562,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:lukewarm_ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     },
     {
-      "chunk_x": 22,
-      "chunk_z": 22,
+      "chunk_x": 574,
+      "chunk_z": 574,
+      "surface_y": 63,
+      "biome": "minecraft:ocean",
+      "biome_has_gate_feature": true,
       "gate": "none"
     }
   ],
-  "elapsed_ms": 19849,
-  "source_commit": "25e138d4543422d520fac6ce385f7fbd229f81cd",
-  "final_jar_sha256": "6e79e40d7976a33df24ae5a3d0c9fbadb6cf64126790e963d79efbbc72c8b50a"
+  "feature_diagnostics": {
+    "eligible_cells": 36,
+    "feature_calls": 949,
+    "terrain_rejected": 36
+  },
+  "recent_rejections": [
+    "BlockPos{x=8232, y=66, z=8616} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:air}",
+    "BlockPos{x=8424, y=64, z=8616} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:air}",
+    "BlockPos{x=8616, y=63, z=8616} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8808, y=112, z=8616} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=9000, y=69, z=8616} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:air}",
+    "BlockPos{x=9192, y=63, z=8616} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8232, y=77, z=8808} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:air}",
+    "BlockPos{x=8424, y=78, z=8808} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=8616, y=63, z=8808} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8808, y=79, z=8808} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=9000, y=63, z=8808} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=9192, y=63, z=8808} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8232, y=63, z=9000} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:air}",
+    "BlockPos{x=8424, y=66, z=9000} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=8616, y=72, z=9000} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=8808, y=70, z=9000} below=Block{minecraft:grass_block}[snowy=false] feet=Block{minecraft:grass}",
+    "BlockPos{x=9000, y=63, z=9000} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=9192, y=63, z=9000} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8232, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8424, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8616, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=8808, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=9000, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}",
+    "BlockPos{x=9192, y=63, z=9192} below=Block{minecraft:water}[level=0] feet=Block{minecraft:air}"
+  ],
+  "elapsed_ms": 38696,
+  "source_commit": "8ca8628e7dafc42a3387aaf8cbe20778206cd5d7",
+  "final_jar_sha256": "fc2d00fc9e5b8f3eff094dffcb335f3f01554787127bde34a047b4428d7c2805"
 }
