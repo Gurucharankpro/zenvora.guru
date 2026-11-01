@@ -32,6 +32,7 @@ jobs:
           set -euo pipefail
           mkdir -p dungeon-gates/reports
           {
+            python -c "from pathlib import Path; [p.unlink() for p in Path('dungeon-gates/reports').rglob('*') if p.is_file() and p.name != 'CI-BUILD.log']"
             python -m pip install nbtlib==2.0.4 numpy==2.2.6 Pillow==11.3.0
             python dungeon-gates/scripts/assets.py
             python dungeon-gates/scripts/verify_assets.py
