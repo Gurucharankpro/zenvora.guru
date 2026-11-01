@@ -1,7 +1,7 @@
 """Compile the runtime helper against explicit ABI fixtures; never package them.
 
 Fixtures allow deterministic JVM regression tests without claiming Forge startup.
-Only the three production helper classes are copied to the resource overlay.
+Only production encounter/migration/X1 helpers and creative classification enter the overlay.
 """
 import argparse,json,subprocess
 from pathlib import Path
@@ -32,16 +32,17 @@ SOURCES={
 'net/minecraft/network/chat/Component':'public class Component { public String text="test"; }',
 'net/minecraft/world/Difficulty':'public enum Difficulty { PEACEFUL,EASY,NORMAL,HARD }',
 'net/minecraft/world/BossEvent':'public class BossEvent { public enum BossBarColor {PURPLE,BLUE} public enum BossBarOverlay {PROGRESS} }',
-'net/minecraft/world/level/Level':'''public class Level {public boolean f_46443_; public net.minecraft.world.Difficulty difficulty=net.minecraft.world.Difficulty.NORMAL; public net.minecraft.world.Difficulty m_46791_(){return difficulty;}}''',
+'net/minecraft/world/level/Level':'''public class Level {public boolean f_46443_; public net.minecraft.world.Difficulty difficulty=net.minecraft.world.Difficulty.NORMAL; public net.minecraft.resources.ResourceKey<?> m_46472_(){return new net.minecraft.resources.ResourceKey<>();} public net.minecraft.world.Difficulty m_46791_(){return difficulty;}}''',
 'net/minecraft/server/players/PlayerList':'''public class PlayerList {public java.util.Map<java.util.UUID,net.minecraft.server.level.ServerPlayer> players=new java.util.HashMap<>();public net.minecraft.server.level.ServerPlayer m_11259_(java.util.UUID id){return players.get(id);}}''',
-'net/minecraft/server/MinecraftServer':'''public class MinecraftServer {public net.minecraft.server.players.PlayerList players=new net.minecraft.server.players.PlayerList();public net.minecraft.server.players.PlayerList m_6846_(){return players;}}''',
+'net/minecraft/server/MinecraftServer':'''public class MinecraftServer {public net.minecraft.commands.Commands commands=new net.minecraft.commands.Commands();public java.util.List<net.minecraft.server.level.ServerLevel> levels=new java.util.ArrayList<>(); public Iterable<net.minecraft.server.level.ServerLevel> m_129785_(){return levels;} public net.minecraft.commands.Commands m_129892_(){return commands;}public net.minecraft.commands.CommandSourceStack m_129893_(){return new net.minecraft.commands.CommandSourceStack();}public net.minecraft.server.players.PlayerList players=new net.minecraft.server.players.PlayerList();public net.minecraft.server.players.PlayerList m_6846_(){return players;}}''',
 'net/minecraft/server/level/ServerLevel':'public class ServerLevel extends net.minecraft.world.level.Level {}',
 'net/minecraft/world/entity/Entity':'''public class Entity {
  public int f_19797_;public java.util.UUID id=java.util.UUID.randomUUID();public net.minecraft.server.MinecraftServer server;
- public net.minecraft.world.level.Level level;public boolean alive=true,removed=false;public double x,z;
+ public net.minecraft.world.level.Level level;public boolean alive=true,removed=false;public double x,y,z;
  public net.minecraft.nbt.CompoundTag data=new net.minecraft.nbt.CompoundTag();
  public java.util.UUID m_20148_(){return id;}public net.minecraft.server.MinecraftServer m_20194_(){return server;}
  public net.minecraft.world.level.Level m_9236_(){return level;}public boolean m_6084_(){return alive;}
+ public double m_20185_(){return x;}public double m_20186_(){return y;}public double m_20189_(){return z;}
  public net.minecraft.nbt.CompoundTag getPersistentData(){return data;}public void m_146870_(){removed=true;}
  public double m_20280_(Entity other){return (x-other.x)*(x-other.x)+(z-other.z)*(z-other.z);}
  public net.minecraft.network.chat.Component m_7755_(){return new net.minecraft.network.chat.Component();}
@@ -76,7 +77,7 @@ SOURCES={
  public static class Journal {public Session session;public dev.shadowsovereign.mythic.MythicState mythic=new dev.shadowsovereign.mythic.MythicState();}
 }''',
 'dev/shadowsovereign/adventure/AdventureService':'''public class AdventureService {public static AdventureData.Journal journal(net.minecraft.server.level.ServerPlayer p){return AdventureData.get(p.f_8924_).journal(p.id);}}''',
-'dev/shadowsovereign/army/ShadowRecord':'''public class ShadowRecord {public java.util.UUID id=java.util.UUID.randomUUID();public net.minecraft.world.entity.Mob body;}''',
+'dev/shadowsovereign/army/ShadowRecord':'''public class ShadowRecord {public dev.shadowsovereign.soulforge.SoulTier tier=dev.shadowsovereign.soulforge.SoulTier.COMMON;public int bond;public java.util.UUID id=java.util.UUID.randomUUID();public net.minecraft.world.entity.Mob body;}''',
 'dev/shadowsovereign/army/ArmyData':'''public class ArmyData {
  public static java.util.Map<net.minecraft.server.MinecraftServer,ArmyData> worlds=new java.util.IdentityHashMap<>();
  public java.util.Map<java.util.UUID,Army> armies=new java.util.HashMap<>();
@@ -123,9 +124,18 @@ SOURCES={
 }
 
 SOURCES.update({
-'net/minecraft/resources/ResourceKey':'public class ResourceKey<T> {}',
-'net/minecraft/resources/ResourceLocation':'''public class ResourceLocation {private final String ns,path;public ResourceLocation(String n,String p){ns=n;path=p;}public String m_135827_(){return ns;}public String m_135815_(){return path;}}''',
-'net/minecraftforge/eventbus/api/SubscribeEvent':'@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) @java.lang.annotation.Target(java.lang.annotation.ElementType.METHOD) public @interface SubscribeEvent {}',
+'net/minecraftforge/eventbus/api/EventPriority':'public enum EventPriority {NORMAL,LOWEST}',
+'net/minecraft/world/damagesource/DamageSource':'public class DamageSource {public net.minecraft.world.entity.Entity caster,direct;public net.minecraft.world.entity.Entity m_7639_(){return caster;}public net.minecraft.world.entity.Entity m_7640_(){return direct;}}',
+'net/minecraftforge/event/entity/living/LivingDamageEvent':'public class LivingDamageEvent {public net.minecraft.world.entity.LivingEntity victim;public net.minecraft.world.damagesource.DamageSource source;public boolean canceled;public float amount;public boolean isCanceled(){return canceled;}public float getAmount(){return amount;}public net.minecraft.world.entity.LivingEntity getEntity(){return victim;}public net.minecraft.world.damagesource.DamageSource getSource(){return source;}}',
+'net/minecraft/commands/CommandSourceStack':'public class CommandSourceStack {}',
+'net/minecraft/commands/Commands':'public class Commands {public boolean fail;public java.util.List<String> calls=new java.util.ArrayList<>();public int m_230957_(CommandSourceStack s,String cmd){if(fail)throw new IllegalStateException("fixture failure");calls.add(cmd);return 1;}}',
+'dev/shadowsovereign/soulforge/SoulTier':'public enum SoulTier {COMMON,RARE,EPIC,LEGENDARY,CRAZY,CHOSEN}',
+'dev/shadowsovereign/soulforge/CompanionService':'public class CompanionService {public static int bondRank(int points){return points/30;}}',
+'dev/shadowsovereign/army/Order':'public enum Order {FOLLOW,STAY,GUARD}',
+'dev/shadowsovereign/mythic/MythicProfiles':'public class MythicProfiles {public record Move(String clip,float impact,int effect,float range,float power){}}',
+'net/minecraft/resources/ResourceKey':'public class ResourceKey<T> {public ResourceLocation m_135782_(){return new ResourceLocation("shadowsovereign","echo_realms");}}',
+'net/minecraft/resources/ResourceLocation':'''public class ResourceLocation {private final String ns,path;public ResourceLocation(String n,String p){ns=n;path=p;}public String toString(){return ns+":"+path;}public String m_135827_(){return ns;}public String m_135815_(){return path;}}''',
+'net/minecraftforge/eventbus/api/SubscribeEvent':'@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) @java.lang.annotation.Target(java.lang.annotation.ElementType.METHOD) public @interface SubscribeEvent {EventPriority priority() default EventPriority.NORMAL;}',
 'net/minecraftforge/fml/common/Mod':'''public class Mod {@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) @java.lang.annotation.Target(java.lang.annotation.ElementType.TYPE) public @interface EventBusSubscriber {String modid();}}''',
 'net/minecraftforge/registries/MissingMappingsEvent':'''public class MissingMappingsEvent {
  public java.util.List<Mapping<?>> mappings=new java.util.ArrayList<>();
@@ -147,11 +157,12 @@ if __name__=='__main__':
     creative=root/'dev/shadowsovereign/expansion/CreativeGroups.java';creative.parent.mkdir(parents=True,exist_ok=True)
     creative.write_bytes((args.resources/'creative-groups-source.txt').read_bytes());(args.resources/'creative-groups-source.txt').unlink();files.append(str(creative))
     source=Path(__file__).parent
-    helper_sources=['OpenMythics','RemovedContent','MigrationHooks','OpenMythicsTest','MigrationTest']
+    helper_sources=['OpenMythics','RemovedContent','MigrationHooks','X1Hooks','OpenMythicsTest','MigrationTest','X1HooksTest']
     subprocess.run(['java','-m','jdk.compiler/com.sun.tools.javac.Main','-source','17','-target','17','-d',str(classes),*files,*[str(source/(name+'.java')) for name in helper_sources]],check=True)
     subprocess.run(['java','-ea','-cp',str(classes),'OpenMythicsTest'],check=True)
     subprocess.run(['java','-ea','-cp',str(classes),'MigrationTest'],check=True)
-    for name in helper_sources[:3]:
+    subprocess.run(['java','-ea','-cp',str(classes),'X1HooksTest'],check=True)
+    for name in helper_sources[:4]:
         destination=args.resources/f'dev/shadowsovereign/expansion/{name}.class';destination.parent.mkdir(parents=True,exist_ok=True)
         destination.write_bytes((classes/f'dev/shadowsovereign/expansion/{name}.class').read_bytes())
 

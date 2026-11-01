@@ -62,7 +62,7 @@ def build(inputs,out):
   langs['en_us']['itemGroup.shadowsovereign.'+key]=en;langs['ar_sa']['itemGroup.shadowsovereign.'+key]=ar
  for loc,d in langs.items():write(f'assets/{NS}/lang/{loc}.json',d)
  # Plain JVM helper; it adds no inferred Minecraft API dependencies.
- java='package dev.shadowsovereign.expansion;\npublic final class CreativeGroups {\n static final java.util.Set<String> DECOR=java.util.Set.of('+','.join(json.dumps(id) for id in spec['decor_ids'])+');\n public static int category(String path,int legacy,boolean block){if(DECOR.contains(path))return 2;if(legacy==1)return 1;if(legacy==3 || path.equals("monolith_enchanting_table") || block&&path.startsWith("eclipse_"))return 3;return 0;}\n}\n'
+ java='package dev.shadowsovereign.expansion;\npublic final class CreativeGroups {\n static final java.util.Set<String> DECOR=java.util.Set.of('+','.join(json.dumps(id) for id in spec['decor_ids'])+');\n public static int category(String path,int legacy,boolean block){if(path.equals("x1_visual"))return -1;if(DECOR.contains(path))return 2;if(legacy==1)return 1;if(legacy==3 || path.equals("monolith_enchanting_table") || block&&path.startsWith("eclipse_"))return 3;return 0;}\n}\n'
  write('creative-groups-source.txt',java.encode());spec['latest_decor_ids']=[b['id'] for b in added]
  write('integration-spec.json',spec);print('Imported 60 distinct new decor designs with 7 themed sites and four creative group labels.')
 if __name__=='__main__':

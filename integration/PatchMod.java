@@ -192,6 +192,7 @@ public class PatchMod implements Opcodes {
             }else if(mi.owner.equals(ROOT+"gloom/GloomRealm")&&mi.name.equals("editable")){mi.owner=OPEN;mi.name="editableGloom";}
         }
     }
+    static AbstractInsnNode previousCode(AbstractInsnNode node){var n=node.getPrevious();while(n!=null&&n.getOpcode()<0)n=n.getPrevious();return n;}
     static void defaultCall(MethodNode m,MethodInsnNode mi){
         var l=new InsnList();var args=Type.getArgumentTypes(mi.desc);
         for(int i=args.length-1;i>=0;i--)l.add(new InsnNode(args[i].getSize()==2?POP2:POP));
@@ -282,11 +283,47 @@ public class PatchMod implements Opcodes {
         var mw=new ClassWriter(ClassWriter.COMPUTE_MAXS);model.accept(mw);entries.put(modelName+".class",mw.toByteArray());
         var validatedModel=new ClassNode();new ClassReader(mw.toByteArray()).accept(validatedModel,0);
         for(var m:validatedModel.methods)if((m.access&(ACC_ABSTRACT|ACC_NATIVE))==0)new Analyzer<>(new BasicVerifier()).analyze(validatedModel.name,m);
+        // X1 cosmetic event bridge, applied after all 1.7 gameplay fixes.
+        String x1=ROOT+"expansion/X1Hooks", entity="Lnet/minecraft/world/entity/Entity;", player="Lnet/minecraft/server/level/ServerPlayer;", record="L"+ROOT+"army/ShadowRecord;";
+        var hookCounts=new TreeMap<String,Integer>();
+        for(String owner:List.of(ROOT+"army/ShadowService",ROOT+"army/ShadowGoal",ROOT+"soulforge/CompanionService",ROOT+"mythic/MythicBeast",ROOT+"mythic/MythicExpedition")){
+            var node=new ClassNode();new ClassReader(entries.get(owner+".class")).accept(node,0);
+            for(var method:node.methods){
+                if(owner.endsWith("/ShadowService")){
+                    if(method.name.equals("tickRespawns")){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));call(l,INVOKESTATIC,x1,"tick","(Lnet/minecraft/server/MinecraftServer;)V");method.instructions.insert(l);hookCounts.merge("tick",1,Integer::sum);}
+                    if(method.name.equals("summonAt"))for(var ins:method.instructions.toArray())if(ins.getOpcode()==IRETURN && previousCode(ins).getOpcode()==ICONST_1){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new VarInsnNode(ALOAD,1));call(l,INVOKESTATIC,x1,"summoned","("+player+record+")V");method.instructions.insertBefore(ins,l);hookCounts.merge("summon",1,Integer::sum);}
+                    if(method.name.equals("recall"))for(var ins:method.instructions.toArray())if(ins instanceof MethodInsnNode mi && mi.owner.equals(owner)&&mi.name.equals("particles")){var l=new InsnList();l.add(new InsnNode(DUP2));call(l,INVOKESTATIC,x1,"recall",mi.desc);method.instructions.insertBefore(ins,l);hookCounts.merge("recall",1,Integer::sum);}
+                    if(method.name.equals("setOrder"))for(var ins:method.instructions.toArray())if(ins instanceof FieldInsnNode f&&f.getOpcode()==PUTFIELD&&f.name.equals("order")){var l=new InsnList();for(int j=0;j<3;j++)l.add(new VarInsnNode(ALOAD,j));call(l,INVOKESTATIC,x1,"command","("+player+record+"L"+ROOT+"army/Order;)V");method.instructions.insert(ins,l);hookCounts.merge("command",1,Integer::sum);}
+                    if(method.name.equals("shadowDied"))for(var ins:method.instructions.toArray())if(ins instanceof FieldInsnNode f&&f.getOpcode()==PUTFIELD&&f.name.equals("activeEntity")){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));push(l,15);call(l,INVOKESTATIC,x1,"emit","("+entity+"I)V");method.instructions.insertBefore(ins,l);hookCounts.merge("disappearance",1,Integer::sum);}
+                }
+                if(owner.endsWith("/CompanionService")){
+                    if(method.name.equals("acquired"))for(var ins:method.instructions.toArray())if(ins instanceof FieldInsnNode f&&f.getOpcode()==PUTFIELD&&f.name.equals("soulAcquired")){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));call(l,INVOKESTATIC,x1,"acquired","("+player+")V");method.instructions.insert(ins,l);hookCounts.merge("extraction",1,Integer::sum);}
+                    if(method.name.equals("bond"))for(var ins:method.instructions.toArray())if(ins.getOpcode()==RETURN){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new VarInsnNode(ALOAD,1));l.add(new VarInsnNode(ILOAD,3));call(l,INVOKESTATIC,x1,"bond","("+player+record+"I)V");method.instructions.insertBefore(ins,l);hookCounts.merge("bond",1,Integer::sum);}
+                }
+                if(owner.endsWith("/ShadowGoal"))for(var ins:method.instructions.toArray())if(ins instanceof MethodInsnNode mi&&mi.name.equals("m_6021_")){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new FieldInsnNode(GETFIELD,owner,"mob","Lnet/minecraft/world/entity/Mob;"));push(l,10);call(l,INVOKESTATIC,x1,"emit","("+entity+"I)V");method.instructions.insert(ins,l);hookCounts.merge("teleport",1,Integer::sum);}
+                if(owner.endsWith("/MythicBeast")&&method.name.equals("strike")){
+                    for(var ins:method.instructions.toArray())if(ins instanceof FieldInsnNode f&&f.getOpcode()==GETFIELD&&f.name.equals("kind")){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new VarInsnNode(ALOAD,1));call(l,INVOKESTATIC,x1,"attack","(L"+ROOT+"mythic/MythicBeast;L"+ROOT+"mythic/MythicProfiles$Move;)V");method.instructions.insertBefore(ins.getPrevious(),l);hookCounts.merge("attack",1,Integer::sum);break;}
+                }
+                if(owner.endsWith("/MythicExpedition")&&method.name.equals("spawn"))for(var ins:method.instructions.toArray())if(ins.getOpcode()==IRETURN&&previousCode(ins).getOpcode()==ICONST_1){var l=new InsnList();l.add(new VarInsnNode(ALOAD,0));l.add(new VarInsnNode(ILOAD,1));call(l,INVOKESTATIC,owner,"body","("+player+"I)L"+ROOT+"mythic/MythicBeast;");push(l,14);call(l,INVOKESTATIC,x1,"emit","("+entity+"I)V");method.instructions.insertBefore(ins,l);hookCounts.merge("guardian",1,Integer::sum);}
+            }
+            var cw=new ClassWriter(ClassWriter.COMPUTE_MAXS);node.accept(cw);byte[] code=cw.toByteArray();var checked=new ClassNode();new ClassReader(code).accept(checked,0);
+            for(var method:checked.methods)if((method.access&(ACC_ABSTRACT|ACC_NATIVE))==0)new Analyzer<>(new BasicVerifier()).analyze(checked.name,method);
+            entries.put(owner+".class",code);
+        }
+        for(String key:List.of("tick","summon","recall","command","disappearance","extraction","bond","teleport","attack","guardian"))if(hookCounts.getOrDefault(key,0)!=(key.equals("guardian")?2:1))throw new IllegalStateException("Unexpected X1 hook count: "+key+" "+hookCounts);
+        var gc=new ClassNode();new ClassReader(entries.get(GLOOM+".class")).accept(gc,0);var initFx=new InsnList();push(initFx,"x1_visual");push(initFx,0);push(initFx,0.0f);call(initFx,INVOKESTATIC,GLOOM,"item","(Ljava/lang/String;IF)Lnet/minecraftforge/registries/RegistryObject;");initFx.add(new InsnNode(POP));
+        for(var ins:clinit(gc).instructions.toArray())if(ins.getOpcode()==RETURN)clinit(gc).instructions.insertBefore(ins,initFx);
+        var gcw=new ClassWriter(ClassWriter.COMPUTE_MAXS);gc.accept(gcw);entries.put(GLOOM+".class",gcw.toByteArray());
+        var soundJson=JsonParser.parseString(new String(entries.get("assets/shadowsovereign/sounds.json"),java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+        var newSounds=JsonParser.parseString(Files.readString(resources.resolve("x1-sounds.json"))).getAsJsonObject();for(var snd:newSounds.entrySet())soundJson.add(snd.getKey(),snd.getValue());
+        entries.put("assets/shadowsovereign/sounds.json",new GsonBuilder().setPrettyPrinting().create().toJson(soundJson).getBytes(java.nio.charset.StandardCharsets.UTF_8));Files.delete(resources.resolve("x1-sounds.json"));
+        System.out.println("PASS: exact X1 event-hook sites verified: "+hookCounts);
+
         // Exact protocol match prevents old clients joining a server whose
         // entity registry and bestiary have been extended.
         String network=ROOT+"network/ShadowNetwork.class";var c=new ClassNode();new ClassReader(entries.get(network)).accept(c,0);
-        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="36-curated-content";
-        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="36-curated-content";}
+        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="37-shadow-awakening";
+        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="37-shadow-awakening";}
         var w=new ClassWriter(0);c.accept(w);entries.put(network,w.toByteArray());
         for(var entry:new ArrayList<>(entries.entrySet()))if(entry.getKey().endsWith(".class")){
             String className=entry.getKey().replace(".class","");
@@ -301,7 +338,12 @@ public class PatchMod implements Opcodes {
         try(var paths=Files.walk(resources)){for(var path:paths.filter(Files::isRegularFile).toList()){
             String name=resources.relativize(path).toString().replace(File.separatorChar,'/');
             if(!name.equals("integration-spec.json"))entries.put(name,Files.readAllBytes(path));}}
-        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.7.0-curated-content-preview\"");
+        // Merge AFTER the old-resource overlay, preserving retired-sound cleanup.
+        soundJson=JsonParser.parseString(new String(entries.get("assets/shadowsovereign/sounds.json"),java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+        for(var snd:newSounds.entrySet())soundJson.add(snd.getKey(),snd.getValue());
+        byte[] soundBytes=new GsonBuilder().setPrettyPrinting().create().toJson(soundJson).getBytes(java.nio.charset.StandardCharsets.UTF_8);
+        entries.put("assets/shadowsovereign/sounds.json",soundBytes);Files.write(resources.resolve("assets/shadowsovereign/sounds.json"),soundBytes);
+        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.8.0-shadow-awakening-preview\"");
         entries.put("META-INF/mods.toml",metadata.getBytes(java.nio.charset.StandardCharsets.UTF_8));
         Files.createDirectories(output.toAbsolutePath().getParent());
         try(var zip=new ZipOutputStream(Files.newOutputStream(output))){for(var entry:entries.entrySet()){var e=new ZipEntry(entry.getKey());e.setTime(0);zip.putNextEntry(e);zip.write(entry.getValue());zip.closeEntry();}}

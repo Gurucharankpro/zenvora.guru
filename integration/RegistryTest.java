@@ -31,7 +31,7 @@ public class RegistryTest {
                 }
                 verifiedClasses++;
             }
-            if(verifiedClasses!=10)throw new AssertionError("Missing generated expansion classes: "+verifiedClasses);
+            if(verifiedClasses!=11)throw new AssertionError("Missing generated expansion classes: "+verifiedClasses);
             System.out.println("PASS: all "+verifiedClasses+" generated expansion classes / "+verifiedMethods+" methods passed bytecode stack/local checks (not game API linkage).");
             for(var entry:Collections.list(zip.entries())){
                 if(!entry.getName().endsWith(".class"))continue;
@@ -46,19 +46,23 @@ public class RegistryTest {
             System.out.println("PASS: every mod-owned class reference resolves after retirement/relocation.");
             var helper=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry("dev/shadowsovereign/expansion/OpenMythics.class"))).accept(helper,0);
             int links=0;
-            for(var method:helper.methods)for(var ins:method.instructions){
+            for(String bridgeName:List.of(helper.name,"dev/shadowsovereign/expansion/X1Hooks")){
+            var bridge=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry(bridgeName+".class"))).accept(bridge,0);
+            for(var method:bridge.methods)for(var ins:method.instructions){
                 String owner=null,member=null,descriptor=null;boolean field=false;
                 if(ins instanceof MethodInsnNode mi){owner=mi.owner;member=mi.name;descriptor=mi.desc;}
                 if(ins instanceof FieldInsnNode fi){owner=fi.owner;member=fi.name;descriptor=fi.desc;field=true;}
-                if(owner==null || !owner.startsWith("dev/shadowsovereign/") || owner.equals(helper.name))continue;
+                if(owner==null || !owner.startsWith("dev/shadowsovereign/") || owner.equals(bridge.name))continue;
                 var entry=zip.getEntry(owner+".class");if(entry==null)throw new AssertionError("Missing mod class "+owner);
                 var target=new ClassNode();new ClassReader(zip.getInputStream(entry)).accept(target,ClassReader.SKIP_CODE);
                 final String n=member,d=descriptor;
                 boolean found=field?target.fields.stream().anyMatch(f->f.name.equals(n)&&f.desc.equals(d)&&(f.access&Opcodes.ACC_PUBLIC)!=0):
                     target.methods.stream().anyMatch(m->m.name.equals(n)&&m.desc.equals(d)&&(m.access&Opcodes.ACC_PUBLIC)!=0);
+                if(!found && "java/lang/Enum".equals(target.superName) && member.equals("ordinal") && descriptor.equals("()I"))found=true;
                 if(!found && target.superName!=null && target.superName.startsWith("net/minecraft/"))continue;
                 if(!found)throw new AssertionError("Fixture/mod ABI mismatch: "+owner+"."+member+descriptor);
                 links++;
+            }
             }
             System.out.println("PASS: "+links+" helper references match public members of the actual patched mod (Minecraft/Forge members remain unverified).");
             for(String className:List.of("MythicExpedition","MythicService")){
@@ -148,9 +152,9 @@ public class RegistryTest {
             if(args.length==5 && args[3].equals("--previous"))try(var previous=loader(Path.of(args[4]),gson)){
                 var previousClass=Class.forName(name,true,previous);
                 var previousProfiles=(List<?>)previousClass.getField("ALL").get(null);
-                if(previousProfiles.size()!=49)throw new AssertionError("Unexpected previous release size");
-                for(int i=0;i<49;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
-                System.out.println("PASS: all 49 profiles from the previous 1.6.0 candidate retain their exact definitions/order.");
+                if(previousProfiles.size()!=51)throw new AssertionError("Unexpected previous release size");
+                for(int i=0;i<51;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
+                System.out.println("PASS: all 51 profiles from the previous 1.7.0 candidate retain their exact definitions/order.");
             }
         }
     }

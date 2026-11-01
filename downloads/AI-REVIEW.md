@@ -1,43 +1,48 @@
-# Review handoff for the independent tester
+# Independent reviewer handoff — X1 on 1.7.0
 
-Start with TEST-REPORT.md, LATEST_INPUTS.json and integration/README.md.
-This is a binary ASM integration, NOT the original complete Forge source project.
-No live game pass or zero-bug certification is claimed.
+Read TEST-REPORT.md and X1_INPUT.json first. This is an ASM binary integration,
+not the original complete Forge development project. No live game pass is claimed.
 
-1. Verify all four split archive hashes; put them together, extract the final ZIP,
-   and compare the resulting JAR SHA-256 against TEST-REPORT.md. Install one mod
-   version only, on a clean Forge 1.20.1 / 47.3+ client AND dedicated server.
-2. Review integration/PatchMod.java: ModCreativeTab category -> legacyCategory +
-   CreativeGroups; DevourerModel conditional translucent method; profiles/IDS
-   append-only; original Knight removal and encounter routing. Verify class
-   frames/types and actual Minecraft/Forge symbols, beyond BasicVerifier.
-3. Read compile_helper.py. Its API/world fixtures deliberately simulate behavior;
-   they are not a Forge runtime. Run the actual game to validate linkage/registration.
-4. Confirm exactly four custom tabs labeled Decor/Eggs/Workstations/Other in both
-   English/Arabic. Check Hanan/Ronin eggs; all 120 decor blocks; functional
-   Odyssey/Eclipse stations, monolith_enchanting_table and other workshops; ordinary materials/books/tools.
-   Decorative clockwork workbench and altars MUST be in Decor, not Workstations.
-   Retired content must remain hidden. Existing tab IDs are deliberately retained.
-5. Generate NEW chunks: Hanan Cairo house in Crimson Shadow, mirror temple in
-   Shattered Sky; Butcher court, Devourer II sanctum, five biome relic sites.
-   Inspect model orientation, safe spawn, chest loot, markers, terrain height,
-   light and clearance. Sunken structures use OCEAN_FLOOR_WG. Models are oversized
-   static anchor props; no functional seating/storage/multiblock is implemented.
-6. Observe Glass Ronin alpha and zero-scale FX hiding, all attack/death/arrival
-   clips, capture/recall/respawn. Hanan has no supplied emissive mask. New eggs
-   select separate halves of an imagegen atlas; inspect UVs at runtime.
-7. Start a guardian, summon allies, break/place blocks, flee, start another,
-   return; repeat after chunk unload, logout, dimensions and restart. Check UUID
-   persistence/reward uniqueness. Existing ownership and unrelated protections stay.
-8. Compare a COPY of an old 1.6 world: profile identities, quest progress and all
-   500 lessons. Never test migration on the only copy of a valuable save.
+1. Reassemble all split volumes and compare the resulting JAR hash. Use a clean
+   Forge 1.20.1 / 47.3+ client AND server, Java17; install one mod version only.
+2. Audit integration/x1_assets.py, X1Hooks.java, X1HooksTest.java and X1 additions
+   in PatchMod.java. Commands are static cosmetic functions executed with server
+   command source; inspect trust boundaries, permissions, SNBT and their effect
+   only on tagged ItemDisplay entities. Check exact MinecraftServer/Commands
+   SRG member linkage against the real runtime. Fixtures cannot establish this.
+3. Check gameplay callbacks: summon only on success (including native boolean
+   returns separated by labels); extraction only on accepted record; recall
+   before removal; bond old/new rank; accepted orders; actual catch-up teleport;
+   validated strike guard/trail; positive uncanceled post-armor impact at victim;
+   natural guardian fresh/resume branches; valid shadow death. Compare gameplay
+   outcomes against a COPY of 1.7.0, not an earlier release.
+4. Test ordinary, EPIC, LEGENDARY, CRAZY/CHOSEN and mythic summons; denied summons
+   must have no false spawn VFX. Test recall, capture, rank change/no change,
+   follow/stay commands, teleport, melee/projectile hits, canceled/zero damage,
+   shield, guardian spawn/resume and disappearance. Check 4 sound clips by ear.
+5. Validate ItemDisplay models, vertical/ground anchoring, transparency, timing,
+   alpha endings and separate instance frame-zero starts. Verify only one weapon
+   variant appears, and all effects end. Auras are explicitly finite bursts.
+6. Inspect 24-display cap per dimension; scoreboard objectives sbx1_age/sbx1_count
+   and storage shadowsovereign:x1. Kill must target only tagged ItemDisplays;
+   clocks should not reset old instances. Test custom dimensions, chunk unload,
+   reload/restart, player logout, multiple players and command failures. Profile
+   command traffic, entity packets, GPU atlas memory and low-end client behavior.
+7. The internal x1_visual item must be hidden from all four creative tabs. Check
+   old station/decor classification including Monolith enchanting table, all old
+   creatures, 500 learning quests, structures, sounds and army persistence.
+8. UI badges/widgets, directional rally wave, dome/ring meshes, persistent loops
+   and performance-preset UI are NOT integrated. Do not mark them as working.
+   Sprite barriers are cosmetic and do not add a new defense power.
 
-Reproduction: requires the original supplied JAR with enforced base SHA and the
-previous input packs plus the five latest archives. Extract latest inputs into:
-Mob_58_Hanan_Complete, Mob_65_Glass_Ronin_Complete, Decor_Pack_05,
-Decor_Pack_03_Variant, Decor_Pack_10. Preserve internal paths. The old Devourer
-pack remains in its original folder; DO NOT overwrite it with the new archive.
-Run bash integration/build.sh ORIGINAL.jar INPUTS BUILD_DIR. For preservation
-checks put the 1.6.0 JAR in BUILD_DIR/dist. Dependency downloads are pinned.
-Record exact Forge/JVM version, logs, reproduction coordinates and item IDs for
-any failure. Distinguish static fixture tests from actual game results.
+Manual visual inspection on a disposable world (operator permission):
+execute as @p at @s run function shadowsovereign:x1/event/02
+The native server tick initializes objectives automatically. Do not mistake a
+manual function demo for proof that native gameplay hooks work.
+
+Reproduce with all previous extracted input packs, plus extract the uploaded X1
+archive into INPUTS/X1_Shadow_Awakening preserving internal paths. Run:
+bash integration/build.sh ORIGINAL.jar INPUTS BUILD_DIR
+Put the published 1.7.0 JAR in BUILD_DIR/dist for preservation comparisons.
+Dependencies/base hash are pinned. Compiled API fixtures are never shipped.
+Record runtime logs, exact versions, effect IDs and reproduction steps for issues.

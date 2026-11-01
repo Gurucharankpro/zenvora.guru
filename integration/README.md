@@ -1,4 +1,47 @@
-# Soulbound Army 1.7.0 — curated content preview
+# Soulbound Army 1.8.0 — Shadow Awakening preview
+
+This update extends the exact published 1.7.0 source state (commit
+965d1a0be2e5abee2def701b2789015395a2577a). All 51 previous profiles, 57 eggs,
+120 decor designs, four creative categories, structures and 500 learning lessons
+are preserved. Builds replay the existing integration pipeline against the
+hash-pinned original JAR and compare output assets/catalogues against 1.7.0.
+X1_INPUT.json records the uploaded pack and baseline artifact fingerprints.
+
+X1 supplies visual frames, not body/skeleton animations or new abilities.
+x1_assets.py copies selected original frames unchanged and creates 444 item
+model frames, 31 layer controllers and 15 effect families. X1Hooks triggers them
+through bounded vanilla ItemDisplay entities and static internal functions.
+Each instance starts at frame zero, has its own clock and expires in <=100 ticks.
+There is a 24-display cap per loaded dimension. All loaded server dimensions are
+ticked; unloaded displays resume their finite clock when loaded. Cleanup resets
+its scoreboard entry and kills only tagged ItemDisplays. Vertical billboards
+keep standing layers upright; ground layers use fixed horizontal planes.
+
+Mapped events: successful soul acquisition, successful summon/respawn (standard,
+legendary or mythic), recall, confirmed bond-rank increase, accepted orders,
+catch-up teleport arrival, existing melee strikes, uncanceled positive damage
+impact, existing effect-5 guard, natural guardian spawn/resume and shadow death.
+Aura 08/09 are finite EPIC/high-tier summon bursts, not persistent rank auras.
+Rally uses ground/ally markers; its directional wave remains optional/unbound.
+Weapon variants select slash/thrust/overhead shapes from the existing clip name.
+Damage impact is placed at the damaged target, while acquisition is at the owner.
+The barrier is a sprite presentation, not an additive dome mesh or a new shield.
+UI badges/widgets and Blockbench meshes are not linked to unsupported UI states.
+
+Four original OGG clips are merged into the existing sound declarations. Existing
+particles stay. The internal x1_visual item is hidden from all creative groups;
+there is no new player item/ability or third-party animation dependency.
+Visual command failures are isolated and warned once; linkage failure disables
+further cosmetic commands. The injected fixture-failure warning in the test log
+is intentional and does not come from an actual Forge run.
+
+Protocol 37-shadow-awakening, JAR version 1.8.0-shadow-awakening-preview.
+Both client and server need the same new JAR. Forge runtime, command/function
+codecs, rendering, sound, multiplayer, save migration and performance remain
+UNTESTED: official Forge downloads are excluded by the enforced network policy.
+Passing fixtures/static checks does not establish runtime compatibility.
+
+## Earlier content and build context
 
 Latest release: Hanan (profile 49, Crimson Shadow / Cairo house), Glass Ronin
 (profile 50, Shattered Sky / temple), 20 Butcher props, 20 distinct Devourer II

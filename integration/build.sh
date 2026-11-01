@@ -31,11 +31,12 @@ python3 "$source_dir/decor_packs.py" --inputs "$input_dir" --base "$base_jar" --
 python3 "$source_dir/living_realms.py" --resources "$resources"
 python3 "$source_dir/learning_quests.py" --resources "$resources"
 python3 "$source_dir/latest_packs.py" --inputs "$input_dir" --resources "$resources"
+python3 "$source_dir/x1_assets.py" --inputs "$input_dir" --resources "$resources"
 python3 "$source_dir/polish_assets.py" --base "$base_jar" --out "$resources"
 python3 "$source_dir/compile_helper.py" "$build_dir" "$resources"
-jar="$build_dir/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar"
+jar="$build_dir/dist/soulbound-army-1.20.1-1.8.0-shadow-awakening-preview.jar"
 java --class-path "$build_dir/tools/*" "$source_dir/PatchMod.java" "$base_jar" "$resources" "$jar"
-previous_jar="$build_dir/dist/soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar"
+previous_jar="$build_dir/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar"
 previous_args=()
 if [ -f "$previous_jar" ]; then previous_args=(--previous "$previous_jar"); fi
 java --class-path "$build_dir/tools/*" "$source_dir/RegistryTest.java" "$base_jar" "$jar" "$build_dir/tools/gson.jar" "${previous_args[@]}"

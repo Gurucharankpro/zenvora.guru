@@ -1,59 +1,91 @@
-# 1.7.0 verification — EXPERIMENTAL, NOT FORGE-TESTED
+# 1.8.0 Shadow Awakening — verification report
 
-Integrated latest five uploads, identified by LATEST_INPUTS.json. Hanan and Glass
-Ronin append at profile slots 49/50. All 49 previous profiles are unchanged.
-Hanan's Cairo house -> Crimson Shadow; Ronin's mirror temple -> Shattered Sky.
-Templates convert 1.21 DataVersion to 1.20.1 / 3465, clear authoring markers and
-entities, and retain chest loot. Full-body spawn-clearance checks pass.
+EXPERIMENTAL CANDIDATE; no actual Forge run. Built on the exact published 1.7.0
+source commit 965d1a0be2e5abee2def701b2789015395a2577a and compared with its
+c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a JAR.
+The reproducible pipeline replays all existing patches against the original
+hash-pinned JAR; it does not drop content or start from an earlier release state.
+All 51 prior profiles/order, artwork, structures, 500 lessons, journey goals and
+four creative classifications remain. Existing sound declarations are preserved.
 
-60 additional decor designs: Butcher 20, Devourer II 20, biome relics 20. The
-latest Devourer archive is a different edition (102 entries, decor_pack_03
-namespace); it is not the earlier 123-entry soul_bound asset pack. Stable old
-assets remain; distinct variants get devourer_v2_ IDs. Butcher/relic props have
-separate prefixes. All have native block/item/model/state/loot registrations;
-seven themed sites distribute them to the relevant biomes. Biome relics are
-landmark structures, not free-scatter features or exact suggested room edits.
+## What is implemented
 
-Four existing creative registry IDs are retained and repurposed as requested:
-Decor (nature), Eggs (creatures), Workstations (workshops), Other (soulbound_army).
-Explicit decor membership overrides misleading names like workbench/altar.
-Native egg recognition and workshop classification remain; Eclipse station
-blocks and the Monolith enchanting table are covered. Retired content stays hidden. The tests execute the actual
-CreativeGroups class and verify the actual ModCreativeTab wrapper routing.
+The supplied pack is visual artwork, not skeletal creature animations. Selected
+original individual PNG frames are copied unchanged: 444 frames, 31 controllers,
+15 effect families. Vanilla ItemDisplay entities present ground/vertical quads,
+with per-instance frame clocks through CustomModelData, not a global animated
+texture cycle. Four original OGG clips are merged into existing sound resources.
+The one internal x1_visual item is deliberately hidden from all creative tabs.
 
-Glass Ronin's model uses a conditional translucent render-type adapter. Its zero
-FX scales become 0.001 to avoid singular normal scaling. Hanan has no source glow
-mask and uses a transparent fallback. New eggs use an unchanged generated paired
-RGBA atlas; old egg UV assignments remain. No raster art editing was performed.
+Hook mapping (actual original methods inspected, exact bytecode sites checked):
 
-Totals: 51 profiles plus separate Devourer, 57 eggs, 160 added blocks/items,
-120 decor designs, 43 structure/tree sets. All 500 learning + 15 journey goals
-are preserved without silently changing IDs, requirements or old translations.
+| Effect | Trigger | Placement / qualification |
+| --- | --- | --- |
+| 01 Extraction | CompanionService.acquired commits soulAcquired=true | Owning player; no repeat on already-acquired record |
+| 02 Standard summon | ShadowService.summonAt returns true | Actual successfully spawned body |
+| 03 Legendary summon | Same, SoulTier LEGENDARY or above | Actual body; mythic bodies use 14 instead |
+| 04 Recall | Recall's native particle/removal path | Body position before removal |
+| 05 Promotion | CompanionService.bond, rank increases | Active body or owner; bond rank, not invented soul tiers |
+| 06 Rally | Accepted FOLLOW order | Each affected ally; ground/marker only |
+| 07 Confirmation | Other accepted orders | Active body or owner |
+| 08 Elite aura | EPIC/LEGENDARY summon | Finite one-cycle burst, not persistent aura |
+| 09 General-style aura | CRAZY/CHOSEN summon | Finite high-tier burst; no new General rank |
+| 10 Teleport arrival | ShadowGoal after actual catch-up teleport | Destination body position |
+| 11 Weapon trail | Valid owned mythic melee strike; ordinary positive melee damage | Clip-based slash/thrust/overhead variants; one variant at a time |
+| 12 Impact | Lowest-priority uncanceled positive LivingDamageEvent, shadow attacker | Victim position after armor calculation |
+| 13 Barrier | Existing effect-5 owned mythic guard strike | Sprite fallback at body; no new defensive ability |
+| 14 Boss awakening | Mythic/Devourer army summon; natural mythic guardian spawn/resume | Spawned body; both native resume/fresh branches |
+| 15 Disappearance | Valid owned shadow death | Body position; no graphic content |
 
-Validation: 25 Python resource test groups; 42 simulated-world encounter and
-10 selective-migration assertions. Ten expansion classes / 41 methods stack
-checks; all mod-owned class references and 102 helper/public mod API references
-resolve. Actual catalogue and animation reader load 51 aligned profiles and 47
-new attack clips. All 49 previous profile definitions/order are unchanged.
-160 factories, including 120 explicit noncollision/nonocclusion decor blocks,
-are inspected. The actual classifier handles all 120 decor IDs plus representative
-other/egg/station cases. Compile-time engine fixtures and generated source are
-not packaged. Split ZIP CRC/directory/payload SHA validation passed.
+The server tick advances displays in every loaded dimension. A maximum of 24
+visual displays per dimension and <=100 ticks per layer limit accumulation.
+Unloaded displays resume their finite timer when loaded again. Cleanup resets
+the display score and kills ONLY tagged ItemDisplays. Normal actors, inventories,
+health, targeting, combat powers and ownership are not modified by the functions.
+Original particles remain. Gameplay success conditions are retained. Commands
+use static internal functions and trusted dimension/finite coordinates, not user
+text. Cosmetic exceptions are isolated; a linkage failure disables further visual
+commands and logs once. The fixture-failure warning in captured tests is an
+intentional injected failure test, not evidence of an actual Forge error.
 
-Limitations: no Minecraft/Forge startup, actual registry lifecycle, render/UV
-inspection, creative UI, alpha behavior, pathfinding, multiplayer or save migration
-test. The enforced network policy excludes Forge artifact hosts; previous
-installer attempts returned 403. Explicit API fixtures are not the engine.
-JDK21 tooling emits Java17 bytecode with -source/-target; missing ct.sym prevents
---release linkage checks. Props are static one-anchor objects, not functional
-chairs/workbenches/storage or multiblock physics. No guarantee of zero bugs.
-Use a disposable world or backup. Both sides require protocol 36-curated-content.
+## Scope / limitations
 
-Artifact: soulbound-army-1.20.1-1.7.0-curated-content-preview.jar
-Bytes: 39353995
-SHA256: c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a
+Presentation uses full-bright alpha item quads, not additive/no-depth-write custom
+meshes. UI badges/widgets, Blockbench dome/ring meshes and continuous aura loops
+remain unbound. Directional rally wave and barrier tile mesh are not in the
+default presentation; source weapon variants are selected rather than stacked.
+There is no LOW/MEDIUM/HIGH configuration screen or new gameplay ability.
+Visuals are temporary world-position effects, not persistent actor-following
+attachments. This does not replace creature body animation controllers.
 
-## Captured checks
+NOT RUN: Forge startup, actual command/function/ItemDisplay codec execution,
+server API linkage, shader blending/UVs/brightness, audio listening, multiplayer,
+performance/memory profiling, unload/restart behavior and save migration.
+The enforced environment policy excludes official Forge artifact hosts; earlier
+installer downloads returned HTTP 403. Explicit test fixtures are not the engine.
+JDK21 tooling targets Java17 via -source/-target; missing ct.sym prevents --release
+API validation. Install matching 1.8.0 on server AND clients (protocol
+37-shadow-awakening), and test in a disposable world or backup. No zero-bug claim.
+
+## Executed validation
+
+28 resource/integration groups passed, including model/texture references,
+independent frame clocks, finite timers, strict SNBT parsing of display summons,
+cleanup guards, sound merging, all previous assets/profiles, existing quests,
+creative groups and habitat safety. 42 encounter + 10 migration + 22 X1 routing
+assertions passed against explicit command/world fixtures (74 total).
+11 expansion classes / 53 methods passed stack/local checks; injected native
+methods also passed BasicVerifier. Exact event-hook counts were enforced, and all
+mod-owned class references resolve. The additional ABI check covers both encounter
+and X1 helpers: 115 references match actual public mod signatures (Minecraft/Forge
+members remain unverified). 484 source frame PNG headers match declared canvases.
+The standard split ZIP CRC/directory and complete extracted JAR SHA passed.
+
+Artifact: soulbound-army-1.20.1-1.8.0-shadow-awakening-preview.jar
+Bytes: 41857199
+SHA256: 9266750cd68571a6c013ffe05e8fd06355b8aeb1b825b16735ff17612ccc137a
+
+## Captured build/test output
 
 ```text
 Prepared 14 profiles, 60 blocks, 24 structure sets
@@ -61,20 +93,24 @@ Imported 40 native decorative props with two supported, spaced themed ruins.
 Added 10 regional decorated waystations, all 60 designs, 15 one-time tutorial quests and supply rewards.
 Added exactly 500 additive, localized, one-time learning advancement quests (300 block, 60 landmark, 40 readiness, 100 crafting).
 Imported 60 distinct new decor designs with 7 themed sites and four creative group labels.
+Prepared X1: 15 effect families, 31 layers, 444 independently clocked frame models.
 Prepared knight removal, compacted profile IDs and 57 unique egg designs.
 warning: [options] system modules path not set in conjunction with -source 17
 1 warning
 PASS: 42 open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.
 PASS: 10 retirement/missing-mapping assertions against explicit API/NBT fixtures.
-Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar (4492 entries); patched method stack verification passed.
-PASS: all 10 generated expansion classes / 41 methods passed bytecode stack/local checks (not game API linkage).
+Soulbound X1 visual command unavailable: java.lang.IllegalStateException: fixture failure
+PASS: 22 X1 visual-routing assertions using explicit command/world fixtures; no Forge execution.
+PASS: exact X1 event-hook sites verified: {attack=1, bond=1, command=1, disappearance=1, extraction=1, guardian=2, recall=1, summon=1, teleport=1, tick=1}
+Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.8.0-shadow-awakening-preview.jar (5440 entries); patched method stack verification passed.
+PASS: all 11 generated expansion classes / 53 methods passed bytecode stack/local checks (not game API linkage).
 PASS: every mod-owned class reference resolves after retirement/relocation.
 PASS: 102 helper references match public members of the actual patched mod (Minecraft/Forge members remain unverified).
 PASS: 120 decor classifications plus egg/workstation/other cases; actual creative wrapper routed correctly.
 PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.
 PASS: 51 matching IDs/profiles; all 37 surviving original profiles unchanged; 47 added combat clips loaded by the real animation reader.
 PASS: 160 added block factories, including 120 explicitly noncolliding/nonoccluding decor props.
-PASS: all 49 profiles from the previous 1.6.0 candidate retain their exact definitions/order.
+PASS: all 51 profiles from the previous 1.7.0 candidate retain their exact definitions/order.
 test_all_eggs_have_unique_authored_art (__main__.IntegrationTests.test_all_eggs_have_unique_authored_art) ... ok
 test_amin_loot_survives_120_conversion (__main__.IntegrationTests.test_amin_loot_survives_120_conversion) ... ok
 test_block_model_and_texture_references (__main__.IntegrationTests.test_block_model_and_texture_references) ... ok
@@ -100,23 +136,39 @@ test_resources_were_packaged_without_loss (__main__.IntegrationTests.test_resour
 test_structure_worldgen_links_and_spawn_clearance (__main__.IntegrationTests.test_structure_worldgen_links_and_spawn_clearance) ... ok
 test_templates_palettes_loot_and_bounds (__main__.IntegrationTests.test_templates_palettes_loot_and_bounds) ... ok
 test_textures_and_glow_masks (__main__.IntegrationTests.test_textures_and_glow_masks) ... ok
+test_x1_display_nbt_and_safe_cleanup (__main__.IntegrationTests.test_x1_display_nbt_and_safe_cleanup) ... ok
+test_x1_frame_assets_and_independent_clocks (__main__.IntegrationTests.test_x1_frame_assets_and_independent_clocks) ... ok
+test_x1_sound_merge_preserves_prior_audio (__main__.IntegrationTests.test_x1_sound_merge_preserves_prior_audio) ... ok
 
 ----------------------------------------------------------------------
-Ran 25 tests in 43.119s
+Ran 28 tests in 46.348s
 
 OK
-c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar
-Resource output: /workspace/mod-integration/resources.Kisq9Z
+9266750cd68571a6c013ffe05e8fd06355b8aeb1b825b16735ff17612ccc137a  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.8.0-shadow-awakening-preview.jar
+Resource output: /workspace/mod-integration/resources.toel3D
 ```
 
-## Archive checks
+## Additional helper ABI check
 
 ```text
-  adding: soulbound-army-1.20.1-1.7.0-curated-content-preview.jar (deflated 3%)
+PASS: all 11 generated expansion classes / 53 methods passed bytecode stack/local checks (not game API linkage).
+PASS: every mod-owned class reference resolves after retirement/relocation.
+PASS: 115 helper references match public members of the actual patched mod (Minecraft/Forge members remain unverified).
+PASS: 120 decor classifications plus egg/workstation/other cases; actual creative wrapper routed correctly.
+PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.
+PASS: 51 matching IDs/profiles; all 37 surviving original profiles unchanged; 47 added combat clips loaded by the real animation reader.
+PASS: 160 added block factories, including 120 explicitly noncolliding/nonoccluding decor props.
+PASS: all 51 profiles from the previous 1.7.0 candidate retain their exact definitions/order.
+```
+
+## Archive verification
+
+```text
+  adding: soulbound-army-1.20.1-1.8.0-shadow-awakening-preview.jar (deflated 3%)
 PASS: 4 standard split ZIP volumes, CRC and reassembled JAR SHA-256 verified.
-JAR SHA-256: c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a
-Soulbound-Army-1.7.0.z01: 10485760 bytes
-Soulbound-Army-1.7.0.z02: 10485760 bytes
-Soulbound-Army-1.7.0.z03: 10485760 bytes
-Soulbound-Army-1.7.0.zip: 6736181 bytes
+JAR SHA-256: 9266750cd68571a6c013ffe05e8fd06355b8aeb1b825b16735ff17612ccc137a
+Soulbound-Army-1.8.0.z01: 10485760 bytes
+Soulbound-Army-1.8.0.z02: 10485760 bytes
+Soulbound-Army-1.8.0.z03: 10485760 bytes
+Soulbound-Army-1.8.0.zip: 8996631 bytes
 ```

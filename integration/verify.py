@@ -178,11 +178,11 @@ class IntegrationTests(unittest.TestCase):
                 for path in ['blockstates/'+id,'models/block/'+id,'models/item/'+id]:self.assertIn(f'assets/shadowsovereign/{path}.json',self.jar)
 
     def test_preserved_original_classes_and_protocol_change(self):
-        patched={'dev/shadowsovereign/'+p+'.class' for p in ['mythic/MythicProfiles','mythic/MythicExpedition','gloom/GloomContent','mythic/MythicSpawn','mythic/MythicBeast','network/ShadowNetwork','mythic/MythicService','mythic/MythicEvents','gloom/GloomEvents','expanse/ExpanseWorld','ShadowSovereign','events/ShadowEvents','mythic/MythicContent','mythic/MythicSites','mythic/LegendCombat','client/MythicBeastRenderer','discovery/AtlasService','mastery/MasteryCatalog','army/ArmyData','adventure/AdventureData','ModCreativeTab','client/DevourerModel']}
+        patched={'dev/shadowsovereign/'+p+'.class' for p in ['mythic/MythicProfiles','mythic/MythicExpedition','gloom/GloomContent','mythic/MythicSpawn','mythic/MythicBeast','network/ShadowNetwork','mythic/MythicService','mythic/MythicEvents','gloom/GloomEvents','expanse/ExpanseWorld','ShadowSovereign','events/ShadowEvents','mythic/MythicContent','mythic/MythicSites','mythic/LegendCombat','client/MythicBeastRenderer','discovery/AtlasService','mastery/MasteryCatalog','army/ArmyData','adventure/AdventureData','ModCreativeTab','client/DevourerModel','army/ShadowService','army/ShadowGoal','soulforge/CompanionService']}
         for name,content in self.base.items():
             if name.startswith('dev/shadowsovereign/knighthaven/'):continue
             if name.endswith('.class') and name not in patched:self.assertEqual(self.jar[name],content,name)
-        self.assertTrue(b'36-curated-content' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
+        self.assertTrue(b'37-shadow-awakening' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
 
     def test_knight_content_removed_and_other_temples_preserved(self):
         retired=('villager_knight','village_knight_lodge','knighthaven_villages')
@@ -333,7 +333,7 @@ class IntegrationTests(unittest.TestCase):
                 self.assertIn(name,self.jar,name)
                 # Catalogues/locales/metadata are extended; old artwork,
                 # templates, worldgen data and item definitions stay identical.
-                if name.startswith(('assets/shadowsovereign/lang/','data/minecraft/tags/')) or name in ['META-INF/mods.toml','data/shadowsovereign/mythic_sites.json']:continue
+                if name.startswith(('assets/shadowsovereign/lang/','data/minecraft/tags/')) or name in ['META-INF/mods.toml','data/shadowsovereign/mythic_sites.json','assets/shadowsovereign/sounds.json']:continue
                 self.assertEqual(z.read(name),self.jar[name],name)
 
     def test_regional_waystations_and_tutorial_rewards(self):
@@ -388,6 +388,51 @@ class IntegrationTests(unittest.TestCase):
             for key in ['soulbound_army','creatures','nature','workshops']:
                 self.assertIn('itemGroup.shadowsovereign.'+key,d)
         for name in self.jar:self.assertFalse(name.endswith('creative-groups-source.txt'))
+
+    def test_x1_frame_assets_and_independent_clocks(self):
+        d=self.spec['x1'];self.assertEqual(d['effects'],[f'{i:02d}' for i in range(1,16)])
+        self.assertEqual(d['budget_per_dimension'],24)
+        model=json.loads(self.jar['assets/shadowsovereign/models/item/x1_visual.json'])
+        overrides=model['overrides'];self.assertEqual(len(overrides),d['frame_models'])
+        self.assertEqual([o['predicate']['custom_model_data'] for o in overrides],list(range(1,len(overrides)+1)))
+        for o in overrides:
+            self.assertIn('assets/shadowsovereign/models/'+o['model'].split(':')[1]+'.json',self.jar)
+        for layer in d['layers']:
+            self.assertTrue(0<layer['duration']<=100)
+            self.assertGreater(layer['ticks_per_frame'],0)
+            body=self.jar['data/shadowsovereign/functions/x1/layer/'+layer['key']+'.mcfunction'].decode()
+            self.assertIn('item.tag.CustomModelData set value '+str(layer['start']),body)
+            self.assertIn('run function shadowsovereign:x1/end',body)
+        self.assertNotIn('x1-sounds.json',self.jar)
+
+    def test_x1_display_nbt_and_safe_cleanup(self):
+        total=0
+        for name,raw in self.jar.items():
+            if not name.startswith('data/shadowsovereign/functions/x1/event/'):continue
+            body=raw.decode();self.assertNotIn('schedule',body)
+            for line in body.splitlines():
+                if ' run summon minecraft:item_display ~ ~ ~ ' not in line:continue
+                n=nbtlib.parse_nbt(line.split(' ~ ~ ~ ',1)[1]);total+=1
+                self.assertIn('sb_x1_fx',n['Tags'])
+                self.assertEqual(str(n['item']['id']),'shadowsovereign:x1_visual')
+                self.assertEqual(int(n['brightness']['block']),15)
+                self.assertIn(str(n['billboard']),['fixed','vertical'])
+                self.assertIn('matches ..23',line)
+                for key in ['translation','scale','left_rotation','right_rotation']:
+                    self.assertTrue(all(math.isfinite(float(v)) for v in n['transformation'][key]))
+        self.assertGreater(total,20)
+        cleanup=self.jar['data/shadowsovereign/functions/x1/end.mcfunction'].decode()
+        self.assertIn('type=minecraft:item_display,tag=sb_x1_fx',cleanup)
+        self.assertIn('scoreboard players reset @s sbx1_age',cleanup)
+
+    def test_x1_sound_merge_preserves_prior_audio(self):
+        path='assets/shadowsovereign/sounds.json';new=json.loads(self.jar[path])
+        if ARGS.previous:
+            with ZipFile(ARGS.previous) as z:
+                for key,value in json.loads(z.read(path)).items():self.assertEqual(new[key],value)
+        for sound in ['shadow_extraction','shadow_summon','shadow_rank_promotion','shadow_magic_impact']:
+            self.assertIn('x1.'+sound,new)
+            self.assertEqual(self.jar['assets/shadowsovereign/sounds/x1/'+sound+'.ogg'][:4],b'OggS')
 
 
 if __name__=='__main__':
