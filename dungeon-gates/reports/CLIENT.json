@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "runtime": "native ForgeGradle source client at same commit, Xvfb/Mesa",
+  "both_gates_touch_entry_boss_death_return_trophies_save_reopen": true,
+  "source_commit": "b758943a3175a9b828dc5ee475bfedf6bdf8bada",
+  "final_jar_sha256": "a46f050b6b1cfb29facb390360a6c796270dd921db208a8a01b34605f2c957dd",
+  "mobile_tested": false,
+  "multiplayer_tested": false
+}
