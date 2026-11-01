@@ -1,0 +1,179 @@
+2026-11-01 14:08:20,407 main WARN Advanced terminal features are not available in this environment
+[14:08:20] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeserver, --fml.forgeVersion, 47.3.22, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, nogui]
+[14:08:20] [main/INFO] [cp.mo.mo.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.21 by Eclipse Adoptium; OS Linux arch amd64 version 6.8.0-1070-azure
+[14:08:20] [main/WARN] [ne.mi.fm.lo.FMLConfig/CORE]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/config/fml.toml is not correct. Correcting
+[14:08:20] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSkipGLVersions] was corrected from null to []
+[14:08:20] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowLogHelpMessage] was corrected from null to true
+[14:08:20] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowSquir] was corrected from null to false
+[14:08:20] [main/INFO] [ne.mi.fm.lo.FMLConfig/CORE]: Incorrect key [earlyWindowShowCPU] was corrected from null to false
+[14:08:20] [main/INFO] [ne.mi.fm.lo.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgeserver
+[14:08:20] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar%2365!/ Service=ModLauncher Env=SERVER
+[14:08:21] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraftforge/fmlcore/1.20.1-47.3.22/fmlcore-1.20.1-47.3.22.jar is missing mods.toml file
+[14:08:21] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraftforge/javafmllanguage/1.20.1-47.3.22/javafmllanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[14:08:21] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraftforge/lowcodelanguage/1.20.1-47.3.22/lowcodelanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[14:08:21] [main/WARN] [ne.mi.fm.lo.mo.ModFileParser/LOADING]: Mod file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraftforge/mclanguage/1.20.1-47.3.22/mclanguage-1.20.1-47.3.22.jar is missing mods.toml file
+[14:08:21] [main/INFO] [ne.mi.fm.lo.mo.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[14:08:22] [main/INFO] [cp.mo.mo.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeserver' with arguments [nogui]
+[14:08:28] [modloading-worker-0/INFO] [ne.mi.co.ForgeMod/FORGEMOD]: Forge mod loading, version 47.3.22, for MC 1.20.1 with MCP 20230612.114412
+[14:08:28] [modloading-worker-0/INFO] [ne.mi.co.MinecraftForge/FORGE]: MinecraftForge v47.3.22 Initialized
+[14:08:29] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[14:08:30] [Forge Version Check/INFO] [ne.mi.fm.VersionChecker/]: [forge] Found status: OUTDATED Current: 47.3.22 Target: 47.4.28
+[14:08:31] [main/INFO] [mojang/YggdrasilAuthenticationService]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[14:08:31] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23105!/assets/.mcassetsroot' uses unexpected schema
+[14:08:31] [main/WARN] [minecraft/VanillaPackResourcesBuilder]: Assets URL 'union:/home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/libraries/net/minecraft/server/1.20.1-20230612.114412/server-1.20.1-20230612.114412-srg.jar%23105!/data/.mcassetsroot' uses unexpected schema
+[14:08:31] [main/WARN] [minecraft/Pack]: Missing metadata in pack mod:soulboundqa
+[14:08:31] [main/WARN] [minecraft/MinecraftServer]: Missing data pack mod:soulboundqa
+[14:08:33] [main/INFO] [minecraft/RecipeManager]: Loaded 7 recipes
+[14:08:33] [main/INFO] [minecraft/AdvancementList]: Loaded 1892 advancements
+[14:08:33] [Server thread/INFO] [minecraft/DedicatedServer]: Starting minecraft server version 1.20.1
+[14:08:33] [Server thread/INFO] [minecraft/DedicatedServer]: Loading properties
+[14:08:33] [Server thread/INFO] [minecraft/DedicatedServer]: Default game type: SURVIVAL
+[14:08:33] [Server thread/INFO] [minecraft/MinecraftServer]: Generating keypair
+[14:08:34] [Server thread/INFO] [minecraft/DedicatedServer]: Starting Minecraft server on 127.0.0.1:25579
+[14:08:34] [Server thread/INFO] [minecraft/ServerConnectionListener]: Using epoll channel type
+[14:08:34] [Server thread/WARN] [minecraft/DedicatedServer]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[14:08:34] [Server thread/WARN] [minecraft/DedicatedServer]: The server will make no attempt to authenticate usernames. Beware.
+[14:08:34] [Server thread/WARN] [minecraft/DedicatedServer]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[14:08:34] [Server thread/WARN] [minecraft/DedicatedServer]: To change this, set "online-mode" to "true" in the server.properties file.
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./polish-isolated-test/serverconfig/shadowsovereign-autopilot-server.toml is not correct. Correcting
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.respectExplicitCommands was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key general.postLoadGraceTicks was corrected from null to its default, 100. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.followClearance was corrected from null to its default, 2.5. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.followResume was corrected from null to its default, 6.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.sizeSpacingFactor was corrected from null to its default, 1.2. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.maxSlotOffset was corrected from null to its default, 3.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key smartFollow.passageExitBlocks was corrected from null to its default, 3. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.stuckWindowTicks was corrected from null to its default, 60. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.stuckMinProgress was corrected from null to its default, 0.5. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.stuckConfirmChecks was corrected from null to its default, 2. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.separatedDistance was corrected from null to its default, 32.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.repathAttempts was corrected from null to its default, 2. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.repathCooldownTicks was corrected from null to its default, 40. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.regroupSearchRadius was corrected from null to its default, 6. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.regroupTimeoutTicks was corrected from null to its default, 100. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.allowEmergencyTeleport was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.teleportAfterTicks was corrected from null to its default, 200. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.teleportCooldownTicks was corrected from null to its default, 600. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.maxSafeFall was corrected from null to its default, 3. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key antiStuck.failedRetryTicks was corrected from null to its default, 600. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.buildRadius was corrected from null to its default, 3.5. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.buildReach was corrected from null to its default, 6.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.buildTargetMargin was corrected from null to its default, 2.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.buildEdgeMargin was corrected from null to its default, 1.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key buildingMode.buildAutoOffTicks was corrected from null to its default, 0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.assistRange was corrected from null to its default, 16.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.dropRange was corrected from null to its default, 24.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.ownerTargetMemoryTicks was corrected from null to its default, 100. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.minTargetHoldTicks was corrected from null to its default, 40. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.switchDistanceAdvantage was corrected from null to its default, 3.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.maxAttackersPerTarget was corrected from null to its default, 6. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.supportDistance was corrected from null to its default, 4.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.losConeDegrees was corrected from null to its default, 20. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.losConeLength was corrected from null to its default, 12.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.protectHealthFraction was corrected from null to its default, 0.4. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.protectWindowTicks was corrected from null to its default, 60. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key combatAssist.protectCount was corrected from null to its default, 4. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.combatInterval was corrected from null to its default, 2. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.followInterval was corrected from null to its default, 5. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.idleInterval was corrected from null to its default, 20. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.farInterval was corrected from null to its default, 40. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.maxSmartUpdatesPerTick was corrected from null to its default, 24. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.maxPathRequestsPerTick was corrected from null to its default, 4. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.maxPathRequestsPerOwnerPerTick was corrected from null to its default, 2. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.maxStarveTicks was corrected from null to its default, 200. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.safePosCacheTicks was corrected from null to its default, 20. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.perfModeIntervalMultiplier was corrected from null to its default, 2.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.forcePerformanceMode was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key performance.debugLogIntervalSeconds was corrected from null to its default, 0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status.enabled was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status.statusSyncTicks was corrected from null to its default, 20. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status.notifyCooldownTicks was corrected from null to its default, 100. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status.regroupCooldownTicks was corrected from null to its default, 40. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key status.regroupIgnoresHold was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key multiplayer was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key multiplayer.requestMinIntervalTicks was corrected from null to its default, 5. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key multiplayer.teamShareAutopilot was corrected from null to its default, false. 
+[14:08:34] [Thread-2/WARN] [ne.mi.fm.co.ConfigFileTypeHandler/CONFIG]: Configuration file /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/./polish-isolated-test/serverconfig/shadowsovereign-autopilot-server.toml is not correct. Correcting
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./polish-isolated-test/serverconfig/shadowsovereign-server.toml is not correct. Correcting
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.maxArmySize was corrected from null to its default, 256. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.maxActiveShadows was corrected from null to its default, 24. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.passiveMobDamage was corrected from null to its default, 6.0. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.recruitBosses was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.environmentProtection was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key army.blockedEntities was corrected from null to its default, []. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Configuration file ./polish-isolated-test/serverconfig/forge-server.toml is not correct. Correcting
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server was corrected from null to its default, SimpleCommentedConfig:{}. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringBlockEntities was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.removeErroringEntities was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.fullBoundingBoxLadders was corrected from null to its default, false. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBaseSummonChance was corrected from null to its default, 0.1. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.zombieBabyChance was corrected from null to its default, 0.05. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.permissionHandler was corrected from null to its default, forge:default_handler. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.advertiseDedicatedServerToLan was corrected from null to its default, true. 
+[14:08:34] [Server thread/WARN] [ne.mi.co.ForgeConfigSpec/CORE]: Incorrect key server.useItemWithDurationZero was corrected from null to its default, false. 
+[14:08:34] [Server thread/INFO] [minecraft/DedicatedServer]: Preparing level "polish-isolated-test"
+[14:08:35] [Server thread/INFO] [de.sh.ShadowSovereign/]: ASTRAL UPGRADE: Echo Realms generator refreshed with Moonveil Hollow and Crimson Shadow; existing chunks retained.
+[14:08:35] [Server thread/INFO] [minecraft/MinecraftServer]: Preparing start region for dimension minecraft:overworld
+[14:08:35] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[14:08:35] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 0%
+[14:08:36] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 8%
+[14:08:36] [Worker-Main-2/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 31%
+[14:08:37] [Worker-Main-1/INFO] [minecraft/LoggerChunkProgressListener]: Preparing spawn area: 86%
+[14:08:37] [Server thread/INFO] [minecraft/LoggerChunkProgressListener]: Time elapsed: 2112 ms
+[14:08:37] [Server thread/INFO] [minecraft/DedicatedServer]: Done (2.976s)! For help, type "help"
+[14:08:37] [Server thread/INFO] [ne.mi.se.pe.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[14:08:37] [Server thread/ERROR] [ne.mi.ev.EventBus/EVENTBUS]: Exception caught during firing event: Invalid actual block property {Name:"minecraft:grindstone",Properties:{face:"floor",facing:"north",powered:"false"}} in data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt
+	Index: 1
+	Listeners:
+		0: NORMAL
+		1: ASM: class dev.soulboundqa.PolishRuntimeCheck started(Lnet/minecraftforge/event/server/ServerStartedEvent;)V
+java.lang.AssertionError: Invalid actual block property {Name:"minecraft:grindstone",Properties:{face:"floor",facing:"north",powered:"false"}} in data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt
+	at TRANSFORMER/soulboundqa@1.0/dev.soulboundqa.PolishRuntimeCheck.started(PolishRuntimeCheck.java:41)
+	at TRANSFORMER/soulboundqa@1.0/dev.soulboundqa.__PolishRuntimeCheck_started_ServerStartedEvent.invoke(.dynamic)
+	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73)
+	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:315)
+	at MC-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.EventBus.post(EventBus.java:296)
+	at TRANSFORMER/forge@47.3.22/net.minecraftforge.server.ServerLifecycleHooks.handleServerStarted(ServerLifecycleHooks.java:115)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:638)
+	at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+
+[14:08:37] [Server thread/ERROR] [minecraft/MinecraftServer]: Encountered an unexpected exception
+java.lang.AssertionError: Invalid actual block property {Name:"minecraft:grindstone",Properties:{face:"floor",facing:"north",powered:"false"}} in data/shadowsovereign/structures/content/palace_of_silent_duchess.nbt
+	at dev.soulboundqa.PolishRuntimeCheck.started(PolishRuntimeCheck.java:41) ~[soulboundqa.jar%23103!/:?] {re:classloading}
+	at dev.soulboundqa.__PolishRuntimeCheck_started_ServerStartedEvent.invoke(.dynamic) ~[soulboundqa.jar%23103!/:?] {re:classloading,pl:eventbus:B}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:73) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:315) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:296) ~[eventbus-6.0.5.jar%2352!/:?] {}
+	at net.minecraftforge.server.ServerLifecycleHooks.handleServerStarted(ServerLifecycleHooks.java:115) ~[forge-1.20.1-47.3.22-universal.jar%23110!/:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:638) ~[server-1.20.1-20230612.114412-srg.jar%23105!/:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23105!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:840) ~[?:?] {}
+[14:08:37] [Server thread/FATAL] [ne.mi.co.ForgeMod/]: Preparing crash report with UUID 5c61ccb4-ec71-487a-8040-75b56d5baddd
+[14:08:37] [Server thread/ERROR] [minecraft/MinecraftServer]: This crash report has been saved to: /home/runner/work/zenvora.guru/zenvora.guru/polish-update/build/production-server/./crash-reports/crash-2026-11-01_14.08.37-server.txt
+[14:08:37] [Server thread/INFO] [minecraft/MinecraftServer]: Stopping server
+[14:08:37] [Server thread/INFO] [minecraft/MinecraftServer]: Saving players
+[14:08:37] [Server thread/INFO] [minecraft/MinecraftServer]: Saving worlds
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[polish-isolated-test]'/minecraft:overworld
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[polish-isolated-test]'/minecraft:the_nether
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[polish-isolated-test]'/minecraft:the_end
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: Saving chunks for level 'ServerLevel[polish-isolated-test]'/shadowsovereign:echo_realms
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (polish-isolated-test): All chunks are saved
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage (echo_realms): All chunks are saved
+[14:08:39] [Server thread/INFO] [minecraft/MinecraftServer]: ThreadedAnvilChunkStorage: All dimensions are saved
