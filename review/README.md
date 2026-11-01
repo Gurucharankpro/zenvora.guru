@@ -1,6 +1,6 @@
 # Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert
 
-Build: **FAILURE**. Source: `00ee6b83da53a7ace9aba4a7338fc7f89aaf022e`.
+Build: **FAILURE**. Source: `9a8b8e8d730b8ee84081b051f4dde0ccc6f39b53`.
 Final output SHA256: `NOT BUILT`.
 Minecraft 1.20.1, Forge 47.3.22, Java 17, modid `shadowsovereign`.
 Mod version remains `1.8.1-reviewed`; matching client/server protocol is `39-polish-glass-desert`.
@@ -47,8 +47,10 @@ include Java 17 bootstrap resolution and exact unchanged-entry comparison.
 On successful builds, an official isolated Forge server loads the final JAR with
 a separate QA mod, checks real block properties/template decodes/entity attributes
 and save/reload, locates the new biome, requests generation, flushes and stops.
-No graphical client, mobile rendering, long combat session or multiplayer test
-is claimed. Visual quality, performance, structure entrances/rotation across
+Graphical client status is recorded separately in CLIENT-SMOKE.json, with actual
+Xvfb/Mesa screenshots when it passes. This client uses a ForgeGradle-remapped copy
+of the final JAR; the dedicated-server test uses the unmodified production JAR.
+No mobile rendering, long combat session or multiplayer test is claimed. Visual quality, performance, structure entrances/rotation across
 terrain and complete encounter/recruit/retreat gameplay need in-game review.
 Worldgen frequency/terrain figures in the uploaded pack are guidance; the native
 implementation uses conservative bounded generation, not a literal new noise

@@ -2,8 +2,8 @@
   "preview_bounds": {
     "assets/shadowsovereign/mythic/amin_el_nemr.json": {
       "before": [
-        3,
-        3
+        2.1069046140941814,
+        2.4086217350035484
       ],
       "after": [
         2.1069046140941814,
@@ -12,8 +12,8 @@
     },
     "assets/shadowsovereign/mythic/ashen_juggernaut.json": {
       "before": [
-        2.375,
-        3.5
+        2.692618492354928,
+        3.9258639633440384
       ],
       "after": [
         2.692618492354928,
@@ -22,8 +22,8 @@
     },
     "assets/shadowsovereign/mythic/azure_skyling.json": {
       "before": [
-        3,
-        1.6
+        3.0698484803354473,
+        1.6384070312500003
       ],
       "after": [
         3.0698484803354473,
@@ -32,8 +32,8 @@
     },
     "assets/shadowsovereign/mythic/blood_moon_monk.json": {
       "before": [
-        1.3125,
-        3.9375
+        1.926764608840195,
+        4.355558218329644
       ],
       "after": [
         1.926764608840195,
@@ -41,21 +41,30 @@
       ]
     },
     "assets/shadowsovereign/mythic/bound_crystal_tortoise.json": {
-      "before": null,
+      "before": [
+        1.0818856845560751,
+        0.6436009751647916
+      ],
       "after": [
         1.0818856845560751,
         0.6436009751647916
       ]
     },
     "assets/shadowsovereign/mythic/bound_gloom_moth.json": {
-      "before": null,
+      "before": [
+        0.77,
+        0.560353993473337
+      ],
       "after": [
         0.77,
         0.560353993473337
       ]
     },
     "assets/shadowsovereign/mythic/bound_soul_hare.json": {
-      "before": null,
+      "before": [
+        1.1216663318334124,
+        0.9580456355637573
+      ],
       "after": [
         1.1216663318334124,
         0.9580456355637573
@@ -63,8 +72,8 @@
     },
     "assets/shadowsovereign/mythic/broken_star_owlet.json": {
       "before": [
-        4,
-        3
+        2.2322639406531604,
+        1.8171838240783036
       ],
       "after": [
         2.2322639406531604,
@@ -73,8 +82,8 @@
     },
     "assets/shadowsovereign/mythic/chained_emperor.json": {
       "before": [
-        1.83380625,
-        3.75
+        3.9537193300729725,
+        4.145303658310996
       ],
       "after": [
         3.9537193300729725,
@@ -83,8 +92,8 @@
     },
     "assets/shadowsovereign/mythic/chime_mite.json": {
       "before": [
-        0.875,
-        0.8887955818158212
+        1.1547052516235023,
+        0.9818327960529416
       ],
       "after": [
         1.1547052516235023,
@@ -102,14 +111,20 @@
       ]
     },
     "assets/shadowsovereign/mythic/crimson_basilisk.json": {
-      "before": null,
+      "before": [
+        11.838908654364106,
+        3.4452327740554893
+      ],
       "after": [
         11.838908654364106,
         3.4452327740554893
       ]
     },
     "assets/shadowsovereign/mythic/crownless_sovereign.json": {
-      "before": null,
+      "before": [
+        2.3375000000000004,
+        4.07679971120602
+      ],
       "after": [
         2.3375000000000004,
         4.07679971120602
@@ -117,8 +132,8 @@
     },
     "assets/shadowsovereign/mythic/cursed_bell_ringer.json": {
       "before": [
-        8,
-        8
+        6.1490072730725105,
+        5.118487571867764
       ],
       "after": [
         6.1490072730725105,
@@ -127,8 +142,8 @@
     },
     "assets/shadowsovereign/mythic/cursed_executioner.json": {
       "before": [
-        3.6,
-        4.6
+        10.033452377915607,
+        10.980062723481058
       ],
       "after": [
         10.033452377915607,
@@ -137,8 +152,8 @@
     },
     "assets/shadowsovereign/mythic/cursed_puppet_maker.json": {
       "before": [
-        5,
-        3.7
+        4.187950568416069,
+        3.1110748405955277
       ],
       "after": [
         4.187950568416069,
@@ -147,8 +162,8 @@
     },
     "assets/shadowsovereign/mythic/deidara.json": {
       "before": [
-        1.125,
-        3.6875
+        2.949117772918699,
+        2.927541539454653
       ],
       "after": [
         2.949117772918699,
@@ -167,8 +182,8 @@
     },
     "assets/shadowsovereign/mythic/dread_bellkeeper.json": {
       "before": [
-        5.4125,
-        3.191345747497323
+        7.16764264422466,
+        3.54041875
       ],
       "after": [
         7.16764264422466,
@@ -176,14 +191,20 @@
       ]
     },
     "assets/shadowsovereign/mythic/eclipse_bloom.json": {
-      "before": null,
+      "before": [
+        6.846566353177719,
+        6.435365017640228
+      ],
       "after": [
         6.846566353177719,
         6.435365017640228
       ]
     },
     "assets/shadowsovereign/mythic/eclipse_stag.json": {
-      "before": null,
+      "before": [
+        4.148424827086379,
+        5.37692175939803
+      ],
       "after": [
         4.148424827086379,
         5.37692175939803
@@ -191,8 +212,8 @@
     },
     "assets/shadowsovereign/mythic/essam_el_nemr.json": {
       "before": [
-        4,
-        3
+        1.2610362159599768,
+        2.3915291388236195
       ],
       "after": [
         1.2610362159599768,
@@ -201,8 +222,8 @@
     },
     "assets/shadowsovereign/mythic/fallen_penitent.json": {
       "before": [
-        1.5,
-        2.25
+        1.6917482487488174,
+        2.457678540450411
       ],
       "after": [
         1.6917482487488174,
@@ -210,7 +231,10 @@
       ]
     },
     "assets/shadowsovereign/mythic/forgotten_astronomer.json": {
-      "before": null,
+      "before": [
+        4.5375000000000005,
+        3.4113825806398435
+      ],
       "after": [
         4.5375000000000005,
         3.4113825806398435
@@ -218,8 +242,8 @@
     },
     "assets/shadowsovereign/mythic/forsaken_fawn.json": {
       "before": [
-        3,
-        2.4
+        2.522197548063387,
+        2.3504346153021003
       ],
       "after": [
         2.522197548063387,
@@ -228,8 +252,8 @@
     },
     "assets/shadowsovereign/mythic/frostbound_snow_leopard.json": {
       "before": [
-        3,
-        1.6
+        5.133753268294145,
+        6.318810093431733
       ],
       "after": [
         5.133753268294145,
@@ -238,8 +262,8 @@
     },
     "assets/shadowsovereign/mythic/gentleman_overlord.json": {
       "before": [
-        1.8,
-        2.1
+        1.6778632400983957,
+        2.2314120864334916
       ],
       "after": [
         1.6778632400983957,
@@ -248,8 +272,8 @@
     },
     "assets/shadowsovereign/mythic/glass_ronin.json": {
       "before": [
-        8,
-        6
+        5.119915369356835,
+        3.1205178377730323
       ],
       "after": [
         5.119915369356835,
@@ -258,8 +282,8 @@
     },
     "assets/shadowsovereign/mythic/grieving_seraph.json": {
       "before": [
-        4.4375,
-        3.00625
+        5.721439047793262,
+        3.28514237270448
       ],
       "after": [
         5.721439047793262,
@@ -268,8 +292,8 @@
     },
     "assets/shadowsovereign/mythic/hanan.json": {
       "before": [
-        3,
-        3.5
+        1.0976222421717459,
+        2.3721809412534633
       ],
       "after": [
         1.0976222421717459,
@@ -278,8 +302,8 @@
     },
     "assets/shadowsovereign/mythic/hollow_jester.json": {
       "before": [
-        1.5,
-        2.75
+        1.9616901690702353,
+        3.0102990043796574
       ],
       "after": [
         1.9616901690702353,
@@ -288,8 +312,8 @@
     },
     "assets/shadowsovereign/mythic/infernal_phoenix.json": {
       "before": [
-        4.0125,
-        2.5
+        5.432130193876455,
+        3.8267474026383788
       ],
       "after": [
         5.432130193876455,
@@ -298,8 +322,8 @@
     },
     "assets/shadowsovereign/mythic/itachi_uchiha.json": {
       "before": [
-        1.0625,
-        2.2125
+        1.6094339622945433,
+        2.4542608835861053
       ],
       "after": [
         1.6094339622945433,
@@ -308,8 +332,8 @@
     },
     "assets/shadowsovereign/mythic/king_of_corny_memes.json": {
       "before": [
-        8,
-        8
+        4.229499628553354,
+        5.612236518385082
       ],
       "after": [
         4.229499628553354,
@@ -318,8 +342,8 @@
     },
     "assets/shadowsovereign/mythic/legendary_giant_zombie_refai.json": {
       "before": [
-        12,
-        8
+        6.759886328690049,
+        5.030718680276004
       ],
       "after": [
         6.759886328690049,
@@ -328,8 +352,8 @@
     },
     "assets/shadowsovereign/mythic/lonely_red_panda.json": {
       "before": [
-        2.8,
-        1.6
+        3.2338722932906823,
+        1.5889160699313267
       ],
       "after": [
         3.2338722932906823,
@@ -338,8 +362,8 @@
     },
     "assets/shadowsovereign/mythic/lumen_cub.json": {
       "before": [
-        3,
-        2
+        2.793225799823343,
+        1.4214432626993987
       ],
       "after": [
         2.793225799823343,
@@ -348,8 +372,8 @@
     },
     "assets/shadowsovereign/mythic/mad_farmer.json": {
       "before": [
-        2.2811,
-        3.28125
+        3.2540629565472425,
+        3.6297114610103973
       ],
       "after": [
         3.2540629565472425,
@@ -358,8 +382,8 @@
     },
     "assets/shadowsovereign/mythic/madara_uchiha.json": {
       "before": [
-        1.5625,
-        2.8125
+        2.4282695219730948,
+        2.9759360376906456
       ],
       "after": [
         2.4282695219730948,
@@ -368,8 +392,8 @@
     },
     "assets/shadowsovereign/mythic/mokhtar_el_desouky.json": {
       "before": [
-        3,
-        3.5
+        1.8552081790315174,
+        2.3709120651080156
       ],
       "after": [
         1.8552081790315174,
@@ -378,8 +402,8 @@
     },
     "assets/shadowsovereign/mythic/morsi.json": {
       "before": [
-        3,
-        3
+        1.6345893035248635,
+        2.4775502279077917
       ],
       "after": [
         1.6345893035248635,
@@ -388,8 +412,8 @@
     },
     "assets/shadowsovereign/mythic/nuna.json": {
       "before": [
-        0.875,
-        0.9375
+        1.0928557410422541,
+        1.055473945211847
       ],
       "after": [
         1.0928557410422541,
@@ -398,8 +422,8 @@
     },
     "assets/shadowsovereign/mythic/pain.json": {
       "before": [
-        1.3125,
-        2.75
+        1.8878735463060006,
+        3.035557485967454
       ],
       "after": [
         1.8878735463060006,
@@ -408,8 +432,8 @@
     },
     "assets/shadowsovereign/mythic/paper_kunoichi.json": {
       "before": [
-        1.5,
-        2.875
+        2.4516709174569007,
+        3.060252041240654
       ],
       "after": [
         2.4516709174569007,
@@ -418,8 +442,8 @@
     },
     "assets/shadowsovereign/mythic/pearl_drakeling.json": {
       "before": [
-        3,
-        3
+        2.0743246321496707,
+        2.6358632386918672
       ],
       "after": [
         2.0743246321496707,
@@ -428,8 +452,8 @@
     },
     "assets/shadowsovereign/mythic/plague_doctor.json": {
       "before": [
-        1.96875,
-        3.25
+        2.125547235806809,
+        3.7570349286860067
       ],
       "after": [
         2.125547235806809,
@@ -438,8 +462,8 @@
     },
     "assets/shadowsovereign/mythic/porcelain_duchess.json": {
       "before": [
-        10,
-        8
+        3.8844775639675255,
+        4.487064372223055
       ],
       "after": [
         3.8844775639675255,
@@ -458,8 +482,8 @@
     },
     "assets/shadowsovereign/mythic/rainbound_oracle.json": {
       "before": [
-        1.53125,
-        3.4375
+        2.3771789113184627,
+        3.8039057005510406
       ],
       "after": [
         2.3771789113184627,
@@ -478,8 +502,8 @@
     },
     "assets/shadowsovereign/mythic/refai_el_desouky.json": {
       "before": [
-        2.4,
-        2.4
+        1.5775127736664238,
+        2.2488132840505104
       ],
       "after": [
         1.5775127736664238,
@@ -488,8 +512,8 @@
     },
     "assets/shadowsovereign/mythic/reliquary_crawler.json": {
       "before": [
-        7.3125,
-        7.25
+        10.120769898596972,
+        8.066909109552814
       ],
       "after": [
         10.120769898596972,
@@ -497,7 +521,10 @@
       ]
     },
     "assets/shadowsovereign/mythic/ruin_stalker.json": {
-      "before": null,
+      "before": [
+        3.173946749978972,
+        1.8672593713838415
+      ],
       "after": [
         3.173946749978972,
         1.8672593713838415
@@ -505,8 +532,8 @@
     },
     "assets/shadowsovereign/mythic/sasori.json": {
       "before": [
-        2.3125,
-        3.0625
+        4.442016355195671,
+        3.150147524825502
       ],
       "after": [
         4.442016355195671,
@@ -515,8 +542,8 @@
     },
     "assets/shadowsovereign/mythic/shattered_pangolin.json": {
       "before": [
-        6,
-        4
+        2.962672491823037,
+        1.0205493020224166
       ],
       "after": [
         2.962672491823037,
@@ -524,7 +551,10 @@
       ]
     },
     "assets/shadowsovereign/mythic/soul_devourer.json": {
-      "before": null,
+      "before": [
+        11.286909209411373,
+        7.118979879345657
+      ],
       "after": [
         11.286909209411373,
         7.118979879345657
@@ -532,8 +562,8 @@
     },
     "assets/shadowsovereign/mythic/the_69_pose.json": {
       "before": [
-        6,
-        8
+        2.75,
+        3.4007983456665576
       ],
       "after": [
         2.75,
@@ -542,8 +572,8 @@
     },
     "assets/shadowsovereign/mythic/the_last_lullaby.json": {
       "before": [
-        3,
-        2.2
+        2.2633206542497253,
+        1.6992595692236367
       ],
       "after": [
         2.2633206542497253,
@@ -551,7 +581,10 @@
       ]
     },
     "assets/shadowsovereign/mythic/umbral_wyngcat.json": {
-      "before": null,
+      "before": [
+        2.9785823903603266,
+        1.3999097927145925
+      ],
       "after": [
         2.9785823903603266,
         1.3999097927145925
@@ -559,8 +592,8 @@
     },
     "assets/shadowsovereign/mythic/veiled_whorl.json": {
       "before": [
-        1.0,
-        2.6875
+        1.2121300781785183,
+        2.5926726947861396
       ],
       "after": [
         1.2121300781785183,
@@ -569,8 +602,8 @@
     },
     "assets/shadowsovereign/mythic/void_weaver.json": {
       "before": [
-        4.3,
-        3
+        2.0346783144341334,
+        2.2824742718449573
       ],
       "after": [
         2.0346783144341334,
@@ -579,8 +612,8 @@
     },
     "assets/shadowsovereign/mythic/weeping_axolotl.json": {
       "before": [
-        6,
-        6
+        3.309462028566344,
+        1.148500148975078
       ],
       "after": [
         3.309462028566344,
@@ -588,7 +621,10 @@
       ]
     },
     "assets/shadowsovereign/mythic/weeping_puppeteer.json": {
-      "before": null,
+      "before": [
+        2.6689896114019582,
+        3.4932670536898787
+      ],
       "after": [
         2.6689896114019582,
         3.4932670536898787
@@ -596,8 +632,8 @@
     },
     "assets/shadowsovereign/mythic/yuta_okkotsu.json": {
       "before": [
-        8,
-        6
+        3.345111389108793,
+        2.5120206115173143
       ],
       "after": [
         3.345111389108793,

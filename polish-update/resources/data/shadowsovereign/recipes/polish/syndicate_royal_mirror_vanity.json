@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SSS",
     "SCS",
-    "SSS"
+    " G ",
+    "S S"
   ],
   "key": {
     "S": {
       "item": "minecraft:blackstone"
     },
     "C": {
-      "item": "minecraft:amethyst_shard"
+      "item": "minecraft:glass_pane"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

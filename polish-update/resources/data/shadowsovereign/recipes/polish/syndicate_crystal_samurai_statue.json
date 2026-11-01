@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SSS",
     "SCS",
-    "SSS"
+    " G ",
+    "S S"
   ],
   "key": {
     "S": {
@@ -11,6 +11,9 @@
     },
     "C": {
       "item": "minecraft:amethyst_shard"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
     }
   },
   "result": {

@@ -5,8 +5,52 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "shadowsovereign:glasswood_leaves"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "shadowsovereign:glasswood_leaves",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "minecraft:shears"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "shadowsovereign:glasswood_leaves",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "shadowsovereign:glasswood_sapling",
+              "conditions": [
+                {
+                  "condition": "minecraft:random_chance",
+                  "chance": 0.08
+                }
+              ]
+            }
+          ]
         }
       ],
       "conditions": [
