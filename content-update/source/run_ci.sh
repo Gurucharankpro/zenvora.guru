@@ -37,8 +37,19 @@ java -cp 'build/tools/*:build/patcher' PatchReviewed "$SOULBOUND_BASE_JAR" resou
 java -cp 'build/tools/*' "$repo/integration/OwnLinkageTest.java" "$jar"
 python3 source/verify_release.py "$jar"
 java -cp 'build/tools/*:build/patcher' FinalCatalogueTest "$SOULBOUND_BASE_JAR" "$jar" build/tools/gson.jar
-python3 source/package_phone.py "$jar" "$repo/downloads/current" --version 1.8.1
-cp "$jar" "$repo/downloads/current/"
-cp dist/CONTENT-MANIFEST.json "$repo/downloads/current/"
+phone_dir=$(mktemp -d "$task_dir/build/phone.XXXXXX")
+python3 source/package_phone.py "$jar" "$phone_dir" --version 1.8.1
+cp "$jar" "$phone_dir/"
+cp dist/CONTENT-MANIFEST.json "$phone_dir/"
+# Stage a complete verified delivery before replacing the generated current
+# directory; a subsequent CI run must never mix its volumes with old ones.
+python3 - "$phone_dir" "$repo/downloads/current" <<'PY'
+import sys,shutil
+from pathlib import Path
+source,target=map(Path,sys.argv[1:])
+if target.exists():shutil.rmtree(target)
+target.parent.mkdir(parents=True,exist_ok=True)
+shutil.move(str(source),str(target))
+PY
 sha256sum "$jar"
 echo 'CONTENT BUILD PASSED: real-API compile/reobfuscation, catalogue/resources, owned linkage, exact overlay and complete 8 MiB split delivery'
