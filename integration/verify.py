@@ -25,13 +25,13 @@ class IntegrationTests(unittest.TestCase):
 
     def test_catalogue_alignment_and_surviving_ids(self):
         profiles=self.spec['profiles']
-        self.assertEqual([p['index'] for p in profiles],list(range(37,49)))
-        self.assertEqual(len(set(p['id'] for p in profiles)),12)
+        self.assertEqual([p['index'] for p in profiles],list(range(37,51)))
+        self.assertEqual(len(set(p['id'] for p in profiles)),14)
         path='data/shadowsovereign/mythic_sites.json'
         old=json.loads(self.base[path]);new=json.loads(self.jar[path])
         old=[dict(p,kind=p['kind']-1 if p['kind']>34 else p['kind']) for p in old if p['kind']!=34]
         self.assertEqual(new[:len(old)],old)
-        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,49)))
+        self.assertEqual(sorted(p['kind'] for p in new),list(range(-1,51)))
 
     def test_resources_were_packaged_without_loss(self):
         for path in self.resources.rglob('*'):
@@ -147,7 +147,7 @@ class IntegrationTests(unittest.TestCase):
             self.assertIn(f'data/shadowsovereign/structures/{template}.nbt',self.jar)
             ss=json.loads(self.jar[root+'structure_set/'+id+'.json'])
             self.assertLess(ss['placement']['separation'],ss['placement']['spacing'])
-        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-12:]
+        sites=json.loads(self.jar['data/shadowsovereign/mythic_sites.json'])[-14:]
         passable={'minecraft:air','minecraft:structure_void','minecraft:spore_blossom'}
         for site,profile in zip(sites,self.spec['profiles']):
             structure=site['structure'].removeprefix('expansion_')
@@ -178,11 +178,11 @@ class IntegrationTests(unittest.TestCase):
                 for path in ['blockstates/'+id,'models/block/'+id,'models/item/'+id]:self.assertIn(f'assets/shadowsovereign/{path}.json',self.jar)
 
     def test_preserved_original_classes_and_protocol_change(self):
-        patched={'dev/shadowsovereign/'+p+'.class' for p in ['mythic/MythicProfiles','mythic/MythicExpedition','gloom/GloomContent','mythic/MythicSpawn','mythic/MythicBeast','network/ShadowNetwork','mythic/MythicService','mythic/MythicEvents','gloom/GloomEvents','expanse/ExpanseWorld','ShadowSovereign','events/ShadowEvents','mythic/MythicContent','mythic/MythicSites','mythic/LegendCombat','client/MythicBeastRenderer','discovery/AtlasService','mastery/MasteryCatalog','army/ArmyData','adventure/AdventureData']}
+        patched={'dev/shadowsovereign/'+p+'.class' for p in ['mythic/MythicProfiles','mythic/MythicExpedition','gloom/GloomContent','mythic/MythicSpawn','mythic/MythicBeast','network/ShadowNetwork','mythic/MythicService','mythic/MythicEvents','gloom/GloomEvents','expanse/ExpanseWorld','ShadowSovereign','events/ShadowEvents','mythic/MythicContent','mythic/MythicSites','mythic/LegendCombat','client/MythicBeastRenderer','discovery/AtlasService','mastery/MasteryCatalog','army/ArmyData','adventure/AdventureData','ModCreativeTab','client/DevourerModel']}
         for name,content in self.base.items():
             if name.startswith('dev/shadowsovereign/knighthaven/'):continue
             if name.endswith('.class') and name not in patched:self.assertEqual(self.jar[name],content,name)
-        self.assertTrue(b'35-learning-paths' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
+        self.assertTrue(b'36-curated-content' in self.jar['dev/shadowsovereign/network/ShadowNetwork.class'],'Wrong client/server protocol')
 
     def test_knight_content_removed_and_other_temples_preserved(self):
         retired=('villager_knight','village_knight_lodge','knighthaven_villages')
@@ -197,7 +197,7 @@ class IntegrationTests(unittest.TestCase):
             if '/knighthaven_' in name and not any(s in name for s in retired):self.assertIn(name,self.jar)
 
     def test_all_eggs_have_unique_authored_art(self):
-        eggs=self.spec['eggs'];self.assertEqual(len(eggs),55)
+        eggs=self.spec['eggs'];self.assertEqual(len(eggs),57)
         actual={Path(n).stem for n in self.jar if n.startswith('assets/shadowsovereign/models/item/') and n.endswith('_spawn_egg.json')}
         self.assertEqual(set(eggs),actual)
         cells=[]
@@ -244,8 +244,8 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(nearest['biome'],'shadowsovereign:sunken_kingdom')
 
     def test_decorations_registered_and_placed(self):
-        self.assertEqual(len(self.spec['blocks']),100)
-        self.assertEqual(len(self.spec['decor_ids']),60)
+        self.assertEqual(len(self.spec['blocks']),160)
+        self.assertEqual(len(self.spec['decor_ids']),120)
         self.assertEqual({p['id'] for p in self.spec['decor_placements']},set(self.spec['decor_ids']))
         for placement in self.spec['decor_placements']:
             n=nbtlib.File.parse(io.BytesIO(gzip.decompress(self.jar[f"data/shadowsovereign/structures/expansion/{placement['structure']}.nbt"])))
@@ -262,7 +262,7 @@ class IntegrationTests(unittest.TestCase):
 
     def test_new_decor_models_use_native_anchor_states(self):
         self.assertEqual({k:len(v) for k,v in self.spec['decor_packs'].items()},dict(mob1=20,hollow_reaper=20,soul_devourer=20))
-        self.assertEqual(len(set(self.spec['decor_ids'])),60)
+        self.assertEqual(len(set(self.spec['decor_ids'])-set(self.spec['latest_decor_ids'])),60)
         for b in self.spec['blocks']:
             if 'pack' not in b:continue
             id=b['id'];d=json.loads(self.jar[f'assets/shadowsovereign/models/block/{id}.json'])
@@ -274,7 +274,7 @@ class IntegrationTests(unittest.TestCase):
                 for face in e['faces'].values():self.assertTrue(all(0<=v<=16 for v in face['uv']))
             for suffix in ['', '_e']:
                 raw=self.jar[f'assets/shadowsovereign/textures/block/{id}{suffix}.png']
-                self.assertEqual(struct.unpack('>II',raw[16:24]),(64,64))
+                self.assertIn(struct.unpack('>II',raw[16:24]),[(64,64),(128,128)])
             self.assertTrue(0<=b['light']<=15)
             loot=json.loads(self.jar[f'data/shadowsovereign/loot_tables/blocks/{id}.json'])
             self.assertEqual(loot['pools'][0]['entries'],[{'type':'minecraft:item','name':'shadowsovereign:'+id}])
@@ -340,7 +340,7 @@ class IntegrationTests(unittest.TestCase):
         regions=self.spec['regional_settlements']
         self.assertEqual(len(regions),10)
         ids=[id for r in regions for id in r['decor']]
-        self.assertEqual(len(ids),60);self.assertEqual(set(ids),set(self.spec['decor_ids']))
+        self.assertEqual(len(ids),60);self.assertEqual(set(ids),set(self.spec['decor_ids'])-set(self.spec['latest_decor_ids']))
         self.assertEqual(len(set(ids)),60)
         quests=self.spec['journey_quests'];self.assertEqual(len(quests),15)
         for id in quests:
@@ -370,6 +370,24 @@ class IntegrationTests(unittest.TestCase):
                 lang=languages[loc]
                 self.assertIn(d['display']['title']['translate'],lang)
                 self.assertIn(d['display']['description']['translate'],lang)
+
+    def test_latest_pack_integrity_and_tabs(self):
+        self.assertEqual(len(self.spec['latest_decor_ids']),60)
+        self.assertEqual(len(set(self.spec['latest_decor_ids'])),60)
+        self.assertEqual(self.spec['profiles'][-2]['id'],'hanan')
+        self.assertEqual(self.spec['profiles'][-1]['id'],'glass_ronin')
+        for id in ['hanan','glass_ronin']:
+            d=json.loads(self.jar[f'assets/shadowsovereign/mythic/{id}.json'])
+            self.assertTrue(d['bones'])
+            for channel in d['animations'].values():
+                for track in channel['tracks']:
+                    if id=='glass_ronin' and track['channel']=='scale':
+                        self.assertTrue(all(abs(v)>=.000001 for k in track['keys'] for v in k[1:]))
+        for loc in ['en_us','ar_sa']:
+            d=json.loads(self.jar[f'assets/shadowsovereign/lang/{loc}.json'])
+            for key in ['soulbound_army','creatures','nature','workshops']:
+                self.assertIn('itemGroup.shadowsovereign.'+key,d)
+        for name in self.jar:self.assertFalse(name.endswith('creative-groups-source.txt'))
 
 
 if __name__=='__main__':

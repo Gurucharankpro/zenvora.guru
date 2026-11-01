@@ -164,10 +164,21 @@ def build(inputs, base_path, out):
                 [('bad_joke_attack',1.04,21,9,.65),('cheese_meteor',2.02,47,16,1.05),
                  ('royal_facepalm',1.04,5,0,0),('cringe_beam',1.4,6,16,1),('ultimate_punchline',2.3,1,11,1.25)]),
                ('The_69_Pose','the_69_pose','بهلوان الكسوف',750,21,10,.31,1.2,2.8,False,
-                [('69_pose',3.4,5,0,0),('gravity_kick',.75,0,5,1),('inverted_strike',1.2,1,6,1),('number_orbit',.8,47,14,.9),('ultimate_inversion',2.2,1,10,1.2)])]
+                [('69_pose',3.4,5,0,0),('gravity_kick',.75,0,5,1),('inverted_strike',1.2,1,6,1),('number_orbit',.8,47,14,.9),('ultimate_inversion',2.2,1,10,1.2)]),
+               ('Hanan','hanan','حنان',400,15,6,.30,.65,1.9,False,[('defensive_push',.65,1,5,.7),('dodge',.3,5,0,0),('protective_stance',.7,5,0,0)]),
+               ('Glass_Ronin','glass_ronin','رونين الزجاج',900,25,12,.31,1.2,3.0,False,[('crystal_katana_combo',.55,0,5,1.1),('mirror_slash',1,1,7,.9),('reflection_clone',1.8,5,0,0),('shattered_blade',1.3,47,16,1),('thousand_mirrors',1.9,6,14,1.2)])]
         for index,(source,id,ar,hp,damage,armor,speed,width,height,flies,moves) in enumerate(packs,38):
             geo=json.loads(find(source+'.geo.json').read_text());anim=json.loads(find(source+'.animation.json').read_text())
-            native=model(geo,anim);write(f'assets/{NS}/mythic/{id}.json',native)
+            native=model(geo,anim)
+            if id=='glass_ronin':
+                # Zero effect scales can make PoseStack normal inversion singular.
+                # The native renderer already uses tiny positive hidden scales.
+                for clip in native['animations'].values():
+                    for track in clip['tracks']:
+                        if track['channel']=='scale':
+                            for key in track['keys']:
+                                key[1:]=[.001 if abs(v)<.000001 else v for v in key[1:]]
+            write(f'assets/{NS}/mythic/{id}.json',native)
             write(f'assets/{NS}/textures/entity/{id}.png',find(source+'_Texture.png').read_bytes())
             glows=list(inputs.rglob(source+'_Glowmask.png'))+list(inputs.rglob(source+'_Glow_Mask.png'))+list(inputs.rglob(source+'_Texture_glowmask.png'))
             assert len(glows)<=1,('Ambiguous glow mask',source)
@@ -308,12 +319,14 @@ def build(inputs, base_path, out):
                     ('refai_cursed_stronghold',[24,10,33],'crimson_shadow',-9),
                     ('amin_el_nemr_workshop',[18,5,32],'crimson_shadow',-4),
                     ('palace_of_eternal_cringe',[27,6,33],'shattered_sky',-5),
-                    ('inverted_circus',[22,6,22],'moonveil_hollow',-5)]
+                    ('inverted_circus',[22,6,22],'moonveil_hollow',-5),
+                    ('hanan_cairo_house',[17,1,19],'crimson_shadow',0),
+                    ('temple_of_thousand_mirrors',[23,7,10],'shattered_sky',-6)]
         # Add all 20 decorations to safe, formerly empty positions in the new
         # dry structures. No chest, spawn pad or existing block is replaced.
         remaining=list(spec['decor_ids']);placements=[]
         for name,altar,biome,offset in encounters[5:]:
-            if name in ('drowned_glass_palace','amin_el_nemr_workshop','palace_of_eternal_cringe','inverted_circus'):continue
+            if name in ('drowned_glass_palace','amin_el_nemr_workshop','palace_of_eternal_cringe','inverted_circus','hanan_cairo_house','temple_of_thousand_mirrors'):continue
             n=structures[name];size=list(map(int,n['size']));occupied={tuple(map(int,b['pos'])):b for b in n['blocks']}
             budget=7 if name!='refai_cursed_stronghold' else len(remaining)
             for pos,block in sorted(occupied.items()):

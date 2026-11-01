@@ -99,7 +99,7 @@ SOURCES={
 'dev/shadowsovereign/mythic/MythicBeast':'''public class MythicBeast extends net.minecraft.world.entity.Mob {public int kind;public int kind(){return kind;}}''',
 'dev/shadowsovereign/mythic/SoulDevourer':'public class SoulDevourer extends net.minecraft.world.entity.Mob {}',
 'dev/shadowsovereign/mythic/MythicExpedition':'''public class MythicExpedition {
- public static final String[] IDS=new String[49];static {for(int i=0;i<IDS.length;i++)IDS[i]="kind_"+i;}
+ public static final String[] IDS=new String[51];static {for(int i=0;i<IDS.length;i++)IDS[i]="kind_"+i;}
  public static java.util.Map<java.util.UUID,java.util.Map<Integer,MythicBeast>> bodies=new java.util.HashMap<>();public static int spawned;
  public static net.minecraft.nbt.CompoundTag state(net.minecraft.server.level.ServerPlayer p,int kind){var n=dev.shadowsovereign.adventure.AdventureService.journal(p).mythic.gloom;String key=IDS[kind];if(!n.values.containsKey(key))n.values.put(key,new net.minecraft.nbt.CompoundTag());return n.m_128469_(key);}
  public static MythicBeast body(net.minecraft.server.level.ServerPlayer p,int kind){return bodies.getOrDefault(p.id,java.util.Map.of()).get(kind);}
@@ -144,6 +144,8 @@ if __name__=='__main__':
     for name,body in SOURCES.items():
         target=root/(name+'.java');target.parent.mkdir(parents=True,exist_ok=True)
         target.write_text('package '+name.rsplit('/',1)[0].replace('/','.')+';\n'+body+'\n');files.append(str(target))
+    creative=root/'dev/shadowsovereign/expansion/CreativeGroups.java';creative.parent.mkdir(parents=True,exist_ok=True)
+    creative.write_bytes((args.resources/'creative-groups-source.txt').read_bytes());(args.resources/'creative-groups-source.txt').unlink();files.append(str(creative))
     source=Path(__file__).parent
     helper_sources=['OpenMythics','RemovedContent','MigrationHooks','OpenMythicsTest','MigrationTest']
     subprocess.run(['java','-m','jdk.compiler/com.sun.tools.javac.Main','-source','17','-target','17','-d',str(classes),*files,*[str(source/(name+'.java')) for name in helper_sources]],check=True)
@@ -152,3 +154,6 @@ if __name__=='__main__':
     for name in helper_sources[:3]:
         destination=args.resources/f'dev/shadowsovereign/expansion/{name}.class';destination.parent.mkdir(parents=True,exist_ok=True)
         destination.write_bytes((classes/f'dev/shadowsovereign/expansion/{name}.class').read_bytes())
+
+    destination=args.resources/'dev/shadowsovereign/expansion/CreativeGroups.class'
+    destination.write_bytes((classes/'dev/shadowsovereign/expansion/CreativeGroups.class').read_bytes())

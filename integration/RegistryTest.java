@@ -31,7 +31,7 @@ public class RegistryTest {
                 }
                 verifiedClasses++;
             }
-            if(verifiedClasses!=9)throw new AssertionError("Missing generated expansion classes: "+verifiedClasses);
+            if(verifiedClasses!=10)throw new AssertionError("Missing generated expansion classes: "+verifiedClasses);
             System.out.println("PASS: all "+verifiedClasses+" generated expansion classes / "+verifiedMethods+" methods passed bytecode stack/local checks (not game API linkage).");
             for(var entry:Collections.list(zip.entries())){
                 if(!entry.getName().endsWith(".class"))continue;
@@ -71,10 +71,26 @@ public class RegistryTest {
                 }
             }
             if(Collections.list(zip.entries()).stream().anyMatch(e->e.getName().startsWith("net/minecraft/")||e.getName().startsWith("net/minecraftforge/")))throw new AssertionError("ABI fixtures leaked into mod JAR");
+            var groups=Class.forName("dev.shadowsovereign.expansion.CreativeGroups",true,after);
+            var classifier=groups.getMethod("category",String.class,int.class,boolean.class);
+            var decorations=groups.getDeclaredField("DECOR");decorations.setAccessible(true);
+            var decorated=(Set<?>)decorations.get(null);if(decorated.size()!=120)throw new AssertionError("Decor tab membership count");
+            for(Object id:decorated)if((Integer)classifier.invoke(null,id,3,true)!=2)throw new AssertionError("Decor misclassified: "+id);
+            if((Integer)classifier.invoke(null,"hanan_spawn_egg",1,false)!=1 ||
+               (Integer)classifier.invoke(null,"odyssey_workshop",3,true)!=3 ||
+               (Integer)classifier.invoke(null,"eclipse_forge",0,true)!=3 ||
+               (Integer)classifier.invoke(null,"monolith_enchanting_table",2,true)!=3 ||
+               (Integer)classifier.invoke(null,"eclipse_artifact",0,false)!=0 ||
+               (Integer)classifier.invoke(null,"abyss_abyssal_stone",2,true)!=0)throw new AssertionError("Creative categories mismatch");
+            var tabs=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry("dev/shadowsovereign/ModCreativeTab.class"))).accept(tabs,0);
+            var tabCategory=tabs.methods.stream().filter(m->m.name.equals("category")).findFirst().orElseThrow();
+            boolean legacy=false,group=false;for(var ins:tabCategory.instructions)if(ins instanceof MethodInsnNode mi){legacy|=mi.name.equals("legacyCategory");group|=mi.owner.endsWith("/CreativeGroups");}
+            if(!legacy||!group)throw new AssertionError("Creative category route missing");
+            System.out.println("PASS: 120 decor classifications plus egg/workstation/other cases; actual creative wrapper routed correctly.");
             String name="dev.shadowsovereign.mythic.MythicProfiles";
             var oldClass=Class.forName(name,true,before);var newClass=Class.forName(name,true,after);
             var oldList=(List<?>)oldClass.getField("ALL").get(null);var newList=(List<?>)newClass.getField("ALL").get(null);
-            if(oldList.size()!=38 || newList.size()!=49)throw new AssertionError("Profile count");
+            if(oldList.size()!=38 || newList.size()!=51)throw new AssertionError("Profile count");
             for(int i=0;i<38;i++){
                 if(i==34)continue;
                 if(!oldList.get(i).toString().equals(newList.get(i<34?i:i-1).toString()))throw new AssertionError("Changed surviving profile "+i);
@@ -84,7 +100,7 @@ public class RegistryTest {
             // the catalogue can execute in an isolated JVM without game stubs.
             c.methods.removeIf(m->!m.name.equals("<clinit>"));c.fields.removeIf(f->!f.name.equals("IDS"));
             var w=new ClassWriter(0);c.accept(w);Class<?> idsClass=new Isolated().define(w.toByteArray());String[] ids=(String[])idsClass.getField("IDS").get(null);
-            if(ids.length!=49)throw new AssertionError("ID count");
+            if(ids.length!=51)throw new AssertionError("ID count");
             var aquatic=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry(helper.name+".class"))).accept(aquatic,0);
             aquatic.methods.removeIf(m->!m.name.equals("isAquatic"));aquatic.fields.clear();
             var aw=new ClassWriter(0);aquatic.accept(aw);Class<?> aquaticType=((Isolated)idsClass.getClassLoader()).define(aw.toByteArray());
@@ -103,7 +119,7 @@ public class RegistryTest {
             if(!foreign||!shrine||!gloom)throw new AssertionError("Edit protection routing changed unexpectedly");
             System.out.println("PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.");
             int moves=0;
-            for(int i=0;i<49;i++){
+            for(int i=0;i<51;i++){
                 Object profile=newList.get(i);Class<?> type=profile.getClass();String id=(String)type.getMethod("id").invoke(profile);
                 if(!id.equals(ids[i]))throw new AssertionError("ID/profile mismatch at "+i);
                 if(i<37)continue;
@@ -114,10 +130,10 @@ public class RegistryTest {
                     if(!exists || duration<=0)throw new AssertionError("Missing authored animation "+id+"/"+clip);moves++;
                 }
             }
-            if(moves!=39)throw new AssertionError("Expected 39 authored added combat moves, got "+moves);
+            if(moves!=47)throw new AssertionError("Expected 47 authored added combat moves, got "+moves);
             if(newList.stream().anyMatch(p->p.toString().contains("villager_knight")))throw new AssertionError("Retired profile survived");
             if(!ids[45].equals("legendary_giant_zombie_refai")||!ids[46].equals("amin_el_nemr")||!ids[47].equals("king_of_corny_memes"))throw new AssertionError("Latest creatures misplaced/duplicated");
-            System.out.println("PASS: 49 matching IDs/profiles; all 37 surviving original profiles unchanged; "+moves+" added combat clips loaded by the real animation reader.");
+            System.out.println("PASS: 51 matching IDs/profiles; all 37 surviving original profiles unchanged; "+moves+" added combat clips loaded by the real animation reader.");
             var content=new ClassNode();new ClassReader(zip.getInputStream(zip.getEntry("dev/shadowsovereign/gloom/GloomContent.class"))).accept(content,0);
             int factories=0;
             for(var method:content.methods)if(method.name.matches("expansion\\$block\\d+")){
@@ -127,14 +143,14 @@ public class RegistryTest {
                 for(var ins:method.instructions)if(ins instanceof MethodInsnNode mi)properties.add(mi.name);
                 if(!properties.containsAll(Set.of("m_60910_","m_60955_","m_60978_")))throw new AssertionError("Decor properties missing at "+index);
             }
-            if(factories!=100)throw new AssertionError("Expected 100 block factories: "+factories);
-            System.out.println("PASS: 100 added block factories, including 60 explicitly noncolliding/nonoccluding decor props.");
+            if(factories!=160)throw new AssertionError("Expected 160 block factories: "+factories);
+            System.out.println("PASS: 160 added block factories, including 120 explicitly noncolliding/nonoccluding decor props.");
             if(args.length==5 && args[3].equals("--previous"))try(var previous=loader(Path.of(args[4]),gson)){
                 var previousClass=Class.forName(name,true,previous);
                 var previousProfiles=(List<?>)previousClass.getField("ALL").get(null);
                 if(previousProfiles.size()!=49)throw new AssertionError("Unexpected previous release size");
                 for(int i=0;i<49;i++)if(!previousProfiles.get(i).toString().equals(newList.get(i).toString()))throw new AssertionError("Previous release profile changed at "+i);
-                System.out.println("PASS: all 49 profiles from the previous 1.5.0 candidate retain their exact definitions/order.");
+                System.out.println("PASS: all 49 profiles from the previous 1.6.0 candidate retain their exact definitions/order.");
             }
         }
     }

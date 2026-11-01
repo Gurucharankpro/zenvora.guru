@@ -81,6 +81,7 @@ public class OpenMythicsTest {
         check(OpenMythics.defeated(king,royal.id)&&!OpenMythics.defeated(king,royal.id),"king grants capture only once");
         habitat(royal,48);check(OpenMythics.start(royal,48),"acrobat starts independently");
         check(OpenMythics.defeated(MythicExpedition.body(royal,48),royal.id),"acrobat grants native capture");
+        for(int added:new int[]{49,50}){habitat(royal,added);check(OpenMythics.start(royal,added),"new creature starts independently: "+added);check(OpenMythics.defeated(MythicExpedition.body(royal,added),royal.id),"new creature captures: "+added);}
         System.out.println("PASS: "+checks+" open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.");
     }
 }

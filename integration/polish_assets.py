@@ -67,12 +67,21 @@ def main(base_path,out):
         eggs={Path(n).stem for n in base.namelist() if n.startswith('assets/shadowsovereign/models/item/') and n.endswith('_spawn_egg.json') and not removed_path(n)}
         eggs.update(p['id']+'_spawn_egg' for p in spec['profiles'])
         standalone={'amin_el_nemr_spawn_egg':'amin-egg.png','king_of_corny_memes_spawn_egg':'king-egg.png','the_69_pose_spawn_egg':'acrobat-egg.png'}
-        atlas_eggs=sorted(eggs-set(standalone))
+        paired={'hanan_spawn_egg':[0,0,8,16],'glass_ronin_spawn_egg':[8,0,16,16]}
+        atlas_eggs=sorted(eggs-set(standalone)-set(paired))
         # The existing atlas order must never shift when another egg is added.
-        assert len(atlas_eggs)==52 and len(eggs)==55
+        assert len(atlas_eggs)==52 and len(eggs)==57
         art=Path(__file__).parent/'art'
         write('assets/shadowsovereign/textures/item/legendary_egg_atlas.png',(art/'egg-atlas.png').read_bytes())
         mapping={}
+        write('assets/shadowsovereign/textures/item/hanan_ronin_eggs.png',(art/'hanan-ronin-eggs.png').read_bytes())
+        for id,uv in paired.items():
+            model=egg_model(uv)
+            model['textures']={k:'shadowsovereign:item/hanan_ronin_eggs' for k in model['textures']}
+            # Square atlas has two narrow cells; geometry restores the egg aspect.
+            model['elements'][0]['from']=[4,0,7.5];model['elements'][0]['to']=[12,16,8.5]
+            write(f'assets/shadowsovereign/models/item/{id}.json',model)
+            mapping[id]={'texture':'hanan_ronin_eggs','paired_uv':uv}
         for index,id in enumerate(atlas_eggs):
             row,col=divmod(index,8);uv=[col*2,row*2,(col+1)*2,(row+1)*2]
             write(f'assets/shadowsovereign/models/item/{id}.json',egg_model(uv))
@@ -93,9 +102,9 @@ def main(base_path,out):
                                   'min_inclusive':-.4,'max_exclusive':.4,'when_in_range':choice,'when_out_of_range':baseline}
     write(path,noise)
     spec.update(removed_resources=deleted,removed_profile_index=34,original_profile_count=37,
-                eggs=mapping,profile_count=49,format_version='1.6.0')
+                eggs=mapping,profile_count=51,format_version='1.7.0')
     write('integration-spec.json',spec)
-    print('Prepared knight removal, compacted profile IDs and 55 unique egg designs.')
+    print('Prepared knight removal, compacted profile IDs and 57 unique egg designs.')
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--base',type=Path,required=True);parser.add_argument('--out',type=Path,required=True)

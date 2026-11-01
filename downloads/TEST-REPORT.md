@@ -1,61 +1,80 @@
-# Soulbound Army 1.6.0 learning paths — experimental candidate
+# 1.7.0 verification — EXPERIMENTAL, NOT FORGE-TESTED
 
-Adds exactly 500 advancement lessons while preserving all prior goals/resources.
-300 block lessons (discover/place/stock), 60 biome landmark tasks, 40 regional
-readiness goals and 100 recipe/equipment lessons. All have localized explanation,
-one-time XP, no toast/chat flood; ten stage milestones also award supply loot.
-Rare decor reserves require two items. Inventory tasks need an inventory change;
-recipe tasks observe recipe-book unlocking. Parent links order the display, not
-completion eligibility. New goals appear in vanilla advancements, not the native
-story planner. No reward revoke/schedule loop is used.
+Integrated latest five uploads, identified by LATEST_INPUTS.json. Hanan and Glass
+Ronin append at profile slots 49/50. All 49 previous profiles are unchanged.
+Hanan's Cairo house -> Crimson Shadow; Ronin's mirror temple -> Shattered Sky.
+Templates convert 1.21 DataVersion to 1.20.1 / 3465, clear authoring markers and
+entities, and retain chest loot. Full-body spawn-clearance checks pass.
 
-The native story planner catalogue has 60 goals. An existing combined 500 across
-other systems was not verified. The previous JAR had 40 vanilla advancements;
-this one has 540, including 500 under the separate learning namespace. No claim
-of exactly 1000 total quests, or 500 scripted story scenarios, is made.
+60 additional decor designs: Butcher 20, Devourer II 20, biome relics 20. The
+latest Devourer archive is a different edition (102 entries, decor_pack_03
+namespace); it is not the earlier 123-entry soul_bound asset pack. Stable old
+assets remain; distinct variants get devourer_v2_ IDs. Butcher/relic props have
+separate prefixes. All have native block/item/model/state/loot registrations;
+seven themed sites distribute them to the relevant biomes. Biome relics are
+landmark structures, not free-scatter features or exact suggested room edits.
 
-Also retains the ten regional waystations using all 60 decor designs, fifteen
-journey quests and rewards, Eclipse acrobat/circus, legendary encounter freedom,
-retired Knight cleanup and all prior additions. Total 49 profiles plus separate
-Devourer, 55 egg designs, 100 added blocks and 34 structure/tree sets.
+Four existing creative registry IDs are retained and repurposed as requested:
+Decor (nature), Eggs (creatures), Workstations (workshops), Other (soulbound_army).
+Explicit decor membership overrides misleading names like workbench/altar.
+Native egg recognition and workshop classification remain; Eclipse station
+blocks and the Monolith enchanting table are covered. Retired content stays hidden. The tests execute the actual
+CreativeGroups class and verify the actual ModCreativeTab wrapper routing.
 
-Passed: 24 resource test groups; 38 simulated encounter + 10 migration assertions;
-actual catalogue and animation reader; all 49 previous-release profiles retained;
-all prior resource assets retained (additive locale/metadata changes excluded);
-500 unique IDs, translation keys, parent and milestone-loot references verified.
-Generated class stacks and actual mod member links pass; fixture classes excluded.
-Split archive CRC/directory offsets and complete extracted JAR hash verified.
+Glass Ronin's model uses a conditional translucent render-type adapter. Its zero
+FX scales become 0.001 to avoid singular normal scaling. Hanan has no source glow
+mask and uses a transparent fallback. New eggs use an unchanged generated paired
+RGBA atlas; old egg UV assignments remain. No raster art editing was performed.
 
-NOT RUN: actual Forge startup, advancement/recipe/structure codecs, 500-goal UI
-performance, game rendering, combat, multiplayer, save migration and engine API
-linkage. Official Forge destinations remain excluded under the environment's
-network policy; previous requests returned 403. Fixtures are not the game engine.
-Use a disposable world/backup. Client/server both require protocol 35-learning-paths.
-This is a bounded learning/exploration update, not a full gameplay/visual rewrite.
+Totals: 51 profiles plus separate Devourer, 57 eggs, 160 added blocks/items,
+120 decor designs, 43 structure/tree sets. All 500 learning + 15 journey goals
+are preserved without silently changing IDs, requirements or old translations.
 
-Artifact: soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar
-SHA256: ee6846be17e0c6dc0cb7086e7d46c896d511f5f22e0792e53c90c22fd9b20e06
+Validation: 25 Python resource test groups; 42 simulated-world encounter and
+10 selective-migration assertions. Ten expansion classes / 41 methods stack
+checks; all mod-owned class references and 102 helper/public mod API references
+resolve. Actual catalogue and animation reader load 51 aligned profiles and 47
+new attack clips. All 49 previous profile definitions/order are unchanged.
+160 factories, including 120 explicit noncollision/nonocclusion decor blocks,
+are inspected. The actual classifier handles all 120 decor IDs plus representative
+other/egg/station cases. Compile-time engine fixtures and generated source are
+not packaged. Split ZIP CRC/directory/payload SHA validation passed.
 
-## Build and validation
+Limitations: no Minecraft/Forge startup, actual registry lifecycle, render/UV
+inspection, creative UI, alpha behavior, pathfinding, multiplayer or save migration
+test. The enforced network policy excludes Forge artifact hosts; previous
+installer attempts returned 403. Explicit API fixtures are not the engine.
+JDK21 tooling emits Java17 bytecode with -source/-target; missing ct.sym prevents
+--release linkage checks. Props are static one-anchor objects, not functional
+chairs/workbenches/storage or multiblock physics. No guarantee of zero bugs.
+Use a disposable world or backup. Both sides require protocol 36-curated-content.
+
+Artifact: soulbound-army-1.20.1-1.7.0-curated-content-preview.jar
+Bytes: 39353995
+SHA256: c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a
+
+## Captured checks
 
 ```text
-Prepared 12 profiles, 60 blocks, 22 structure sets
+Prepared 14 profiles, 60 blocks, 24 structure sets
 Imported 40 native decorative props with two supported, spaced themed ruins.
 Added 10 regional decorated waystations, all 60 designs, 15 one-time tutorial quests and supply rewards.
 Added exactly 500 additive, localized, one-time learning advancement quests (300 block, 60 landmark, 40 readiness, 100 crafting).
-Prepared knight removal, compacted profile IDs and 55 unique egg designs.
+Imported 60 distinct new decor designs with 7 themed sites and four creative group labels.
+Prepared knight removal, compacted profile IDs and 57 unique egg designs.
 warning: [options] system modules path not set in conjunction with -source 17
 1 warning
-PASS: 38 open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.
+PASS: 42 open-encounter behavioral assertions against explicit ABI/world fixtures; Forge runtime is not exercised.
 PASS: 10 retirement/missing-mapping assertions against explicit API/NBT fixtures.
-Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar (4086 entries); patched method stack verification passed.
-PASS: all 9 generated expansion classes / 38 methods passed bytecode stack/local checks (not game API linkage).
+Wrote /workspace/mod-integration/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar (4492 entries); patched method stack verification passed.
+PASS: all 10 generated expansion classes / 41 methods passed bytecode stack/local checks (not game API linkage).
 PASS: every mod-owned class reference resolves after retirement/relocation.
 PASS: 102 helper references match public members of the actual patched mod (Minecraft/Forge members remain unverified).
+PASS: 120 decor classifications plus egg/workstation/other cases; actual creative wrapper routed correctly.
 PASS: aquatic IDs 41/44 route correctly; boss-site edit vetoes removed while foreign-plot and quest-shrine checks remain.
-PASS: 49 matching IDs/profiles; all 37 surviving original profiles unchanged; 39 added combat clips loaded by the real animation reader.
-PASS: 100 added block factories, including 60 explicitly noncolliding/nonoccluding decor props.
-PASS: all 49 profiles from the previous 1.5.0 candidate retain their exact definitions/order.
+PASS: 51 matching IDs/profiles; all 37 surviving original profiles unchanged; 47 added combat clips loaded by the real animation reader.
+PASS: 160 added block factories, including 120 explicitly noncolliding/nonoccluding decor props.
+PASS: all 49 profiles from the previous 1.6.0 candidate retain their exact definitions/order.
 test_all_eggs_have_unique_authored_art (__main__.IntegrationTests.test_all_eggs_have_unique_authored_art) ... ok
 test_amin_loot_survives_120_conversion (__main__.IntegrationTests.test_amin_loot_survives_120_conversion) ... ok
 test_block_model_and_texture_references (__main__.IntegrationTests.test_block_model_and_texture_references) ... ok
@@ -67,6 +86,7 @@ test_explicit_transparent_block_render_layers (__main__.IntegrationTests.test_ex
 test_king_effect_bones_are_hidden_during_locomotion (__main__.IntegrationTests.test_king_effect_bones_are_hidden_during_locomotion) ... ok
 test_king_palace_chests_and_spawn_registry (__main__.IntegrationTests.test_king_palace_chests_and_spawn_registry) ... ok
 test_knight_content_removed_and_other_temples_preserved (__main__.IntegrationTests.test_knight_content_removed_and_other_temples_preserved) ... ok
+test_latest_pack_integrity_and_tabs (__main__.IntegrationTests.test_latest_pack_integrity_and_tabs) ... ok
 test_localization_and_registry_assets (__main__.IntegrationTests.test_localization_and_registry_assets) ... ok
 test_model_hierarchies_and_animation_tracks (__main__.IntegrationTests.test_model_hierarchies_and_animation_tracks) ... ok
 test_new_decor_models_use_native_anchor_states (__main__.IntegrationTests.test_new_decor_models_use_native_anchor_states) ... ok
@@ -82,21 +102,21 @@ test_templates_palettes_loot_and_bounds (__main__.IntegrationTests.test_template
 test_textures_and_glow_masks (__main__.IntegrationTests.test_textures_and_glow_masks) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 35.118s
+Ran 25 tests in 43.119s
 
 OK
-ee6846be17e0c6dc0cb7086e7d46c896d511f5f22e0792e53c90c22fd9b20e06  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar
-Resource output: /workspace/mod-integration/resources.tCzVSD
+c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a  /workspace/mod-integration/dist/soulbound-army-1.20.1-1.7.0-curated-content-preview.jar
+Resource output: /workspace/mod-integration/resources.Kisq9Z
 ```
 
-## Archive validation
+## Archive checks
 
 ```text
-  adding: soulbound-army-1.20.1-1.6.0-learning-paths-preview.jar (deflated 3%)
+  adding: soulbound-army-1.20.1-1.7.0-curated-content-preview.jar (deflated 3%)
 PASS: 4 standard split ZIP volumes, CRC and reassembled JAR SHA-256 verified.
-JAR SHA-256: ee6846be17e0c6dc0cb7086e7d46c896d511f5f22e0792e53c90c22fd9b20e06
-Soulbound-Army-1.6.0.z01: 10485760 bytes
-Soulbound-Army-1.6.0.z02: 10485760 bytes
-Soulbound-Army-1.6.0.z03: 10485760 bytes
-Soulbound-Army-1.6.0.zip: 3862957 bytes
+JAR SHA-256: c4fd6a7528b5bbf6fe18d060465b1b9ce0e98aaa917c0f0e82d8cfd4623a871a
+Soulbound-Army-1.7.0.z01: 10485760 bytes
+Soulbound-Army-1.7.0.z02: 10485760 bytes
+Soulbound-Army-1.7.0.z03: 10485760 bytes
+Soulbound-Army-1.7.0.zip: 6736181 bytes
 ```

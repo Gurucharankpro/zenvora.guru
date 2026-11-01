@@ -1,4 +1,33 @@
-# Soulbound Army 1.6.0 — learning paths preview
+# Soulbound Army 1.7.0 — curated content preview
+
+Latest release: Hanan (profile 49, Crimson Shadow / Cairo house), Glass Ronin
+(profile 50, Shattered Sky / temple), 20 Butcher props, 20 distinct Devourer II
+variants and 20 biome relic props. Earlier Devourer assets are preserved; the
+latest archive differs in geometry, namespaces and textures, not just ZIP layout.
+Seven added relic sites/courts place all 60 new props, in their themed biomes.
+Biome relic specs are implemented as themed landmark structures rather than
+free-scatter features or insertions into every originally suggested room.
+Total: 51 profiles plus separate Devourer, 57 eggs, 160 added blocks including
+120 decor designs, 43 structure/tree sets. All 500 learning lessons and 15 journey
+goals remain unchanged. New decor is not appended to those frozen lesson lists.
+
+Four creative tabs reuse existing registry identities: nature -> decor,
+creatures -> eggs, workshops -> functional workstations, soulbound_army -> other.
+Explicit decor membership overrides names like altar/workbench; nondecor eggs
+use native SpawnEggItem recognition; native workshop routing is retained and
+Eclipse station blocks and Monolith enchanting table included. Remaining nature/food/material items go to other.
+Retired-content filtering remains in effect. No original tab registry is removed.
+
+Glass Ronin alone uses the existing translucent entity RenderType API. Zero scale
+FX keys become 0.001 to avoid singular normal scaling. Hanan has no supplied glow
+mask; the fallback is transparent. Both eggs use a generated paired RGBA atlas.
+
+Protocol 36-curated-content; version 1.7.0-curated-content-preview. Build script
+and review handoff list exact inputs and checks. Runtime Forge startup, UI,
+alpha rendering, placement, compatibility and saves remain UNTESTED. No zero-bug
+claim is made. See LATEST_INPUTS.json and the delivery AI-REVIEW.md.
+
+## Earlier features and build context
 
 Experimental Minecraft 1.20.1 / Forge 47.3+ binary integration. The original
 Forge development project was not supplied. Build/test fixtures are not the

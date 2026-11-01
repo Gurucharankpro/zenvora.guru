@@ -18,3 +18,6 @@ in each local build's resource output. Runtime models embed each assigned UV.
 
 - acrobat-egg.png: separate generated transparent violet/gold eclipse egg with
   masked circus and inverted-infinity motifs. Copied unchanged from imagegen.
+
+- hanan-ronin-eggs.png: generated transparent two-cell atlas, black/gold ruby
+  Hanan egg and icy glass/katana Ronin egg. UV selection only; no raster editing.

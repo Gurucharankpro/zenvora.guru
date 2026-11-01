@@ -261,11 +261,32 @@ public class PatchMod implements Opcodes {
             for(var m:checked.methods)if((m.access&(ACC_ABSTRACT|ACC_NATIVE))==0)new Analyzer<>(new BasicVerifier()).analyze(checked.name,m);
             entries.put(name+".class",bytes);
         }
+        // Retain the four existing tab registry keys; change their classification
+        // without deleting saved registry identities or using new Forge APIs.
+        String tabs=ROOT+"ModCreativeTab";var tabsNode=new ClassNode();new ClassReader(entries.get(tabs+".class")).accept(tabsNode,0);
+        for(var method:tabsNode.methods)if(method.name.equals("category"))method.name="legacyCategory";
+        var category=new MethodNode(ACC_PUBLIC|ACC_STATIC,"category","(Lnet/minecraft/world/item/Item;Ljava/lang/String;)I",null,null);
+        var il=category.instructions;il.add(new VarInsnNode(ALOAD,1));il.add(new VarInsnNode(ALOAD,0));il.add(new VarInsnNode(ALOAD,1));
+        call(il,INVOKESTATIC,tabs,"legacyCategory",category.desc);il.add(new VarInsnNode(ALOAD,0));il.add(new TypeInsnNode(INSTANCEOF,"net/minecraft/world/item/BlockItem"));
+        call(il,INVOKESTATIC,ROOT+"expansion/CreativeGroups","category","(Ljava/lang/String;IZ)I");il.add(new InsnNode(IRETURN));tabsNode.methods.add(category);
+        var tw=new ClassWriter(ClassWriter.COMPUTE_MAXS);tabsNode.accept(tw);entries.put(tabs+".class",tw.toByteArray());
+        String modelName=ROOT+"client/DevourerModel";var model=new ClassNode();new ClassReader(entries.get(modelName+".class")).accept(model,0);
+        String render="net/minecraft/client/renderer/RenderType",renderDesc="(Lnet/minecraft/resources/ResourceLocation;)L"+render+";";
+        for(var method:model.methods)for(var ins:method.instructions)if(ins instanceof InvokeDynamicInsnNode indy)
+            for(int j=0;j<indy.bsmArgs.length;j++)if(indy.bsmArgs[j] instanceof Handle h && h.getOwner().equals(render)&&h.getName().equals("m_110458_"))
+                indy.bsmArgs[j]=new Handle(H_INVOKESTATIC,modelName,"expansion$renderLayer",renderDesc,false);
+        var rm=new MethodNode(ACC_PRIVATE|ACC_STATIC,"expansion$renderLayer",renderDesc,null,null);var rl=rm.instructions;var normal=new LabelNode();
+        rl.add(new VarInsnNode(ALOAD,0));call(rl,INVOKEVIRTUAL,"java/lang/Object","toString","()Ljava/lang/String;");push(rl,"glass_ronin");call(rl,INVOKEVIRTUAL,"java/lang/String","contains","(Ljava/lang/CharSequence;)Z");rl.add(new JumpInsnNode(IFEQ,normal));
+        rl.add(new VarInsnNode(ALOAD,0));call(rl,INVOKESTATIC,render,"m_110473_",renderDesc);rl.add(new InsnNode(ARETURN));rl.add(normal);rl.add(new FrameNode(F_SAME,0,null,0,null));
+        rl.add(new VarInsnNode(ALOAD,0));call(rl,INVOKESTATIC,render,"m_110458_",renderDesc);rl.add(new InsnNode(ARETURN));model.methods.add(rm);
+        var mw=new ClassWriter(ClassWriter.COMPUTE_MAXS);model.accept(mw);entries.put(modelName+".class",mw.toByteArray());
+        var validatedModel=new ClassNode();new ClassReader(mw.toByteArray()).accept(validatedModel,0);
+        for(var m:validatedModel.methods)if((m.access&(ACC_ABSTRACT|ACC_NATIVE))==0)new Analyzer<>(new BasicVerifier()).analyze(validatedModel.name,m);
         // Exact protocol match prevents old clients joining a server whose
         // entity registry and bestiary have been extended.
         String network=ROOT+"network/ShadowNetwork.class";var c=new ClassNode();new ClassReader(entries.get(network)).accept(c,0);
-        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="35-learning-paths";
-        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="35-learning-paths";}
+        for(var f:c.fields)if(f.name.equals("VERSION"))f.value="36-curated-content";
+        for(var m:c.methods)for(var ins:m.instructions){if(ins instanceof LdcInsnNode ldc && "29".equals(ldc.cst))ldc.cst="36-curated-content";}
         var w=new ClassWriter(0);c.accept(w);entries.put(network,w.toByteArray());
         for(var entry:new ArrayList<>(entries.entrySet()))if(entry.getKey().endsWith(".class")){
             String className=entry.getKey().replace(".class","");
@@ -280,7 +301,7 @@ public class PatchMod implements Opcodes {
         try(var paths=Files.walk(resources)){for(var path:paths.filter(Files::isRegularFile).toList()){
             String name=resources.relativize(path).toString().replace(File.separatorChar,'/');
             if(!name.equals("integration-spec.json"))entries.put(name,Files.readAllBytes(path));}}
-        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.6.0-learning-paths-preview\"");
+        String metadata=new String(entries.get("META-INF/mods.toml"),java.nio.charset.StandardCharsets.UTF_8).replace("version=\"1.2.0\"","version=\"1.7.0-curated-content-preview\"");
         entries.put("META-INF/mods.toml",metadata.getBytes(java.nio.charset.StandardCharsets.UTF_8));
         Files.createDirectories(output.toAbsolutePath().getParent());
         try(var zip=new ZipOutputStream(Files.newOutputStream(output))){for(var entry:entries.entrySet()){var e=new ZipEntry(entry.getKey());e.setTime(0);zip.putNextEntry(e);zip.write(entry.getValue());zip.closeEntry();}}
