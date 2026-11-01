@@ -80,3 +80,17 @@ The older baseline's runtime evidence in BASELINE-TEST-REPORT.md belongs to that
 baseline, not this output. Build/static checks are not a zero-bug guarantee.
 Use an independent test world and the reviewer checklist. Exact CI output is in
 content-update/reports/CI-BUILD.log; remote download evidence is REMOTE-VERIFICATION.json.
+
+## Final publication receipt
+
+Final real-API build/publication run41308589367 (source
+8ee8328acd95b42a675ce5c1f2c2a67629fbc6ee) also succeeded and produced the same
+47,067,897-byte JAR with the SHA above. Its published snapshot was
+45c84b950fac67cd5dbaf8d41b8e2fd204fec2ee. The complete JAR and all six fresh
+volumes were independently downloaded again from that exact snapshot; all hashes,
+CRCs and extracted-byte equality passed. REMOTE-VERIFICATION.json records them.
+Publication handles overlapping report commits without rebase/force-push, and
+stages a complete fresh archive set before replacing older current downloads.
+The intermediate publication conflict was a CI delivery issue, not a game crash.
+A real local Git regression verifies preserved unrelated files, old-volume cleanup
+and rejection of stale source builds. Runtime source was unchanged by these CI fixes.

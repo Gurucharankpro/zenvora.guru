@@ -1,0 +1,1 @@
+PASS: actual local Git publication resolves concurrent/add-add report history without rebase; preserves unrelated files; replaces all old volume names; refuses to publish stale runtime source; no force-push. No game execution.
