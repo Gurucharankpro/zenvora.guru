@@ -1,6 +1,6 @@
 # Soulbound Army — reviewed 1.8.1 polish and Singing Glass Desert
 
-Build: **FAILURE**. Source: `4b2095027828983089d9627408f4381527ae492a`.
+Build: **FAILURE**. Source: `1ceec3243e9a69c192e74907fc966132765af692`.
 Final output SHA256: `NOT BUILT`.
 Minecraft 1.20.1, Forge 47.3.22, Java 17, modid `shadowsovereign`.
 Mod version remains `1.8.1-reviewed`; matching client/server protocol is `39-polish-glass-desert`.
