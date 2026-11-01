@@ -1,0 +1,19 @@
+{
+  "static_checks_passed": [
+    "all JSON parses",
+    "resource model/texture refs and actual vanilla coordinate/angle limits",
+    "six actual authored geometry/animation bone sets and glow routes",
+    "actual final NBT BFS arrival-to-boss-and-return connectivity",
+    "sprite frame dimensions"
+  ],
+  "clips_per_creature": {
+    "mossbound_skulker": 5,
+    "crystal_sentinel": 5,
+    "emerald_root_warden": 8,
+    "frostgrave_prowler": 10,
+    "chainbound_sentinel": 10,
+    "frozen_gravekeeper": 10
+  },
+  "native_engine_tests": false,
+  "graphical_tests": false
+}
