@@ -1,21 +1,17 @@
 # Native Forge repair and focused QA source
 
-## New content work in progress
+## New content build
 
-Additional production source is in qa/src/repair/java/dev/shadowsovereign/content.
-It has NOT completed native compilation: official Forge/Minecraft downloads are
-blocked by the current runtime allowlist. The concrete network draft is saved
-and requires user publication. Do not ship these classes or claim them verified
-until real ForgeGradle compilation/reobfuscation succeeds. No new distribution
-JAR has been built. Existing native tests below belong to the supplied reviewed
-release, not this new content update.
+Production source under qa/src/repair/java/dev/shadowsovereign/content has now
+compiled and reobfuscated successfully against real Forge/Minecraft APIs in
+GitHub Actions. The complete updated JAR and six verified phone volumes are in
+downloads/current. Read ../downloads/TEST-REPORT.md and ../review/README.md for
+fingerprints and exact evidence. No game launch is claimed for this new update.
+Older native GameTests below belong to the reviewed input, not this output.
 
-The new overlay uses the exact reviewed JAR, preserves its mod version and the
-reviewed OpenMythics/X1Hooks class bytes, appends profiles/registry IDs, and merges
-new habitats into the existing shared placement set. The separate build entry
-point is /workspace/soulbound-current/content-update/source/build_content.sh.
-Sources/tests/assets and pending validation are retained there. The original
-fixture build path is retired; it cannot generate a release overlay anymore.
+The local session's official dependency hosts remain blocked; the successful
+build used the independent GitHub runner, not a fixture fallback. The portable
+build entry point is content-update/source/run_ci.sh from repository root.
 
 ## Reviewed release reproduction and QA
 

@@ -50,12 +50,4 @@ jobs:
         run: |
           git config user.name 'Soulbound build'
           git config user.email 'soulbound-build@users.noreply.github.com'
-          git add -A -- content-update/reports review README.md
-          git add -A -- content-update/resources
-          if [ -f content-update/content-spec.json ]; then git add -- content-update/content-spec.json; fi
-          if [ -d downloads/current ]; then git add -A -- downloads/current; fi
-          if ! git diff --cached --quiet; then
-            git commit -m "Record content build ${{ steps.native.outcome }} for ${{ github.sha }}"
-            git pull --rebase origin "$GITHUB_REF_NAME"
-            git push origin "HEAD:$GITHUB_REF_NAME"
-          fi
+          python content-update/source/publish_git.py

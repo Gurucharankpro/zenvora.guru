@@ -1,4 +1,4 @@
-# Current basis: user-supplied 1.8.1-reviewed
+# Current distribution and reviewed build input
 
 Canonical SHA-256:
 2b9f00f36e7d1228fe31838daf6c147b5f5c719211d3f8467fedac88eba4da26.
@@ -14,11 +14,15 @@ advancements including IDs and rewards. x1_assets.py merges explicit frame
 sources into the blocks atlas, preserves unrelated sources, and keeps all 444
 original PNGs. These regression checks are resource comparisons, not engine tests.
 
-Work in progress: Morsi, Porcelain Duchess, Yuta, 60 decor props, X2 and X4.
-Its sources/checks are in /workspace/soulbound-current/content-update. Production
-compilation is currently blocked by dependency-network policy; no final new JAR
-has been produced. See native-review/README.md. The remainder below describes
-historical releases and does not override this canonical input or build status.
+Current updated distribution: soulbound-army-1.20.1-1.8.1-content.jar,
+SHA256 aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec.
+Real ForgeGradle production compilation/reobfuscation succeeded on GitHub Actions.
+New content includes Morsi, Porcelain Duchess, Yuta,60 props, X2 and X4. The mod
+version remains1.8.1-reviewed, protocol38-content-x2-x4. Input SHA above is the
+historical input of this reproduction recipe; future updates must analyze the
+latest user/distribution artifact rather than blindly replaying this recipe.
+See downloads/TEST-REPORT.md for the executed checks and untested game behavior.
+The remainder below is historical release context.
 
 ## Historical 1.8.1 loading crash fix
 

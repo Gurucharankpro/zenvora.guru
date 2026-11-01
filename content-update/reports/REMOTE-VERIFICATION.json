@@ -1,0 +1,33 @@
+{
+  "published_commit": "3421d016ca4c6f4154a6bc2b9fa518af955667f0",
+  "source_commit": "d91aee5ebdb2dcea72574bd9660f8440c9d43397",
+  "jar_sha256": "aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec",
+  "jar_bytes": 47067897,
+  "volumes": [
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.z01",
+      "bytes": 8388608
+    },
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.z02",
+      "bytes": 8388608
+    },
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.z03",
+      "bytes": 8388608
+    },
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.z04",
+      "bytes": 8388608
+    },
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.z05",
+      "bytes": 8388608
+    },
+    {
+      "name": "Soulbound-Army-1.8.1-content-aa4e701d.zip",
+      "bytes": 3551094
+    }
+  ],
+  "complete_remote_zip_crc_and_extracted_jar_match": true
+}

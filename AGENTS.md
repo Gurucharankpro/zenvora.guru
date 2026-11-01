@@ -1,7 +1,7 @@
 # Soulbound Army handoff rules
 
 - Read review/README.md and downloads/TEST-REPORT.md before editing.
-- Current canonical artifact is1.8.1-reviewed, SHA2562b9f00f36e7d1228fe31838daf6c147b5f5c719211d3f8467fedac88eba4da26, unless the user supplies a newer version. Do not substitute an old source build.
+- Current distribution is downloads/current/soulbound-army-1.20.1-1.8.1-content.jar, SHA256 aa4e701d103f7418532a0c5e078e5a3ea0b16afd954d0f48c1d8132b5c2879ec. The2b9f00f3 reviewed artifact is this build recipe's INPUT only. Future updates must analyze and preserve the latest distribution/user-supplied JAR; do not replay old generators over newer content.
 - Minecraft1.20.1, Forge47.3+, Java17; preserve modid, registry identities and saves.
 - This repository contains binary delivery, CFR reading references and a focused native Forge repair/QA project. It is not the original complete mod source. Historical integration fixture builds are not engine validation.
 - Follow NEXT-AGENT-PROMPT-AR.md. Preserve the corrected placement predicates, X1 sprite atlas, quiet bounded FX, full-health retreat lifecycle and cross-type shared guardian spacing.
